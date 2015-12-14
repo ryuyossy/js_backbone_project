@@ -1,0 +1,114 @@
+<div id="container">
+	<h1 class="mainHeader">{{>chapter_name}}</h1>
+	<div id="quizAnswer">
+		<h1 class="subHeader">
+			<span class="subHeaderBg_l"></span>
+			<span>
+				{{if quiz.last_quiz_flg }}
+				最終問題
+				{{else}}
+				第{{> ~numberToChaineseNumeral(quiz.quiz_id) }}問
+				{{/if}}
+			</span>
+			<span class="subHeaderBg_r"></span>
+		</h1>
+		<div id="answQuiz">
+			{{if result && quiz.last_quiz_flg }}
+			<img src="{{>img_url_root}}/parts/quiz_allanswer.png" alt="クイズ全問正解" class="title">
+			{{else result }}
+			<img src="{{>img_url_root}}/parts/quiz_answer.png" alt="クイズ正解" class="title">
+			{{else}}
+			<img src="{{>img_url_root}}/parts/quiz_shame.png" alt="クイズ残念" class="title">
+			{{/if}}
+		</div>
+		<div class="message {{> ~chapterToNavicoArc(quiz.chapter_id)}}">
+			<p>
+				<span>
+					{{if result }}
+					{{>quiz.repletion}}
+					{{else}}
+					{{>quiz.instruction}}
+					{{/if}}
+				</span>
+			</p>
+		</div>
+		{{if result }}
+		<div class="remunerationList">
+			<section class="contents contentsShadow statusData_icon ansCnt">
+				<div class="columnBox bossListStatus innerHeader">
+					{{giftThumb type=quiz.gift_item_type id=quiz.qty /}}
+					<div class="contentsInner">
+						<h1>正解報酬</h1>
+						<p>{{>quiz.qty}}{{>quiz.gift_item_name}}</p>
+					</div>
+				</div>
+			</section>
+			{{if clear_flg }}
+			<section class="contents contentsShadow statusData_icon ansCnt">
+				<div class="columnBox bossListStatus innerHeader">
+					{{giftThumb type=chapter.gift_item_type id=chapter.gift_item_id /}}
+					<div class="contentsInner">
+						<h1>全問正解報酬</h1>
+						<p>{{>chapter.gift_item_name}} × {{>chapter.qty}}</p>
+					</div>
+				</div>
+			</section>
+			{{/if}}
+		</div>
+		{{/if}}
+
+		{{if all_clear_flg }}
+		<h1 class="subHeader3">
+			<span>完全クリア!</span>
+		</h1>
+
+		<div class="remunerationList">
+			<section class="contents contentsShadow statusData_icon ansCnt">
+				<div class="columnBox bossListStatus innerHeader">
+					{{giftThumb type=reward.gift_item_type id=reward.gift_item_id /}}
+					<div class="contentsInner">
+						<h1>完全クリア報酬</h1>
+						<p>
+							{{>reward.gift_item_name}} × {{>reward.qty}}
+						</p>
+					</div>
+				</div>
+			</section>
+		</div>
+		{{else}}
+		{{if result }}
+		<button class="btn large" data-href="quiz/question/{{>next.chapter_id}}/{{>next.quiz_id}}/">
+			{{if !quiz.last_quiz_flg }}
+			次の問題へ
+			{{else}}
+			{{>next.name}}へ
+			{{/if}}
+		</button>
+		{{else}}
+		<button class="btn large" data-href="quiz/question/{{>quiz.chapter_id}}/{{>quiz.quiz_id}}/">
+			戻って再挑戦
+		</button>
+		{{/if}}
+		{{/if}}
+		<hr>
+
+		{{if all_clear_flg }}
+		<div class="arrowLink">
+			<button class="link next" data-href="gift/list/">ギフトを確認</button>
+		</div>
+		{{/if}}
+
+		<div class="arrowLink">
+			<button class="link prev" data-href="quiz/top/">クイズトップへ戻る</button>
+		</div>
+		{{if result }}
+		<section class="caution">
+			<article>
+				<ul>
+					<li>報酬はギフトへ贈られます。</li>
+				</ul>
+			</article>
+		</section>
+		{{/if}}
+	</div>
+</div>

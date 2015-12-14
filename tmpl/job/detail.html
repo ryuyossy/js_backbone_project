@@ -1,0 +1,78 @@
+<h1 class="mainHeader">{{>job.name}}</h1>
+<div class="statusLine">
+	<p><span class="headline">ジョブ経験値</span>{{for job}}{{>win_jex}}<span class="denominator">/{{>master_jex}}{{/for}}</span></p>
+</div>
+
+<section class="mainImage jobType{{>job.type}}">
+	<img src="{{getImgRoot/}}/avatar/{{>~zeroPadding(job_id, 3)}}02_640{{if !changeable}}_silhouette{{/if}}.png" class="female">
+	<img src="{{getImgRoot/}}/avatar/{{>~zeroPadding(job_id, 3)}}01_640{{if !changeable}}_silhouette{{/if}}.png" class="male">
+	{{if job.mastered}}<span class="master">MASTER</span>{{/if}}
+</section>
+
+
+<section id="jobDetail" class="contents contentsShadow statusData">
+	<button class="btn regular{{if !changeable}} disable{{/if}}" data-href="job/avatar_select/{{>job.id}}/">{{if !job.current_job}}ジョブ{{else}}アバター{{/if}}チェンジ</button>
+	{{if !changeable}}<p class="cant_change"><span class="label32">転職条件を満たしていません</span></p>{{/if}}
+	<div class="contentsInner">
+	{{:job.description}}
+	</div>
+	<h1>マスターボーナス</h1>
+	<div class="contentsInner">
+		<dl class="master_bonuses">
+		{{for job.master_bonuses}}
+			<dt class="master_bonus{{>type}}">{{:~getMasterBonusText(type)}}</dt><dd{{if percent > 0}} class="plus"{{/if}}>+{{>percent}}%</dd>
+		{{/for}}
+		</dl>
+	</div>
+
+	<h1>転職条件</h1>
+	<div class="contentsInner">
+		{{jobChangeConditions conditions=conditions /}}
+	</div>
+</section>
+
+<section id="ability">
+	<h1 class="subHeader">
+		<span class="subHeaderBg_l"></span>
+		<span>アビリティ</span>
+		<span class="subHeaderBg_r"></span>
+	</h1>
+	<div class="abBox">
+	{{for abilities}}
+	<section class="contents contentsShadow statusData">
+		<h1 class="{{if mastered === true}}mastered{{else}}unmastered{{/if}}">{{>name}}</h1>
+		{{if mastered === false}}<span class="label32">あと{{>remaining_jex}}JEx</span>{{/if}}
+		<div class="contentsInner">
+			<div class="columnBox prof_detailData">
+				<dl>
+					<dt>タイプ</dt><dd>{{>type}}</dd>
+					<dt>アビP</dt><dd>{{>equip_point}}</dd>
+					<dt>消費AP</dt><dd>{{if tp_cost !== null}}{{>tp_cost}}{{else}}-{{/if}}</dd>
+				</dl>
+			</div>
+			<p>{{>description}}</p>
+		</div>
+	</section>
+	{{/for}}
+	</div>
+</section>
+
+<hr>
+
+<div class="linkGroup">
+	<div class="arrowLink"><button class="link next" data-href="ability/">アビリティを装備する</button></div>
+	<div class="arrowLink"><button class="link prev" data-href="job/">ジョブトップに戻る</button></div>
+</div>
+
+<div class="helpList">
+	<ul>
+		{{if job.current_job}}
+		<li><button class="link" data-href="help/detail/408/">アバターチェンジってなに？</button></li>
+		{{else}}
+		<li><button class="link" data-href="help/detail/405/">ジョブチェンジってなに？</button></li>
+		{{/if}}
+		<li><button class="link" data-href="help/detail/406/">ジョブマスターってなに？</button></li>
+		<li><button class="link" data-href="help/detail/407/">マスターボーナスってなに？</button></li>
+	</ul>
+</div>
+

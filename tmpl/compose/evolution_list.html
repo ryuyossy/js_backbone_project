@@ -1,0 +1,100 @@
+<h1 class="mainHeader">合成</h1>
+<div class="statusLine">
+	<p>
+		<span class="headline">所持数</span>{{>user.own_equip_num}}<span class="denominator">/{{>user.max_own_equip_num}}</span>
+		<span class="headline">所持ギル</span>{{>user.gil}}
+	</p>
+</div>
+	
+<div class="banner discount">
+	{{for #data tmpl="#jsTemplateBanners" /}}
+</div>
+
+<div id="composeEvolutionList">
+	<!-- //タブメニュー２（左右切り替えのみ） 左セレクト-->
+	<div class="tabNav2">
+		<ul>
+			<li><button class="left" data-href="compose/">強化</button></li>
+			<li><button class="right select">限界突破</button></li>
+		</ul>
+	</div>
+	
+	<div class="message taicho_arc">
+		<p><span>{{>navico_message}}</span></p>
+	</div>
+	
+	<h1 class="subHeader">
+		<span class="subHeaderBg_l"></span>
+		<span>限界突破する武具を選択</span>
+		<span class="subHeaderBg_r"></span>
+	</h1>
+	
+	<section class="contents contentsShadow narrow">
+		<div class="selectBox group">
+			<div class="line">
+				<label>
+					<select name="equip_type" class="jsFilterEquipType">
+						{{for equip_types}}
+							<option value="{{>value}}">{{>text}}</option>
+						{{/for}}
+					</select>
+					<span class="selector"></span>
+				</label>
+				<label>
+					<select name="attribute_type" class="jsFilterAttributeType">
+						{{for attribute_types}}
+							<option value="{{>value}}">{{>text}}</option>
+						{{/for}}
+					</select>
+					<span class="selector"></span>
+				</label>
+				<label>
+					<select name="rarity" class="jsFilterRarity">
+						{{for rarity_types}}
+							<option value="{{>value}}">{{>text}}</option>
+						{{/for}}
+					</select>
+					<span class="selector"></span>
+				</label>
+				<label>
+					<select name="sort_type" class="jsFilterSortType">
+						{{for sort_types}}
+							<option value="{{>value}}">{{>text}}</option>
+						{{/for}}
+					</select>
+					<span class="selector"></span>
+				</label>
+			</div>
+		</div>
+		<button class="btn selectBtn jsButtonFilter">表示する</button>
+	</section>
+				
+	
+	<div class="jsEvolutionList jsComposeTop">
+		<div class="jsListAll">{{for #data tmpl="#jsTemplateEquip2" /}}</div>
+		{{if compose_more_flg}}
+		<div class="moreLink jsListMore">
+			<button class="link"><span>もっと見る</span></button>
+		</div>
+		{{/if}}
+	</div>
+</div>
+
+<hr>
+
+<div class="linkGroup">
+	<div class="arrowLink">
+		<button class="link next" data-href="deck/list/1/">装備へ</button>
+	</div>
+	<div class="arrowLink">
+		<button class="link next" data-href="equip/sell/list/">武具売却へ</button>
+	</div>
+</div>
+
+<div class="helpList">
+	<ul>
+		<li><button class="link" data-href="help/detail/701/">合成ってなに？</button></li>
+		<li><button class="link" data-href="help/detail/707/">強化ってなに？</button></li>
+		<li><button class="link" data-href="help/detail/702/">限界突破ってなに？</button></li>
+	</ul>
+</div>

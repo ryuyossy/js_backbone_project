@@ -1,0 +1,67 @@
+<h1 class="mainHeader">役職一覧</h1>
+
+<div id="guildPositionList">
+	{{for positions}}
+		{{if user}}
+		<section class="contents contentsShadow statusData_icon link jsMember" data-user-id="{{>user.user_id}}" data-user-name="{{>user.user_name}}" data-position-name="{{>position_name}}" data-position-id="{{>position_id}}">
+			<h1>{{>position_name}}</h1>
+			<div class="columnBox" data-href="profile/{{if #parent.parent.parent.data.user.user_id !== user.user_id}}other/{{>user.user_id}}/{{/if}}">
+				<div class="iconBgRect_l gold"><img src="{{getImgRoot/}}/avatar/{{>user.avatar_id}}_140.png"></div>
+				<div class="contentsInner">
+					<h2>{{>user.user_name}}</h2>
+					<p>{{>position_description}}</p>
+				</div>
+			</div>
+			{{if position_id !== 1 && ~root('master_priv_flg') }}
+			<div class="innerBtnBox">
+				<button class="btn cancel jsGuildRemoveConfirm">解任する</button>
+				<button class="btn jsGuildJoin" data-href="guild/position/appoint/{{>position_id}}/{{>user.user_id}}/">変更する</button>
+			</div>
+			{{/if}}
+		</section>
+
+		{{else}}
+		<section class="contents contentsShadow statusData">
+			<h1>{{>position_name}}</h1>
+			<div class="columnBox">
+				<div class="contentsInner">
+					<p>{{>position_description}}</p>
+				</div>
+			</div>
+			{{if ~root('master_priv_flg')}}
+			<button class="btn jsGuildJoin" data-href="guild/position/appoint/{{>position_id}}/">任命する</button>
+			{{/if}}
+		</section>
+		{{/if}}
+	{{/for}}
+</div>
+
+<hr>
+
+<div class="arrowLink">
+	<button class="link prev" data-href="guild/">ギルドトップに戻る</button>
+</div>
+
+<div class="helpList">
+	<ul>
+		<li><button class="link" data-href="help/detail/305/">役職ってなに？</button></li>
+	</ul>
+</div>
+
+{{escape}}
+<script id="jsTemplatePopupGuildRemoveConfirm" type="text/x-jsrender">
+	<div class="modalInner">
+		<p>{{>user_name}}さんを{{>position_name}}から解任しますか？</p>
+		<div class="innerBtnBox">
+			<button class="btn cancel jsClosePopup">やめる</button><button class="btn jsClosePopup jsButtonGuildRemoveFix">解任する</button>
+		</div>
+	</div>
+</script>
+
+<script id="jsTemplatePopupGuildRemoveComplete" type="text/x-jsrender">
+	<div class="modalInner">
+		<p>解任しました。</p>
+		<span class="btn short close" data-href="guild/position/list/">閉じる</span>
+	</div>
+</script>
+{{/escape}}

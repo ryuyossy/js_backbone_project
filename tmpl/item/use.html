@@ -1,0 +1,34 @@
+{{if win_ability_flg || win_jobs || master_job_flg}}
+<div id="fullScreen">
+	<canvas id="canvas" width="320" height="200"></canvas>
+	<div class="pause"><button class="pushEnter">TAP SCREEN</button></div>
+	<div class="jsCanvasTextBox"></div><div class="jsCanvasTextNext">▼</div>
+</div>
+{{/if}}
+
+<div id="jsUseResult">
+	<h1 class="mainHeader">アイテム使用完了</h1>
+
+	<div id="itemUsed">
+		{{if result_code === 'OK'}}
+		<section class="complateMessage">
+			<article>
+				<h1>{{>item_name}}を使用しました</h1>
+				<h1>{{:result_message}}</h1>
+				<table>
+					<tr>
+						<th>所持数</th><td>{{>own_num + 1}}</td><td>→</td><th>所持数</th><td>{{>own_num}}</td>
+					</tr>
+				</table>
+			</article>
+		</section>
+		{{else}}
+		<p>{{>result_message}}</p>
+		{{/if}}
+	</div>
+
+	<div class="linkGroup">
+		<div class="arrowLink"><button class="link next" data-href="mission/stage/">クエスト</button></div>
+		<div class="arrowLink"><button class="link next" data-href="item/list/">アイテム</button></div>
+	</div>
+</div>

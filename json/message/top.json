@@ -1,0 +1,33 @@
+{
+    "status": 200,
+    "messages_more_flg": true,
+    "messages": [
+        {
+            "body_text": "abcdefg",
+            "from_avatar_id": "10001",
+            "from_user_id": 5,
+            "from_user_name": "馬場浩介5",
+            "new_flg": true,
+            "message_datetime": "01/07 19:56",
+            "message_id": "5_1_1357556183812"
+        },
+        {
+            "body_text": "aaaaaaaaa",
+            "from_avatar_id": "10002",
+            "from_user_id": 4,
+            "from_user_name": "馬場浩介4",
+            "new_flg": true,
+            "message_datetime": "01/06 20:39",
+            "message_id": "4_1_1357472340310"
+        },
+        {
+            "body_text": "aaaaaaaaaaaaaaaaa",
+            "from_avatar_id": "11001",
+            "from_user_id": 2,
+            "from_user_name": "馬場浩介2",
+            "new_flg": false,
+            "message_datetime": "11/19 18:37",
+            "message_id": "2_1_1353317856021"
+        }
+    ]
+}

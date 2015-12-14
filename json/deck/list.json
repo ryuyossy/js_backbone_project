@@ -1,0 +1,128 @@
+{
+	"status" : 200,
+    "attack": 356,
+    "sp_attack": 1269,
+    "defense": 1575,
+    "sp_defense": 2971,
+    "job_bonus_pow": 1,
+    "job_bonus_tech": 0,
+    "job_bonus_know": 0,
+    "battle_power": 6171,
+    "user": {
+        "user_id": 1,
+        "avatar_id": 10001
+    },
+    "decks": [
+        {
+            "cost_max": 10,
+            "cost_sum": 7,
+            "deck_no": 0,
+            "equips": [
+				{
+					"equip_id":150002,
+					"step":2
+				}, {
+					"equip_id":150003,
+					"step":0
+				},{
+					"equip_id":150002,
+					"step":2
+				}, {
+					"equip_id":150003,
+					"step":0
+				},{
+					"equip_id":150002,
+					"step":2
+				}, {
+					"equip_id":150003,
+					"step":0
+				},{
+					"equip_id":150002,
+					"step":2
+				}, {
+					"equip_id":150003,
+					"step":0
+				}
+            ],
+            "power_sum": 356,
+            "sp_power_sum": 1269
+        },
+        {
+            "cost_max": 19101,
+            "cost_sum": 9793,
+            "deck_no": 1,
+            "equips": [
+				{
+					"equip_id":150002,
+					"step":2
+				}, {
+					"equip_id":150003,
+					"step":0
+				},{
+					"equip_id":150002,
+					"step":2
+				}, {
+					"equip_id":150003,
+					"step":0
+				},{
+					"equip_id":150002,
+					"step":2
+				}, {
+					"equip_id":150003,
+					"step":0
+				},{
+					"equip_id":150002,
+					"step":2
+				}, {
+					"equip_id":150003,
+					"step":0
+				}
+            ],
+            "power_sum": 977292,
+            "sp_power_sum": 34343
+        },
+        {
+            "cost_max": 12,
+            "cost_sum": 11,
+            "deck_no": 2,
+            "equips": [
+				{
+					"equip_id":150002,
+					"step":2
+				}, {
+					"equip_id":150003,
+					"step":0
+				},{
+					"equip_id":150002,
+					"step":2
+				}, {
+					"equip_id":150003,
+					"step":0
+				},{
+					"equip_id":150002,
+					"step":2
+				}, {
+					"equip_id":150003,
+					"step":0
+				},{
+					"equip_id":150002,
+					"step":2
+				}, {
+					"equip_id":150003,
+					"step":0
+				}
+            ],
+            "power_sum": 38,
+            "sp_power_sum": 22
+        },
+        {
+            "cost_max": 15,
+            "cost_sum": 9,
+            "deck_no": 3,
+            "equips": null,
+            "power_sum": 29,
+            "sp_power_sum": 15
+        }
+    ],
+	"first_access_flg":true
+}

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>プロフィール｜プロフィール詳細</title>
+	<meta name="robots" content="noindex,nofollow">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="/css/common_parts.css">
+	<link rel="stylesheet" href="/css/prof.css">
+	<script src="/html/js/jquery-1.8.2.min.js"></script>
+	<script src="/html/js/parts.js"></script>
+</head>
+<body>
+	
+		<header id="globalHeader">
+			<div class="menuPanel"><button class="link mypage"><span class="hide">マイページ</span></button></div>
+			<div class="battleTimeCount">
+				<div class="battleTimeInner">
+					<h1>次のバトルまで</h1>
+					<div class="numBox">
+						<span class="numGold num_1"><span class="hide">0</span></span>
+						<span class="numGold num_2"><span class="hide">1</span></span>
+						<span class="numGoldColon"><span class="hide">:</span></span>
+						<span class="numGold num_3"><span class="hide">2</span></span>
+						<span class="numGold num_5"><span class="hide">3</span></span>
+						<span class="numGoldColon"><span class="hide">:</span></span>
+						<span class="numGold num_4"><span class="hide">4</span></span>
+						<span class="numGold num_9"><span class="hide">5</span></span>
+					</div>
+				</div>
+			</div>
+			<div class="menuPanel"><button class="link menu"><span class="hide">メニュー</span></button></div>
+		</header>
+		
+		
+		
+		<div id="container">
+			<section id="avatarStatus">
+				<div class="avatarStatusInner">
+					<h1 class="userName">ユーザー名ユーザー名ユーザー</h1>
+					<figure class="myAvatar">
+						<img src="/img/avatar/33001_640.png">
+					</figure>
+					<div class="statusData">
+						<dl>
+							<dt>Lv.</dt><dd>100</dd>
+							<dt>ジョブ</dt><dd>グラディエーター</dd>
+							<dt>所属</dt><dd>ギルド名ギルド名</dd>
+							<dt>役職</dt><dd>ギルドオーナー</dd>
+							<dt>戦闘力</dt><dd>1234567</dd>
+							<dt>獲得BP</dt><dd>123456789</dd>
+							<dt>図鑑</dt><dd>12345/12345</dd>
+							<dt>所持武具</dt><dd>100/100</dd>
+						</dl>
+					</div>
+					<div class="equip">
+						<h1><span class="hide">装備</span></h1>
+						<div class="equipImageBox link" data-href="#">
+							<img src="/img/equip/weapon_128.png">
+							<div class="evolutionGerge_s">
+								<span class="evo1 hide">★</span>
+								<span class="evo2 hide">★</span>
+							</div>
+						</div>
+						<div class="equipImageBox link" data-href="#">
+							<img src="/img/equip/weapon_128.png">
+							<div class="evolutionGerge_s">
+								<span class="evo1 hide">★</span>
+								<span class="evo2 hide">★</span>
+							</div>
+						</div>
+					</div>
+					<!-- // 種はここに入れる（あとで）
+					<div class="seed">
+						
+					</div>
+					-->
+				</div>
+			</section>
+			
+			<section class="comment">
+				<p>
+					よろしくおねがいします。よろしくおねがいします。よろしくおね<!-- //30文字 -->
+				</p>
+				<!-- //自分のプロフ詳細の時のみ：コメント編集ボタン -->
+				<button class="edit link hide" data-href="#">編集</button>
+			</section>
+			
+			<!-- // 自分のプロフ詳細の時のみ：マイデータ -->
+			<section class="myDate contents contentsShadow statusData">
+				<h1>マイデータ</h1>
+				<div class="contentsInner">
+					<div class="columnBox">
+						<dl>
+							<dt>ギル</dt><dd>123456789</dd>
+							<dt>ジョブ系統</dt><dd>力系</dd>
+							<dt>攻撃</dt><dd>123456</dd>
+							<dt>防御</dt><dd>123456</dd>
+							<dt>進行</dt><dd>ステージ10</dd>
+						</dl>
+						<dl>
+							<dt>ガチャP</dt><dd>123456789</dd>
+							<dt>Lv.</dt><dd>123</dd>
+							<dt>特攻</dt><dd>123456</dd>
+							<dt>特防</dt><dd>123456</dd>
+							<dt>お宝</dt><dd>5種類</dd>
+						</dl>
+					</div>
+					<dl>
+						<dt>累計BP</dt><dd>123456789</dd>
+						<dt>戦績</dt><dd>1234勝/1234敗（勝率100％）</dd>
+						<dt>連勝記録</dt><dd>1234連勝</dd>
+						<dt>所属履歴</dt><dd>ギルド名ギルド名ギルド名</dd>
+					</dl>
+				</div>
+			</section>
+			
+			<!-- // 自分のプロフの時のみ：メッセージ -->
+			<h1 class="subHeader">
+				<span class="subHeaderBg_l"></span>
+				<span>メッセージ</span>
+				<span class="subHeaderBg_r"></span>
+			</h1>
+			
+			<section id="messageList">
+				<article class="contents shadow link" data-href="#">
+					<div class="contentsInner">
+						<div class="iconBgArc_s gold">
+							<img src="/img/avatar/00001_120.png">
+						</div>
+						<div class="sender">
+							<!-- //新着の場合はラベルを表示 -->
+							<span class="label36_r4">NEW</span>
+							<span class="time">12/12 12:23</span>
+							<span class="senderName">From.<span>シーフ</span>さん</span>
+						</div>
+					</div>
+				</article>
+				<article class="contents shadow link" data-href="#">
+					<div class="contentsInner">
+						<div class="iconBgArc_s gold">
+							<img src="/img/avatar/00001_120.png">
+						</div>
+						<div class="sender">
+							<span class="time">12/12 12:23</span>
+							<span class="senderName">From.<span>シーフ</span>さん</span>
+						</div>
+					</div>
+				</article>
+				<article class="contents shadow link" data-href="#">
+					<div class="contentsInner">
+						<div class="iconBgArc_s gold">
+							<img src="/img/avatar/00001_120.png">
+						</div>
+						<div class="sender">
+							<span class="time">12/12 12:23</span>
+							<span class="senderName">From.<span>シーフ</span>さん</span>
+						</div>
+					</div>
+				</article>
+				<div class="arrowLink">
+					<button class="link next" data-href="#">もっと見る</button>
+				</div>
+			</section>
+			
+			
+			
+			<!-- // 他人のプロフの時のみ：対ユーザーアクション用ボタン 
+			<section id="anotherPerson">
+				<div class="outerBtnBox">
+					<button class="btn" data-href="#">あいさつする</button>
+					<button class="btn" data-href="#">鼓舞する</button>
+				</div>
+				<div class="outerBtnBox">
+					<button class="btn disable" data-href="#">ギルドに勧誘する</button>
+					<button class="btn" data-href="#">メッセージを送る</button>
+				</div>
+			</section>-->
+			
+			
+			
+			<!-- // 共通：あいさつ -->
+			<h1 class="subHeader">
+				<span class="subHeaderBg_l"></span>
+				<span>あいさつ</span>
+				<span class="subHeaderBg_r"></span>
+			</h1>
+			
+			<section id="greet">
+				<article class="contents contentsShadow topic">
+					<div class="contentsInner">
+						<div class="greetingBody">
+							<div class="contributor">
+								<div class="iconBgArc_s gold"><img src="/img/avatar/00001_120.png"></div>
+								<h2>わかば弓士</h2>
+								<time>8/10 12:23</time>
+							</div>
+							<p>
+								あいさつ本文あいさつ本文あいさつ本文あいさつ本文あいさつ本文あいさつ本文あいさつ本文あいさつ本文あいさつ本文
+								<span class="greetMenu"><span class="link reply">あいさつする</span></span>
+							</p>
+						</div>
+					</div>
+				</article>
+				<div class="arrowLink">
+					<button class="link next" data0href="#">もっと見る</button>
+				</div>
+			</section>
+			
+			<hr>
+			
+			<div class="helpList">
+				<ul>
+					<li><button class="link" data-href="#">メッセージについて</button></li>
+					<li><button class="link" data-href="#">あいさつについて</button></li>
+				</ul>
+			</div>
+		</div>
+		
+		<footer id="globalFooter">
+			<ul>
+				<li class="menuPanel"><span class="link mypage"><span class="hide">マイページ</span></span></li>
+				<li class="menuPanel"><span class="link quest"><span class="hide">クエスト</span></span></li>
+				<li class="menuPanel"><span class="link buttle"><span class="hide">バトル</span></span></li>
+				<li class="menuPanel"><span class="link gatcha"><span class="hide">ガチャ</span></span></li>
+				<li class="menuPanel"><span class="link menu"><span class="hide">マイページ</span></span></li>
+			</ul>
+		</footer>
+	</body>
+</html>

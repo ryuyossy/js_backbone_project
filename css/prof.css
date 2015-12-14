@@ -1,0 +1,497 @@
+@charset "utf-8";
+/*
+@mixin box_shadow_contents_l($offsetSize,$z_index:-1){
+	content:'';
+	position:absolute;
+	left:$offsetSize;
+	top:75%;
+	bottom:17px;
+	width:50%;
+	min-height:5px;
+	max-width:150px;
+	background:#544123;
+	-webkit-box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	-webkit-transform:rotate(-5deg);
+	transform:rotate(-5deg);
+	z-index:$z_index;
+}
+@mixin box_shadow_contents_r($offsetSize,$z-index:-1){
+	content:'';
+	position:absolute;
+	right:$offsetSize;
+	top:75%;
+	bottom:17px;
+	width:50%;
+	min-height:5px;
+	max-width:150px;
+	background:#544123;
+	-webkit-box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	-webkit-transform:rotate(5deg);
+	transform:rotate(5deg);
+	z-index:$z_index;
+}
+*/
+/*
+@mixin backgroundResize($position:0 -60px){
+	@media screen and (min-width:319px){
+		width:320px;
+		@include background-size(320px,auto);
+	}
+	@media screen and (min-width:359px){
+		width:360px;
+		@include background-size(360px,auto);
+	}
+	@media screen and (min-width:361px){
+		width:480px;
+		@include background-size(480px,auto);
+		background-position:$position;
+	}
+}
+*/
+/*
+@mixin display-box{
+	display:flexbox;
+	-webkit-display:flexbox;
+}
+@mixin box-align($position){
+	flex-align:$position;
+	-webkit-flex-align:$position;
+}
+@mixin box-flex($ratio){
+	flex:$ratio;
+	-webkit-flex:$ratio;
+}
+@mixin box-pack($position){
+	flex-pack:$position;
+	-webkitflex-pack:$position;
+}
+*/
+/* line 7, ../scss/prof.scss */
+.myAvatar {
+  height: 275px;
+}
+/* line 9, ../scss/prof.scss */
+.myAvatar > img {
+  position: absolute;
+  left: 120px;
+  top: 0;
+}
+/* line 13, ../scss/prof.scss */
+.myAvatar > img[src$="00002_640.png"] {
+  left: 110px;
+}
+/* line 16, ../scss/prof.scss */
+.myAvatar > img[src$="10002_640.png"] {
+  left: 110px;
+}
+/* line 19, ../scss/prof.scss */
+.myAvatar > img[src$="11001_640.png"] {
+  left: 70px;
+}
+/* line 22, ../scss/prof.scss */
+.myAvatar > img[src$="21002_640.png"] {
+  left: 100px;
+}
+/* line 25, ../scss/prof.scss */
+.myAvatar > img[src$="23001_640.png"] {
+  left: 110px;
+}
+/* line 28, ../scss/prof.scss */
+.myAvatar > img[src$="23002_640.png"] {
+  left: 130px;
+}
+/* line 31, ../scss/prof.scss */
+.myAvatar > img[src$="31002_640.png"] {
+  left: 110px;
+}
+/* line 34, ../scss/prof.scss */
+.myAvatar > img[src$="32002_640.png"] {
+  left: 110px;
+}
+/* line 37, ../scss/prof.scss */
+.myAvatar > img[src$="33002_640.png"] {
+  left: 130px;
+}
+/* line 40, ../scss/prof.scss */
+.myAvatar > img[src$="21003_640.png"] {
+  left: 110px;
+}
+
+/* line 45, ../scss/prof.scss */
+#avatarStatus {
+  min-height: 300px;
+}
+/* line 48, ../scss/prof.scss */
+#avatarStatus:after {
+  display: none;
+}
+/* line 51, ../scss/prof.scss */
+#avatarStatus .statusData {
+  position: absolute;
+  left: 8px;
+  top: 38px;
+  z-index: 1;
+}
+/* line 57, ../scss/prof.scss */
+#avatarStatus .statusData dl {
+  font-size: 80%;
+  text-shadow: -1px -1px 2px black, 1px -1px 2px black, -1px 1px 2px black, 1px 1px 2px black;
+}
+/* line 61, ../scss/prof.scss */
+#avatarStatus .statusData dt {
+  color: #ff0000;
+}
+/* line 64, ../scss/prof.scss */
+#avatarStatus .statusData dt:nth-of-type(2) {
+  clear: none;
+  margin-left: 16px;
+}
+/* line 68, ../scss/prof.scss */
+#avatarStatus .statusData dt:nth-of-type(4) {
+  margin-bottom: 8px;
+}
+/* line 72, ../scss/prof.scss */
+#avatarStatus .statusData dd {
+  color: #fff;
+}
+/* line 75, ../scss/prof.scss */
+#avatarStatus .statusData dd:nth-of-type(4) {
+  margin-bottom: 8px;
+}
+/* line 80, ../scss/prof.scss */
+#avatarStatus .equip {
+  top: 186px;
+}
+/* line 82, ../scss/prof.scss */
+#avatarStatus .equip .evolutionGerge_s {
+  left: 25px;
+  top: 58px;
+}
+
+/* line 88, ../scss/prof.scss */
+.userName {
+  z-index: 2;
+}
+
+/* line 91, ../scss/prof.scss */
+.comment {
+  display: inline-block;
+  background: url("/img/parts/bg_bubble_comment.png") 0 0 no-repeat;
+  -webkit-background-size: 306px 70px;
+  position: relative;
+  display: block;
+  width: 306px;
+  height: 70px;
+  margin: -16px auto 8px auto;
+}
+/* line 98, ../scss/prof.scss */
+.comment.link {
+  color: #333;
+}
+/* line 101, ../scss/prof.scss */
+.comment p {
+  padding: 14px 24px 0 12px;
+  line-height: 1.8em;
+}
+/* line 106, ../scss/prof.scss */
+.comment .edit.on:before {
+  visibility: visible;
+  content: "";
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: auto;
+  top: auto;
+  width: 18px;
+  height: 21px;
+  z-index: auto;
+  background-color: rgba(0, 0, 0, 0.3);
+  right: 8px;
+  bottom: 8px;
+}
+/* line 112, ../scss/prof.scss */
+.comment .edit:after {
+  display: inline-block;
+  background: url("/img/parts/sprite_icon_parts_20130415_1.png") 0 0 no-repeat;
+  -webkit-background-size: 140px 95px;
+  visibility: visible;
+  content: "";
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: auto;
+  top: auto;
+  width: 19px;
+  height: 21px;
+  z-index: auto;
+  right: 8px;
+  bottom: 8px;
+}
+
+/* line 120, ../scss/prof.scss */
+.myDate {
+  width: 95%;
+  margin: 0 auto;
+}
+/* line 123, ../scss/prof.scss */
+.myDate .columnBox dl {
+  margin-bottom: 8px;
+}
+/* line 127, ../scss/prof.scss */
+.myDate .columnBox dl dt:nth-of-type(1), .myDate .columnBox dl dt:nth-of-type(4) {
+  margin-bottom: 8px;
+}
+/* line 133, ../scss/prof.scss */
+.myDate .columnBox dl dd:nth-of-type(1), .myDate .columnBox dl dd:nth-of-type(4) {
+  margin-bottom: 8px;
+}
+
+/* line 139, ../scss/prof.scss */
+.subHeader {
+  margin: 16px 0 8px 0;
+}
+
+/* line 144, ../scss/prof.scss */
+#messageList.unitary,
+#messageDetail.unitary {
+  margin: 8px 0 0 0;
+}
+/* line 148, ../scss/prof.scss */
+#messageList .dimmed p,
+#messageDetail .dimmed p {
+  margin: 0 auto;
+}
+/* line 152, ../scss/prof.scss */
+#messageList .contents,
+#messageDetail .contents {
+  width: 95%;
+  margin: 0 auto 8px auto;
+}
+/* line 156, ../scss/prof.scss */
+#messageList .contentsInner,
+#messageDetail .contentsInner {
+  display: -webkit-box;
+  display: box;
+  margin: 0 8px;
+  padding: 8px 0;
+}
+/* line 161, ../scss/prof.scss */
+#messageList .iconBgArc_s,
+#messageDetail .iconBgArc_s {
+  margin: 0;
+}
+/* line 164, ../scss/prof.scss */
+#messageList .sender,
+#messageDetail .sender {
+  position: relative;
+  -webkit-box-flex: 1;
+  box-flex: 1;
+  margin: 0 0 0 8px;
+}
+/* line 169, ../scss/prof.scss */
+#messageList .sender .link,
+#messageDetail .sender .link {
+  color: #544123;
+}
+/* line 173, ../scss/prof.scss */
+#messageList .label36_r4,
+#messageDetail .label36_r4 {
+  position: absolute;
+  display: block;
+  padding: 0 4px;
+  font-size: 80%;
+}
+/* line 179, ../scss/prof.scss */
+#messageList .time,
+#messageDetail .time {
+  position: absolute;
+  right: 8px;
+  display: block;
+  font-size: 80%;
+  color: #B9A46B;
+}
+/* line 186, ../scss/prof.scss */
+#messageList .senderName,
+#messageDetail .senderName {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  text-align: left;
+}
+/* line 193, ../scss/prof.scss */
+#messageList .senderName span,
+#messageDetail .senderName span {
+  color: #008C8C;
+}
+/* line 197, ../scss/prof.scss */
+#messageList .senderName:after,
+#messageDetail .senderName:after {
+  display: inline-block;
+  background: url("/img/parts/sprite_icon_parts_20130415_1.png") -97px -78px no-repeat;
+  -webkit-background-size: 140px 95px;
+  visibility: visible;
+  content: "";
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: auto;
+  top: 0;
+  width: 9px;
+  height: 13px;
+  z-index: auto;
+  right: 0;
+}
+/* line 203, ../scss/prof.scss */
+#messageList .moreLink,
+#messageDetail .moreLink {
+  margin-top: 8px;
+}
+/* line 206, ../scss/prof.scss */
+#messageList ~ .arrowLink,
+#messageDetail ~ .arrowLink {
+  margin-bottom: 16px;
+}
+
+/* line 210, ../scss/prof.scss */
+#messageDetail {
+  margin-top: 8px;
+}
+/* line 212, ../scss/prof.scss */
+#messageDetail .contents {
+  position: relative;
+  padding-bottom: 8px;
+}
+/* line 216, ../scss/prof.scss */
+#messageDetail .contentsInner {
+  border-bottom: 1px solid #B9A46B;
+}
+/* line 218, ../scss/prof.scss */
+#messageDetail .contentsInner.link.on {
+  position: relative;
+  left: -8px;
+  width: 288px;
+  padding: 8px;
+}
+/* line 226, ../scss/prof.scss */
+#messageDetail .sender .senderName {
+  color: #333;
+}
+/* line 230, ../scss/prof.scss */
+#messageDetail .contentsBody {
+  margin: 8px;
+  line-height: 1.7;
+}
+/* line 234, ../scss/prof.scss */
+#messageDetail .btn.large {
+  width: 50%;
+  margin: 0 auto;
+}
+
+/* line 239, ../scss/prof.scss */
+#greet {
+  margin-bottom: 0;
+}
+/* line 241, ../scss/prof.scss */
+#greet .topic:first-of-type {
+  margin-top: 8px;
+}
+/* line 245, ../scss/prof.scss */
+#greet .dimmed p {
+  margin: 0 auto 8px auto;
+}
+
+/* line 251, ../scss/prof.scss */
+#anotherPerson .outerBtnBox {
+  width: 95%;
+}
+/* line 253, ../scss/prof.scss */
+#anotherPerson .outerBtnBox:nth-of-type(1) {
+  margin-bottom: 4px;
+}
+/* line 256, ../scss/prof.scss */
+#anotherPerson .outerBtnBox:nth-of-type(2) {
+  margin-top: 0;
+}
+/* line 259, ../scss/prof.scss */
+#anotherPerson .outerBtnBox .btn {
+  margin-right: 0;
+}
+
+/* line 268, ../scss/prof.scss */
+#commentInput.postForm_message {
+  width: 95%;
+  margin: 8px auto 16px auto;
+}
+/* line 271, ../scss/prof.scss */
+#commentInput.postForm_message .btn.large {
+  margin-top: 16px;
+}
+/* line 275, ../scss/prof.scss */
+#commentInput ~ .arrowLink {
+  margin-bottom: 16px;
+}
+
+/* line 283, ../scss/prof.scss */
+#greetList .moreLink {
+  margin-top: 8px;
+}
+/* line 286, ../scss/prof.scss */
+#greetList .arrowLink {
+  margin-bottom: 16px;
+}
+
+/* line 293, ../scss/prof.scss */
+#messageInput {
+  margin-top: 8px;
+}
+/* line 295, ../scss/prof.scss */
+#messageInput .contentsInner {
+  width: 95%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: box;
+}
+/* line 299, ../scss/prof.scss */
+#messageInput .contentsInner .iconBgArc_s {
+  margin: 0;
+}
+/* line 303, ../scss/prof.scss */
+#messageInput .receiver {
+  display: block;
+  margin-left: 8px;
+  color: #fff;
+}
+/* line 308, ../scss/prof.scss */
+#messageInput .postForm_message {
+  width: 95%;
+  margin: 8px auto 0 auto;
+}
+/* line 312, ../scss/prof.scss */
+#messageInput .postForm_message .btn.large {
+  margin: 16px auto;
+}
+/* line 316, ../scss/prof.scss */
+#messageInput ~ .arrowLink {
+  margin-bottom: 16px;
+}
+
+/* line 323, ../scss/prof.scss */
+#messageSendConfirm.modalInner p {
+  text-align: left;
+}
+/* line 325, ../scss/prof.scss */
+#messageSendConfirm.modalInner p:first-of-type {
+  text-align: center;
+}
+
+/* line 332, ../scss/prof.scss */
+#messageComplate .dimmed p {
+  margin-top: 8px;
+}
+/* line 335, ../scss/prof.scss */
+#messageComplate ~ .arrowLink {
+  margin-bottom: 16px;
+}

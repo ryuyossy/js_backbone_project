@@ -1,0 +1,31 @@
+<div id="fullScreen">
+	<canvas id="canvas" width="320" height="320"></canvas>
+	<div class="pause"><button class="pushEnter">TAP SCREEN</button></div>
+</div>
+
+<div id="jsAlchemyResult">
+<section id="alchemy" class="result">
+	<h1 class="mainHeader">錬金結果</h1>
+	<div class="message mitsuyo_arc">
+		<p>
+			<span>{{:speech_text}}</span>
+		</p>
+	</div>
+	{{for items tmpl="#jsTemplateAlchemyItems" /}}
+	<section class="complateMessage">
+		<article>
+			<p>
+				錬金したアイテムはギフトに送られました。
+			</p>
+			<p class="paramStatus">
+				<span class="headline">所持錬金マテリア</span>{{>materia_num_before}} → {{>materia_num_after}}
+			</p>
+		</article>
+	</section>
+	<hr>
+	<div class="linkGroup">
+		<div class="arrowLink"><button class="link prev" data-href="event/alchemy/"><span>錬金へ戻る</span></button></div>
+		<div class="arrowLink"><button class="link next" data-href="gift/list/"><span>ギフトを確認する</span></button></div>
+	</div>
+</section>
+</div>

@@ -1,0 +1,37 @@
+{
+    "status" : 200,
+	"series_name": "素敵な秘宝シリーズ",
+    "total_series_treasure_collect_num": 1,
+    "total_series_complete_num": 2,
+    "series_treasures": [
+        {
+            "series_id": 1,
+            "treasure_id": 11,
+            "treasure_name": "青い水晶",
+            "own_num": 2,
+            "description": "秘宝1の説明"
+        },
+        {
+            "series_id": 1,
+            "treasure_id": 12,
+            "treasure_name": "赤い水晶",
+            "own_num": 1,
+            "description": "秘宝2の説明"
+        },
+        {
+            "series_id": 1,
+            "treasure_id": 19,
+            "treasure_name": "黄の水晶",
+            "own_num": 0,
+            "description": "秘宝9の説明"
+        }
+    ],
+    "complete_treasure": {
+        "reward": {
+            "id": 1,
+            "type": "material",
+            "name": "強化素材-壱",
+            "description": "強化素材-壱の説明"
+        }
+    }
+}

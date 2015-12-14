@@ -1,0 +1,204 @@
+<script id="jsTemplateHeader" type="text/x-jsrender">
+	<div class="menuPanel" data-href="mypage/"><button class="link mypage"><span class="hide">マイページ</span></button></div>
+	{{if status !== null}}
+		{{if battle_end_rest}}
+		<!-- //バトル中 -->
+		<div class="battleTimeCount onBattle" data-href="battle/">
+			<div class="battleTimeInner">
+				<h1>バトル終了まで</h1>
+				<div class="numBox">
+					{{for ~split(battle_end_rest,'')}}
+					{{if #data == ':'}}
+					<span class="numGoldColon"></span>
+					{{else}}
+					<span class="numGold num_{{:#data}}"></span>
+					{{/if}}
+					{{/for}}
+				</div>
+			</div>
+		</div>
+		{{else battle_start_rest}}
+			{{if enemy_exist_flg}}
+			<!-- //バトル前 -->
+			<div class="battleTimeCount beforeBattle" data-href="battle/top/">
+				<div class="battleTimeInner">
+					<h1>まもなくバトル開催</h1>
+					<div class="numBox">
+						{{for ~split(battle_start_rest,'')}}
+						{{if #data == ':'}}
+						<span class="numGoldColon"></span>
+						{{else}}
+						<span class="numGold num_{{:#data}}"></span>
+						{{/if}}
+						{{/for}}
+					</div>
+				</div>
+			</div>
+			{{else}}
+			<!-- //通常 -->
+			<div class="battleTimeCount" data-href="battle/top/">
+				<div class="battleTimeInner">
+					<h1>次のバトルまで</h1>
+					<div class="numBox">
+						{{for ~split(battle_start_rest,'')}}
+						{{if #data == ':'}}
+						<span class="numGoldColon"></span>
+						{{else}}
+						<span class="numGold num_{{:#data}}"></span>
+						{{/if}}
+						{{/for}}
+					</div>
+				</div>
+			</div>
+			{{/if}}
+		{{/if}}
+	{{else}}
+		<div style="width:200px"></div>{{*// 404ページ用}}
+	{{/if}}
+	<div class="menuPanel jsMainmenuOpen"><button class="link menu"><span class="hide">メニュー</span></button></div>
+</script>
+
+<script id="jsTemplateGrowType" type="text/x-jsrender">
+	<span class="label32 growth_{{:~getGrowClass(grow_type)}}">{{:~getGrowText(grow_type)}}</span>
+</script>
+
+<script id="jsTemplateEquipThumbSmall" type="text/x-jsrender">
+	<div class="equipImageBox">
+		<img src="{{getImgRoot/}}/equip/{{>id}}_128.png">
+		<div class="evolutionGerge_s">{{for ~itelator(0,step)}}<span class="evo{{>#data}} hide">★</span>{{/for}}</div>
+	</div>
+</script>
+
+<script id="jsTemplateEquipThumbMedium" type="text/x-jsrender">
+	<div class="equipImageBox">
+		<img src="{{getImgRoot/}}/equip/{{>id}}_128.png">
+		<div class="evolutionGerge_m">{{for ~itelator(0,step)}}<span class="evo{{>#data}} hide">★</span>{{/for}}</div>
+	</div>
+</script>
+
+<script id="jsTemplateEquipThumbLarge" type="text/x-jsrender">
+	<div class="equipImageBox">
+		<span class="img{{if !get_flg}} unidentified{{/if}}"><img src="{{getImgRoot/}}/equip/{{>id}}_480.png"></span>
+		<div class="evolutionGerge_l">{{for ~itelator(0,step)}}<span class="evo{{>#data}} hide">★</span>{{/for}}</div>
+	</div>
+</script>
+
+<script id="jsTemplateGiftThumb" type="text/x-jsrender">
+	{{if type == 1}}
+	<img src="{{getImgRoot/}}/item/{{>id}}.png">
+	{{else type == 2}}
+	<img src="{{getImgRoot/}}/material/{{>id}}.png">
+	{{else type == 3}}
+	{{equipThumb equip_id=id step=0 size="medium" /}}
+	{{else type == 4}}
+	<img src="{{getImgRoot/}}/gacha/point.png">
+	{{else type == 5}}
+	<img src="{{getImgRoot/}}/item/gil.png">
+	{{else type == 6}}
+	<img src="{{getImgRoot/}}/ticket/{{>id}}.png">
+	{{else type == 7}}
+	<img src="{{getImgRoot/}}/treasure/{{>id}}_128.png">
+	{{else type == 8}}
+	<img src="{{getImgRoot/}}/item/medal.png">
+	{{else type == 9}}
+	<img src="{{getImgRoot/}}/item/ex.png">
+	{{else type == 11}}
+	<img src="{{getImgRoot/}}/item/materia.png">
+	{{/if}}
+</script>
+
+<script id="jsTemplateEmblemGotState" type="text/x-jsrender">
+<section id="emblemGotState" class="contents contentsShadow">
+	<div class="contentsBorder">
+		<h1>エンブレム獲得状況</h1>
+		{{for current_emblems}}
+		<dl>
+			{{if won_flg}}
+			<dt class="link" data-href="job/avatar_detail/{{>avatar_id}}/">
+			{{else}}
+			<dt class="unidentified">
+			{{/if}}
+				<div class="iconBgRect_l gold"><img src="{{getImgRoot/}}/avatar/{{>avatar_id}}_140.png"></div>
+			</dt>
+			<dd>
+				<h2>{{>avatar_header_name}}{{>avatar_name}}</h2>
+				<ul class="emblem_{{>emblem_id}}">
+				{{for ~itelator(0, max_num - 1)}}
+					{{if #index < #parent.parent.data.current_num}}
+					<li class="got{{if #index + 1 + #parent.parent.parent.data.new_num > #parent.parent.parent.data.current_num}} new{{/if}}">●</li>
+					{{else}}
+					<li class="yet">○</li>
+					{{/if}}
+				{{/for}}
+				</ul>
+			</dd>
+		</dl>
+		{{/for}}
+	</div>
+</section>
+</script>
+
+<script id="jsTemplateJobChangeConditions" type="text/x-jsrender">
+<ul class="conditions">
+	{{for conditions}}
+		{{if jobs && jobs.length > 0}}
+		<li>
+			ジョブの
+			{{for jobs}}
+				<button class="link" data-href="job/detail/{{>id}}/">{{>name}}</button>{{if #index < #parent.data.length - 1}}と{{/if}}
+			{{/for}}
+			をマスター
+		</li>
+		{{/if}}
+		{{if job_num}}
+		<li>ジョブを{{>job_num}}職以上マスター</li>
+		{{/if}}
+		{{if stages && stages.length > 0}}
+		<li>
+			クエストの
+			{{for stages}}
+				<button class="link" data-href="mission/top/{{>id}}/">{{>name}}</button>{{if #index < #parent.data.length - 1}}と{{/if}}
+			{{/for}}
+			をクリアー
+		</li>
+		{{/if}}
+		{{if items && items.length > 0}}
+		<li>
+			アイテムの
+			{{for items}}
+				{{>name}}{{if #index < #parent.data.length - 1}}と{{/if}}
+			{{/for}}
+			を取得
+		</li>
+		{{/if}}
+		{{if equips && equips.length > 0}}
+		<li>
+			武具の
+			{{for equips}}
+				<button class="link" data-href="collection/equip/detail/{{>id}}/">{{>name}}</button>{{if #index < #parent.data.length - 1}}と{{/if}}
+			{{/for}}
+			を取得
+		</li>
+		{{/if}}
+		{{if materials && materials.length > 0}}
+		<li>
+			素材の
+			{{for materials}}
+				{{>name}}{{if #index < #parent.data.length - 1}}と{{/if}}
+			{{/for}}
+			を取得
+		</li>
+		{{/if}}
+	{{/for}}
+</ul>
+</script>
+
+<script id="jsTemplateRandomHeaderBanner" type="text/x-jsrender">
+	<section class="randomHeaderBanner">
+		{{if type === 1}}
+		<img src="{{getImgRoot/}}/gacha/random/{{>id}}.png">
+		{{else type === 2}}
+		<img src="{{getImgRoot/}}/gacha/season_avatar/{{>id}}.png">
+		{{/if}}
+	</section>
+</script>

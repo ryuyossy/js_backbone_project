@@ -1,0 +1,53 @@
+{
+    "status": 200,
+    "tutorial_rewards": [
+        {
+            "item_name": "元気のハチミツ（L）",
+            "item_id": 102,
+            "qty": 2,
+            "item_type": 1
+        },
+        {
+            "item_name": "ホーリーランス",
+            "item_id": 140001,
+            "qty": 1,
+            "item_type": 3
+        },
+        {
+            "item_name": "プレミアムガチャチケット",
+            "item_id": 1,
+            "qty": 1,
+            "item_type": 6
+        },
+        {
+            "item_name": "ガチャP",
+            "item_id": null,
+            "qty": 1000,
+            "item_type": 4
+        },
+        {
+            "item_name": "ギル",
+            "item_id": null,
+            "qty": 3000,
+            "item_type": 5
+        }
+    ],
+    "tutorial_step": -1,
+    "win_jobs": [
+        {
+            "job_name": "みならい剣士",
+            "avatar_id": "10001",
+            "job_id": 100
+        },
+        {
+            "job_name": "みならいハンター",
+            "avatar_id": "20001",
+            "job_id": 200
+        },
+        {
+            "job_name": "みならい術士",
+            "avatar_id": "30001",
+            "job_id": 300
+        }
+    ]
+}

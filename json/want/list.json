@@ -1,0 +1,31 @@
+{
+	"status": 200,
+	"max_want_list_count": 20,
+	"want_list_count": 5,
+	"equips": [
+		{
+			"id": 2,
+			"name": "メリケンサック",
+			"lineage_name": "力",
+			"rarity_name": "ノーマル",
+			"grow_type_name": "早熟",
+			"cost": 1,
+			"level": 0,
+			"max_level": 0,
+			"power": 101,
+			"special_power": 200
+		},
+		{
+			"id": 12,
+			"name": "ひなわじゅう",
+			"lineage_name": "技",
+			"rarity_name": "ノーマル",
+			"grow_type_name": "早熟",
+			"cost": 1,
+			"level": 0,
+			"max_level": 0,
+			"power": 101,
+			"special_power": 210
+		}
+	]
+}

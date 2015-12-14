@@ -1,0 +1,142 @@
+{
+    "status": 200,
+    "next": {
+        "day": 1,
+        "gifts": [
+            {
+                "item_id": 101,
+                "item_name": "元気のハチミツ（M）",
+                "qty": 1
+            },
+            {
+                "item_id": 1,
+                "item_name": "プレミアムガチャチケット",
+                "qty": 1
+            }
+        ]
+    },
+    "start_dashes": [
+        {
+            "day": 1,
+            "gifts": [
+                {
+                    "item_type": 1,
+                    "item_id": 101,
+                    "item_name": "元気のハチミツ（M）",
+                    "qty": 1
+                },
+                {
+                    "item_type": 6,
+                    "item_id": 1,
+                    "item_name": "プレミアムガチャチケット",
+                    "qty": 1
+                }
+            ],
+            "clear_flg": true,
+            "received_flg": true
+        },
+        {
+            "day": 2,
+            "gifts": [
+                {
+                    "item_type": 6,
+                    "item_id": 1,
+                    "item_name": "プレミアムガチャチケット",
+                    "qty": 1
+                }
+            ],
+            "clear_flg": false,
+            "received_flg": false
+        },
+        {
+            "day": 3,
+            "gifts": [
+                {
+                    "item_type": 2,
+                    "item_id": 101,
+                    "item_name": "火の結晶",
+                    "qty": 1
+                }
+            ],
+            "clear_flg": false,
+            "received_flg": false
+        },
+        {
+            "day": 4,
+            "gifts": [
+                {
+                    "item_type": 4,
+                    "item_id": 101,
+                    "item_name": "ガチャポイント",
+                    "qty": 1
+                },
+                {
+                    "item_type": 8,
+                    "item_id": 101,
+                    "item_name": "レアメダル",
+                    "qty": 2
+                }
+            ],
+            "clear_flg": false,
+            "received_flg": false
+        },
+        {
+            "day": 5,
+            "gifts": [
+                {
+                    "item_type": 2,
+                    "item_id": 101,
+                    "item_name": "火の結晶",
+                    "qty": 1
+                },
+                {
+                    "item_type": 5,
+                    "item_id": 101,
+                    "item_name": "ギル",
+                    "qty": 10
+                }
+            ],
+            "clear_flg": false,
+            "received_flg": false
+        },
+        {
+            "day": 6,
+            "gifts": [
+                {
+                    "item_type": 7,
+                    "item_id": 3,
+                    "item_name": "銀の水晶",
+                    "qty": 1
+                }
+            ],
+            "clear_flg": false,
+            "received_flg": false
+        },
+        {
+            "day": 7,
+            "gifts": [
+                {
+                    "item_type": 6,
+                    "item_id": 1,
+                    "item_name": "プレミアムガチャチケット",
+                    "qty": 1
+                },
+                {
+                    "item_type": 9,
+                    "item_id": 1,
+                    "item_name": "Ex",
+                    "qty": 20
+                }
+            ],
+            "clear_flg": false,
+            "received_flg": false
+        }
+    ],
+    "npc_comment": "バトルに参加するだけでご褒美がもらえるのよ！",
+    "enemy_exist_flg": false,
+    "battle_state": 1,
+    "battle_start_rest": "01:08:44",
+    "battle_end_rest": null,
+    "img_url_root": "http://img-dev.braveguardian.jp",
+    "tutorial_step": null
+}

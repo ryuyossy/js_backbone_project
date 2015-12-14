@@ -1,0 +1,31 @@
+<section id="alchemy" class="itemList">
+	<h1 class="mainHeader">錬金で作れるアイテム一覧</h1>
+	<section class="normal">
+		<h1 class="subHeader">
+			<span class="subHeaderBg_l"></span>
+			<span>普通の釜</span>
+			<span class="subHeaderBg_r"></span>
+		</h1>
+		{{for normal_items tmpl="#jsTemplateAlchemyItems" ~kama_type="normal" /}}
+	</section>
+	<section class="silver">
+		<h1 class="subHeader">
+			<span class="subHeaderBg_l"></span>
+			<span>銀の釜</span>
+			<span class="subHeaderBg_r"></span>
+		</h1>
+		{{for silver_items tmpl="#jsTemplateAlchemyItems" ~kama_type="silver" /}}
+	</section>
+	<section class="gold">
+		<h1 class="subHeader">
+			<span class="subHeaderBg_l"></span>
+			<span>金の釜</span>
+			<span class="subHeaderBg_r"></span>
+		</h1>
+		{{for gold_items tmpl="#jsTemplateAlchemyItems" ~kama_type="gold" /}}
+	</section>
+	<hr>
+	<div class="arrowLink">
+		<button class="link prev" data-href="event/alchemy/"><span>錬金へ戻る</span></button>
+	</div>
+</section>

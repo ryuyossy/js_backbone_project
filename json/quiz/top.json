@@ -1,0 +1,67 @@
+{
+    "status": 200,
+    "chapters": [
+        {
+            "chapter_id": 1,
+            "name": "クエスト編",
+            "quiz_num": 5,
+            "quiz_progress": 1,
+            "item_id": 101,
+            "item_type": 1,
+            "item_name": "元気のハチミツ（50）",
+            "qty": 3,
+            "clear_flg": true
+        },
+        {
+            "chapter_id": 2,
+            "name": "ブレイブバトル編",
+            "quiz_num": 10,
+            "quiz_progress": 1,
+            "item_id": 101,
+            "item_type": 1,
+            "item_name": "元気のハチミツ（50）",
+            "qty": 3,
+            "clear_flg": false
+        },
+        {
+            "chapter_id": 3,
+            "name": "ジョブ編",
+            "quiz_num": 10,
+            "quiz_progress": 1,
+            "item_id": 601,
+            "item_type": 1,
+            "item_name": "匠の書（100）",
+            "qty": 1,
+            "clear_flg": false
+        },
+        {
+            "chapter_id": 4,
+            "name": "装備編",
+            "quiz_num": 5,
+            "quiz_progress": 1,
+            "item_id": 102,
+            "item_type": 2,
+            "item_name": "成長の光石（HN）",
+            "qty": 1,
+            "clear_flg": false
+        },
+        {
+            "chapter_id": 5,
+            "name": "強化・限界突破編",
+            "quiz_num": 5,
+            "quiz_progress": 1,
+            "item_id": 102,
+            "item_type": 2,
+            "item_name": "成長の光石（HN）",
+            "qty": 1,
+            "clear_flg": false
+        }
+    ],
+    "quiz_clear_flg": false,
+    "reward": {
+        "gift_item_id": 101,
+        "gift_item_type": 6,
+        "gift_item_name": "ガチャチケット",
+        "qty": 1
+    }
+}

@@ -1,0 +1,177 @@
+<h1 class="mainHeader">対戦スケジュール</h1>
+
+<section id="schedule">
+
+	{{for schedules}}
+
+
+	<!-- //未参加で終了したバトル -->
+	{{if state == 0 && judge == null || open_not_matched_flg}}
+	<div class="accordion empty">
+		<section class="contents shadow">
+			<h1>第{{>round}}試合<span class="time">{{>start_time}}〜{{>end_time}}</span></h1>
+			<div class="match">
+				<div class="pointResult arrange">
+					<dl>
+						<dt><span class="hide">未参加</span></dt><dd><span>vs</span>なし</dd>
+					</dl>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</section>
+	</div>
+	{{/if}}
+
+	<!-- //集計中のバトル -->
+	{{if state == 5}}
+	<div class="accordion empty">
+		<section class="contents shadow">
+			<h1>第{{>round}}試合<span class="time">{{>start_time}}〜{{>end_time}}</span></h1>
+			<div class="match">
+				<div class="pointResult arrange">
+					<dl>
+						<dt><span class="hide">集計中</span></dt><dd><span>vs</span>{{>enemy_guild_name}}</dd>
+					</dl>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</section>
+	</div>
+	{{/if}}
+
+	<!-- //終了したバトル -->
+	{{if state == 0 && judge != null}}
+	<div class="accordion jsAccordion">
+		<section class="contents shadow">
+			<h1 class="jsAccordionButton">第{{>round}}試合<span class="time">{{>start_time}}〜{{>end_time}}</span></h1>
+			<div class="match">
+				{{if judge == 1}}	
+				<div class="pointResult win">
+					<dl>
+						<dt><span class="hide">勝利</span></dt>
+				{{else judge == 2}}
+				<div class="pointResult lose">
+					<dl>
+						<dt><span class="hide">敗北</span></dt>
+				{{else}}
+				<div class="pointResult draw">
+					<dl>
+						<dt><span class="hide">勝敗なし</span></dt>
+				{{/if}}
+						<dd><span>vs</span>{{>enemy_guild_name}}</dd>
+					</dl>
+					<div class="clearfix"></div>
+					<!-- //アコーディオン中身ここから -->
+					<div class="accordionInner jsAccordionInner" style="display:none;">
+						<table>
+							<tr>
+								<td class="myGuildPoint">{{>~commaFormat(own_gp)}}<span>BP</span></td>
+								<td class="opponentGuildPoint">{{>~commaFormat(enemy_gp)}}<span>BP</span></td>
+							</tr>
+						</table>
+						<p>
+							{{if judge == 1}}
+							<!-- TODO 前衛として参加<br>-->
+							勝利報酬を獲得！
+							{{/if}}
+						</p>
+						{{if judge == 1 || judge == 2}}
+						<button class="link" data-href="battle/situation/detail/{{>~replaceSlash(date,'')}}/{{>round}}/">戦況履歴</button>
+						{{else}}
+						<button class="link disable">戦況履歴はありません</button>
+						{{/if}}
+					</div>
+					<!-- //アコーディオン中身ここまで -->
+				</div>
+			</div>
+		</section>
+	</div>
+	{{/if}}
+
+	<!-- //バトル前 -->
+	{{if state == 2 || state == 3}}
+	<div class="accordion empty">
+		<section class="contents shadow">
+			<h1>第{{>round}}試合<span class="time">{{>start_time}}〜{{>end_time}}</span></h1>
+			<div class="match">
+				<!-- マッチング済み -->
+				{{if enemy_guild_name}}
+				<div class="pointResult opponentDecision">
+					<dl>
+						<dt><span class="hide">対戦相手決定</span></dt><dd><span>vs</span>{{>enemy_guild_name}}</dd>
+					</dl>
+					<div class="clearfix"></div>
+					<button class="btn" data-href="guild/">ギルドでバトル準備</button>
+				</div>
+				<!-- マッチング中 -->
+				{{else}}
+				<div class="pointResult opponentSelect">
+					<dl>
+						<dt><span class="hide">マッチング中</span></dt><dd><span>vs</span>未定</dd>
+					</dl>
+					<div class="clearfix"></div>
+				</div>
+				{{/if}}
+			</div>
+		</section>
+	</div>
+	{{/if}}
+	
+	<!-- //バトル中 -->
+	{{if state == 4 && !open_not_matched_flg}}
+	<div class="accordion empty">
+		<section class="contents shadow">
+			<h1>第{{>round}}試合<span class="time">{{>start_time}}〜{{>end_time}}</span></h1>
+			<div class="match">
+				<div class="pointResult onBattle">
+					<dl>
+						<dt><span class="hide">対戦中</span></dt><dd><span>vs</span>{{>enemy_guild_name}}</dd>
+					</dl>
+					<div class="clearfix"></div>
+					<button class="btn battle" data-href="battle/">戦場へ</button>
+				</div>
+			</div>
+		</section>
+	</div>
+	{{/if}}
+
+	{{if state == 1}}
+	<!-- //準備中（開閉なし） -->
+	<div class="accordion empty">
+		<section class="contents shadow">
+			<h1>第{{>round}}試合<span class="time">{{>start_time}}〜{{>end_time}}</span></h1>
+			<div class="match">
+				<div class="pointResult arrange">
+					<dl>
+						<dt><span class="hide">準備中</span></dt><dd><span>vs</span>未定</dd>
+					</dl>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</section>
+	</div>
+	{{/if}}
+
+	{{/for}}
+
+</section>
+
+<hr>
+
+<div class="arrowLink">
+	<button class="link prev" data-href="battle/top/">バトルトップに戻る</button>
+</div>
+
+<div class="listMenu">
+	<ul>
+		<li><div class="link" data-href="battle/situation/list/">過去の戦況履歴一覧</div></li>
+		<li><div class="link" data-href="guild/">ギルドで後衛希望設定をする</div></li>
+	</ul>
+</div>
+<div class="helpList">
+	<ul>
+		<li><button class="link" data-href="help/detail/201/">バトルってなに？</button></li>
+		<li><button class="link" data-href="help/detail/202/">バトルってどうやって遊ぶの？</button></li>
+		<li><button class="link" data-href="help/detail/206/">どうしたらバトルに勝てるの？</button></li>
+	</ul>
+</div>

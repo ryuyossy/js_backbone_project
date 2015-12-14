@@ -1,0 +1,299 @@
+@charset "utf-8";
+/*
+@mixin box_shadow_contents_l($offsetSize,$z_index:-1){
+	content:'';
+	position:absolute;
+	left:$offsetSize;
+	top:75%;
+	bottom:17px;
+	width:50%;
+	min-height:5px;
+	max-width:150px;
+	background:#544123;
+	-webkit-box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	-webkit-transform:rotate(-5deg);
+	transform:rotate(-5deg);
+	z-index:$z_index;
+}
+@mixin box_shadow_contents_r($offsetSize,$z-index:-1){
+	content:'';
+	position:absolute;
+	right:$offsetSize;
+	top:75%;
+	bottom:17px;
+	width:50%;
+	min-height:5px;
+	max-width:150px;
+	background:#544123;
+	-webkit-box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	-webkit-transform:rotate(5deg);
+	transform:rotate(5deg);
+	z-index:$z_index;
+}
+*/
+/*
+@mixin backgroundResize($position:0 -60px){
+	@media screen and (min-width:319px){
+		width:320px;
+		@include background-size(320px,auto);
+	}
+	@media screen and (min-width:359px){
+		width:360px;
+		@include background-size(360px,auto);
+	}
+	@media screen and (min-width:361px){
+		width:480px;
+		@include background-size(480px,auto);
+		background-position:$position;
+	}
+}
+*/
+/*
+@mixin display-box{
+	display:flexbox;
+	-webkit-display:flexbox;
+}
+@mixin box-align($position){
+	flex-align:$position;
+	-webkit-flex-align:$position;
+}
+@mixin box-flex($ratio){
+	flex:$ratio;
+	-webkit-flex:$ratio;
+}
+@mixin box-pack($position){
+	flex-pack:$position;
+	-webkitflex-pack:$position;
+}
+*/
+/* line 8, ../scss/ability.scss */
+.modalInner.abilityChange .itemUseConfirm .itemBox .itemBoxInner P {
+  font-size: 85%;
+}
+/* line 13, ../scss/ability.scss */
+.modalInner.abilityAddComplate .btn.large {
+  margin-bottom: 4px;
+}
+/* line 15, ../scss/ability.scss */
+.modalInner.abilityAddComplate .btn.large:last-of-type {
+  margin-bottom: 0;
+}
+
+/* line 23, ../scss/ability.scss */
+.abiliSetMes {
+  width: 95%;
+  margin: 16px auto 0 auto;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background-color: #d90000;
+  font-size: 85%;
+  color: #fff;
+  text-align: center;
+}
+/* line 32, ../scss/ability.scss */
+.abiliSetMes span {
+  display: block;
+  margin: 0 16px;
+  padding: 4px 0;
+}
+
+/* line 40, ../scss/ability.scss */
+#myData.metalPanel {
+  margin: 8px auto 8px auto;
+}
+/* line 43, ../scss/ability.scss */
+#myData.statusData_icon {
+  padding: 0;
+}
+/* line 46, ../scss/ability.scss */
+#myData .metalPanelInner {
+  margin: -12px 0 0 -8px;
+}
+/* line 49, ../scss/ability.scss */
+#myData .nameBox {
+  display: -webkit-box;
+  display: box;
+  margin-bottom: 8px;
+}
+/* line 52, ../scss/ability.scss */
+#myData .nameBox h1 {
+  font-weight: bold;
+}
+/* line 55, ../scss/ability.scss */
+#myData .nameBox .master {
+  display: inline-block;
+  background: url("/img/parts/label_jobmaster.png") 0 0 no-repeat;
+  -webkit-background-size: 58px 18px;
+  display: block;
+  width: 58px;
+  height: 19px;
+  margin-left: 8px;
+}
+/* line 63, ../scss/ability.scss */
+#myData .btn {
+  margin: 8px auto 0 auto;
+}
+
+/* line 67, ../scss/ability.scss */
+.abliRelease {
+  width: 40%;
+}
+
+/* line 73, ../scss/ability.scss */
+#abilitySetList .tabNav {
+  margin-bottom: 8px;
+}
+/* line 76, ../scss/ability.scss */
+#abilitySetList .contents {
+  width: 95%;
+  margin: 0 auto 8px auto;
+}
+/* line 81, ../scss/ability.scss */
+#abilitySetList .contents dt:nth-of-type(3) {
+  clear: none;
+  margin-left: 8px;
+}
+/* line 87, ../scss/ability.scss */
+#abilitySetList .contents dd .label32 {
+  margin-left: 8px;
+  padding: 0 8px;
+}
+/* line 91, ../scss/ability.scss */
+#abilitySetList .contents dd .pointEmpty {
+  color: #ff0000;
+}
+/* line 95, ../scss/ability.scss */
+#abilitySetList .contents .innerBtnBox {
+  margin: 8px auto 0 auto;
+}
+/* line 98, ../scss/ability.scss */
+#abilitySetList .contents .shortage {
+  width: 55%;
+  margin: 8px auto 0 auto;
+  font-size: 85%;
+}
+/* line 103, ../scss/ability.scss */
+#abilitySetList .contents .contentsInner ~ .btn.large {
+  width: 50%;
+  margin: 8px auto 0 auto;
+}
+/* line 107, ../scss/ability.scss */
+#abilitySetList .contents .abilityName {
+  font-weight: bold;
+}
+/* line 111, ../scss/ability.scss */
+#abilitySetList .contentsInner {
+  margin-top: 0;
+}
+/* line 113, ../scss/ability.scss */
+#abilitySetList .contentsInner h1 {
+  font-weight: bold;
+}
+/* line 116, ../scss/ability.scss */
+#abilitySetList .contentsInner p {
+  margin-top: 8px;
+}
+/* line 121, ../scss/ability.scss */
+#abilitySetList ~ .btn.large {
+  margin-top: 16px;
+}
+/* line 125, ../scss/ability.scss */
+#abilitySetList .jsAbilityBefore {
+  margin-bottom: 16px;
+}
+/* line 128, ../scss/ability.scss */
+#abilitySetList .subHeader {
+  margin-bottom: 8px;
+}
+/* line 132, ../scss/ability.scss */
+#abilitySetList .moreLink {
+  margin-top: 8px;
+}
+/* line 135, ../scss/ability.scss */
+#abilitySetList ~ .arrowLink {
+  margin-bottom: 16px;
+}
+/* line 138, ../scss/ability.scss */
+#abilitySetList .dimmed p {
+  margin: 8px auto 16px auto;
+}
+
+/* line 145, ../scss/ability.scss */
+#abilityAdd,
+#abilityChange {
+  margin-bottom: 8px;
+}
+
+/* line 148, ../scss/ability.scss */
+.innerBtnBox.abtp {
+  width: 60%;
+}
+
+/* old style
+
+.labelAbili {
+	margin-left: 6px;
+	width: 30%;
+	font-weight: bold;
+}
+
+.abiliChangeContent {
+	width: 95%;
+	margin: 0 auto 32px auto;
+	padding: 8px 0;
+}
+
+.wordMgn {
+	padding: 4px 8px 0 8px;
+}
+
+.abliType {
+	margin-bottom:4px;
+	margin-left: 8px;
+	font-weight: bold;
+}
+
+.abiliContent {
+	width: 95%;
+	margin: 0 auto 8px auto;
+	padding: 8px 0;
+}
+
+.abliReturn {
+	margin-bottom: 32px;
+}
+
+.abiliChangeHead {
+	margin-bottom:16px;
+}
+
+.abiliChangeTop {
+	margin-top:16px;
+}
+
+.abiliAddLabel {
+	margin: 4px auto 4px auto;
+	width: 60%;
+}
+
+.abiliBtnBox {
+	margin: 8px auto 8px auto;
+}
+
+#abiliAddBtn {
+	margin: 32px auto 16px auto;
+}
+
+#eqMargins {
+	margin: 9px auto 16px auto;
+	
+}
+*/
+/* line 223, ../scss/ability.scss */
+.abiliPopUp {
+  display: block;
+  -webkit-transform: scale(1);
+  z-index: 10000;
+}

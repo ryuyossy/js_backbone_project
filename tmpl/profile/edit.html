@@ -1,0 +1,51 @@
+<h1 class="mainHeader">自己紹介</h1>
+
+<div id="commentInput" class="postForm_message jsForm">
+	<label>
+		<textarea class="jsFormLengthTarget jsProfileComment" placeholder="自己紹介文を入力" data-max="30">{{>profile_comment}}</textarea>
+		<span class="textCount jsFormLengthCounter">30</span>
+	</label>
+	<button class="btn large jsButtonProfileEditConfirm" >更新する</button>
+</div>
+
+<section class="caution">
+	<article>
+		<h1>ご注意</h1>
+		<ul>
+			<li>本名やメールアドレス、電話番号などの個人情報や、個人の特定がされる可能性のある情報の入力はお控えください。</li>
+			<li>絵文字の入力はできません。</li>
+		</ul>
+	</article>
+</section>
+
+<hr>
+
+<div class="arrowLink">
+	<button class="link prev" data-href="profile/">プロフに戻る</button>
+</div>
+
+<div class="helpList">
+	<ul>
+		<li><button class="link" data-href="help/">メッセージについて</button></li>
+		<li><button class="link" data-href="help/">あいさつについて</button></li>
+	</ul>
+</div>
+
+{{escape}}
+<script id="jsTemplatePopupProfileEditConfirm" type="text/x-jsrender">
+	<div class="modalInner">
+		<p>以下のプロフィールに変更しますか？</p>
+		<p>{{>profile_comment}}</p>
+		<div class="innerBtnBox">
+			<button class="btn cancel jsClosePopup">やめる</button><button class="btn jsClosePopup jsButtonProfileEditFix">変更する</button>
+		</div>
+	</div>
+</script>
+
+<script id="jsTemplatePopupProfileEditComplete" type="text/x-jsrender">
+	<div class="modalInner">
+		<p>自己紹介を変更しました。</p>
+		<span class="btn short close" data-href="profile/">戻る</span>
+	</div>
+</script>
+{{/escape}}

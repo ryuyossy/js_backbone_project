@@ -1,0 +1,37 @@
+<h1 class="mainHeader">ギルド名</h1>
+
+<div id="masterAuthority" class="jsForm postForm_text">
+	<label>
+		<input type="text" placeholder="全角10文字まで" value="{{>guild_name}}" class="jsFormLengthTarget jsGuildName"
+			   data-max="10">
+		<span class="textCount jsFormLengthCounter">10</span>
+	</label>
+</div>
+
+<button class="btn large jsButtonGuildNameEditConfirm">変更する</button>
+
+<hr>
+
+<div class="arrowLink">
+	<button class="link prev" data-href="guild/">ギルドトップに戻る</button>
+</div>
+
+{{escape}}
+<script id="jsTemplatePopupGuildNameEditConfirm" type="text/x-jsrender">
+	<div class="modalInner">
+		<p>ギルド名を「{{>guild_name}}」に変更しますか？</p>
+
+		<div class="innerBtnBox">
+			<button class="btn cancel jsClosePopup">やめる</button>
+			<button class="btn jsClosePopup jsButtonGuildNameEditFix">変更する</button>
+		</div>
+	</div>
+</script>
+
+<script id="jsTemplatePopupGuildNameEditComplete" type="text/x-jsrender">
+	<div class="modalInner nameChangeComplate">
+		<p>ギルド名を変更しました。</p>
+		<span class="btn large cancel" data-href="guild/">ギルドTOPへ戻る</span>
+	</div>
+</script>
+{{/escape}}

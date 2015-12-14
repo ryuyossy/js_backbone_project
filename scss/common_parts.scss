@@ -1,0 +1,4118 @@
+@charset "utf-8";
+@import "base";
+@import "reset";
+@import "ruleset";
+
+//rewrite
+/* tag */
+body.android2 *{
+	box-shadow:none !important;
+	-webkit-box-shadow:none !important;
+	text-shadow:none !important;
+}
+// LABI
+.rotationBannerAds{
+	img{
+		zoom:1;
+	}
+}
+.LABI_text{
+	margin:$content_margin 0;
+	font-weight:bold;
+	text-align:center;
+}
+.LABI_textBox{
+	h1{
+		font-weight:bold;
+	}
+	.LABI_text{
+		margin:$inner_margin 0;
+	}
+}
+
+
+body {
+	position: relative;
+	background-color: #544123;
+	min-height:560px;
+}
+
+img {
+	@include imgsize;
+}
+
+button {
+	padding: 0;
+	border: 0 none;
+	background-color: transparent;
+	font-size: inherit;
+}
+
+select {
+	position: relative;
+	-webkit-appearance: none;
+	display: block;
+	height: 34px;
+	padding: 4px;
+	@include linearGradient(#ffffff, #e0d4a9);
+	border: 1px solid #564326;
+	@include border-radius(6px);
+	@include box_shadow;
+	font-size: 90%;
+}
+
+hr {
+	@include backgroundSize("/parts/#{$common_parts}.png", -273px, -180px, no-repeat);
+	width: 47px;
+	height: 24px;
+	margin: $content_margin auto;
+	border: none;
+	display: block;
+}
+
+/* class */
+.link {
+	color: #008C8C;
+	text-decoration: none;
+	cursor: pointer;
+	
+	&.on{
+		background-color:rgba(0,0,0,0.3);
+	}
+}
+
+.submit {
+	display: inline-block;
+	padding: 2px 6px 3px;
+}
+
+.hide {
+	@include hidden_object;
+}
+
+/* gerge */
+.gergeBox {
+	position: relative;
+	z-index: 0;
+}
+
+.gergeBgFrame {
+	@include borderImage(inline-image("parts/bg_garge.png"), 13 31 15, stretch, 6px 16px 8px, inherit);
+	@include box-sizing(border-box);
+	position: relative;
+	display: block;
+	height: 16px;
+	z-index: auto;
+}
+
+.gerge {
+	position: absolute;
+	left: 0;
+	top: -3px;
+	display: block;
+	height: 8px;
+	@include gergeGradient(#cccccc, #acacac, #868686, #575757);
+
+	&.missionP {
+		@include gergeGradient(#aed88e, #83c250, #4ba700, #2f7300);
+	}
+	&.battleP {
+		@include gergeGradient(#f1908f, #e75653, #de0300, #9c0000);
+	}
+	&.missionExp {
+		@include gergeGradient(#ffe694, #ffd64c, #ffc400, #af8300);
+	}
+	&.missionProgress{
+		@include gergeGradient(#99E1E1, #59CDCD, #0DB5B5, #0D7373);
+	}
+	&.hp {
+		@include gergeGradient(#96e5ff, #52d4ff, #00c2ff, #0081b0);
+	}
+	&.tention {
+		@include gergeGradient(#ffce95, #ffae50, #ff8700, #b05800);
+	}
+	&.equipGrowth {
+		@include gergeGradient(#C3D199, #9DB653, #71910D, #486000);
+	}
+}
+
+.gergeTable {
+
+	th {
+		color: #8C0000;
+		padding-right: $inner_margin/2;
+		padding-bottom: $inner_margin/2;
+		font-weight: normal;
+		vertical-align: middle;
+	}
+	td {
+		text-align: right;
+		padding-bottom: $inner_margin/2;
+		vertical-align: middle;
+	}
+	&.middle {
+		width: 288px;
+		font-size: 85%;
+
+		.gergeBgFrame {
+			width: 180px;
+		}
+	}
+	&.short {
+		width: 240px;
+		font-size: 80%;
+
+		.gergeBgFrame {
+			width: 115px;
+		}
+	}
+}
+
+.tentionGerge {
+	@include backgroundSize("/parts/#{$guildBattle_parts}.png", -1px, -274px, no-repeat);
+	position: relative;
+	display: block;
+	width: 304px;
+	height: 31px;
+
+	&.max:before {
+		@include visible_object(103px, -2px, 109px, 50px, 10);
+		@include backgroundSize("/parts/gerge_max.png", 0, 0, no-repeat);
+	}
+	.gergeBg {
+		position: relative;
+		left: 24px;
+		top: 18px;
+		width: 264px;
+		overflow: hidden;
+	}
+	.gerge.tention {
+		display: block;
+		position: relative;
+		left: 1px;
+		top: 1px;
+		height: 9px;
+	}
+}
+
+#container {
+	position: relative;
+	width: 320px;
+	margin: 0 auto;
+	background-color: #544123;
+	@include txtset;
+	z-index: 0;
+}
+
+.contents {
+	background-color: #E0D3AB;
+	color: #333;
+
+	&.shadow {
+		position: relative;
+		@include border-radius(2px);
+		@include box_innerglow;
+
+		&:before {
+			@include visible_object(0, 0, 100%, 100%, auto);
+			@include box_shadow(0 3px 5px);
+		}
+		&.link.on{
+			background-color: #E0D3AB;
+			
+			&:after{
+				@include visible_object(0,0,100%,100%,auto);
+				background-color:rgba(0,0,0,0.3);
+			}
+		}
+	}
+	&.contentsShadow {
+		@include border-radius(2px);
+		@include box_innerglow;
+		position: relative;
+		&:after{
+			@include backgroundSize_dataURI("/parts/contents_shadow.png", 0, 0, repeat-x);
+			@include visible_object(0,auto,100%,16px,auto);
+			bottom:-16px;
+		}
+	}
+	/*
+	&.contentsShadow:before {
+		@include box_shadow_contents_l(2px);
+	}
+	&.contentsShadow:after {
+		@include box_shadow_contents_r(1px);
+	}
+	*/
+	&.link.on{
+		background-color: #E0D3AB;
+		&:before{
+			/*
+			right:0;
+			top:0;
+			bottom:0;
+			width:100%;
+			min-height:inherit;
+			max-width:inherit;
+			background-color:rgba(0,0,0,0.3);
+			-webkit-box-shadow:inherit;
+			box-shadow:inherit;
+			-webkit-transform:inherit;
+			transform:inherit;
+			z-index:auto;
+			*/
+			@include visible_object(0,0,100%,100%,3);
+			background-color:rgba(0,0,0,0.3);
+		}
+	}
+
+}
+
+.contentsBorder {
+	@include box-sizing(border-box);
+	@include borderImage(inline-image("parts/bg_selectbox_border.png"), 13, stretch, 6px, inherit);
+	width: auto;
+	margin: 0 8px;
+
+	h1 {
+		position: relative;
+		text-align: center;
+		width: auto;
+		margin: -2px 8px 0 8px;
+		padding: $inner_margin 0;
+		border-bottom: 1px solid #B9A46B;
+		font-weight:bold;
+		color: #544123;
+
+		&:before {
+			@include backgroundSize("/parts/#{$menu_parts}.png", -206px, -52px, no-repeat);
+			@include visible_object(0, 6px, 24px, 24px, 101);
+		}
+		&:after {
+			@include backgroundSize("/parts/#{$menu_parts}.png", -231px, -52px, no-repeat);
+			@include visible_object(auto, 6px, 24px, 24px, 101);
+			right: 0;
+		}
+	}
+}
+
+.accordion {
+	position:relative;
+	width: 95%;
+	margin: 0 auto;
+
+	.contents {
+		padding: $inner_margin;
+
+		&.shadow,
+		&.shadow:before {
+			@include border-radius(8px);
+		}
+	}
+	h1 {
+		position:relative;
+		min-height: 25px;
+		padding-left: 19px;
+		font-weight:bold;
+		color: #544123;
+		line-height: 26px;
+
+		&:before {
+			@include visible_object(3px, 7px, 12px, 11px, auto);
+			@include backgroundSize("/parts/#{$icon_parts}.png", -30px, -78px, no-repeat);
+		}
+
+	}
+	.statusData {
+		padding-bottom: 0;
+	}
+	.innerBtnBox {
+		width: 100%;
+		margin: 0 auto;
+
+		.btn {
+			margin: 0;
+		}
+	}
+	&.on:after{
+		@include visible_object(0,0,100%,100%,auto);
+		background-color:rgba(0,0,0,0.3);
+	}
+	&.open {
+
+		h1 {
+			padding-bottom: $inner_margin/2;
+			border-bottom: 1px solid #B9A46B;
+
+			&:before {
+				@include visible_object(3px, 7px, 12px, 11px, auto);
+				@include backgroundSize("/parts/#{$icon_parts}.png", -67px, -78px, no-repeat);
+			}
+		}
+	}
+	&.empty {
+		position: relative;
+		h1 {
+			&:before {
+				width:12px;
+				height:10px;
+				@include backgroundSize("/parts/#{$icon_parts}.png", -49px, -78px, no-repeat);
+			}
+			/* make set
+			&:after {
+				@include backgroundSize("/parts/#{$icon_parts}.png", -97px, -78px, no-repeat);
+				@include visible_object(auto, 6px, 9px, 13px, auto);
+				right: 0;
+			}
+			*/
+		}
+		.link {
+			position: absolute;
+			right: 28px;
+			top: 12px;
+			font-size: 90%;
+		}
+	}
+	//open inner
+	.accordionInner {
+
+		p,article {
+			padding-top: $inner_margin;
+		}
+
+		.help {
+
+			li {
+				position: relative;
+
+				.link {
+					display: block;
+					width: 100%;
+					padding: $inner_margin $content_margin $inner_margin 0;
+					border-bottom: 1px dotted #B9A46B;
+					color: inherit;
+					text-align: left;
+				}
+				&:after {
+					@include backgroundSize("/parts/#{$icon_parts}.png", -97px, -78px, no-repeat);
+					@include visible_object(auto, 50%, 9px, 13px, auto);
+					right: 0;
+					margin-top: -8px;
+				}
+				&:last-child {
+
+					&:after {
+						margin-top: -4px;
+					}
+					.link {
+						padding-bottom: 0;
+						border-bottom: 0 none;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* label */
+/* caution */
+%inlineLabelParts {
+	display: inline-block;
+	padding: 0 $inner_margin/2;
+}
+
+.label32 {
+	//@include maskImage(url("#{$img_path}/parts/bg_label32.png"), 14 11 14 11, stretch stretch, #D90000);
+	background-color:#D90000;
+	@include border-radius(8px);
+	display: block;
+	width: auto;
+	height: 16px;
+	color: #fff;
+	font-size: 80%;
+	font-weight:bold;
+	text-align: center;
+	line-height: 17px;
+
+	/* equip growth type ability descent label */
+	&.growth_fast,
+	&.ability_resemble {
+		@extend %inlineLabelParts;
+		background-color: #B22D00;
+	}
+	&.growth_ordinary,
+	&.ability_different {
+		@extend %inlineLabelParts;
+		background-color: #B9A46B;
+	}
+	&.growth_slow {
+		@extend %inlineLabelParts;
+		background-color: #0085B2;
+	}
+	/* job type label */
+	&.jobType_power {
+		@extend %inlineLabelParts;
+		padding: 0 8px;
+		background-color: #B73A10;
+	}
+	&.jobType_tech {
+		@extend %inlineLabelParts;
+		padding: 0 8px;
+		background-color: #508643;
+	}
+	&.jobType_int {
+		@extend %inlineLabelParts;
+		padding: 0 8px;
+		background-color: #3A71C3;
+	}
+}
+
+.label36 {
+	@extend .label32;
+	//@include maskImage(url("#{$img_path}/parts/bg_label36.png"), 15 16 15 16, stretch stretch, #D90000);
+	height: 18px;
+	font-size: 90%;
+	line-height: 19px;
+
+	/* battle result label */
+	&.battleResult_win {
+		background-color: #ff0000;
+	}
+	&.battleResult_lose {
+		background-color: #666;
+	}
+	&.battleResult_draw {
+		background-color: #B9A46B;
+	}
+	/* ability ex label => move to job.scss */
+	&.ability_ExRemaind {
+	}
+	&.equip_main,
+	&.bossGrade_strong {
+		background-color: #8C0000;
+	}
+	&.equip_sub {
+		background-color: #BBA663;
+	}
+	&.equip_protect {
+		background-color: #666;
+	}
+}
+
+.label48 {
+	@extend .label32;
+	//@include maskImage(url("#{$img_path}/parts/bg_label48.png"), 22 22 22 22, stretch stretch, #D90000);
+	@include border-radius(10px);
+	height: 24px;
+	font-size: 100%;
+	line-height: 25px;
+}
+
+.label36_r4 {
+	@extend .label36;
+	//@include maskImage(url("#{$img_path}/parts/bg_label36_r4.png"), 6 6 6 6, repeat stretch, #D90000);
+	@include border-radius(4px);
+	font-size: 85%;
+	line-height: 19px;
+
+	/* equip & boss grade label */
+	&.equip_main,
+	&.bossGrade_strong {
+		background-color: #8C0000;
+	}
+	&.equip_sub {
+		background-color: #BBA663;
+	}
+	&.equip_protect {
+		background-color: #666;
+	}
+	&.equip_new{
+		background-color: #fbbf00;
+	}
+	//information label
+	&.campaign {
+		background-color: #FF8000;
+	}
+	&.event {
+		background-color: #85B200;
+	}
+	&.info {
+		background-color: #0085B2;
+	}
+	&.important {
+		background-color: #ff0000;
+	}
+	&.system {
+		background-color: #666666;
+	}
+	//guild member list
+	&.member_new {
+		background-color: #FFC926;
+	}
+	&.member_ace {
+	}
+}
+
+/* headline 1st */
+.mainHeader {
+	width: 100%;
+	height: 32px;
+	@include backgroundSize("/parts/bg_h1.png", 0, 0, repeat-x);
+	font-size:120%;
+	font-weight:bold;
+	color: #78724C;
+	line-height: 34px;
+	@include text_glow(#000000);
+	text-align: center;
+}
+
+/* headline 2nd */
+.subHeader {
+	@include box-sizing(border-box);
+	@include borderImage(inline-image("parts/bg_subheader.png"), 31 47 36 46, stretch, 16px 23px 18px 23px, #f3de9f);
+	position: relative;
+	height: 32px;
+	@include text_shadow(0, -1px, 1px, #333);
+	font-weight:bold;
+	text-align: center;
+
+	> span:nth-of-type(2) {
+		position: absolute;
+		left: -11px;
+		top: -12px;
+		display: block;
+		width: 291px;
+		height: 25px;
+		background-color: #8c0000;
+		@include border-radius(10px);
+		line-height: 26px;
+		z-index: -2;
+	}
+	.subHeaderBg_l {
+		@include backgroundSize("/parts/#{$icon_parts}.png", -104px, -31px, no-repeat);
+		position: absolute;
+		left: -6px;
+		top: -12px;
+		display: block;
+		width: 23px;
+		height: 24px;
+		z-index: -1;
+	}
+	.subHeaderBg_r {
+		@include backgroundSize("/parts/#{$icon_parts}.png", -104px, -56px, no-repeat);
+		position: absolute;
+		right: -6px;
+		top: -12px;
+		display: block;
+		width: 23px;
+		height: 24px;
+		z-index: -1;
+	}
+}
+
+.subHeader2 {
+	@extend .subHeader;
+
+	> span:nth-of-type(2) {
+		background-color: #78724C;
+		color: #F2DE9F;
+	}
+}
+
+.subHeader3 {
+	position: relative;
+	height: 28px;
+	@include text_shadow(0, -1px, 1px, #333);
+	font-weight:bold;
+	color: #ffffff;
+	text-align: center;
+	line-height: 30px;
+
+	&:before {
+		@include backgroundSize_dataURI("/parts/bg_headline_bottom.png", 0, 0, repeat-x);
+		@include visible_object(0, 0px, 100%, 7px, auto);
+	}
+	&:after {
+		@include backgroundSize_dataURI("/parts/bg_headline_bottom.png", 0, 0, repeat-x);
+		@include visible_object(0, auto, 100%, 7px, auto);
+		bottom: -4px;
+	}
+}
+
+/* list menu group */
+.listMenu {
+	width: $content_width;
+	margin: $content_margin auto;
+
+	li {
+		position: relative;
+		margin-bottom: 2px;
+		@include border-radius(8px);
+		background-color: #E0D3AB;
+		@include box_shadow;
+	}
+	.link {
+		display: block;
+		padding: 10px 0 10px 10px;
+		color: #544123;
+		@include box_innerglow;
+
+		&:after {
+			display: block;
+			content: "";
+			position: absolute;
+			right: 10px;
+			top: 50%;
+			width: 9px;
+			height: 13px;
+			margin-top: -7px;
+			@include backgroundSize("/parts/#{$icon_parts}.png", -97px, -78px, no-repeat);
+		}
+	}
+	/* label */
+	dl {
+		@include display-box;
+		@include box-align(baseline);
+		margin: 0 15px 0 0;
+
+		.label36_r4 {
+			margin-right: $inner_margin/2;
+			padding: 2px 8px;
+
+		}
+		dd {
+			@include box-flex(1);
+			padding-right: $inner_margin;
+		}
+	}
+}
+
+/* single arrow link */
+.arrowLink {
+	position: relative;
+	width: $content_width;
+	margin: 0 auto;
+	background-color: #e0d3ab;
+	@include border-radius(8px);
+	@include box_shadow;
+
+	.link {
+		display: block;
+		width: 100%;
+		padding: 10px;
+		color: #544123;
+		@include box_innerglow;
+		text-align: left;
+
+		&.next {
+			padding-right: 20px;
+
+			&:after {
+				@include visible_object(auto, 50%, 9px, 13px, auto);
+				right: 10px;
+				margin-top: -7px;
+				@include backgroundSize("/parts/#{$icon_parts}.png", -97px, -78px, no-repeat);
+			}
+		}
+		&.prev {
+			padding-left: 25px;
+
+			&:before {
+				@include visible_object(10px, 50%, 9px, 13px, auto);
+				margin-top: -8px;
+				@include backgroundSize("/parts/#{$icon_parts}.png", -86px, -78px, no-repeat);
+			}
+		}
+	}
+}
+
+/* single link Group */
+.linkGroup {
+	margin-bottom: $content_margin;
+	.arrowLink {
+		&:first-of-type {
+			margin-bottom: $inner_margin/2;
+		}
+	}
+}
+
+/* more link */
+.moreLink {
+	position: relative;
+	width: $content_width;
+	margin: 0 auto;
+	border: 1px solid #A39B73;
+	@include border-radius(8px);
+
+	.link {
+		display: block;
+		width: 100%;
+		height: 40px;
+		color: #E0D3AB;
+
+		span {
+			position: relative;
+			left: 7px;
+
+			&:before {
+				@include visible_object(-20px, 3px, 13px, 9px, auto);
+				@include backgroundSize("/parts/#{$icon_parts}.png", -111px, -82px, no-repeat);
+			}
+		}
+
+		&.loading {
+			cursor: none;
+
+			span {
+				@include hidden_object;
+				position: static;
+				left: 0;
+
+				&:before {
+					@include visible_object(50%, 10px, 20px, 20px, auto);
+					@include backgroundSize("/parts/loading_icon.png", 0, 0, no-repeat);
+					margin-left: -10px;
+				}
+			}
+		}
+	}
+}
+
+/* help link */
+.helpList {
+	width: $content_width;
+	margin: 0 auto $content_margin auto;
+
+	ul {
+		background-color: #A79F77;
+		border: 1px solid #78724c;
+		@include border-radius(8px);
+	}
+	li {
+		position: relative;
+		border-bottom: 1px solid #78724c;
+
+		&:last-child {
+			border-bottom: 0 none;
+		}
+		&:before {
+			@include backgroundSize("/parts/#{$icon_parts}.png", -81px, -24px, no-repeat);
+			@include visible_object(8px, 50%, 20px, 20px, auto);
+			margin-top: -11px;
+		}
+		.link {
+			display: block;
+			width: 100%;
+			padding: 10px 20px 10px 33px;
+			color: #544123;
+			text-align: left;
+
+			&.on{
+				background-color:rgba(0,0,0,0.2);
+			}
+
+			&:after {
+				@include backgroundSize("/parts/#{$icon_parts}.png", -97px, -78px, no-repeat);
+				@include visible_object(auto, 50%, 9px, 13px, auto);
+				right: 10px;
+				margin-top: -7px;
+			}
+		}
+	}
+}
+
+/* avatar icon */
+/* arc */
+.iconBgArc_l {
+	position: relative;
+	width: 56px;
+	height: 56px;
+	margin-bottom: 20px;
+	-webkit-mask-box-image: url("#{$img_path}/avatar/avatar_iconbg_arc_l.png") 28 28;
+	@include border-radius(28px);
+	overflow: hidden;
+	&.gold {
+		@include backgroundSize_dataURI("/parts/bg_chara_icon_l.png", 0, 0, no-repeat);
+	}
+	&.blue {
+		@include backgroundSize_dataURI("/parts/bg_chara_icon_l_blue.png", 0, 0, no-repeat);
+	}
+	&.red{
+		@include backgroundSize_dataURI("/parts/bg_chara_icon_l_red.png", 0, 0, no-repeat);
+	}
+	&.gray{
+		@include backgroundSize_dataURI("/parts/bg_chara_icon_l_gray.png", 0, 0, no-repeat);
+	}
+	&.on:after{
+		@include visible_object(0,0,100%,100%,auto);
+		background-color:rgba(0,0,0,0.3);
+	}
+	img {
+		display: block;
+		position: absolute;
+		width:56px;
+		height:56px;
+		zoom: 1;
+	}
+}
+
+.iconBgArc_s {
+	position: relative;
+	width: 40px;
+	height: 40px;
+	margin-bottom: 20px;
+	-webkit-mask-box-image: url("#{$img_path}/avatar/avatar_iconbg_arc_s.png") 20 20;
+	@include border-radius(20px);
+	overflow: hidden;
+	&.gold{
+		@include backgroundSize_dataURI("/parts/bg_chara_icon_s.png", 0, 0, no-repeat);
+	}
+	&.blue{
+		@include backgroundSize_dataURI("/parts/bg_chara_icon_s_blue.png", 0, 0, no-repeat);
+	}
+	&.red{
+		@include backgroundSize_dataURI("/parts/bg_chara_icon_s_red.png", 0, 0, no-repeat);
+	}
+	&.gray{
+		@include backgroundSize_dataURI("/parts/bg_chara_icon_s_gray.png", 0, 0, no-repeat);
+	}
+	&.on:after{
+		@include visible_object(0,0,100%,100%,auto);
+		background-color:rgba(0,0,0,0.3);
+	}
+	img {
+		display: block;
+		position: absolute;
+		width:40px;
+		height:40px;
+		zoom: 1;
+	}
+}
+
+/* rect */
+.iconBgRect_l {
+	position: relative;
+	width: 60px;
+	height: 60px;
+	border: 2px solid #fff;
+	overflow: hidden;
+	-webkit-box-shadow: 1px 1px 1px rgba(00, 00, 00, 0.3);
+
+	&.gold {
+		background-color: #b9a46b;
+	}
+
+	img {
+		position:absolute;
+		left:-2px;
+		top:-2px;
+		display: block;
+		width:64px;
+		height:64px;
+		zoom:1;
+	}
+}
+
+.iconBgRect_s {
+	@extend .iconBgRect_l;
+	width: 50px;
+	height: 50px;
+	border: 2px solid #fff;
+
+	img {
+		width:54px;
+		height:54px;
+	}
+}
+
+/* icon emblem */
+.emblemIcon_l {
+	display: block;
+	position: relative;
+	width: 64px;
+	height: 64px;
+	overflow: hidden;
+
+	span {
+		@include hidden_object;
+	}
+	.guildRank:before{
+		@include visible_object(0,0,64px,64px,1);
+	}
+	.guildRank.A:before {
+		@include backgroundSize("/emblem/128/a.png",0,0,no-repeat);
+	}
+	.guildRank.B:before {
+		@include backgroundSize("/emblem/128/b.png",0,0,no-repeat);
+	}
+	.guildRank.C:before {
+		@include backgroundSize("/emblem/128/c.png",0,0,no-repeat);
+	}
+	.guildRank.D:before {
+		@include backgroundSize("/emblem/128/d.png",0,0,no-repeat);
+	}
+	.guildRank.E:before {
+		@include backgroundSize("/emblem/128/e.png",0,0,no-repeat);
+	}
+	.guildRank.F:before {
+		@include backgroundSize("/emblem/128/f.png",0,0,no-repeat);
+	}
+	.guildRank.G:before {
+		@include backgroundSize("/emblem/128/g.png",0,0,no-repeat);
+	}
+}
+
+.emblemIcon_s {
+	display: block;
+	position: relative;
+	left:-2px;
+	width: 40px;
+	height: 40px;
+	overflow: hidden;
+	span {
+		@include hidden_object;
+	}
+	.guildRank:before {
+		@include visible_object(0,0,40px,40px,1);
+	}
+	.guildRank.A:before {
+		@include backgroundSize("/emblem/80/a.png",0,0,no-repeat);
+	}
+	.guildRank.B:before {
+		@include backgroundSize("/emblem/80/b.png",0,0,no-repeat);
+	}
+	.guildRank.C:before {
+		@include backgroundSize("/emblem/80/c.png",0,0,no-repeat);
+	}
+	.guildRank.D:before {
+		@include backgroundSize("/emblem/80/d.png",0,0,no-repeat);
+	}
+	.guildRank.E:before {
+		@include backgroundSize("/emblem/80/e.png",0,0,no-repeat);
+	}
+	.guildRank.F:before {
+		@include backgroundSize("/emblem/80/f.png",0,0,no-repeat);
+	}
+	.guildRank.G:before {
+		@include backgroundSize("/emblem/80/g.png",0,0,no-repeat);
+	}
+}
+
+.emblemIcon_ss {
+	@extend .emblemIcon_s;
+	width: 30px;
+	height: 30px;
+
+	.guildRank:before {
+		width: 30px;
+		height: 30px;
+	}
+	.guildRank.A:before {
+		@include backgroundSize("/emblem/80/a.png",0,0,no-repeat);
+		-webkit-background-size:30px 30px;
+		background-size:30px 30px;
+	}
+	.guildRank.B:before {
+		@include backgroundSize("/emblem/80/b.png",0,0,no-repeat);
+		-webkit-background-size:30px 30px;
+		background-size:30px 30px;
+	}
+	.guildRank.C:before {
+		@include backgroundSize("/emblem/80/c.png",0,0,no-repeat);
+		-webkit-background-size:30px 30px;
+		background-size:30px 30px;
+	}
+	.guildRank.D:before {
+		@include backgroundSize("/emblem/80/d.png",0,0,no-repeat);
+		-webkit-background-size:30px 30px;
+		background-size:30px 30px;
+	}
+	.guildRank.E:before {
+		@include backgroundSize("/emblem/80/e.png",0,0,no-repeat);
+		-webkit-background-size:30px 30px;
+		background-size:30px 30px;
+	}
+	.guildRank.F:before {
+		@include backgroundSize("/emblem/80/f.png",0,0,no-repeat);
+		-webkit-background-size:30px 30px;
+		background-size:30px 30px;
+	}
+	.guildRank.G:before {
+		@include backgroundSize("/emblem/80/g.png",0,0,no-repeat);
+		-webkit-background-size:30px 30px;
+		background-size:30px 30px;
+	}
+}
+
+/* common btn */
+.btn {
+	@include box-sizing(border-box);
+	@include btn_detail(44px, 22px);
+	@include borderImage(inline-image("parts/bg_btn_green_off.png"), 22 26 24 26, stretch, 11px 13px 12px 13px);
+	@include text_shadow(-1px, -1px, 1px, rgba(0, 0, 0, 0.5));
+	&.on {
+		@include borderImage(inline-image("parts/bg_btn_green_on.png"), 22 26 24 26, stretch, 11px 13px 12px 13px);
+
+		&.cancel,
+		&.close {
+			@include borderImage(inline-image("parts/bg_btn_gold_on.png"), 22 26 24 26, stretch !important, 11px 13px 12px 13px);
+		}
+		&.battle {
+			@include borderImage(inline-image("parts/bg_btn_red_on.png"), 22 26 24 26, stretch !important, 11px 13px 12px 13px);
+		}
+	}
+	&.cancel,
+	&.close {
+		@include borderImage(inline-image("parts/bg_btn_gold_off.png"), 22 26 24 26, stretch !important, 11px 13px 12px 13px);
+	}
+	&.battle {
+		@include borderImage(inline-image("parts/bg_btn_red_off.png"), 22 26 24 26, stretch !important, 11px 13px 12px 13px);
+	}
+	&.disable {
+		@include borderImage(inline-image("parts/bg_btn_gray.png"), 22 26 24 26, stretch !important, 11px 13px 12px 13px);
+		pointer-events: none;
+	}
+	&.large {
+		width: 80%;
+		margin: $inner_margin auto;
+	}
+	&.short{
+		width:40%;
+		margin:$inner_margin auto;
+	}
+}
+.btn.close {
+	position: relative;
+	margin: 0 auto;
+}
+.outerBtnBox {
+	@include btn_box(80%);
+	@include display-box;
+
+	.btn {
+		@include box-flex(1);
+		width: 1px;
+		@include btn_detail(40px, 15px);
+		@include btn_parallel;
+		/*
+		&:last-of-type {
+			margin-right: 0;
+		}
+		*/
+	}
+}
+
+.innerBtnBox {
+	@extend .outerBtnBox;
+	width: 90%;
+}
+
+/* gold frame button */
+.btn_l {
+	position: relative;
+	@include box-sizing(border-box);
+	@include borderImage(inline-image("parts/bg_btn_l_greengold_off.png"), 24 30 30, stretch, 12px 15px 15px);
+	height: 48px;
+	font-weight: bold;
+	@include text_shadow(-1px, -1px, 1px, rgba(0, 0, 0, 0.5));
+
+	&.on {
+		@include borderImage(inline-image("parts/bg_btn_l_greengold_on.png"), 24 30 30, stretch, 12px 15px 15px);
+
+		&.red {
+			@include borderImage(inline-image("parts/bg_btn_l_redgold_on.png"), 24 30 30, stretch, 12px 15px 15px);
+		}
+		&.turquoise {
+			@include borderImage(inline-image("parts/bg_btn_l_turquoisegold_on.png"), 24 30 30, stretch, 12px 15px 15px);
+		}
+		/*
+		&.redWhite {
+			@include borderImage(inline-image("parts/bg_btn_l_redwhite_on.png"), 24 30 30, stretch, 12px 15px 15px);
+		}
+		*/
+		&.orange{
+			@include borderImage(inline-image("parts/bg_btn_l_orange_on.png"), 24 30 30, stretch, 12px 15px 15px);
+		}
+		&.viridian{
+			@include borderImage(inline-image("parts/bg_btn_l_viridian_on.png"), 24 30 30, stretch, 12px 15px 15px);
+		}
+		&.battle {
+			@include borderImage(inline-image("parts/bg_btn_l_battle_on.png"), 24 30 30, stretch, 12px 15px 15px);
+		}
+		&.battleWhite {
+			@include borderImage(inline-image("parts/bg_btn_red_on.png"), 24 30 30, stretch, 12px 15px 15px);
+		}
+		&.gold{
+			@include borderImage(inline-image("parts/bg_btn_l_gold_on.png"), 24 30 30, stretch, 12px 15px 15px);
+		}
+		&.silver{
+			@include borderImage(inline-image("parts/bg_btn_l_silver_on.png"), 24 30 30, stretch, 12px 15px 15px);
+		}
+		&.bronze{
+			@include borderImage(inline-image("parts/bg_btn_l_bronze_on.png"), 24 30 30, stretch, 12px 15px 15px);
+		}
+	}
+	&.red {
+		@include borderImage(inline-image("parts/bg_btn_l_redgold_off.png"), 24 30 30, stretch, 12px 15px 15px);
+	}
+	&.turquoise {
+		@include borderImage(inline-image("parts/bg_btn_l_turquoisegold_off.png"), 24 30 30, stretch, 12px 15px 15px);
+	}
+	/*
+	&.redWhite {
+		@include borderImage(inline-image("parts/bg_btn_l_redwhite_off.png"), 24 30 30, stretch, 12px 15px 15px);
+	}
+	*/
+	&.orange{
+		@include borderImage(inline-image("parts/bg_btn_l_orange_off.png"), 24 30 30, stretch, 12px 15px 15px);
+	}
+	&.viridian{
+		@include borderImage(inline-image("parts/bg_btn_l_viridian_off.png"), 24 30 30, stretch, 12px 15px 15px);
+	}
+	&.battle {
+		@include borderImage(inline-image("parts/bg_btn_l_battle_off.png"), 24 30 30, stretch, 12px 15px 15px);
+	}
+	&.battleWhite {
+		@include borderImage(inline-image("parts/bg_btn_red_off.png"), 24 30 30, stretch, 12px 15px 15px);
+	}
+	&.gold{
+		@include borderImage(inline-image("parts/bg_btn_l_gold_off.png"), 24 30 30, stretch, 12px 15px 15px);
+	}
+	&.silver{
+		@include borderImage(inline-image("parts/bg_btn_l_silver_off.png"), 24 30 30, stretch, 12px 15px 15px);
+	}
+	&.bronze{
+		@include borderImage(inline-image("parts/bg_btn_l_bronze_off.png"), 24 30 30, stretch, 12px 15px 15px);
+	}
+	&.disable {
+		@include borderImage(inline-image("parts/bg_btn_gray.png"), 22 26 28 28, stretch !important, 11 px 13 px 14 px 14 px);
+		pointer-events: none;
+	}
+}
+
+/* numControl */
+.numControl {
+	@include display-box;
+	width: 100%;
+	margin-top: $inner_margin;
+	padding: $inner_margin 0;
+	border-top: 1px solid #B9A46B;
+
+	.numControlSwitch {
+		@include display-box;
+		@include box-align(center);
+		width: 126px;
+
+		input[type="text"] {
+			-webkit-appearance: none;
+			display: block;
+			width: 40px;
+			height: 32px;
+			padding: 0;
+			@include border-radius(4px);
+			border:1px solid #999;
+			box-shadow:inset 1px 1px 2px #999;
+			font-size: 120%;
+			text-align: center;
+			line-height: 32px;
+		}
+		.up_off,
+		.down_off,
+		.up_disable,
+		.down_disable {
+			@include backgroundSize("/parts/#{$common_parts}.png", -164px, -157px, no-repeat);
+			position:relative;
+			display: block;
+			width: 35px;
+			height: 36px;
+			margin: 0 0 0 $inner_margin;
+
+			&.on{
+				@include backgroundSize("/parts/#{$common_parts}.png", -204px, -157px, no-repeat);
+			}
+		}
+		.down_off {
+			@include backgroundSize("/parts/#{$common_parts}.png", -41px, -158px, no-repeat);
+			margin: 0 $inner_margin 0 0;
+
+			&.on{
+				@include backgroundSize("/parts/#{$common_parts}.png", -82px, -157px, no-repeat);
+			}
+		}
+		.up_disable {
+			@include backgroundSize("/parts/#{$common_parts}.png", -123px, -157px, no-repeat);
+		}
+		.down_disable {
+			@include backgroundSize("/parts/#{$common_parts}.png", -1px, -157px, no-repeat);
+			margin: 0 $inner_margin 0 0;
+		}
+	}
+	.btn {
+		@include box-flex(1);
+		margin-left: $content_margin;
+	}
+}
+
+/* select box */
+.selectBox {
+	position: relative;
+	@include display-box;
+	@include box-align(center);
+	width: auto;
+	margin: 0 auto;
+	z-index: 1;
+
+	select {
+		@include box-flex(1);
+		font-weight:bold;
+		color: #544123;
+	}
+	.selector {
+		position: absolute;
+		right: 74px;
+		top: 5px;
+		display: block;
+		width: 33px;
+		height: 33px;
+		@include backgroundSize("/parts/#{$common_parts}.png", -146px, -112px, no-repeat);
+	}
+	.selectBtn {
+		width: 70px;
+		margin: 1px 0 0 $inner_margin/2;
+	}
+
+	&.group {
+		display: block;
+		width: 288px;
+		margin: 0 auto;
+
+		.line {
+
+			label {
+				position: relative;
+				width: 138px;
+				float: left;
+				margin: 0 12px 8px 0;
+
+				&:nth-of-type(2n) {
+					margin-right: 0;
+				}
+			}
+
+			&:after {
+				@include clearfix;
+			}
+		}
+		select {
+			width: 100%;
+		}
+		.selector {
+			right: 0;
+			top: 0;
+		}
+
+		+.selectBtn {
+			width: 50%;
+			margin: $inner_margin/2 auto 0 auto;
+			position:relative;
+			z-index:2;
+		}
+
+	}
+
+&.noMoney {
+	margin: $inner_margin auto;
+	padding: 0 $inner_margin;
+
+	.label48 {
+		@include box-flex(1);
+		margin-right: $inner_margin;
+		font-size: 80%;
+	}
+	.selectBtn {
+		width: 140px;
+	}
+}
+
+	}
+
+/* select list */
+.selectList {
+	width: 80%;
+	margin: 0 auto;
+
+	table {
+		width: 100%;
+	}
+	th {
+		width: 50%;
+		color: #fff;
+		font-weight: normal;
+	}
+	th, td {
+		padding-bottom: $inner_margin;
+	}
+	.selectBox {
+		position: relative;
+
+		.selector {
+			right: 0;
+			top: 0;
+		}
+	}
+	.btn {
+		width: 100%;
+		margin-top: $inner_margin;
+	}
+}
+
+/* all check toggle */
+.allCheck {
+	@extend .arrowLink;
+	.link{
+		padding-left: 36px;
+		font-weight: bold;
+		&:before {
+			@include visible_object(8px, 50%, 22px, 22px, auto);
+			margin-top: -11px;
+			@include backgroundSize("/parts/#{$common_parts}.png", -189px, -112px, no-repeat);
+		}
+	}
+	.link.on{
+		background-color:transparent;
+		&:before {
+			@include backgroundSize("/parts/#{$common_parts}.png", -219px, -112px, no-repeat);
+			display:block;
+		}
+	}
+}
+
+/* check box */
+.checkBox {
+	position: relative;
+	display: block;
+	width: 138px;
+	height: 35px;
+	margin: $inner_margin auto 0 auto;
+
+	input[type="checkbox"] {
+		-webkit-appearance: none;
+		border: 0 none;
+		@include backgroundSize("/parts/#{$common_parts}.png", 0, -40px, no-repeat);
+		display: block;
+		width: 138px;
+		height: 35px;
+		text-align: center;
+		cursor: pointer;
+		+span {
+			position: absolute;
+			top: 7px;
+			left: 45px;
+			display: block;
+			font-weight: bold;
+			color: #544123;
+		}
+
+		&:checked {
+			@include backgroundSize("/parts/#{$common_parts}.png", 0, -80px, no-repeat);
+			display: block;
+			+span {
+				color: #ffffff;
+				@include text_shadow(-1px, -1px, 1px, rgba(00, 00, 00, 0.3));
+			}
+
+		}
+
+		&:disabled {
+			@include backgroundSize("/parts/#{$common_parts}.png", 0, -120px, no-repeat);
+			display: block;
+			+span {
+				color: #999999;
+			}
+		}
+
+	}
+
+	&.group {
+		display: block;
+		width: 288px;
+		height: auto;
+
+		.line {
+
+			label {
+				position: relative;
+				float: left;
+				margin: 0 12px 8px 0;
+
+				&:nth-of-type(2n) {
+					margin-right: 0;
+				}
+			}
+
+			&:after {
+				@include clearfix;
+			}
+		}
+		select {
+			width: 100%;
+		}
+		.selector {
+			right: 0;
+			top: -1px;
+		}
+
+		+.selectBtn {
+			width: 50%;
+			margin: 0 auto;
+		}
+
+	}
+
+}
+
+/* on-off toggle */
+.setUpToggle {
+	position: relative;
+	@include display-box;
+	@include box-align(center);
+	height: 39px;
+	background-color: #ffffff;
+	@include border-radius(8px);
+	font-weight: bold;
+
+	label {
+		margin: 0 $inner_margin;
+		color: #008C8C;
+		cursor: pointer;
+	}
+	input[type="checkbox"] {
+		-webkit-appearance: none;
+		position: absolute;
+		right: 5px;
+		top: 5px;
+		display: block;
+		width: 95px;
+		height: 31px;
+		border: 0 none;
+		@include backgroundSize("/parts/#{$common_parts}.png", -144px, -76px, no-repeat);
+
+		&:checked {
+			@include backgroundSize("/parts/#{$common_parts}.png", -145px, -39px, no-repeat);
+		}
+	}
+}
+
+/* global header */
+#globalHeader,
+#globalFooter {
+	position: relative;
+	height: 44px;
+	@include backgroundSize_dataURI("/parts/bg_global_bar.png", 0, 0, repeat-x);
+	@include display-box;
+	background-color: #A79F77;
+	@include box-shadow;
+	z-index: 100;
+
+	.menuPanel {
+		@include menu_panel;
+		margin: 2px 0 0 0;
+
+		.link {
+			width: 52px;
+			height: 46px;
+			margin: 0 auto;
+			overflow: hidden;
+
+			&.mypage {
+				@include backgroundSize("/parts/#{$menu_parts}.png", 0, -2px, no-repeat);
+			}
+			&.quest {
+				@include backgroundSize("/parts/#{$menu_parts}.png", -50px, -2px, no-repeat);
+			}
+			&.buttle {
+				@include backgroundSize("/parts/#{$menu_parts}.png", -102px, -2px, no-repeat);
+			}
+			&.gatcha {
+				@include backgroundSize("/parts/#{$menu_parts}.png", -152px, -2px, no-repeat);
+			}
+			&.menu {
+				@include backgroundSize("/parts/#{$menu_parts}.png", -205px, -2px, no-repeat);
+			}
+
+			.hide {
+				margin: 0 auto;
+				font-size: inherit;
+			}
+		}
+	}
+}
+
+/* global footer */
+#globalFooter {
+	ul {
+		width: 320px;
+		margin: 0 auto;
+		@include display-box;
+		@include box-pack(justify);
+		overflow: hidden;
+	}
+	.menuPanel {
+		margin-right: 5px;
+	}
+}
+
+/* header battle time count */
+.battleTimeCount {
+	@include box-flex(1);
+	@include backgroundSize("/parts/bg_battletime_plate.png", center, -3px, no-repeat);
+	display: block;
+	color: #fff;
+
+	.battleTimeInner {
+		position: relative;
+		left: 2px;
+		width: 142px;
+		margin: 0 auto;
+
+		&:before {
+			@include backgroundSize("/parts/#{$menu_parts}.png", -207px,-89px, no-repeat);
+			@include visible_object(47px, 2px, 45px, 45px, 0);
+		}
+	}
+	h1 {
+		position: relative;
+		top: 2px;
+		font-size: 60%;
+		font-weight:bold;
+		@include text_shadow(0px, 1px, 1px);
+		text-align: center;
+		z-index: 1;
+	}
+	.numBox {
+		position: absolute;
+		left: 0;
+		top: 5px;
+		@include display-box;
+		@include box-pack(center);
+		width: 142px;
+		z-index: 1;
+		line-height: 32px;
+	}
+	.numGold {
+		margin-left: -5px;
+		vertical-align: bottom;
+
+		&:first-of-type {
+			margin-left: 0;
+		}
+	}
+	.numGoldColon {
+		margin-left: -2px;
+		margin-right: 2px;
+	}
+	&.beforeBattle,
+	&.onBattle {
+
+		.battleTimeInner:before {
+			@include backgroundSize("/parts/#{$menu_parts}.png", -140px,-85px, no-repeat);
+			@include visible_object(42px, -2px, 55px, 54px, 0);
+		}
+
+	}
+	&.onBattle {
+		.numBox {
+			left:0;
+			top:10px;
+			//left: 14px;
+			//top: -4px;
+		}
+		.numGold {
+			top:0;
+			//top: -5px;
+			position: relative;
+			z-index: 2;
+			margin-left: -28px;
+			&:first-of-type {
+				margin-left: 0;
+			}
+		}
+		.numGoldColon {
+			top:0;
+			//top: -5px;
+			position: relative;
+			z-index: 2;
+			margin-right: 7px;
+			margin-left: -22px;
+		}
+	}
+}
+
+/* status line */
+.statusLine {
+	position: relative;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.7);
+	padding: 2px 0;
+	overflow: hidden;
+	@include txtset(90%, #ffffff);
+	z-index: 50;
+
+	//move line
+	ul {
+		width: 100%;
+		text-align: center;
+		white-space: nowrap;
+		-webkit-animation: 20s ticker infinite linear;
+		animation: 20s ticker infinite linear;
+	}
+	li, p {
+		display: inline-block;
+		padding-right: $inner_margin;
+		@include text_glow(#000);
+
+		.headline{
+			display:inline-block;
+			margin:0 $inner_margin/2 0 $inner_margin;
+			color: #ff0000;
+			&::first-of-type{
+				margin-left:0;
+			}
+		}
+		.denominator{
+			color: #999;
+		}
+	}
+	dl {
+		display: inline-block;
+	}
+	dt {
+		display: inline-block;
+		margin-right: 8px;
+		color: #ff0000;
+	}
+	dd {
+		display: inline-block;
+		color: #999;
+
+		span {
+			color: #fff;
+		}
+	}
+	p {
+		display: block;
+		padding: 0;
+		text-align: center;
+	}
+	.headline{
+		margin-right:$inner_margin/2;
+		color:#f00;
+	}
+	.denominator{
+		color:#999;
+	}
+}
+/*
+@-webkit-keyframes ticker{
+	from{margin-left:100%;width:100%;}
+	to{margin-left:-100%;width:100%;}
+}
+@keyframes ticker{
+	from{margin-left:100%;width:100%;}
+	to{margin-left:-100%;width:100%;}
+}
+*/
+
+.paramStatus {
+	width: 95%;
+	margin: 0 auto;
+	padding: $inner_margin 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	@include border-radius(8px);
+	font-size: 85%;
+	color: #ffffff;
+	@include text_glow(#000);
+	text-align: center;
+
+	span {
+		display: inline-block;
+	}
+	.headline {
+		margin-right: $inner_margin;
+		color: #ff0000;
+	}
+	.sepalator {
+		margin: 0 $inner_margin;
+	}
+}
+
+/* navico animetion 
+.navico_move {
+	position: absolute;
+	display: block;
+	-webkit-animation: navico_move 1s infinite alternate;
+	animation: navico 1s infinite alternate;
+}
+
+@-webkit-keyframes navico_move{
+	from{margin-top:20px;width:auto;}
+	to{margin-top:-15px;width:auto;}
+}
+@keyframes navico_move{
+	from{margin-top:20px;width:auto;}
+	to{margin-top:-15px;width:auto;}
+}
+*/
+
+/* navigation message */
+.message {
+	position: relative;
+	z-index: 40;
+
+	p {
+		width: 256px;
+		margin: 0 0 0 52px;
+		@include backgroundSize("/parts/bg_bubble_message_l.png", 0, 0, no-repeat);
+		height: 50px;
+		overflow: hidden;
+
+		> span {
+			display: block;
+			margin: 0 2px 0 15px;
+			padding: 4px 8px 0 0;
+			font-size: 85%;
+			line-height: 1.8;
+			word-break: break-all;
+		}
+	}
+	&.taicho_arc {
+		left: 5px;
+		top: 10px;
+		@include backgroundSize_dataURI("/parts/navi_icon_taicho_arc.png", 0, 0, no-repeat);
+	}
+	&.navico_arc {
+		left: 5px;
+		top: 10px;
+		@include backgroundSize_dataURI("/parts/navi_icon_navico_arc.png", 0, 0, no-repeat);
+	}
+	&.mitsuyo_arc {
+		left: 5px;
+		top: 10px;
+		@include backgroundSize_dataURI("/parts/navi_icon_joshi_arc.png", 0, 0, no-repeat);
+	}
+	/*
+	&.navicoMove {
+		//mypage and mission-proceed
+		top: 18px;
+
+		p {
+			width: 206px;
+			margin: 10px 0 0 52px;
+			@include backgroundSize("/parts/sprite_main_parts.png", -49px, -271px, no-repeat);
+		}
+	}
+	.navico_move {
+		left: -30px;
+	}
+	*/
+}
+
+/* member dimmed and more */
+.dimmed {
+	p, article {
+		width: 95%;
+		height: 90px;
+		margin: $content_margin auto;
+		border: 1px solid #A79F77;
+		color: #A79F77;
+		@include border-radius(8px);
+		text-align: center;
+		line-height: 90px;
+	}
+}
+
+.caution {
+	@extend .dimmed;
+
+	article {
+		height: auto;
+		line-height: normal;
+		overflow: hidden;
+	}
+	h1 {
+		margin: $inner_margin;
+		padding-bottom: $inner_margin;
+		border-bottom: 1px solid #A79F77;
+	}
+	p {
+		width: auto;
+		height: auto;
+		margin: $inner_margin;
+		border: 0 none;
+		font-size: 85%;
+		line-height: normal;
+		text-align: left;
+	}
+	ul {
+		margin: $inner_margin;
+		font-size: 85%;
+		text-align: left;
+	}
+	li {
+		position: relative;
+		padding: 0 0 $inner_margin/2 12px;
+
+		&:before {
+			@include visible_object(0, 4px, 8px, 8px, auto);
+			@include backgroundSize("/parts/#{$icon_parts}.png", 0, -78px, no-repeat);
+		}
+
+		&:last-child {
+			padding-bottom: 0;
+		}
+	}
+	.link {
+		margin-bottom: $inner_margin;
+		font-size: 90%;
+	}
+}
+
+.complateMessage {
+	@extend .caution;
+
+	article {
+		padding: $content_margin_last 0;
+
+		h1 {
+			padding-bottom: 0;
+			border-bottom: 0 none;
+			font-size: 100%;
+		}
+		p {
+			margin: $inner_margin/2 0;
+			text-align: center;
+		}
+		table {
+			border-collapse: collapse;
+			margin: $inner_margin/2 auto 0 auto;
+			font-size: 85%;
+			color: #ffffff;
+		}
+		th {
+			padding-right: $inner_margin;
+			font-weight: normal;
+			color: #ff0000;
+		}
+		td {
+
+			.sepalator {
+				padding: 0 $inner_margin;
+			}
+		}
+	}
+}
+
+/* status data */
+.statusData {
+	position: relative;
+	padding: $inner_margin 0;
+
+	> h1 {
+		margin: 0 $inner_margin;
+		padding-bottom: $inner_margin/2;
+		border-bottom: 1px solid #B9A46B;
+		font-weight:bold;
+		color: #544123;
+	}
+	p {
+		font-size: 85%;
+	}
+	.contentsBorder {
+
+		> h1 {
+			padding-bottom: $inner_margin;
+			font-weight:bold;
+			color: #544123;
+		}
+	}
+	.contentsHeader {
+		@include box-sizing(border-box);
+		@include borderImage(url("#{$img_path}/parts/bg_contents_header.png"), 20 14 24, stretch, 10px 7px 12px);
+		position: relative;
+		width: 95%;
+		height: 20px;
+		top: -22px;
+		margin: 0 auto;
+		line-height: 0;
+		text-align: center;
+
+		+ h1 {
+			margin-top: -17px;
+			font-weight: bold;
+			color: #544123;
+		}
+	}
+	.columnBox {
+		position: relative;
+	
+		> dl {
+			float: left;
+			width: 50%;
+		}
+		&:after {
+			@include clearfix;
+		}
+	
+		&.link {
+			color: inherit;
+			
+			h1{
+				font-weight: bold;
+				color: #544123;
+			}
+	
+			&:after {
+				@include visible_object(auto, 50%, 9px, 13px, auto);
+				right: 10px;
+				margin-top: -7px;
+				@include backgroundSize("/parts/#{$icon_parts}.png", -97px, -78px, no-repeat);
+			}
+		}
+		+ .btn {
+			display: block;
+			width: 60%;
+			margin: 0 auto;
+		}
+	}
+	.contentsInner {
+		margin: $inner_margin $inner_margin 0 $inner_margin;
+		width: 288px;
+	
+		&:after {
+			@include clearfix;
+		}
+	}
+	
+	&.link {
+		h1 {
+			&:after {
+				@include visible_object(auto, 50%, 9px, 13px, auto);
+				right: 8px;
+				margin-top: 8px;
+				@include backgroundSize("/parts/#{$icon_parts}.png", -97px, -78px, no-repeat);
+			}
+		}
+		.columnBox {
+			padding-right:10px;
+			h1 {
+				&:after {
+					margin-top: -5px;
+				}
+			}
+			&.bossListStatus {
+				h1 {
+					&:after {
+						margin: 0;
+					}
+				}
+			}
+		}
+		p {
+			margin-right: 14px;
+		}
+	}
+	
+	dl {
+		//font-size: 85%;
+		font-size:95%;
+		line-height: 18px;
+	
+		&:after {
+			@include clearfix;
+		}
+	}
+	
+	table {
+		font-size: 85%;
+		border-collapse: collapse;
+		font-size: 100%;
+		line-height: 18px;
+	}
+	
+	dt {
+		float: left;
+		@include box-sizing(border-box);
+		height: 18px;
+		margin-right: $inner_margin/2;
+		padding-bottom: $inner_margin/2;
+		font-weight: normal;
+		color: #8C0000;
+		clear: both;
+	}
+	
+	dd {
+		float: left;
+		@include box-sizing(border-box);
+		height: 18px;
+		padding-bottom: $inner_margin/2;
+		font-weight:bold;
+	}
+	
+	th {
+		@include box-sizing(border-box);
+		height: 18px;
+		padding: 0 $inner_margin/2 $inner_margin/2 0;
+		font-weight: normal;
+		color: #8C0000;
+	}
+	
+	td {
+		@include box-sizing(border-box);
+		height: 18px;
+		padding-bottom: $inner_margin/2;
+	}
+	
+	.innerLink {
+		position: absolute;
+		right: 8px;
+		bottom: 8px;
+		padding-right: 15px;
+		color: inherit;
+	
+		&:after {
+			@include visible_object(auto, 3px, 9px, 13px, auto);
+			right: 0;
+			@include backgroundSize("/parts/#{$icon_parts}.png", -97px, -78px, no-repeat);
+		}
+	}
+}
+
+.statusData_icon {
+	@extend .statusData;
+
+	> h1 {
+		margin-bottom: $inner_margin;
+
+		.label32 {
+			position: absolute;
+			right: 8px;
+			top: 10px;
+			display: inline-block;
+			width: 40px;
+		}
+	}
+	> .columnBox {
+		@include display-box;
+		padding: 0 8px;
+
+		&.innerHeader {
+
+			h1 {
+				margin-bottom: $inner_margin/2;
+				font-weight:bold;
+				color: #544123;
+			}
+		}
+	}
+	img {
+		@include box-shadow(1px 1px 1px);
+	}
+	.contentsInner {
+		@include box-flex(1);
+		margin: 0 0 0 $inner_margin;
+	}
+	> .btn {
+		width: 60%;
+		margin: $inner_margin auto 0 auto;
+	}
+}
+
+.equipListStatus {
+
+	.label36_r4 {
+		display: block;
+		position: absolute;
+		left: 8px;
+		top: 70px;
+		width: 64px;
+		color: #fff;
+		font-size: 85%;
+		text-align: center;
+
+		&.main {
+			background-color: #8C0000;
+		}
+		&.sub {
+			background-color: #B9A46B;
+		}
+		&.protect {
+			background-color: #666666;
+		}
+	}
+	.contentsInner {
+		& > dl {
+			dt {
+				&:nth-of-type(2) {
+					height: 26px;
+				}
+			}
+			dd {
+				&:nth-of-type(2),
+				&:nth-of-type(3) {
+					height: 26px;
+				}
+				.up{
+					color:#f00;
+				}
+			}
+		}
+		label.checkbox {
+			margin: 8px 12px 8px 0;
+		}
+	}
+	.gergeBgFrame {
+		position: relative;
+		@include borderImage(inline-image("parts/bg_garge2.png"), 6 4, stretch, 3px 2px);
+		width: 100px;
+		height: 16px;
+		margin: 0 $inner_margin 0 $inner_margin/2;
+	}
+	.gergeBg {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 94px;
+		z-index: auto;
+	}
+	.gerge {
+		position: absolute;
+		top: 1px;
+		left: 1px;
+		display: block;
+		height: 8px;
+
+		&.max {
+
+			&:after {
+				@include visible_object(-7px, -21px, 108px, 50px, auto);
+				@include backgroundSize("/parts/gerge_max.png", 0, 0, no-repeat);
+			}
+		}
+	}
+}
+
+.equipSetStatus {
+	ul {
+		&:after {
+			@include clearfix;
+		}
+	}
+	li {
+		float: left;
+		width: 56px;
+		margin-right: 2px;
+
+		img {
+			width: 112px;
+		}
+
+		&:nth-child(5n) {
+			margin-right: 0;
+		}
+		&:nth-child(6) {
+			clear: both;
+		}
+	}
+	.blank {
+		width: 56px;
+		height: 56px;
+		background-color: #333;
+		@include box_shadow(inset 0 4px 8px);
+	}
+	dl {
+		margin: $inner_margin 0;
+	}
+	dt {
+		clear: none;
+
+		&:nth-of-type(2) {
+			clear: both;
+		}
+		&:nth-of-type(3) {
+			margin-left: $content_margin;
+		}
+	}
+}
+
+.equipConfirmList {
+	margin: 24px 8px 0 8px;
+	font-size: 80%;
+
+	td {
+		width: 93px;
+		padding: 0 9px $inner_margin 0;
+		text-align: center;
+		&:nth-child(3n) {
+			padding-right: 0;
+		}
+	}
+	tr:last-child td {
+		padding-bottom: 0;
+	}
+	.component {
+		position: relative;
+
+		.equipImageBox {
+			width: 64px;
+			margin: 0 auto;
+		}
+
+		&:after {
+			@include backgroundSize("/parts/#{$icon_parts}.png", -105px, 0, no-repeat);
+			@include visible_object(auto, -12px, 30px, 30px, auto);
+			right: 3px;
+		}
+		&.noChoice {
+			visibility: hidden;
+
+			.evolutionGerge_m {
+				display: none;
+			}
+
+			&:after {
+				@include hidden_object;
+			}
+		}
+	}
+	img {
+		margin-bottom: $inner_margin/2;
+	}
+	p {
+		text-align: left;
+		color: #fff;
+	}
+}
+
+.bossListStatus {
+
+	.emblemIcon_ss {
+		position: absolute;
+		left: 2px;
+		top: -5px;
+	}
+	.label36_r4 {
+		display: block;
+		position: absolute;
+		top: 70px;
+		width: 64px;
+		color: #fff;
+		font-size: 85%;
+		text-align: center;
+
+		&.grade_tough {
+			background-color: #8C0000;
+		}
+		&.grade_normal {
+			background-color: #B9A46B;
+		}
+		&.grade_easy {
+			background-color: #666666;
+		}
+	}
+}
+
+.collection {
+	margin: 0 6px 0 10px;
+	padding: 8px 0 4px 0;
+
+	&:after {
+		@include clearfix;
+	}
+	li {
+		position: relative;
+		float: left;
+		width: 64px;
+		height: 64px;
+		margin: 0 9px 4px 0;
+
+		&:nth-child(4n) {
+			margin-right: 0;
+		}
+		&:nth-child(5n) {
+			//clear:both;
+		}
+
+		&.complate {
+
+			&:after {
+				@include visible_object(0, auto, 64px, 13px, auto);
+				bottom: 0;
+				@include backgroundSize("/parts/label_overlimit.png", -1px, 0, no-repeat);
+			}
+		}
+		&.unidentified {
+
+			&:after {
+				@include visible_object(0, 0, 64px, 64px, auto);
+				background-color: rgba(0, 0, 0, 0.5);
+			}
+		}
+	}
+}
+
+.treasureCollection {
+	width: 288px;
+	margin: 0 auto;
+	border-collapse: collapse;
+
+	tr {
+		&:nth-of-type(1) td {
+			padding-top: 16px;
+		}
+		&:nth-of-type(3) td {
+			padding-bottom: 16px;
+		}
+	}
+	td {
+		width: 87px;
+		padding: 4px 3px 4px 0;
+		font-size: 75%;
+		color: #544123;
+		text-align: center;
+		line-height:1.2;
+		.img{
+			display:inline-block;
+			width:64px;
+			height:64px;
+		}
+		&.unidentified{
+			.img{
+				position:relative;
+				margin:0 auto;
+				&:after {
+					@include visible_object(0, 0, 64px, 64px, auto);
+					background-color: rgba(0, 0, 0, 0.5);
+				}
+			}
+		}
+	}
+}
+
+.findingItem {
+	display: table;
+	margin: $inner_margin 0 0 0;
+	border-collapse: collapse;
+
+	li {
+		display: table-cell;
+		width: 64px;
+		height: 64px;
+		padding: 0 8px 0 0;
+		background: url("#{$img_path}/parts/unknown_item.png") no-repeat;
+		background-size: 64px 64px;
+
+		&:last-child {
+			padding: 0;
+		}
+	}
+}
+
+/* metal panel */
+.metalPanel {
+	@include box-sizing(border-box);
+	position: relative;
+	width: $content_width;
+	margin: 0 auto;
+	@include borderImage(url("#{$img_path}/parts/bg_gauge_panel.png"), 44 26 39 24, stretch, 22px 13px 19px 12px);
+	color: #333333;
+
+	.panelInner {
+		position: relative;
+		top: -8px;
+	}
+}
+
+.expendConf {
+	padding: $inner_margin 0;
+
+	table {
+		width: 288px;
+		margin: 0 auto;
+		border-collapse: collapse;
+		font-size: 100%;
+		color: #544123;
+	}
+	tr {
+		border-bottom: 1px solid #B9A46B;
+
+		&:first-child {
+
+			th, td {
+				padding-top: 0;
+				font-size: 90%;
+			}
+		}
+		&:last-child {
+			border-bottom: 0 none;
+
+			th, td {
+				padding-bottom: 0;
+			}
+		}
+	}
+	th {
+		color: #8C0000;
+		font-weight: normal;
+		width: 40%;
+	}
+	th, td {
+		padding: $inner_margin/2 0;
+	}
+}
+
+/* avatar status */
+#avatarStatus {
+	position: relative;
+	display: block;
+	width: 320px;
+	height: 300px;
+	margin: 0 auto;
+	z-index: 0;
+}
+
+.myAvatar {
+	position: absolute;
+	//right: 0;
+	//top:32px;
+	z-index: 1;
+}
+
+.equip {
+	position: absolute;
+	left: 8px;
+	bottom: 32px;
+	width: 140px;
+	z-index: 10;
+
+	h1 {
+		width: 139px;
+		height: 28px;
+		margin: 0 auto 2px auto;
+		@include backgroundSize("/parts/bg_equip_title.png", 0, 0, no-repeat);
+		display: block;
+	}
+	.link {
+		position:relative;
+		display: inline-block;
+		margin-right: 4px;
+
+		&.on{
+			background-color:transparent;
+
+			&:after{
+				@include visible_object(0,0,64px,64px,auto);
+				background-color:rgba(0,0,0,0.5);
+			}
+		}
+
+		&:last-of-type {
+			margin-right: 0;
+		}
+	}
+	img {
+		@include box_shadow(2px 2px 2px);
+	}
+}
+
+/* scene name */
+%nameBase {
+	position: absolute;
+	@include border-radius(8px);
+	background-color: rgba(0, 0, 0, 0.5);
+}
+%nameBaseText {
+	@include txtset(90%, #ffffff);
+	@include text_glow(#000);
+}
+.itemName {
+	@extend %nameBase;
+	@extend %nameBaseText;
+	left: -5px;
+	top: 225px;
+	padding: 2px 8px 2px 20px;
+	font-weight: bold;
+	word-break:normal;
+	z-index: 20;
+}
+.userName {
+	@extend %nameBase;
+	@extend %nameBaseText;
+	left: -5px;
+	top: 8px;
+	width: 225px;
+	padding: 0 0 0 16px;
+	font-size: 105%;
+	font-weight: bold;
+	line-height: 32px;
+}
+
+.stageName,
+.bossName,
+.battleName,
+.guildName {
+	@extend .userName;
+	@include backgroundSize("/parts/#{$common_parts}.png", 0, 0, no-repeat);
+	font-size: 100%;
+	z-index: 10;
+
+	&.link.on{
+		background-color:inherit;
+
+		&:after{
+			@include visible_object(0,0,100%,100%,12);
+			background-color:rgba(0,0,0,0.3);
+			margin-left:-7px;
+		}
+	}
+
+	.guildNameText {
+		display: block;
+		width: 145px;
+		margin-left: 40px;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+}
+
+.currentRank {
+	//@include backgroundSize("/parts/#{$common_parts}.png", -249px, -65px, no-repeat);
+	position: absolute;
+	right: 0;
+	top: 8px;
+	display: block;
+	width: 71px;
+	height: 36px;
+	font-size: 80%;
+	color: #fff;
+	z-index:10;
+	dt {
+		&:before{
+			@include backgroundSize("/parts/#{$common_parts}.png",-256px,-1px,no-repeat);
+			@include visible_object(6px,4px,63px,25px,1);
+		}
+	}
+	dd {
+		position:absolute;
+		right:4px;
+		bottom:4px;
+		font-size:100%;
+		font-weight:bold;
+		text-shadow:-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff,1px 1px 0 #fff;
+		span{
+			display:inline-block;
+			width:26px;
+			margin-right:2px;
+			font-size:140%;
+			text-align:center;
+		}
+	}
+	&.rankUp{
+		@include backgroundSize("/parts/#{$common_parts}.png", -249px, -28px, no-repeat);
+		display:block;
+		dd{
+			color:#00303F;
+		}
+	}
+	&.rankStay{
+		@include backgroundSize("/parts/#{$common_parts}.png", -249px, -65px, no-repeat);
+		display:block;
+		dd{
+			color:#1F3F00;
+		}
+	}
+	&.rankDown{
+		@include backgroundSize("/parts/#{$common_parts}.png", -249px, -103px, no-repeat);
+		display:block;
+		dd{
+			color:#400000;
+		}
+	}
+	&.out {
+		width:72px;
+		height:37px;
+		@include backgroundSize("/parts/#{$common_parts}.png", -248px, -141px, no-repeat);
+		display:block;
+		dt,dd{
+			display:none;
+		}
+	}
+	&.link.on{
+		&:after{
+			@include visible_object(0,0,100%,100%,10);
+			background-color:rgba(0,0,0,0.3);
+		}
+	}
+}
+
+.itemDetail {
+	position:relative;
+	&.limitMax{
+		&:before{
+			@include backgroundSize("/parts/label_equip_detail_limitmax.png",0,0,no-repeat);
+			@include visible_object(12px,-10px,109px,39px,2);
+		}
+	}
+	&.new{
+		&:before{
+			@include backgroundSize("/parts/label_equip_detail_new.png",0,0,no-repeat);
+			@include visible_object(12px,-10px,109px,39px,2);
+		}
+	}
+	&.max{
+		&:before{
+			@include backgroundSize("/parts/label_equip_detail_max.png",0,0,no-repeat);
+			@include visible_object(12px,-10px,109px,39px,2);
+		}
+	}
+	.description {
+		position: relative;
+		width: 95%;
+		margin: 0 auto;
+		.img{
+			position:relative;
+			display:block;
+			width:240px;
+			margin:0 auto;
+			
+			&.unidentified{
+				&:after {
+					@include visible_object(0, 0, 240px, 240px, auto);
+					background-color: rgba(0, 0, 0, 0.5);
+				}
+			}
+		}
+		img {
+			display: block;
+			margin: 0 auto;
+		}
+		p {
+			color: #fff;
+		}
+		.label36_r4 {
+			display: block;
+			width: 60px;
+			margin: $inner_margin 0 $content_margin 0;
+		}
+		.itemName {
+			position: relative;
+			left: -20px;
+			top: 0;
+			display: inline-block;
+			height: 30px;
+			margin: $inner_margin 0;
+			padding-right: 10px;
+			font-size:110%;
+			text-align: left;
+			line-height: 30px;
+
+			.label36_r4 {
+				display: inline-block;
+				margin: $inner_margin/2 0 $inner_margin/2 10px;
+				text-shadow: none;
+				vertical-align: inherit;
+			}
+		}
+	}
+	.contents {
+		width: 95%;
+		margin: 0 auto $content_margin auto;
+		h1{
+			font-weight:bold;
+		}
+	}
+	//equipDetail
+	.equipListStatus {
+
+		.contentsInner {
+			position: relative;
+			margin-top: 0;
+		}
+		.label32 {
+			position: absolute;
+			right: 0;
+			top: 0;
+			padding: 0 $inner_margin;
+		}
+		.columnBox {
+			margin-bottom: $inner_margin;
+		}
+	}
+	//bossDetail
+	.findingItem {
+		margin-left: 12px;
+	}
+}
+
+/* evolution gerge */
+.equipImageBox {
+	position: relative;
+
+	.evolutionGerge_l {
+		position: absolute;
+		height: 12px;
+		left: 123px;
+		top: 217px;
+
+		span {
+
+			&:before {
+				@include visible_object(0, 0, 12px, 11px, auto);
+				@include backgroundSize("/equip/equip_evolution_star.png", 0, 0, no-repeat);
+			}
+			&.evo2:before {
+				left: 28px;
+			}
+			&.evo3:before {
+				left: 57px;
+			}
+			&.evo4:before {
+				left: 85px;
+			}
+		}
+	}
+	.evolutionGerge_m {
+		position: absolute;
+		height: 3px;
+		left: 24px;
+		top: 58px;
+
+		span {
+
+			&:before {
+				@include visible_object(0, 0, 3px, 3px, auto);
+				@include backgroundSize("/equip/equip_evolution_star_m.png", 0, 0, no-repeat);
+			}
+			&.evo2:before {
+				left: 8px;
+			}
+			&.evo3:before {
+				left: 15px;
+			}
+			&.evo4:before {
+				left: 23px;
+			}
+		}
+	}
+	.evolutionGerge_s {
+		position: absolute;
+		height: 3px;
+		left: 21px;
+		top: 50px;
+
+		span {
+
+			&:before {
+				@include visible_object(0, 0, 3px, 3px, auto);
+				@include backgroundSize("/equip/equip_evolution_star_m.png", 0, 0, no-repeat);
+			}
+			&.evo2:before {
+				left: 7px;
+			}
+			&.evo3:before {
+				left: 13px;
+			}
+			&.evo4:before {
+				left: 20px;
+			}
+		}
+	}
+}
+
+/* admin notice */
+#adminNotice,
+#adminNoticeDetail {
+	.subHeader,
+	.subHeader2 {
+		margin-bottom: $inner_margin;
+	}
+	.contents {
+		width: 95%;
+		margin: 0 auto $inner_margin auto;
+	}
+	dl {
+		padding: $inner_margin;
+		padding-right: $content_margin;
+
+		&:after {
+			@include backgroundSize("/parts/#{$icon_parts}.png", -97px, -78px, no-repeat);
+			@include visible_object(auto, 50%, 9px, 13px, auto);
+			right: 8px;
+			margin-top: -8px;
+		}
+	}
+	dt {
+		color: #B8A46B;
+		font-size: 90%;
+	}
+	dd {
+		margin:$inner_margin/2 $inner_margin 0 0;
+		font-weight:bold;
+		color:$color_A;
+	}
+	.label36_r4 {
+		display: inline-block;
+		width: 70px;
+		margin: 0 $inner_margin 0 0;
+		padding: 0;
+		font-size: 80%;
+	}
+}
+
+/* admin notice detail */
+#adminNoticeDetail {
+	margin-top: $inner_margin;
+	dl {
+		padding: $inner_margin;
+	}
+	dl:after {
+		display: none;
+	}
+	dt {
+		padding-bottom: $inner_margin/2;
+		border-bottom: 1px solid #B9A46B;
+	}
+	dd {
+		margin-top: $inner_margin/2;
+		font-weight:normal;
+		color: $color_K;
+	}
+}
+
+//post form(text)
+.postForm_text {
+	label {
+		position: relative;
+		display: block;
+	}
+	input[type="text"] {
+		width: 284px;
+		//height:40px;
+		padding: $inner_margin;
+		border: 1px solid #ccc;
+		font-size: 100%;
+		@include border-radius(4px);
+		@include box_shadow(inset 1px 1px 1px 0);
+	}
+	.btn.large {
+		width: 90%;
+		margin: $inner_margin auto 0;
+	}
+}
+
+//post form(message)
+.postForm_message {
+
+	label {
+		position: relative;
+		display: block;
+	}
+	textarea {
+		width: 284px;
+		height: 40px;
+		padding: $inner_margin;
+		border: 1px solid #ccc;
+		font-size: 100%;
+		@include border-radius(4px);
+		@include box_shadow(inset 1px 1px 1px 0);
+	}
+	.btn.large {
+		width: 90%;
+		margin: $inner_margin auto 0;
+	}
+}
+
+.postForm_text,
+.postForm_message{
+	.textCount{
+		position: absolute;
+		right: 8px;
+		bottom: 4px;
+		color: #B9A46B;
+	}
+}
+
+// post form(item request)
+.postForm_request {
+
+	textarea {
+		width: 270px;
+		height: 40px;
+		margin: $inner_margin 0 $inner_margin $inner_margin;
+		padding: $inner_margin;
+		border: 1px solid #ccc;
+		font-size: 100%;
+		@include border-radius(4px);
+		@include box_shadow(inset 1px 1px 1px 0);
+	}
+	.innerBtnBox {
+		width: 95%;
+		margin: 0 auto;
+	}
+}
+
+// post form(bbs-icon)
+.postForm_icon {
+	position: relative;
+	width: $content_width;
+	margin: $inner_margin auto;
+	z-index: auto;
+
+	.formInner {
+		@include display-box;
+		@include box-align(start);
+	}
+	.iconBgArc_s {
+		position: relative;
+		left: 7px;
+	}
+	.inputBox {
+		@include box-flex(1);
+		@include box-sizing(border-box);
+		@include borderImage(url("#{$img_path}/parts/bg_bubble_topic.png"), 40 33 39 59, repeat stretch, 18px 16px 18px 26px, inherit);
+		display: block;
+		position: relative;
+		z-index: 1;
+	}
+	textarea {
+		position: relative;
+		left: -6px;
+		top: -10px;
+		width: 217px;
+		height: 20px;
+		margin-bottom: 35px;
+		padding: $inner_margin;
+		border: 1px solid #ccc;
+		font-size: 100%;
+		@include border-radius(4px);
+		@include box_shadow(inset 1px 1px 1px 0);
+	}
+	.btn {
+		position: absolute;
+		bottom: -5px;
+
+		&.post {
+			left: 55px;
+			width: 50%;
+		}
+		&.share {
+			left: 35px;
+			width: 70%;
+		}
+	}
+}
+
+/* topic thread */
+#guildBbs, #greet {
+	margin-bottom: $content_margin;
+	.postComment {
+		@include display-box;
+		@include box-align(center);
+		width: 100%;
+		margin: $content_margin auto 0 auto;
+		label {
+			@include box-flex(1);
+			display: block;
+			height: 24px;
+			margin-top: -2px;
+			padding: 7px 0 5px 4px;
+			border: 1px solid rgba(0, 0, 0, 0.5);
+			@include border-radius(4px);
+			background-color: #fff;
+			input[type="text"] {
+				-webkit-appearance: none;
+				display: block;
+				width: 90%;
+				height: auto;
+				background-color: transparent;
+				border: 0 none;
+				font-size: 1em;
+			}
+		}
+		.btn {
+			position: relative;
+			width: 100px;
+			margin: 0 0 0 -10px;
+			z-index: 2;
+		}
+	}
+}
+
+.topic,
+.situation {
+	width: $content_width;
+	margin: 0 auto $inner_margin auto;
+	padding: $inner_margin 0;
+
+	.contentsInner {
+		margin: 0 $inner_margin;
+	}
+	.contributor {
+		@include display-box;
+
+		.iconBgArc_s {
+			margin: 0 $inner_margin 0 0;
+		}
+		h2 {
+			@include box-flex(1);
+			margin: 0;
+			padding: 0;
+			border: 0 none;
+			font-size: 90%;
+			font-weight: bold;
+			color: #544123;
+		}
+		time {
+			color: #B9A46B;
+			font-size: 85%;
+		}
+	}
+	p {
+		min-height: 34px;
+		margin: -20px 0 0 45px;
+		@include box-sizing(border-box);
+		@include borderImage(url("#{$img_path}/parts/bg_bubble_w_l.png"), 29 35 32 51, stretch, 10px 10px 12px 14px, inherit);
+		font-size: 90%;
+
+		&.myTopic {
+			@include borderImage(url("#{$img_path}/parts/bg_bubble_g_l.png"), 29 35 32 51, stretch, 10px 10px 12px 14px, inherit);
+			button.like.disable{
+				pointer-events:none;
+			}
+		}
+	}
+	.topicMenu,
+	.greetMenu {
+		position:relative;
+		display: block;
+		margin-top: $inner_margin;
+		text-align: right;
+
+		.like {
+			position: relative;
+			display: inline-block;
+			width: auto;
+			margin-right: $content_margin;
+			padding: 2px 0 0 20px;
+			color: #78724C;
+			.hide:before {
+				@include visible_object(0, -2px, 16px, 21px, 1);
+				@include backgroundSize("/parts/#{$icon_parts}.png", -29px, -24px, no-repeat);
+			}
+			&.disable .hide:before{
+				width: 16px;
+				height: 20px;
+				@include backgroundSize("/parts/#{$icon_parts}.png", -2px, -51px, no-repeat);
+			}
+			&.over .hide:before {
+				width: 16px;
+				height: 22px;
+				@include backgroundSize("/parts/#{$icon_parts}.png", -29px, -50px, no-repeat);
+			}
+		}
+		.resToggle {
+			@extend .like;
+			margin: 0;
+			padding-left: 22px;
+
+			.hide:before {
+				width: 19px;
+				height: 20px;
+				@include backgroundSize("/parts/#{$icon_parts}.png", -56px, -24px, no-repeat);
+			}
+			&.open .hide:before {
+				width: 19px;
+				height: 22px;
+				@include backgroundSize("/parts/#{$icon_parts}.png", -56px, -50px, no-repeat);
+			}
+		}
+		.delete{
+			@extend .like;
+			position:absolute;
+			left:0;
+			top:0;
+			width:auto;
+			height:19px;
+			margin:0;
+			.hide:before{
+				width:14px;
+				height:19px;
+				top:0;
+				@include backgroundSize("/parts/#{$icon_parts}.png", -29px, 0, no-repeat);
+			}
+		}
+		.reply {
+			@extend .like;
+			width: auto;
+			margin: 0;
+			padding: 0 0 0 22px;
+
+			&:before {
+				@include visible_object(0, -1px, 19px, 21px, 1);
+				@include backgroundSize("/parts/#{$icon_parts}.png", -54px, 0, no-repeat);
+			}
+		}
+	}
+	.topicRoot {
+		margin-bottom: $inner_margin;
+	}
+	.res {
+		margin-top: $inner_margin;
+	}
+	.res,
+	.greetingBody,
+	.contents.opponent {
+		@include box-direction(reverse);
+		margin-left: 45px;
+
+		.iconBgArc_s {
+			margin: 0 0 0 $inner_margin;
+		}
+		h2 {
+			text-align: right;
+		}
+		p {
+			margin: -20px 45px 4px 0;
+			@include borderImage(url("#{$img_path}/parts/bg_bubble_w_r.png"), 29 46 33 33, repeat stretch, 10px 14px 12px 12px, inherit);
+
+			&.myComment {
+				@include borderImage(url("#{$img_path}/parts/bg_bubble_g_r.png"), 29 46 33 33, repeat stretch, 10px 14px 12px 12px, inherit);
+				.topicMenu{
+					min-height:17px;
+				}
+			}
+		}
+
+		&.master {
+			@include box-direction(normal);
+			margin-top: $inner_margin;
+
+			.iconBgArc_s {
+				margin: 0 $inner_margin 0 0;
+			}
+			h2 {
+				text-align: left;
+			}
+			p {
+				margin: -20px 0 4px 45px;
+				@include borderImage(url("#{$img_path}/parts/bg_bubble_w_l.png"), 29 35 32 51, repeat stretch, 10px 10px 12px 14px, inherit);
+
+				&.myComment {
+					@include borderImage(url("#{$img_path}/parts/bg_bubble_g_l.png"), 29 35 32 51, repeat stretch, 10px 10px 12px 14px, inherit);
+				}
+			}
+		}
+	}
+
+}
+
+#greet {
+	.topic {
+		&:first-of-type {
+			margin-top: $inner_margin;
+		}
+	}
+	.greetingBody {
+		margin: 0;
+	}
+}
+
+/* item confirm - modal & equip & more */
+.itemConfirm {
+	@include display-box;
+	@include box-pack(center);
+	width: 200px;
+	margin: $inner_margin auto;
+	text-align: center;
+
+	&.double .individual {
+		margin-right: 40px;
+
+		&:last-of-type {
+			margin-right: 0;
+		}
+	}
+
+	.label {
+		display: block;
+		width: 80px;
+		font-size: 70%;
+	}
+}
+
+/* period */
+.period{
+	@include backgroundSize("/parts/bg_period.png",0,0,no-repeat);
+	display:block;
+	width:290px;
+	height:43px;
+	margin:$inner_margin auto $inner_margin - 2 auto;
+	text-align:center;
+	dt{
+		padding-top:2px;
+		font-size:75%;
+		color:#F3DE9F;
+	}
+	dd{
+		margin-top:-4px;
+		font-size:85%;
+		color:#fff;
+		span{
+			font-size:115%;
+		}
+	}
+}
+
+/* modal window base */
+.modalBG {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: #000;
+	opacity: 0.5;
+}
+
+.modalBox {
+	display: none;
+	position: absolute;
+	@include box-sizing(border-box);
+	width: 304px;
+	@include borderImage(url("#{$img_path}/parts/bg_popup.png"), 32 44 44 42, stretch, 16px 22px 22px 21px, inherit);
+	color: #544123;
+	font-size: 90%;
+	-webkit-transition: -webkit-transform 0.2s;
+	-webkit-transform: scale(1.2);
+
+	h1 {
+		position: relative;
+		text-align: center;
+		width: 95%;
+		margin: -2px auto 0 auto;
+		padding: $inner_margin 0;
+		border-bottom: 1px solid #B9A46B;
+		font-weight:bold;
+
+		&:before {
+			@include backgroundSize("/parts/#{$menu_parts}.png", -206px, -52px, no-repeat);
+			@include visible_object(0, 6px, 24px, 24px, 101);
+		}
+		&:after {
+			@include backgroundSize("/parts/#{$menu_parts}.png", -231px, -52px, no-repeat);
+			@include visible_object(auto, 6px, 24px, 24px, 101);
+			right: 0;
+		}
+	}
+	a {
+		color: #544123;
+	}
+	.innerBtnBox {
+		width: 100%;
+		margin: $inner_margin auto 0 auto;
+		font-size:110%;
+	}
+	p {
+		margin: $inner_margin 0;
+		text-align: center;
+
+		&.param {
+			margin: 0;
+		}
+		&.caution {
+			margin: $inner_margin auto 0 auto;
+		}
+	}
+	table,
+	.parameter {
+		margin: 0 auto;
+		font-size: 90%;
+	}
+	.parameter {
+		text-align: center;
+
+		p {
+			margin: 0;
+		}
+	}
+	tr {
+		padding-bottom: 4px;
+	}
+	th,
+	.parameter h2 {
+		padding-right: $inner_margin;
+		font-weight: normal;
+		color: #8C0000;
+	}
+	.parameter h2 {
+		display: inline-block;
+	}
+	td {
+		text-align: center;
+	}
+	span.sepalator {
+		display: inline-block;
+		margin: 0 $inner_margin;
+	}
+	span.up {
+		color: #ff0000;
+	}
+	span.down {
+		color: #2c00ff;
+	}
+	span.even {
+		color: #287800;
+	}
+	//label48
+	.label48 {
+		margin: $inner_margin 0 $content_margin;
+		font-size: 80%;
+	}
+	//item use
+	.itemUseConfirm {
+		margin: $inner_margin 0 0 0;
+
+		.single {
+			display: block;
+			width: 128px;
+			margin: 0 auto;
+			~ p {
+				font-size: 80%;
+			}
+		}
+		table {
+			margin-top: $inner_margin;
+			font-size: 100%;
+		}
+		.itemBox {
+			position: relative;
+			@include display-box;
+			@include box-align(start);
+			@include box-pack(center);
+			margin-bottom: $inner_margin;
+		
+			.itemBoxInner {
+				text-align: center;
+				width: 96px;
+				.equipImageBox {
+					width: 64px;
+					margin: 0 auto;
+				}
+		
+				P {
+					margin: 4px 0 8px;
+					font-size: 75%;
+				}
+			}
+			.changeArrow {
+				@include backgroundSize("/parts/change_arrow.png", 0, 0, no-repeat);
+				position: relative;
+				top: 13px;
+				display: block;
+				width: 48px;
+				height: 37px;
+				margin: 0 $inner_margin/2;
+			}
+		}
+		.equipImageBox {
+			img {
+				display: block;
+				margin: 0 auto;
+			}
+			~ p {
+				margin: 4px 0 8px;
+				font-size: 75%;
+			}
+		}
+	}
+	//information
+	#label36_r4 {
+		margin-top: $inner_margin;
+		font-size: 90%;
+		dd {
+			font-size: 90%;
+			img {
+				display: block;
+				margin: $content_margin auto;
+			}
+		}
+	}
+}
+
+.modalInner {
+	width: 95%;
+	margin: 0 auto;
+	word-break: break-all;
+}
+
+.modalBox .close span {
+	@include hidden_object;
+
+	&:before {
+		@include visible_object(auto, -25px, 30px, 30px, 10001);
+		right: -25px;
+		@include backgroundSize("/parts/#{$icon_parts}.png", -105px, 0, no-repeat);
+	}
+}
+
+#cheeredUp {
+	font-size: 90%;
+
+	p {
+		text-align: left;
+	}
+	table {
+		margin: 0 auto 16px auto;
+
+		span {
+			color: #8C0000;
+		}
+
+		tr:nth-of-type(3) td {
+			padding-top: 8px;
+		}
+	}
+}
+
+/* tabNav */
+.tabNav {
+	border-bottom: 4px solid #E6C567;
+
+	ul {
+		@include display-box;
+		@include box-pack(center);
+		width: 100%;
+		margin-bottom: -4px;
+	}
+	li {
+		@include box-flex(1);
+		width: 1px;
+		margin-left: $inner_margin;
+		text-align: center;
+		overflow: hidden;
+
+		> button {
+			@include box-sizing(border-box);
+			@include borderImage(inline-image("parts/bg_tabnav1_off.png"), 22 22 6, stretch, 11px 11px 3px);
+			@include text_shadow(-1px, -1px, 1px, rgba(0, 0, 0, 0.5));
+			display: block;
+			width: 100%;
+			height: 40px;
+			border-bottom: 4px solid #E6C567;
+			font-weight:bold;
+			line-height: 20px;
+
+			&.on{
+				height: 40px;
+				@include borderImage(inline-image("parts/bg_tabnav1_on.png"), 22 22 6, stretch, 11px 11px 3px);
+				color: #F3DE9F;
+				line-height: 29px;
+
+			}
+
+			&.select {
+				height: 44px;
+				@include borderImage(inline-image("parts/bg_tabnav1_on.png"), 22 22 6, stretch, 11px 11px 3px);
+				color: #F3DE9F;
+				line-height: 29px;
+
+				span:before {
+					@include visible_object(-4px, 2px, 14px, 17px, inherit);
+					position: relative;
+					@include backgroundSize("/parts/#{$icon_parts}.png", -83px, -49px, no-repeat);
+				}
+			}
+		}
+		&:last-child {
+			margin-right: $inner_margin;
+		}
+	}
+}
+
+.tabNav2 {
+
+	ul {
+		@include display-box;
+		@include box-pack(center);
+		width: 80%;
+		margin: 0 auto;
+	}
+	li {
+		@include box-flex(1);
+		position:relative;
+		width: 1px;
+		text-align: center;
+		//overflow:hidden;
+
+		button {
+			@include box-sizing(border-box);
+			display: block;
+			width: 100%;
+			height: 40px;
+			@include text_shadow(-1px, -1px, 1px, rgba(0, 0, 0, 0.5));
+			font-weight:bold;
+			line-height: 12px;
+
+			&.left {
+				@include borderImage(inline-image("parts/bg_tabnav2_l_off.png"), 24 0 24 24, stretch, 12px 0 12px 12px);
+
+				&.on:after{
+					@include visible_object(0,0,100%,100%,auto);
+					background-color:rgba(0,0,0,0.3);
+				}
+
+				&.select {
+					@include borderImage(inline-image("parts/bg_tabnav2_l_on.png"), 24 2 24 24, stretch, 12px 1px 12px 12px);
+					color: #F3DE9F;
+
+					&.on:after{
+						display:none;
+					}
+				}
+			}
+			&.right {
+				@include borderImage(inline-image("parts/bg_tabnav2_r_off.png"), 24 24 24 0, stretch, 12px 12px 12px 0);
+
+				&.on:after{
+					@include visible_object(0,0,100%,100%,auto);
+					background-color:rgba(0,0,0,0.3);
+				}
+
+				&.select {
+					@include borderImage(inline-image("parts/bg_tabnav2_r_on.png"), 24 24 24 2, stretch, 12px 12px 12px 1px);
+					color: #F3DE9F;
+
+					&.on:after{
+						display:none;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* grandMenu */
+#grandMenu {
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+	@include box-sizing(border-box);
+	width: 100%;
+	background-color: #E0D3AB;
+	@include borderImage(url("#{$img_path}/parts/bg_grandmenu.png"), 25 30 29 26, stretch, 11px 14px 13px 11px, inherit);
+	z-index: 10000;
+
+	.link.mypage {
+		position: absolute;
+		left: -11px;
+		top: -11px;
+		width: 65px;
+		height: 47px;
+		@include backgroundSize("/parts/#{$menu_parts}.png", 0, -54px, no-repeat);
+	}
+	.link.close {
+		position: absolute;
+		right: -16px;
+		top: -11px;
+		width: 66px;
+		height: 47px;
+		@include backgroundSize("/parts/#{$menu_parts}.png", 0, -108px, no-repeat);
+	}
+	.grandMenuInner {
+		position: relative;
+		z-index: 5100;
+	}
+	h1 {
+		position: relative;
+		width: 180px;
+		height: 32px;
+		margin: 0 auto;
+		border-bottom: 1px solid #B9A46B;
+
+		.hide:after {
+			@include backgroundSize("/parts/#{$menu_parts}.png", -119px, -55px, no-repeat);
+			@include visible_object(56px, 4px, 69px, 18px, auto);
+		}
+		&:before {
+			@include backgroundSize("/parts/#{$menu_parts}.png", -206px, -52px, no-repeat);
+			@include visible_object(0, 1px, 23px, 24px, auto);
+		}
+		&:after {
+			@include backgroundSize("/parts/#{$menu_parts}.png", -231px, -52px, no-repeat);
+			@include visible_object(auto, 1px, 23px, 24px, auto);
+			right: 0;
+		}
+	}
+	nav {
+		width: 284px;
+		margin: 4px auto 2px auto;
+	}
+	ul {
+		position: relative;
+		padding: 5px 0 5px 65px;
+		border-bottom: 1px solid #B9A46B;
+
+		&:nth-of-type(5),
+		&:nth-of-type(6), {
+			border-bottom: 0 none;
+		}
+	}
+	.main {
+		&:before {
+			@include backgroundSize("/parts/#{$menu_parts}.png", -72px, -55px, no-repeat);
+			@include visible_object(0, 8px, 35px, 11px, auto);
+		}
+	}
+	.weapon {
+		&:before {
+			@include backgroundSize("/parts/#{$menu_parts}.png", -72px, -93px, no-repeat);
+			@include visible_object(0, 8px, 23px, 12px, auto);
+		}
+	}
+	.job {
+		&:before {
+			@include backgroundSize("/parts/#{$menu_parts}.png", -72px, -74px, no-repeat);
+			@include visible_object(0, 8px, 36px, 12px, auto);
+		}
+	}
+	.item {
+		&:before {
+			@include backgroundSize("/parts/#{$menu_parts}.png", -72px, -114px, no-repeat);
+			@include visible_object(0, 8px, 47px, 11px, auto);
+		}
+	}
+	.otherMenu {
+		padding-bottom: 0;
+
+		&:before {
+			@include backgroundSize("/parts/#{$menu_parts}.png", -72px, -132px, no-repeat);
+			@include visible_object(0, 8px, 36px, 12px, auto);
+		}
+	}
+	.otherMenuUnder {
+		padding-bottom: 0;
+	}
+	li {
+		position: relative;
+		display: inline-block;
+		margin-right: 1px;
+		vertical-align:bottom;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+	.link {
+		width: 50px;
+		height: 50px;
+
+		&.on {
+			&:after {
+				@include backgroundSize("/parts/#{$menu_parts}.png", -201px, -399px, no-repeat);
+				@include visible_object(-3px, -2px, 55px, 55px, auto);
+			}
+		}
+		&.mission {
+			@include backgroundSize("/parts/#{$menu_parts}.png", -1px, -158px, no-repeat);
+		}
+		&.battle {
+			@include backgroundSize("/parts/#{$menu_parts}.png", -52px, -157px, no-repeat);
+		}
+		&.gacha {
+			@include backgroundSize("/parts/#{$menu_parts}.png", -102px, -158px, no-repeat);
+		}
+		&.guild {
+			@include backgroundSize("/parts/#{$menu_parts}.png", -154px, -158px, no-repeat);
+		}
+		&.equipMenu {
+			@include backgroundSize("/parts/#{$menu_parts}.png", -205px, -157px, no-repeat);
+		}
+		&.compound {
+			@include backgroundSize("/parts/#{$menu_parts}.png", -2px, -218px, no-repeat);
+		}
+		&.weaponList {
+			@include backgroundSize("/parts/#{$menu_parts}.png", -51px, -218px, no-repeat);
+		}
+		&.weaponSell {
+			@include backgroundSize("/parts/#{$menu_parts}.png", -2px, -401px, no-repeat);
+		}
+		&.jobList {
+			@include backgroundSize("/parts/#{$menu_parts}.png", -102px, -218px, no-repeat);
+		}
+		&.ability {
+			@include backgroundSize("/parts/#{$menu_parts}.png", -154px, -218px, no-repeat);
+		}
+		&.itemList {
+			@include backgroundSize("/parts/#{$menu_parts}.png", -205px, -218px, no-repeat);
+		}
+		&.shop {
+			@include backgroundSize("/parts/#{$menu_parts}.png", -1px, -277px, no-repeat);
+		}
+		&.gift {
+			@include backgroundSize("/parts/#{$menu_parts}.png", -50px, -277px, no-repeat);
+		}
+		&.rareMedal {
+			@include backgroundSize("/parts/#{$menu_parts}.png", -103px, -277px, no-repeat);
+		}
+		&.Pictorial {
+			@include backgroundSize("/parts/#{$menu_parts}.png", -155px, -277px, no-repeat);
+		}
+		&.wanted {
+			@include backgroundSize("/parts/#{$menu_parts}.png", -205px, -278px, no-repeat);
+		}
+		&.profile {
+			@include backgroundSize("/parts/#{$menu_parts}.png", 0, -341px, no-repeat);
+		}
+		&.friend {
+			@include backgroundSize("/parts/#{$menu_parts}.png", -52px, -341px, no-repeat);
+		}
+		&.guildPlaza{
+			@include backgroundSize("/parts/#{$menu_parts}.png", -102px, -342px, no-repeat);
+		}
+		&.help {
+			@include backgroundSize("/parts/#{$menu_parts}.png", -155px, -341px, no-repeat);
+		}
+		&.toppage {
+			@include backgroundSize("/parts/#{$menu_parts}.png", -206px, -341px, no-repeat);
+		}
+	}
+}
+
+/* num gold */
+.numGold {
+	width: 16px;
+	height: 18px;
+	@include backgroundSize("/parts/#{$numGold_parts}.png", -1px, -6px, no-repeat);
+
+	&.num_0 {
+		//width:15px;
+		background-position:-1px -6px;
+	}
+	&.num_1 {
+		//width:12px;
+		background-position:-21px -6px;
+	}
+	&.num_2 {
+		//width:13px;
+		background-position:-41px -6px;
+	}
+	&.num_3 {
+		//width:13px;
+		background-position:-61px -6px;
+	}
+	&.num_4 {
+		//width:16px;
+		background-position:-80px -6px;
+	}
+	&.num_5 {
+		//width:14px;
+		background-position:-101px -6px;
+	}
+	&.num_6 {
+		//width:14px;
+		background-position:-122px -6px;
+	}
+	&.num_7 {
+		//width:14px;
+		background-position:-142px -6px;
+	}
+	&.num_8 {
+		//width:13px;
+		background-position:-162px -6px;
+	}
+	&.num_9 {
+		//width:14px;
+		background-position:-183px -6px;
+	}
+}
+
+.numGoldColon {
+	width: 6px;
+	//width:16px;
+	height: 15px;
+	@include backgroundSize("/parts/#{$numGold_parts}.png", -213px, -9px, no-repeat);
+	vertical-align: bottom;
+}
+
+.onBattle {
+	.numGold {
+		width: 39px;
+		height: 36px;
+		@include backgroundSize("/parts/#{$numGold_parts}.png", 2px, -26px, no-repeat);
+		&.num_0 {
+			//width:32px;
+			background-position:2px -26px;
+		}
+		&.num_1 {
+			//width:27px;
+			background-position:-32px -26px;
+		}
+		&.num_2 {
+			//width:29px;
+			background-position:-67px -26px;
+		}
+		&.num_3 {
+			//width:29px;
+			background-position:-100px -26px;
+		}
+		&.num_4 {
+			//width:39px;
+			background-position:-135px -26px;
+		}
+		&.num_5 {
+			//width:33px;
+			background-position:-177px -26px;
+		}
+		&.num_6 {
+			//width:30px;
+			background-position:3px -63px;
+		}
+		&.num_7 {
+			//width:28px;
+			background-position:-30px -63px;
+		}
+		&.num_8 {
+			//width:28px;
+			background-position:-64px -63px;
+		}
+		&.num_9 {
+			//width:29px;
+			background-position:-99px -63px;
+		}
+	}
+	.numGoldColon {
+		width: 21px;
+		//width:39px;
+		height: 33px;
+		@include backgroundSize("/parts/#{$numGold_parts}.png", -140px, -66px, no-repeat);
+	}
+}
+
+/* num red */
+.numRed {
+	width: 13px;
+	height: 15px;
+	@include backgroundSize("/parts/#{$numRed_parts}.png", 0px, -5px, no-repeat);
+	&.num_0 {
+		//width:13px;
+		background-position:0px -5px;
+	}
+	&.num_1 {
+		//width:7px;
+		background-position:-18px -5px;
+	}
+	&.num_2 {
+		//width:11px;
+		background-position:-40px -5px;
+	}
+	&.num_3 {
+		//width:11px;
+		background-position:-61px -5px;
+	}
+	&.num_4 {
+		//width:13px;
+		background-position:-79px -5px;
+	}
+	&.num_5 {
+		//width:11px;
+		background-position:-100px -5px;
+	}
+	&.num_6 {
+		//width:11px;
+		background-position:-120px -5px;
+	}
+	&.num_7 {
+		//width:12px;
+		background-position:-140px -5px;
+	}
+	&.num_8 {
+		//width:11px;
+		background-position:-160px -5px;
+	}
+	&.num_9 {
+		//width:11px;
+		background-position:-180px -5px;
+	}
+	/*
+&.num_0 {
+		//width:13px;
+		@include backgroundSize("/parts/#{$numRed_parts}.png", 0px, -5px, no-repeat);
+	}
+	&.num_1 {
+		//width:7px;
+		@include backgroundSize("/parts/#{$numRed_parts}.png", -18px, -5px, no-repeat);
+	}
+	&.num_2 {
+		//width:11px;
+		@include backgroundSize("/parts/#{$numRed_parts}.png", -40px, -5px, no-repeat);
+	}
+	&.num_3 {
+		//width:11px;
+		@include backgroundSize("/parts/#{$numRed_parts}.png", -61px, -5px, no-repeat);
+	}
+	&.num_4 {
+		//width:13px;
+		@include backgroundSize("/parts/#{$numRed_parts}.png", -79px, -5px, no-repeat);
+	}
+	&.num_5 {
+		//width:11px;
+		@include backgroundSize("/parts/#{$numRed_parts}.png", -100px, -5px, no-repeat);
+	}
+	&.num_6 {
+		//width:11px;
+		@include backgroundSize("/parts/#{$numRed_parts}.png", -120px, -5px, no-repeat);
+	}
+	&.num_7 {
+		//width:12px;
+		@include backgroundSize("/parts/#{$numRed_parts}.png", -140px, -5px, no-repeat);
+	}
+	&.num_8 {
+		//width:11px;
+		@include backgroundSize("/parts/#{$numRed_parts}.png", -160px, -5px, no-repeat);
+	}
+	&.num_9 {
+		//width:11px;
+		@include backgroundSize("/parts/#{$numRed_parts}.png", -180px, -5px, no-repeat);
+	}
+*/
+}
+
+.numRedColon {
+	width: 5px;
+	height: 14px;
+	@include backgroundSize("/parts/#{$numRed_parts}.png", -200px, -8px, no-repeat);
+	vertical-align: bottom;
+}
+
+.numRedTilde {
+	width: 16px;
+	height: 6px;
+	@include backgroundSize("/parts/#{$numRed_parts}.png", -215px, -10px, no-repeat);
+}
+
+/* num white */
+.numWhite {
+	width: 18px;
+	height: 18px;
+	@include backgroundSize("/parts/#{$numWhite_parts}.png", 0, -3px, no-repeat);
+	&.num_0 {
+		background-position:0 -3px;
+	}
+	&.num_1 {
+		width:14px;
+		background-position:-23px -3px;
+	}
+	&.num_2 {
+		background-position:-41px -3px;
+	}
+	&.num_3 {
+		background-position:-61px -3px;
+	}
+	&.num_4 {
+		background-position:-80px -3px;
+	}
+	&.num_5 {
+		background-position:-101px -3px;
+	}
+	&.num_6 {
+		background-position:-121px -3px;
+	}
+	&.num_7 {
+		background-position:-141px -3px;
+	}
+	&.num_8 {
+		background-position:-161px -3px;
+	}
+	&.num_9 {
+		background-position:-181px -3px;
+	}
+}
+
+/* banner area */
+.banner {
+	text-align: center;
+	margin: $content_margin 0;
+
+	p {
+		position:relative;
+		margin-bottom: $inner_margin;
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+	button{
+		font-weight:bold;
+		link.on{
+			background-color:transparent;
+			&:after{
+				@include visible_object(8px,0,304px,100%,auto);
+				background-color:rgba(0,0,0,0.3);
+			}
+		}
+	}
+}
+
+/* full screen canvas animation */
+#fullScreen {
+	position: relative;
+	width: 320px;
+	height: 9000px;
+}
+
+@-webkit-keyframes opacity {
+	0% {opacity:0}
+	49% {opacity:0}
+	50% {opacity:1}
+	100% {opacity:1}
+}
+.pause {
+	display: none;
+	position: absolute;
+	width: 320px;
+	height: 200px;
+	left: 0;
+	top: 0;;
+	background: rgba(0, 0, 0, .1);
+}
+
+.pushEnter {
+	display: none;
+	position: absolute;
+	width: 200px;
+	height: 40px;
+	left: 60px;
+	top: 70%;
+	@include border-radius(10px);
+	background-color: rgba(0, 0, 0, .7);
+	color: #fff;
+	text-align: center;
+	font-size: 1.2em;
+
+	-webkit-animation-name: opacity;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-iteration-count: infinite;
+}
+
+
+
+
+
+// android2 only
+body.android2 .nextBattleTime p span.numBox{
+	top:0;
+}
+
+
+
+@import "js";

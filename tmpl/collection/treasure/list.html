@@ -1,0 +1,59 @@
+<h1 class="mainHeader">お宝シリーズ</h1>
+
+<h1 class="subHeader">
+	<span class="subHeaderBg_l"></span>
+	<span>{{>series_name}}</span>
+	<span class="subHeaderBg_r"></span>
+</h1>
+
+<div class="statusLine">
+	<p>
+		{{if total_series_complete_num}}
+			{{>total_series_complete_num}}回コンプ済
+		{{else}}
+			{{>total_series_treasure_collect_num}}/{{>series_treasures.length}}
+		{{/if}}
+	</p>
+</div>
+
+<section class="contents contentsShadow clgridBox">
+	<table class="treasureCollection">
+
+		{{for series_treasures}}
+			{{if #index % 3 == 0}}
+			<tr>
+			{{/if}}
+			<td{{if own_num==0}} class="unidentified"{{/if}} data-href="collection/treasure/detail/{{>series_id}}/{{>treasure_id}}/"><span class="img"><img src="{{getImgRoot/}}/treasure/{{>treasure_id}}_128.png"></span><p>{{>treasure_name}}<br>（{{>own_num}}）</p></td>
+			{{if #index % 3 == 2}}
+			</tr>
+			{{/if}}
+		{{/for}}
+	</table>
+</section>
+
+<h1 class="subHeader3 tSeriesHead2">
+	<span>コンプで獲得</span>
+</h1>
+
+	<section class="contents contentsShadow statusData_icon compContents">
+		<h1>{{>complete_treasure.reward.name}}</h1>
+		<div class="columnBox equipListStatus">
+			<img src="{{getImgRoot/}}/{{>complete_treasure.reward.type}}/{{>complete_treasure.reward.id}}.png">
+			<div class="contentsInner">
+				<p>{{>complete_treasure.reward.description}}</p>
+			</div>
+		</div>
+	</section>
+
+<hr>
+
+<div class="arrowLink collectionEquipLink">
+	<button class="link prev" data-href="collection/series/list/">お宝図鑑へ戻る</button>
+</div>
+
+<div class="helpList">
+	<ul>
+		<li><button class="link" data-href="help/detail/804/">お宝ってなに？</button></li>
+	</ul>
+</div>
+

@@ -1,0 +1,752 @@
+@charset "utf-8";
+@import "base";
+@import "ruleset";
+
+.avatar_img{
+	position:relative;
+	height:275px;
+	img{
+		position:absolute;
+		top:0;
+		&[src$="21003_640.png"]{
+			top:-50px;
+		}
+	}
+	~ figcaption .btn{
+		margin-top:$content_margin;
+	}
+}
+
+.jobAvM {
+	margin-top: $inner_margin;
+	.statusData_icon {
+		margin:8px;
+		.columnBox + .btn {
+			margin: 8px auto 0 auto;
+		}
+		p{
+			padding-right:16px;
+		}
+	}
+}
+.mainImage{
+	position: relative;
+	height:161px;
+	//overflow: hidden;
+	@for $i from 1 through 3 {
+		&.jobType#{$i}::before{
+			display:block;
+			position:absolute;
+			top:16px;
+			left:16px;
+			zoom:0.5;
+			content: inline-image('parts/jobtype#{$i}.png');
+			z-index:5;
+		}
+	}
+	.master{
+		@include hidden_object;
+		&:after{
+			@include backgroundSize("/parts/label_jobmaster.png",0,0,no-repeat);
+			@include visible_object(auto,8px,58px,18px,auto);
+			right:8px;
+		}
+	}
+	>img{
+		position: absolute;
+		top: -110px;
+		z-index:-1;
+		&.male{
+			left: -140px;
+		}
+		&.female{
+			left: 140px;
+		}
+		&[src$="11001_640.png"],
+		&[src$="11001_640_silhouette.png"]{ //soldier M
+			left:-190px;
+		}
+		&[src$="11002_640.png"],
+		&[src$="11002_640_silhouette.png"]{ //soldier F
+			left:190px;
+		}
+	}
+}
+#jobDetail{
+	position: relative;
+	padding-top: 16px;
+	margin:0 8px;
+	h1{
+		margin-top:8px;
+	}
+	.btn.regular{
+		width:75%;
+		position: absolute;
+		top: -20px;
+		left: 12%;
+	}
+	.cant_change{
+		text-align: center;
+		padding-top:12px;
+		.label32{
+			display: inline-block;
+			padding: 0 1em;
+		}
+	}
+	.master_bonuses{
+		dt{
+			display:inline-block;
+			padding:0 0.5em;
+			@include border-radius(1em);
+			color:#fff;
+			clear: none;
+			margin-right:0;
+			&.master_bonus1{
+				background-color:#B73A10;
+			}
+			&.master_bonus2{
+				background-color:#508643;
+			}
+			&.master_bonus3{
+				background-color:#3A71C3;
+			}
+		}
+		dd{
+			margin:0 8px 0 4px;
+			&.plus{
+				color:#f00;
+			}
+		}
+	}
+	.conditions{
+		li{
+			font-size:0.9em;
+		}
+	}
+}
+.mastered{
+	@include backgroundSize_dataURI('parts/job_icon_mastered.png',0,2px,no-repeat);
+	display:block;
+}
+.unmastered{
+	@include backgroundSize_dataURI('parts/job_icon_unmastered.png',0,2px,no-repeat);
+	display:block;
+}
+#ability{
+	margin-top:16px;
+	.abBox {
+		margin: 8px auto;
+	}
+	.contents{
+		position:relative;
+		margin: 8px auto;
+		padding-top:8px;
+		width: 95%;
+		h1{
+			margin-top:0;
+			padding-left: 18px;
+		}
+		.label32{
+			display:inline-block;
+			padding:0 1em;
+			position: absolute;
+			right:8px;
+			top:10px;
+		}
+		.prof_detailData{
+			dd{
+				margin-right:10px;
+			}
+			dt:last-of-type{
+				clear: none;
+			}
+		}
+		p{
+			margin:8px 0;
+		}
+	}
+}
+#myJob{
+	&.metalPanel{
+		margin:$inner_margin auto;
+		width: 312px;
+		height:82px;
+		.link{
+			color:#333;
+			h1{
+				&:after{
+					right:8px;
+				}
+			}
+		}
+	}
+	.statusData_icon{
+		width:304px;
+		left:-8px;
+		top:-22px;
+	}
+	.iconBgArc_l{
+		margin-bottom:0;
+		&.type4{
+			@include backgroundSize_dataURI("/parts/bg_jobtree_special.png", -9px, -9px, no-repeat);
+		}
+		&.type1{
+			@include backgroundSize_dataURI("/parts/bg_jobtree_pow.png", -9px, -9px, no-repeat);
+		}
+		&.type2{
+			@include backgroundSize_dataURI("/parts/bg_jobtree_tech.png", -9px, -9px, no-repeat);
+		}
+		&.type3{
+			@include backgroundSize_dataURI("/parts/bg_jobtree_int.png", -9px, -9px, no-repeat);
+		}
+	}
+	.nameBox{
+		@include display-box;
+		h1 {
+			font-weight: bold;
+		}
+	}
+	.master{
+		@include backgroundSize("/parts/label_jobmaster.png",0,0,no-repeat);
+		display:block;
+		width:58px;
+		height:18px;
+		margin-left:8px;
+	}
+	.abilities{
+		li{
+			display:inline-block;
+			width:15px;
+			height:0;
+			overflow:hidden;
+			padding-top:18px;
+		}
+	}
+}
+#jobTop{
+	.message{
+		top:0;
+		margin:8px auto;
+	}
+}
+#jobTree{
+	.subHeader{
+		margin-bottom:$inner_margin;
+	}
+	.contentsborder h1{
+		margin:0 2px;
+	}
+	.contents{
+		padding:8px 0;
+		width:95%;
+		margin:0 auto 8px;
+		.contentsInner{
+			width:272px;
+			margin:0 0 0 4px;
+		}
+		ul{
+			position:relative;
+			height:216px;
+			margin: 16px 0;
+			&::before{
+				display: block;
+				position: absolute;
+				z-index:1;
+				content: "";
+				width: 216px;
+				height: 160px;
+				left: 28px;
+				top: 28px;
+				border: 2px solid #B9A46B;
+				border-right:0;
+			}
+			&::after{
+				display: block;
+				position: absolute;
+				z-index:1;
+				content: "";
+				width: 216px;
+				height:0;
+				left:28px;
+				top: 108px;
+				border-top: 2px solid #B9A46B;
+			}
+			li{
+				position: absolute;
+				width:56px;
+				height:56px;
+				z-index:2;
+				&.on:after{
+					@include visible_object(0,0,100%,110%,auto);
+					background-color:rgba(0,0,0,0.3);
+				}
+				&::before{
+					position: absolute;
+					content:"";
+					width:56px;
+					height:56px;
+					@include box-sizing(border-box);
+					@include border-radius(56px);
+					//@include box-shadow(0 2px 4px,rgba(0,0,0,0.3) inset);
+				}
+				&::before{
+					@include backgroundSize_dataURI("/parts/bg_chara_icon_l.png", 0, 0, no-repeat);
+				}
+				&.selected::before{
+					width:74px;
+					height:74px;
+					@include border-radius(74px);
+					left:-9px;
+					top:-9px;
+				}
+				&.unpublished::before{
+					@include backgroundSize_dataURI("/parts/unknown_job.png", center, center, no-repeat);
+					background-color:#333;
+				}
+				.master{
+					@include backgroundSize("/parts/label_jobmaster.png",0,0,no-repeat);
+					display:block;
+					position: absolute;
+					left:-9px;
+					bottom: -5px;
+					width:58px;
+					height:18px;
+					margin-left:8px;
+				}
+				.newJob{
+					@extend .master;
+					@include backgroundSize("/parts/label_newjob.png",0,0,no-repeat);
+				}
+				.tapPoint{
+					position:absolute;
+					left:16px;
+					top:-12px;
+					width:24px;
+					height:20px;
+					@include backgroundSize("/parts/icon_job_tap_area.png",0,0,no-repeat);
+					z-index:3;
+				}
+				>img{
+					position: absolute;
+					top: -30px;
+					left: 10px;
+				}
+			}
+		}
+	}
+	.contents:not(.special){
+		.contentsBorder{
+			position:relative;
+			h1::before{
+				display:none;
+			}
+		}
+		ul{
+			li{
+				&:nth-of-type(3n){
+					left:141px;
+				}
+				&:nth-of-type(3n+1){
+					left:213px;
+				}
+				&:nth-of-type(3n+2){
+					left:69px;
+				}
+				&:first-of-type{
+					left:0;
+				}
+				&:nth-of-type(-n+10){
+					top:160px;
+				}
+				&:nth-of-type(-n+7){
+					top:80px;
+				}
+				&:nth-of-type(-n+4){
+					top:0;
+				}
+			}
+		}
+	}
+	.contents.type1{
+		.contentsBorder{
+			&:before{
+				@include backgroundSize("/parts/jobtype1.png",0,0,no-repeat);
+				@include visible_object(0,-1px,40px,40px,2);
+			}
+		}
+		ul{
+			&::before,
+			&::after{
+				//border-color: #B73A10;
+			}
+			/*
+			li:not(.unpublished)::before{
+				//background-color:#B73A10;
+				@include backgroundSize_dataURI("/parts/bg_jobtree_pow.png", -9px, -9px, no-repeat);
+			}
+			*/
+			li.selected::before{
+				@include backgroundSize_dataURI("/parts/bg_jobtree_pow_now.png", 0, 0, no-repeat);
+			}
+		}
+	}
+	.contents.type2{
+		.contentsBorder{
+			&:before{
+				@include backgroundSize("/parts/jobtype2.png",0,0,no-repeat);
+				@include visible_object(0,-1px,40px,40px,2);
+			}
+		}
+		ul{
+			&::before,
+			&::after{
+				//border-color: #508643;
+			}
+			/*
+			li:not(.unpublished)::before{
+				//background-color:#508643;
+				@include backgroundSize_dataURI("/parts/bg_jobtree_tech.png", -9px, -9px, no-repeat);
+			}
+			*/
+			li.selected::before{
+				@include backgroundSize_dataURI("/parts/bg_jobtree_tech_now.png", 0, 0, no-repeat);
+			}
+		}
+	}
+	.contents.type3{
+		.contentsBorder{
+			&:before{
+				@include backgroundSize("/parts/jobtype3.png",0,0,no-repeat);
+				@include visible_object(0,-1px,40px,40px,2);
+			}
+		}
+		ul{
+			&::before,
+			&::after{
+				//border-color: #3A71C3;
+			}
+			/*
+			li:not(.unpublished)::before{
+				//background-color:#3A71C3;
+				@include backgroundSize_dataURI("/parts/bg_jobtree_int.png", -9px, -9px, no-repeat);
+			}
+			*/
+			li.selected::before{
+				@include backgroundSize_dataURI("/parts/bg_jobtree_int_now.png", 0, 0, no-repeat);
+			}
+		}
+	}
+	.contents.special{
+		ul{
+			height:auto;
+			min-height:56px;
+			&::before,
+			&::after{
+				display: none;
+			}
+			li{
+				position: relative;
+				float: left;
+				margin-right:16px;
+				margin-bottom:24px;
+				&:nth-of-type(4n){
+					margin-right:0;
+				}
+				&::before{
+					//background-color:#FF9326;
+					//@include backgroundSize_dataURI("/parts/bg_jobtree_special.png", -9px, -9px, no-repeat);
+				}
+				&.selected::before{
+					@include backgroundSize_dataURI("/parts/bg_jobtree_special_now.png", 0, 0, no-repeat);
+				}
+			}
+		}
+		~ .arrowLink{
+			margin-bottom:16px;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// season avatar
+#seasonAvatar{
+	.btn_l{
+		display:block;
+		width:80%;
+		margin:0 auto;
+	}
+	header{
+		h1{
+			margin:$inner_margin 0 0 0;
+			text-align:center;
+		}
+		p{
+			@include backgroundSize("/parts/season_avatar/discription.png",0,0,no-repeat);
+			display:block;
+			width:243px;
+			height:57px;
+			margin:$inner_margin auto $content_margin auto;
+		}
+	}
+	.subHeader,
+	.subHeader3{
+		margin-bottom:$inner_margin;
+	}
+	.contents{
+		width:95%;
+		margin:0 auto $inner_margin auto;
+		.contentsInner{
+			font-size:90%;
+		}
+	}
+	.monthlyAvatar{
+		ul{
+			@include display-box;
+			width:95%;
+			margin:0 auto $content_margin auto;
+		}
+		li{
+			//@include box-flex(1);
+			width:96px;
+			margin-right:5px;
+			font-size:80%;
+			color:#fff;
+			text-align:center;
+			&:last-child{
+				margin-right:0;
+			}
+			.iconBgRect_l{
+				width:64px;
+				margin:0 auto $inner_margin/2 auto;
+			}
+		}
+	}
+	.avatarEffect{
+		.contents{
+			&:last-of-type{
+				margin-bottom:$content_margin;
+			}
+		}
+		ul{
+			margin-top:$inner_margin;
+		}
+		li{
+			position:relative;
+			padding-left:12px;
+			&:before{
+				@include backgroundSize("/parts/#{$icon_parts}.png",0,-86px,no-repeat);
+				@include visible_object(0,6px,8px,8px,auto)
+
+			}
+			.up{
+				font-weight:bold;
+				color:$color_H;
+			}
+		}
+	}
+	.getMethod{
+		.contents{
+			margin-bottom:$content_margin;
+			h1{
+				margin-top:$inner_margin;
+			}
+			.contentsInner{
+				margin-top:0;
+			}
+		}
+		.emblemList{
+			width:95%;
+			margin:$inner_margin auto 0 auto;
+			dt{
+				height:50px;
+				margin-right:$inner_margin;
+				&:last-of-type{
+					height:43px;
+				}
+			}
+			dd{
+				h1{
+					margin-top:0;
+					font-weight:bold;
+					color:$color_A;
+				}
+				p{
+					font-size:inherit;
+					font-weight:normal;
+				}
+			}
+		}
+		h3{
+			font-weight:bold;
+			color: #ffc926;
+			@include text_glow(#000000);
+			text-align:center;
+		}
+		.paramStatus{
+			margin-top:$inner_margin;
+			font-size:90%;
+		}
+		.message{
+			top:0;
+			margin:$content_margin auto;
+		}
+		.btn_l{
+			margin:$inner_margin auto $content_margin auto;
+		}
+		.specialGachaBtn{
+			margin:$inner_margin 0 $content_margin 0;
+			color:#fff;
+			text-align:center;
+			.btn_l{
+				margin-bottom:$inner_margin/2;
+			}
+			.possess{
+				color:$color_L;
+			}
+		}
+		.dimmed p{
+			margin-top:0;
+		}
+	}
+	.avatarDetail,
+	.jobAvatarDetail{
+		figure{
+			> img{
+				&[src$="21003_640.png"]{
+					display:block;
+					margin-top:-50px;
+				}
+			}
+		}
+		figcaption{
+			margin-top:$inner_margin;
+			.contentsInner{
+				margin-bottom:$inner_margin;
+			}
+			dl{
+				width:95%;
+				margin:$inner_margin auto;
+				dt{
+					clear:none;
+					height:18px;
+					margin:0 $inner_margin/4 0 $inner_margin;
+					padding:0 $inner_margin;
+					@include border-radius(10px);
+					font-weight:bold;
+					color:#fff;
+					line-height:20px;
+					&:first-of-type{
+						margin-left:0;
+					}
+					&.pow{
+						background-color:$color_N;
+					}
+					&.tec{
+						background-color:$color_O;
+					}
+					&.int{
+						background-color:$color_P;
+					}
+				}
+				dd{
+					font-weight:normal;
+					.up{
+						color:$color_L;
+					}
+				}
+			}
+			ul{
+				width:95%;
+				margin:$inner_margin auto 0 auto;
+				li{
+					display:inline-block;
+				}
+			}
+		}
+		.btn_l{
+			margin-top:$content_margin;
+		}
+	}
+	.jobAvatarDetail{
+		figcaption{
+			position:relative;
+			.btn{
+				position:absolute;
+				left:32px;
+				margin-top:0;
+				z-index:10;
+			}
+			.contents{
+				position:relative;
+				top:16px;
+				margin-bottom:32px;
+				padding-top:24px;
+			}
+			.contentsInner{
+				.label48{
+					width:60%;
+					margin:0 auto $inner_margin auto;
+					font-size:95%;
+					font-weight:normal;
+				}
+			}
+			h1 .close{
+				color:$color_H;
+			}
+		}
+		.conditions{
+			margin-bottom:$inner_margin;
+			font-size:90%;
+		}
+		.emblem{
+			li{
+				position:relative;
+				width:43px;
+				height:43px;
+				visibility:hidden;
+				&.yet:after,
+				&.got:after{
+					@include backgroundSize("/emblem/season_avatar/frame.png",0,0,no-repeat);
+					@include visible_object(0,0,43px,43px,auto);
+				}
+			}
+			&.emblem_21003{
+				li.got:after{
+					@include backgroundSize("/emblem/season_avatar/21003.png",0,0,no-repeat);
+				}
+			}
+			&.emblem_13003{
+				li.got:after{
+					@include backgroundSize("/emblem/season_avatar/13003.png",0,0,no-repeat);
+				}
+			}
+			&.emblem_31003{
+				li.got:after{
+					@include backgroundSize("/emblem/season_avatar/31003.png",0,0,no-repeat);
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+

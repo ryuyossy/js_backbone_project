@@ -1,0 +1,106 @@
+@charset "utf-8";
+/*
+@mixin box_shadow_contents_l($offsetSize,$z_index:-1){
+	content:'';
+	position:absolute;
+	left:$offsetSize;
+	top:75%;
+	bottom:17px;
+	width:50%;
+	min-height:5px;
+	max-width:150px;
+	background:#544123;
+	-webkit-box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	-webkit-transform:rotate(-5deg);
+	transform:rotate(-5deg);
+	z-index:$z_index;
+}
+@mixin box_shadow_contents_r($offsetSize,$z-index:-1){
+	content:'';
+	position:absolute;
+	right:$offsetSize;
+	top:75%;
+	bottom:17px;
+	width:50%;
+	min-height:5px;
+	max-width:150px;
+	background:#544123;
+	-webkit-box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	-webkit-transform:rotate(5deg);
+	transform:rotate(5deg);
+	z-index:$z_index;
+}
+*/
+/*
+@mixin backgroundResize($position:0 -60px){
+	@media screen and (min-width:319px){
+		width:320px;
+		@include background-size(320px,auto);
+	}
+	@media screen and (min-width:359px){
+		width:360px;
+		@include background-size(360px,auto);
+	}
+	@media screen and (min-width:361px){
+		width:480px;
+		@include background-size(480px,auto);
+		background-position:$position;
+	}
+}
+*/
+/*
+@mixin display-box{
+	display:flexbox;
+	-webkit-display:flexbox;
+}
+@mixin box-align($position){
+	flex-align:$position;
+	-webkit-flex-align:$position;
+}
+@mixin box-flex($ratio){
+	flex:$ratio;
+	-webkit-flex:$ratio;
+}
+@mixin box-pack($position){
+	flex-pack:$position;
+	-webkitflex-pack:$position;
+}
+*/
+/* line 7, ../scss/battle_what.scss */
+#battleWhat .message.navico_arc {
+  top: 0;
+  margin-top: 8px;
+}
+/* line 11, ../scss/battle_what.scss */
+#battleWhat .banner {
+  margin: 8px 0;
+}
+/* line 14, ../scss/battle_what.scss */
+#battleWhat .battleDoingList {
+  margin: 8px auto;
+}
+/* line 16, ../scss/battle_what.scss */
+#battleWhat .battleDoingList .doingLists {
+  width: 95%;
+  margin: 0 auto 8px auto;
+  padding: 8px 0;
+}
+/* line 21, ../scss/battle_what.scss */
+#battleWhat .battleDoingList .description {
+  padding: 0 8px;
+}
+/* line 23, ../scss/battle_what.scss */
+#battleWhat .battleDoingList .description .txtColor {
+  display: inline-block;
+  color: #D80000;
+}
+/* line 28, ../scss/battle_what.scss */
+#battleWhat .battleDoingList .doingBtn {
+  margin-top: 8px;
+}
+/* line 32, ../scss/battle_what.scss */
+#battleWhat ~ .arrowLink.mypageLinks {
+  margin-bottom: 16px;
+}

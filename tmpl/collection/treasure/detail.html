@@ -1,0 +1,116 @@
+<h1 class="mainHeader">お宝詳細</h1>
+
+<div class="statusLine">
+	<p>
+		<span class="headline">所持数</span>{{>treasure.own_num}}個
+	</p>
+</div>
+
+<div id="treasureDetail">
+	<section class="itemDetail">
+		<div class="description">
+			<span class="img{{if treasure.own_num==0}} unidentified{{/if}}"><img src="{{getImgRoot/}}/treasure/{{>treasure.treasure_id}}_480.png"></span>
+			<h1 class="itemName">{{>treasure.treasure_name}}</h1>
+			<p>
+				{{>treasure.description}}
+			</p>
+		</div>
+	</section>
+</div>
+
+<h1 class="subHeader cmpSubHead">
+	<span class="subHeaderBg_l"></span>
+	<span>このお宝をもってるギルメン</span>
+	<span class="subHeaderBg_r"></span>
+</h1>
+
+{{if members.length > 0}}
+	{{for members}}
+	<section class="jsGuildMember contents contentsShadow statusData_icon tDetailStatus postForm_request close">
+		<div class="columnBox innerHeader">
+			<div class="iconBgRect_l gold"><img src="{{getImgRoot/}}/avatar/{{>avatar_id}}_140.png"></div>
+			<div class="contentsInner">
+				<h1>{{>user_name}}</h1>
+				<p>
+					{{>collect_status}}
+				</p>
+				<dl>
+					<dt>{{> #parent.parent.data.treasure.treasure_name}}</dt><dd>{{>count}}個保持</dd>
+				</dl>
+			</div>
+		</div>
+		
+		{{if 0}}
+		<button class="btn jsTreasureMessageSend ordered">頼んでみる</button>
+
+		<div class="postComment jsPostTreasureMessageSendForm">
+		<textarea class="jsMessage" placeholder="突然ごめんなさい!もし良ければ{{> #parent.parent.data.treasure.treasure_name}}を1個譲ってもらえませんか?"></textarea>
+		<div class="innerBtnBox">
+			<button class="btn cancel jsTreasureMessageCancel">やめる</button>
+			<button class="submit btn jsPostTreasureMessageSendSubmit">送信する</button>
+		</div>
+		</div>
+		{{/if}}
+
+	</section>
+	{{/for}}
+{{else}}
+	<section class="dimmed">
+		<p>もっているギルメンはいません。</p>
+	</section>
+{{/if}}
+
+<hr>
+
+<div class="linkGroup collectionTreasureDetailLink">
+	<div class="arrowLink">
+		<button class="link prev" data-href="collection/top/">図鑑トップへ戻る</button>		
+	</div>
+	<div class="arrowLink">
+		<button class="link prev" data-href="collection/series/list/">お宝シリーズへ戻る</button>
+	</div>
+	<div class="arrowLink questLink">
+		{{if treasure.own_num==0}} 
+			{{if treasure.mission_stage_enabled}}
+				<button class="link next" data-href="mission/top/{{>series_id}}/">クエストへ</button>
+			{{else}}
+				<button class="link next" data-href="mission/stage/">クエストへ</button>
+			{{/if}}
+		{{else}}
+			{{if stage_id && field_id}}
+				<button class="link next" data-href="mission/proceed/{{>stage_id}}/{{>field_id}}/">クエストへ</button>
+			{{else}}
+				<button class="link next" data-href="mission/top/{{>series_id}}/">クエストへ</button>
+			{{/if}}
+		{{/if}}
+	</div>
+</div>
+
+
+<div class="helpList">
+	<ul>
+		<li><button class="link" data-href="help/detail/804/">お宝ってなに？</button></li>
+	</ul>
+</div>
+
+{{escape}}
+<script id="jsTemplatePopupTreasureMessageSend" type="text/x-jsrender">
+	<div class="modalInner">
+		<!-- // お知らせ系 -->
+		<dl id="adminNotice">
+			<dt><span class="label36_r4 system">{{>to_user_name}}</span></dt>
+			<dd>
+				{{>from_user_name}}
+			</dd>
+			<dt><span class="label36_r4 system">送信内容</span></dt>
+			<dd>
+				{{>body}}
+			</dd>
+		</dl>
+
+		<div class="innerBtnBox">
+			<button class="btn close jsClosePopup">閉じる</button>
+		</div>
+	</div>
+</script>
+{{/escape}}

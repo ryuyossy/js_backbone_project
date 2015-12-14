@@ -1,0 +1,918 @@
+@charset "utf-8";
+@import "base";
+@import "ruleset";
+
+// temp style
+.subHeader{
+	margin-bottom:$inner_margin !important;
+}
+.subHeader2{
+	//margin-bottom:$content_margin;
+	margin-bottom:$inner_margin !important;
+}
+#greet .topic{
+	&:first-of-type{
+		margin-top:0;
+	}
+}
+
+// page parts
+#myPage{
+	position:relative;
+	.avatarStatus{
+		position:relative;
+		width:320px;
+		height:300px;
+		@include backgroundSize("/background/bg_mypage.jpg",center,0,no-repeat);
+		&.onBattle{
+			@include backgroundSize("/background/bg_mypage_onbattle.jpg",center,0,no-repeat);
+		}
+		&:after{
+			@include main_bg_bottom;
+			z-index:2;
+		}
+		.nameBox{
+			position:absolute;
+			bottom:44px;
+			z-index:2;
+			h1{
+				position:relative;
+				left:8px;
+				font-weight:bold;
+				color:#fff;
+				@include text-glow(#000);
+				&:after{
+					@include backgroundSize("/parts/#{$mypage_parts}.png",0,-162px,no-repeat);
+					@include visible_object(-8px,auto,180px,8px,auto);
+					bottom:-4px;
+				}
+			}
+			dl{
+				position:relative;
+				top:4px;
+				width:100%;
+				font-size:80%;
+				color:#fff;
+				@include text-glow(#000);
+			}
+			dt,dd{
+				float:left;
+				vertical-align:top;
+			}
+			dt{
+				margin:0 2px 0 8px;
+				color:#ff0000;
+			}
+		}
+		.myAvatar{
+			position:relative;
+			top:0;
+			z-index:1;
+			.prof{
+				position:absolute;
+				top:64px;
+				left:48px;
+				display:block;
+				width:214px;
+				height:160px;
+			}
+		}
+		.currentRank{
+			position:absolute;
+			top:auto;
+			right:12px;
+			bottom:22px;
+			width:88px;
+			height:55px;
+			//@include backgroundSize("/parts/#{$mypage_parts}.png",-82px,0,no-repeat);
+			&.rankStay{
+				@include backgroundSize("/parts/#{$mypage_parts}.png",-82px,0,no-repeat);
+				display:block;
+				dd{
+					color:#1F3F00;
+				}
+			}
+			&.rankUp{
+				@include backgroundSize("/parts/#{$mypage_parts}.png",-266px,0,no-repeat);
+				display:block;
+				dd{
+					color:#00303F;
+				}
+			}
+			&.rankDown{
+				@include backgroundSize("/parts/#{$mypage_parts}.png",-174px,0,no-repeat);
+				display:block;
+				dd{
+					color:#400000;
+				}
+			}
+			dt{
+				&:before{
+					@include backgroundSize("/parts/#{$mypage_parts}.png",-3px,-2px,no-repeat);
+					@include visible_object(4px,5px,75px,35px,1);
+				}
+			}
+			dd{
+				position:absolute;
+				right:10px;
+				bottom:12px;
+				font-size:120%;
+				font-weight:bold;
+				text-shadow:-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff,1px 1px 0 #fff;
+				span{
+					display:inline-block;
+					width:26px;
+					margin-right:4px;
+					font-size:160%;
+					text-align:center;
+				}
+			}
+			&.out{
+				@include backgroundSize("/parts/#{$mypage_parts}.png",-359px,0,no-repeat);
+				display:block;
+				dt{
+					display:none;
+				}
+				dd{
+					right:0;
+					bottom:14px;
+					display:block;
+					width:100%;
+					font-size:75%;
+					color:#333;
+					text-align:center;
+					text-shadow:0px 2px 1px #fff,0px 1px 1px #fff,1px 1px 1px #fff,1px 0px 1px #fff,2px 0px 1px #fff,1px -1px 1px #fff,1px -2px 1px #fff,0px -2px 1px #fff,-1px -2px 1px #fff,-2px -2px 1px #fff,-2px -1px 1px #fff,-2px 0px 1px #fff,-2px 1px 1px #fff,-1px 1px 1px #fff;
+					span{
+						font-size:110%;
+						color:#ff0000;
+					}
+				}
+			}
+			&.link.on:after{
+				@include visible_object(0,0,100%,100%,auto);
+				background-color:rgba(0,0,0,0.3);
+			}
+		}
+	}
+	.message.navico{
+		position:absolute;
+		top:0;
+		@include display-box;
+		@include box-align(center);
+		.navicoImg{
+			position:relative;
+			left:-30px;
+			display:block;
+		}
+		p{
+			width: 206px;
+			margin: -12px 0 0 -28px;
+			@include backgroundSize("/parts/bg_bubble_message_s.png", 0, 0, no-repeat);
+			em{
+				font-weight:bold;
+				font-style:normal;
+				color:#008C8C;
+			}
+		}
+		&.opponent{
+			p{
+				position:relative;
+				top:-12px;
+				left:-14px;
+				width:189px;
+				height:39px;
+				margin:0;
+				@include backgroundSize("/parts/text_opponent.png",0,0,no-repeat);
+				&.link.on:after{
+					@include visible_object(0,0,100%,100%,auto);
+					background-color:rgba(0,0,0,0.3);
+				}
+			}
+		}
+		&.onBattle{
+			P{
+				position:relative;
+				top:-12px;
+				left:-28px;
+				width:211px;
+				height:66px;
+				margin:0;
+				@include backgroundSize("/parts/text_onbattle.png",0,0,no-repeat);
+				&.link.on:after{
+					@include visible_object(0,0,100%,100%,auto);
+					background-color:rgba(0,0,0,0.3);
+				}
+			}
+		}
+	}
+	.waitingNotice{
+		position:absolute;
+		right:6px;
+		top:6px;
+		width:51px;
+		height:57px;
+		@include backgroundSize("/parts/#{$mypage_parts}.png",-311px,-110px,no-repeat);
+		z-index:100;
+		&.on:after{
+			@include visible_object(0,0,52px,57px,1);
+			background-color:rgba(0,0,0,0.3);
+		}
+	}
+	.notification{
+		position:absolute;
+		right:0;
+		top:8px;
+		width:55px;
+		height:48px;
+		@include backgroundSize("/parts/#{$mypage_parts}.png",-311px,-61px,no-repeat);
+		z-index:100;
+
+		&.on:after{
+			@include visible_object(0,0,52px,52px,1);
+			background-color:rgba(0,0,0,0.3);
+		}
+
+		.badge{
+			visibility:visible;
+			position:absolute;
+			right:4px;
+			top:25px;
+			display:block;
+			width:27px;
+			height:28px;
+			@include backgroundSize_dataURI("/parts/bg_notify_count.png",0,0,no-repeat);
+			@include txtset(90%,#ffffff);
+			font-weight:bold;
+			text-align:center;
+			line-height:25px;
+		}
+		~ .waitingNotice{
+			top:64px;
+		}
+	}
+	//navi btn
+	.mainNavi{
+		position: relative;
+		.belongsGuildName{
+			position:relative;
+			top:-26px;
+			left:58px;
+			width:204px;
+			@include backgroundSize("/parts/bg_mypage guildname.png",0,0,no-repeat);
+			z-index:3;
+
+			.emblemIcon_l{
+				left:73px;
+				top:16px;
+				&.link.on{
+					background-color:transparent;
+					&:after{
+						@include visible_object(0,0,100%,100%,4);
+						background-color:rgba(0,0,0,0.3);
+					}
+				}
+			}
+			h1{
+				position:relative;
+				width:130px;
+				margin:20px auto 0 auto;
+				font-size:80%;
+				font-weight:bold;
+				color:#fff;
+				@include text-glow(#000);
+				text-align:center;
+				@include text_overflow;
+				&.link.on{
+					background-color:transparent;
+					&:after{
+						@include visible_object(0,0,100%,100%,4);
+						background-color:rgba(0,0,0,0.3);
+					}
+				}
+			}
+		}
+		.missionBtn{
+			@include backgroundSize("/parts/btn_mp_mission.png",-1px,-1px,no-repeat);
+			position:absolute;
+			left:8px;
+			top:-20px;
+			display:block;
+			width:99px;
+			height:100px;
+			z-index:4;
+			&.link{
+				&.on{
+					@include backgroundSize("/parts/btn_mp_mission.png",-1px,-105px,no-repeat);
+				}
+			}
+		}
+		.battleBtn{
+			@include backgroundSize("/parts/btn_mp_battle_n.png",-1px,-1px,no-repeat);
+			position:absolute;
+			right:8px;
+			top:-20px;
+			display:block;
+			width:99px;
+			height:100px;
+			z-index:4;
+			&.link{
+				display:block;
+				&.on{
+					@include backgroundSize("/parts/btn_mp_battle_n.png",-1px,-105px,no-repeat);
+				}
+			}
+		}
+		.gergeBg{
+			position:absolute;
+			left:18px;
+			top:68px;
+			width:64px;
+			height:10px;
+			z-index:5;
+		}
+		.gerge{
+			height:9px;
+		}
+		&.battleReady{
+			.battleBtn{
+				@include backgroundSize("/parts/btn_mp_battle_b.png",-1px,-1px,no-repeat);
+				&.on{
+					@include backgroundSize("/parts/btn_mp_battle_b.png",-1px,-105px,no-repeat);
+				}
+			}
+		}
+		&.onBattle{
+			.battleBtn{
+				@include backgroundSize("/parts/btn_mp_onbattle.png",-1px,-1px,no-repeat);
+				&.on{
+					@include backgroundSize("/parts/btn_mp_onbattle.png",-1px,-105px,no-repeat);
+				}
+			}
+		}
+	}
+	.equipStatus{
+		position:relative;
+		top:-8px;
+		width:90%;
+		margin:0 auto;
+		@include borderImage(url("#{$img_path}/parts/bg_equip_frame.png"),21 26 31 25,stretch,10px 13px 15px 12px,inherit);
+
+		h1{
+			position:absolute;
+			top:-10px;
+			left:98px;
+			@include backgroundSize("/parts/btn_equip.png",-2px,0,no-repeat);
+			display:block;
+			width:96px;
+			height:46px;
+			&.link.on{
+				@include backgroundSize("/parts/btn_equip.png",-2px,-50px,no-repeat);
+			}
+		}
+		.weapon,
+		.armor{
+			position:relative;
+			width:64px;
+			height:64px;
+			img{
+				@include box_shadow(2px 2px 4px);
+			}
+			&.link.on{
+				background-color:transparent;
+				&:after{
+					@include visible_object(0,0,64px,64px,auto);
+					background-color:rgba(0,0,0,0.3);
+				}
+			}
+		}
+		.armor{
+			position:absolute;
+			right:0;
+			top:0;
+		}
+		p.paramStatus{
+			position:absolute;
+			left:88px;
+			top:43px;
+			width:110px;
+			padding:2px 4px;
+			font-size:95%;
+			@include text-glow(#000);
+			span{
+				display:inline-block;
+				margin-right:4px;
+				color:#ff0000;
+			}
+		}
+		div.paramStatus{
+			@include display-box;
+			width:100%;
+			margin:6px 0 0 0;
+			text-align:left;
+			.status{
+				@include box-flex(1);
+				width:1px;
+				margin:0 8px;
+				@include text-glow(#000);
+				font-size:100%;
+				&.attack{
+					text-align:right;
+				}
+				span{
+					color:#999;
+				}
+			}
+			h2{
+				display:inline-block;
+				margin-right:4px;
+				color:#ff0000;
+			}
+		}
+	}
+	.subNavi{
+		@include display-box;
+		width:304px;
+		margin:6px auto 16px auto;
+		button{
+			cursor:pointer;
+			margin-right:8px;
+			&:last-of-type{
+				margin-right:0;
+			}
+			&.composeBtn{
+				@include backgroundSize("/parts/#{$mypage_parts}.png",-1px,-60px,no-repeat);
+				display:block;
+				width:96px;
+				height:46px;
+				&.on{
+					background-position:-1px -112px;
+				}
+				&.discount{
+					background-position:-372px -60px;
+					&.on{
+						background-position:-372px -112px;
+					}
+				}
+			}
+			&.gachaBtn{
+				@include backgroundSize("/parts/#{$mypage_parts}.png",-106px,-60px,no-repeat);
+				display:block;
+				width:96px;
+				height:46px;
+				&.on{
+					background-position:-106px -112px;
+				}
+			}
+			&.jobBtn{
+				@include backgroundSize("/parts/#{$mypage_parts}.png",-211px,-60px,no-repeat);
+				display:block;
+				width:96px;
+				height:46px;
+				&.on{
+					background-position:-211px -112px;
+				}
+			}
+		}
+	}
+	.myStatus{
+		.contents{
+			width:95%;
+			margin:0 auto 16px auto;
+			.btn{
+				width:50%;
+			}
+		}
+		.columnBox{
+			margin:8px;
+			//font-size:15px;
+		}
+		dd span{
+			color:#666;
+		}
+	}
+}
+.listMenu.adminNoticeFirst{
+	margin:$inner_margin auto;
+	li{
+		background-color:rgba(0,0,0,0.7);
+		@include box_shadow(0 0 0);
+	}
+	.link{
+		color:#fff;
+		&.on{
+			background-color:rgba(224,211,171,0.3);
+		}
+	}
+	.label36_r4{
+		margin-right:8px;
+		padding:2px 2px 2px 3px;
+		background-color:#78724C;
+		font-size:10px;
+	}
+}
+.listMenu.newInfo{
+	margin:0 auto;
+	+ .banner{
+		margin-top:$content_margin;
+	}
+}
+.postForm_icon{
+	margin:0 auto 6px auto;
+}
+#guildBbs{
+	margin-bottom:0;
+	+ .banner{
+		margin:$content_margin auto;
+	}
+	.arrowLink.alllinkm {
+		margin-bottom: $content_margin;
+	}
+}
+button.btn.post.jsGuildBbsTopicSubmit {
+	line-height: 22px;
+}
+.btn {
+	line-height: 18px;
+}
+#newArrival{
+	article{
+		width:95%;
+		margin:0 auto $inner_margin auto;
+	}
+	dt{
+		&:nth-of-type(3),
+		&:nth-of-type(5){
+			clear:none;
+		}
+	}
+	dd{
+		&:nth-of-type(2),
+		&:nth-of-type(4){
+			margin-right:$inner_margin;
+		}
+	}
+	.arrowLink{
+		margin-bottom:$content_margin;
+	}
+	&.userList{
+		padding-top:$inner_margin;
+	}
+	~ .arrowLink{
+		margin-bottom:$content_margin;
+	}
+	~ .helpList{
+		margin-top:$content_margin;
+	}
+}
+#adminNotice{
+	.arrowLink{
+		margin-bottom:$content_margin;
+	}
+}
+
+// modal - battle wait notice
+.modalBox.battleWaitNotice{
+	//display:block;
+	//-webkit-transform:scale(1);
+	h1{
+		text-align:left;
+		span{
+			margin-left:48px;
+		}
+		&:before{
+			@include backgroundSize("/parts/#{$mypage_parts}.png",-311px,-110px,no-repeat);
+			@include visible_object(-10px,0,51px,57px,1);
+		}
+		&:after{
+			display:none;
+		}
+	}
+	.bgNavico{
+		position:relative;
+		left:-6px;
+		top:10px;
+		@include backgroundSize("/parts/bg_mypage_battle_waiting.png",0,0,no-repeat);
+		display:block;
+		width:264px;
+		height:115px;
+		p{
+			position:relative;
+			left:12px;
+			top:12px;
+			width:150px;
+			height:80px;
+			font-size:90%;
+			color:$color_K;
+			text-align:left;
+			em{
+				color:#ff0000;
+				font-style:normal;
+			}
+		}
+		~ .btn.large{
+			position:relative;
+			top:8px;
+			width:90%;
+			&.close{
+				margin-bottom:$inner_margin;
+			}
+		}
+	}
+}
+
+// android2
+body.android2 #myPage .avatarStatus .currentRank.out dd{
+	left:2px;
+	bottom:16px;
+}
+
+// login bonus popup
+.loginBonus{
+	.rubric{
+		color: #8c0000;
+		display:inline-block;
+		margin-right: 4px;
+	}
+	.receiveGiftBtn{
+		width: 100%;
+	}
+	button{
+		width: 80%;
+		margin: 4px auto;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* mypage old
+#avatarStatus{
+	@include backgroundSize("/background/bg_mypage.jpg",center,0,no-repeat);
+
+	&.onBattle{
+		position:relative;
+
+		&:before{
+			@include visible_object(0,0,320px,300px,0);
+			background-color:rgba(0,0,0,0.5);
+		}
+	}
+
+	&:after{
+		@include main_bg_bottom;
+	}
+
+	.myAvatar{
+		.link{
+			width:200px;
+			height:200px;
+			position: absolute;
+			right:0;
+			top: 50px;
+		}
+	}
+}
+.emblemIcon_s{
+	position:absolute;
+	left:8px;
+	top:2px;
+	z-index:11;
+}
+/*
+.currentRank{
+	@include backgroundSize("/parts/sprite_main_parts.png",0,-454px,no-repeat);
+	z-index:3;
+	dt {
+		margin-top: 2px;
+	}
+	dd {
+		margin-top: -4px;
+	}
+}
+.moveLine{
+	position:absolute;
+	top:45px;
+	z-index:12;
+
+	ul{
+		width:100%;
+		text-align:center;
+		white-space:nowrap;
+		-webkit-animation:20s ticker infinite linear;
+		animation:20s ticker infinite linear;
+	}
+	li,p{
+		display:inline-block;
+		padding-right:$inner_margin;
+		font-size:85%;
+		color:#fff;
+		@include text_glow(#000);
+
+		span{
+			color:#ff0000;
+		}
+	}
+}
+.notification{
+	position:absolute;
+	right:3px;
+	top:69px;
+	width:52px;
+	height:44px;
+	@include backgroundSize("/parts/sprite_menu_icon.png",-1px,-211px,no-repeat);
+	z-index:100;
+
+	&.on:after{
+		@include visible_object(0,0,52px,52px,1);
+		background-color:rgba(0,0,0,0.3);
+	}
+
+	.badge{
+		visibility:visible;
+		position:absolute;
+		right:0;
+		top:25px;
+		display:block;
+		width:27px;
+		height:28px;
+		@include backgroundSize_dataURI("/parts/bg_notify_count.png",0,0,no-repeat);
+		@include txtset(90%,#ffffff);
+		text-align:center;
+		line-height:25px;
+	}
+}
+.message{
+	top:58px;
+
+	&.navicoMove{
+		top:58px;
+	}
+	&.opponent{
+
+		p{
+			position:relative;
+			top:15px;
+			left:63px;
+			width:191px;
+			height:40px;
+			margin:0;
+			@include backgroundSize("/parts/sprite_main_parts.png",-4px,-92px,no-repeat);
+
+			.link{
+				display:block;
+				width:191px;
+				height:40px;
+				margin:0;
+				padding:0;
+			}
+		}
+	}
+	&.onBattle{
+		@extend .opponent;
+
+		P{
+			top:3px;
+			left:55px;
+			width:209px;
+			height:63px;
+			@include backgroundSize("/parts/sprite_main_parts.png",-2px,-140px,no-repeat);
+
+			.link{
+				display:block;
+				width:209px;
+				height:63px;
+				margin:0;
+				padding:0;
+			}
+		}
+	}
+}
+#mainActionBtn{
+	@include display-box;
+	@include box-pack(center);
+	position:relative;
+	width:320px;
+	margin:-20px auto 0 auto;
+	z-index:10;
+
+	.link{
+		display:block;
+		width:102px;
+		height:102px;
+
+		.hide{
+			@include hidden_object;
+		}
+	}
+	.mission,
+	.battle{
+		position:relative;
+
+		.link{
+			@include backgroundSize("/parts/mission_btn_off.png",0,0,no-repeat);
+
+			&.on{
+				@include backgroundSize("/parts/mission_btn_on.png",0,0,no-repeat);
+			}
+		}
+		.gergeBg{
+			position:absolute;
+			left:19px;
+			bottom:23px;
+			width:64px;
+			height:10px;
+			z-index:6;
+		}
+		.gerge{
+			height:8px;
+		}
+	}
+	.gatcha{
+		.link{
+			@include backgroundSize("/parts/gatcha_btn_off.png",0,0,no-repeat);
+			&.on{
+				@include backgroundSize("/parts/gatcha_btn_on.png",0,0,no-repeat);
+			}
+		}
+	}
+	.battle{
+
+		.link{
+			@include backgroundSize("/parts/battle_btn_off.png",0,0,no-repeat);
+			&.on{
+				@include backgroundSize("/parts/battle_btn_on.png",0,0,no-repeat);
+			}
+		}
+	}
+
+	&.battleReady{
+		.battle{
+			.link{
+				@include backgroundSize("/parts/battle_btn_battleready_off.png",0,0,no-repeat);
+				&.on{
+					@include backgroundSize("/parts/battle_btn_battleready_on.png",0,0,no-repeat);
+				}
+			}
+		}
+	}
+	&.onBattle{
+		.battle{
+			.gergeBg{
+				bottom:22px;
+			}
+			.link{
+				@include backgroundSize("/parts/battle_btn_onbattle_off.png",0,0,no-repeat);
+				&.on{
+					@include backgroundSize("/parts/battle_btn_onbattle_on.png",0,0,no-repeat);
+				}
+			}
+		}
+	}
+	~ .listMenu{
+		margin:8px auto 32px auto;
+	}
+}
+#ranking{
+	margin-top:32px;
+}
+
+// modal window inner - notice
+#notifyWindow ul{
+	width:100%;
+	margin:0 auto $inner_margin auto;
+
+	li{
+		position:relative;
+		border-bottom:1px solid #B9A46B;
+		font-size:80%;
+
+		.link{
+			display:block;
+			padding:8px 15px 8px 4px;
+			color:#544123;
+
+			&:after{
+				@include visible_object(auto,50%,9px,13px,auto);
+				right:5px;
+				margin-top:-8px;
+				@include backgroundSize("/parts/#{$icon_parts}.png",-97px,-78px,no-repeat);
+			}
+		}
+	}
+}
+*/
+

@@ -1,0 +1,109 @@
+<h1 class="mainHeader">ギルドメンバー一覧</h1>
+<section id="guildMemberList">
+	<div class="statusLine">
+		<dl>
+			<dt>所属人数</dt><dd><span>{{>member_num}}</span>/{{>max_member_num}}</dd>
+		</dl>
+	</div>
+
+	<div class="message taicho_arc">
+		<p>
+			<span>戦闘値上位の5人が、前衛に選出されるぞ！</span>
+		</p>
+	</div>
+	
+	<!-- //執行役・バトル前：テンションゲージ -->
+	{{if battle_state===3}}
+	<div class="gergeBox">
+		<div class="tentionGerge {{if tension===100}}max{{/if}}">
+			<div class="gergeBg">
+				<span class="gerge tention jsTensionBar" style="width:{{>tension}}%;"></span>
+			</div>
+		</div>
+	</div>
+	{{/if}}
+
+	<div id="userList" class="memberList">
+		{{for members}}
+		<article class="contents contentsShadow statusData_icon{{if new_flg || #index == 0}} title{{/if}} link jsMember" data-user-id="{{>user_id}}" data-user-name="{{>user_name}}">
+			<h1><span class="order">{{>rank}}位</span>{{>user_name}}</h1>
+			<div class="columnBox" data-href="profile/{{if #parent.parent.data.user.user_id !== user_id}}other/{{>user_id}}/{{/if}}">
+				<div class="iconBgRect_l gold"><img src="{{getImgRoot/}}/avatar/{{>avatar_id}}_140.png"></div>
+				{{if new_flg}}<span class="label36_r4 member_new">NEW</span>{{else #index == 0}}<span class="label36_r4 member_ace">エース</span>{{/if}}
+				<div class="contentsInner">
+					<dl>
+						<dt class="label36_r4">戦闘力</dt><dd>{{>battle_power}}</dd>
+						<dt>獲得BP</dt><dd>{{>~commaFormat(win_bp_total)}}</dd>
+						<dt>役職</dt><dd>{{>position_name}}</dd>
+						<dt>Lv.</dt><dd>{{>level}}</dd>
+						<dt>ジョブ</dt><dd>{{>job_name}}</dd>
+						<dt>最終プレイ</dt><dd>{{>play_time}}</dd>
+					</dl>
+				</div>
+			</div>
+			{{if user_id !== ~root('user').user_id}}
+				{{if ~root('master_priv_flg') && ~root('battle_state')===3}}<div class="innerBtnBox">{{/if}}
+				{{if ~root('master_priv_flg')}}
+					{{if  (~root('battle_state')==0 || ~root('battle_state')==1 || ~root('battle_state')==5)}}
+						{{if ~root('members').length > 1 && position_name !== "ギルドマスター"}}
+							<button class="btn jsButtonGuildExpelConfirm">除名する</button>
+						{{else}}
+							<button class="btn disable">除名不可</button>
+						{{/if}}
+					{{else ~root('battle_state')===2}}
+						<button class="btn disable">除名不可</button>
+					{{else ~root('battle_state')===3}}
+						<button class="btn disable">除名不可</button>
+					{{/if}}
+				{{/if}}
+				{{if ~root('battle_state')==3}}
+					{{if me_flg || warm_up_flg}}
+						<button class="btn disable training over"><span>手合わせ済み</span></button>
+					{{else}}
+						<button class="btn battle training yet jsButtonWarmup"><span>手合わせする</span></button>
+					{{/if}}
+				{{/if}}
+				{{if ~root('master_priv_flg') && ~root('battle_state')===3}}</div>{{/if}}
+			{{/if}}
+		</article>
+		{{/for}}
+	</div>
+
+	{{if master_priv_flg && (battle_state===2 || battle_state===3 || battle_state===4)}}
+	<!-- //執行役・注意書き：マッチング〜バトル中 -->
+	<p class="expulsionNotice">
+		バトルのマッチング中〜バトル中はメンバーを除名することはできません
+	</p>
+	{{/if}}
+</section>
+
+<hr>
+
+<div class="arrowLink">
+	<span class="link prev" data-href="guild/">ギルドトップへ戻る</span>
+</div>
+
+<div class="helpList">
+	<ul>
+		<li><button class="link" data-href="help/detail/303/">メンバーが増えると？</button></li>
+		<li><button class="link" data-href="help/detail/215/">手合わせってなに？</button></li>
+	</ul>
+</div>
+
+{{escape}}
+<script id="jsTemplatePopupExpelConfirm" type="text/x-jsrender">
+	<div class="modalInner">
+		<p>{{>user_name}} を除名しますか？</p>
+		<div class="innerBtnBox">
+			<button class="btn cancel jsClosePopup">やめる</button><button class="btn jsClosePopup jsButtonGuildExpelFix">除名する</button>
+		</div>
+	</div>
+</script>
+
+<script id="jsTemplatePopupExpelComplete" type="text/x-jsrender">
+	<div class="modalInner">
+		<p>除名しました。</p>
+		<span class="btn short close jsCloseAllPopup jsButtonGuildExpelEnd">閉じる</span>
+	</div>
+</script>
+{{/escape}}

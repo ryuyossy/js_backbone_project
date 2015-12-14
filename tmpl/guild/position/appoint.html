@@ -1,0 +1,86 @@
+<h1 class="mainHeader">{{if user}}役職変更{{else}}役職任命{{/if}}</h1>
+
+<h1 class="subHeader">
+	<span class="subHeaderBg_l"></span>
+	<span>{{if user}}変更{{else}}任命{{/if}}する役職</span>
+	<span class="subHeaderBg_r"></span>
+</h1>
+
+<div id="guildPositionList" class="appoint">
+	<section class="contents shadow statusData{{if user}}_icon{{/if}}">
+		<h1>{{>position_name}}</h1>
+		<div class="columnBox">
+			{{if user}}
+			<div class="iconBgRect_l gold"><img src="{{getImgRoot/}}/avatar/{{>user.avatar_id}}_140.png"></div>
+			<div class="contentsInner">
+				<h2>{{>user.user_name}}</h2>
+				<p>{{>position_description}}</p>
+			</div>
+			{{else}}
+			<div class="contentsInner">
+				<p>{{>position_description}}</p>
+			</div>
+			{{/if}}
+		</div>
+	</section>
+
+	<h1 class="subHeader">
+		<span class="subHeaderBg_l"></span>
+		<span>メンバーを選択</span>
+		<span class="subHeaderBg_r"></span>
+	</h1>
+	
+	{{if members.length > 0}}
+	{{for members}}
+	<section class="contents contentsShadow statusData_icon link jsMember" data-user-id="{{>user_id}}" data-user-name="{{>user_name}}">
+		<div class="columnBox" data-href="profile/other/{{>user_id}}/">
+			<div class="iconBgRect_l gold"><img src="{{getImgRoot/}}/avatar/{{>avatar_id}}_140.png"></div>
+			<div class="contentsInner">
+				<h1>{{>user_name}}</h1>
+				<dl>
+					<dt>Lv:</dt><dd>{{>level}}</dd>
+					<dt>ジョブ:</dt><dd>{{>job_name}}</dd>
+					<dt>総攻撃:</dt><dd>{{>attack + sp_attack}}</dd>
+					<dt>総防御:</dt><dd>{{>defense + sp_defense}}</dd>
+				</dl>
+			</div>
+		</div>
+		<button class="btn jsButtonGuildAppointConfirm">任命する</button>
+	</section>
+	{{/for}}
+	{{else}}
+		<section class="dimmed">
+		<p>任命できるメンバーがいません。</p>
+		</section>
+	{{/if}}
+</div>
+
+<hr>
+
+<div class="arrowLink">
+	<button class="link prev" data-href="guild/position/list/">役職一覧に戻る</button>
+</div>
+
+<div class="helpList">
+	<ul>
+		<li><button class="link" data-href="help/detail/305/">役職ってなに？</button></li>
+	</ul>
+</div>
+
+{{escape}}
+<script id="jsTemplatePopupGuildAppointConfirm" type="text/x-jsrender">
+	<div class="modalInner">
+		<p>{{>user_name}}さんを{{>position_name}}に任命してもよろしいですか？</p>
+		<div class="innerBtnBox">
+			<button class="btn cancel jsClosePopup">やめる</button><button class="btn jsClosePopup jsButtonGuildAppointFix">任命する</button>
+		</div>
+	</div>
+</script>
+
+<script id="jsTemplatePopupGuildAppointComplete" type="text/x-jsrender">
+	<div class="modalInner">
+		<p>任命しました。</p>
+		<span class="btn large close" data-href="guild/position/list/">役職一覧へ戻る</span>
+	</div>
+</script>
+{{/escape}}

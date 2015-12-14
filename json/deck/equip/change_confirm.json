@@ -1,0 +1,19 @@
+{
+    "status" : 200,
+    "equip_type": 1,
+    "deck_no": 0,
+    "place_no": 0,
+    "user_equip_no": 13559068368370,
+    "before_equip_id": 130001,
+	"before_step": 2,
+    "before_equip_name": "炎の剣（松）",
+    "after_equip_id": 110001,
+	"after_step": 2,
+    "after_equip_name": "ひのきのぼう（松）",
+    "power": 340,
+    "power_diff": -1205,
+    "sp_power": 777,
+    "sp_power_diff": -895,
+    "equip_cost": 5,
+    "equip_cost_diff": -4
+}

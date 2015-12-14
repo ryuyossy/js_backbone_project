@@ -1,0 +1,20 @@
+<h1 class="mainHeader">運営からのお知らせ</h1>
+<section id="adminNotice">
+	<div class="jsNoticeList">
+		<div class="jsListAll">
+			{{for #data tmpl="#jsTemplateNotice" /}}
+		</div>
+		{{if more_flg}}
+		<div class="moreLink jsListMore">
+			<button class="link"><span>もっと見る</span></button>
+		</div>
+		{{/if}}
+		
+		<hr>
+		
+		<div class="arrowLink">
+			<button class="link prev" data-href="/">トップに戻る</button>
+		</div>
+	</div>
+	
+</section>

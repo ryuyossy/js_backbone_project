@@ -1,0 +1,75 @@
+{
+    "status": 200,
+    "guild_name": "サイババ団",
+    "guild_rank": "A",
+    "guild_level": "80",
+    "guild_id": 4,
+    "user": {
+        "user_id": 2233,
+		"guild_id": 123
+    },
+    "gp": 9876543210,
+    "win_num": "100",
+    "current_member_num": "10",
+    "max_member_num": "15",
+    "members": [
+        {
+            "user_id": "11001",
+            "avatar_id": "11001"
+        },
+        {
+            "user_id": "11002",
+            "avatar_id": "11002"
+        }
+    ],
+    "master_user_id": "111",
+    "master_user_name": "マクサル",
+    "master_avatar_id": "10002",
+    "master_comment": "ギルドマスターのコメントあああああいいいいいえええええうううううあああああおおおおお",
+    "master_priv_flg": "1",
+    "auto_approve_flg": true,
+    "events": [
+        {
+            "event_id": "1",
+            "event_type": "3",
+            "event_name": "タイマンバトル!!",
+            "description": "1対1のバトルだ!!"
+        },
+        {
+            "event_id": "2",
+            "event_type": "3",
+            "event_name": "天候バトル!!",
+            "description": "天候により属性が有利にはたらくバトルだ!!"
+        }
+    ],
+    "bbs_more_flg": true,
+    "bbs_posts": [
+        {
+            "message_id": "110001",
+            "post_datetime": "8/10 12:12",
+            "user_id": "2233",
+            "user_name": "わかば弓士",
+            "avatar_id": "11001",
+            "body_text": "こんにちは",
+            "like_num": "5",
+            "reply_num": "3",
+            "self_liked_flg": false
+        },
+        {
+            "message_id": "110002",
+            "post_datetime": "8/10 12:12",
+            "user_id": "112",
+            "user_name": "シーフ",
+            "avatar_id": "11002",
+            "body_text": "こんにちは",
+            "like_num": "5",
+            "reply_num": "3",
+            "self_liked_flg": true
+        }
+    ],
+    "master_priv_flg": false,
+    "alone_guild_flg": false,
+    "candidated_flg": true,
+    "join_requested_flg": false,
+    "enemy_exist_flg": false
+}

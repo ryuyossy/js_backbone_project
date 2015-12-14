@@ -1,0 +1,347 @@
+@charset "utf-8";
+/*
+@mixin box_shadow_contents_l($offsetSize,$z_index:-1){
+	content:'';
+	position:absolute;
+	left:$offsetSize;
+	top:75%;
+	bottom:17px;
+	width:50%;
+	min-height:5px;
+	max-width:150px;
+	background:#544123;
+	-webkit-box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	-webkit-transform:rotate(-5deg);
+	transform:rotate(-5deg);
+	z-index:$z_index;
+}
+@mixin box_shadow_contents_r($offsetSize,$z-index:-1){
+	content:'';
+	position:absolute;
+	right:$offsetSize;
+	top:75%;
+	bottom:17px;
+	width:50%;
+	min-height:5px;
+	max-width:150px;
+	background:#544123;
+	-webkit-box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	-webkit-transform:rotate(5deg);
+	transform:rotate(5deg);
+	z-index:$z_index;
+}
+*/
+/*
+@mixin backgroundResize($position:0 -60px){
+	@media screen and (min-width:319px){
+		width:320px;
+		@include background-size(320px,auto);
+	}
+	@media screen and (min-width:359px){
+		width:360px;
+		@include background-size(360px,auto);
+	}
+	@media screen and (min-width:361px){
+		width:480px;
+		@include background-size(480px,auto);
+		background-position:$position;
+	}
+}
+*/
+/*
+@mixin display-box{
+	display:flexbox;
+	-webkit-display:flexbox;
+}
+@mixin box-align($position){
+	flex-align:$position;
+	-webkit-flex-align:$position;
+}
+@mixin box-flex($ratio){
+	flex:$ratio;
+	-webkit-flex:$ratio;
+}
+@mixin box-pack($position){
+	flex-pack:$position;
+	-webkitflex-pack:$position;
+}
+*/
+/* line 6, ../scss/collection.scss */
+.detailPostForm, .tDetailStatus {
+  width: 95%;
+  margin: 0 auto 8px auto;
+  padding: 8px 0;
+}
+
+/* line 12, ../scss/collection.scss */
+.statusLine {
+  font-size: 85%;
+  text-align: center;
+}
+
+/* line 19, ../scss/collection.scss */
+.booksNaviko_Arc {
+  padding-bottom: 8px;
+}
+
+/* line 24, ../scss/collection.scss */
+#collectionContentsM, .collectionEquipLink, .collectionArrowLinkes,
+.collectionBonusMargin,
+.collectionDetailM {
+  margin: 16px auto 32px auto;
+}
+/* line 27, ../scss/collection.scss */
+#collectionContentsM .contents, .collectionEquipLink .contents, .collectionArrowLinkes .contents,
+.collectionBonusMargin .contents,
+.collectionDetailM .contents {
+  margin: 0 auto 8px auto;
+}
+/* line 30, ../scss/collection.scss */
+#collectionContentsM .contents > .btn, .collectionEquipLink .contents > .btn, .collectionArrowLinkes .contents > .btn,
+.collectionBonusMargin .contents > .btn,
+.collectionDetailM .contents > .btn {
+  position: relative;
+  margin-top: 8px;
+  z-index: auto;
+}
+/* line 36, ../scss/collection.scss */
+#collectionContentsM .contentsInner, .collectionEquipLink .contentsInner, .collectionArrowLinkes .contentsInner,
+.collectionBonusMargin .contentsInner,
+.collectionDetailM .contentsInner {
+  margin: 0 8px;
+}
+/* line 39, ../scss/collection.scss */
+#collectionContentsM h1, .collectionEquipLink h1, .collectionArrowLinkes h1,
+.collectionBonusMargin h1,
+.collectionDetailM h1 {
+  font-size: 110%;
+  margin-bottom: 4px;
+}
+/* line 43, ../scss/collection.scss */
+#collectionContentsM .statusData_icon img, .collectionEquipLink .statusData_icon img, .collectionArrowLinkes .statusData_icon img,
+.collectionBonusMargin .statusData_icon img,
+.collectionDetailM .statusData_icon img {
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
+/* line 50, ../scss/collection.scss */
+.collectionBonusMargin, .collectionDetailM {
+  margin: 16px auto 0 auto;
+}
+
+/* line 53, ../scss/collection.scss */
+.remain {
+  color: #f00;
+}
+
+/* line 58, ../scss/collection.scss */
+.contents {
+  position: relative;
+  width: 95%;
+  margin: 16px auto 16px auto;
+  padding: 8px 0;
+  z-index: auto;
+}
+
+/* line 67, ../scss/collection.scss */
+.collectionEquipList .contents {
+  padding-bottom: 0;
+}
+/* line 70, ../scss/collection.scss */
+.collectionEquipList .collection {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+}
+/* line 73, ../scss/collection.scss */
+.collectionEquipList .collection li {
+  margin-bottom: 8px;
+}
+/* line 76, ../scss/collection.scss */
+.collectionEquipList .collection .dimmed {
+  padding-bottom: 8px;
+}
+/* line 80, ../scss/collection.scss */
+.collectionEquipList .jsLoaderA {
+  position: relative;
+  top: -16px;
+}
+
+/* line 85, ../scss/collection.scss */
+.selectBox ~ .btn {
+  padding: 0 1em;
+  margin: 0 auto;
+  display: block;
+}
+
+/* line 97, ../scss/collection.scss */
+#treasureContentsM {
+  margin: 16px 0 16px 0;
+}
+
+/* line 102, ../scss/collection.scss */
+.collectionTreasureDetailLink .questLink {
+  margin-top: 8px;
+}
+
+/* line 106, ../scss/collection.scss */
+.completed {
+  color: red;
+}
+
+/* line 109, ../scss/collection.scss */
+.contents.contentsshadow {
+  min-height: 0;
+}
+
+/* line 114, ../scss/collection.scss */
+.collectionCtM {
+  margin-top: 16px;
+}
+/* line 117, ../scss/collection.scss */
+.collectionCtM .contents {
+  position: relative;
+  margin: 8px auto 8px auto;
+}
+/* line 123, ../scss/collection.scss */
+.collectionCtM .contentsInner h1 {
+  color: #544123;
+}
+/* line 126, ../scss/collection.scss */
+.collectionCtM .contentsInner p {
+  margin-bottom: 4px;
+}
+/* line 129, ../scss/collection.scss */
+.collectionCtM .contentsInner dd {
+  color: #666;
+}
+/* line 132, ../scss/collection.scss */
+.collectionCtM .contentsInner dd span {
+  color: #333;
+}
+/* line 136, ../scss/collection.scss */
+.collectionCtM .contentsInner .cleared {
+  display: inline-block;
+  background: url("/img/parts/cleared_stamp.png") 0 0 no-repeat;
+  -webkit-background-size: 76px 24px;
+  position: absolute;
+  right: 16px;
+  bottom: 0;
+  width: 76px;
+  height: 24px;
+}
+
+/* line 148, ../scss/collection.scss */
+.jsGuildMember.close .jsTreasureMessageSend {
+  display: block;
+}
+/* line 151, ../scss/collection.scss */
+.jsGuildMember.close .jsPostTreasureMessageSendForm {
+  display: none;
+}
+
+/* line 156, ../scss/collection.scss */
+.jsGuildMember.open .jsTreasureMessageSend {
+  display: none;
+}
+/* line 159, ../scss/collection.scss */
+.jsGuildMember.open .jsPostTreasureMessageSendForm {
+  display: block;
+}
+
+/* line 163, ../scss/collection.scss */
+.innerBtnBox .btn.close {
+  margin: 0 auto;
+}
+
+/* line 168, ../scss/collection.scss */
+.collectionBonusMargin, .collectionDetailM {
+  margin-top: 16px;
+}
+
+/* line 175, ../scss/collection.scss */
+#equipDetail .itemDetail,
+#treasureDetail .itemDetail {
+  margin-top: 16px;
+}
+/* line 179, ../scss/collection.scss */
+#equipDetail .description p,
+#treasureDetail .description p {
+  margin-bottom: 8px;
+}
+/* line 183, ../scss/collection.scss */
+#equipDetail .contents,
+#treasureDetail .contents {
+  margin-bottom: 0;
+}
+/* line 186, ../scss/collection.scss */
+#equipDetail ~ .arrowLink,
+#treasureDetail ~ .arrowLink {
+  margin-bottom: 16px;
+}
+
+/* line 204, ../scss/collection.scss */
+.eqM {
+  margin-top: 16px;
+}
+
+/* line 208, ../scss/collection.scss */
+.cmpSubHead, .dsMargin {
+  margin-bottom: 16px;
+}
+
+/* line 223, ../scss/collection.scss */
+.btn.jsTreasureMessageSend.ordered {
+  margin-top: 8px;
+}
+
+/* line 227, ../scss/collection.scss */
+.tSeriesHead2 {
+  margin: 32px auto 16px auto;
+}
+
+/* line 232, ../scss/collection.scss */
+.treasureDetail {
+  margin: 16px 0 16px 0;
+}
+
+/* line 240, ../scss/collection.scss */
+.tDetailStatus {
+  margin: 0 auto 8px auto;
+}
+
+/* line 248, ../scss/collection.scss */
+.theyDtClBox {
+  width: 95%;
+  margin: 16px auto 0 auto;
+  z-index: auto;
+  padding: 8px 0 0 0;
+}
+
+/* line 255, ../scss/collection.scss */
+#theyDetailDown {
+  margin: 8px auto 0 auto;
+}
+
+/* line 260, ../scss/collection.scss */
+.clgridBox {
+  width: 95%;
+  margin: 16px auto;
+}
+
+/* line 265, ../scss/collection.scss */
+.compContents {
+  width: 95%;
+  margin: 0 auto 16px auto;
+  padding: 8px 0;
+}
+
+/* line 271, ../scss/collection.scss */
+.collectionPop {
+  display: block;
+  -webkit-transform: scale(1);
+  z-index: 10000;
+}

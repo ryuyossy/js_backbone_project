@@ -1,0 +1,35 @@
+{
+	"status":200,
+	"guild_name" : "サイババ団",
+	"guild_rank" : "A",
+	"rank_status" : "ランクステイ圏内",
+	"rank_rest_days" : "3",
+	"battle_start_rest" : "05:44",
+	"battle_end_rest" : "",
+	"items": [
+		{
+			"description": "アイテム1の説明",
+			"item_id": 1,
+			"item_name": "アイテム1",
+			"notice": null,
+			"own_num": 1,
+			"usable_flg" : true
+		},
+		{
+			"description": "アイテム2の説明",
+			"item_id": 2,
+			"item_name": "アイテム2",
+			"notice": "任務Pが満タンです",
+			"own_num": 1,
+			"usable_flg" : false
+		},
+		{
+			"description": "アイテム3の説明",
+			"item_id": 3,
+			"item_name": "アイテム3",
+			"notice": "任務Pが残っています",
+			"own_num": 1,
+			"usable_flg" : true
+		}
+	]
+}

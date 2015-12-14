@@ -1,0 +1,28 @@
+{
+	"status": 200,
+	"user_name": "オバマ",
+	"friends": [
+		{
+			"attack": 1929,
+			"avatar_id": 1,
+			"defense": 1644,
+			"id": 2,
+			"job_name": "ソルジャー",
+			"level": 1,
+			"name": "クリントン",
+			"profile_comment": "コメントコメントコメントコメントコメント"
+		},
+		{
+			"attack": 1929,
+			"avatar_id": 2,
+			"defense": 1644,
+			"id": 3,
+			"job_name": "ソルジャー",
+			"level": 1,
+			"name": "アイゼンハワー",
+			"profile_comment": "ブッシュはしねブッシュはしねブッシュはしね"
+		}
+	],
+	"ameba_friends": [
+	]
+}

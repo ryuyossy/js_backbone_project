@@ -1,0 +1,250 @@
+{
+	"status" : 200,
+    "user": {
+        "id": 1,
+        "gil": 1404,
+        "rare_medal_num": 181,
+        "max_own_equip_num": 100,
+        "own_equip_num": 14,
+        "own_gil": 1404
+    },
+    "compose_term": {
+        "percent": 20,
+        "kind": 1,
+        "start": "2012-10-21 00:00:00",
+        "end": "2012-10-24 00:00:00"
+    },
+	"equip_types": [
+		{
+			"text": "すべての武具",
+			"value": ""
+		},
+		{
+			"text": "武器",
+			"value": "1"
+		},
+		{
+			"text": "防具",
+			"value": "2"
+		}
+	],
+	"attribute_types": [
+		{
+			"text": "すべての属性",
+			"value": ""
+		},
+		{
+			"text": "火",
+			"value": "FIRE"
+		},
+		{
+			"text": "氷",
+			"value": "ICE"
+		},
+		{
+			"text": "雷",
+			"value": "THUNDER"
+		},
+		{
+			"text": "地",
+			"value": "EARTH"
+		},
+		{
+			"text": "光",
+			"value": "LIGHT"
+		},
+		{
+			"text": "闇",
+			"value": "DARK"
+		}
+	],
+	"rarity_types": [
+		{
+			"text": "すべてのレア度",
+			"value": ""
+		},
+		{
+			"text": "ノーマル",
+			"value": "N"
+		},
+		{
+			"text": "ハイノーマル",
+			"value": "HN"
+		},
+		{
+			"text": "レア",
+			"value": "R"
+		},
+		{
+			"text": "Sレア",
+			"value": "SR"
+		},
+		{
+			"text": "SSレア",
+			"value": "SSR"
+		},
+		{
+			"text": "レジェンド",
+			"value": "LEGEND"
+		}
+	],
+	"sort_types": [
+		{
+			"text": "攻防が高い順",
+			"value": "POWER_DESC"
+		},
+		{
+			"text": "攻防が低い順",
+			"value": "POWER_ASC"
+		},
+		{
+			"text": "最近入手した順",
+			"value": "GET_DATETIME_DESC"
+		},
+		{
+			"text": "昔に入手した順",
+			"value": "GET_DATETIME_ASC"
+		},
+		{
+			"text": "コストが高い順",
+			"value": "COST_DESC"
+		},
+		{
+			"text": "コストが低い順",
+			"value": "COST_ASC"
+		},
+		{
+			"text": "Lvが高い順",
+			"value": "LEVEL_DESC"
+		},
+		{
+			"text": "Lvが低い順",
+			"value": "LEVEL_ASC"
+		},
+		{
+			"text": "レア度が高い順",
+			"value": "RARITY_DESC"
+		},
+		{
+			"text": "レア度が低い順",
+			"value": "RARITY_ASC"
+		}
+	],
+    "base": {
+    	"equip_id": 230001,
+        "user_equip_no": 1350268201201,
+        "equip_name": "ワイルドファング",
+        "lineage_name": "力",
+		"attribute_level": null,
+		"attribute_name": null,
+        "rarity_name": "ハイノーマル",
+        "grow_type_name": "早熟",
+        "equip_status": 1,
+        "equip_cost": 7,
+        "exp": 180,
+		"equip_exp": 100,
+        "equip_level": 18,
+        "max_level": 20,
+        "power": 325,
+        "special_power": 325,
+        "sell_price": 100,
+        "compose": {
+            "gil": 100
+        },
+        "step": 3,
+        "description": "大型のサメの牙がついたグローブ",
+        "protected_flg": false,
+		"equip_type": 1
+    },
+    "equips": [
+        {
+			"equip_id": 230002,
+            "user_equip_no": 1350268201200,
+            "equip_name": "ワイルドファング2",
+            "attribute_level": 1,
+            "lineage_name": "力",
+			"attribute_level": 4,
+			"attribute_name": "火",
+            "rarity_name": "ハイノーマル",
+            "grow_type_name": "早熟",
+            "equip_status": 0,
+            "equip_cost": 7,
+            "exp": 204,
+			"equip_exp": 88,
+            "equip_level": 20,
+            "max_level": 20,
+            "power": 333,
+            "special_power": 333,
+            "sell_price": 100,
+			"compose": {
+				"gil": 100
+			},
+			"step": 1,
+            "description": "大型のサメの牙がついたグローブ",
+            "protected_flg": true,
+			"equip_type": 1
+        },
+        {
+			"equip_id": 230003,
+            "user_equip_no": 1350268201202,
+            "equip_name": "ワイルドファング3",
+            "attribute_level": 1,
+            "lineage_name": "力",
+			"attribute_level": null,
+			"attribute_name": null,
+            "rarity_name": "ハイノーマル",
+            "grow_type_name": "早熟",
+            "equip_status": 1,
+            "equip_cost": 7,
+            "exp": 204,
+			"equip_exp": 70,
+            "equip_level": 20,
+            "max_level": 20,
+            "power": 333,
+            "special_power": 333,
+            "sell_price": 100,
+			"compose": {
+				"gil": 100
+			},
+			"step": 1,
+            "description": "大型のサメの牙がついたグローブ",
+            "protected_flg": false,
+			"equip_type": 1
+        },
+        {
+			"equip_id": 230004,
+            "user_equip_no": 1350268201203,
+            "equip_name": "ワイルドファング4",
+            "attribute_level": 1,
+            "lineage_name": "力",
+			"attribute_level": 4,
+			"attribute_name": "火",
+            "rarity_name": "ハイノーマル",
+            "grow_type_name": "早熟",
+            "equip_status": 0,
+            "equip_cost": 7,
+            "exp": 204,
+			"equip_exp": 6,
+            "equip_level": 20,
+            "max_level": 20,
+            "power": 333,
+            "special_power": 333,
+            "sell_price": 100,
+			"compose": {
+				"gil": 100
+			},
+			"step": 4,
+            "description": "大型のサメの牙がついたグローブ",
+            "protected_flg": false,
+			"equip_type": 1
+        }
+    ],
+    "compose_more_flg": true,
+	"banners": [
+		{
+			"banner_text": null,
+			"image_file_name": "banner_compose_half.png",
+			"redirect_path": null
+		}
+	]
+}

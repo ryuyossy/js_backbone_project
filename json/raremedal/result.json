@@ -1,0 +1,11 @@
+{
+	"status": 200,
+    "rare_medal_num": 55,
+    "qty": 3,
+    "rare_medal": {
+        "item_id": 130008,
+        "item_name": "グラディウス",
+        "item_type": 3,
+        "now_exchange_num": 6
+    }
+}

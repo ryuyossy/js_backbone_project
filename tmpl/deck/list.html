@@ -1,0 +1,285 @@
+<div class="jsShortTutorial" style="{{if !first_access_flg}}display:none{{/if}}">
+	<div class="deckShort">
+		<h1 class="mainHeader">装備</h1>
+		<section class="questNvgation">
+			<div class="message arc">
+				<p>
+					<span>武器や防具は持ってるだけじゃダメ!</br>装備を忘れずにね♪</span>
+				</p>
+			</div>
+		</section>
+		<h1 class="subHeader">
+			<span class="subHeaderBg_l"></span>
+			<span>武器デッキと防具デッキ!</span>
+			<span class="subHeaderBg_r"></span>
+		</h1>
+		<div class="questshortBn">
+			<img src="{{getImgRoot/}}/parts/shortTutorial_deck_decks.png" alt="武器デッキと防具デッキ!" class="title">
+		</div>
+		<h1 class="subHeader">
+			<span class="subHeaderBg_l"></span>
+			<span>迷ったら『一括装備』!</span>
+			<span class="subHeaderBg_r"></span>
+		</h1>
+		<div>
+			<img src="{{getImgRoot/}}/parts/shortTutorial_deck_bulkEquip.png" alt="迷ったら『一括装備』!" class="titles">
+		</div>
+		<button class="btn large shgoQuest jsButtonCloseShortTutorial">さっそく装備へ</button>
+	</div>
+</div>
+
+<div id="equipDeck" class="jsNormalView" style="{{if first_access_flg}}display:none{{/if}}">
+	<h1 class="mainHeader">装備</h1>
+	<h1 class="subHeader">
+		<span class="subHeaderBg_l"></span>
+		<span>現在のステータス</span>
+		<span class="subHeaderBg_r"></span>
+	</h1>
+	<section id="myStatus" class="metalPanel statusData_icon">
+		<div class="columnBox equipListStatus">
+			<div class="iconBgArc_l gold"><img src="{{getImgRoot/}}/avatar/{{>user.avatar_id}}_140.png"></div>
+			<div class="contentsInner">
+				<dl>
+					<dt>戦闘力</dt><dd>{{>battle_power}}</dd>
+				</dl>
+				<div class="columnBox">
+					<dl>
+						<dt>攻撃</dt><dd>{{>attack}}</dd>
+						<dt>特攻</dt><dd>{{>sp_attack}}</dd>
+					</dl>
+					<dl>
+						<dt>防御</dt><dd>{{>defense}}</dd>
+						<dt>特防</dt><dd>{{>sp_defense}}</dd>
+					</dl>
+					<div class="wrapColumBoxParam">
+						<div class="inParm">
+							<span class="label32 jobType_power">力</span>
+							<span{{if job_bonus_pow !== 0}} class="up"{{/if}}>+{{>job_bonus_pow}}%</span>
+						</div>
+						<div class="inParm">
+							<span class="label32 jobType_tech">技</span>
+							<span{{if job_bonus_tech !== 0}} class="up"{{/if}}>+{{>job_bonus_tech}}%</span>
+						</div>
+						<div class="inParm">
+							<span class="label32 jobType_int">知</span>
+							<span{{if job_bonus_know !== 0}} class="up"{{/if}}>+{{>job_bonus_know}}%</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<button class="btn large deckBulkButton">一括装備する</button>
+
+	<div class="jsTabs">
+		<div class="tabNav">
+			<ul class="jsTabButtons">
+				<li><button class="select">武器</button></li>
+				<li><button>防具</button></li>
+			</ul>
+		</div>
+		<div class="jsTabInner">
+			<ul class="jsTabContents">
+				<li class="jsTabWeapon"></li>
+				<li class="jsTabProtector"></li>
+			</ul>
+		</div>
+	</div>
+
+	<hr>
+
+	<div class="helpList">
+		<ul>
+			<li><button class="link" data-href="help/detail/605/">装備ってなに？</button></li>
+			<li><button class="link" data-href="help/detail/606/">武器P・防具Pってなに？</button></li>
+			<li><button class="link" data-href="help/detail/607/">武器デッキ・防具デッキってなに？</button></li>
+		</ul>
+	</div>
+
+</div>
+
+
+
+{{escape}}
+<script id="jsTemplateDeck" type="text/x-jsrender">
+{{for decks}}
+	{{if #index===0}}
+		<h1 class="subHeader">
+			<span class="subHeaderBg_l"></span>
+			<span>装備中の{{if #parent.parent.parent.data.ajax_data.equip_type==1}}武器{{else}}防具{{/if}}デッキ</span>
+			<span class="subHeaderBg_r"></span>
+		</h1>
+		<section class="contents contentsShadow nowEquip">
+			<div class="statusData equipSetStatus">
+				<ul>
+					{{for equips}}
+					<li data-href="equip/detail/{{>user_equip_no}}/">
+						<button class="weapon link">
+							{{equipThumb equip_id=equip_id step=step size="small" /}}
+						</button>
+					</li>
+					{{/for}}
+				</ul>
+				<dl>
+					<dt>{{if #parent.parent.parent.data.ajax_data.equip_type==1}}武器{{else}}防具{{/if}}P</dt><dd>{{>cost_sum}}/{{>cost_max}}</dd>
+					<dt>{{if #parent.parent.parent.data.ajax_data.equip_type==1}}攻撃{{else}}防御{{/if}}</dt><dd>{{>power_sum}}</dd>
+					<dt>{{if #parent.parent.parent.data.ajax_data.equip_type==1}}特攻{{else}}特防{{/if}}</dt><dd>{{>sp_power_sum}}</dd>
+				</dl>
+			</div>
+			<div class="innerBtnBox">
+				<button class="btn jsDeckSaveConfirmButton">保存する</button>
+				<button class="btn" data-href="deck/edit/{{>#parent.parent.parent.data.ajax_data.equip_type}}/{{>deck_no}}/">編集する</button>
+			</div>
+		</section>
+
+		<h1 class="subHeader">
+			<span class="subHeaderBg_l"></span>
+			<span>保存中の{{if #parent.parent.parent.data.ajax_data.equip_type==1}}武器{{else}}防具{{/if}}デッキ</span>
+			<span class="subHeaderBg_r"></span>
+		</h1>
+
+	{{else equips}}
+		<div class="accordion jsAccordion jsDeck" data-index="{{>#index}}">
+			<section class="contents shadow">
+				<h1 class="jsAccordionButton">保存された{{if #parent.parent.parent.data.ajax_data.equip_type==1}}武器{{else}}防具{{/if}}デッキ{{if #index===1}}①{{else #index===2}}②{{else #index===3}}③{{/if}}</h1>
+				<!-- //開閉なかみ -->
+				<div class="accordionInner statusData equipSetStatus jsAccordionInner" style="display:none">
+					<ul>
+						{{for equips}}
+						<li data-href="equip/detail/{{>user_equip_no}}/">
+							<button class="weapon link">
+								{{equipThumb equip_id=equip_id step=step size="small" /}}
+							</button>
+						</li>
+						{{/for}}
+					</ul>
+					<dl>
+						<dt>{{if #parent.parent.parent.data.ajax_data.equip_type==1}}武器{{else}}防具{{/if}}P</dt><dd>{{>cost_sum}}/{{>cost_max}}</dd>
+						<dt>{{if #parent.parent.parent.data.ajax_data.equip_type==1}}攻撃{{else}}防御{{/if}}</dt><dd>{{>power_sum}}</dd>
+						<dt>{{if #parent.parent.parent.data.ajax_data.equip_type==1}}特攻{{else}}特防{{/if}}</dt><dd>{{>sp_power_sum}}</dd>
+					</dl>
+					<div class="innerBtnBox">
+						<button class="btn cancel jsButtonDeckRemoveConfirm">削除する</button>
+						<button class="btn jsButtonDeckLoadConfirm">装備する</button>
+					</div>
+				</div>
+			</section>
+		</div>
+	{{else}}
+		<div class="off accordion empty jsDeck" data-index="{{>#index}}">
+			<section class="contents shadow">
+				<h1>空き{{if #parent.parent.parent.data.ajax_data.equip_type==1}}武器{{else}}防具{{/if}}デッキ{{if #index===1}}①{{else #index===2}}②{{else #index===3}}③{{/if}}</h1>
+			</section>
+		</div>
+	{{/if}}
+{{/for}}
+</script>
+
+<script id="jsTemplateDeckBulk" type="text/x-jsrender">
+	<div class="modalInner">
+		<div class="itemUseConfirm">
+			<p>
+				武具をオススメ装備しました
+			</p>
+		</div>
+		<div class="parameter">
+			<p><h2>攻撃</h2>{{>attack}}（
+				{{if attack_diff>0}}<span class="up">↑{{>attack_diff}}
+				{{else attack_diff===0}}<span class="even">→
+				{{else attack_diff<0}}<span class="down">↓{{>~abs(attack_diff)}}
+				{{/if}}
+				</span>）
+			</p>
+			<p><h2>特攻</h2>{{>sp_attack}}（
+				{{if sp_attack_diff>0}}<span class="up">↑{{>sp_attack_diff}}
+				{{else sp_attack_diff===0}}<span class="even">→
+				{{else sp_attack_diff<0}}<span class="down">↓{{>~abs(sp_attack_diff)}}
+				{{/if}}
+				</span>）
+			</p>
+			<p><h2>防御</h2>{{>defense}}（
+				{{if defense_diff>0}}<span class="up">↑{{>defense_diff}}
+				{{else defense_diff===0}}<span class="even">→
+				{{else defense_diff<0}}<span class="down">↓{{>~abs(defense_diff)}}
+				{{/if}}
+				</span>）
+			</p>
+			<p><h2>特防</h2>{{>sp_defense}}（
+				{{if sp_defense_diff>0}}<span class="up">↑{{>sp_defense_diff}}
+				{{else sp_defense_diff===0}}<span class="even">→
+				{{else sp_defense_diff<0}}<span class="down">↓{{>~abs(sp_defense_diff)}}
+				{{/if}}
+				</span>）
+			</p>
+			<p><h2>武器P</h2>{{>weapon_cost}}（
+				{{if weapon_cost_diff>0}}<span class="up">↑{{>weapon_cost_diff}}
+				{{else weapon_cost_diff===0}}<span class="even">→
+				{{else weapon_cost_diff<0}}<span class="down">↓{{>~abs(weapon_cost_diff)}}
+				{{/if}}
+				</span>）
+			</p>
+			<p><h2>防具P</h2>{{>protector_cost}}（
+				{{if protector_cost_diff>0}}<span class="up">↑{{>protector_cost_diff}}
+				{{else protector_cost_diff===0}}<span class="even">→
+				{{else protector_cost_diff<0}}<span class="down">↓{{>~abs(protector_cost_diff)}}
+				{{/if}}
+				</span>）
+			</p>
+		</div>
+		<button class="btn cancel jsButtonBulkFix">閉じる</button>
+	</div>
+</script>
+
+<script id="jsTemplateDeckSaveConfirm" type="text/x-jsrender">
+	<div class="modalInner">
+		<p>{{>set_name}}に保存しますか？</p>
+		<div class="innerBtnBox">
+			<button class="btn cancel jsClosePopup">やめる</button>
+			<button class="btn jsClosePopup jsDeckSaveCompleteButton">保存する</button>
+		</div>
+	</div>
+</script>
+
+<script id="jsTemplateDeckSaveComplete" type="text/x-jsrender">
+	<div class="modalInner">
+		<p>保存しました。</p>
+		<button class="btn cancel jsButtonDeckSaveFix">閉じる</button>
+	</div>
+</script>
+
+<script id="jsTemplateDeckLoadConfirm" type="text/x-jsrender">
+	<div class="modalInner">
+		<p>{{>set_name}}を装備しますか？</p>
+		<div class="innerBtnBox">
+			<button class="btn cancel jsClosePopup">やめる</button>
+			<button class="btn jsClosePopup jsButtonDeckLoadFix">装備する</button>
+		</div>
+	</div>
+</script>
+
+<script id="jsTemplateDeckLoadComplete" type="text/x-jsrender">
+	<div class="modalInner">
+		<p>装備しました。</p>
+		<button class="btn cancel jsButtonDeckLoadEnd">閉じる</button>
+	</div>
+</script>
+
+<script id="jsTemplateDeckRemoveConfirm" type="text/x-jsrender">
+	<div class="modalInner">
+		<p>{{>set_name}}を削除しますか？</p>
+		<div class="innerBtnBox">
+			<button class="btn cancel jsClosePopup">やめる</button>
+			<button class="btn jsClosePopup jsButtonDeckRemoveFix">削除する</button>
+		</div>
+	</div>
+</script>
+
+<script id="jsTemplateDeckRemoveComplete" type="text/x-jsrender">
+	<div class="modalInner">
+		<p>削除しました。</p>
+		<button class="btn cancel jsButtonDeckRemoveEnd">閉じる</button>
+	</div>
+</script>
+
+{{/escape}}

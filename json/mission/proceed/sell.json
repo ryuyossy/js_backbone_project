@@ -1,0 +1,53 @@
+{
+	"status":200,
+	"sell":{
+		"equip_num_after":5
+	},
+	"field": {
+		"state": 1,
+		"progress_percent_after": 60,
+		"rest_distance_after": 30
+	},
+	"user": {
+		"mp_after": 150,
+		"mp_percent_after": 100,
+		"max_mp_after": 150,
+		"win_gil": 30,
+		"gil_after": 1200,
+		"exp_current_after": 0,
+		"exp_levelup_after": 100,
+		"exp_percent_after": 0,
+		"level_up": {
+			"level_after": 2,
+			"mp_max_after": 150,
+			"win_weapon_cost": 1,
+			"weapon_cost_after": 31,
+			"win_protector_cost": 1,
+			"protector_cost_after": 31,
+			"win_ability_cost": 1,
+			"ability_cost_after": 31
+		}
+	},
+	"clear_bonus": {
+		"weapon_cost_add": 0,
+		"protector_cost_add": 0,
+		"ability_cost_add": 0
+	},
+	"action": {
+		"type": "equipTreasure",
+		"equip_treasure_type": "equipment",
+		"user_equip_no": 3,
+		"equip_id": 2,
+		"equip_name": "こんぼう",
+		"equip_type": 1,
+		"rarity": 1,
+		"grow_type": 2,
+		"cost": 20,
+		"power": 500,
+		"special_power": 500,
+		"equip_over_flg": false,
+		"equip_num_after": 5,
+		"equip_max_num_after": 50,
+		"first_get_flg": true
+	}
+}

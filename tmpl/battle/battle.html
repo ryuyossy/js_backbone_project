@@ -1,0 +1,454 @@
+<div id="battle">
+	<div class="battleInner">
+
+		<header id="battleHeader">
+			<div class="myGuildName{{if own_guild.gp > enemy_guild.gp}} win{{else own_guild.gp < enemy_guild.gp}} lose{{/if}}">
+				<h1 data-href="guild/">{{>own_guild.name}}</h1>
+				<p><span>{{>~commaFormat(own_guild.gp)}}</span> BP</p>
+			</div>
+
+			<div class="opponentGuildName{{if own_guild.gp < enemy_guild.gp}} win{{else own_guild.gp > enemy_guild.gp}} lose{{/if}}">
+				<h1 data-href="guild/other/{{>enemy_guild.id}}/">{{>enemy_guild.name}}</h1>
+				<p><span>{{>~commaFormat(enemy_guild.gp)}}</span> BP</p>
+			</div>
+		</header>
+
+		<button class="link reload"><span class="hide">更新</span></button>
+		<div class="reloadTime">更新 {{:response_time}}</div>
+
+		{{if user.tp < 10}}
+		<!-- AP回復 -->
+		<div class="navicoAnnouncementOfBattle navicoApCure"></div>
+		{{else user.hp == 0}}
+		<!-- HP回復 -->
+		<div class="navicoAnnouncementOfBattle navicoHpCure"></div>
+		{{else (enemy_guild.fainted_flg && !user.back_flg && own_guild.gp < enemy_guild.gp)
+			&& (combo.attack_success_flg || combo.attack_combo_num == 0)
+		}}
+		<!-- 劣勢で相手が全員気絶（前衛時） -->
+		<div class="navicoAnnouncementOfBattle navicoMoreAttack"></div>
+		{{else enemy_guild.fainted_flg && !user.back_flg && own_guild.gp > enemy_guild.gp
+			&& (combo.yell_success_flg || combo.yell_combo_num == 0)
+		}}
+		<!-- 優勢で相手前衛が全滅している（前衛時） -->
+		<div class="navicoAnnouncementOfBattle navicoSpecialYell"></div>
+		{{else combo.yell_combo_num != 0 && user.back_flg && combo.yell_success_flg}}
+		<!-- エールコンボ発生中（後衛時） -->
+		<div class="navicoAnnouncementOfBattle navicoYell"></div>
+		{{else (combo.attack_combo_num != 0 && combo.attack_success_flg) && (
+			(!user.back_flg && enemy_guild.fainted_flg && own_guild.gp < enemy_guild.gp)
+			|| (!user.back_flg && !enemy_guild.fainted_flg)
+			|| (user.back_flg && enemy_guild.fainted_flg && own_guild.gp < enemy_guild.gp)
+			|| (user.back_flg && !enemy_guild.fainted_flg)
+		)}}
+		<!-- 攻撃コンボ発生中 -->
+		<div class="navicoAnnouncementOfBattle navicoAttack"></div>
+		{{else !combo.yell_success_flg && combo.yell_combo_num != 0 && user.back_flg}}
+		<!-- エールコンボ待ち（後衛時）-->
+		<div class="navicoAnnouncementOfBattle navicoWait"></div>
+		{{else !combo.attack_success_flg && combo.attack_combo_num != 0}}
+		<!-- 攻撃コンボ待ち -->
+		<div class="navicoAnnouncementOfBattle navicoWait"></div>
+		{{else user.tension >= 100}}
+		<!-- テンションマックス時 -->
+		<div class="navicoAnnouncementOfBattle navicoTensionMax"></div>
+		{{else own_guild.gp > enemy_guild.gp}}
+		<!-- 優勢 -->
+		<div class="navicoAnnouncementOfBattle navicoWin"></div>
+		{{else own_guild.gp < enemy_guild.gp}}
+		<!-- 劣勢 -->
+		<div class="navicoAnnouncementOfBattle navicoLose"></div>
+		{{/if}}
+
+		<canvas id="canvas" width="320" height="200"></canvas>
+		<div class="jsLoaderBox"><div class="jsLoaderA"></div></div>
+
+		<section id="battleStatus">
+			{{if combo.have_never_attacked_flg == false}}
+			<div class="combo attack">
+				<span class="action"><span class="hide">攻撃</span></span>
+				<div class="chain">
+					{{for ~split(combo.attack_combo_num,'')}}
+					<span class="numWhite num_{{>#data}}"><span class="hide">{{>#data}}</span></span>
+					{{/for}}
+				</div>
+
+				{{if combo.attack_combo_num == 0}}
+				<!-- // コンボリセット時  -->
+				<div class="remainingTime reset">
+					<div class="remainingTimeInner">
+						コンボリセット
+						<span class="rest">残り 00:00</span>
+					</div>
+				</div>
+				{{else combo.attack_success_flg == true}}
+				<!-- // コンボチャンス -->
+				<div class="remainingTime chance">
+					<div class="remainingTimeInner">
+						コンボチャンス！
+						<span class="rest">残り {{>combo.attack_rest_time}}</span>
+					</div>
+				</div>
+				{{else}}
+				<!-- // 通常アタック -->
+				<div class="remainingTime">
+					<div class="remainingTimeInner">
+						コンボ待ち時間
+						<span class="rest">残り {{>combo.attack_rest_time}}</span>
+					</div>
+				</div>
+				{{/if}}
+			</div>
+			{{/if}}
+
+			{{if combo.have_never_yelled_flg == false}}
+			<div class="combo yell">
+				<span class="action"><span class="hide">エール</span></span>
+				<div class="chain">
+					{{for ~split(combo.yell_combo_num,'')}}
+					<span class="numWhite num_{{:#data}}"><span class="hide">{{:#data}}</span></span>
+					{{/for}}
+				</div>
+
+				{{if combo.yell_combo_num == 0}}
+				<!-- // コンボリセット時 -->
+				<div class="remainingTime reset">
+					<div class="remainingTimeInner">
+						コンボリセット
+						<span class="rest">残り 00:00</span>
+					</div>
+				</div>
+				{{else combo.yell_success_flg == true}}
+					{{if user.back_flg == true || (enemy_guild.fainted_flg == true && own_guild.gp > enemy_guild.gp)}}
+					<!-- // コンボチャンス -->
+					<div class="remainingTime chance">
+						<div class="remainingTimeInner">
+							コンボチャンス！
+							<span class="rest">残り {{>combo.yell_rest_time}}</span>
+						</div>
+					</div>
+					{{else}}
+					<div class="remainingTime">
+						<div class="remainingTimeInner">
+						コンボ継続中!!
+						<span class="rest">残り {{>combo.yell_rest_time}}</span>
+						</div>
+					</div>
+					{{/if}}
+				{{else}}
+				<!-- // 通常エール -->
+				<div class="remainingTime">
+					<div class="remainingTimeInner">
+					コンボ待ち時間
+					<span class="rest">残り {{>combo.yell_rest_time}}</span>
+					</div>
+				</div>
+				{{/if}}
+			</div>
+			{{/if}}
+
+		</section>
+
+		<div class="gergeBox">
+			<div class="tentionGerge{{if user.tension >= 100}} max{{/if}}">
+				<div class="gergeBg"><span class="gerge tention" style="width:{{>user.tension}}%;"></span></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<section id="battleMenu" class="metalPanel">
+	<div class="battleActionBtn jsBattleActionBtn">
+		{{if !user.back_flg && own_guild.gp > enemy_guild.gp && enemy_guild.fainted_flg == true}}
+		<button class="btn_l disable">
+			<span class="hide">攻撃</span>
+			<span class="expend">消費AP 10</span>
+		</button>
+		<button class="frontYell{{if user.tp < 10 || user.hp == 0}} disable{{/if}}" data-href="battle/special_yell/" data-linked="false">
+			<span class="hide">エール</span>
+			{{if user.tp < 10}}
+			<span class="expend">AP不足</span>
+			{{else}}
+			<span class="expend">消費AP 10</span>
+			{{/if}}
+		</button>
+		{{else}}
+		<button class="btn_l battle regular{{if user.back_flg && own_guild.gp > enemy_guild.gp && enemy_guild.fainted_flg == true}} disable{{/if}}" data-href="battle/gauge/" data-linked="false">
+			<span class="hide">攻撃</span>
+			{{if user.hp == 0}}
+			<span class="expend">HP 0</span>
+			{{else user.tp < 10}}
+			<span class="expend">AP不足</span>
+			{{else}}
+			<span class="expend">消費AP 10</span>
+			{{/if}}
+		</button>
+		{{/if}}
+
+		<button class="btn_l battleWhite special ability_close">
+			<span class="hide">アビリティ</span>
+		</button>
+
+		{{if user.back_flg}}
+		<button class="btn_l viridian yell{{if own_guild.fainted_flg === true && enemy_guild.fainted_flg === true}} disable{{/if}}" data-href="battle/yell/" data-linked="false">
+			<span class="hide">エール</span>
+			{{if user.tp < 10}}
+			<span class="expend">AP不足</span>
+			{{else}}
+			<span class="expend">消費AP 10</span>
+			{{/if}}
+		</button>
+		{{else}}
+		<button class="btn_l turquoise recovery">
+			<span class="hide">HP回復</span>
+			{{if user.tp < 20}}
+			<span class="expend">AP不足</span>
+			{{else}}
+			<span class="expend">消費AP 20</span>
+			{{/if}}
+		</button>
+		{{/if}}
+	</div>
+
+
+	<section class="abilityList jsAbilityList" style="display: none;">
+	{{if abilities && abilities.length > 0}}
+		{{for abilities}}
+		<article>
+			<div class="abilityInner">
+				<h1>{{>name}}</h1>
+				<p>{{>description}}</p>
+				<div class="description">
+					<dl>
+						<dt>消費AP</dt><dd>{{>use_tp}}{{if rest_use_num >= 0}}（残り{{>rest_use_num}}回）{{/if}}</dd>
+					</dl>
+					{{if executable_flg}}
+					<button class="btn_l battle jsAbilityBtn"{{if gage_flg || animation_flg}} data-href="battle/{{if gage_flg}}gauge{{else}}ability{{/if}}/"{{/if}} data-ability_id="{{>ability_id}}" data-linked="false">使う</button>
+					{{else}}
+						{{if not_executable_reason == "tp loss"}}
+							<button class="btn_l disable">AP不足</button>
+						{{else}}
+							<button class="btn_l disable">使えない</button>
+						{{/if}}
+					{{/if}}
+				</div>
+			</div>
+		</article>
+		{{/for}}
+
+	{{else}}
+		<!-- // アビリティが1つもない場合に表示 -->
+		<article>
+			<div class="abilityInner">
+				<p class="noAbility">
+					使用出来るアビリティが<br>
+					装備されていません
+				</p>
+			</div>
+		</article>
+	{{/if}}
+	</section>
+
+
+	<section id="myStatus" class="statusData_icon">
+		<div class="columnBox">
+			<div class="iconBgArc_l blue"><img src="{{getImgRoot/}}/avatar/{{>user.avatar_id}}_140.png"></div>
+			<div class="contentsInner">
+				<h1>
+					<span class="formation {{if user.back_flg}}rearGuard{{else}}vanGuard{{/if}}"><span class="hide">{{if user.back_flg}}後衛{{else}}前衛{{/if}}</span></span>{{>user.name}}<!-- //全角14文字まで -->
+				</h1>
+				<table class="gergeTable short">
+					<tr>
+						<th>AP</th>
+						<td class="gergeBox">
+							<div class="gergeBgFrame">
+								<div class="gergeBg">
+									<span class="gerge battleP" style="width:{{>user.tp}}%;"></span>
+								</div>
+							</div>
+						</td>
+						<td>{{>user.tp}}<span class="denominator">/100</span></td>
+					</tr>
+					<tr>
+						<th>HP</th>
+						<td class="gergeBox">
+							<div class="gergeBgFrame">
+								<div class="gergeBg">
+									<span class="gerge hp" style="width:{{>user.hp_percent}}%;"></span>
+								</div>
+							</div>
+						</td>
+						<td>{{>user.hp}}<span class="denominator">/{{>user.max_hp}}</span></td>
+					</tr>
+				</table>
+				<!-- <dl>
+					<dt class="job">ジョブ</dt><dd>{{>user.job_name}}</dd>
+					<dt class="jobExp">JEx.</dt><dd>{{>user.job_ex_current}}/{{>user.job_ex_master}}</dd>
+				</dl> -->
+			</div>
+		</div>
+		<div id="jobStatusFrames">
+			<article>
+				<h1>{{>user.job_name}}</h1>
+				<table class="jobTables">
+					<tr class="jobsExp">
+						<th>ジョブ経験値</th>
+						<td>
+							{{if user.job_ex_current < user.job_ex_master}}
+							{{>user.job_ex_current}}
+							{{else}}
+							<span class="overMaximum">{{>user.job_ex_current}}</span>
+							{{/if}}
+							<span class="denominator">/{{>user.job_ex_master}}</span>
+						</td>
+						<td>JEx</td>
+					</tr>
+				</table>
+				<table class="jobTables">
+					<tr class="abilityGet">
+						<th>アビリティ</th>
+						<td class="abliIco">
+							<ul class="abilitiesIco">
+								{{for user.abilities}}
+								{{if remaining_jex > 0}}
+								<li class="unmastered">○</li>
+								{{else}}
+								<li class="mastered">●</li>
+								{{/if}}
+								{{/for}}
+							</ul>
+						</td>
+						{{if ~nextGoRoundJex(user.abilities) }}
+						<td class="nextCnt">
+							次回獲得まで{{> ~nextGoRoundJex(user.abilities) /}}
+						</td>
+						<td>JEx</td>
+						{{/if}}
+					</tr>
+				</table>
+			</article>
+		</div>
+	</section>
+	<div class="innerBtnBox">
+		<button class="btn cheer" data-href="battle/cheer/">鼓舞でAP回復</button><button class="btn quest" data-href="mission/stage/">クエストでAP回復</button>
+	</div>
+</section>
+
+<!--
+<section id="strategy" class="contents contentsShadow">
+<div class="contentsBorder">
+<h1>現在の作戦</h1>
+<p>
+	ガンガンいこうぜ！
+</p>
+</div>
+</section>
+
+<section id="strategy" class="contents contentsShadow change">
+<div class="contentsBorder">
+<h1>現在の作戦</h1>
+<div class="selectBox">
+	<select name="strategyList">
+		<option>ガンガン行こうぜ</option>
+		<option>いのちだいじに</option>
+		<option>まほうつかうな</option>
+	</select>
+	<span class="selector"></span>
+	<button class="btn selectBtn" data-href="#">更新</button>
+</div>
+</div>
+</section>
+-->
+
+<section id="situation" class="jsBattleSituationAndBbs jsTabs">
+	<div class="tabNav">
+		<!-- // <div class="badge">99</div>が未読表示です。非アクティブタブのみ出してください。桁は2桁が最大なので、99件以上は丸めてください。 -->
+		<ul class="jsTabButtons">
+			<li><button class="select" name="allStuation"><span>戦況</span></button>{{if unread_situation_num}}<div class="badge jsBattleTabNotification">{{>unread_situation_num}}</div>{{/if}}</li>
+			<li><button name="ownSituation"><span>ギルド掲示板</span></button>{{if unread_bbs_posts_num}}<div class="badge jsBattleTabNotification">{{>unread_bbs_posts_num}}</div>{{/if}}</li>
+		</ul>
+	</div>
+	<div class="situationList jsTabInner">
+		<ul class="jsTabContents">
+			<!-- // ここに掲示板と戦況を入れてください。データが入ったらCSSを調整します。絞り込みチェックはtmpl/common/list.htmlの459〜461行目に記述しました。 -->
+			<li class="jsTabSituation">
+				<div id="allStuation" class="situation jsBattleSituation">
+					<!-- // 絞り込みチェック -->
+					<div class="allCheck jsButtonOnlyOwnSituation">
+						<button class="link off">自分の戦況のみ</button>
+					</div>
+					<div class="jsListAll"></div>
+				</div>
+				<div class="arrowLink">
+					<button class="link next" data-href="battle/situation/detail/{{>date_param}}/{{>round}}/">ぜんぶ見る</button>
+				</div>
+			</li>
+			<li class="jsTabBbs">
+				{{for #data tmpl="#jsTemplateGuildBbs" /}}
+			</li>
+		</ul>
+	</div>
+</section>
+
+{{if 0}}
+<!-- // 戦況はギルド掲示板と統合する -->
+<div id="situation" class="jsBattleSituation jsTabs">
+	<div class="tabNav">
+		<ul class="jsTabButtons">
+			<li><button class="select" name="allStuation"><span>みんなの戦況</span></button></li>
+			<li><button name="ownSituation"><span>自分の戦況</span></button></li>
+		</ul>
+	</div>
+	<div class="jsTabInner">
+		<ul class="jsTabContents">
+			<li class="jsTabAllSituation">
+				<div id="allStuation" class="situation jsListAll"></div>
+			</li>
+			<li class="jsTabOwnSituation">
+				<div id="ownStuation" class="situation jsListAll"></div>
+			</li>
+		</ul>
+	</div>
+	<div class="arrowLink">
+		<button class="link next" data-href="battle/situation/detail/{{>date_param}}/{{>round}}/">ぜんぶ見る</button>
+	</div>
+</div>
+{{/if}}
+
+<hr>
+
+<section class="helpList topHelp">
+	<ul>
+		<li><button class="link" data-href="help/detail/202/">バトルってどうやって遊ぶの？</button></li>
+		<li><button class="link" data-href="help/detail/206/">どうしたらバトルに勝てるの？</button></li>
+		<li><button class="link" data-href="help/detail/213/">コンボってなに？</button></li>
+		<li><button class="link" data-href="help/detail/212/">エールってなに？</button></li>
+		<li><button class="link" data-href="help/detail/214/">鼓舞ってなに？</button></li>
+	</ul>
+</section>
+
+
+
+{{escape}}
+<script id="jsTemplateGuildBbs" type="text/x-jsrender">
+	<section id="guildBbs" class="jsGuildBbs">
+		<div class="postForm_icon">
+			<div class="formInner">
+				<div class="iconBgArc_s gold"><img src="{{getImgRoot/}}/avatar/{{>user.avatar_id}}_140.png"></div>
+				<div class="inputBox">
+					<textarea class="jsGuildBbsTopicTextarea" placeholder="つぶやく…"></textarea>
+					<button class="btn post jsGuildBbsTopicSubmit">投稿する</button>
+				</div>
+			</div>
+		</div>
+		<div class="jsGuildBbsTopics">
+			<div class="jsListAll">
+				{{for #data tmpl="#jsTemplateGuildBbsTopics" /}}
+			</div>
+			<div class="arrowLink">
+				<span class="link next" data-href="guild/bbs/">ぜんぶ見る</span>
+			</div>
+		</div>
+	</section>
+</script>
+{{/escape}}

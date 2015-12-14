@@ -1,0 +1,146 @@
+@charset "utf-8";
+@import "base";
+@import "ruleset";
+
+%listsStyle {
+	width:95%;
+	margin:0 auto;
+	padding:8px 0;
+}
+%tdStyles {
+	text-align: center;
+	vertical-align: middle;
+	color: white;
+}
+%mgnStyles {
+	margin:0 8px;
+}
+%boderStyles {
+	border: 1px #968F5B solid;
+}
+@mixin tableStyles($bgColor) {
+	background-color: $bgColor;
+	width: 60px;
+	height: 40px;
+	text-align: center;
+	vertical-align: middle;
+	color: white;
+	font-weight: bold;
+}
+// bravebattle_shorttutorial
+.battleWeeks {
+	.battleWeekBn {
+		position: relative;
+		margin: 8px auto 0 auto;
+		.battleSummary {
+			position: absolute;
+			top: 128px;
+			left: 16px;
+			width: 290px;
+			height: 43px;
+		}
+	}
+	.paramStatus {
+		margin: 52px auto 16px auto;
+	}
+	.pointGetList {
+		margin: 8px auto 16px auto;
+		.contents {
+			@extend %listsStyle;
+		}
+	}
+	.otherConfirm {
+		margin-bottom: 16px;
+	}
+	.headMarg {
+		margin-top: 8px;
+	}
+	.outcomeTable {
+		margin-top: 10px;
+		table {
+			width: 304px;
+			height: 110px;
+			margin: 0 auto;
+		}
+		th {
+			@extend %boderStyles;
+		}
+		td {
+			@extend %boderStyles;
+		}
+		.gameListBox {
+			background-color: #E0D4A9;
+			.borderNone {
+				border-left: none;
+				border-top: none;
+				background-color: #544120;
+			}
+			.gameBox {
+				width: 60px;
+				height: 30px;
+				text-align: center;
+				vertical-align: middle;
+				color: #53401F;
+			}
+		}
+		.defeat {
+			.winBox {
+				@include tableStyles(#DC0000);
+			}
+			td {
+				@extend %tdStyles;
+			}
+			.label48 {
+				@extend %mgnStyles;
+			}
+		}
+		.loose {
+			.looseBox {
+				@include tableStyles(#0081B0);
+			}
+			td {
+				@extend %tdStyles;
+			}
+			.label48 {
+				@extend %mgnStyles;
+				background-color: #0082AE;
+			}
+		}
+	}
+	.message.navico_arc {
+		margin:8px auto 16px auto;
+	}
+	.btn.battle.large {
+		@extend .otherConfirm;
+	}
+	.remunerationList {
+		margin: $inner_margin 0 $inner_margin 0;
+		.rmrCnt {
+			@extend %listsStyle;
+			margin-bottom: $inner_margin;
+			.cleared{
+				@include backgroundSize("/parts/cleared_stamp.png",0,0,no-repeat);
+				position:absolute;
+				right:8px;
+				bottom:8px;
+				width:76px;
+				height:24px;
+			}
+		}
+	}
+	.arrowGiftLink {
+		margin-bottom: 2px;
+	}
+	.questNvgation {
+		@include backgroundSize("/parts/shortTutorial_brave_top.png",0,0,no-repeat);
+		display:block;
+		height:160px;
+	}
+	.questshortBn {
+		margin:16px auto 0 auto;
+	}
+	.title {
+		display:block;
+		margin:0 auto;
+	}
+}

@@ -1,0 +1,30 @@
+
+<h1 class="mainHeader">アイテム</h1>
+
+<div id="itemList">
+	{{for items}}
+	<section class="contents contentsShadow statusData_icon">
+		<div class="columnBox">
+			<img src="{{getImgRoot/}}/item/{{>item_id}}.png">
+			<div class="contentsInner">
+				<h1>{{>item_name}}</h1>
+				<dl>
+					<dt>所持数</dt><dd>{{>own_num}}</dd>
+				</dl>
+				<p>{{>description}}</p>
+			</div>
+		</div>
+		{{if own_num !== 0 && notice}}
+		<span class="label48">{{>notice}}</span>
+		{{/if}}
+
+		{{if own_num !== 0 && usable_flg }}
+		<button class="btn jsButtonItemUseConfirm" data-item-id="{{>item_id}}">使用する</button>
+		{{/if}}
+	</section>
+	{{/for}}
+</div>
+<div class="arrowLink">
+	<button class="link next" data-href="shop/list/">ショップ</button>
+</div>
+

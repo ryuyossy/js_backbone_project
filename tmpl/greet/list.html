@@ -1,0 +1,33 @@
+<h1 class="mainHeader">あいさつ</h1>
+
+<div id="greetList">
+	<section id="greet" class="jsListAll">
+		 {{for #data tmpl="#jsTemplateGreetList" /}}
+	</section>
+	{{if greets_more_flg}}
+	<div class="moreLink jsListMore">
+		<button class="link"><span>もっと見る</span></button>
+	</div>
+	{{/if}}
+    
+    	<section class="caution">
+		<article>
+			<ul>
+				<li>受け取ったあいさつは2週間保存されます。</li>
+			</ul>
+		</article>
+	</section>
+
+	<hr>
+
+	<div class="arrowLink">
+		<button class="link prev" data-href="profile/">プロフに戻る</button>
+	</div>
+
+	<div class="helpList">
+		<ul>
+			<li><button class="link" data-href="help/detail/1001/">あいさつってなに？</button></li>
+		</ul>
+	</div>
+
+</div>

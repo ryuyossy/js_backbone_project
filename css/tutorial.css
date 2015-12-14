@@ -1,0 +1,715 @@
+@charset "utf-8";
+/*
+@mixin box_shadow_contents_l($offsetSize,$z_index:-1){
+	content:'';
+	position:absolute;
+	left:$offsetSize;
+	top:75%;
+	bottom:17px;
+	width:50%;
+	min-height:5px;
+	max-width:150px;
+	background:#544123;
+	-webkit-box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	-webkit-transform:rotate(-5deg);
+	transform:rotate(-5deg);
+	z-index:$z_index;
+}
+@mixin box_shadow_contents_r($offsetSize,$z-index:-1){
+	content:'';
+	position:absolute;
+	right:$offsetSize;
+	top:75%;
+	bottom:17px;
+	width:50%;
+	min-height:5px;
+	max-width:150px;
+	background:#544123;
+	-webkit-box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	-webkit-transform:rotate(5deg);
+	transform:rotate(5deg);
+	z-index:$z_index;
+}
+*/
+/*
+@mixin backgroundResize($position:0 -60px){
+	@media screen and (min-width:319px){
+		width:320px;
+		@include background-size(320px,auto);
+	}
+	@media screen and (min-width:359px){
+		width:360px;
+		@include background-size(360px,auto);
+	}
+	@media screen and (min-width:361px){
+		width:480px;
+		@include background-size(480px,auto);
+		background-position:$position;
+	}
+}
+*/
+/*
+@mixin display-box{
+	display:flexbox;
+	-webkit-display:flexbox;
+}
+@mixin box-align($position){
+	flex-align:$position;
+	-webkit-flex-align:$position;
+}
+@mixin box-flex($ratio){
+	flex:$ratio;
+	-webkit-flex:$ratio;
+}
+@mixin box-pack($position){
+	flex-pack:$position;
+	-webkitflex-pack:$position;
+}
+*/
+/* line 6, ../scss/tutorial.scss */
+#tutorial_common .navMessage .proceed, #tutorial_common .navMessage.navico .navico, #tutorial_common .navMessage.navico .messageInner, #tutorial_common .navMessage.elder .elder, #tutorial_common .navMessage.elder .messageInner, #tutorial_common .tapArrow, #tutorial_common .tapArrow_up, #register .contentsBorder h1 .subscription:after, #register .registForm h2:before, #register .registForm h2.name .hide:before, #register .registForm h2.sex .hide:before, #register .registForm .selectSex input[type="radio"] {
+  display: inline-block;
+  background: url("/img/parts/sprite_tutorial_parts.png") 0 0 no-repeat;
+  -webkit-background-size: 350px 325px;
+  display: block;
+}
+
+/* line 10, ../scss/tutorial.scss */
+#tutorial_main {
+  display: inline-block;
+  background: url("/img/background/bg_tutorial_main.jpg") 0 0 no-repeat;
+  -webkit-background-size: 320px 416px;
+  display: block;
+}
+
+/* line 17, ../scss/tutorial.scss */
+.story {
+  position: absolute;
+  left: 31px;
+  top: 189px;
+  width: 258px;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  border: 1px solid #fff;
+  color: #fff;
+  text-shadow: -1px -1px 2px black, 1px -1px 2px black, -1px 1px 2px black, 1px 1px 2px black;
+}
+/* line 28, ../scss/tutorial.scss */
+.story p {
+  padding: 15px 0;
+  text-align: center;
+}
+
+/* line 35, ../scss/tutorial.scss */
+#tutorial_main {
+  position: relative;
+  width: 320px;
+  height: 416px;
+}
+
+/* line 42, ../scss/tutorial.scss */
+#tutorial_common {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+/* line 48, ../scss/tutorial.scss */
+#tutorial_common .progress {
+  position: absolute;
+  top: 130px;
+  width: 100%;
+  height: 160px;
+  background-color: #544123;
+  overflow: hidden;
+}
+/* line 56, ../scss/tutorial.scss */
+#tutorial_common .progress .gergeBox {
+  width: 304px;
+  margin: 0 auto;
+}
+/* line 60, ../scss/tutorial.scss */
+#tutorial_common .progress h1 {
+  position: relative;
+  margin: 9px 2px 0 2px;
+  font-size: 70%;
+  color: #fff;
+}
+/* line 66, ../scss/tutorial.scss */
+#tutorial_common .progress h1 .progressCount {
+  position: absolute;
+  right: 0;
+}
+/* line 71, ../scss/tutorial.scss */
+#tutorial_common .progress .gergeBg {
+  position: relative;
+  top: -3px;
+  height: 8px;
+  background-color: #00468C;
+}
+/* line 77, ../scss/tutorial.scss */
+#tutorial_common .progress .gerge.tutorial {
+  position: relative;
+  top: 0px;
+  background: #99cdff;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #99cdff), color-stop(50%, #59adff), color-stop(51%, #0d87ff), color-stop(100%, #005cb6));
+  background: -webkit-linear-gradient(#99cdff 0%, #59adff 50%, #0d87ff 51%, #005cb6 100%);
+  background: linear-gradient(#99cdff 0%, #59adff 50%, #0d87ff 51%, #005cb6 100%);
+  z-index: 10;
+}
+/* line 84, ../scss/tutorial.scss */
+#tutorial_common .progress ~ div.btn.single {
+  position: absolute;
+  left: 32px;
+  top: 300px;
+  width: 80%;
+  pointer-events: none;
+}
+/* line 91, ../scss/tutorial.scss */
+#tutorial_common .progress ~ .btnBox {
+  position: absolute;
+  left: 32px;
+  top: 300px;
+  width: 256px;
+}
+/* line 97, ../scss/tutorial.scss */
+#tutorial_common .progress ~ .btnBox .btn {
+  width: 100%;
+}
+/* line 100, ../scss/tutorial.scss */
+#tutorial_common .progress ~ .btnBox .btn:first-of-type {
+  margin-bottom: 8px;
+}
+/* line 106, ../scss/tutorial.scss */
+#tutorial_common .navMessage {
+  position: relative;
+}
+/* line 109, ../scss/tutorial.scss */
+#tutorial_common .navMessage .proceed {
+  position: absolute;
+  width: 14px;
+  height: 13px;
+  background-position: -1px -21px;
+}
+/* line 118, ../scss/tutorial.scss */
+#tutorial_common .navMessage.navico .navico {
+  position: absolute;
+  right: 0;
+  width: 96px;
+  height: 113px;
+  background-position: -250px -128px;
+}
+/* line 126, ../scss/tutorial.scss */
+#tutorial_common .navMessage.navico .messageInner {
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  width: 220px;
+  height: 102px;
+  background-position: 0 -220px;
+}
+/* line 135, ../scss/tutorial.scss */
+#tutorial_common .navMessage.navico .messageInner .messageBody {
+  display: block;
+  margin: 10px 18px 10px 10px;
+}
+/* line 140, ../scss/tutorial.scss */
+#tutorial_common .navMessage.navico .proceed {
+  right: 20px;
+  bottom: 12px;
+}
+/* line 146, ../scss/tutorial.scss */
+#tutorial_common .navMessage.elder .elder {
+  position: absolute;
+  width: 108px;
+  height: 122px;
+  background-position: -237px 0;
+}
+/* line 153, ../scss/tutorial.scss */
+#tutorial_common .navMessage.elder .messageInner {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  width: 220px;
+  height: 102px;
+  background-position: -1px -113px;
+}
+/* line 162, ../scss/tutorial.scss */
+#tutorial_common .navMessage.elder .messageInner .messageBody {
+  display: block;
+  margin: 10px 10px 10px 18px;
+}
+/* line 167, ../scss/tutorial.scss */
+#tutorial_common .navMessage.elder .proceed {
+  right: 12px;
+  bottom: 12px;
+}
+/* line 173, ../scss/tutorial.scss */
+#tutorial_common .tapArrow {
+  position: absolute;
+  width: 66px;
+  height: 74px;
+  background-position: -142px -30px;
+}
+/* line 180, ../scss/tutorial.scss */
+#tutorial_common .tapArrow_up {
+  position: absolute;
+  width: 66px;
+  height: 75px;
+  background-position: -69px -29px;
+}
+
+/* line 191, ../scss/tutorial.scss */
+#register .contents {
+  width: 95%;
+  margin: 8px auto;
+  padding: 8px 0;
+}
+/* line 196, ../scss/tutorial.scss */
+#register .contentsBorder {
+  min-height: 85px;
+}
+/* line 199, ../scss/tutorial.scss */
+#register .contentsBorder h1 {
+  height: 20px;
+  margin: -4px 6px 0 4px;
+}
+/* line 202, ../scss/tutorial.scss */
+#register .contentsBorder h1 .subscription:after {
+  visibility: visible;
+  content: "";
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: 88px;
+  top: 9px;
+  width: 89px;
+  height: 17px;
+  z-index: auto;
+  background-position: 0 -1px;
+}
+/* line 209, ../scss/tutorial.scss */
+#register .registForm {
+  width: 95%;
+  margin: 16px auto 0 auto;
+}
+/* line 213, ../scss/tutorial.scss */
+#register .registForm input {
+  -webkit-appearance: none;
+}
+/* line 216, ../scss/tutorial.scss */
+#register .registForm h2 {
+  position: relative;
+}
+/* line 218, ../scss/tutorial.scss */
+#register .registForm h2:before {
+  visibility: visible;
+  content: "";
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 13px;
+  height: 12px;
+  z-index: auto;
+  background-position: -97px -5px;
+}
+/* line 224, ../scss/tutorial.scss */
+#register .registForm h2.name .hide:before {
+  visibility: visible;
+  content: "";
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: 18px;
+  top: 0;
+  width: 31px;
+  height: 16px;
+  z-index: auto;
+  background-position: -117px -3px;
+}
+/* line 229, ../scss/tutorial.scss */
+#register .registForm h2.name .caption {
+  position: relative;
+  left: 48px;
+  top: -1px;
+  color: #B8A46B;
+}
+/* line 236, ../scss/tutorial.scss */
+#register .registForm h2.sex {
+  margin-top: 32px;
+}
+/* line 239, ../scss/tutorial.scss */
+#register .registForm h2.sex .hide:before {
+  visibility: visible;
+  content: "";
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: 18px;
+  top: 0;
+  width: 31px;
+  height: 15px;
+  z-index: auto;
+  background-position: -159px -4px;
+}
+/* line 246, ../scss/tutorial.scss */
+#register .registForm .inputName {
+  position: relative;
+  display: block;
+}
+/* line 250, ../scss/tutorial.scss */
+#register .registForm .inputName input[type="text"] {
+  display: block;
+  width: 240px;
+  padding: 8px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7) inset;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7) inset;
+  font-size: 110%;
+}
+/* line 259, ../scss/tutorial.scss */
+#register .registForm .inputName .textCount {
+  position: absolute;
+  right: 10px;
+  bottom: 4px;
+  color: #DFD2AB;
+}
+/* line 266, ../scss/tutorial.scss */
+#register .registForm .selectSex {
+  margin-top: 24px;
+  display: -webkit-box;
+  display: box;
+  font-weight: bold;
+}
+/* line 271, ../scss/tutorial.scss */
+#register .registForm .selectSex label {
+  display: -webkit-box;
+  display: box;
+  -webkit-box-align: center;
+  box-align: center;
+  -webkit-box-flex: 1;
+  box-flex: 1;
+}
+/* line 276, ../scss/tutorial.scss */
+#register .registForm .selectSex label.male {
+  margin-right: 24px;
+}
+/* line 280, ../scss/tutorial.scss */
+#register .registForm .selectSex input[type="radio"] {
+  display: inline-block;
+  width: 24px;
+  height: 25px;
+  margin-right: 6px;
+  background-position: -44px -19px;
+  border: none;
+  vertical-align: bottom;
+}
+/* line 289, ../scss/tutorial.scss */
+#register .registForm .selectSex input[type="radio"]:checked {
+  background-position: -18px -19px;
+}
+/* line 294, ../scss/tutorial.scss */
+#register .registForm .selectSex .iconBgRect_l {
+  margin-left: 10px;
+}
+/* line 298, ../scss/tutorial.scss */
+#register .registForm .label48 {
+  width: 90%;
+  margin: 8px auto;
+  font-size: 85%;
+}
+/* line 303, ../scss/tutorial.scss */
+#register .registForm .label48.caption {
+  background-color: #b9a46b;
+}
+/* line 308, ../scss/tutorial.scss */
+#register .registForm ~ .btn.large {
+  width: 55%;
+  margin-top: 32px;
+}
+
+/* line 315, ../scss/tutorial.scss */
+#presentEquip {
+  margin-top: 8px;
+}
+/* line 317, ../scss/tutorial.scss */
+#presentEquip .contents {
+  width: 95%;
+  margin: 0 auto 8px auto;
+}
+/* line 320, ../scss/tutorial.scss */
+#presentEquip .contents.contentsShadow {
+  min-height: 122px;
+}
+/* line 325, ../scss/tutorial.scss */
+#presentEquip > .btn.large {
+  margin: 32px auto;
+}
+
+/* line 332, ../scss/tutorial.scss */
+#tutorial_confirm .braveShort .subHeader {
+  margin-top: 1px;
+}
+/* line 335, ../scss/tutorial.scss */
+#tutorial_confirm .braveShort .subHeader3 {
+  color: #f3de9f;
+}
+/* line 338, ../scss/tutorial.scss */
+#tutorial_confirm .braveShort .questNvgation {
+  display: inline-block;
+  background: url("/img/parts/shortTutorial_brave_top.png") 0 0 no-repeat;
+  -webkit-background-size: 320px 160px;
+  display: block;
+  height: 160px;
+}
+/* line 343, ../scss/tutorial.scss */
+#tutorial_confirm .braveShort .questshortBn {
+  margin: 16px auto 0 auto;
+}
+/* line 346, ../scss/tutorial.scss */
+#tutorial_confirm .braveShort .title {
+  display: block;
+  margin: 0 auto;
+}
+/* line 350, ../scss/tutorial.scss */
+#tutorial_confirm .braveShort .shgoQuest {
+  margin: 32px auto 32px auto;
+}
+/* line 354, ../scss/tutorial.scss */
+#tutorial_confirm .review {
+  margin-bottom: 32px;
+}
+/* line 357, ../scss/tutorial.scss */
+#tutorial_confirm .review .subHeader3 {
+  margin-top: 0 !important;
+  background-color: #544123;
+}
+/* line 361, ../scss/tutorial.scss */
+#tutorial_confirm .review article {
+  position: relative;
+  color: #fff;
+}
+/* line 365, ../scss/tutorial.scss */
+#tutorial_confirm .review article p {
+  position: relative;
+  top: 15px;
+  height: 90px;
+  font-size: 85%;
+  line-height: 1.7em;
+}
+/* line 373, ../scss/tutorial.scss */
+#tutorial_confirm .review .caption1 {
+  display: inline-block;
+  background: url("/img/parts/battle_ready_caption_chara001.png") 215px bottom no-repeat;
+  -webkit-background-size: 101px 90px;
+  display: block;
+}
+/* line 377, ../scss/tutorial.scss */
+#tutorial_confirm .review .caption1 p {
+  left: 8px;
+}
+/* line 381, ../scss/tutorial.scss */
+#tutorial_confirm .review .caption2 {
+  display: inline-block;
+  background: url("/img/parts/battle_ready_caption_chara002.png") 0 bottom no-repeat;
+  -webkit-background-size: 106px 90px;
+  display: block;
+}
+/* line 385, ../scss/tutorial.scss */
+#tutorial_confirm .review .caption2 h1 {
+  margin-top: 6px;
+}
+/* line 388, ../scss/tutorial.scss */
+#tutorial_confirm .review .caption2 p {
+  left: 115px;
+}
+/* line 392, ../scss/tutorial.scss */
+#tutorial_confirm .review .caption3 {
+  display: inline-block;
+  background: url("/img/parts/battle_ready_caption_chara003.png") right bottom no-repeat;
+  -webkit-background-size: 118px 90px;
+  display: block;
+}
+/* line 396, ../scss/tutorial.scss */
+#tutorial_confirm .review .caption3 h1 {
+  margin-top: 6px;
+}
+/* line 399, ../scss/tutorial.scss */
+#tutorial_confirm .review .caption3 p {
+  left: 8px;
+}
+/* line 403, ../scss/tutorial.scss */
+#tutorial_confirm .review .caption4 {
+  display: inline-block;
+  background: url("/img/parts/battle_ready_caption_chara004.png") 0 bottom no-repeat;
+  -webkit-background-size: 110px 90px;
+  display: block;
+}
+/* line 407, ../scss/tutorial.scss */
+#tutorial_confirm .review .caption4 h1 {
+  margin-top: 6px;
+}
+/* line 410, ../scss/tutorial.scss */
+#tutorial_confirm .review .caption4 p {
+  left: 115px;
+}
+/* line 414, ../scss/tutorial.scss */
+#tutorial_confirm .review .caption5 {
+  display: inline-block;
+  background: url("/img/parts/battle_ready_caption_chara005.png") right bottom no-repeat;
+  -webkit-background-size: 185px 90px;
+  display: block;
+}
+/* line 418, ../scss/tutorial.scss */
+#tutorial_confirm .review .caption5 h1 {
+  margin-top: 6px;
+}
+/* line 421, ../scss/tutorial.scss */
+#tutorial_confirm .review .caption5 p {
+  left: 8px;
+}
+/* line 425, ../scss/tutorial.scss */
+#tutorial_confirm .review .caption6 {
+  display: inline-block;
+  background: url("/img/parts/battle_ready_caption_boss.png") left bottom no-repeat;
+  -webkit-background-size: 142px 90px;
+  display: block;
+}
+/* line 429, ../scss/tutorial.scss */
+#tutorial_confirm .review .caption6 h1 {
+  margin-top: 6px;
+}
+/* line 432, ../scss/tutorial.scss */
+#tutorial_confirm .review .caption6 p {
+  left: 115px;
+}
+/* line 437, ../scss/tutorial.scss */
+#tutorial_confirm .reward {
+  margin: 16px auto 8px auto;
+}
+/* line 439, ../scss/tutorial.scss */
+#tutorial_confirm .reward .contents {
+  margin: 0 auto 8px auto;
+}
+/* line 443, ../scss/tutorial.scss */
+#tutorial_confirm > .btn.large {
+  margin: 32px auto;
+}
+
+/* line 448, ../scss/tutorial.scss */
+#tutorial_complate {
+  position: relative;
+}
+/* line 450, ../scss/tutorial.scss */
+#tutorial_complate .subHeader {
+  margin-top: 24px;
+}
+/* line 453, ../scss/tutorial.scss */
+#tutorial_complate .jobList {
+  display: -webkit-box;
+  display: box;
+  margin: 16px 8px 32px 8px;
+  color: #fff;
+}
+/* line 458, ../scss/tutorial.scss */
+#tutorial_complate .jobList ~ .subHeader {
+  margin-bottom: 16px;
+}
+/* line 462, ../scss/tutorial.scss */
+#tutorial_complate .jobListInner {
+  -webkit-box-flex: 1;
+  box-flex: 1;
+  text-align: center;
+}
+/* line 465, ../scss/tutorial.scss */
+#tutorial_complate .jobListInner .iconBgRect_l {
+  margin: 0 auto;
+}
+/* line 468, ../scss/tutorial.scss */
+#tutorial_complate .jobListInner h1 {
+  margin-top: 4px;
+  font-size: 90%;
+}
+/* line 474, ../scss/tutorial.scss */
+#tutorial_complate .rewardList .contents {
+  width: 95%;
+  margin: 0 auto 8px auto;
+}
+/* line 479, ../scss/tutorial.scss */
+#tutorial_complate .listMenu {
+  margin-top: 24px;
+}
+/* line 482, ../scss/tutorial.scss */
+#tutorial_complate .btn.large {
+  margin: 32px auto;
+}
+
+/* line 509, ../scss/tutorial.scss */
+.modalBox .makeGuild .confirmGuildName {
+  display: block;
+  color: #8C0000;
+}
+/* line 513, ../scss/tutorial.scss */
+.modalBox .makeGuild .label48 {
+  background-color: #B9A46B;
+}
+/* line 518, ../scss/tutorial.scss */
+.modalBox .joinGuild table {
+  width: 100%;
+  margin-top: 8px;
+}
+/* line 522, ../scss/tutorial.scss */
+.modalBox .joinGuild th {
+  width: 45%;
+  padding: 2px 4px 0 0;
+  color: #8C0000;
+  text-align: right;
+}
+/* line 528, ../scss/tutorial.scss */
+.modalBox .joinGuild td {
+  padding: 2px 0;
+  vertical-align: baseline;
+  text-align: left;
+}
+/* line 536, ../scss/tutorial.scss */
+.modalBox .registConfirm .iconBgRect_l {
+  margin: 0 auto 8px auto;
+}
+/* line 539, ../scss/tutorial.scss */
+.modalBox .registConfirm .registUserDate {
+  text-align: center;
+}
+/* line 541, ../scss/tutorial.scss */
+.modalBox .registConfirm .registUserDate span {
+  display: inline-block;
+  margin-right: 4px;
+  color: #8C0000;
+}
+/* line 552, ../scss/tutorial.scss */
+.modalBox .organizeGuild .btn.large,
+.modalBox .joinGuild .btn.large,
+.modalBox .progressError .btn.large {
+  width: 60%;
+  margin-bottom: 0;
+}
+/* line 559, ../scss/tutorial.scss */
+.modalBox .guildOrganizeError .btn.large,
+.modalBox .guildJoinError .btn.large {
+  width: 100%;
+}
+/* line 561, ../scss/tutorial.scss */
+.modalBox .guildOrganizeError .btn.large:last-of-type,
+.modalBox .guildJoinError .btn.large:last-of-type {
+  margin-bottom: 0;
+}
+/* line 567, ../scss/tutorial.scss */
+.modalBox .innerBtnBox {
+  margin-top: 0;
+}

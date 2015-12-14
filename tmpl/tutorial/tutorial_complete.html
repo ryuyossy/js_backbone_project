@@ -1,0 +1,97 @@
+<div id="container">
+	<h1 class="mainHeader">チュートリアル完了</h1>
+
+	<div id="tutorial_complate">
+		<section class="message navico_arc">
+			<p>
+				<span>チュートリアル完了！<br>いろいろ獲得したから確認してね！</span>
+			</p>
+		</section>
+
+		<h1 class="subHeader">
+			<span class="subHeaderBg_l"></span>
+			<span>ジョブ獲得</span>
+			<span class="subHeaderBg_r"></span>
+		</h1>
+
+		<section class="jobList">
+			{{for win_jobs}}
+			<section class="jobListInner">
+				<div class="iconBgRect_l gold"><img src="{{getImgRoot/}}/avatar/{{>avatar_id}}_140.png"></div>
+				<h1>{{>job_name}}</h1>
+			</section>
+			{{/for}}
+		</section>
+
+		<h1 class="subHeader">
+			<span class="subHeaderBg_l"></span>
+			<span>獲得報酬</span>
+			<span class="subHeaderBg_r"></span>
+		</h1>
+
+		<section class="rewardList">
+			
+		{{for tutorial_rewards}}
+			<section class="contents shadow statusData_icon">
+				<div class="columnBox innerHeader">
+				{{if item_type===4}}
+					<img src="{{getImgRoot/}}/gacha/point.png">
+				{{else item_type===6}}
+					<img src="{{getImgRoot/}}/gacha/ticket.png">
+				{{else item_type===1}}
+					<img src="{{getImgRoot/}}/item/{{>item_id}}.png">
+				{{else item_type===3}}
+					<img src="{{getImgRoot/}}/equip/{{>item_id}}_128.png">
+				{{else item_type===5}}
+					<img src="{{getImgRoot/}}/item/gil.png">
+				{{/if}}
+					<div class="contentsInner">
+					{{if item_type===1 || item_type===3 || item_type===6}}
+						<h1>{{>item_name}}</h1>
+						<dl>
+							<dt>数量</dt><dd>{{>qty}}</dd>
+						</dl>
+					{{else item_type===4}}
+						<h1>{{>qty}}ガチャP</h1>
+					{{else item_type===5}}
+						<h1>{{>qty}}ギル</h1>
+					{{/if}}
+					</div>
+				</div>
+			</section>
+		{{/for}}
+
+		<section class="caution">
+			<article>
+				<ul>
+					<li>報酬はギフトから受け取れます。</li>
+				</ul>
+			</article>
+		</section>
+
+		<div class="message taicho_arc">
+			<p>
+				<span>本番のバトルまでに、クエストで鍛えておきたまえ！</span>
+			</p>
+		</div>
+
+		<div class="listMenu">
+			<ul>
+				<li><div class="link" data-href="mission/stage/">さっそくクエストへ！</div></li>
+				<li><div class="link" data-href="gacha/">ガチャで強力武器をゲット！</div></li>
+				<li><div class="link" data-href="job/">ジョブをチェンジ</div></li>
+				<li><div class="link" data-href="gift/list/">ギフトで報酬を受け取る</div></li>
+			</ul>
+		</div>
+
+		<button class="btn large" data-href="mypage/">マイページへ</button>
+
+	</div>
+
+	{{if product_mode}}
+		<!-- CAMP Onetag -->
+		<script type="text/javascript" src="http://ot.ca-mpr.jp/s/sp/10/?i4ot=192" charset="UTF-8"></script>
+		<!-- CAMP Onetag -->	
+	{{/if}}
+		
+</div>

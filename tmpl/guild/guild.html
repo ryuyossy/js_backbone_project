@@ -1,0 +1,271 @@
+<div class="jsShortTutorial" style="{{if !first_access_flg}}display:none{{/if}}">
+	<div class="guildShort">
+		<h1 class="mainHeader">ギルド</h1>
+		<section class="questNvgation">
+			<div class="message arc">
+				<p>
+					<span>一人で出来ない事も、みんなとなら!</br>仲間を集めて、目指せ最高のギルド!</span>
+				</p>
+			</div>
+		</section>
+		<h1 class="subHeader">
+			<span class="subHeaderBg_l"></span>
+			<span>様々な役職！</span>
+			<span class="subHeaderBg_r"></span>
+		</h1>
+		<div class="questshortBn">
+			<img src="{{getImgRoot/}}/parts/shortTutorial_guild_post.png" alt="様々な役職" class="title">
+		</div>
+		<h1 class="subHeader">
+			<span class="subHeaderBg_l"></span>
+			<span>ギルド広場で新たな出会い！</span>
+			<span class="subHeaderBg_r"></span>
+		</h1>
+		<div class="questshortBn guildNewMeet">
+			<img src="{{getImgRoot/}}/parts/shortTutorial_guild_meeting.png" alt="ギルド広場で新たな出会い" class="title">
+		</div>
+		<button class="btn large shgoQuest jsButtonCloseShortTutorial">さっそくギルドへ</button>
+	</div>
+</div>
+
+
+
+<div class="jsNormalView" style="{{if first_access_flg}}display:none{{/if}}">
+
+	<section id="guildTop">
+		<div class="emblemIcon_s"><span class="hide guildRank {{>guild_rank}}">ギルドランク：{{>guild_rank}}</span></div>
+		<h1 class="guildName link"{{if master_priv_flg}} data-href="guild/guild_name/edit/"{{/if}}>
+			<span class="guildNameText">{{>guild_name}}<!-- //9文字を超えると丸め --></span>
+			<!-- //自分のギルド・ギルド名編集：自分がマスターか執行役の場合に表示 -->
+			{{if master_priv_flg}}
+			<span class="edit"><span class="hide">編集</span></span>
+			{{/if}}
+		</h1>
+		<p class="guildStatus">
+			<span>ギルドLv.</span>{{>guild_level}}<span>総合BP</span>{{>~commaFormat(gp)}}<span>戦績</span>{{>win_num}}勝
+		</p>
+		<div class="masterComment">
+			<div class="iconBgArc_l gold link" data-href="{{if guild_master_flg }}profile/{{else}}profile/other/{{>master_user_id}}/{{/if}}">
+				<img src="{{getImgRoot/}}/avatar/{{>master_avatar_id}}_140.png">
+			</div>
+			<div class="commentBox">
+				<h1 class="masterName"><span class="hide">MASTER</span>{{>master_user_name}}<!-- //14文字を超えると丸め --></h1>
+				<p class="commentBody link"{{if master_priv_flg}} data-href="guild/master_comment/edit/"{{/if}}>
+					<span>{{>master_comment}}</span>
+				</p>
+				<!-- //自分のギルド・マスターコメント編集：自分がマスターの場合に表示 -->
+				{{if master_priv_flg}}
+				<span class="edit"><span class="hide">編集</span></span>
+				{{/if}}
+			</div>
+		</div>
+		{{if ranking && ranking.order}}
+		<dl class="currentRank{{if ranking.state === 'up'}} rankUp{{else ranking.state === 'stay'}} rankStay{{else ranking.state === 'down'}} rankDown{{/if}} link" data-href="guild/rank/">
+			<dt class="hide">現在のランキング</dt>
+			<dd><span>{{>ranking.order}}</span>位</dd>
+		</dl>
+		{{else ranking && guild_rank == 'F'}}
+		<dl class="currentRank out link" data-href="guild/rank/">
+			<dt>ランキング参加なし</dt>
+			<dd>ギルドランクE以上から</dd>
+		</dl>
+		{{/if}}
+
+		<!-- //自分のギルド：バトル中に表示 -->
+		{{if battle_end_rest}}
+		<p class="battleTime">
+			<span class="hide">[{{>battl_start_rest}}]バトル開催中</span>
+		</p>
+		<!-- //自分のギルド：バトル前の対戦相手が決定した場合に表示 -->
+		{{else enemy_exist_flg}}
+		<p class="opponent">
+			<span class="hide">対戦相手決定</span>
+		</p>
+		{{else}}
+
+		{{/if}}
+
+	</section>
+
+	<section id="guildAction">
+		<section class="memberList">
+		{{for members}}
+			{{if #index < 5}}
+			<div class="iconBox"><div class="iconBgArc_s gold link{{if !warm_up_flg}} training_yet{{/if}}" data-href="guild/members/"><img src="{{getImgRoot/}}/avatar/{{>avatar_id}}_140.png"></div>{{if ~root('user').user_id != user_id && ~root('battle_state')===3}}<span class="{{if warm_up_flg}}over{{else}}yet{{/if}}"></span>{{/if}}</div>
+			{{/if}}
+		{{/for}}
+			<div class="more">
+				<button class="link" data-href="guild/members/"><span>{{>member_num}}/{{>max_member_num}}</span></button>
+			</div>
+
+		</section>
+
+		{{if battle_end_rest}}
+		<button class="btn_l battle onBattle" data-href="battle/"><span class="hide">戦場へ</span></button>
+		{{else enemy_exist_flg}}
+		<div class="gergeBox">
+			<div class="tentionGerge {{if tension===100}}max{{/if}}">
+				<div class="gergeBg">
+					<span class="gerge tention" style="width:{{>tension}}%;"></span>
+				</div>
+			</div>
+		</div>
+		{{/if}}
+
+		{{if battle_end_rest || enemy_exist_flg}}
+		<div class="message taicho_arc">
+			<p>
+				<span>{{>npc_comment}}</span>
+			</p>
+		</div>
+		{{/if}}
+
+		{{if !battle_end_rest}}
+		{{if battle_enemy}}
+		<section class="contents contentsShadow statusData_icon link" data-href="guild/other/{{>battle_enemy.guild_id}}/">
+			<h1><span class="hide">対戦相手</span>{{>battle_enemy.guild_name}}</h1>
+			<div class="columnBox">
+				<div class="iconBgRect_l gold"><img src="{{getImgRoot/}}/avatar/{{>battle_enemy.master_avatar_id}}_140.png"></div>
+				<div class="contentsInner">
+					<dl>
+						<dt>ギルドLv.</dt><dd>{{>battle_enemy.guild_level}}</dd>
+						<dt>所属</dt><dd>{{>battle_enemy.current_member_num}}/{{>battle_enemy.max_member_num}}</dd>
+						<dt>総合BP</dt><dd>{{>~commaFormat(battle_enemy.gp)}}</dd>
+						<dt>戦績</dt><dd>{{>battle_enemy.battle_win_num}}勝</dd>
+						<!--リリース後対応
+						<dt>最高コンボ数</dt><dd>攻撃999　応援999</dd>
+						-->
+					</dl>
+				</div>
+			</div>
+		</section>
+		{{/if}}
+		{{/if}}
+
+		<!-- //自分のギルド・お知らせ -->
+		{{if guild_infos}}
+		<div class="listMenu">
+			<ul>
+				{{if guild_invite_num > 0}}
+				<li><div class="link" data-href="guild/invited/"><dl><dt class="label36_r4">NEW</dt><dd>ギルドへのお誘いが{{>guild_invite_num}}件あります</dd></dl></div></li>
+				{{/if}}
+				{{if user_authorize_num > 0}}
+				<li><div class="link" data-href="guild/join_requested/"><dl><dt class="label36_r4">NEW</dt><dd>ギルドへの加入申請が{{>user_authorize_num}}件あります</dd></dl></div></li>
+				{{/if}}
+				{{if new_member_flg}}
+				<li><div class="link" data-href="guild/members/"><dl><dt class="label36_r4">NEW</dt><dd>新メンバーが加入しました</dd></dl></div></li>
+				{{/if}}
+			</ul>
+		</div>
+		{{/if}}
+
+		<!-- //自分のギルド：ボタン（常に表示） -->
+		<div class="btnBox">
+			<div class="outerBtnBox">
+				<button class="btn" data-href="guild/members/">メンバー一覧</button>
+				<button class="btn" data-href="guild/position/list/">役職一覧</button>
+			</div>
+			<div class="outerBtnBox">
+				<button class="btn" data-href="guild/partner/">クエスト同行</button>
+				<button class="btn" data-href="guild/back/edit/">後衛希望設定</button>
+			</div>
+		</div>
+
+		<!-- //自分のギルド・自動承認設定：マスターと執行役のみ表示 -->
+		{{if master_priv_flg}}
+		<div class="autoPermissionControl">
+			<div class="setUpToggle">
+				<label>
+					自動承認設定<input type="checkbox"{{if auto_approve_flg}} checked="checked"{{/if}} class="jsButtonGuildAutoApproval">
+				</label>
+			</div>
+		</div>
+		{{/if}}
+	</section>
+
+	<!-- //ここから共通 -->
+	<div class="banner">
+		{{for #data tmpl="#jsTemplateBanners" /}}
+		<p>
+				<button class="link" data-href="startdash/"><img src="{{getImgRoot/}}/ad/banner_startdash2.png"><br>└バトルに参加してガチャチケットGET！┘</button>
+			</p>
+	</div>
+
+	<h1 class="subHeader">
+		<span class="subHeaderBg_l"></span>
+		<span>ギルド掲示板</span>
+		<span class="subHeaderBg_r"></span>
+	</h1>
+
+	<!-- //掲示板 -->
+	<section class="postForm_icon">
+		<div class="formInner">
+			<div class="iconBgArc_s gold"><img src="{{getImgRoot/}}/avatar/{{>user.avatar_id}}_140.png"></div>
+			<div class="inputBox">
+				<textarea class="jsGuildBbsTopicTextarea" placeholder="つぶやく…"></textarea>
+				<button class="btn share post jsGuildBbsTopicSubmit">投稿する</button>
+			</div>
+		</div>
+	</section>
+
+	<section id="guildBbs" class="jsGuildBbs jsGuildBbsTopics">
+		<div class="jsListAll">
+			{{for #data tmpl="#jsTemplateGuildBbsTopics" /}}
+		</div>
+		<div class="arrowLink">
+			<span class="link next" data-href="guild/bbs/">ぜんぶ見る</span>
+		</div>
+	</section>
+
+	<div class="banner">
+		<p>
+			<button class="link" data-href="guild/space/"><img src="{{getImgRoot/}}/ad/banner_guildplaza.png"><br>└ギルドメンバーを探すなら┘</button>
+		</p>
+	</div>
+
+	{{if !guild_master_flg}}
+	<button class="btn large {{if battle_state !== 1}}disable{{else}}cancel jsButtonGuildLeaveConfirm{{/if}}">退団</button>
+	{{/if}}
+
+	<hr>
+
+	<div class="helpList">
+		<ul>
+			<li><button class="link" data-href="help/detail/301/">ギルドってなに？</button></li>
+			{{if battle_state == 3}}
+			<li><button class="link" data-href="help/detail/311/">テンションゲージってなに？</button></li>
+			<li><button class="link" data-href="help/detail/215/">手合わせってなに？</button></li>
+			{{/if}}
+			<li><button class="link" data-href="help/detail/303/">メンバーが増えると？</button></li>
+			<li><button class="link" data-href="help/detail/302/">ギルド広場ってなに？</button></li>
+			<li><button class="link" data-href="help/detail/305/">役職ってなに？</button></li>
+			<li><button class="link" data-href="help/detail/201/">バトルってなに？</button></li>
+			<li><button class="link" data-href="help/detail/205/">後衛希望ってなに？</button></li>
+		</ul>
+	</div>
+
+</div>
+
+
+
+{{escape}}
+<script id="jsTemplatePopupGuildAutoApproval" type="text/x-jsrender">
+	<div class="modalInner">
+		<p>自動承認を{{if result}}設定{{else}}解除{{/if}}しました。</p>
+		<span class="btn short close autoset jsClosePopup">閉じる</span>
+	</div>
+</script>
+
+<script id="jsTemplatePopupGuildLeaveConfirm" type="text/x-jsrender">
+	<div class="modalInner">
+		<p>現在の所属ギルド「{{>guild_name}}」を退団してもよろしいですか？</p>
+		<p class="hpcmMessa">
+			ギルドを退団すると、あなたのギルド(Lv.1、ランクG)が自動的に設立されます。
+		</p>
+		<div class="innerBtnBox">
+			<button class="btn cancel jsClosePopup">やめる</button>
+			<button class="btn jsButtonJumpToGuildLeave">退団する</button>
+		</div>
+	</div>
+</script>
+{{/escape}}

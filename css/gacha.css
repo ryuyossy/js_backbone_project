@@ -1,0 +1,489 @@
+@charset "utf-8";
+/*
+@mixin box_shadow_contents_l($offsetSize,$z_index:-1){
+	content:'';
+	position:absolute;
+	left:$offsetSize;
+	top:75%;
+	bottom:17px;
+	width:50%;
+	min-height:5px;
+	max-width:150px;
+	background:#544123;
+	-webkit-box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	-webkit-transform:rotate(-5deg);
+	transform:rotate(-5deg);
+	z-index:$z_index;
+}
+@mixin box_shadow_contents_r($offsetSize,$z-index:-1){
+	content:'';
+	position:absolute;
+	right:$offsetSize;
+	top:75%;
+	bottom:17px;
+	width:50%;
+	min-height:5px;
+	max-width:150px;
+	background:#544123;
+	-webkit-box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	-webkit-transform:rotate(5deg);
+	transform:rotate(5deg);
+	z-index:$z_index;
+}
+*/
+/*
+@mixin backgroundResize($position:0 -60px){
+	@media screen and (min-width:319px){
+		width:320px;
+		@include background-size(320px,auto);
+	}
+	@media screen and (min-width:359px){
+		width:360px;
+		@include background-size(360px,auto);
+	}
+	@media screen and (min-width:361px){
+		width:480px;
+		@include background-size(480px,auto);
+		background-position:$position;
+	}
+}
+*/
+/*
+@mixin display-box{
+	display:flexbox;
+	-webkit-display:flexbox;
+}
+@mixin box-align($position){
+	flex-align:$position;
+	-webkit-flex-align:$position;
+}
+@mixin box-flex($ratio){
+	flex:$ratio;
+	-webkit-flex:$ratio;
+}
+@mixin box-pack($position){
+	flex-pack:$position;
+	-webkitflex-pack:$position;
+}
+*/
+/* line 6, ../scss/gacha.scss */
+#newEquip,
+#seasonAvatar {
+  margin: 0;
+  text-align: center;
+}
+
+/* line 13, ../scss/gacha.scss */
+#emblemGotState.contents {
+  width: 95%;
+  margin: -3px auto 0 auto;
+  padding: 8px 0;
+}
+/* line 19, ../scss/gacha.scss */
+#emblemGotState .contentsBorder h1 {
+  margin-top: 0 !important;
+}
+/* line 23, ../scss/gacha.scss */
+#emblemGotState dl {
+  width: 95%;
+  margin: 8px auto 0 auto;
+}
+/* line 26, ../scss/gacha.scss */
+#emblemGotState dl:last-of-type {
+  margin-bottom: 4px;
+}
+/* line 29, ../scss/gacha.scss */
+#emblemGotState dl:after {
+  content: "";
+  display: block;
+  overflow: hidden;
+  clear: both;
+}
+/* line 33, ../scss/gacha.scss */
+#emblemGotState dt {
+  float: left;
+  clear: both;
+  position: relative;
+  width: 64px;
+  height: 64px;
+}
+/* line 40, ../scss/gacha.scss */
+#emblemGotState dt.unidentified:after {
+  visibility: visible;
+  content: "";
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+/* line 45, ../scss/gacha.scss */
+#emblemGotState dt.link.on:after {
+  visibility: visible;
+  content: "";
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: auto;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+/* line 50, ../scss/gacha.scss */
+#emblemGotState dd {
+  margin-left: 72px;
+}
+/* line 52, ../scss/gacha.scss */
+#emblemGotState dd h2 {
+  font-weight: bold;
+  color: #544123;
+}
+/* line 56, ../scss/gacha.scss */
+#emblemGotState dd ul {
+  margin-top: 2px;
+}
+/* line 58, ../scss/gacha.scss */
+#emblemGotState dd ul li {
+  position: relative;
+  display: inline-block;
+  width: 43px;
+  height: 43px;
+  visibility: hidden;
+}
+/* line 65, ../scss/gacha.scss */
+#emblemGotState dd ul li.yet:after, #emblemGotState dd ul li.got:after {
+  display: inline-block;
+  background: url("/img/emblem/season_avatar/frame.png") 0 0 no-repeat;
+  -webkit-background-size: 43px 43px;
+  visibility: visible;
+  content: "";
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 43px;
+  height: 43px;
+  z-index: auto;
+}
+/* line 69, ../scss/gacha.scss */
+#emblemGotState dd ul li.got.new:before {
+  visibility: visible;
+  content: "";
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: 6px;
+  top: auto;
+  width: 32px;
+  height: 14px;
+  z-index: 3;
+  bottom: -4px;
+  content: "NEW";
+  background-color: #FFBF00;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  font-size: 70%;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-align: center;
+  line-height: 14px;
+}
+/* line 83, ../scss/gacha.scss */
+#emblemGotState dd ul.emblem_21003 li.got:after {
+  display: inline-block;
+  background: url("/img/emblem/season_avatar/21003.png") 0 0 no-repeat;
+  -webkit-background-size: 43px 43px;
+}
+/* line 88, ../scss/gacha.scss */
+#emblemGotState dd ul.emblem_13003 li.got:after {
+  display: inline-block;
+  background: url("/img/emblem/season_avatar/13003.png") 0 0 no-repeat;
+  -webkit-background-size: 43px 43px;
+}
+/* line 93, ../scss/gacha.scss */
+#emblemGotState dd ul.emblem_31003 li.got:after {
+  display: inline-block;
+  background: url("/img/emblem/season_avatar/31003.png") 0 0 no-repeat;
+  -webkit-background-size: 43px 43px;
+}
+
+/* line 103, ../scss/gacha.scss */
+#gacha .tabNav2 {
+  margin: 8px auto;
+}
+/* line 106, ../scss/gacha.scss */
+#gacha .subHeader3 {
+  margin: 16px 0 8px 0 !important;
+}
+/* line 109, ../scss/gacha.scss */
+#gacha .paramStatus {
+  margin-bottom: 8px;
+  font-size: 90%;
+}
+/* line 113, ../scss/gacha.scss */
+#gacha .btnBox {
+  color: #fff;
+  text-align: center;
+}
+/* line 117, ../scss/gacha.scss */
+#gacha .btnBox .btn,
+#gacha .btnBox .btn_l {
+  width: 80%;
+  font-size: 90%;
+  /*&[data-gacha-id="202"]{
+  	font-size:90%;
+  }*/
+}
+/* line 124, ../scss/gacha.scss */
+#gacha .btnBox .btn {
+  margin: 8px auto 0 auto;
+}
+/* line 127, ../scss/gacha.scss */
+#gacha .btnBox .label48 {
+  width: 60%;
+  margin: 0 auto 8px auto;
+  font-weight: normal;
+}
+/* line 133, ../scss/gacha.scss */
+#gacha .consume {
+  color: red;
+}
+/* line 136, ../scss/gacha.scss */
+#gacha .arrowLink {
+  margin: 8px auto 16px auto;
+}
+/* line 141, ../scss/gacha.scss */
+#gacha .sectionPremium h1,
+#gacha .sectionNormal h1 {
+  margin-top: 16px;
+}
+/* line 144, ../scss/gacha.scss */
+#gacha .sectionPremium header,
+#gacha .sectionNormal header {
+  display: -webkit-box;
+  display: box;
+  width: 95%;
+  margin: 8px auto;
+  color: #fff;
+}
+/* line 149, ../scss/gacha.scss */
+#gacha .sectionPremium header .gacha_img,
+#gacha .sectionNormal header .gacha_img {
+  display: block;
+  width: 128px;
+  height: 128px;
+  margin-right: 16px;
+}
+/* line 155, ../scss/gacha.scss */
+#gacha .sectionPremium header .description,
+#gacha .sectionNormal header .description {
+  -webkit-box-flex: 1;
+  box-flex: 1;
+}
+/* line 158, ../scss/gacha.scss */
+#gacha .sectionPremium header h1,
+#gacha .sectionNormal header h1 {
+  font-weight: bold;
+  color: #ffc926;
+  text-shadow: -1px -1px 2px black, 1px -1px 2px black, -1px 1px 2px black, 1px 1px 2px black;
+}
+/* line 164, ../scss/gacha.scss */
+#gacha .sectionPremium header.emblemTicketGacha h1,
+#gacha .sectionNormal header.emblemTicketGacha h1 {
+  width: 100%;
+  margin-top: 0;
+  text-align: center;
+}
+/* line 173, ../scss/gacha.scss */
+#gacha .sectionNormal .banner {
+  margin: 8px auto 16px auto;
+}
+/* line 176, ../scss/gacha.scss */
+#gacha .sectionNormal header {
+  display: block;
+  margin-top: 0;
+}
+/* line 182, ../scss/gacha.scss */
+#gacha .maxEequip .label48 {
+  width: 60%;
+  margin: 0 auto;
+  font-weight: normal;
+}
+/* line 187, ../scss/gacha.scss */
+#gacha .maxEequip .innerBtnBox {
+  margin-top: 8px;
+}
+
+/* line 193, ../scss/gacha.scss */
+#gachaBuyConfirm .contents {
+  width: 95%;
+  margin: 8px auto;
+}
+/* line 196, ../scss/gacha.scss */
+#gachaBuyConfirm .contents.expendConf {
+  margin: 0 auto 16px auto;
+}
+/* line 200, ../scss/gacha.scss */
+#gachaBuyConfirm .gacha_img {
+  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+/* line 203, ../scss/gacha.scss */
+#gachaBuyConfirm .paramStatus {
+  font-size: 90%;
+}
+/* line 205, ../scss/gacha.scss */
+#gachaBuyConfirm .paramStatus ~ .label48 {
+  width: 60%;
+  margin: 8px auto 0 auto;
+  font-weight: normal;
+}
+/* line 210, ../scss/gacha.scss */
+#gachaBuyConfirm .paramStatus ~ .btn {
+  margin-bottom: 16px;
+}
+/* line 215, ../scss/gacha.scss */
+#gachaBuyConfirm ~ .caution article {
+  padding-bottom: 8px;
+}
+/* line 218, ../scss/gacha.scss */
+#gachaBuyConfirm ~ .caution .link {
+  font-weight: bold;
+}
+
+/* line 224, ../scss/gacha.scss */
+#gachaResult .contents {
+  width: 95%;
+  margin: 0 auto;
+}
+/* line 228, ../scss/gacha.scss */
+#gachaResult .paramStatus {
+  margin: 16px auto;
+  font-size: 85%;
+  color: #fff;
+}
+/* line 232, ../scss/gacha.scss */
+#gachaResult .paramStatus .notice {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 100%;
+}
+/* line 239, ../scss/gacha.scss */
+#gachaResult .gacgaBonus .subHeader3 {
+  margin: 16px 0 8px 0;
+}
+/* line 244, ../scss/gacha.scss */
+#gachaResult .complateMessage article {
+  padding: 8px 0;
+}
+/* line 247, ../scss/gacha.scss */
+#gachaResult .complateMessage .paramStatus {
+  width: 95%;
+  margin: 8px auto 0 auto;
+}
+/* line 252, ../scss/gacha.scss */
+#gachaResult .btnBox {
+  margin-bottom: 16px;
+}
+/* line 255, ../scss/gacha.scss */
+#gachaResult .btnBox .btn,
+#gachaResult .btnBox .btn_l {
+  display: block;
+  width: 80%;
+  font-size: 90%;
+  margin: 0 auto 4px auto;
+}
+/* line 260, ../scss/gacha.scss */
+#gachaResult .btnBox .btn:first-of-type,
+#gachaResult .btnBox .btn_l:first-of-type {
+  margin-bottom: 16px;
+}
+/* line 263, ../scss/gacha.scss */
+#gachaResult .btnBox .btn:last-of-type,
+#gachaResult .btnBox .btn_l:last-of-type {
+  margin-bottom: 0;
+}
+/* line 268, ../scss/gacha.scss */
+#gachaResult #emblemGotState {
+  margin-top: 16px;
+}
+/* line 272, ../scss/gacha.scss */
+#gachaResult.single .equipImageBox {
+  margin-top: 16px;
+}
+/* line 275, ../scss/gacha.scss */
+#gachaResult.single .equipListStatus {
+  margin-top: 8px;
+}
+/* line 280, ../scss/gacha.scss */
+#gachaResult.multi .contents {
+  margin-bottom: 8px;
+}
+/* line 282, ../scss/gacha.scss */
+#gachaResult.multi .contents:first-of-type {
+  margin-top: 8px;
+}
+
+/* line 289, ../scss/gacha.scss */
+#rareReport h1 {
+  margin-bottom: 8px;
+}
+/* line 292, ../scss/gacha.scss */
+#rareReport .contents {
+  width: 95%;
+  margin: 0 auto 8px auto;
+}
+
+/* line 298, ../scss/gacha.scss */
+#drawlist .contents {
+  width: 95%;
+  margin: 0 auto 8px auto;
+}
+/* line 303, ../scss/gacha.scss */
+#drawlist .rate .contents {
+  margin: 8px auto 16px auto;
+}
+/* line 306, ../scss/gacha.scss */
+#drawlist .rate .statusData .contentsInner {
+  margin-top: 0;
+}
+/* line 312, ../scss/gacha.scss */
+#drawlist .equipNameList .contents:first-of-type {
+  margin-top: 8px;
+}
+/* line 316, ../scss/gacha.scss */
+#drawlist .equipNameList .contentsInner h1 {
+  color: #544123;
+}
+/* line 319, ../scss/gacha.scss */
+#drawlist .equipNameList dl {
+  margin-bottom: 8px;
+}
+/* line 321, ../scss/gacha.scss */
+#drawlist .equipNameList dl:last-of-type {
+  margin-bottom: 0;
+}
+/* line 324, ../scss/gacha.scss */
+#drawlist .equipNameList dl dt:nth-of-type(2) {
+  clear: none;
+  margin-left: 8px;
+}
+/* line 333, ../scss/gacha.scss */
+#drawlist .arrowLink {
+  margin-bottom: 16px;
+}
+
+/* line 338, ../scss/gacha.scss */
+#jsGachaResult {
+  display: none;
+}

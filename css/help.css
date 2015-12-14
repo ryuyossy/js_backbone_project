@@ -1,0 +1,73 @@
+@charset "utf-8";
+/*
+@mixin backgroundResize($position:0 -60px){
+	@media screen and (min-width:319px){
+		width:320px;
+		@include background-size(320px,auto);
+	}
+	@media screen and (min-width:359px){
+		width:360px;
+		@include background-size(360px,auto);
+	}
+	@media screen and (min-width:361px){
+		width:480px;
+		@include background-size(480px,auto);
+		background-position:$position;
+	}
+}
+*/
+/*
+@mixin display-box{
+	display:flexbox;
+	-webkit-display:flexbox;
+}
+@mixin box-align($position){
+	flex-align:$position;
+	-webkit-flex-align:$position;
+}
+@mixin box-flex($ratio){
+	flex:$ratio;
+	-webkit-flex:$ratio;
+}
+@mixin box-pack($position){
+	flex-pack:$position;
+	-webkitflex-pack:$position;
+}
+*/
+/* line 6, ../scss/help.scss */
+#help {
+  margin: 16px 0 32px 0;
+}
+/* line 9, ../scss/help.scss */
+#help .accordion {
+  margin-bottom: 8px;
+}
+
+/* line 16, ../scss/help.scss */
+#helpDetail .subHeader {
+  margin-bottom: 16px;
+}
+/* line 19, ../scss/help.scss */
+#helpDetail .contents {
+  width: 95%;
+  margin: 0 auto 8px auto;
+}
+/* line 23, ../scss/help.scss */
+#helpDetail .contents p {
+  margin: 0 8px;
+  padding: 8px 0;
+  line-height: 1.7;
+}
+/* line 28, ../scss/help.scss */
+#helpDetail .contents img {
+  display: block;
+  margin: 16px auto;
+}
+/* line 33, ../scss/help.scss */
+#helpDetail .listMenu {
+  margin-top: 8px;
+}
+/* line 36, ../scss/help.scss */
+#helpDetail ~ .arrowLink {
+  margin-bottom: 32px;
+}

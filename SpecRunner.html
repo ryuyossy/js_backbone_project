@@ -1,0 +1,37 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Jasmine Spec Runner</title>
+	<link rel="stylesheet" type="text/css" href="js/lib/jasmine-1.2.0/jasmine.css">
+	<script type="text/javascript" data-main="js/spec/index.spec" src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.1/require.min.js"></script>
+</head>
+<body>
+	<script id="jsTemplatePopup" type="text/x-jsrender">
+		<section class="modalBox jsPopup" data-cid="{{>cid}}">
+			{{if is_closable}}
+			<span class="close jsClosePopup"><span>閉じる</span></span>
+			{{/if}}
+			<h1>{{>title}}</h1>
+			<div class="jsPopupContents">
+				{{if local_data.is_local}}
+					{{for local_data tmpl=tmpl /}}
+				{{else}}
+					<div class="jsLoaderA"></div>
+				{{/if}}
+			</div>
+		</section>
+	</script>
+	<script id="jsTemplatePopupDefault" type="text/x-jsrender">
+		<div class="modalInner">
+			<p>{{:message}}</p>
+			{{if is_closable}}
+			<span class="btn close jsClosePopup">閉じる</span>
+			{{else}}
+			<div class="btns">
+				<span class="btn close jsClosePopup jsBacktoMypage" data-href="mypage/">マイページへ戻る</span>
+			</div>
+			{{/if}}
+		</div>
+	</script>
+</body>
+</html>

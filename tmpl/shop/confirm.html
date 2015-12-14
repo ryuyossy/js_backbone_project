@@ -1,0 +1,106 @@
+			<h1 class="mainHeader">ショップ</h1>
+			
+			<div class="statusLine">
+				<p><span>所持コイン</span> {{>own_coin}}</p>
+			</div>
+			
+		{{if result_code === 'NG'}}
+			<h2>{{>item_name}}は{{>result_message}}</h2>
+		{{else}}
+			<section class="contents contentsShadow statusData_icon shopBuyContents">
+				<h1>{{>item_name}}</h1>
+				<div class="columnBox innerHeader">
+					{{if set_sales_flg }}
+					<img src="{{getImgRoot/}}/itemset/{{>item_id}}.png">
+					{{else}}
+					<img src="{{getImgRoot/}}/item/{{>item_id}}.png">
+					{{/if}}
+					<div class="contentsInner">
+						<dl>
+							<dt>価格</dt><dd>{{>price_coin}}コイン</dd>
+							<dt>所持数</dt><dd>{{>own_num}}</dd>
+						</dl>
+						<p>
+							{{:description}}
+						</p>
+					</div>
+				</div>
+			</section>
+			
+			<section class="contents shadow expendConf shopBuySum">
+				<table>
+					<tr>
+						<th>購入数</th><td>{{>buy_num}}</td>
+					</tr>
+					<tr>
+						<th>購入価格合計</th><td>{{>price_coin_total}}コイン</td>
+					</tr>
+				</table>
+			</section>
+		{{/if}}
+			
+		{{if result_code !== 'NG'}}
+			<section class="complateMessage shopCoinBuy coinWrap">
+				<article>
+					<p class="paramStatus">
+						<span class="headline">所持コイン</span>{{>own_coin}}<span class="sepalator">→</span>{{>result_coin}}
+					</p>
+					{{if result_coin < 0 }}
+					<span class="label48 buyErrorCoin">コインが足りません</span>
+                    {{/if}}
+				</article>
+				
+				{{if result_coin < 0 }}
+				<a class="btn large" href="{{>coin_buy_url}}">コインを購入する</a>
+				{{else}}
+				<button class="btn large" data-href="shop/buy/coin/">コインで購入する</button>
+				{{/if}}
+			</section>
+
+			<section class="complateMessage shopCoinBuy amgWrap">
+				<article>
+					<p class="paramStatus">
+						<span class="headline">所持アメG</span>{{>own_ame_g}}<span class="sepalator">→</span>{{>result_ame_g}}
+					</p>
+					{{if result_ame_g < 0 }}
+					<span class="label48 buyErrorCoin">アメGが足りません</span>
+                    {{/if}}
+				</article>
+				<button class="btn large {{if result_ame_g < 0 }}disable{{/if}}" data-href="shop/buy/amegold/">アメGで購入する</button>
+			</section>
+		{{else}}
+			<section class="complateMessage shopCoinBuy">
+				<article>
+					<table>
+						<tr>
+							<th>所持コイン</th><td>{{>own_coin}}<span class="sepalator">→</span>{{>result_coin}}</td>
+						</tr>
+					</table>
+					<span class="label48 buyErrorCoin">コインが足りません</span>
+				</article>
+				<a class="btn large" href="{{>coin_buy_url}}">コインを購入する</a>
+			</section>
+
+			<section class="complateMessage shopCoinBuy">
+				<article>
+					<table>
+						<tr>
+							<th>所持アメG</th><td>{{>own_ame_g}}<span class="sepalator">→</span>{{>result_ame_g}}</td>
+						</tr>
+					</table>
+				</article>
+				<button class="btn large" data-href="shop/buy/amegold/">アメGで購入する</button>
+			</section>
+		{{/if}}
+
+			<hr>
+				
+			<section class="caution shopBuyCaution">
+				<article>
+					<a href="http://s.amebame.com/#tradelaw/app/1349686748" target="_blank" class="link boldLinks">特定商取引法に基づく表記</a>
+				</article>
+			</section>
+
+			<div class="arrowLink confirmArrowLink">
+				<button class="link prev" data-href="shop/list/">ショップトップへ戻る</button>
+			</div>

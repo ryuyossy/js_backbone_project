@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>バトル｜戦況履歴一覧</title>
+	<meta name="robots" content="noindex,nofollow">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="/css/common_parts.css">
+	<link rel="stylesheet" href="/css/battle.css">
+	<script src="/html/js/jquery-1.8.2.min.js"></script>
+	<script src="/html/js/parts.js"></script>
+</head>
+	<body>
+		<header id="globalHeader">
+			<div class="menuPanel"><button class="link mypage"><span class="hide">マイページ</span></button></div>
+			<div class="guildNamePanel"><h1><span class="link"><span class="guildRank f hide">ギルドランク：A</span>ギルド名ギルド名ギルド名</span></h1></div>
+			<div class="menuPanel"><button class="link menu"><span class="hide">メニュー</span></button></div>
+		</header>
+		
+		<div id="container">
+			
+			<h1 class="mainHeader">戦況履歴一覧</h1>
+			
+			<section id="situationList">
+				<section class="match">
+				
+					<!-- //勝ち -->
+					<article class="contents contentsShadow">
+						<h1><span>2012/12/11</span>第4試合</h1>
+						<div class="pointResult win">
+							<dl>
+								<dt><span class="hide">勝利</span></dt>
+								<dd><span>vs</span>ギルド名ギルド名ギルド名</dd>
+							</dl>
+							<table>
+								<tr>
+									<td class="myGuildPoint">123456789<span>BP</span></td>
+									<td class="opponentGuildPoint">123456789<span>BP</span></td>
+								</tr>
+							</table>
+						</div>
+						<button class="link" data-href="#">戦況履歴</button>
+					</article>
+					
+					<!-- //負け -->
+					<article class="contents contentsShadow">
+						<h1><span>2012/12/11</span>第3試合</h1>
+						<div class="pointResult lose">
+							<dl>
+								<dt><span class="hide">敗北</span></dt>
+								<dd><span>vs</span>ギルド名ギルド名ギルド名</dd>
+							</dl>
+							<table>
+								<tr>
+									<td class="myGuildPoint">123456789<span>BP</span></td>
+									<td class="opponentGuildPoint">123456789<span>BP</span></td>
+								</tr>
+							</table>
+						</div>
+						<button class="link" data-href="#">戦況履歴</button>
+					</article>
+					
+					<!-- //勝ち負けなし -->
+					<article class="contents contentsShadow">
+						<h1><span>2012/12/11</span>第2試合</h1>
+						<div class="pointResult draw">
+							<dl>
+								<dt>勝敗なし</dt>
+								<dd><span>vs</span>ギルド名ギルド名ギルド名</dd>
+							</dl>
+							<table>
+								<tr>
+									<td class="myGuildPoint">123456789<span>BP</span></td>
+									<td class="opponentGuildPoint">123456789<span>BP</span></td>
+								</tr>
+							</table>
+						</div>
+						<button class="link disable">戦況履歴はありません</button>
+					</article>
+					
+				</section>
+			</section>
+			
+			<div class="moreLink">
+				<button class="link" data-href="#"><span>もっと見る</span></button>
+			</div>
+			
+			<hr>
+
+			<div class="banner">
+				<p>
+					<button class="link" data-link="#"><img src="/img/ad/banner.png" alt="banner"><br>└イベントバナースペース┘</button>
+				</p>
+			</div>
+			
+			<div class="helpList">
+				<ul>
+					<li><button class="link" data-href="#">バトルとは？</button></li>
+				</ul>
+			</div>
+			
+		</div>
+		
+		<footer id="globalFooter">
+			<ul>
+				<li class="menuPanel"><span class="link mypage"><span class="hide">マイページ</span></span></li>
+				<li class="menuPanel"><span class="link quest"><span class="hide">クエスト</span></span></li>
+				<li class="menuPanel"><span class="link buttle"><span class="hide">バトル</span></span></li>
+				<li class="menuPanel"><span class="link gatcha"><span class="hide">ガチャ</span></span></li>
+				<li class="menuPanel"><span class="link menu"><span class="hide">マイページ</span></span></li>
+			</ul>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>クエスト｜クエスト進行中</title>
+	<meta name="robots" content="noindex,nofollow">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+	
+	<link rel="stylesheet" href="/css/common_parts.css">
+	<link rel="stylesheet" href="/css/mission.css">
+	<script src="/html/js/jquery-1.8.2.min.js"></script>
+	<script src="/html/js/parts.js"></script>
+</head>
+	<body>
+		<header id="globalHeader">
+			<div class="menuPanel"><button class="link mypage"><span class="hide">マイページ</span></button></div>
+			<div class="guildNamePanel"><h1><span class="link"><span class="guildRank f hide">ギルドランク：A</span>ギルド名ギルド名ギルド名</span></h1></div>
+			<div class="menuPanel"><button class="link menu"><span class="hide">メニュー</span></button></div>
+		</header>
+		
+		<div id="container">
+			
+			<section id="missionProceed">
+				
+				<div class="canvas"></div>
+				
+				<!--// なびこHTML
+				<div class="message navicoMove">
+					<img src="../../img/parts/navico.png" class="navico_move">
+					<p>
+						<span><span class="link" data-href="#">割り振りポイント</span>があるよ！ああああああああああああああああああああああああ</span>
+					</p>
+				</div>-->
+				
+				<div class="gergeBox">
+					<div class="gergeBgFrame">
+						<div class="gergeBg"><span class="gerge missionProgress" style="width:100%;"></span></div>
+					</div>
+				</div>
+			</section>
+			
+			<section id="missionControl" class="metalPanel">
+				<button class="btn_l" data-href="#"><span class="hide">進む</span></button>
+				<div class="statusData">
+					<table class="gergeTable middle">
+						<tr>
+							<th>行動P</th>
+							<td class="gergeBox">
+								<div class="gergeBgFrame">
+									<div class="gergeBg"><span class="gerge missionP" style="width:50%;"></span></div>
+								</div>
+							</td>
+							<td>123/999</td>
+						</tr>
+						<tr>
+							<th>AP</th>
+							<td class="gergeBox">
+								<div class="gergeBgFrame">
+									<div class="gergeBg"><span class="gerge battleP" style="width:50%;"></span></div>
+								</div>
+							</td>
+							<td>123/999</td>
+						</tr>
+						<tr>
+							<th>Ex.</th>
+							<td class="gergeBox">
+								<div class="gergeBgFrame">
+									<div class="gergeBg"><span class="gerge missionExp" style="width:50%;"></span></div>
+								</div>
+							</td>
+							<td>123/999</td>
+						</tr>
+					</table>
+					<dl>
+						<dt>所持ギル</dt><dd>1234567890</dd>
+						<dt>所持武具</dt><dd>123/999</dd>
+					</dl>
+				</div>
+				<ul class="findingItem">
+					<li><img src="../../img/parts/unknown_item.png"></li><!-- //未拾得アイテム -->
+					<li><img src="../../img/parts/unknown_item.png"></li><!-- //未拾得アイテム -->
+					<li><img src="../../img/parts/unknown_item.png"></li><!-- //未拾得アイテム -->
+					<li><img src="../../img/equip/weapon.png"></li><!-- //拾得アイテム -->
+				</ul>
+			</section>
+			
+			<ul class="listMenu">
+				<li><div class="link">フィールド選択へ</div></li>
+				<li><div class="link">ステージ選択へ</div></li>
+			</ul>
+
+		</div>
+
+		<footer id="globalFooter">
+			<ul>
+				<li class="menuPanel"><span class="link mypage"><span class="hide">マイページ</span></span></li>
+				<li class="menuPanel"><span class="link quest"><span class="hide">クエスト</span></span></li>
+				<li class="menuPanel"><span class="link buttle"><span class="hide">バトル</span></span></li>
+				<li class="menuPanel"><span class="link gatcha"><span class="hide">ガチャ</span></span></li>
+				<li class="menuPanel"><span class="link menu"><span class="hide">マイページ</span></span></li>
+			</ul>
+		</footer>
+
+		<!-- //モーダルエリア -->
+		<div class="modalArea">
+			<!-- //アイテム拾得 -->
+			<section id="findItem" class="missionModalBox contents shadow statusData_icon equipData">
+				<h1>武器防具名（SSR）</h1>
+				<div class="columnBox">
+					<img src="../../img/equip/weapon.png">
+					<div class="contentsInner">
+						<dl>
+							<dt>Lv.</dt><dd>9<span class="label32 growth_fast">早熟</span></dd>
+							<dt>武器P</dt><dd>99</dd>
+							<dt>攻撃</dt><dd>123456</dd>
+							<dt>必殺</dt><dd>123456</dd>
+						</dl>
+						<button class="btn" data-href="#">売却して進む</button>
+					</div>
+				</div>
+			</section>
+			
+			<!-- //お宝拾得 -->
+			<section id="findTreasure" class="missionModalBox contents shadow statusData_icon treasureData">
+				<h1>【お宝】赤い水晶 をゲット</h1>
+				<div class="columnBox">
+					<img src="../../img/equip/weapon.png">
+					<div class="contentsInner">
+						<dl>
+							<dt>シリーズ</dt><dd>ボノの水晶</dd>
+							<dt>発見数</dt><dd>1/9</dd>
+						</dl>
+						<button class="btn" data-href="#">図鑑を見に行く</button>
+					</div>
+				</div>
+			</section>
+			
+			<section id="findMaterial" class="missionModalBox contents shadow statusData_icon materialData">
+				<h1>錬金マテリアをゲット</h1>
+				<div class="columnBox">
+					<img src="../../img/item/101.png">
+					<div class="contentsInner">
+						<p>ミッちゃんに渡すと、アイテムを錬成できる不思議な素材</p>
+						<dl>
+							<dt>所持数</dt><dd>1234個</dd>
+						</dl>
+						<button class="btn" data-href="#">錬成に行く</button>
+					</div>
+				</div>
+			</section>
+			
+			<!-- //所持数上限（武具獲得時） -->
+			<section id="equipMax">
+				<h1>所持数上限</h1>
+				<div class="statusData_icon equipData">
+					<h2>武器防具名（SSR）</h2>
+					<div class="columnBox">
+						<img src="../../img/equip/weapon.png">
+						<div class="contentsInner">
+							<dl>
+								<dt>Lv.</dt><dd>9<span class="label32 growth_fast">早熟</span></dd>
+								<dt>武器P</dt><dd>99</dd>
+								<dt>攻撃</dt><dd>123456</dd>
+								<dt>必殺</dt><dd>123456</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+				<p>
+					武具の所持数が上限に達しています。
+					<span class="limit"><span>所持数</span> 11/99</span>
+				</p>
+				<div class="innerBtnBox">
+					<button class="btn" data-href="#">合成する</button><button class="btn" data-href="#">売却する</button>
+				</div>
+			</section>
+			
+			<!-- //所持数上限（クエスト開始時） -->
+			<section id="equipMax_start" class="modalBox">
+				<h1>所持数上限</h1>
+				<p>
+					武具の所持数が上限に達しています。
+					<span class="limit"><span>所持数</span> 11/99</span>
+				</p>
+				<div class="innerBtnBox">
+					<button class="btn" data-href="#">合成する</button><button class="btn" data-href="#">売却する</button>
+				</div>
+			</section>
+		</div>
+		
+		
+		<section class="modalBox" style="display:block;">
+			<span class="close"><span>閉じる</span></span>
+			<h1>Lv.1<span class="nextLevel">→</span>Lv.2</h1>
+			<article class="modalInner levelUp statusData">
+				<h2>ステータスが上がった！</h2>
+				<div class="columnBox">
+					<dl>
+						<dt>武器P</dt><dd>123（<span class="up">+1</span>）</dd>
+						<dt>防具P</dt><dd>123（<span class="up">+1</span>）</dd>
+						<dt>アビP</dt><dd>123（<span class="up">+1</span>）</dd>
+					</dl>
+					<dl>
+						<dt>MaxHP</dt><dd>12345（<span class="up">+1234</span>）</dd>
+						<!-- // Max行動PはLv10刻みでのみ上がる -->
+						<!-- <dt>Max行動P</dt><dd>123（<span class="up">+1</span>）</dd> -->
+					</dl>
+				</div>
+				<p>行動Pが全回復した！</p>
+			</article>
+		</section>
+		
+	</body>
+</html>

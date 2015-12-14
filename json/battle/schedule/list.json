@@ -1,0 +1,57 @@
+{
+    "status" : 200,
+    "schedules": [
+        {
+            "round": 0,
+            "date": "20130101",
+            "start_time": "07:00",
+            "end_time": "08:00",
+            "state": 1,
+            "judge": null,
+            "own_gp": null,
+            "own_gp_percent": null,
+            "enemy_guild_name": null,
+            "enemy_gp": null,
+            "open_accordion_flg": false
+        },
+        {
+            "round": 2,
+            "date": "20130101",
+            "start_time": "12:00",
+            "end_time": "13:00",
+            "state": 0,
+            "judge": 2,
+            "own_gp": 9876543210,
+            "own_gp_percent": 4,
+            "enemy_guild_name": "熱血高校",
+            "enemy_gp": 1234567890,
+            "open_accordion_flg": true
+        },
+        {
+            "round": 3,
+            "date": "20130101",
+            "start_time": "20:00",
+            "end_time": "21:00",
+            "state": 3,
+            "judge": null,
+            "own_gp": null,
+            "own_gp_percent": null,
+            "enemy_guild_name": "怒首領蜂",
+            "enemy_gp": null,
+            "open_accordion_flg": false
+        },
+        {
+            "round": 4,
+            "date": "20130101",
+            "start_time": "22:00",
+            "end_time": "23:00",
+            "state": 1,
+            "judge": null,
+            "own_gp": null,
+            "own_gp_percent": null,
+            "enemy_guild_name": null,
+            "enemy_gp": null,
+            "open_accordion_flg": false
+        }
+    ]
+}

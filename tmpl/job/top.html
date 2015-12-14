@@ -1,0 +1,177 @@
+<div class="jsShortTutorial" style="{{if !first_access_flg}}display:none{{/if}}">
+	<div class="jobShort">
+		<h1 class="mainHeader">ジョブ</h1>
+		<section class="questNvgation">
+			<div class="message arc">
+				<p>
+					<span>ジョブを極める者がバトルを制す!!</br>ドンドンマスターを目指してくれ!!</span>
+				</p>
+			</div>
+		</section>
+		<h1 class="subHeader">
+			<span class="subHeaderBg_l"></span>
+			<span>JExを獲得しよう!</span>
+			<span class="subHeaderBg_r"></span>
+		</h1>
+		<div class="questshortBn">
+			<img src="{{getImgRoot/}}/parts/shortTutorial_job_jexget.png" alt="JExを獲得しよう!" class="title">
+		</div>
+		<h1 class="subHeader">
+			<span class="subHeaderBg_l"></span>
+			<span>ジョブを育てると!?</span>
+			<span class="subHeaderBg_r"></span>
+		</h1>
+		<div>
+			<img src="{{getImgRoot/}}/parts/shortTutorial_job_grow.png" alt="ジョブを育てると!?" class="title">
+		</div>
+		<button class="btn large shgoQuest jsButtonCloseShortTutorial">さっそくジョブへ</button>
+	</div>
+</div>
+
+
+
+<div id="jobTop" class="jsNormalView" style="{{if first_access_flg}}display:none{{/if}}">
+	<h1 class="mainHeader">ジョブ</h1>
+	<div class="message navico_arc">
+		<p>
+			<span>気になるジョブをタップ！いろんな情報をチェックできるよ！</span>
+		</p>
+	</div>
+	<h1 class="subHeader">
+		<span class="subHeaderBg_l"></span>
+		<span>現在のジョブ</span>
+		<span class="subHeaderBg_r"></span>
+	</h1>
+	<section id="myJob" class="metalPanel">
+		<section class="statusData_icon link" data-href="job/detail/{{>current_job.id}}/">
+			<div class="columnBox">
+				<div class="iconBgArc_l type{{>current_job.type}}"><img src="{{getImgRoot/}}/avatar/{{>current_job.avatar_id}}_140.png"></div>
+				<div class="contentsInner">
+					<div class="nameBox">
+						<h1>{{>current_job.name}}</h1>
+						{{if current_job.mastered}}<span class="master"><span class="hide">MASTER</span></span>{{/if}}
+					</div>
+					<dl>
+						<dt class="jobExp">ジョブ経験値</dt><dd>{{>current_job.win_jex}}/{{>current_job.master_jex}}</dd>
+						<dt>アビリティ</dt>
+						<dd>
+							<ul class="abilities">
+								{{for abilities}}
+									{{if mastered}}
+										<li class="mastered">●</li>
+									{{else}}
+										<li class="unmastered">○</li>
+									{{/if}}
+								{{/for}}
+							</ul>
+						</dd>
+					</dl>
+				</div>
+			</div>
+		</section>
+	<!--
+		<div class="innerBtnBox">
+			<button class="btn" data-href="job/avatar_select/{{>current_job.id}}/">アバターを変更</button>
+			<button class="btn" data-href="ability/">アビリティを装備</button>
+		</div>
+	-->
+	</section>
+
+	<section id="jobTree">
+		<h1 class="subHeader">
+			<span class="subHeaderBg_l"></span>
+			<span>ジョブを選択</span>
+			<span class="subHeaderBg_r"></span>
+		</h1>
+		{{if current_job.type == 4}}
+		<section class="contents contentsShadow special">
+			<div class="contentsBorder">
+				<h1>特殊系統ジョブ</h1>
+				<div class="contentsInner">
+					<ul>
+						{{for isolated_jobs}}
+						<li data-href="job/detail/{{>id}}/"{{if selected||!published}} class="{{if selected}}selected{{if !published}} unpublished{{/if}}{{/if}}{{if !published}} unpublished{{/if}}"{{/if}}>
+						{{if published}}
+						<span class="tapPoint"><span class="hide">TAP!</span></span>
+						<img src="{{getImgRoot/}}/avatar/{{>~zeroPadding(id, 3)}}01_96{{if !changeable}}_silhouette{{/if}}.png">
+						{{/if}}
+						{{if mastered}}<span class="master"><span class="hide">MASTER</span></span>{{/if}}
+						</li>
+						{{/for}}
+					</ul>
+				</div>
+			</div>
+		</section>
+		{{/if}}
+		{{for job_trees}}
+		<section class="contents contentsShadow type{{>type}}">
+			<div class="contentsBorder">
+				<h1>{{>name}}系統ジョブ</h1>
+				<div class="contentsInner">
+					<ul>
+					{{for root_job}}
+						<li{{if published}} data-href="job/detail/{{>id}}/"{{/if}}{{if selected||!published}} class="{{if selected}}selected{{if !published}} unpublished{{/if}}{{/if}}{{if !published}} unpublished{{/if}}"{{/if}}>
+						{{if published}}
+						<span class="tapPoint"><span class="hide">TAP!</span></span>
+						<img src="{{getImgRoot/}}/avatar/{{>id}}01_96{{if !changeable}}_silhouette{{/if}}.png">
+						{{/if}}
+						{{if mastered}}<span class="master"><span class="hide">MASTER</span></span>{{/if}}
+						{{if changeable && !experienced}}<span class="newJob"><span class="hide">NEW</span></span>{{/if}}
+						</li>
+					{{/for}}
+					{{for lines}}
+						{{for jobs}}
+						<li{{if published}} data-href="job/detail/{{>id}}/"{{/if}}{{if selected||!published}} class="{{if selected}}selected{{if !published}} unpublished{{/if}}{{/if}}{{if !published}} unpublished{{/if}}"{{/if}}>
+						{{if published}}
+						<span class="tapPoint"><span class="hide">TAP!</span></span>
+						<img src="{{getImgRoot/}}/avatar/{{>id}}01_96{{if !changeable}}_silhouette{{/if}}.png">
+						{{/if}}
+						{{if mastered}}<span class="master"><span class="hide">MASTER</span></span>{{/if}}
+						{{if changeable && !experienced}}<span class="newJob"><span class="hide">NEW</span></span>{{/if}}
+						</li>
+						{{/for}}
+					{{/for}}
+					</ul>
+				</div>
+			</div>
+		</section>
+		{{/for}}
+		{{if current_job.type != 4}}
+		<section class="contents contentsShadow special">
+			<div class="contentsBorder">
+				<h1>特殊系統ジョブ</h1>
+				<div class="contentsInner">
+					<ul>
+						{{for isolated_jobs}}
+						<li data-href="job/detail/{{>id}}/"{{if selected||!published}} class="{{if selected}}selected{{if !published}} unpublished{{/if}}{{/if}}{{if !published}} unpublished{{/if}}"{{/if}}>
+						{{if published}}
+						<span class="tapPoint"><span class="hide">TAP!</span></span>
+						<img src="{{getImgRoot/}}/avatar/{{>~zeroPadding(id, 3)}}01_96{{if !changeable}}_silhouette{{/if}}.png">
+						{{/if}}
+						{{if mastered}}<span class="master"><span class="hide">MASTER</span></span>{{/if}}
+						</li>
+						{{/for}}
+					</ul>
+				</div>
+			</div>
+		</section>
+		{{/if}}
+
+		<hr>
+
+		<div class="arrowLink">
+			<button class="link next" data-href="ability/">アビリティを装備する</button>
+		</div>
+
+		<div class="helpList">
+			<ul>
+				<li><button class="link" data-href="help/detail/401/">ジョブってなに？</button></li>
+				<li><button class="link" data-href="help/detail/402/">ジョブ系統ってなに？</button></li>
+				<li><button class="link" data-href="help/detail/403/">JExってなに？</button></li>
+				<li><button class="link" data-href="help/detail/208/">アビリティってなに？</button></li>
+			</ul>
+		</div>
+
+	</section>
+
+</div>

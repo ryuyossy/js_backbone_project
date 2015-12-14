@@ -1,0 +1,16 @@
+{
+	"status": 200,
+	"result_message": null,
+	"result_code": "OK",
+	"shop_item_id": 2,
+	"item_id": 2,
+	"item_name": "ヨクソダ～ツ（M）",
+	"set_sales_flg": false,
+	"buy_num": 2,
+	"price_coin_total": 10,
+	"own_ame_g": 456,
+	"result_ame_g": 6,
+	"own_coin": 453,
+	"result_coin": 3,
+	"coin_buy_url": "https://payment.sb-amebame.com/coin/?userId=18&finishPageUrl=http%3A%2F%2Fstg-braveguardian.jp%2Fshop%2Fbuy%2Fconfirm"
+}

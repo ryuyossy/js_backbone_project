@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>ギルド｜TOP</title>
+	<meta name="robots" content="noindex,nofollow">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="/css/common_parts.css">
+	<link rel="stylesheet" href="/css/guild.css">
+	<script src="/html/js/jquery-1.8.2.min.js"></script>
+	<script src="/html/js/parts.js"></script>
+</head>
+<body>
+	
+		<header id="globalHeader">
+			<div class="menuPanel"><button class="link mypage"><span class="hide">マイページ</span></button></div>
+			<div class="battleTimeCount">
+				<div class="battleTimeInner">
+					<h1>次のバトルまで</h1>
+					<div class="numBox">
+						<span class="numGold num_1"><span class="hide">1</span></span>
+						<span class="numGold num_2"><span class="hide">2</span></span>
+						<span class="numGoldColon"><span class="hide">:</span></span>
+						<span class="numGold num_1"><span class="hide">1</span></span>
+						<span class="numGold num_5"><span class="hide">5</span></span>
+						<span class="numGoldColon"><span class="hide">:</span></span>
+						<span class="numGold num_4"><span class="hide">4</span></span>
+						<span class="numGold num_9"><span class="hide">9</span></span>
+					</div>
+				</div>
+			</div>
+			<div class="menuPanel"><button class="link menu"><span class="hide">メニュー</span></button></div>
+		</header>
+		
+		<div id="container">
+			<section id="guildTop" class="master">
+				<div class="emblemIcon_s"><span class="hide guildRank F">ギルドランク：A</span></div>
+				<h1 class="guildName">
+					<span class="guildNameText">ギルド名ギルド名ギルド<!-- //9文字を超えると丸め --></span>
+					<!-- //自分のギルド・ギルド名編集：自分がマスターか執行役の場合に表示 
+					<span class="edit link" data-href="#"><span class="hide">編集</span></span>-->
+				</h1>
+				<p class="guildStatus">
+					<span>ギルドLv.</span>99<span>総合BP</span>99999<span>戦績</span>9999勝
+				</p>
+				<div class="masterComment">
+					<div class="iconBgArc_l gold link" data-href="#"><img src="/img/avatar/33202_120.png"></div>
+					<div class="commentBox">
+						<h1 class="masterName"><span class="hide">MASTER</span>ユーザー名ユーザー名ユーザー名<!-- //14文字を超えると丸め --></h1>
+						<p class="commentBody">
+							<span>ギルドマスターのコメントギルドマスターのコメントギルドマスターのコメント<!-- //30文字で切り --></span>
+						</p>
+						<!-- //自分のギルド・マスターコメント編集：自分がマスターの場合に表示 
+						<span class="edit link" data-href="#"><span class="hide">編集</span></span>-->
+					</div>
+				</div>
+				<dl class="currentRank">
+					<dt>ランキング</dt>
+					<dd>現在<span>2</span>位</dd>
+				</dl>
+				
+				<!-- //自分のギルド：バトル前の対戦相手が決定した場合に表示 
+				<p class="opponent">
+					<span class="hide">対戦相手決定</span>
+				</p>-->
+				
+				<!-- //自分のギルド：バトル中に表示 
+				<p class="battleTime">
+					<span class="hide">バトル開催中</span>
+				</p>-->
+			</section>
+			
+			<!-- //共通：ギルドメンバーリスト(通常およびバトル中、他人のギルド表示の場合はおしりのspanはつかない) -->
+			<section id="guildAction">
+				<section class="memberList">
+					<!-- //バトル前：手合わせ可能（アイコンあり） -->
+					<div class="iconBox"><div class="iconBgArc_s gold link" data-href="#"><img src="/img/avatar/22001_120.png"></div><span class="over"></span></div>
+					<div class="iconBox"><div class="iconBgArc_s gold link training_yet" data-href="#"><img src="/img/avatar/10002_120.png"></div><span class="yet"></span></div>
+					<div class="iconBox"><div class="iconBgArc_s gold link" data-href="#"><img src="/img/avatar/11102_120.png"></div><span class="yet"></span></div>
+					<!-- //通常・バトル中：手合わせ不可（アイコン無し） -->
+					<div class="iconBox"><div class="iconBgArc_s gold link" data-href="#"><img src="/img/avatar/12201_120.png"></div></div>
+					<div class="iconBox"><div class="iconBgArc_s gold link" data-href="#"><img src="/img/avatar/13001_120.png"></div></div>
+					<div class="more">
+						<button class="link" data-href="#"><span>14/20</span></button>
+					</div>
+				</section>
+			
+				<!-- //自分のギルド・テンションゲージ：対戦相手決定後バトル開始まで表示 
+				<div class="gergeBox">
+					<div class="tentionGerge max">
+						<div class="gergeBg">
+							<span class="gerge tention" style="width:90%;"></span>
+						</div>
+					</div>
+				</div>-->
+				
+				<!-- //自分のギルド・バトル遷移ボタン：バトル中のみ表示 
+				<button class="btn_l battle onBattle" data-href="#"><span class="hide">戦場へ</span></button>-->
+				
+				<!-- //自分のギルド・対戦相手：対戦相手決定後バトル終了まで表示（隊長コメントはバトル前とバトル中で変化） 
+				<div class="message taicho_arc">
+					<p>
+						<span>隊長メッセージあああああああああああああああああああああああああああああああ</span>
+					</p>
+				</div>
+				<section class="contents contentsShadow statusData_icon link" data-href="#">
+					<h1><span class="hide">対戦相手</span>ギルド名ギルド名ギルド名ギルド</h1>
+					<div class="columnBox">
+						<div class="iconBgRect_l gold"><img src="/img/avatar/0001_120.png"></div>
+						<div class="contentsInner">
+							<dl>
+								<dt>ギルドLv.</dt><dd>99</dd>
+								<dt>所属</dt><dd>20/20</dd>
+								<dt>総合BP</dt><dd>9999999</dd>
+								<dt>戦績</dt><dd>9999勝</dd>
+								<dt>最高コンボ数</dt><dd>攻撃999　応援999</dd>
+							</dl>
+						</div>
+					</div>
+				</section>-->
+				
+				
+				
+				
+				<!-- //自分のギルド・お知らせ（常に表示） 
+				<div class="listMenu">
+					<ul>
+						<li><div class="link" data-href="#"><dl><dt class="label36_r4">NEW</dt><dd>ギルドへのお誘いが99件あります</dd></dl></div></li>
+						<li><div class="link" data-href="#"><dl><dt class="label36_r4">NEW</dt><dd>新メンバーが加入しました</dd></dl></div></li>
+					</ul>
+				</div>-->
+				
+				<!-- //自分のギルド：ボタン（常に表示） 
+				<div class="btnBox">
+					<div class="outerBtnBox">
+						<button class="btn" data-href="#">メンバー一覧</button>
+						<button class="btn" data-href="#">役職一覧</button>
+					</div>
+					<div class="outerBtnBox">
+						<button class="btn" data-href="#">クエスト同行</button>
+						<button class="btn" data-href="#">後衛希望設定</button>
+					</div>
+				</div>-->
+				
+				<!-- //自分のギルド・自動承認設定：マスターと執行役のみ表示 
+				<div class="autoPermissionControl">
+					<div class="setUpToggle">
+						<label onclick="">
+							自動承認設定<input type="checkbox" checked="checked" name="setUpToggle">
+						</label>
+					</div>
+				</div>
+				<div class="arrowLink">
+					<button class="link next" data-href="#">ギルド広場</button>
+				</div>-->
+
+
+
+
+
+
+				<!-- //他人のギルド・ギルド加入ボタン 
+				<button class="btn large join" data-href="#">入団希望</button>-->
+				
+				<!-- //他人のギルド・ギルド加入できない時間帯 -->
+				<section class="dimmed">
+					<p>
+						バトル中のため入団希望は出せません
+					</p>
+				</section>
+
+
+
+
+
+
+				
+			</section>
+			
+			<!-- //ここから共通 -->
+			<div class="banner">
+				<p>
+					<button class="link" data-link="#"><img src="/img/ad/banner.png" alt="banner"><br>└イベントバナースペース┘</button>
+				</p>
+			</div>
+			
+			<h1 class="subHeader">
+				<span class="subHeaderBg_l"></span>
+				<span>ギルド掲示板</span>
+				<span class="subHeaderBg_r"></span>
+			</h1>
+			
+			<!-- //掲示板 -->
+			<form method="post" class="postForm_icon" style="margin-bottom:8px;">
+				<div class="formInner">
+					<div class="iconBgArc_s gold"><img src="/img/avatar/0001_120.png"></div>
+					<div class="inputBox">
+						<textarea placeholder="つぶやく…"></textarea>
+						<button class="btn share" data-href="#">投稿する</button>
+					</div>
+				</div>
+			</form>
+			
+			<section id="guildBbs">
+				<article class="contents contentsShadow topic">
+					<div class="contentsInner">
+						<div class="topicRoot">
+							<div class="contributor">
+								<div class="iconBgArc_s gold"><img src="/img/avatar/33201_120.png"></div>
+								<h2>わかば弓士</h2>
+								<time>8/10 12:23</time>
+							</div>
+							<p>
+								コメントアイコンを押すとコメントが開きます（スライドメニュー）いいね押してない＆レス窓開いてるVer.
+								<span class="topicMenu">
+									<button class="link like" data-href="#"><span class="hide">いいね</span>999</button><button class="link resToggle open" data-href="#"><span class="hide">コメント</span>999</button>
+								</span>
+							</p>
+						</div>
+						<div class="resArea">
+							<div class="res">
+								<div class="contributor">
+									<div class="iconBgArc_s gold"><img src="/img/avatar/11002_120.png"></div>
+									<h2>シーフ</h2>
+									<time>8/10 15:40</time>
+								</div>
+								<p>
+									コメントにはいいねとかなくていいんですか？aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+								</p>
+							</div>
+							<div class="res master">
+								<div class="contributor">
+									<div class="iconBgArc_s gold"><img src="/img/avatar/31102_120.png"></div>
+									<h2>剣士</h2>
+									<time>8/10 21:40</time>
+								</div>
+								<p>
+									トピ主のコメントです
+								</p>
+							</div>
+							<div class="res">
+								<div class="contributor">
+									<div class="iconBgArc_s gold"><img src="/img/avatar/32102_120.png"></div>
+									<h2>サムライ</h2>
+									<time>8/10 00:43</time>
+								</div>
+								<p class="myComment">
+									自分のコメントです。テストテストテストテストテストテストテストテストテストテストテストテストテスト
+								</p>
+							</div>
+							<form method="post" class="postComment">
+								<label><input type="text" placeholder="コメントする…"></label><button class="btn">投稿する</button>
+							</form>
+						</div>
+					</div>
+				</article>
+				<div class="arrowLink">
+					<button class="link next" data-href="#">ぜんぶ見る</button>
+				</div>
+			</section>
+			
+			<hr>
+			
+			<div class="arrowLink">
+				<button class="link next" data-href="#">ギルド広場</button>
+			</div>
+			
+			<button class="btn large cancel" data-href="#">退団</button>
+			
+			<hr>
+			
+			<div class="helpList">
+				<ul>
+					<li><bitton class="link" data-href="#">ギルドについて</bitton></li>
+					<li><bitton class="link" data-href="#">ギルドについて</bitton></li>
+				</ul>
+			</div>
+			
+		</div>
+		
+		<footer id="globalFooter">
+			<ul>
+				<li class="menuPanel"><span class="link mypage"><span class="hide">マイページ</span></span></li>
+				<li class="menuPanel"><span class="link quest"><span class="hide">クエスト</span></span></li>
+				<li class="menuPanel"><span class="link buttle"><span class="hide">バトル</span></span></li>
+				<li class="menuPanel"><span class="link gatcha"><span class="hide">ガチャ</span></span></li>
+				<li class="menuPanel"><span class="link menu"><span class="hide">マイページ</span></span></li>
+			</ul>
+		</footer>
+	</body>
+</html>

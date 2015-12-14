@@ -1,0 +1,100 @@
+@charset "utf-8";
+@import "base";
+@import "ruleset";
+
+//shop
+.shopContents {
+	width: 95%;
+	margin: 8px auto 0 auto;
+	//padding: 8px 0 0 0;
+	.statusData_icon {
+		padding: 8px 0 0 0;	
+	}
+	.contents{
+		margin-bottom:8px;
+
+		&.limit{
+			margin-top:24px;
+		}
+	}
+}
+.shopNumControl {
+	width: 95%;
+	margin: 8px auto 0 auto;
+}
+.shopBuyContents {
+	@extend .shopContents;
+	padding: 8px 0 8px 0;
+}
+.shopBuySum {
+	width: 95%;
+	margin: 16px auto 0 auto;
+}
+.shopCoinBuy {
+	& article {
+		border: none;
+		padding: 0 0 0 0;
+		p {
+			color: #fff;
+		}
+	}
+}
+.coinWrap {
+	article {
+		margin: 16px auto 8px auto;
+	}
+}
+.amgWrap {
+	article {
+		margin: 16px auto 8px auto;
+	}
+}
+.shopBuyCaution {
+	& article {
+		padding: 12px 0 12px 0;
+		& button {
+			padding-top: 12px;
+		}
+		.boldLinks {
+			font-weight: bold;
+		}
+	}
+}
+.buyErrorCoin {
+	margin: 6px auto 0 auto;
+	width: 60%;
+}
+//shop buyComplete
+.completeWrap {
+	article {
+		padding: 0;
+		margin: 8px auto 16px auto;
+	}
+	.paramStatus {
+		width: 95%;
+		margin: 16px auto;
+	}
+	.statusCnt {
+		color: #fff;
+	}
+}
+.buyCompContent {
+	margin: 0 auto;
+	text-align: center;
+	& p:nth-child(1) {
+		color: white;
+		margin: 8px auto 16px auto;
+	}
+	& p:nth-child(3) {
+		color: white;
+		margin: 4px auto 8px auto;
+		font-size: 12px;
+	}
+}
+.buyItemLink {
+	margin-bottom: 16px;
+}
+//shop buyComplete
+.confirmArrowLink {
+	@extend .buyItemLink;
+}

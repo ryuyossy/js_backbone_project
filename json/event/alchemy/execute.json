@@ -1,0 +1,58 @@
+{
+	"status": 200,
+	"items": [
+		{
+			"type": 1,
+			"id": 101,
+			"name": "素敵なアイテム",
+			"description": "素敵なアイテムです",
+			"quantity": 1,
+			"great_success": false
+		},{
+			"type": 2,
+			"id": 201,
+			"name": "最高級の素材",
+			"description": "最高級の素材です",
+			"quantity": 1,
+			"great_success": false
+		},{
+			"type": 3,
+			"id": "110011",
+			"name": "とても強い武具",
+			"description": "とても強い武具です",
+			"quantity": 1,
+			"great_success": false
+		},{
+			"type": 4,
+			"id": null,
+			"name": "ガチャポイント",
+			"description": "素敵なアイテムです",
+			"quantity": 1234,
+			"great_success": false
+		},{
+			"type": 5,
+			"id": null,
+			"name": "ギル",
+			"description": "素敵なアイテムです",
+			"quantity": 2345,
+			"great_success": false
+		},{
+			"type": 6,
+			"id": null,
+			"name": "ガチャチケット",
+			"description": "素敵なアイテムです",
+			"quantity": 3456,
+			"great_success": false
+		},{
+			"type": 8,
+			"id": null,
+			"name": "レアメダル",
+			"description": "素敵なアイテムです",
+			"quantity": 4,
+			"great_success": false
+		}
+	],
+	"speech_text": "ｷﾀ━━━━(ﾟ∀ﾟ)━━━━!!<br>大成功！！",
+	"materia_num_before": 10,
+	"materia_num_after": 6
+}

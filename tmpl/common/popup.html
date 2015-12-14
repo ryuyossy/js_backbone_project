@@ -1,0 +1,148 @@
+<script id="jsTemplatePopupGreet" type="text/x-jsrender">
+	<div class="modalInner">
+		{{if win_gacha_p}}
+		<p>あいさつしました。<br />{{>win_gacha_p}}ガチャPゲット！</p>
+		{{else}}
+		<p>あいさつしました。</p>
+		{{/if}}
+		<button class="btn short close jsClosePopup">閉じる</button>
+	</div>
+</script>
+
+<script id="jsTemplateUseItem" type="text/x-jsrender">
+	<div class="modalInner">
+		<div class="itemUseConfirm">
+			<p>{{>item_name}}を使用しますか？</p>
+			<img src="{{getImgRoot/}}/item/{{>item_id}}.png" class="single">
+			<div class="statusData">
+				<table>
+					<tr>
+						<th>所持数</th><td>{{>own_num}}<span class="sepalator">→</span>{{>own_num-1}}</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+
+		{{if notice}}
+		<span class="label48">{{:notice}}</span>
+		{{/if}}
+
+		<div class="innerBtnBox">
+			<button class="btn cancel jsClosePopup">やめる</button><button class="btn jsButtonJumpToItemUse" data-item-id="{{>item_id}}">使用する</button>
+		</div>
+	</div>
+</script>
+
+<script id="jsTemplatePopupJobChangeConfirm" type="text/x-jsrender">
+	<div class="modalInner">
+		<p>このアバターに変更しますか？</p>
+		<div class="innerBtnBox">
+			<button class="btn cancel jsClosePopup">やめる</button>
+			<button class="btn jsClosePopup jsJobChangeFix">変更する</button>
+		</div>
+	</div>
+</script>
+
+<script id="jsTemplatePopupJobChangeComplete" type="text/x-jsrender">
+	<div class="modalInner">
+		<p>変更しました。</p>
+		<button class="btn large jsClosePopup" data-href="ability/">アビリティを装備する</button>
+		<button class="btn large close jsClosePopup" data-href="job/">ジョブトップに戻る</button>
+	</div>
+</script>
+
+<script id="jsTemplatePopupGuildBbsRemoveConfirm" type="text/x-jsrender">
+	<div class="modalInner">
+		<p>{{>message}}</p>
+		<p>{{>body}}</p>
+		<div class="innerBtnBox">
+			<button class="btn cancel jsClosePopup">やめる</button>
+			<button class="btn jsClosePopup {{>button_class}}">削除する</button>
+		</div>
+	</div>
+</script>
+
+<script id="jsTemplatePopupInviteConfirm" type="text/x-jsrender">
+	<div class="modalInner">
+		<p>{{>user_name}}をギルドに勧誘しますか？</p>
+		<div class="innerBtnBox">
+			<button class="btn cancel jsClosePopup">やめる</button><button class="btn jsClosePopup jsButtonGuildInviteFix">勧誘する</button>
+		</div>
+	</div>
+</script>
+
+<script id="jsTemplatePopupInviteComplete" type="text/x-jsrender">
+	<div class="modalInner guilF">
+		<p>ギルドに勧誘しました。<br />24時間反応がない場合、自動的に取り下げられます。</p>
+		<button class="btn short close jsClosePopup">閉じる</button>
+	</div>
+</script>
+
+<script id="jsTemplatePopupInviteMax" type="text/x-jsrender">
+	<div class="modalInner guilF">
+		<p>勧誘人数が上限に達しています。<br />ギルド定員以上の勧誘はできません。</p>
+		<button class="btn short close jsClosePopup">閉じる</button>
+	</div>
+</script>
+
+<script id="jsTemplatePopupGuildJoinConfirm" type="text/x-jsrender">
+	<div class="modalInner">
+		<p>このギルドに加入しますか？</p>
+		<div class="innerBtnBox">
+			<button class="btn cancel jsClosePopup">やめる</button><button class="btn jsClosePopup jsGuildJoinFix">加入する</button>
+		</div>
+	</div>
+</script>
+
+<script id="jsTemplatePopupGuildJoinComplete" type="text/x-jsrender">
+	<div class="modalInner">
+		<p>加入しました。</p>
+		<button class="btn large close" data-href="guild/">ギルドトップへ戻る</button>
+	</div>
+</script>
+
+<script id="jsTemplatePopupPartnerRemoveConfirm" type="text/x-jsrender">
+	<div class="modalInner">
+		<p>{{>user_name}}さんをクエスト同行者から外しますか？</p>
+		<div class="innerBtnBox">
+			<button class="btn cancel jsClosePopup">やめる</button><button class="btn jsClosePopup jsButtonMissionPartnerRemoveFix">外す</button>
+		</div>
+	</div>
+</script>
+
+<script id="jsTemplatePopupPartnerRemoveComplete" type="text/x-jsrender">
+	<div class="modalInner">
+		<p>外しました。</p>
+		<span class="btn short close jsButtonMissionPartnerRemoveEnd">閉じる</span>
+	</div>
+</script>
+
+<script id="jsTemplateCheeredPopup" type="text/x-jsrender">
+	<div id="cheeredUp" class="modalInner">
+		<p>自分と{{>target_name}}のAPが回復しました。</p>
+		<table>
+			<tr>
+				<td>{{>user_name}}　<span>AP</span> {{>user_tp_before}} → {{>user_tp_after}}</td>
+			</tr>
+			<tr>
+				<td>{{>target_name}}　<span>AP</span> {{>target_tp_before}} → {{>target_tp_after}}</td>
+			</tr>
+			<tr>
+				<td><span>本日の鼓舞回数</span>　{{>10 - rest_cheer_num}}/10</td>
+			</tr>
+		</table>
+		<span class="btn short close jsClosePopup">閉じる</span>
+	</div>
+</script>
+
+<script id="jsTemplatePopupLoginBonus" type="text/x-jsrender">
+	<div class="modalInner loginBonus">
+		<p>{{>month}}/{{>day}}のログインボーナスです。</p>
+		<p><span class="rubric">ガチャポイント</span> {{>gacha_point}}</p>
+		<p><span class="rubric">ギル</span> {{>gil}}</p>
+		<p><span class="rubric">AP</span> {{>ap}}</p>
+		<div class="receiveGiftBtn">
+			<button class="btn" data-href="gift/list/">ギフトを受け取りに行く</button>
+		</div>
+	</div>
+</script>

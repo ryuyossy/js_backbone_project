@@ -1,0 +1,161 @@
+<h1 class="mainHeader">装備{{if equip_type == 1}}武器{{else}}防具{{/if}}を変更</h1>
+
+<h1 class="subHeader">
+	<span class="subHeaderBg_l"></span>
+	<span>変更する装備</span>
+	<span class="subHeaderBg_r"></span>
+</h1>
+
+<div id="equipChange">
+	<section class="contents contentsShadow statusData_icon original">
+	<h1>{{>before_equip.equip_name}} ({{:~getRarityText(before_equip.rarity)}})
+		{{growTypeTag grow_type=before_equip.grow_type /}}
+	</h1>
+		<div class="columnBox equipListStatus">
+			{{equipThumb equip_id=before_equip.equip_id step=before_equip.step size="medium" /}}
+
+			{{if before_equip.equip_status === 1}}<span class="label36_r4 main">メイン</span>{{else before_equip.equip_status === 2}}<span class="label36_r4 sub">サブ</span>{{/if}}
+			<div class="contentsInner">
+				<dl>
+					<dt>Lv.</dt><dd>{{>before_equip.equip_level}}/{{>before_equip.max_level}}</dd>
+					<dt>成長</dt><dd><div class="gergeBgFrame"><div class="gergeBg"><span class="gerge equipGrowth{{if before_equip.equip_exp===100}} max{{/if}}" style="width:{{>before_equip.equip_exp}}%;"></span></div></div></dd><dd>{{>before_equip.equip_exp}}%</dd>
+					{{if equip_type == 1}}
+					<dt>必要武器P</dt><dd>{{>before_equip.equip_cost}}</dd>
+					{{else}}
+					<dt>必要防具P</dt><dd>{{>before_equip.equip_cost}}</dd>
+					{{/if}}
+				</dl>
+				<div class="columnBox">
+					<dl>
+						<dt>{{if equip_type == 1}}攻撃{{else}}防御{{/if}}</dt><dd>{{>before_equip.power}}</dd>
+						<dt>属性</dt>
+						<dd>{{if before_equip.attribute_name}}{{>before_equip.attribute_name}}{{else}}−{{/if}}</dd>
+					</dl>
+					<dl>
+						<dt>{{if equip_type == 1}}特攻{{else}}特防{{/if}}</dt><dd>{{>before_equip.special_power}}</dd>
+						<dt>属性Lv</dt>
+						<dd>{{if before_equip.attribute_level}}{{>before_equip.attribute_level}}{{else}}−{{/if}}</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+
+<h1 class="subHeader">
+	<span class="subHeaderBg_l"></span>
+		<span>{{if equip_type == 1}}武器{{else}}防具{{/if}}を選択</span>
+	<span class="subHeaderBg_r"></span>
+</h1>
+
+<section id="equipFilter" class="contents shadow">
+	<!-- //セレクトグループ -->
+	<div class="selectBox group">
+		<div class="line">
+			<label>
+				<select name="attribute_type" class="jsFilterAttributeType">
+					{{for attribute_types}}
+					<option value="{{>value}}">{{>text}}</option>
+					{{/for}}
+				</select>
+				<span class="selector"></span>
+			</label>
+			<label>
+				<select name="sort_type" class="jsFilterSortType">
+					{{for sort_types}}
+					<option value="{{>value}}">{{>text}}</option>
+					{{/for}}
+				</select>
+				<span class="selector"></span>
+			</label>
+		</div>
+	</div>
+	<button class="btn selectBtn jsButtonFilter">表示する</button>
+</section>
+
+<section id="equipChangeList" class="jsEquipList">
+    <div class="jsListAll">{{for #data tmpl="#jsTemplateEquip2" /}}</div>
+	{{if more_flg}}
+	<div class="moreLink jsListMore">
+		<button class="link"><span>もっと見る</span></button>
+	</div>
+	{{/if}}
+</section>
+
+<button class="btn large cancel" data-role="backpage">{{if equip_type == 1}}武器{{else}}防具{{/if}}デッキ編集に戻る</button>
+
+<hr>
+
+<div class="helpList">
+	<ul>
+		<li><button class="link" data-href="help/detail/605/">装備ってなに？</button></li>
+		<li><button class="link" data-href="help/detail/606/">武器P・防具Pってなに？</button></li>
+		<li><button class="link" data-href="help/detail/602/">成長タイプってなに？</button></li>
+		{{if equip_type == 1}}
+			<li><button class="link" data-href="help/detail/506/">攻撃力・特攻力ってなに？</button></li>
+		{{else}}
+			<li><button class="link" data-href="help/detail/507/">防御力・特防力ってなに？</button></li>
+		{{/if}}
+	</ul>
+</div>
+
+{{escape}}
+<script id="jsTemplatePopupDeckEquipChangeConfirm" type="text/x-jsrender">
+	<div class="modalInner">
+		<!-- //武器変更＆アイテム移動 -->
+		<p>装備を変更しますか？</p>
+		<div class="itemUseConfirm">
+			<div class="itemBox">
+				<div class="itemBoxInner">
+					{{equipThumb equip_id=before_equip_id step=before_step size="medium" /}}
+					<p>{{>before_equip_name}}</p>
+				</div>
+				<span class="changeArrow"><span class="hide">→</span></span>
+				<div class="itemBoxInner">
+					{{equipThumb equip_id=after_equip_id step=after_step size="medium" /}}
+					<p>{{>after_equip_name}}</p>
+				</div>
+			</div>
+		</div>
+		<div class="parameter">
+			<p>
+				<h2>{{if equip_type === 1}}攻撃{{else}}防御{{/if}}</h2>
+				{{>power}}（
+				{{if power_diff>0}}<span class="up">↑{{>power_diff}}
+				{{else power_diff==0}}<span class="even">→
+				{{else power_diff<0}}<span class="down">↓{{>~abs(power_diff)}}
+				{{/if}}
+				</span>）
+			</p>
+			<p>
+				<h2>特{{if equip_type === 1}}攻{{else}}防{{/if}}</h2>
+				{{>sp_power}}（
+				{{if sp_power_diff>0}}<span class="up">↑{{>sp_power_diff}}
+				{{else sp_power_diff==0}}<span class="even">→
+				{{else sp_power_diff<0}}<span class="down">↓{{>~abs(sp_power_diff)}}
+				{{/if}}
+				</span>）
+			</p>
+			<p>
+				<h2>{{if equip_type === 1}}武器{{else}}防具{{/if}}P</h2>
+				{{>equip_cost}}（
+				{{if equip_cost_diff>0}}<span class="up">↑{{>equip_cost_diff}}
+				{{else equip_cost_diff==0}}<span class="even">→
+				{{else equip_cost_diff<0}}<span class="down">↓{{>~abs(equip_cost_diff)}}
+				{{/if}}
+				</span>）
+			</p>
+		</div>
+		<div class="innerBtnBox">
+			<button class="btn cancel jsClosePopup">やめる</button>
+			<button class="btn jsClosePopup jsButtonDeckEquipChangeFix">変更する</button>
+		</div>
+	</div>
+</script>
+<script id="jsTemplatePopupDeckEquipChangeComplete" type="text/x-jsrender">
+	<div class="modalInner equipListChange">
+		<p>装備を変更しました。</p>
+		<button class="btn cancel" data-href="deck/edit/{{>equip_type}}/{{>deck_no}}/">閉じる</button>
+	</div>
+</script>
+{{/escape}}

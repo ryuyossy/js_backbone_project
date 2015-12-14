@@ -1,0 +1,32 @@
+{
+    "status" : 200,
+    "guild_name" : "サイババ団",
+    "guild_rank" : "A",
+    "rank_status" : "ランクステイ圏内",
+    "rank_rest_days" : "3",
+    "battle_start_rest" : "05:44",
+    "battle_end_rest" : "",
+    "avatars": [
+        {
+            "id": "21001",
+            "name": "ランサー（男）",
+            "description": "『払って良し、突いて良し！』そのひと突きに想いを込めて、前線に立つランサー。",
+            "selected": false,
+            "changeable": true
+        },
+        {
+            "id": "21002",
+            "name": "ランサー（女）",
+            "description": "『私が牽制を！』そのひと払いに想いを込めて、戦場を生きる女ランサー。",
+            "selected": false,
+            "changeable": true
+        },
+        {
+            "id": "21003",
+            "name": "ランサー（女）",
+            "description": "『来月から本気出す』。全てに対して投げやりになった、女ランサー。",
+            "selected": false,
+            "changeable": false
+        }
+    ]
+}

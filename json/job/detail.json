@@ -1,0 +1,38 @@
+{
+    "status": 200,
+    "changeable": true,
+    "job": {
+        "id": 100,
+        "name": "ハイランサー",
+        "type":2,
+        "master_bonuses": [
+            {"type":1,"percent": 20},
+            {"type":2,"percent": 0},
+            {"type":3,"percent": 0}
+        ],
+        "win_jex": 0,
+        "master_jex": 30000,
+        "mastered":false,
+        "current_job":true
+    },
+    "abilities": [
+        {
+            "id": 38,
+            "type": "後衛",
+            "name": "暴れん坊",
+            "mastered": false,
+            "equip_point": 30,
+            "tp_cost": 30,
+            "description": "後衛から敵単体に大ダメージ",
+            "remaining_jex": 1000
+        }
+    ],
+    "conditions" : {
+        "jobs":[{"id":200,"name":"ランサー"}],
+        "job_num":2,
+        "stages":[{"id":1,"name":"コッカラ草原"}],
+        "items":[{"id":1,"name":"回復ドリンク（M）"}],
+        "equips":[{"id":"14001","name":"覇者の剣（松）"}],
+        "materials":[{"id":"101","name":"素材（ノーマル）"}]
+    }
+}

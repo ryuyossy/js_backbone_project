@@ -1,0 +1,138 @@
+<h1 class="mainHeader">メンバー募集中ギルド一覧</h1>
+
+<section id="recruitmentGuild">
+
+	{{if master_priv_flg}}
+	{{if publish_flg}}
+	<section id="myGuild" class="contents contentsShadow statusData_icon link jsList" data-list-id="{{>my_guild.guild_id}}" data-href="/guild/">
+		<div class="columnBox innerHeader">
+			<div class="emblemIcon_l"><span class="guildRank {{>my_guild.guild_rank}}">{{>my_guild.guild_rank}}</span></div>
+			<div class="contentsInner">
+				<h1>{{>my_guild.guild_name}}</h1>
+				<dl>
+					<dt>ギルドLv.</dt><dd>{{>my_guild.guild_level}}</dd>
+					<dt>所属</dt><dd>{{>my_guild.current_member_num}}</dd>
+					<dt>Lv.</dt><dd>{{>my_guild.scout_level_name}}</dd>
+					<dt>やる気</dt><dd>{{>my_guild.scout_motivation_name}}</dd>
+					<dt>経験</dt><dd>{{>my_guild.scout_experience_name}}</dd>
+				</dl>
+			</div>
+		</div>
+		<button class="btn large jsGuildJoin jsGuildEditButton" data-href="guild/menbo/edit/">掲載内容を編集する</button>
+	</section>
+	{{else}}
+	<button class="btn large jsGuildJoin" data-href="guild/menbo/edit/">自分のギルドを掲載する</button>
+	{{/if}}
+	{{/if}}
+
+	<section class="contents contentsShadow condition jsTopic">
+		<!-- //セレクトグループ -->
+		<div class="selectBox group">
+			<div class="line">
+				<label>
+					<select name="scout_level_type" class="jsFilterScoutLevelType">
+						<option value="">求めるLv.</option>
+						<option value="0">Lv10未満</option>
+						<option value="10">Lv10以上</option>
+						<option value="20">Lv20以上</option>
+						<option value="30">Lv30以上</option>
+						<option value="40">Lv40以上</option>
+						<option value="50">Lv50以上</option>
+						<option value="60">Lv60以上</option>
+						<option value="70">Lv70以上</option>
+						<option value="80">Lv80以上</option>
+						<option value="90">Lv90以上</option>
+						<option value="100">Lv100以上</option>
+						<option value="150">Lv150以上</option>
+						<option value="200">Lv200以上</option>
+					</select>
+					<span class="selector"></span>
+				</label>
+			</div>
+			<div class="line">
+				<label>
+					<select name="scout_motivation_type" class="jsFilterScoutMotivationType">
+						<option value="">求めるやる気</option>
+						<option value="1">★☆☆☆☆</option>
+						<option value="2">★★☆☆☆</option>
+						<option value="3">★★★☆☆</option>
+						<option value="4">★★★★☆</option>
+						<option value="5">★★★★★</option>
+					</select>
+					<span class="selector"></span>
+				</label>
+
+				<label>
+					<select name="scout_experience_type" class="jsFilterScoutExperienceType">
+						<option value="">求める経験</option>
+						<option value="1">初心者OK</option>
+						<option value="2">中級向け</option>
+						<option value="3">達人向け</option>
+					</select>
+					<span class="selector"></span>
+				</label>
+			</div>
+		</div>
+		<button class="btn selectBtn jsButtonFilter">表示する</button>
+	</section>
+
+
+	<section id="recruitmentGuildList" class="jsMenboList">
+		<!-- /イチオシギルドのロジックは無いのでとりあえずコメントアウト
+		<section class="contents contentsShadow statusData_icon limit link">
+
+			<div class="headCenter">
+				<p class="contentsHeader">シロひげ傭兵隊長のイチオシ</p>
+			</div>
+			<div class="columnBox innerHeader inHeadMargin">
+				<div class="iconBgRect_l gold"><img src="/img/avatar/myAvatar_l.png"></div>
+				<div class="contentsInner">
+					<h1>ギルド名</h1>
+					<div class="spaceCntBox">
+						<dl>
+							<dt>ギルドLv:</dt><dd>1</dd>
+						</dl>
+						<dl>
+							<dt>所属:</dt><dd>所属ギルド名</dd>
+						</dl>
+					</div>
+					<div class="spaceCntBox">
+						<dl>
+							<dt>Lv.</dt><dd>10以上</dd>
+						</dl>
+						<dl>
+							<dt>やる気</dt><dd>★★★☆☆</dd>
+						</dl>
+					</div>
+					<dl>
+						<dt>経験</dt><dd>初心者OK</dd>
+					</dl>
+				</div>
+			</div>
+		</section>
+		-->
+		<section class="jsListAll">
+			{{for #data tmpl="#jsTemplateGuildMenboList" /}}
+		</section>
+		{{if more_flg}}
+		<div class="moreLink jsListMore">
+			<button class="link"><span>もっと見る</span></button>
+		</div>
+		{{/if}}
+	</section>
+</section>
+
+<hr>
+
+<div class="arrowLink spaceBack">
+  <button class="link prev" data-href="guild/space/">ギルド広場トップに戻る</button>
+</div>
+<div class="arrowLink">
+  <button class="link prev" data-href="guild/">ギルドトップに戻る</button>
+</div>
+
+<div class="helpList">
+	<ul>
+		<li><button class="link" data-href="help/detail/303/">メンバーが増えると？</button></li>
+	</ul>
+</div>

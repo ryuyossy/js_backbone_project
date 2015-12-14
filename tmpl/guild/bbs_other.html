@@ -1,0 +1,32 @@
+<h1 class="mainHeader">ギルド掲示板</h1>
+
+{{if battle_state===3 || battle_state===4}}
+<section class="dimmed">
+	{{if battle_state===3}}
+	<p>バトル準備中のため掲示板を閲覧できません</p>
+	{{else battle_state===4}}
+	<p>バトル中のため掲示板を閲覧できません</p>
+	{{/if}}
+</section>
+{{else}}
+<section id="guildBbs" class="jsGuildBbs bbsOthM">
+	<section class="jsGuildBbsTopics">
+		<div class="jsListAll">
+			{{for #data tmpl="#jsTemplateGuildBbsTopics" /}}
+		</div>
+		{{if bbs_more_flg}}
+		<div class="moreLink jsListMore">
+			<button class="link"><span>もっと見る</span></button>
+		</div>
+		{{/if}}
+	</section>
+
+	<hr>
+
+	<div class="arrowLink alertNoMem">
+		<button class="link prev" data-href="guild/other/{{>guild_id}}/">ギルドトップに戻る</button>
+	</div>
+</section>
+{{/if}}
+
+

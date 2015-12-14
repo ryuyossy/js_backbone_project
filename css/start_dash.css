@@ -1,0 +1,74 @@
+@charset "utf-8";
+/*
+@mixin backgroundResize($position:0 -60px){
+	@media screen and (min-width:319px){
+		width:320px;
+		@include background-size(320px,auto);
+	}
+	@media screen and (min-width:359px){
+		width:360px;
+		@include background-size(360px,auto);
+	}
+	@media screen and (min-width:361px){
+		width:480px;
+		@include background-size(480px,auto);
+		background-position:$position;
+	}
+}
+*/
+/*
+@mixin display-box{
+	display:flexbox;
+	-webkit-display:flexbox;
+}
+@mixin box-align($position){
+	flex-align:$position;
+	-webkit-flex-align:$position;
+}
+@mixin box-flex($ratio){
+	flex:$ratio;
+	-webkit-flex:$ratio;
+}
+@mixin box-pack($position){
+	flex-pack:$position;
+	-webkitflex-pack:$position;
+}
+*/
+/* line 7, ../scss/start_dash.scss */
+#startDash .title {
+  display: block;
+  margin: 16px auto;
+}
+/* line 11, ../scss/start_dash.scss */
+#startDash .subHeader3 {
+  margin-bottom: 16px;
+}
+/* line 14, ../scss/start_dash.scss */
+#startDash .contents {
+  width: 95%;
+  margin: 0 auto 8px auto;
+}
+/* line 18, ../scss/start_dash.scss */
+#startDash .contents .cleared {
+  display: inline-block;
+  background: url("/img/parts/sprite_mission_parts.png") -2px -2px no-repeat;
+  -webkit-background-size: 320px 320px;
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  width: 76px;
+  height: 24px;
+}
+/* line 27, ../scss/start_dash.scss */
+#startDash .message {
+  margin: 8px auto 0 auto;
+}
+/* line 30, ../scss/start_dash.scss */
+#startDash .subHeader {
+  margin: 32px 0 16px 0;
+}
+/* line 34, ../scss/start_dash.scss */
+#startDash .listMenu,
+#startDash .caution {
+  margin-bottom: 32px;
+}

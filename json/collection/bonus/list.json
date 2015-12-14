@@ -1,0 +1,17 @@
+{
+	"status": 200,
+    "guild_name" : "サイババ団",
+    "guild_rank" : "A",
+    "rank_status" : "ランクステイ圏内",
+    "rank_rest_days" : "3",
+    "battle_start_rest" : "05:44",
+    "battle_end_rest" : "",
+	"collector_rank": 1,
+	"collect_equip_num": 7,
+	"next_collector_rank_equip_num": 23,
+	"add_max_own_equip_num": 5,
+	"trainer_rank": 3,
+	"lv_max_num": 0,
+	"next_trainer_rank_lv_max_num": 30,
+	"reduce_mp_recover_sec": 3
+}

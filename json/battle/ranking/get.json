@@ -1,0 +1,54 @@
+{
+    "status": 200,
+    "rank": "F",
+    "start_date": "01月05日",
+    "end_date": "01月05日",
+    "order": 1,
+	"guild_bp": 9876543210,
+	"rankup_bp": 1234567890,
+    "state": "stay",
+    "rest_day": 0,
+    "current_date": "01月05日",
+    "current_time": "00:00",
+    "guilds": [
+        {
+            "name": "ぬるぽギルド",
+            "guild_id": 1,
+            "gp": 9876543210,
+            "order": 1,
+            "state": "up",
+            "master_name": "ぬるぽさん",
+            "master_avatar_id": "10001",
+            "level": 1,
+            "member_num": 1,
+            "max_member_num": 15,
+            "own_guild_flg": true
+        },
+        {
+            "name": "熱血高校",
+           "guild_id": 2,
+            "gp": 1234567890,
+            "order": 2,
+            "state": "stay",
+            "master_name": "まっくす",
+            "master_avatar_id": "10001",
+            "level": 1,
+            "member_num": 1,
+            "max_member_num": 15,
+            "own_guild_flg": false
+        },
+        {
+            "name": "ババG",
+           "guild_id": 2,
+            "gp": 4976813520,
+            "order": 3,
+            "state": "down",
+            "master_name": "馬.場.浩.介",
+            "master_avatar_id": "10001",
+            "level": 1,
+            "member_num": 1,
+            "max_member_num": 15,
+            "own_guild_flg": false
+        }
+    ]
+}

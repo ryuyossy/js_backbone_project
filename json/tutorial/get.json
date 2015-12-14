@@ -1,0 +1,67 @@
+{
+    "status": 200,
+    "img_url_root": "/img",
+    "tutorial_step": 3,
+    "product_mode": false,
+	"user_name" : "あっきー",
+	"sex_type" : "MAN",
+	"avatar_id" : "00002",
+    "avatars": [
+        {
+            "sex_type": "MAN",
+            "avatar_name": "村人（男）",
+            "avatar_id": "00001"
+        },
+        {
+            "sex_type": "WOMAN",
+            "avatar_name": "村人（女）",
+            "avatar_id": "00002"
+        }
+    ],
+    "equips": [
+        {
+            "attribute_level": null,
+            "attribute_name": null,
+            "description": "水晶で出来た透明な剣",
+            "equip_cost": 11,
+            "equip_exp": 0,
+            "equip_id": 130007,
+            "equip_level": 1,
+            "equip_name": "クリスタルソード",
+            "equip_status": 0,
+            "equip_type": 1,
+            "grow_type": 3,
+            "max_level": 40,
+            "power": 1618,
+            "protected_flg": null,
+            "rarity": 3,
+            "rarity_name": "R",
+            "sell_price": 2750,
+            "special_power": 1080,
+            "step": 0,
+            "user_equip_no": 13593718466338
+        },
+        {
+            "attribute_level": null,
+            "attribute_name": null,
+            "description": "白銀で作られた静かに光る鎧",
+            "equip_cost": 12,
+            "equip_exp": 0,
+            "equip_id": 230001,
+            "equip_level": 1,
+            "equip_name": "白銀の鎧",
+            "equip_status": 0,
+            "equip_type": 2,
+            "grow_type": 3,
+            "max_level": 40,
+            "power": 1782,
+            "protected_flg": null,
+            "rarity": 3,
+            "rarity_name": "R",
+            "sell_price": 3000,
+            "special_power": 1189,
+            "step": 0,
+            "user_equip_no": 13593718466383
+        }
+    ]
+}

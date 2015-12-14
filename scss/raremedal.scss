@@ -1,0 +1,205 @@
+@charset "utf-8";
+@import "base";
+@import "ruleset";
+
+// banner
+.banner.limitDuring{
+	margin-top:$inner_margin;
+	> p{
+		color:$color_J;
+		> button{
+			cursor:default;
+		}
+	}
+}
+
+// rareMedalList
+#rareMedalList{
+	.contents{
+		width:95%;
+		margin:0 auto $inner_margin auto;
+		&:first-of-type{
+			margin-top:$inner_margin;
+		}
+		&.limit{
+			margin-top:$content_margin+4px;
+		}
+	}
+	.contentsInner{
+		p .headline{
+			color:$color_H;
+		}
+	}
+	.numControl{
+		width:95%;
+		margin:8px auto 0 auto;
+		padding-bottom:0;
+	}
+	.label48.notice{
+		width:80%;
+		margin:0 auto;
+	}
+}
+
+#notifyWindow{
+	dt{
+		margin-bottom:$inner_margin;
+		text-align:center;
+		h2{
+			font-size:90%;
+		}
+	}
+	dd{
+		font-size:80%;
+		text-align:center;
+		line-height:1.7;
+		.headline{
+			display:inline-block;
+			margin:0 $inner_margin;
+			color:$color_H;
+		}
+	}
+	.innerBtnBox{
+		.btn.close{
+			margin:0;
+		}
+	}
+}
+
+#rareMedalResult{
+	.complateMessage{
+		article{
+			margin-top:$inner_margin;
+			padding:0;
+		}
+		.paramStatus{
+			width:95%;
+			margin:$inner_margin auto;
+			color:#fff;
+		}
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+// rare medal prepare
+#rareMedal{
+	.title{
+		display:block;
+		margin:8px auto;
+	}
+	.message{
+		margin-bottom:16px;
+	}
+}
+
+
+/*
+.jsPostExchange{
+	width: 95%;
+	margin: 16px auto 0 auto;
+	//padding: 8px 0 0 0;
+	.statusData_icon {
+		padding: 8px 0 0 0;
+	}
+	.contents{
+		margin-bottom:8px;
+
+		&.limit{
+			margin-top:24px;
+		}
+	}
+	img {
+		width: 128px;
+		height: 128px;
+	}
+	.red{
+		color:#8C0000;
+	}
+}
+.contentsInner{
+	.exchangeInfo{
+		p{
+			display:inline-block;
+		}
+	}
+	.description{
+		margin: 5px 0px;
+	}
+}
+.shopNumControl {
+	width: 95%;
+	margin: 8px auto 0 auto;
+}
+
+.exchangeNotify{
+	width: 100%;
+	text-align: center;
+	p{
+		width: 80%;
+		margin: 3px auto;
+	}
+}
+#notifyWindow{
+	img {
+		width: 128px;
+		height: 128px;
+	}
+	ul{
+		text-align: center;
+	}
+	li:nth-child(1){
+		margin: 8px auto;
+	}
+	li:nth-child(3){
+		margin: 3px auto 8px;
+		font-size: 13px;
+	}
+	.innerBtnBox{
+		width: 100%;
+		margin: $inner_margin auto 0 auto;
+		font-size:110%;
+	}
+	.btn{
+		width: $content_width;
+	}
+	.label{
+		font-size: 90%;
+		color: #8C0000;
+	}
+	.spacer{
+		display: inline-block;
+		width: 10px;
+		margin: 0;
+		padding: 0;
+	}
+}
+.exchangedItemMessage{
+	margin: 10px auto 2px;
+	color: white;
+	text-align: center;
+	h2{
+		margin: 10px auto;
+	}
+	img{
+		width: 128px;
+		height: 128px;
+	}
+}
+.exchangedItemInfo{
+	p{
+		font-size: 12px;
+	}
+}
+*/

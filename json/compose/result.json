@@ -1,0 +1,51 @@
+{
+	"status": 200,
+	"version":5,
+	"user_id": 1,
+	"user_equip_no": "1350268201201",
+	"material_type": 4,
+	"compose_result": {
+		"id":120001,
+		"name": "ビクトリーアーマー",
+		"big_success_flg":true,
+		"compose": {
+			"step": 0
+		},
+		"grow_type": 1,
+		"grow_type_name": "早熟",
+		"rarity": 3,
+		"rarity_name": "レア",
+		"add_rare_medal_num": 0,
+		"is_level_up": false,
+		"evolution_flg": false,
+		"max_level_flg": false,
+		"equip_exp": 44,
+		"before": {
+			"level": 13,
+			"max_level": 20,
+			"power": 2336,
+			"special_power": 3618,
+			"rare_medal_num": 19990,
+			"attribute": {
+				"level": 1,
+				"name": "火"
+			}
+		},
+		"after": {
+			"level": 13,
+			"max_level": 40,
+			"power": 2376,
+			"special_power": 3658,
+			"rare_medal_num": 19990,
+			"attribute": {
+				"level": null,
+				"name": null
+			}
+		}
+	},
+	"equips_id": [
+		110002,
+		120001
+	],
+	"materials_id": []
+}

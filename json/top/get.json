@@ -1,0 +1,36 @@
+{
+	"status": 200,
+	"system_infos": [
+		{
+			"body": null,
+			"info_datetime": "12/11 15:53",
+			"info_id": 1,
+			"info_kind": 1,
+			"info_kind_name": "メンテナンス",
+			"title": "メンテナンスのお知らせ"
+		},
+		{
+			"body": null,
+			"info_datetime": "12/11 15:53",
+			"info_id": 2,
+			"info_kind": 2,
+			"info_kind_name": "重要",
+			"title": "重要なお知らせ"
+		},
+		{
+			"body": null,
+			"info_datetime": "12/11 15:53",
+			"info_id": 3,
+			"info_kind": 3,
+			"info_kind_name": "キャンペーン",
+			"title": "キャンペーン"
+		}
+	],
+	"banners":[
+        {
+            "image_file_name":"banner_battleStrengthening.png",
+            "banner_text":"バトルで勝利して、報酬を勝ち取れ",
+            "redirect_path": "event/battle/weeks/"
+        }
+    ]
+}

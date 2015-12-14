@@ -1,0 +1,71 @@
+<h1 class="mainHeader">武具図鑑</h1>
+
+<div class="statusLine">
+	<p><span>武器</span> {{>now_weapons_num}}/{{>max_weapons_num}}
+		<span>防具</span> {{>now_protectors_num}}/{{>max_protectors_num}}</p>
+</div>
+<section class="contents contentsShadow">
+	<!-- //セレクトグループ -->
+	<span class="selectBox group">
+		<div class="line">
+			<label>
+				<select name="equip_type" class="jsFilterEquipType">
+					{{for equip_types}}
+						<option value="{{>value}}">{{>text}}</option>
+					{{/for}}
+				</select>
+				<span class="selector"></span>
+			</label>
+			<label>
+				<select name="attribute_type" class="jsFilterAttributeType">
+					{{for attribute_types}}
+						<option value="{{>value}}">{{>text}}</option>
+					{{/for}}
+				</select>
+				<span class="selector"></span>
+			</label>
+			<label>
+				<select name="rarity" class="jsFilterRarity">
+					{{for rarity_types}}
+						<option value="{{>value}}">{{>text}}</option>
+					{{/for}}
+				</select>
+				<span class="selector"></span>
+			</label>
+		</div>
+	</span>
+	<button class="btn link selectBtn jsButtonFilter">表示する</button>
+</section>
+
+<div class="collectionEquipList jsEquipList">
+	<div class="contents contentsShadow">
+		<ul class="collection jsListAll">
+			{{for #data tmpl="#jsTemplateEquipThumbs" /}}
+		</ul>
+	</div>
+
+	<!-- //下に続きを読み込むボタン -->
+
+	{{if collect_more_flg}}
+	<div class="moreLink jsListMore">
+		<button class="link"><span>もっと見る</span></button>
+	</div>
+	{{/if}}
+</div>
+
+<hr>
+
+<!-- //単独リンク（矢印左） -->
+<div class="arrowLink collectionEquipLink">
+	<button class="link prev" data-href="collection/top/">図鑑トップへ戻る</button>
+</div>
+<!-- //ヘルプリスト -->
+
+
+<div class="helpList">
+	<ul>
+		<li><button class="link" data-href="help/detail/1401/">武具図鑑ってなに？</button></li>
+		<li><button class="link" data-href="help/detail/1402/">図鑑ボーナスってなに？</button></li>
+	</ul>
+</div>
+

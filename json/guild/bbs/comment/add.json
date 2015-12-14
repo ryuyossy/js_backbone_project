@@ -1,0 +1,13 @@
+{
+    "status" : 200,
+	"comments" : [
+		{
+			"comment_id" : "12345679",
+			"comment_datetime" : "8/10 12:25",
+			"user_id" : 2233,
+			"user_name" : "シーフ",
+			"avatar_id" : "00001",
+			"body_text" : "コメント追加だぜ！"
+		}
+	]
+}

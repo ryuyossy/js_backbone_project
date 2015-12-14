@@ -1,0 +1,38 @@
+<h1 class="mainHeader">戦況履歴一覧</h1>
+
+<div id="jsBattleHistory">
+	<section id="situationList" class="jsListAll match">
+		{{for #data tmpl="#jsTemplateBattleHistoryList" /}}
+	</section>
+
+	{{if more_flg}}
+	<div class="moreLink jsListMore">
+		<button class="link"><span>もっと見る</span></button>
+	</div>
+	{{/if}}
+</div>
+
+<hr>
+
+<div class="arrowLink btTop">
+	<button class="link prev" data-href="battle/top/">バトルトップに戻る</button>
+</div>
+
+<div class="arrowLink">
+	<button class="link next" data-href="battle/schedule/">対戦スケジュール</button>
+</div>
+
+{{if 0}}
+<!--<div class="banner">
+	<p>
+		<button class="link" data-link="#"><img src="{{getImgRoot/}}/ad/banner.png" alt="banner"><br>└イベントバナースペース┘</button>
+	</p>
+</div>-->
+{{/if}}
+
+<div class="helpList situationHelp">
+	<ul>
+		<li><button class="link" data-href="help/detail/201/">バトルってなに？</button></li>
+	</ul>
+</div>
+

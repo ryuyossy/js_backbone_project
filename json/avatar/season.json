@@ -1,0 +1,85 @@
+{
+    "status": 200,
+    "add_jex_start_date": "2013/05/01",
+    "add_jex_end_date": "2013/05/14",
+    "emblem_gacha_status": 2,
+    "add_jex_percent": 10,
+    "avatars": [
+        {
+            "avatar_description": "『来月から本気出す』。全てに対して投げやりになった、女ランサー。",
+            "avatar_id": "21003",
+            "avatar_name": "ランサー（女）",
+            "emblem_description": "【五月病】ランサーのアバター開放に必要なエンブレム",
+            "emblem_id": "21003",
+            "emblem_name": "無気力のエンブレム",
+            "header_name": "【五月病】",
+            "own_bonus": [
+                {
+                    "type": 1,
+                    "percent": 0
+                },
+                {
+                    "type": 2,
+                    "percent": 0.5
+                },
+                {
+                    "type": 3,
+                    "percent": 0
+                }
+            ]
+        },
+        {
+            "avatar_description": "『てっぺん目指すぜ！』。逆境にもめげず、龍のごとく突き進むサムライ。",
+            "avatar_id": "13003",
+            "avatar_name": "サムライ（男）",
+            "emblem_description": "【鯉のぼり】サムライのアバター開放に必要なエンブレム",
+            "emblem_id": "13003",
+            "emblem_name": "鯉のエンブレム",
+            "header_name": "【鯉のぼり】",
+            "own_bonus": [
+                {
+                    "type": 1,
+                    "percent": 0.5
+                },
+                {
+                    "type": 2,
+                    "percent": 0
+                },
+                {
+                    "type": 3,
+                    "percent": 0
+                }
+            ]
+        },
+        {
+            "avatar_description": "『感謝を込めて、全部焼きます！』。母への感謝をファイヤーに込める女魔術師。",
+            "avatar_id": "31003",
+            "avatar_name": "魔術師（女）",
+            "emblem_description": "【母の日】魔術師のアバター開放に必要なエンブレム",
+            "emblem_id": "31003",
+            "emblem_name": "母のエンブレム",
+            "header_name": "【母の日】",
+            "own_bonus": [
+                {
+                    "type": 1,
+                    "percent": 0
+                },
+                {
+                    "type": 2,
+                    "percent": 0
+                },
+                {
+                    "type": 3,
+                    "percent": 0.5
+                }
+            ]
+        }
+    ],
+    "emblem_gacha": {
+        "ticket_name": "エンブレムガチャチケット",
+        "ticket_num": 1,
+        "end_datetime": "2013/05/07 23:59:59",
+        "gacha_id": 301,
+        "start_datetime": "2013/05/01 00:00:00"
+    }
+}

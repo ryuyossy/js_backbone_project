@@ -1,0 +1,175 @@
+{
+    "status" : 200,
+    "battle_end_date": null,
+    "battle_end_rest": null,
+    "battle_start_date": "2013/02/19 19:00:00",
+    "battle_start_rest": "05:40:15",
+    "battle_state": 1,
+     "banners":[
+        {
+            "image_file_name":"banner_battleStrengthening.png",
+            "banner_text":"バトルで勝利して、報酬を勝ち取れ",
+            "redirect_path": "event/battle/weeks/"
+        }
+    ],
+    "bbs_posts": [
+        {
+            "avatar_id": "20002",
+            "body_text": "コッカラ草原のボス『パッとしないヤツ』を倒しました！！ドンドン進みますよ！",
+            "like_num": 0,
+            "message_id": "24_24_5398659605397486",
+            "post_datetime": "02/18 11:16",
+            "post_type": 2,
+            "reply_num": 0,
+            "self_liked_flg": false,
+            "user_id": 24,
+            "user_name": "mtd"
+        },
+        {
+            "avatar_id": "00001",
+            "body_text": "コッカラ草原のボス『パッとしないヤツ』を倒しました！！ドンドン進みますよ！",
+            "like_num": 0,
+            "message_id": "24_38_5349137983734083",
+            "post_datetime": "02/17 21:30",
+            "post_type": 2,
+            "reply_num": 0,
+            "self_liked_flg": false,
+            "user_id": 38,
+            "user_name": "まっくす"
+        },
+        {
+            "avatar_id": "00001",
+            "body_text": "こんちゃ",
+            "like_num": 2,
+            "message_id": "24_39_1361085029203",
+            "post_datetime": "02/17 16:10",
+            "post_type": 1,
+            "reply_num": 0,
+            "self_liked_flg": true,
+            "user_id": 39,
+            "user_name": "ジョンぺい"
+        },
+        {
+            "avatar_id": "00001",
+            "body_text": "まよわない森のボス『迷わすヤツ』を倒しました！！ドンドン進みますよ！",
+            "like_num": 1,
+            "message_id": "24_39_5329595043443098",
+            "post_datetime": "02/17 16:05",
+            "post_type": 2,
+            "reply_num": 0,
+            "self_liked_flg": true,
+            "user_id": 39,
+            "user_name": "ジョンぺい"
+        },
+        {
+            "avatar_id": "00001",
+            "body_text": "コッカラ草原のボス『パッとしないヤツ（リベンジ）』を倒しました！！ドンドン進みますよ！",
+            "like_num": 0,
+            "message_id": "24_39_5329501852472922",
+            "post_datetime": "02/17 16:03",
+            "post_type": 2,
+            "reply_num": 0,
+            "self_liked_flg": false,
+            "user_id": 39,
+            "user_name": "ジョンぺい"
+        }
+    ],
+    "before_battle": {
+		"judge" : 1,
+		"date" : "12月31日",
+		"round" : 1,
+		"enemy_guild_name" : "極悪ぎるど",
+		"own_gp" : 9876543210,
+		"enemy_gp" : 1234567890
+	},
+	"current_battle" : {
+		"date" : "12月31日",
+		"round" : 1,
+		"own_gp" : 9876543210,
+		"enemy_gp" : 1234567890
+	},
+	"enemy" : {
+		"name" : "極悪ぎるど",
+		"level" : 1234,
+		"member_num" : 15,
+		"max_member_num" : 15,
+		"gp" : 9876543210,
+		"total_win_num" : 1234
+	},
+    "enemy_exist_flg": false,
+    "guild": {
+        "gp": 338,
+        "guild_id": 24,
+        "level": 1,
+        "master_avatar_id": "20002",
+        "master_name": "mtd",
+        "member_num": 3,
+        "member_num_max": 15,
+        "name": "ぎるぎるぎるどあああ",
+        "rank": "F"
+    },
+    "img_url_root": "http://img.stg-braveguardian.jp",
+    "next_battle": {
+        "end_time": "20:00",
+        "start_time": "19:00"
+    },
+    "npc_comment": "次回のバトルまでしばし休憩！<br />休む事も大切だぞ！",
+    "product_mode": false,
+    "rest_time": "05:40:15",
+    "state": "ready",
+    "status": 200,
+    "system_date": "2013/02/19 13:19:44",
+    "token": "d633504ac0c3dac378f0b1a672a9450a9f070e5cddb3baec13f4f214a6198493",
+    "tutorial_step": null,
+	"first_access_flg":false,
+    "user": {
+        "avatar_id": "00001",
+        "user_id": 38
+    },
+    "enemy":{
+        "gp": 856,
+        "guild_id": 23,
+        "level": 1,
+        "master_avatar_id": "10001",
+        "max_member_num": 15,
+        "member_num": 1,
+        "name": "大連携！まっくす",
+        "total_win_num": 1
+    },
+    "rewards":{
+        "win":[
+            {
+                "type":5,
+                "id":null,
+                "name":null,
+                "quantity":2500
+            },
+            {
+                "type":4,
+                "id":null,
+                "name":null,
+                "quantity":500
+            },
+            {
+                "type":8,
+                "id":null,
+                "name":null,
+                "quantity":2
+            }
+        ],
+        "lose":[
+            {
+                "type":5,
+                "id":null,
+                "name":null,
+                "quantity":1300
+            },
+            {
+                "type":8,
+                "id":null,
+                "name":null,
+                "quantity":1
+            }
+        ]
+    }
+}

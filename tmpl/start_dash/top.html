@@ -1,0 +1,76 @@
+			<div id="startDash">
+				<img src="{{getImgRoot/}}/parts/startdash_title.png" alt="スタートダッシュキャンペーン" class="title">
+				
+				{{if next.day}}
+				<h1 class="subHeader3">次回参加でコレをプレゼント！</h1>
+				
+				<section class="contents shadow statusData_icon">
+					<div class="columnBox innerHeader">
+						{{for next.gifts}}
+						{{giftThumb type=item_type id=item_id /}}
+						<div class="contentsInner">
+							<h1>バトル参加{{>#parent.parent.data.next.day}}回目</h1>
+							<p>{{>item_name}} × {{>qty}}</p>
+						</div>
+						{{/for}}
+					</div>
+				</section>
+				
+				<div class="arrowLink">
+					<button class="link next" data-href="gift/list/">ギフトを確認</button>
+				</div>
+				{{/if}}
+				
+				{{if npc_comment}}
+				<div class="message navico_arc">
+					<p>
+						<span>{{>npc_comment}}</span>
+					</p>
+				</div>
+				{{/if}}
+				
+				<h1 class="subHeader">
+					<span class="subHeaderBg_l"></span>
+					<span>プレゼント</span>
+					<span class="subHeaderBg_r"></span>
+				</h1>
+				
+				<div class="presentList">
+					{{for start_dashes}}
+					<!-- // クリア済み -->
+					<section class="contents shadow statusData_icon">
+						<div class="columnBox innerHeader">
+							{{for gifts}}
+							{{giftThumb type=item_type id=item_id /}}
+							<div class="contentsInner">
+								<h1>バトル参加{{>#parent.parent.data.day}}回目</h1>
+								<p>{{>item_name}} × {{>qty}}</p>
+							</div>
+							{{/for}}
+						</div>
+						{{if clear_flg}}
+						<span class="cleared"><span class="hide">Cleared</span></span>
+						{{/if}}
+					</section>
+					{{/for}}
+				</div>
+				
+				<hr>
+				
+				<div class="listMenu">
+					<ul>
+						<li><div class="link" data-href="gift/list/">ギフトを確認</div></li>
+						<li><div class="link" data-href="battle/top/">バトルへ</div></li>
+					</ul>
+				</div>
+				
+				<section class="caution">
+					<article>
+						<h1>ご注意</h1>
+						<ul>
+							<li>バトルにて、攻撃または鼓舞をした時点で参加とみなされます。</li>
+							<li>受け取った報酬はギフトで届きます。</li>
+						</ul>
+					</article>
+				</section>
+			</div>

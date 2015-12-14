@@ -1,0 +1,49 @@
+<h1 class="mainHeader">後衛希望</h1>
+
+<section id="rearguardRequest">
+	<div class="message taicho_arc">
+		<p>
+			<span>{{if 0}}<!-- {{>npc_comment}} -->{{/if}}参加出来ないバトルは&#12289;後衛希望が便利だぜ&#65281;</span>
+		</p>
+	</div>
+
+	<section id="requestList" class="jsListAll">
+		{{for battles}}
+		<section class="contents contentsShadow statusData_icon jsList" data-battle-no="{{>battle_no}}" data-start-time="{{>start_time}}" data-end-time="{{>end_time}}">
+			<h1>第{{>battle_no}}試合<span class="time">{{>start_time}}～{{>end_time}}</span></h1>
+			<div class="setUpToggle">
+				<label onclick="">
+					後衛希望
+					{{if back_flg}}
+					<input type="checkbox" class="jsButtonGuildBackEdit" checked="checked">
+					{{else}}
+					<input type="checkbox" class="jsButtonGuildBackEdit">
+					{{/if}}
+				</label>
+			</div>
+		</section>
+		{{/for}}
+	</section>
+</section>
+
+<hr>
+
+<div class="arrowLink">
+	<button class="link prev" data-href="guild/">ギルドトップに戻る</button>
+</div>
+
+<div class="helpList">
+	<ul>
+		<li><button class="link" data-href="help/detail/205/">後衛希望ってなに？</button></li>
+	</ul>
+</div>
+
+{{escape}}
+<script id="jsTemplatePopupBackEdit" type="text/x-jsrender">
+	<div class="modalInner">
+		<p>第{{>battle_no}}試合（{{>start_time}}～{{>end_time}}）の後衛希望を{{if back_flg}}設定{{else}}解除{{/if}}しました。</p>
+		<p>ギルドメンバーの状況によって前衛になることもあります。</p>
+		<span class="btn short close jsClosePopup">閉じる</span>
+	</div>
+</script>
+{{/escape}}

@@ -1,0 +1,127 @@
+{{if scout_level_type || scout_motivation_type || scout_experience_type}}
+<h1 class="mainHeader">掲載内容の編集削除</h1>
+{{else}}
+<h1 class="mainHeader">自分のギルドを掲載</h1>
+{{/if}}
+
+<h1 class="subHeader">
+	<span class="subHeaderBg_l"></span>
+	{{if scout_level_type || scout_motivation_type || scout_experience_type}}
+	<span>掲載中の条件</span>
+	{{else}}
+	<span>希望条件を選択</span>
+	{{/if}}
+	<span class="subHeaderBg_r"></span>
+</h1>
+
+<div class="selectList require jsTopic">
+	<table>
+		<tr>
+			<th>求めるLv.</th>
+			<td class="selectBox">
+				<select name="scout_level_type" class="selectP jsFilterScoutLevelType">
+					<option value="">求めるLv.</option>
+					<option value="0"   {{if scout_level_type === 0 }} selected="true"{{/if}}>Lv10未満</option>
+					<option value="10"  {{if scout_level_type === 10}} selected="true"{{/if}}>Lv10以上</option>
+					<option value="20"  {{if scout_level_type === 20}} selected="true"{{/if}}>Lv20以上</option>
+					<option value="30"  {{if scout_level_type === 30}} selected="true"{{/if}}>Lv30以上</option>
+					<option value="40"  {{if scout_level_type === 40}} selected="true"{{/if}}>Lv40以上</option>
+					<option value="50"  {{if scout_level_type === 50}} selected="true"{{/if}}>Lv50以上</option>
+					<option value="60"  {{if scout_level_type === 60}} selected="true"{{/if}}>Lv60以上</option>
+					<option value="70"  {{if scout_level_type === 70}} selected="true"{{/if}}>Lv70以上</option>
+					<option value="80"  {{if scout_level_type === 80}} selected="true"{{/if}}>Lv80以上</option>
+					<option value="90"  {{if scout_level_type === 90}} selected="true"{{/if}}>Lv90以上</option>
+					<option value="100" {{if scout_level_type === 100}}selected="true"{{/if}}>Lv100以上</option>
+					<option value="150" {{if scout_level_type === 150}}selected="true"{{/if}}>Lv150以上</option>
+					<option value="200" {{if scout_level_type === 200}}selected="true"{{/if}}>Lv200以上</option>
+				</select>
+				<span class="selector"></span>
+			</td>
+		</tr>
+		<tr>
+			<th>求めるやる気</th>
+			<td class="selectBox">
+				<select name="scout_motivation_type" class="selectP jsFilterScoutMotivationType">
+					<option value="">求めるやる気</option>
+					<option value="1" {{if scout_motivation_type === 1 }} selected="true"{{/if}}>★☆☆☆☆</option>
+					<option value="2" {{if scout_motivation_type === 2 }} selected="true"{{/if}}>★★☆☆☆</option>
+					<option value="3" {{if scout_motivation_type === 3 }} selected="true"{{/if}}>★★★☆☆</option>
+					<option value="4" {{if scout_motivation_type === 4 }} selected="true"{{/if}}>★★★★☆</option>
+					<option value="5" {{if scout_motivation_type === 5 }} selected="true"{{/if}}>★★★★★</option>
+				</select>
+				<span class="selector"></span>
+			</td>
+		</tr>
+		<tr>
+			<th>求める経験</th>
+			<td class="selectBox">
+				<select name="scout_experience_type" class="selectP jsFilterScoutExperienceType">
+					<option value="">求める経験</option>
+					<option value="1" {{if scout_experience_type === 1 }} selected="true"{{/if}}>初心者OK</option>
+					<option value="2" {{if scout_experience_type === 2 }} selected="true"{{/if}}>中級向け</option>
+					<option value="3" {{if scout_experience_type === 3 }} selected="true"{{/if}}>達人向け</option>
+				</select>
+				<span class="selector"></span>
+			</td>
+		</tr>
+	</table>
+	{{if scout_level_type || scout_motivation_type || scout_experience_type}}
+	<button class="btn jsButtonGuildMenboEditConfirm" data-mode="change">変更する</button>
+	<button class="btn jsButtonGuildMenboRemoveConfirm">削除する</button>
+	{{else}}
+	<button class="btn jsButtonGuildMenboEditConfirm" data-mode="new">掲載する</button>
+	{{/if}}
+</div>
+
+<hr>
+
+<div class="arrowLink guliBack">
+	<button class="link prev" data-href="guild/menbo/">メンバー募集中ギルド一覧に戻る</button>
+</div>
+
+<div class="helpList">
+	<ul>
+		<li><button class="link" data-href="help/detail/303/">メンバーが増えると？</button></li>
+	</ul>
+</div>
+
+
+{{escape}}
+<script id="jsTemplatePopupMenboEditConfirm" type="text/x-jsrender">
+	<div class="modalInner">
+		<p>以下の内容で掲載してもよろしいですか？</p>
+		<p>
+			求めるLv.・・・{{>scout_level_type}}<br>
+			求めるやる気・・・{{>scout_motivation_type}}<br>
+			求める経験・・・{{>scout_experience_type}}
+		</p>
+		<div class="innerBtnBox">
+			<button class="btn cancel jsClosePopup">やめる</button>
+			<button class="btn jsClosePopup jsButtonGuildMenboEditFix">掲載する</button>
+		</div>
+	</div>
+</script>
+
+<script id="jsTemplatePopupMenboEditComplete" type="text/x-jsrender">
+	<div class="modalInner">
+		<p>選択した内容で掲載しました。</p>
+		<span class="btn close" data-href="guild/menbo/">メンバー募集中ギルド一覧に戻る</span>
+	</div>
+</script>
+<script id="jsTemplatePopupMenboRemoveConfirm" type="text/x-jsrender">
+	<div class="modalInner">
+		<p>掲載中のメンバー募集内容を削除しますか？</p>
+		<div class="innerBtnBox">
+			<button class="btn cancel jsClosePopup">やめる</button>
+			<button class="btn jsClosePopup jsButtonGuildMenboRemoveFix">削除する</button>
+		</div>
+	</div>
+</script>
+
+<script id="jsTemplatePopupMenboRemoveComplete" type="text/x-jsrender">
+	<div class="modalInner">
+		<p>削除しました。</p>
+		<span class="btn close" data-href="guild/menbo/">メンバー募集中ギルド一覧に戻る</span>
+	</div>
+</script>
+{{/escape}}

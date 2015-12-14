@@ -1,0 +1,12 @@
+{
+    "status" : 200,
+    "battle_state": 1,
+    "battle_start_rest" : "08:05:44",
+    "battle_end_rest" : "",
+	"enemy_exist_flg": false,
+    "img_url_root": "/img",
+    "system_date": "2013/01/30 20:17:40",
+    "battle_end_date": "2013/01/30 21:00:00",
+    "battle_start_date": "2013/01/30 21:00:00",
+    "tutorial_step": null
+}

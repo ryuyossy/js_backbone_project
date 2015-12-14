@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>クエスト｜TOP</title>
+	<meta name="robots" content="noindex,nofollow">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+
+	<link rel="stylesheet" href="/css/common_parts.css">
+	<link rel="stylesheet" href="/css/mission.css">
+	<script src="/html/js/jquery-1.8.2.min.js"></script>
+	<script src="/html/js/parts.js"></script>
+</head>
+	<body>
+		<header id="globalHeader">
+			<div class="menuPanel"><button class="link mypage"><span class="hide">マイページ</span></button></div>
+			<div class="battleTimeCount">
+				<div class="battleTimeInner">
+					<h1>次のバトルまで</h1>
+					<div class="numBox">
+						<span class="numGold num_1"><span class="hide">0</span></span>
+						<span class="numGold num_2"><span class="hide">1</span></span>
+						<span class="numGoldColon"><span class="hide">:</span></span>
+						<span class="numGold num_1"><span class="hide">2</span></span>
+						<span class="numGold num_9"><span class="hide">3</span></span>
+						<span class="numGoldColon"><span class="hide">:</span></span>
+						<span class="numGold num_4"><span class="hide">4</span></span>
+						<span class="numGold num_9"><span class="hide">5</span></span>
+					</div>
+				</div>
+			</div>
+			<div class="menuPanel"><button class="link menu"><span class="hide">メニュー</span></button></div>
+		</header>
+		<div id="container">
+			<h1 class="mainHeader">クエスト</h1>
+
+			<section id="missionTop" class="area001 stage002">
+				
+				<h2 class="stageName">ステージ名ステージ名ステージ<!-- //全角14文字 --></h2>
+				
+				<div class="metalPanel">
+					<table class="gergeTable middle">
+						<tr>
+							<th>行動P</th>
+							<td class="gergeBox">
+								<div class="gergeBgFrame">
+									<div class="gergeBg"><span class="gerge missionP" style="width:50%;"></span></div>
+								</div>
+							</td>
+							<td>123/999</td>
+						</tr>
+						<tr>
+							<th>Ex.</th>
+							<td class="gergeBox">
+								<div class="gergeBgFrame">
+									<div class="gergeBg"><span class="gerge missionExp" style="width:50%;"></span></div>
+								</div>
+							</td>
+							<td>999</td>
+						</tr>
+					</table>
+				</div>
+			</section>
+
+			<section id="fieldSelect">
+			<!-- //最新ステージ(フィールド名は全角16文字まで) -->
+				<section class="contents contentsShadow statusData newest">
+					<!-- //最新エリアが未クリアの場合 -->
+					<button class="btn_l" data-href="#"><span class="hide">冒険する</span></button>
+					<!-- //すべてのエリアをクリアしていた場合 
+					<button class="btn_l cleared" data-href="#"><span class="hide">Cleared</span></button>-->
+					<div class="columnBox">
+						<h1><span>99-99</span>フィールド名フィールド名フィ</h1>
+						<table class="gergeTable middle">
+							<tr>
+								<th>達成度</th>
+								<td class="gergeBox">
+									<div class="gergeBgFrame"><div class="gergeBg"><span class="gerge missionProgress" style="width:95%;"></span></div></div>
+								</td>
+								<td>100%</td>
+							</tr>
+						</table>
+						<dl>
+							<dt>行動P</dt><dd>-99</dd>
+							<dt>Ex</dt><dd>+99</dd>
+							<dt>ギル</dt><dd>+50〜80</dd>
+						</dl>
+					</div>
+					<ul class="findingItem">
+						<li><img src="../../img/parts/unknown_item.png"></li>
+						<li><img src="../../img/parts/unknown_item.png"></li>
+						<li><img src="../../img/parts/unknown_item.png"></li>
+						<li><img src="../../img/equip/weapon.png"></li>
+					</ul>
+				</section>
+
+				<!-- //ミッションボス エンカウント 
+				<section class="bossEncounter">
+					<button class="btn_l red" data-href="#"><span class="hide">戦闘準備</span></button>
+					<p>
+						<span class="hide">なんか出た</span>
+					</p>
+				</section>-->
+			</section>
+
+			<div class="banner">
+				<p>
+					<button class="link" data-href="#"><img src="/img/ad/banner.png"><br>└イベントバナースペース┘</button>
+				</p>
+			</div>
+
+			<!-- //クリア済みフィールド（フィールド名は全角16文字まで） -->
+			<section id="fieldList">
+				<section class="contents contentsShadow statusData">
+					<button class="btn_l" data-href="#"><span class="hide">Cleared</span></button>
+					<div class="columnBox">
+						<h1><span>99-99</span>フィールド名フィールド名フィ</h1>
+						<table class="gergeTable middle">
+							<tr>
+								<th>達成度</th>
+								<td class="gergeBox"><div class="gergeBgFrame"><div class="gergeBg"><span class="gerge missionProgress" style="width:50%;"></span></div></div></td>
+								<td>100%</td>
+							</tr>
+						</table>
+						<dl>
+							<dt>行動P</dt><dd>-99</dd><dt>Ex</dt><dd>+99</dd><dt>ギル</dt><dd>+50〜80</dd>
+						</dl>
+					</div>
+					<ul class="findingItem">
+						<li><img src="../../img/equip/weapon.png"></li><!-- //拾得アイテム -->
+						<li><img src="../../img/parts/unknown_item.png"></li><!-- //未拾得アイテム -->
+						<li><img src="../../img/parts/unknown_item.png"></li><!-- //未拾得アイテム -->
+						<li><img src="../../img/equip/weapon.png"></li><!-- //拾得アイテム -->
+					</ul>
+				</section>
+	
+				<section class="contents contentsShadow statusData">
+					<button class="btn_l" data-href="#"><span class="hide">Cleared</span></button>
+					<div class="columnBox">
+						<h1><span>99-99</span>フィールド名フィールド名フィ</h1>
+						<table class="gergeTable middle">
+							<tr>
+								<th>達成度</th>
+								<td class="gergeBox"><div class="gergeBgFrame"><div class="gergeBg"><span class="gerge missionProgress" style="width:50%;"></span></div></div></td>
+								<td>100%</td>
+							</tr>
+						</table>
+						<dl>
+							<dt>行動P</dt><dd>-99</dd><dt>Ex</dt><dd>+99</dd><dt>ギル</dt><dd>+50〜80</dd>
+						</dl>
+					</div>
+					<ul class="findingItem">
+						<li><img src="../../img/equip/weapon.png"></li>
+						<li><img src="../../img/equip/weapon.png"></li>
+						<li><img src="../../img/parts/unknown_item.png"></li>
+					</ul>
+				</section>
+	
+				<section class="contents contentsShadow statusData">
+					<button class="btn_l" data-href="#"><span class="hide">Cleared</span></button>
+					<div class="columnBox">
+						<h1><span>99-99</span>フィールド名フィールド名フィール</h1>
+						<table class="gergeTable middle">
+							<tr>
+								<th>達成度</th>
+								<td class="gergeBox"><div class="gergeBgFrame"><div class="gergeBg"><span class="gerge missionProgress" style="width:50%;"></span></div></div></td>
+								<td>100%</td>
+							</tr>
+						</table>
+						<dl>
+							<dt>行動P</dt><dd>-99</dd><dt>Ex</dt><dd>+99</dd><dt>ギル</dt><dd>+50〜80</dd>
+						</dl>
+					</div>
+					<ul class="findingItem">
+						<li><img src="../../img/parts/unknown_item.png"></li>
+						<li><img src="../../img/parts/unknown_item.png"></li>
+					</ul>
+				</section>
+			</section>
+
+			<div class="arrowLink">
+				<button class="link next" data-href="#">ステージ選択へ</button>
+			</div>
+			
+		</div>
+		
+		<footer id="globalFooter">
+			<ul>
+				<li class="menuPanel"><span class="link mypage"><span class="hide">マイページ</span></span></li>
+				<li class="menuPanel"><span class="link quest"><span class="hide">クエスト</span></span></li>
+				<li class="menuPanel"><span class="link buttle"><span class="hide">バトル</span></span></li>
+				<li class="menuPanel"><span class="link gatcha"><span class="hide">ガチャ</span></span></li>
+				<li class="menuPanel"><span class="link menu"><span class="hide">マイページ</span></span></li>
+			</ul>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,1359 @@
+@charset "utf-8";
+/*
+@mixin box_shadow_contents_l($offsetSize,$z_index:-1){
+	content:'';
+	position:absolute;
+	left:$offsetSize;
+	top:75%;
+	bottom:17px;
+	width:50%;
+	min-height:5px;
+	max-width:150px;
+	background:#544123;
+	-webkit-box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	-webkit-transform:rotate(-5deg);
+	transform:rotate(-5deg);
+	z-index:$z_index;
+}
+@mixin box_shadow_contents_r($offsetSize,$z-index:-1){
+	content:'';
+	position:absolute;
+	right:$offsetSize;
+	top:75%;
+	bottom:17px;
+	width:50%;
+	min-height:5px;
+	max-width:150px;
+	background:#544123;
+	-webkit-box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	-webkit-transform:rotate(5deg);
+	transform:rotate(5deg);
+	z-index:$z_index;
+}
+*/
+/*
+@mixin backgroundResize($position:0 -60px){
+	@media screen and (min-width:319px){
+		width:320px;
+		@include background-size(320px,auto);
+	}
+	@media screen and (min-width:359px){
+		width:360px;
+		@include background-size(360px,auto);
+	}
+	@media screen and (min-width:361px){
+		width:480px;
+		@include background-size(480px,auto);
+		background-position:$position;
+	}
+}
+*/
+/*
+@mixin display-box{
+	display:flexbox;
+	-webkit-display:flexbox;
+}
+@mixin box-align($position){
+	flex-align:$position;
+	-webkit-flex-align:$position;
+}
+@mixin box-flex($ratio){
+	flex:$ratio;
+	-webkit-flex:$ratio;
+}
+@mixin box-pack($position){
+	flex-pack:$position;
+	-webkitflex-pack:$position;
+}
+*/
+/* page parts */
+/* common */
+/* line 9, ../scss/mission.scss */
+.findingItem li img {
+  -webkit-transition-property: opacity;
+  -webkit-transition-duration: .5s;
+  -webkit-transition-timing-function: ease-in;
+}
+/* line 14, ../scss/mission.scss */
+.findingItem li.got img {
+  opacity: 1;
+}
+/* line 17, ../scss/mission.scss */
+.findingItem li.yet img {
+  -webkit-transition-property: none;
+  opacity: 0;
+}
+
+/* mission */
+/* line 25, ../scss/mission.scss */
+#missionTop, #bossBattle {
+  position: relative;
+  height: 240px;
+  margin: 0 auto;
+}
+/* line 30, ../scss/mission.scss */
+#missionTop:after, #bossBattle:after {
+  display: inline-block;
+  background: url("/img/background/bg_img_bottom.png") 0 0 no-repeat;
+  -webkit-background-size: 320px 20px;
+  visibility: visible;
+  content: "";
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: auto;
+  width: 320px;
+  height: 20px;
+  z-index: auto;
+  bottom: 0;
+}
+/* line 34, ../scss/mission.scss */
+#missionTop.stage001, .stage001#bossBattle {
+  display: inline-block;
+  background: url("/img/background/bg_mission_stage1.jpg") 0 0 no-repeat;
+  -webkit-background-size: 320px 240px;
+  display: block;
+}
+/* line 38, ../scss/mission.scss */
+#missionTop.stage002, .stage002#bossBattle {
+  display: inline-block;
+  background: url("/img/background/bg_mission_stage2.jpg") 0 0 no-repeat;
+  -webkit-background-size: 320px 240px;
+  display: block;
+}
+/* line 42, ../scss/mission.scss */
+#missionTop.stage003, .stage003#bossBattle {
+  display: inline-block;
+  background: url("/img/background/bg_mission_stage3.jpg") 0 0 no-repeat;
+  -webkit-background-size: 320px 240px;
+  display: block;
+}
+/* line 46, ../scss/mission.scss */
+#missionTop.stage004, .stage004#bossBattle {
+  display: inline-block;
+  background: url("/img/background/bg_mission_stage4.jpg") 0 0 no-repeat;
+  -webkit-background-size: 320px 240px;
+  display: block;
+}
+/* line 50, ../scss/mission.scss */
+#missionTop.stage005, .stage005#bossBattle {
+  display: inline-block;
+  background: url("/img/background/bg_mission_stage5.jpg") 0 0 no-repeat;
+  -webkit-background-size: 320px 240px;
+  display: block;
+}
+/* line 55, ../scss/mission.scss */
+#missionTop.stage006, .stage006#bossBattle {
+  display: inline-block;
+  background: url("/img/background/bg_mission_stage6.jpg") 0 0 no-repeat;
+  -webkit-background-size: 320px 240px;
+  display: block;
+}
+/* line 59, ../scss/mission.scss */
+#missionTop.stage007, .stage007#bossBattle {
+  display: inline-block;
+  background: url("/img/background/bg_mission_stage7.jpg") 0 0 no-repeat;
+  -webkit-background-size: 320px 240px;
+  display: block;
+}
+/* line 63, ../scss/mission.scss */
+#missionTop.stage008, .stage008#bossBattle {
+  display: inline-block;
+  background: url("/img/background/bg_mission_stage8.jpg") 0 0 no-repeat;
+  -webkit-background-size: 320px 240px;
+  display: block;
+}
+/* line 68, ../scss/mission.scss */
+#missionTop.bossEncount:before, .bossEncount#bossBattle:before {
+  visibility: visible;
+  content: "";
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+/* line 73, ../scss/mission.scss */
+#missionTop .metalPanel, #bossBattle .metalPanel {
+  position: absolute;
+  left: 5px;
+  bottom: 24px;
+  width: 310px;
+  height: 60px;
+  margin: 0 auto;
+  z-index: 2;
+}
+/* line 82, ../scss/mission.scss */
+#missionTop .gergeTable, #bossBattle .gergeTable {
+  width: 100%;
+  margin-top: -15px;
+  font-size: 80%;
+}
+/* line 87, ../scss/mission.scss */
+#missionTop .gergeTable th, #bossBattle .gergeTable th {
+  padding-right: 16px;
+}
+/* line 90, ../scss/mission.scss */
+#missionTop .gergeTable .gergeBgFrame, #bossBattle .gergeTable .gergeBgFrame {
+  width: 170px;
+}
+/* line 94, ../scss/mission.scss */
+#missionTop .stageName, #bossBattle .stageName {
+  z-index: 2;
+}
+
+/* line 100, ../scss/mission.scss */
+#fieldSelect .contents,
+#fieldList .contents {
+  width: 95%;
+  margin: -5px auto 0 auto;
+}
+/* line 104, ../scss/mission.scss */
+#fieldSelect .btn_l,
+#fieldList .btn_l {
+  display: block;
+  top: -25px;
+  width: 240px;
+  margin: 0 auto;
+}
+/* line 110, ../scss/mission.scss */
+#fieldSelect .btn_l span:before,
+#fieldList .btn_l span:before {
+  visibility: visible;
+  content: "";
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: 58px;
+  top: 0px;
+  width: 95px;
+  height: 22px;
+  z-index: inherit;
+  display: inline-block;
+  background: url("/img/parts/sprite_mission_parts_20130419_1.png") -1px -30px no-repeat;
+  -webkit-background-size: 250px 222px;
+}
+/* line 115, ../scss/mission.scss */
+#fieldSelect .columnBox,
+#fieldList .columnBox {
+  width: 95%;
+  margin: -17px auto 0 auto;
+  z-index: 0;
+}
+/* line 120, ../scss/mission.scss */
+#fieldSelect .columnBox h1,
+#fieldList .columnBox h1 {
+  margin-bottom: 8px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #B9A46B;
+  font-weight: bold;
+  color: #544123;
+}
+/* line 127, ../scss/mission.scss */
+#fieldSelect .columnBox h1 span,
+#fieldList .columnBox h1 span {
+  display: inline-block;
+  margin-right: 16px;
+}
+/* line 134, ../scss/mission.scss */
+#fieldSelect .gergeTable,
+#fieldSelect dl,
+#fieldList .gergeTable,
+#fieldList dl {
+  width: 100%;
+}
+/* line 137, ../scss/mission.scss */
+#fieldSelect dt,
+#fieldList dt {
+  clear: none;
+}
+/* line 140, ../scss/mission.scss */
+#fieldSelect dd,
+#fieldList dd {
+  margin-right: 16px;
+}
+/* line 143, ../scss/mission.scss */
+#fieldSelect .gergeBgFrame,
+#fieldList .gergeBgFrame {
+  width: 190px;
+}
+/* line 146, ../scss/mission.scss */
+#fieldSelect .gergeBg,
+#fieldList .gergeBg {
+  width: 186px;
+}
+/* line 149, ../scss/mission.scss */
+#fieldSelect .findingItem,
+#fieldList .findingItem {
+  margin: 8px 8px 0 12px;
+}
+/* line 153, ../scss/mission.scss */
+#fieldSelect .newest,
+#fieldList .newest {
+  margin-bottom: 16px;
+}
+/* line 156, ../scss/mission.scss */
+#fieldSelect .newest .btn_l span:before,
+#fieldList .newest .btn_l span:before {
+  visibility: visible;
+  content: "";
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: 64px;
+  top: 0px;
+  width: 82px;
+  height: 22px;
+  z-index: inherit;
+  display: inline-block;
+  background: url("/img/parts/sprite_mission_parts_20130419_1.png") -1px -2px no-repeat;
+  -webkit-background-size: 250px 222px;
+}
+/* line 162, ../scss/mission.scss */
+#fieldSelect .newest .btn_l.cleared span:before,
+#fieldList .newest .btn_l.cleared span:before {
+  visibility: visible;
+  content: "";
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: 58px;
+  top: 0px;
+  width: 95px;
+  height: 22px;
+  z-index: inherit;
+  display: inline-block;
+  background: url("/img/parts/sprite_mission_parts_20130419_1.png") -1px -30px no-repeat;
+  -webkit-background-size: 250px 222px;
+}
+/* line 169, ../scss/mission.scss */
+#fieldSelect .bossEncounter,
+#fieldList .bossEncounter {
+  position: relative;
+  width: 100%;
+  margin: -5px 0 0 0;
+  padding: 0;
+  z-index: auto;
+}
+/* line 176, ../scss/mission.scss */
+#fieldSelect .bossEncounter .boss_img,
+#fieldList .bossEncounter .boss_img {
+  position: absolute;
+  left: 0;
+  top: -480px;
+  z-index: 0;
+}
+/* line 182, ../scss/mission.scss */
+#fieldSelect .bossEncounter p,
+#fieldList .bossEncounter p {
+  position: absolute;
+  left: 0;
+  top: -180px;
+  display: inline-block;
+  background: url("/img/parts/text_missionboss_emerge.png") 0 0 no-repeat;
+  -webkit-background-size: 320px 80px;
+  display: block;
+  width: 320px;
+  height: 80px;
+  margin: 0 auto;
+  font-size: 100%;
+}
+/* line 193, ../scss/mission.scss */
+#fieldSelect .bossEncounter .btn_l,
+#fieldList .bossEncounter .btn_l {
+  top: -15px;
+}
+/* line 196, ../scss/mission.scss */
+#fieldSelect .bossEncounter .btn_l span:before,
+#fieldList .bossEncounter .btn_l span:before {
+  visibility: visible;
+  content: "";
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: 63px;
+  top: 0px;
+  width: 90px;
+  height: 22px;
+  z-index: inherit;
+  display: inline-block;
+  background: url("/img/parts/sprite_mission_parts_20130419_1.png") -1px -85px no-repeat;
+  -webkit-background-size: 250px 222px;
+}
+/* line 202, ../scss/mission.scss */
+#fieldSelect.once,
+#fieldList.once {
+  display: none;
+}
+/* line 205, ../scss/mission.scss */
+#fieldSelect ~ .subHeader,
+#fieldList ~ .subHeader {
+  margin-top: -4px;
+}
+/* line 208, ../scss/mission.scss */
+#fieldSelect ~ .banner,
+#fieldList ~ .banner {
+  margin: 32px 0 0 0;
+}
+/* line 210, ../scss/mission.scss */
+#fieldSelect ~ .banner.bossBattle,
+#fieldList ~ .banner.bossBattle {
+  margin: 16px 0 0 0;
+  padding-bottom: 16px;
+}
+/* line 215, ../scss/mission.scss */
+#fieldSelect ~ .arrowLink,
+#fieldList ~ .arrowLink {
+  margin-bottom: 16px;
+}
+
+/* line 219, ../scss/mission.scss */
+#fieldList {
+  margin-top: 24px;
+}
+/* line 221, ../scss/mission.scss */
+#fieldList .contents {
+  margin: 0 auto 24px auto;
+}
+/* line 226, ../scss/mission.scss */
+#fieldList .contents:last-of-type {
+  margin-bottom: 16px;
+}
+
+/* stage select */
+/* line 235, ../scss/mission.scss */
+#stageSelect .metalPanel {
+  width: 310px;
+  height: 60px;
+  margin: 8px auto 0px;
+  z-index: 2;
+}
+/* line 240, ../scss/mission.scss */
+#stageSelect .metalPanel table {
+  font-size: 80%;
+  margin-top: -15px;
+}
+/* line 244, ../scss/mission.scss */
+#stageSelect .metalPanel th {
+  padding-right: 16px;
+}
+/* line 247, ../scss/mission.scss */
+#stageSelect .metalPanel td:nth-of-type(2n) {
+  padding-right: 4px;
+}
+/* line 251, ../scss/mission.scss */
+#stageSelect .message {
+  margin-bottom: 8px;
+}
+/* line 254, ../scss/mission.scss */
+#stageSelect ~ .banner {
+  margin: 32px 0 0 0;
+}
+
+/* line 258, ../scss/mission.scss */
+.stageList {
+  width: 300px;
+  margin: 8px auto 16px auto;
+}
+/* line 261, ../scss/mission.scss */
+.stageList .contents {
+  position: relative;
+  margin-bottom: 8px;
+}
+/* line 264, ../scss/mission.scss */
+.stageList .contents.shadow {
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+}
+/* line 266, ../scss/mission.scss */
+.stageList .contents.shadow.link.on:after {
+  z-index: 5;
+}
+/* line 269, ../scss/mission.scss */
+.stageList .contents.shadow:before {
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+}
+/* line 274, ../scss/mission.scss */
+.stageList h1 {
+  position: relative;
+  top: 10px;
+  width: 278px;
+  height: 52px;
+  margin: 0 auto;
+}
+/* line 284, ../scss/mission.scss */
+.stageList h1.stage1, .stageList h1.stage2, .stageList h1.stage3, .stageList h1.stage4, .stageList h1.stage5 {
+  display: inline-block;
+  background: url("/img/background/sprite_mission_area_1-5.png") 0 0 no-repeat;
+  -webkit-background-size: 288px 260px;
+  display: block;
+}
+/* line 292, ../scss/mission.scss */
+.stageList h1.stage6, .stageList h1.stage7, .stageList h1.stage8, .stageList h1.stage9, .stageList h1.stage10 {
+  display: inline-block;
+  background: url("/img/background/sprite_mission_area_6-10.png") 0 0 no-repeat;
+  -webkit-background-size: 288px 260px;
+  display: block;
+}
+/* line 296, ../scss/mission.scss */
+.stageList h1 span:before {
+  display: inline-block;
+  background: url("/img/parts/sprite_mission_parts_20130419_1.png") -187px -1px no-repeat;
+  -webkit-background-size: 250px 222px;
+  visibility: visible;
+  content: "";
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: 8px;
+  top: 15px;
+  width: 57px;
+  height: 21px;
+  z-index: auto;
+}
+/* line 300, ../scss/mission.scss */
+.stageList h1.stage1 {
+  background-position: 0 0;
+}
+/* line 302, ../scss/mission.scss */
+.stageList h1.stage1 span:before {
+  width: 57px;
+  background-position: -187px -1px;
+}
+/* line 307, ../scss/mission.scss */
+.stageList h1.stage2 {
+  background-position: 0px -52px;
+}
+/* line 309, ../scss/mission.scss */
+.stageList h1.stage2 span:before {
+  width: 59px;
+  background-position: -187px -29px;
+}
+/* line 314, ../scss/mission.scss */
+.stageList h1.stage3 {
+  background-position: 0 -104px;
+}
+/* line 316, ../scss/mission.scss */
+.stageList h1.stage3 span:before {
+  width: 59px;
+  background-position: -187px -58px;
+}
+/* line 321, ../scss/mission.scss */
+.stageList h1.stage4 {
+  background-position: 0 -156px;
+}
+/* line 323, ../scss/mission.scss */
+.stageList h1.stage4 span:before {
+  width: 60px;
+  background-position: -187px -86px;
+}
+/* line 328, ../scss/mission.scss */
+.stageList h1.stage5 {
+  background-position: 0 -208px;
+}
+/* line 330, ../scss/mission.scss */
+.stageList h1.stage5 span:before {
+  width: 59px;
+  background-position: -187px -115px;
+}
+/* line 335, ../scss/mission.scss */
+.stageList h1.stage6 {
+  background-position: 0 0;
+}
+/* line 337, ../scss/mission.scss */
+.stageList h1.stage6 span:before {
+  width: 60px;
+  background-position: -186px -141px;
+}
+/* line 342, ../scss/mission.scss */
+.stageList h1.stage7 {
+  background-position: 0 -52px;
+}
+/* line 344, ../scss/mission.scss */
+.stageList h1.stage7 span:before {
+  width: 60px;
+  background-position: -186px -167px;
+}
+/* line 349, ../scss/mission.scss */
+.stageList h1.stage8 {
+  background-position: 0 -104px;
+}
+/* line 351, ../scss/mission.scss */
+.stageList h1.stage8 span:before {
+  width: 60px;
+  background-position: -186px -193px;
+}
+/* line 357, ../scss/mission.scss */
+.stageList p {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  margin-top: 10px;
+  padding: 0 10px;
+  color: #544123;
+  font-weight: bold;
+  line-height: 40px;
+  text-align: left;
+  z-index: 2;
+}
+/* line 369, ../scss/mission.scss */
+.stageList p:after {
+  visibility: visible;
+  content: "";
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: 280px;
+  top: 12px;
+  width: 9px;
+  height: 13px;
+  z-index: 11;
+  display: inline-block;
+  background: url("/img/parts/sprite_icon_parts_20130415_1.png") -97px -78px no-repeat;
+  -webkit-background-size: 140px 95px;
+}
+/* line 374, ../scss/mission.scss */
+.stageList .newStage {
+  position: absolute;
+  left: 200px;
+  top: 71px;
+  width: 72px;
+  height: 20px;
+  background-color: #FFBF00;
+  line-height: 20px;
+  z-index: 3;
+}
+/* line 384, ../scss/mission.scss */
+.stageList .cleared {
+  visibility: visible;
+  content: "";
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: 200px;
+  top: 69px;
+  width: 76px;
+  height: 24px;
+  z-index: 3;
+  display: inline-block;
+  background: url("/img/parts/cleared_stamp.png") 0 0 no-repeat;
+  -webkit-background-size: 76px 24px;
+}
+
+/* mission proceed */
+/* line 391, ../scss/mission.scss */
+.jsGauge {
+  -webkit-transform-origin: 0 50%;
+  -webkit-animation-fill-mode: both;
+}
+
+/* line 395, ../scss/mission.scss */
+#missionProceed {
+  position: relative;
+  height: 240px;
+  z-index: 0;
+  overflow: hidden;
+}
+/* line 401, ../scss/mission.scss */
+#missionProceed:after {
+  display: inline-block;
+  background: url("/img/background/bg_img_bottom.png") 0 0 no-repeat;
+  -webkit-background-size: 320px 20px;
+  visibility: visible;
+  content: "";
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: auto;
+  width: 320px;
+  height: 20px;
+  z-index: auto;
+  bottom: 0;
+}
+/* line 405, ../scss/mission.scss */
+#missionProceed .canvas {
+  display: block;
+  position: absolute;
+  width: 320px;
+  height: 240px;
+  background-color: rgba(255, 255, 255, 0.3);
+  z-index: auto;
+  top: -20px;
+}
+/* line 414, ../scss/mission.scss */
+#missionProceed .canvas img {
+  zoom: 1;
+}
+/* line 418, ../scss/mission.scss */
+#missionProceed .gergeBox {
+  position: relative;
+  top: 8px;
+  z-index: 0;
+}
+/* line 423, ../scss/mission.scss */
+#missionProceed .gergeBgFrame {
+  position: relative;
+  width: 300px;
+  height: 16px;
+  margin: 0 auto;
+}
+/* line 429, ../scss/mission.scss */
+#missionProceed .gergeBg {
+  position: absolute;
+  width: 268px;
+  height: 10px;
+}
+/* line 434, ../scss/mission.scss */
+#missionProceed .gerge {
+  position: absolute;
+  height: 8px;
+}
+/* line 438, ../scss/mission.scss */
+#missionProceed .modalBox.levelUp {
+  top: 32px;
+  left: 8px;
+}
+
+/* line 443, ../scss/mission.scss */
+#missionControl {
+  position: relative;
+  margin: 0 auto;
+  top: -5px;
+  z-index: 0;
+}
+/* line 448, ../scss/mission.scss */
+#missionControl.metalPanel {
+  width: 97%;
+}
+/* line 451, ../scss/mission.scss */
+#missionControl .btn_l {
+  top: -40px;
+  display: block;
+  width: 240px;
+  margin: 0 auto;
+}
+/* line 457, ../scss/mission.scss */
+#missionControl .btn_l span:before {
+  visibility: visible;
+  content: "";
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: 83px;
+  top: 0px;
+  width: 52px;
+  height: 22px;
+  z-index: inherit;
+  display: inline-block;
+  background: url("/img/parts/sprite_mission_parts_20130419_1.png") -1px -58px no-repeat;
+  -webkit-background-size: 250px 222px;
+}
+/* line 461, ../scss/mission.scss */
+#missionControl .btn_l.disable {
+  pointer-events: auto;
+  border-image: url('data:image/png;base64,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') 22 26 24 26 stretch !important;
+  -webkit-border-image: url('data:image/png;base64,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') 22 26 24 26 stretch !important;
+  border-width: 11px 13px 12px 13px;
+  color: white;
+}
+/* line 464, ../scss/mission.scss */
+#missionControl .btn_l.disable span:before {
+  display: inline-block;
+  background: url("/img/parts/sprite_mission_parts.png") -57px -58px no-repeat;
+  -webkit-background-size: 250px 222px;
+}
+/* line 469, ../scss/mission.scss */
+#missionControl .statusData {
+  position: relative;
+  top: -32px;
+  font-size: 90%;
+  padding: 0;
+}
+/* line 475, ../scss/mission.scss */
+#missionControl .statusData .gergeTable {
+  width: 100%;
+}
+/* line 478, ../scss/mission.scss */
+#missionControl .statusData .gergeBgFrame {
+  width: 170px;
+}
+/* line 481, ../scss/mission.scss */
+#missionControl .statusData .gergeBox {
+  padding-right: 8px;
+}
+/* line 484, ../scss/mission.scss */
+#missionControl .statusData th {
+  padding-right: 16px;
+}
+/* line 487, ../scss/mission.scss */
+#missionControl .statusData td {
+  text-align: right;
+}
+/* line 490, ../scss/mission.scss */
+#missionControl .statusData dt {
+  clear: none;
+}
+/* line 493, ../scss/mission.scss */
+#missionControl .statusData dt:nth-of-type(2) {
+  margin-left: 32px;
+}
+/* line 497, ../scss/mission.scss */
+#missionControl .statusData + .findingItem {
+  margin-top: -16px;
+}
+/* line 501, ../scss/mission.scss */
+#missionControl + hr {
+  margin-top: 4px;
+}
+/* line 504, ../scss/mission.scss */
+#missionControl + .listMenu {
+  margin: 16px auto;
+}
+
+/* mission boss battle Ready & help member call */
+/* line 512, ../scss/mission.scss */
+#bossBattle p {
+  position: relative;
+  top: -80px;
+  width: 80%;
+  height: 44px;
+  margin: 0 auto;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  line-height: 44px;
+  text-align: center;
+}
+/* line 525, ../scss/mission.scss */
+#bossBattle .boss_img {
+  position: relative;
+  display: block;
+}
+/* line 529, ../scss/mission.scss */
+#bossBattle ~ .subHeader {
+  margin: 16px 0 8px 0;
+}
+
+/* line 535, ../scss/mission.scss */
+#bossBattleStart .subHeader,
+#helpMember .subHeader {
+  margin-bottom: 16px;
+}
+/* line 539, ../scss/mission.scss */
+#bossBattleStart .change .contents,
+#helpMember .change .contents {
+  margin-bottom: 16px;
+}
+/* line 543, ../scss/mission.scss */
+#bossBattleStart .contents,
+#helpMember .contents {
+  top: -5px;
+  width: 95%;
+  margin: 0 auto 8px auto;
+}
+/* line 548, ../scss/mission.scss */
+#bossBattleStart .btn_l,
+#helpMember .btn_l {
+  top: -26px;
+  display: block;
+  width: 240px;
+  margin: 0 auto;
+}
+/* line 554, ../scss/mission.scss */
+#bossBattleStart .btn_l span:before,
+#helpMember .btn_l span:before {
+  visibility: visible;
+  content: "";
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: 17px;
+  top: -1px;
+  width: 177px;
+  height: 22px;
+  z-index: auto;
+  display: inline-block;
+  background: url("/img/parts/sprite_mission_parts_20130419_1.png") -1px -141px no-repeat;
+  -webkit-background-size: 250px 222px;
+}
+/* line 559, ../scss/mission.scss */
+#bossBattleStart h1,
+#helpMember h1 {
+  margin-top: -16px;
+}
+/* line 562, ../scss/mission.scss */
+#bossBattleStart + h2,
+#helpMember + h2 {
+  margin: 0 0 16px 0;
+}
+/* line 566, ../scss/mission.scss */
+#bossBattleStart.partner, #bossBattleStart.guild,
+#helpMember.partner,
+#helpMember.guild {
+  margin-top: 16px;
+}
+/* line 568, ../scss/mission.scss */
+#bossBattleStart.partner .subHeader, #bossBattleStart.guild .subHeader,
+#helpMember.partner .subHeader,
+#helpMember.guild .subHeader {
+  margin-bottom: 8px;
+}
+/* line 574, ../scss/mission.scss */
+#bossBattleStart.guild .statusData_icon h1:after,
+#helpMember.guild .statusData_icon h1:after {
+  margin-top: -8px;
+}
+/* line 577, ../scss/mission.scss */
+#bossBattleStart.guild .statusData_icon .columnBox > dl,
+#helpMember.guild .statusData_icon .columnBox > dl {
+  width: 40%;
+}
+/* line 580, ../scss/mission.scss */
+#bossBattleStart.guild .statusData_icon .innerBtnBox,
+#helpMember.guild .statusData_icon .innerBtnBox {
+  padding-bottom: 0;
+}
+/* line 585, ../scss/mission.scss */
+#bossBattleStart.guild .callMember .btn.large,
+#helpMember.guild .callMember .btn.large {
+  margin-top: 16px;
+}
+/* line 588, ../scss/mission.scss */
+#bossBattleStart.guild .callMember .arrowLink,
+#helpMember.guild .callMember .arrowLink {
+  margin-top: 16px;
+}
+/* line 593, ../scss/mission.scss */
+#bossBattleStart.guild .dimmed ~ .arrowLink,
+#helpMember.guild .dimmed ~ .arrowLink {
+  margin-bottom: 4px;
+}
+/* line 597, ../scss/mission.scss */
+#bossBattleStart.guild > .helpList,
+#helpMember.guild > .helpList {
+  margin-top: 16px;
+}
+/* line 602, ../scss/mission.scss */
+#bossBattleStart.currentMember .contents,
+#helpMember.currentMember .contents {
+  margin-bottom: 0;
+}
+/* line 605, ../scss/mission.scss */
+#bossBattleStart.currentMember ul,
+#helpMember.currentMember ul {
+  display: -webkit-box;
+  display: box;
+  -webkit-box-pack: center;
+  box-pack: center;
+  margin: 8px 8px 0 8px;
+}
+/* line 610, ../scss/mission.scss */
+#bossBattleStart.currentMember li,
+#helpMember.currentMember li {
+  -webkit-box-flex: 1;
+  box-flex: 1;
+  display: block;
+  width: 1px;
+  text-align: center;
+}
+/* line 616, ../scss/mission.scss */
+#bossBattleStart.currentMember .iconBgRect_l,
+#helpMember.currentMember .iconBgRect_l {
+  margin: 0 auto;
+}
+/* line 619, ../scss/mission.scss */
+#bossBattleStart.currentMember h2,
+#helpMember.currentMember h2 {
+  margin-top: 2px;
+  font-size: 80%;
+  color: #544123;
+}
+
+/* line 627, ../scss/mission.scss */
+#helpMember .contents {
+  top: 0;
+  margin-bottom: 8px;
+}
+/* line 633, ../scss/mission.scss */
+#helpMember .contentsInner dt:nth-of-type(2) {
+  clear: none;
+  margin-left: 8px;
+}
+/* line 637, ../scss/mission.scss */
+#helpMember .contentsInner .columnBox dt:nth-of-type(2) {
+  clear: both;
+  margin-left: 0;
+}
+/* line 642, ../scss/mission.scss */
+#helpMember h1 {
+  margin-top: 0;
+}
+/* line 645, ../scss/mission.scss */
+#helpMember .innerBtnBox {
+  width: 95%;
+  margin: 0 auto;
+  padding-bottom: 8px;
+}
+/* line 652, ../scss/mission.scss */
+#helpMember .helpMemberList .contents {
+  margin-bottom: 8px;
+}
+/* line 655, ../scss/mission.scss */
+#helpMember .helpMemberList .btn {
+  width: 50%;
+  margin-top: 4px;
+}
+/* line 659, ../scss/mission.scss */
+#helpMember .helpMemberList .moreLink {
+  margin-top: 16px;
+}
+/* line 663, ../scss/mission.scss */
+#helpMember ~ .helpList {
+  margin-top: 16px;
+}
+/* line 666, ../scss/mission.scss */
+#helpMember.partner ~ .helpList {
+  margin-top: 16px;
+}
+/* line 669, ../scss/mission.scss */
+#helpMember .dimmed p {
+  margin: 0 auto;
+}
+
+/* line 673, ../scss/mission.scss */
+.modalInner.questWithM p {
+  padding-top: 2px;
+}
+
+/* line 676, ../scss/mission.scss */
+.callMember {
+  margin-top: 16px;
+}
+/* line 679, ../scss/mission.scss */
+.callMember p {
+  color: #ffffff;
+  text-align: center;
+}
+
+/* mission boss battle result */
+/* line 688, ../scss/mission.scss */
+#bossBattleResult.contents {
+  width: 95%;
+  top: -5px;
+  margin: 0 auto;
+  padding-bottom: 8px;
+}
+/* line 694, ../scss/mission.scss */
+#bossBattleResult.contents .btn_l {
+  top: -15px;
+  display: block;
+  width: 240px;
+  margin: 0 auto;
+}
+/* line 700, ../scss/mission.scss */
+#bossBattleResult.contents .btn_l.nextField span:before {
+  visibility: visible;
+  content: "";
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: 15px;
+  top: -1px;
+  width: 180px;
+  height: 22px;
+  z-index: inherit;
+  display: inline-block;
+  background: url("/img/parts/sprite_mission_parts_20130419_1.png") -1px -170px no-repeat;
+  -webkit-background-size: 250px 222px;
+}
+/* line 704, ../scss/mission.scss */
+#bossBattleResult.contents .btn_l.nextStage span:before {
+  visibility: visible;
+  content: "";
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: 21px;
+  top: -1px;
+  width: 171px;
+  height: 22px;
+  z-index: inherit;
+  display: inline-block;
+  background: url("/img/parts/sprite_mission_parts_20130419_1.png") -1px -198px no-repeat;
+  -webkit-background-size: 250px 222px;
+}
+/* line 710, ../scss/mission.scss */
+#bossBattleResult .contentsBorder {
+  margin-top: -8px;
+}
+/* line 713, ../scss/mission.scss */
+#bossBattleResult table {
+  width: 95%;
+  margin: 0 8px;
+}
+/* line 717, ../scss/mission.scss */
+#bossBattleResult tr {
+  border-bottom: 1px solid #B9A46B;
+}
+/* line 720, ../scss/mission.scss */
+#bossBattleResult th, #bossBattleResult td {
+  padding: 8px 0;
+}
+/* line 723, ../scss/mission.scss */
+#bossBattleResult th {
+  width: 60%;
+  color: #8C0000;
+  font-weight: normal;
+}
+/* line 728, ../scss/mission.scss */
+#bossBattleResult td {
+  width: 40%;
+  text-align: right;
+  vertical-align: middle;
+}
+/* line 733, ../scss/mission.scss */
+#bossBattleResult .btn {
+  width: 55%;
+  margin: 16px auto 8px auto;
+}
+
+/* line 738, ../scss/mission.scss */
+#bossBattleLose {
+  margin-top: -32px;
+}
+/* line 741, ../scss/mission.scss */
+#bossBattleLose .message {
+  margin-bottom: 8px;
+}
+/* line 744, ../scss/mission.scss */
+#bossBattleLose .btn_l {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+}
+/* line 749, ../scss/mission.scss */
+#bossBattleLose .btn_l span:before {
+  visibility: visible;
+  content: "";
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: 67px;
+  top: -1px;
+  width: 96px;
+  height: 23px;
+  z-index: inherit;
+  display: inline-block;
+  background: url("/img/parts/sprite_mission_parts_20130419_1.png") -1px -113px no-repeat;
+  -webkit-background-size: 250px 222px;
+}
+
+/* mission point loss */
+/* line 758, ../scss/mission.scss */
+#missionPointLack .metalPanel {
+  height: 60px;
+  text-align: center;
+  z-index: auto;
+}
+/* line 762, ../scss/mission.scss */
+#missionPointLack .metalPanel + .banner {
+  margin-top: 8px;
+}
+/* line 764, ../scss/mission.scss */
+#missionPointLack .metalPanel + .banner + .subHeader {
+  margin-top: 16px;
+}
+/* line 768, ../scss/mission.scss */
+#missionPointLack .metalPanel + .subHeader {
+  margin-top: 8px;
+}
+/* line 772, ../scss/mission.scss */
+#missionPointLack .statusData {
+  margin: 20px auto 0 auto;
+  padding: 0;
+  font-size: 90%;
+}
+/* line 777, ../scss/mission.scss */
+#missionPointLack .statusData .gergeTable {
+  width: 100%;
+  margin: -15px 0 0 0;
+}
+/* line 781, ../scss/mission.scss */
+#missionPointLack .statusData .gergeBox {
+  padding-right: 8px;
+}
+/* line 784, ../scss/mission.scss */
+#missionPointLack .statusData th {
+  padding-right: 16px;
+}
+/* line 787, ../scss/mission.scss */
+#missionPointLack .statusData td {
+  text-align: right;
+}
+/* line 790, ../scss/mission.scss */
+#missionPointLack .statusData dl {
+  display: inline-block;
+  width: auto;
+  margin: 0 auto;
+  font-size: 100%;
+}
+/* line 796, ../scss/mission.scss */
+#missionPointLack .statusData dt, #missionPointLack .statusData dd {
+  padding-bottom: 0;
+}
+/* line 800, ../scss/mission.scss */
+#missionPointLack .subHeader {
+  margin-bottom: 8px;
+}
+/* line 803, ../scss/mission.scss */
+#missionPointLack .contents {
+  width: 95%;
+  margin: 0 auto 8px auto;
+}
+/* line 807, ../scss/mission.scss */
+#missionPointLack .numControl {
+  width: 95%;
+  margin: 8px auto 0;
+  padding-bottom: 0;
+}
+/* line 812, ../scss/mission.scss */
+#missionPointLack .statusData_icon .columnBox + .btn {
+  margin: 8px auto 0 auto;
+}
+
+/* mission modal area */
+/* line 818, ../scss/mission.scss */
+.jsProceedLevelUpPopup {
+  opacity: 0;
+  display: none;
+}
+
+/* line 822, ../scss/mission.scss */
+.missionModalBox {
+  opacity: 0;
+  display: none;
+  position: relative;
+  top: 20px;
+  z-index: 10000;
+  width: 280px;
+  margin: 6px auto 0;
+  color: #544123;
+}
+/* line 833, ../scss/mission.scss */
+.missionModalBox.equipData, .missionModalBox.treasureData {
+  font-size: 90%;
+}
+/* line 836, ../scss/mission.scss */
+.missionModalBox.equipData .label32, .missionModalBox.treasureData .label32 {
+  margin: 0 8px;
+}
+/* line 840, ../scss/mission.scss */
+.missionModalBox.equipData dt:nth-of-type(2n), .missionModalBox.treasureData dt:nth-of-type(2n) {
+  clear: none;
+  margin-left: 8px;
+}
+/* line 845, ../scss/mission.scss */
+.missionModalBox.equipData .btn, .missionModalBox.treasureData .btn {
+  display: block;
+  width: 80%;
+  height: 38px;
+  margin: 8px auto 0 auto;
+  line-height: 10px;
+}
+/* line 855, ../scss/mission.scss */
+.missionModalBox.treasureData dt:nth-of-type(2n) {
+  clear: both;
+  margin-left: 0;
+}
+
+/* line 862, ../scss/mission.scss */
+.modalBox {
+  -webkit-transform: scale(1);
+}
+/* line 865, ../scss/mission.scss */
+.modalBox .equipData {
+  width: 95%;
+  margin: 0 auto;
+  font-size: 90%;
+}
+/* line 870, ../scss/mission.scss */
+.modalBox .equipData h2 {
+  margin-bottom: 8px;
+  border-bottom: 1px solid #B9A46B;
+}
+/* line 874, ../scss/mission.scss */
+.modalBox .equipData .label32 {
+  margin: 0 8px;
+}
+/* line 878, ../scss/mission.scss */
+.modalBox .equipData dt:nth-of-type(2n) {
+  clear: none;
+  margin-left: 8px;
+}
+/* line 884, ../scss/mission.scss */
+.modalBox p {
+  margin-top: 0;
+  font-size: 90%;
+}
+/* line 888, ../scss/mission.scss */
+.modalBox .limit {
+  display: block;
+}
+/* line 891, ../scss/mission.scss */
+.modalBox .limit span {
+  color: #8C0000;
+}
+/* line 897, ../scss/mission.scss */
+.modalBox.levelUp h1 {
+  font-size: 130%;
+  line-height: 1.3;
+}
+/* line 901, ../scss/mission.scss */
+.modalBox.levelUp h1 .nextLevel {
+  display: inline-block;
+  margin: 0 8px;
+}
+/* line 906, ../scss/mission.scss */
+.modalBox.levelUp h2 {
+  margin-bottom: 4px;
+}
+/* line 909, ../scss/mission.scss */
+.modalBox.levelUp.statusData {
+  padding-bottom: 0;
+}
+/* line 913, ../scss/mission.scss */
+.modalBox.levelUp.statusData .columnBox > dl:nth-of-type(1) {
+  width: 43%;
+}
+/* line 916, ../scss/mission.scss */
+.modalBox.levelUp.statusData .columnBox > dl:nth-of-type(2) {
+  width: 57%;
+}
+/* line 922, ../scss/mission.scss */
+.modalBox.levelUp .modalInner {
+  color: #333;
+}
+/* line 925, ../scss/mission.scss */
+.modalBox.levelUp p {
+  position: relative;
+  top: 8px;
+  margin-bottom: 0;
+  font-size: 100%;
+  text-align: left;
+}
+
+/* line 935, ../scss/mission.scss */
+#equipMax_start p {
+  margin-top: 8px;
+}

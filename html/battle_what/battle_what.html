@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>バトルまで何する?</title>
+	<meta name="robots" content="noindex,nofollow">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="/css/common_parts.css">
+	<link rel="stylesheet" href="/css/battle_what.css">
+	<script src="/html/js/jquery-1.8.2.min.js"></script>
+	<script src="/html/js/parts.js"></script>
+</head>
+<body>
+	
+	<header id="globalHeader">
+		<div class="menuPanel"><button class="link mypage"><span class="hide">マイページ</span></button></div>
+		<div class="battleTimeCount">
+			<div class="battleTimeInner">
+				<h1>次のバトルまで</h1>
+				<div class="numBox">
+					<span class="numGold num_1"><span class="hide">0</span></span>
+					<span class="numGold num_2"><span class="hide">1</span></span>
+					<span class="numGoldColon"><span class="hide">:</span></span>
+					<span class="numGold num_3"><span class="hide">2</span></span>
+					<span class="numGold num_5"><span class="hide">3</span></span>
+					<span class="numGoldColon"><span class="hide">:</span></span>
+					<span class="numGold num_4"><span class="hide">4</span></span>
+					<span class="numGold num_9"><span class="hide">5</span></span>
+				</div>
+			</div>
+		</div>
+		<div class="menuPanel"><button class="link menu"><span class="hide">メニュー</span></button></div>
+	</header>
+		
+	<div id="container">
+		<div id="battleWhat">
+			<h1 class="mainHeader">バトルまで何する?</h1>
+			<div class="message navico_arc">
+				<p>
+					<span>バトルまで何したらいいか、案内するわ!</span>
+				</p>
+			</div>
+			<div class="battleDoingList">
+				<section class="contents contentsShadow statusData_icon doingLists">
+					<h1>まずはバトルの時間を確認！</h1>
+					<p class="description">
+						バトルは<span class="txtColor">毎日4回開催</span>！<br>
+						次のバトルは何時からかな？
+					</p>
+					<button class="btn doingBtn" data-href="#">バトルへ</button>
+				</section>
+				<section class="contents contentsShadow statusData_icon doingLists">
+					<h1>次は現在のジョブを確認！</h1>
+					<p class="description">
+						<span class="txtColor">これから育てるジョブ</span>を確認！<br>
+						気になったジョブチェンジしてみよう♪
+					</p>
+					<button class="btn doingBtn" data-href="#">ジョブへ</button>
+				</section>
+				<section class="contents contentsShadow statusData_icon doingLists">
+					<h1>次はクエストでLvを上げよう！</h1>
+					<p class="description">
+						バトルまでは<span class="txtColor">クエストで修行</span>だよ！<br>
+						「ヤツら」を倒すといいものが...？！
+					</p>
+					<button class="btn doingBtn" data-href="#">クエストへ</button>
+				</section>
+				<section class="contents contentsShadow statusData_icon doingLists">
+					<h1>ギフトを受け取ろう！</h1>
+					<p class="description">
+						さっきの報酬が<span class="txtColor">ギフトに届いている</span>よ！<br>
+						確認してみよう！
+					</p>
+					<button class="btn doingBtn" data-href="#">ギフトへ</button>
+				</section>
+				<section class="contents contentsShadow statusData_icon doingLists">
+					<h1>匠の書を読んでみよう！</h1>
+					<p class="description">
+						さっき貰った「匠の書」は<span class="txtColor">読むだけでJExが貰える</span><br>
+						便利アイテムだよ！
+					</p>
+					<button class="btn doingBtn" data-href="#">アイテムへ</button>
+				</section>
+				<section class="contents contentsShadow statusData_icon doingLists">
+					<h1>装備を確認してみよう！</h1>
+					<p class="description">
+						武具は持ってるだけじゃダメ！<br>
+						ちゃんと<span class="txtColor">装備</span>しなきゃ！
+					</p>
+					<button class="btn doingBtn" data-href="#">装備へ</button>
+				</section>
+				<section class="contents contentsShadow statusData_icon doingLists">
+					<h1>武具を強化してみよう！</h1>
+					<p class="description">
+						武具の強化はブレイブバトルの<span class="txtColor">基本中の基本</span>よ！
+					</p>
+					<button class="btn doingBtn" data-href="#">合成へ</button>
+				</section>
+				<section class="contents contentsShadow statusData_icon doingLists">
+					<h1>あとはバトルを待つのみ...</h1>
+					<p class="description">
+						今ならバトルに参加するだけで王様から<span class="txtColor">報酬がもらえる</span>んだって！
+					</p>
+					<button class="btn doingBtn" data-href="#">スタートダッシュへ</button>
+				</section>
+			</div>
+		</div>
+				
+		<hr>
+		
+		<div class="arrowLink mypageLinks">
+			<button class="link prev" data-href="#">マイページに戻る</button>
+		</div>
+		
+	</div>
+		
+	<footer id="globalFooter">
+		<ul>
+			<li class="menuPanel"><span class="link mypage"><span class="hide">マイページ</span></span></li>
+			<li class="menuPanel"><span class="link quest"><span class="hide">クエスト</span></span></li>
+			<li class="menuPanel"><span class="link buttle"><span class="hide">バトル</span></span></li>
+			<li class="menuPanel"><span class="link gatcha"><span class="hide">ガチャ</span></span></li>
+			<li class="menuPanel"><span class="link menu"><span class="hide">マイページ</span></span></li>
+		</ul>
+	</footer>
+
+</body>
+</html>

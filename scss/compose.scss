@@ -1,0 +1,183 @@
+@charset "utf-8";
+@import "base";
+@import "ruleset";
+
+// banner
+.banner.discount{
+	margin:0 auto;
+	> p{
+		margin:$inner_margin auto $content_margin auto;
+		color:$color_J;
+		> button{
+			cursor:default;
+		}
+	}
+}
+
+
+// compose list
+#composeList,
+#composeEvolutionList,
+#composeBase,
+#composeEvolutionBase,
+#composeConfirm{
+	.tabNav,
+	.tabNav2{
+		margin:$inner_margin auto $content_margin auto;
+	}
+	.tabNav{
+		margin-bottom:$inner_margin;
+	}
+	.contents{
+		width:95%;
+		margin:0 auto $inner_margin auto;
+		&.narrow,
+		&.selected{
+			margin:$inner_margin auto $content_margin auto;
+			padding:8px 0;
+			.innerBtnBox{
+				margin:8px auto 0 auto;
+			}
+		}
+		.contentsInner{
+			min-height:98px;
+		}
+		&.material{
+			.contentsInner{
+				min-height:inherit;
+			}
+			.numControl{
+				width:95%;
+				margin:$inner_margin auto 0 auto;
+				padding:$inner_margin/2 0 0 0;
+			}
+		}
+		&.expendConf{
+			margin:$inner_margin auto;
+		}
+	}
+	.label48{
+		width:60%;
+		margin:$inner_margin/2 auto 0 auto;
+	}
+	.btn.jsButtonSelectEquip{
+		margin-top:$inner_margin/2;
+	}
+}
+#composeList,
+#composeEvolutionList,
+#composeBase,
+#composeEvolutionBase{
+	.message{
+		top:0;
+		margin-bottom:$content_margin;
+	}
+}
+#composeMaterialList{
+	.btn.large{
+		margin:$content_margin auto;
+	}
+	.allCheck{
+		margin-bottom:$inner_margin;
+	}
+	.selectConfirm{
+		.paramStatus{
+			margin:$content_margin auto;
+		}
+		.btn.large{
+			margin:0 auto;
+		}
+	}
+	&.evolutionMaterial{
+		.contents{
+			&:first-of-type{
+				margin-top:$inner_margin;
+			}
+		}
+	}
+	.selectConfirm{
+		.headline{
+			margin-right:0;
+		}
+	}
+	.jsList .checkBox{
+		margin:$inner_margin auto 0 auto;
+	}
+}
+#composeMaterialConfirm{
+	.contents.material{
+		margin-top:$inner_margin;
+	}
+	.label48{
+		width:95%;
+		margin:$inner_margin auto;
+	}
+	.equipConfirmList{
+		.component:after{
+			top:-8px;
+			right:8px;
+		}
+		td{
+			padding-bottom:$content_margin;
+			p{
+				text-align:center;
+			}
+		}
+		tr:last-of-type{
+			td{
+				padding-bottom:0;
+			}
+		}
+	}
+	.dimmed{
+		p{
+			margin:$inner_margin auto;
+		}
+	}
+	.outerBtnBox{
+		margin-bottom:$content_margin;
+		.btn{
+			height:44px;
+		}
+	}
+	.btn.large{
+		margin:$content_margin auto;
+	}
+}
+#composeResult{
+	.itemDetail{
+		margin-top:$content_margin;
+	}
+	.complateMessage{
+		 article{
+			 margin:-$inner_margin auto $content_margin auto;
+			 .paramStatus{
+				 font-size:100%;
+			 }
+		 }
+	}
+	.btnBox{
+		.btn.large{
+			margin:0 auto;
+			&:nth-of-type(1){
+				margin-bottom:$inner_margin;
+			}
+		}
+	}
+	~ .arrowLink{
+		margin-bottom:$inner_margin;
+	}
+	~ .linkGroup{
+		.arrowLink{
+			margin-bottom:$inner_margin/2;
+		}
+	}
+}
+.jsTabComposeBaseEquip{
+	.composeMoreLink,
+	.jsComposeConfirm,{
+		&.hide{
+			display: none;
+		}
+	}
+}

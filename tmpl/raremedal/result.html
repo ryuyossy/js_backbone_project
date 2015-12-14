@@ -1,0 +1,24 @@
+<section id="rareMedalResult">
+	<h1 class="mainHeader">交換完了</h1>
+	<section class="complateMessage">
+		<article>
+			<h1>{{>rare_medal.item_name}}{{>qty}}個がギフトへ送られました</h1>
+			{{giftThumb type=rare_medal.item_type id=rare_medal.item_id /}}
+			<p class="paramStatus"><span class="headline">所持レアメダル</span>{{>rare_medal_num}}</p>
+		</article>
+	</section>
+</section>
+
+<hr>
+
+<div class="linkGroup">
+	<div class="arrowLink"><button class="link prev" data-href="raremedal/list/">レアメダル交換所に戻る</button></div>
+	<div class="arrowLink"><button class="link next" data-href="gift/list/">ギフトへ</button></div>
+</div>
+
+<div class="helpList">
+	<ul>
+		<li><button class="link" data-href="help/detail/1101/">レアメダルってなに？</button></li>
+	</ul>
+</div>
+

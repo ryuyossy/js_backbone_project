@@ -1,0 +1,38 @@
+{
+	"status":200,
+	"guild_name" : "サイババ団",
+	"guild_rank" : "A",
+	"rank_status" : "ランクステイ圏内",
+	"rank_rest_days" : "3",
+	"battle_start_rest" : "05:44",
+	"battle_end_rest" : "",
+	"result_code" : "OK",
+	"result_message": "任務値が50%回復した！！",
+	"item_id": 3,
+	"item_name": "アイテム3",
+	"own_num": 9,
+	"win_ability_flg":false,
+	"win_ability":{
+		"avatar_id":"20001",
+		"id":83
+	},
+	"win_jobs": [
+		{
+			"id": 110,
+			"name": "ソルジャー"
+		},
+		{
+			"id": 120,
+			"name": "ナイト"
+		},
+		{
+			"id": 130,
+			"name": "サムライ"
+		}
+	],
+	"master_job_flg":false,
+	"master_job":{
+		"avatar_id":"20001",
+		"name":"みならいハンター"
+	}
+}

@@ -1,0 +1,127 @@
+<dl class="guildRankStatus period">
+	<dt>期間 {{>start_date}}〜{{>end_date}}</dt>
+	<dd>ランキング終了まであと<span>{{>rest_day}}日</span>！</dd>
+</dl>
+<p>{{>current_date}} {{>current_time}}現在</p>
+<section id="ranking">
+
+{{if !order}}
+
+	<div class="exceptRank">
+		<section class="complateMessage">
+			<article>
+				{{if rank === "F" || rank === "G"}}
+				<h1>ランキングへの参加は<br>ギルドランクE以上からです</h1>
+				{{else}}
+				<h1>ランキングに参加していません。</h1>
+				{{/if}}
+			</article>
+		</section>
+		<p class="paramStatus">
+			<span class="headline">現在の獲得BP</span>{{>~commaFormat(guild_bp)}} BP
+		</p>
+		{{if (rank === "F" || rank === "G") && rankup_bp > 0}}
+		<p class="lackPoint">
+			ランクアップまで残り<span>{{>~commaFormat(rankup_bp)}}</span>BP
+		</p>
+		{{/if}}
+	</div>
+	<dl class="rankStatus_l">
+		{{if (rank === "F" || rank === "G") && rankup_bp === 0}}
+		<dt class="label48 decision">ランクアップ確定</dt>
+		{{else state === 'up'}}
+		<dt class="label48 rankUp">ランクアップ圏内</dt>
+		{{else state === 'stay'}}
+		<dt class="label48 rankStay">ランクステイ圏内</dt>
+		{{else state === 'down'}}
+		<dt class="label48 rankDown">ランクダウン圏内</dt>
+		{{/if}}
+		<dd>ランキング終了まであと<span>{{>rest_day}}日</span>！</dd>
+	</dl>
+	
+{{else}}
+
+	<!-- //ランクアップ圏内 -->
+	<p class="label48 rankUp">ランクアップ圏内</p>
+	
+	{{for guilds}}
+	{{if state == "up"}}
+	<article class="contents contentsShadow statusData_icon link {{if own_guild_flg}}myGuild{{/if}}" data-href="{{if ~root().guild_id==guild_id}}/guild/{{else}}/guild/other/{{>guild_id}}/{{/if}}">
+		<h1><span class="rankLabel rangeUp rankUp"><span class="rankTxt"><span class="rankNum">{{>order}}</span>位</span></span>{{>name}}</h1>
+		<div class="columnBox">
+			<div class="iconBgRect_l gold"><img src="{{getImgRoot/}}/avatar/{{>master_avatar_id}}_140.png"></div>
+			<div class="contentsInner">
+				<dl>
+					<dt class="label36_r4">獲得BP</dt><dd>{{>~commaFormat(gp)}}</dd>
+					<dt>ギルドマスター</dt><dd>{{>master_name}}</dd>
+					<dt>ギルドLv.</dt><dd>{{>level}}</dd>
+					<dt>所属人数</dt><dd>{{>member_num}}/{{>max_member_num}}</dd>
+				</dl>
+			</div>
+		</div>
+	</article>
+	{{/if}}
+	{{/for}}
+
+	<!-- //ランクステイ圏内 -->
+	<p class="label48 rankStay">ランクステイ圏内</p>
+	
+	{{for guilds}}
+	{{if state == "stay"}}
+	<article class="contents contentsShadow statusData_icon link {{if own_guild_flg}}myGuild{{/if}}" data-href="{{if ~root().guild_id==guild_id}}/guild/{{else}}/guild/other/{{>guild_id}}/{{/if}}">
+		<h1><span class="rankLabel rangeStay rankStay"><span class="rankTxt"><span class="rankNum">{{>order}}</span>位</span></span>{{>name}}</h1>
+		<div class="columnBox">
+			<div class="iconBgRect_l gold"><img src="{{getImgRoot/}}/avatar/{{>master_avatar_id}}_140.png"></div>
+			<div class="contentsInner">
+				<dl>
+					<dt class="label36_r4">獲得BP</dt><dd>{{>~commaFormat(gp)}}</dd>
+					<dt>ギルドマスター</dt><dd>{{>master_name}}</dd>
+					<dt>ギルドLv.</dt><dd>{{>level}}</dd>
+					<dt>所属人数</dt><dd>{{>member_num}}/{{>max_member_num}}</dd>
+				</dl>
+			</div>
+		</div>
+	</article>
+	{{/if}}
+	{{/for}}	
+	
+	<!-- //ランクダウン圏内 -->
+	<p class="label48 rankDown">ランクダウン圏内</p>
+	{{for guilds}}
+	{{if state == "down"}}
+	<article class="contents contentsShadow statusData_icon link {{if own_guild_flg}}myGuild{{/if}}" data-href="{{if ~root().guild_id==guild_id}}/guild/{{else}}/guild/other/{{>guild_id}}/{{/if}}">
+		<h1><span class="rankLabel rangeDown rankDown"><span class="rankTxt"><span class="rankNum">{{>order}}</span>位</span></span>{{>name}}</h1>
+		<div class="columnBox">
+			<div class="iconBgRect_l gold"><img src="{{getImgRoot/}}/avatar/{{>master_avatar_id}}_140.png"></div>
+			<div class="contentsInner">
+				<dl>
+					<dt class="label36_r4">獲得BP</dt><dd>{{>~commaFormat(gp)}}</dd>
+					<dt>ギルドマスター</dt><dd>{{>master_name}}</dd>
+					<dt>ギルドLv.</dt><dd>{{>level}}</dd>
+					<dt>所属人数</dt><dd>{{>member_num}}/{{>max_member_num}}</dd>
+				</dl>
+			</div>
+		</div>
+	</article>
+	{{/if}}
+	{{/for}}
+	
+{{/if}}
+	
+</section>
+
+<hr>
+
+{{if 0}}
+<!--<div class="banner">
+	<p>
+		<button class="link" data-link="#"><img src="/img/ad/banner.png" alt="banner"><br>└イベントバナースペース┘</button>
+	</p>
+</div>-->
+{{/if}}
+
+<section class="helpList">
+	<ul>
+		<li><button class="link" data-href="help/detail/314/">ギルドランクってなに？</button></li>
+	</ul>
+</section>

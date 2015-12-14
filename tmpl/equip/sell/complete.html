@@ -1,0 +1,47 @@
+<h1 class="mainHeader">売却完了</h1>
+
+<div id="equipSellComplate">
+	<section class="complateMessage">
+		<article>
+			<h1>所持武具{{>sell_num}}個を{{>sell_gil_total}}ギルで売却しました</h1>
+			<p class="paramStatus">
+				<span class="headline">所持武具数</span>{{>result_own_num + sell_num}}<span class="sepalator">→</span>{{>result_own_num}}<br>
+				<span class="headline">所持ギル</span>{{>result_gil - sell_gil_total}}<span class="sepalator">→</span>{{>result_gil}}
+			</p>
+		</article>
+	</section>
+</div>
+
+<hr>
+
+{{if 0}}
+<!--{{for banners}}
+<div class="banner">
+	<p>
+		<button class="link" data-link="#">
+			<img src="{{getImgRoot/}}/ad/banner.png" alt="banner"><br>└バナースペース１┘
+		</button>
+	</p>
+</div>
+{{/for}}-->
+{{/if}}
+
+<div class="arrowLink">
+	<button class="link prev" data-href="equip/sell/list/">売却トップへ戻る</button>
+</div>
+
+<div class="listMenu">
+	<ul>
+		<li><div class="link" data-href="mission/stage/">クエストへ</div></li>
+		<li><div class="link" data-href="gacha/">ガチャへ</div></li>
+		<li><div class="link" data-href="compose/">合成へ</div></li>
+	</ul>
+</div>
+
+<div class="helpList">
+	<ul>
+		<li><button class="link" data-href="help/detail/601/">武具ってなに？</button></li>
+		<li><button class="link" data-href="help/detail/609/">売却ってなに？</button></li>
+	</ul>
+</div>
+

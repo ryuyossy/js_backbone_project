@@ -1,0 +1,66 @@
+<h1 class="mainHeader">売却確認</h1>
+
+<div id="equipSellConfirm">
+	{{if notice_message !== null}}
+	<div class="noticeMessage jsNoticeMessageRare">
+		<span class="label48">{{>notice_message}}</span>
+	</div>
+	{{/if}}
+	
+	<table class="equipConfirmList">
+		{{for equips}}
+			{{if (#index+1) % 3 === 1}}<tr>{{/if}}
+				<td data-user-equip-no="{{>user_equip_no}}">
+					{{if #parent.parent.data.equips.length===1}}
+					<div>
+					{{else}}
+					<div class="component jsButtonRemove">
+					{{/if}}
+						{{equipThumb equip_id=equip_id step=step size="medium" /}}
+						<p>{{>equip_name}} ({{:~getRarityText(rarity)}})</p>
+					</div>
+				</td>
+			{{if (#index+1) % 3 === 0}}</tr>
+			{{else}}
+				{{if #index+1 === #length}}</tr>{{/if}}
+			{{/if}}
+		{{/for}}
+	</table>
+	
+	<section class="contents contentsShadow expendConf">
+		<table>
+			<tr>
+				<th>売却数</th>
+				<td class="jsSellNum">{{>sell_num}}</td>
+			</tr>
+			<tr>
+				<th>売却価格合計</th>
+				<td><span class="jsSellGilTotal">{{>sell_gil_total}}</span>ギル</td>
+			</tr>
+		</table>
+	</section>
+	
+	<p class="paramStatus">
+		<span class="headline">武具数</span>{{>result_own_num + sell_num }}<span class="sepalator">→</span><span class="jsResultOwnNum">{{>result_own_num}}</span><br>
+		<span class="headline">所持ギル</span>{{>result_gil - sell_gil_total }}<span class="sepalator">→</span><span class="jsResultGil">{{>result_gil}}</span>
+	</p>
+	
+	<div class="outerBtnBox">
+		<button class="btn cancel" data-href="equip/sell/list/">やめる</button>
+		<button class="btn" data-href="equip/sell/complete/">売却する</button>
+	</div>
+</div>
+
+<hr>
+
+<div class="arrowLink">
+	<button class="link prev" data-href="equip/list/">武具トップへ戻る</button>
+</div>
+
+<div class="helpList">
+	<ul>
+		<li><button class="link" data-href="help/detail/601/">武具ってなに？</button></li>
+		<li><button class="link" data-href="help/detail/609/">売却ってなに？</button></li>
+	</ul>
+</div>
+

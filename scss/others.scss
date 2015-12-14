@@ -1,0 +1,387 @@
+@charset "utf-8";
+@import "base";
+@import "ruleset";
+
+// page parts
+// top
+#fullScreen.topLargeHeader{
+	$imgSrc:"/background/title_toppage.png";
+	@include backgroundSize($imgSrc,center,0,no-repeat);
+	height:round(image-height($imgSrc)/2);
+	display:block;
+	margin: 0 auto 48px auto;
+	position: relative;
+	>h1{
+		display: none;
+	}
+	.toMypage{
+		display:block;
+		width: 230px;
+		position: absolute;
+		bottom:-26px;
+		left:45px;
+		.hide:before{
+			$imgSrc:"/parts/label_to_mypage.png";
+			@include visible_object(32px,-2px,round(image-width($imgSrc)/2),round(image-height($imgSrc)/2),auto);
+			@include backgroundSize($imgSrc,center,0,no-repeat);
+		}
+	}
+}
+
+
+
+// notice
+.mainHeader+#adminNotice{
+	margin-top:$inner_margin;
+}
+#adminNotice{
+	.jsListAll ~ .arrowLink{
+		margin-bottom:$content_margin;
+	}
+}
+#adminNoticeDetail{
+	dt h1{
+		margin-top:$inner_margin;
+		font-size:110%;
+		font-weight:bold;
+		color:$color_A;
+	}
+	> .linkGroup{
+		margin-bottom:$content_margin;
+	}
+}
+
+
+
+// faq
+#faqList{
+	.accordion{
+		margin-top:$inner_margin;
+	}
+	~ .linkGroup{
+		margin-bottom:$content_margin;
+	}
+}
+
+
+
+// help
+#help{
+	.message{
+		top:0;
+		margin:$inner_margin auto;
+	}
+	.accordion{
+		margin-bottom:8px;
+	}
+	~ .caution{
+		a{
+			display:block;
+			width: 95%;
+			margin: $content_margin auto;
+			padding:8px 0;
+			border: 1px solid #A79F77;
+			color: #A79F77;
+			@include border-radius(8px);
+			color:#008C8C;
+			text-align: center;
+			text-decoration:none;
+		}
+	}
+}
+#helpDetail{
+	
+	.subHeader{
+		margin-bottom:16px;
+	}
+	.contents{
+		width:95%;
+		margin:0 auto 8px auto;
+		
+		.contentsInner{
+			margin:0 8px;
+			padding:8px 0;
+			line-height:1.7;
+		}
+		img{
+			display:block;
+			margin:16px auto;
+		}
+	}
+	.listMenu{
+		margin-top:8px;
+	}
+	~ .arrowLink{
+		margin-bottom:32px;
+	}
+}
+
+
+
+// info inner
+%boxObject{
+	display:block;
+}
+.infoInner{
+	a{
+		color:$color_J;
+		text-decoration:none;
+		&:hover{
+			@include highlightBgColor;
+		}
+	}
+	h2{
+		margin:$inner_margin 0 $inner_margin/2 0;
+		border-bottom:1px solid $color_G;
+		font-weight:bold;
+		color:$color_A;
+	}
+	em{
+		font-weight:bold;
+		font-style:normal;
+		color:$color_H;
+		&.center{
+			@extend %boxObject;
+			text-align:center;
+		}
+	}
+	.large{
+		font-size:120%;
+	}
+	.largeB{
+		@extend .large;
+		font-weight:bold;
+	}
+	.right{
+		@extend %boxObject;
+		text-align:right;
+	}
+	.center{
+		@extend %boxObject;
+		text-align:center;
+	}
+	.more{
+		position:relative;
+		@extend %boxObject;
+		margin:$content_margin 0;
+		text-align:right;
+		a{
+			display:inline-block;
+			margin-right:$content_margin;
+			&:after{
+				@include backgroundSize("/parts/#{$icon_parts}.png",-97px,-78px,no-repeat);
+				@include visible_object(auto,3px,9px,13px,auto);
+				right:0;
+			}
+		}
+	}
+	.relateLink{
+		margin:$content_margin 0;
+		li{
+			position:relative;
+			border-top:1px solid $color_G;
+			&:last-child{
+				border-bottom:1px solid $color_G;
+			}
+			&:after{
+				@include backgroundSize("/parts/#{$icon_parts}.png",-97px,-78px,no-repeat);
+				@include visible_object(auto,50%,9px,13px,auto);
+				right:0;
+				margin-top:-6px;
+			}
+			a{
+				@extend %boxObject;
+				padding:$inner_margin 0;
+				color:$color_A;
+			}
+		}
+	}
+	.list{
+		margin:$content_margin 0 $content_margin $content_margin+$inner_margin;
+		li{
+			list-style:disc;
+		}
+	}
+	.numList{
+		@extend .list;
+		li{
+			list-style:decimal;
+		}
+	}
+	.border{
+		@extend %boxObject;
+		width:272px;
+		margin:$content_margin 0;
+		padding:$inner_margin;
+		border:1px solid $color_G;
+	}
+	.notice{
+		@extend %boxObject;
+		margin:$content_margin 0;
+		padding:$inner_margin/2 $inner_margin $inner_margin/2 $inner_margin+4px;
+		background-color:$color_L;
+		@include border-radius(12px);
+		font-size:85%;
+		color:#fff;
+	}
+	.imgLeft{
+		@include display-box;
+		@include box-align(top);
+		margin:$content_margin 0;
+		img{
+			display:inline-block;
+			margin:0 16px 0 0;
+		}
+		.txtBox{
+			@extend %boxObject;
+			@include box-flex(1);
+		}
+	}
+	.imgRight{
+		@extend .imgLeft;
+		@include box-direction(reverse);
+		img{
+			margin:0 0 0 16px;
+		}
+	}
+	.imgCenter{
+		@extend %boxObject;
+		margin:$content_margin 0;
+		text-align:center;
+		img{
+			display:block;
+			margin:0 auto 8px auto;
+		}
+	}
+	> p{
+		
+	}
+}
+
+
+
+
+
+
+
+
+
+// start dash
+#startDash{
+	.title{
+		display:block;
+		margin:16px auto;
+	}
+	.subHeader3{
+		margin-bottom:8px;
+	}
+	.contents{
+		width:95%;
+		margin:0 auto 8px auto;
+		
+		.cleared{
+			@include backgroundSize("/parts/cleared_stamp.png",0,0,no-repeat);
+			position:absolute;
+			right:8px;
+			bottom:8px;
+			width:76px;
+			height:24px;
+		}
+	}
+	.message{
+		margin:8px auto 8px auto;
+	}
+	.subHeader{
+		margin:16px 0 8px 0;
+	}
+	.listMenu,
+	.caution{
+		margin-bottom:16px;
+	}
+}
+
+
+
+// maintenance
+#globalHeader{
+	
+	.headerTitle{
+		width:100%;
+		height:44px;
+		font-size:110%;
+		font-weight:bold;
+		color:#706A46;
+		text-shadow:1px 2px 3px #000,1px -1px 4px #A79F77,0 0 3px #000,0 0 3px #000;
+		line-height:44px;
+		text-align:center;
+	}
+}
+#maintenance{
+	.contents{
+		width:95%;
+		margin:16px auto 0 auto;
+		
+		h1{
+			width:95%;
+			margin:0 auto 8px auto;
+			padding:8px 0;
+			border-bottom:1px solid #B9A46B;
+			font-weight:bold;
+			text-align:center;
+		}
+	}
+	.contentsInner{
+		margin:0 8px;
+		padding:0 0 8px 0;
+		
+		.maintenancePeriod{
+			margin-bottom:16px;
+			font-size:85%;
+			text-align:center;
+			
+			.label48{
+				margin-top:4px;
+				font-size:110%;
+				font-weight:bold;
+			}
+			.attention{
+				display:block;
+				margin-top:8px;
+				font-size:75%;
+				text-align:left;
+			}
+		}
+		.noticeBody{
+			margin-bottom:16px;
+			font-size:85%;
+		}
+		h2{
+			margin-bottom:8px;
+			font-weight:bold;
+		}
+		li{
+			font-size:85%;
+			
+			span{
+				display:inline-block;
+				margin-right:4px;
+				font-size:70%;
+			}
+		}
+	}
+	> .btn.large{
+		width:90%;
+		margin:32px auto;
+	}
+}
+
+
+
+// error
+#error{
+	
+	.btn.large{
+		width:90%;
+		margin:32px auto;
+	}
+}

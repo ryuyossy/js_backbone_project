@@ -1,0 +1,56 @@
+{
+    "status": 200,
+    "mp": 1,
+    "max_mp": 55,
+    "rest_time": "00:53:07",
+    "items": [
+        {
+            "id": 101,
+            "shop_item_id": -1,
+            "name": "元気のハチミツ（50）",
+            "num": 0,
+            "price": -1,
+            "buy_limit_rest": -1,
+            "description": "行動Pが半分だけ回復する。",
+            "set_sales_flg": false
+        },
+        {
+            "id": 102,
+            "shop_item_id": 1,
+            "name": "元気のハチミツ（100）",
+            "num": 0,
+            "price": 100,
+            "buy_limit_rest": -1,
+            "description": "行動Pが全回復する。",
+            "set_sales_flg": false
+        },
+        {
+            "id": 901,
+            "shop_item_id": 2,
+            "name": "ハチミツ10個パック",
+            "num": 0,
+            "price": 900,
+            "buy_limit_rest": -1,
+            "description": "行動Pが全回復する。",
+            "set_sales_flg": true
+        }
+    ],
+    "enemy_exist_flg": false,
+    "battle_state": 1,
+    "battle_start_rest": "02:24:37",
+    "battle_end_rest": null,
+    "system_date": "2013/04/01 16:35:22",
+    "battle_end_date": null,
+    "battle_start_date": "2013/04/01 19:00:00",
+    "img_url_root": "img/",
+    "tutorial_step": null,
+    "product_mode": false,
+    "app_version": "XXXXXXXXX",
+	"banners": [
+		{
+			"banner_text": null,
+			"image_file_name": "banner_compose_half.png",
+			"redirect_path": null
+		}
+	]
+}

@@ -1,0 +1,78 @@
+{
+    "status": 200,
+    "start_datetime": "2013/12/12 12:00:00",
+    "end_datetime": "2013/12/12 23:59:59",
+    "current_point": 100,
+    "next_rest_point": 50,
+    "next_reward": {
+        "point": 150,
+        "type": 1,
+        "id": 101,
+        "name": "元気のハチミツ（50）",
+        "quantity": 1
+    },
+    "point_table": [
+        {
+            "round": 1,
+            "win_point": 3,
+            "lose_point": 2
+        },
+        {
+            "round": 2,
+            "win_point": 3,
+            "lose_point": 2
+        },
+        {
+            "round": 3,
+            "win_point": 3,
+            "lose_point": 2
+        },
+        {
+            "round": 4,
+            "win_point": 3,
+            "lose_point": 2
+        }
+    ],
+    "rewards": [
+        {
+            "point": 50,
+            "type": 1,
+            "id": 101,
+            "name": "元気のハチミツ（50）",
+            "quantity": 4,
+            "cleared_flg": true
+        },
+        {
+            "point": 150,
+            "type": 1,
+            "id": 101,
+            "name": "元気のハチミツ（50）",
+            "quantity": 4,
+            "cleared_flg": false
+        },
+        {
+            "point": 300,
+            "type": 1,
+            "id": 101,
+            "name": "元気のハチミツ（50）",
+            "quantity": 4,
+            "cleared_flg": false
+        },
+        {
+            "cleared_flg": false,
+            "id": null,
+            "name": "ギル",
+            "point": 400,
+            "quantity": 30000,
+            "type": 5
+        },
+        {
+            "cleared_flg": false,
+            "id": null,
+            "name": "ガチャポイント",
+            "point": 500,
+            "quantity": 1000,
+            "type": 4
+        }
+    ]
+}

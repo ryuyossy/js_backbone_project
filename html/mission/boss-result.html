@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>クエスト｜ボス戦結果</title>
+	<meta name="robots" content="noindex,nofollow">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+	
+	<link rel="stylesheet" href="/css/common_parts.css">
+	<link rel="stylesheet" href="/css/mission.css">
+	<script src="/html/js/jquery-1.8.2.min.js"></script>
+	<script src="/html/js/parts.js"></script>
+</head>
+	<body>
+		<header id="globalHeader">
+			<div class="menuPanel"><button class="link mypage"><span class="hide">マイページ</span></button></div>
+			<div class="battleTimeCount">
+				<div class="battleTimeInner">
+					<h1>次のバトルまで</h1>
+					<div class="numBox">
+						<span class="numGold num_1"><span class="hide">0</span></span>
+						<span class="numGold num_2"><span class="hide">1</span></span>
+						<span class="numGoldColon"><span class="hide">:</span></span>
+						<span class="numGold num_1"><span class="hide">2</span></span>
+						<span class="numGold num_9"><span class="hide">3</span></span>
+						<span class="numGoldColon"><span class="hide">:</span></span>
+						<span class="numGold num_4"><span class="hide">4</span></span>
+						<span class="numGold num_9"><span class="hide">5</span></span>
+					</div>
+				</div>
+			</div>
+			<div class="menuPanel"><button class="link menu"><span class="hide">メニュー</span></button></div>
+		</header>
+
+		<div id="container">
+			
+			<h1 class="mainHeader">勝利</h1>
+			<!-- //負け 
+			<h1 class="mainHeader">敗北</h1>-->
+
+			<section id="bossBattle" class="area001 stage001 result">
+				<img src="../../img/parts/mission_boss001.png">
+				<!-- //勝利時 -->
+				<p>ほっといてよ。。もう。</p>
+				<!-- //敗北時 
+				<p>ふっ、口程にもない</p>-->
+			</section>
+
+			<!-- //勝利時 -->
+			<section id="bossBattleResult" class="contents contentsShadow getItems">
+				<!-- //フィールドクリア時 -->
+				<!-- <button class="btn_l nextField" data-href="#"><span class="hide">次のフィールドへ進む</span></button> -->
+				<!-- //ステージクリア時 -->
+				<button class="btn_l nextStage" data-href="#"><span class="hide">次のステージへ進む</span></button>
+				<div class="contentsBorder">
+					<h1>獲得アイテム</h1>
+					<table>
+						<tr><th>Ex</th><td>123456789Ex</td></tr>
+						<tr><th>ギルギルギルギル</th><td>123456789ギル</td></tr>
+						<tr><th>元気のはちみつ（M）</th><td>999個</td></tr>
+					</table>
+					<button class="btn" data-href="#">ギフトを確認する</button>
+				</div>
+			</section>
+				
+			<!-- //敗北時 
+			<section id="bossBattleLose">
+				<div class="message taicho_arc">
+					<p>
+						<span>戦闘力が足りなかったようじゃな…<br>鍛え直して再挑戦するがよい！</span>
+					</p>
+				</div>
+				<div class="listMenu">
+					<ul>
+						<li><div class="link" data-link="#">ギルド案内所でメンバーを探す</div></li>
+						<li><div class="link" data-link="#">合成で武具を強化</div></li>
+						<li><div class="link" data-link="#">ガチャで協力武器をゲット</div></li>
+						<li><div class="link" data-link="#">装備を確認</div></li>
+					</ul>
+				</div>
+				<button class="btn_l red" data-href="#"><span class="hide">再挑戦する</span></button>
+			</section>-->
+				
+			<!-- //ここから共通 -->
+			<hr>
+			
+			<div class="helpList">
+				<ul>
+					<li><button class="link" data-href="#">ボスについて</button></li>
+					<li><button class="link" data-href="#">ギフトについて</button></li>
+				</ul>
+			</div>
+			
+		</div>
+
+		<footer id="globalFooter">
+			<ul>
+				<li class="menuPanel"><span class="link mypage"><span class="hide">マイページ</span></span></li>
+				<li class="menuPanel"><span class="link quest"><span class="hide">クエスト</span></span></li>
+				<li class="menuPanel"><span class="link buttle"><span class="hide">バトル</span></span></li>
+				<li class="menuPanel"><span class="link gatcha"><span class="hide">ガチャ</span></span></li>
+				<li class="menuPanel"><span class="link menu"><span class="hide">マイページ</span></span></li>
+			</ul>
+		</footer>
+
+	</body>
+</html>

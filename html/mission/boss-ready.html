@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>クエスト｜ボス戦準備</title>
+	<meta name="robots" content="noindex,nofollow">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+
+	<link rel="stylesheet" href="/css/common_parts.css">
+	<link rel="stylesheet" href="/css/mission.css">
+	<script src="/html/js/jquery-1.8.2.min.js"></script>
+	<script src="/html/js/parts.js"></script>
+</head>
+	<body>
+	
+		<header id="globalHeader">
+			<div class="menuPanel"><button class="link mypage"><span class="hide">マイページ</span></button></div>
+			<div class="battleTimeCount">
+				<div class="battleTimeInner">
+					<h1>次のバトルまで</h1>
+					<div class="numBox">
+						<span class="numGold num_1"><span class="hide">0</span></span>
+						<span class="numGold num_2"><span class="hide">1</span></span>
+						<span class="numGoldColon"><span class="hide">:</span></span>
+						<span class="numGold num_1"><span class="hide">2</span></span>
+						<span class="numGold num_9"><span class="hide">3</span></span>
+						<span class="numGoldColon"><span class="hide">:</span></span>
+						<span class="numGold num_4"><span class="hide">4</span></span>
+						<span class="numGold num_9"><span class="hide">5</span></span>
+					</div>
+				</div>
+			</div>
+			<div class="menuPanel"><button class="link menu"><span class="hide">メニュー</span></button></div>
+		</header>
+		<div id="container">
+
+			<h1 class="mainHeader">ボス戦闘準備</h1>
+
+			<section id="bossBattle" class="area001 stage001 result">
+				<img src="../../img/parts/mission_boss001.png">
+				<h2 class="bossName">ボス名ボス名ボス名ボス名ボス<!-- //全角16文字 --></h2>
+			</section>
+
+			<section id="bossBattleStart" class="missionUserStatus">
+				<div class="contents contentsShadow">
+					<div class="statusData_icon">
+						<button class="btn_l red" data-href="#"><span class="hide">戦う</span></button>
+						<h1>ユーザー名ユーザー名ユーザー名ユーザ<!-- //全角18文字まで --></h1>
+						<div class="columnBox">
+							<div class="iconBgRect_l gold"><img src="/img/avatar/0001_120.png"></div>
+							<div class="contentsInner">
+								<dl>
+									<dt>Lv.</dt><dd>99</dd><dt>ジョブ</dt><dd>グラディエイター<!-- //最大全角8文字 --></dd>
+									<dt>戦闘力</dt><dd>999999999999</dd>
+								</dl>
+								<div class="columnBox">
+									<dl>
+										<dt>攻撃</dt><dd>999999</dd>
+										<dt>防御</dt><dd>999999</dd>
+									</dl>
+									<dl>
+										<dt>特攻</dt><dd>999999</dd>
+										<dt>特防</dt><dd>999999</dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<h2 class="subHeader3">ギルドメンバーと協力してボスを倒そう！</h2>
+
+			<section id="helpMember">
+				<section class="missionUserStatus">
+					<div class="contents contentsShadow">
+						<div class="statusData_icon">
+							<h1>ユーザー名ユーザー名ユーザー名ユーザ<!-- //全角18文字まで --></h1>
+							<div class="columnBox">
+								<div class="iconBgRect_l gold"><img src="/img/avatar/myAvatar_l.png"></div>
+								<div class="contentsInner">
+									<dl>
+										<dt>Lv.</dt><dd>99</dd><dt>ジョブ</dt><dd>グラディエイター<!-- //最大全角8文字 --></dd>
+										<dt>戦闘力</dt><dd>999999999999</dd>
+									</dl>
+									<div class="columnBox">
+										<dl>
+											<dt>攻撃</dt><dd>999999</dd><dt>防御</dt><dd>999999</dd>
+										</dl>
+										<dl>
+											<dt>特攻</dt><dd>999999</dd><dt>特防</dt><dd>999999</dd>
+										</dl>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="innerBtnBox">
+							<button class="btn cancel" data-href="#">外す</button><button class="btn" data-href="#">変更する</button>
+						</div>
+					</div>
+				</section>
+				<!-- //2人目 
+				<section class="missionUserStatus">
+					<div class="contents contentsShadow">
+						<div class="statusData_icon">
+							<h1>ユーザー名ユーザー名ユーザー名ユーザ</h1>
+							<div class="columnBox">
+								<div class="iconBgRect_l gold"><img src="/img/avatar/myAvatar_l.png"></div>
+								<div class="contentsInner">
+									<dl>
+										<dt>Lv.</dt><dd>99</dd><dt>ジョブ</dt><dd>グラディエイター</dd>
+										<dt>戦闘力</dt><dd>999999999999</dd>
+									</dl>
+									<div class="columnBox">
+										<dl>
+											<dt>攻撃</dt><dd>999999</dd><dt>防御</dt><dd>999999</dd>
+										</dl>
+										<dl>
+											<dt>特攻</dt><dd>999999</dd><dt>特防</dt><dd>999999</dd>
+										</dl>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="innerBtnBox">
+							<button class="btn cancel" data-href="#">外す</button><button class="btn" data-href="#">変更する</button>
+						</div>
+					</div>
+				</section>-->
+				
+			</section>
+			
+			<!-- //メンバーが一人しか選択されていない時のみ表示 -->
+			<div class="callMember">
+				<p>あと一人追加できます</p>
+				<button class="btn large" data-href="#">メンバーを呼ぶ</button>
+			</div>
+
+			<hr>
+
+			<section class="helpList">
+				<ul>
+					<li><button class="link" data-link="#">ボスについて</button></li>
+					<li><button class="link" data-link="#">クエスト同行について</button></li>
+				</ul>
+			</section>
+
+			<footer id="globalFooter">
+				<ul>
+					<li class="menuPanel"><span class="link mypage"><span class="hide">マイページ</span></span></li>
+					<li class="menuPanel"><span class="link quest"><span class="hide">クエスト</span></span></li>
+					<li class="menuPanel"><span class="link buttle"><span class="hide">バトル</span></span></li>
+					<li class="menuPanel"><span class="link gatcha"><span class="hide">ガチャ</span></span></li>
+					<li class="menuPanel"><span class="link menu"><span class="hide">マイページ</span></span></li>
+				</ul>
+			</footer>
+		</div>
+	</body>
+</html>

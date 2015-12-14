@@ -1,0 +1,95 @@
+<h1 class="mainHeader">クエスト同行</h1>
+
+<div class="message taicho_arc">
+	<p>
+		<span>{{if 0}}<!-- {{>npc_comment}} -->{{/if}}同行すると相手にもギルが入るぞ！Lv50以下なら経験値も&#65281;</span>
+	</p>
+</div>
+
+<section id="helpMember" class="guild">
+<!-- <section id="recommendUsers" class="jsGuildBbs"> -->
+	<h1 class="subHeader">
+		<span class="subHeaderBg_l"></span>
+		<span>同行するメンバー({{>partner_num}}/{{>partner_max_num}})</span>
+		<span class="subHeaderBg_r"></span>
+	</h1>
+
+	<div class="helpMemberList">
+	<!-- <div class="helpMemberList jsGuildBbsTopics"> -->
+		{{for partners}}
+		<section class="contents contentsShadow statusData_icon link jsUser" data-user-id="{{>user_id}}" data-user-name="{{>name}}">
+			<h1>{{>name}}</h1>
+			<div class="columnBox" data-href="profile/other/{{>user_id}}/">
+				<div class="iconBgRect_l gold"><img src="{{getImgRoot/}}/avatar/{{>avatar_id}}_140.png"></div>
+				<div class="contentsInner">
+					<dl>
+						<dt>Lv.</dt><dd>{{>level}}</dd>
+						<dt>ジョブ</dt><dd>{{>job_name}}</dd>
+						<dt>戦闘力</dt><dd>{{>attack_power + sp_attack_power + defense_power + sp_defense_power}}</dd>
+					</dl>
+					<div class="columnBox">
+						<dl>
+							<dt>攻撃</dt><dd>{{>attack_power}}</dd>
+							<dt>特攻</dt><dd>{{>sp_attack_power}}</dd>
+						</dl>
+						<dl>
+							<dt>防御</dt><dd>{{>defense_power}}</dd>
+							<dt>特防</dt><dd>{{>sp_defense_power}}</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+			<div class="innerBtnBox">
+				<button class="btn cancel jsButtonMissionPartnerRemoveConfirm">外す</button>
+				<button class="btn" data-href="mission/partner/change/guild/{{>user_id}}/">変更する</button>
+			</div>
+		</section>
+		{{/for}}
+	</div>
+
+	{{if addable_flg && partner_max_num > partner_num}}
+	<div class="callMember">
+		<p>あと{{>partner_max_num - partner_num}}人追加できます</p>
+		<button class="btn large" data-href="mission/partner/add/guild/"><span>同行者を追加する</span></button>
+	</div>
+	
+	<hr>
+		
+	{{else !addable_flg && partner_num == 1}}
+	<!-- クエスト同行メンバー（追加可能メンバーなし）-->
+	<div class="callMember dimmed">
+		<p>追加できるメンバーがいません</p>
+		<div class="arrowLink">
+			<button class="link next" data-href="guild/space/">ギルド広場でメンバーを捜す</button>
+		</div>
+	</div>
+	
+	<hr>
+		
+	{{else !addable_flg && partner_num == 0}}
+	<!-- クエスト同行（同行できるメンバーなし）-->
+	<section class="dimmed">
+		<p>
+			同行できるメンバーがいません
+		</p>
+	</section>
+	<div class="arrowLink">
+		<button class="link next" data-href="guild/space/">ギルド広場でメンバーを捜す</button>
+	</div>
+	
+	<hr>
+	
+	{{/if}}
+	
+	<div class="arrowLink">
+		<button class="link prev" data-href="guild/">ギルドトップに戻る</button>
+	</div>
+
+       <div class="helpList">
+                <ul>
+                        <li><button class="link" data-href="help/detail/802/">ヤツらってなに？</button></li>
+                        <li><button class="link" data-href="help/detail/312/">クエスト同行ってなに？</button></li>
+                        <li><button class="link" data-href="help/detail/801/">クエストってなに？</button></li>
+                </ul>
+        </div>
+</section>

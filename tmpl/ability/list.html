@@ -1,0 +1,43 @@
+<section id="item" class="jsItem">
+	<h1 class="subHeader">
+		<span class="subHeaderBg_l"></span>
+		<span>アビリティ一覧</span>
+		<span class="subHeaderBg_r"></span>
+	</h1>
+	<div class="contents">
+		<ul class="">
+			<li>
+				<div class="contents">
+				{{if ability_effect_type === 1}}
+				<b>攻撃</b>&nbsp;|&nbsp;<button data-href="ability/list/2/">回復</button>&nbsp;|&nbsp;<button data-href="ability/list/3/">サポート</button>
+				{{else ability_effect_type === 2}}
+				<button data-href="ability/list/1/">攻撃</button>&nbsp;|&nbsp;<b>回復</b>&nbsp;|&nbsp;<button data-href="ability/list/3/">サポート</button>
+				{{else}}
+				<button data-href="ability/list/1/">攻撃</button>&nbsp;|&nbsp;<button data-href="ability/list/2/">回復</button>&nbsp;|&nbsp;<b>サポート</b>
+				{{/if}}
+				</div>
+			</li>
+		</ul>
+	</div>
+	<h1 class="subHeader">
+		<span class="subHeaderBg_l"></span>
+		<span>アビリティ一覧</span>
+		<span class="subHeaderBg_r"></span>
+	</h1>
+	{{for abilities}}
+	<article class="contents contentsShadow topic jsTopic" >
+		<div class="contentsInner">
+			<ul>
+				<li><span><b>{{>name}}</b></span></li>
+				<li><span>系統:{{>ancestry}}&nbsp;{{if same_ancestry === false}}（他系統）{{/if}}</span></li>
+				<li><span>アビP:{{>equip_point}}</span></li>
+				<li><span>消費AP:{{if tp_cost !== null}}{{>tp_cost}}{{else}}-{{/if}}</span></li>
+				<li><span>{{>description}}</span></li>
+				<li>
+					<button class="btn regular" data-href="ability/add/{{>id}}/">セットする</button>
+				</li>
+			</ul>
+		</div>
+	</article>
+	{{/for}}
+</section>

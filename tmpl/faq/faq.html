@@ -1,0 +1,24 @@
+<h1 class="mainHeader">よくあるご質問</h1>
+<section id="faqList">
+	{{for faqs}}
+	<div class="accordion jsAccordion">
+		<section class="contents shadow">
+			<h1 class="jsAccordionButton">{{>question_text}}</h1>
+			<div class="accordionInner jsAccordionInner" style="display: none">
+				<article class="infoInner">{{:answer_text}}</article>
+			</div>
+		</section>
+	</div>
+	{{/for}}
+</section>
+
+<hr>
+
+<div class="linkGroup">
+	<div class="arrowLink">
+		<button class="link prev" data-href="/">トップに戻る</button>
+	</div>
+	<div class="arrowLink">
+		<button class="link next" data-href="help/">ヘルプ</button>
+	</div>
+</div>

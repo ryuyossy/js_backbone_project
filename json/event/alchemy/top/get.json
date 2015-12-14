@@ -1,0 +1,12 @@
+{
+	"status": 200,
+	"event_datetime" : {
+		"start" : 1367486400000,
+		"end" : 1368370799000
+	},
+	"materia_get_datetime" : {
+		"start" : 1367486400000,
+		"end" : 1368370799000
+	},
+	"materia_num": 50
+}

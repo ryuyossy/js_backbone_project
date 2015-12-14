@@ -1,0 +1,23 @@
+<section id="item" class="jsItem">
+    <h1 class="subHeader">
+        <span class="subHeaderBg_l"></span>
+        <span>装備変更完了</span>
+        <span class="subHeaderBg_r"></span>
+    </h1>
+    <article class="contents contentsShadow topic jsTopic" >
+		装備を変更しました
+		{{if equip_type === 1}}
+        <div>攻撃{{>power}}({{if power_diff >=0}}+{{/if}}{{>power_diff}})</div>
+        <div>特攻{{>sp_power}}({{if sp_power_diff >=0}}+{{/if}}{{>sp_power_diff}})</div>
+        <div>武器P{{>equip_cost}}({{if equip_cost_diff >=0}}+{{/if}}{{>equip_cost_diff}})</div>
+        {{else}}
+        <div>防御{{>power}}({{if power_diff >=0}}+{{/if}}{{>power_diff}})</div>
+        <div>特防{{>sp_power}}({{if sp_power_diff >=0}}+{{/if}}{{>sp_power_diff}})</div>
+        <div>防具P{{>equip_cost}}({{if equip_cost_diff >=0}}+{{/if}}{{>equip_cost_diff}})</div>
+        {{/if}}
+	    
+	    <button class="link" data-href="deck/edit/{{>equip_type}}/{{>deck_no}}/">装備編集</button>
+	    <button class="link" data-href="deck/list/{{>equip_type}}/">装備トップ</button>
+    </article>
+
+</section>

@@ -1,0 +1,44 @@
+{
+    "status" : 200,
+    "master_priv_flg": true,
+    "users": [
+        {
+            "attack": 0,
+            "avatar_id": "10001",
+            "defense": 0,
+            "job_name": "みならい剣士",
+            "level": 1,
+            "profile_comment": "がんばりまーす",
+            "sp_attack": 0,
+            "sp_defense": 0,
+            "user_id": 28,
+			"user_name": "まっくす"
+        },
+        {
+            "attack": 0,
+            "avatar_id": "00001",
+            "defense": 0,
+            "job_name": "村人",
+            "level": 1,
+            "profile_comment": "taketaketake",
+            "sp_attack": 0,
+            "sp_defense": 0,
+            "user_id": 11,
+			"user_name": "やまだし"
+        },
+        {
+            "attack": 0,
+            "avatar_id": "00001",
+            "defense": 0,
+            "job_name": "みならい剣士",
+            "level": 1,
+            "profile_comment": "よろしく！！",
+            "sp_attack": 0,
+            "sp_defense": 0,
+            "user_id": 9,
+			"user_name": "早川大臣"
+        }
+    ],
+    "more_flg": true,
+	"invite_max_flg" : false
+}

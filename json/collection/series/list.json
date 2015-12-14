@@ -1,0 +1,59 @@
+{
+	"status": 200,
+    "total_series_treasure_num": 36,
+    "total_series_treasure_collect_num": 2,
+    "total_series_num": 4,
+    "total_series_collect_num": 1,
+	"series": [
+		{
+            "series_id": 1,
+            "series_name": "秘宝シリーズ名1",
+            "reward_id": 1,
+            "reward_type": 2,
+            "event_flg": false,
+            "event_id": null,
+            "user_series_treasure_collect_num": 2,
+            "total_series_treasure_num": 9,
+            "collect_status": "そこそこ集めた",
+            "disp_treasure_id": 19
+		},
+		{
+            "series_id": 2,
+            "series_name": "秘宝シリーズ名2",
+            "reward_id": 2,
+            "reward_type": 2,
+            "event_flg": false,
+            "event_id": null,
+            "user_series_treasure_collect_num": 0,
+            "total_series_treasure_num": 9,
+            "collect_status": "まだ集めてない",
+            "disp_treasure_id": 29
+		},
+		{
+			"series_id": 3,
+			"series_name": "秘宝シリーズ名3",
+			"reward_id": 3,
+			"reward_type": 2,
+			"event_flg": true,
+			"event_id": 1,
+			"user_series_treasure_collect_num": 0,
+			"total_series_treasure_num": 9,
+			"collect_status": "まだ集めてない",
+            "disp_treasure_id": 39
+		},
+		{
+			"series_id": 4,
+			"series_name": "秘宝シリーズ名4",
+			"reward_id": 4,
+			"reward_type": 2,
+			"event_flg": true,
+			"event_id": 2,
+			"series_treasures": null,
+			"user_series_treasure_collect_num": 9,
+			"total_series_treasure_num": 9,
+			"collect_status": "コンプ達成済!!",
+            "disp_treasure_id": 49
+		}
+	],
+	"series_more_flg": true
+}

@@ -1,0 +1,52 @@
+	<h1 class="mainHeader">ギフト受け取り完了</h1>
+	<div class="statusLine">
+		<p>
+			<span class="headline">未開封ギフト</span>{{>unopened_num}}<span class="denominator">/{{>max_unopened_num}}</span>
+		</p>
+	</div>
+	
+	<div id="giftAllCatch">
+		{{if error_message !== null}}
+		<section class="dimmed">
+			<p>{{>error_message}}</p>
+		</section>
+		{{else}}
+		{{for gifts}}
+			<section class="giftTav">
+				<article class="contents contentsShadow statusData_icon">
+					<div class="columnBox innerHeader">
+						{{giftThumb type=gift_item_type id=gift_item_id /}}
+
+						<div class="contentsInner">
+							<h1>{{>gift_item_name}}</h1>
+							<dl>
+								<dt>数量</dt><dd>{{>qty}}</dd>
+							</dl>
+						</div>
+					</div>
+					{{if gift_item_type == 1}}
+						<button class="link innerLink" data-href="item/list/">アイテム一覧</button>
+					{{/if}}
+					{{if gift_item_type == 2 || gift_item_type == 3}}
+						<button class="link innerLink" data-href="compose/">合成</button>
+					{{/if}}
+					{{if gift_item_type == 4 || gift_item_type == 6}}
+						<button class="link innerLink" data-href="gacha/">ガチャ</button>
+					{{/if}}
+				</article>
+			</section>
+		{{/for}}
+		{{/if}}
+	</div>
+	
+	<button class="btn large allCatch" data-href="gift/list/">さらに受け取る</button>
+
+	<hr>
+
+	<div class="listMenu">
+		<ul>
+			<li><div class="link" data-href="compose/">合成へ</div></li>
+			<li><div class="link" data-href="gacha/">ガチャへ</div></li>
+			<li><div class="link" data-href="item/list/">アイテム一覧へ</div></li>
+		</ul>
+	</div>

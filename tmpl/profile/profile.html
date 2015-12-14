@@ -1,0 +1,111 @@
+<div id="container">
+	<section id="avatarStatus">
+		<div class="avatarStatusInner">
+			<h1 class="userName">{{>user_name}}</h1>
+			<figure class="myAvatar">
+				<img src="{{getImgRoot/}}/avatar/{{>avatar_id}}_640.png">
+			</figure>
+			<div class="statusData">
+				<dl>
+					<dt>Lv.</dt><dd>{{>level}}</dd>
+					<dt>ジョブ</dt><dd>{{>job_name}}</dd>
+					<dt>所属</dt><dd class="link" data-href="guild/">{{>guild_name}}</dd>
+					<dt>役職</dt><dd>{{>position_name}}</dd>
+					<dt>戦闘力</dt><dd>{{>battle_power}}</dd>
+					<dt>獲得BP</dt><dd>{{>~commaFormat(gp)}}</dd>
+					<dt>図鑑</dt><dd>{{>current_collect_equip_num}}/{{>max_collect_equip_num}}</dd>
+					<dt>所持武具</dt><dd>{{>own_equip_num}}/{{>max_own_equip_num}}</dd>
+				</dl>
+			</div>
+			<div class="equip">
+				<h1><span class="hide">装備</span></h1>
+				{{if main_weapon }}
+				<div class="weapon link" data-href="equip/detail/{{>main_weapon.user_equip_no}}/">{{equipThumb equip_id=main_weapon.equip_id step=main_weapon.step size="medium" /}}</div>
+				{{/if}}
+				{{if main_protector }}
+				<div class="armor link" data-href="equip/detail/{{>main_protector.user_equip_no}}/">{{equipThumb equip_id=main_protector.equip_id step=main_protector.step size="medium" /}}</div>
+				{{/if}}
+			</div>
+			<!-- // 種はここに入れる（あとで）
+			<div class="seed">
+				
+			</div>
+			-->
+		</div>
+	</section>
+	
+	<section class="comment link" data-href="profile/edit/">
+		<p>
+			{{>profile_comment}}
+		</p>
+		<!-- //自分のプロフ詳細の時のみ：コメント編集ボタン -->
+		<button class="edit hide">編集</button>
+	</section>
+	
+	<!-- // 自分のプロフ詳細の時のみ：マイデータ -->
+	<section class="myDate contents contentsShadow statusData">
+		<h1>マイデータ</h1>
+		<div class="contentsInner">
+			<div class="columnBox">
+				<dl>
+					<dt>ギル</dt><dd>{{>gil}}</dd>
+					<dt>ジョブ系統</dt><dd>{{>lineage_type_name}}</dd>
+					<dt>攻撃</dt><dd>{{>attack}}</dd>
+					<dt>防御</dt><dd>{{>defense}}</dd>
+					<dt>進行</dt><dd>ステージ{{>stage_id}}</dd>
+				</dl>
+				<dl>
+					<dt>ガチャP</dt><dd>{{>gacha_p}}</dd>
+					<dt>Lv.</dt><dd>{{>level}}</dd>
+					<dt>特攻</dt><dd>{{>sp_attack}}</dd>
+					<dt>特防</dt><dd>{{>sp_defense}}</dd>
+					<dt>お宝</dt><dd>{{>treasure_kind_num}}種類</dd>
+				</dl>
+			</div>
+			<dl>
+				<dt>累計BP</dt><dd>{{>~commaFormat(gp)}}</dd>
+				<dt>戦績</dt><dd>{{>win_num}}勝/{{>lose_num}}敗（勝率{{>win_percent}}％）</dd>
+			</dl>
+		</div>
+	</section>
+	
+	<!-- // 自分のプロフの時のみ：メッセージ -->
+	
+	<h1 class="subHeader">
+        <span class="subHeaderBg_l"></span><span>メッセージ</span><span class="subHeaderBg_r"></span>
+    </h1>
+    
+    <section id="messageList">
+        {{for #data tmpl="#jsTemplateMessage" /}}
+    </section>
+    
+    {{if messages.length > 0}}
+    <div class="arrowLink">
+        <span class="link next" data-href="message/list/">ぜんぶ見る</span>
+    </div>
+    {{/if}}
+	
+	<section id="greet" class="jsGreet">
+	    <h1 class="subHeader">
+	        <span class="subHeaderBg_l"></span><span>あいさつ</span><span class="subHeaderBg_r"></span>
+	    </h1>
+	    <div class="jsGreets">
+	        {{for #data tmpl="#jsTemplateGreet" /}}
+	    </div>
+	    {{if greets_more_flg}}
+	    <div class="arrowLink">
+	        <span class="link next" data-href="greet/">ぜんぶ見る</span>
+	    </div>
+	    {{/if}}
+    </section>
+	
+	<hr>
+	
+	<div class="helpList">
+		<ul>
+			<li><button class="link" data-href="help/detail/1002/">メッセージってなに？</button></li>
+			<li><button class="link" data-href="help/detail/1001/">あいさつってなに？</button></li>
+		</ul>
+	</div>
+
+</div>

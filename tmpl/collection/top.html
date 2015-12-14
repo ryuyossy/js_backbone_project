@@ -1,0 +1,76 @@
+<h1 class="mainHeader">図鑑</h1>
+
+<!-- //ナビ子アイコン -->
+<div class="message navico_arc booksNaviko_Arc">
+	<p>
+		<span>武具をいっぱい集めたり、育てたりするとボーナスがもらえるって&#65281;</span>
+	</p>
+</div>
+
+<div id="collectionContentsM">
+	<section class="contents contentsShadow statusData_icon link">
+		<div class="columnBox" data-href="collection/equip/list/">
+			<img src="{{>img_url_root}}/parts/icon_collection_equip.png">
+			<div class="contentsInner">
+				<h1>武具図鑑</h1>
+				<dl>
+					<dt>発見種類数</dt><dd>{{>user_equip_collect_num}}/{{>total_equip_num}}</dd>
+					<dt>限界達成種類数</dt><dd>{{>equip_level_max}}</dd>
+				</dl>
+			</div>
+		</div>
+		<button class="btn booksBtn" data-href="collection/bonus/list/">図鑑ボーナス</button>
+	</section>
+
+	<section class="contents shadow statusData_icon link">
+		<div class="columnBox" data-href="collection/series/list/">
+			<img src="{{>img_url_root}}/parts/icon_collection_treasure.png">
+			<div class="contentsInner">
+				<h1>お宝図鑑</h1>
+				<dl>
+					<dt>発見種類数</dt><dd>{{>user_series_collect_num}}/{{>total_series_num}}</dd>
+					<dt>コンプ</dt><dd>{{>total_complete_num}}シリーズ</dd>
+				</dl>
+			</div>
+		</div>
+	</section>
+
+	<!--
+
+	<section class="contents shadow statusData link">
+		<div class="columnBox">
+			<div class="contentsInner">
+				<h1>ヤツらの図鑑</h1>
+				<dl>
+					<dt>発見数</dt><dd>{{>user_monster_collect_num}}/{{>total_monster_num}}</dd>
+					<dt>こらしめた数</dt><dd>99</dd>
+				</dl>
+			</div>
+		</div>
+	</section>
+
+	<section class="contents shadow statusData link">
+		<div class="columnBox">
+			<div class="contentsInner">
+				<h1>イベントモンスター図鑑</h1>
+				<dl>
+					<dt>発見数</dt><dd>99</dd>
+					<dt>こらしめた数</dt><dd>99</dd>
+				</dl>
+			</div>
+		</div>
+	</section>
+	-->
+
+</div>
+
+<div class="helpList">
+	<ul>
+		<li><button class="link" data-href="help/detail/1401/">武具図鑑ってなに？</button></li>
+		<li><button class="link" data-href="help/detail/1402/">図鑑ボーナスってなに？</button></li>
+		<li><button class="link" data-href="help/detail/1403/">お宝図鑑ってなに？</button></li>
+	</ul>
+</div>
+
+
+

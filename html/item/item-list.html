@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>アイテムページ｜アイテムリスト</title>
+	<meta name="robots" content="noindex,nofollow">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="/css/common_parts.css">
+	<link rel="stylesheet" href="/css/item.css">
+	<script src="/html/js/jquery-1.8.2.min.js"></script>
+	<script src="/html/js/parts.js"></script>
+</head>
+	<body>
+		<div id="container">
+			<header id="globalHeader">
+				<div class="menuPanel"><button class="link mypage"><span class="hide">マイページ</span></button></div>
+				<div class="guildNamePanel"><h1><span class="link"><span class="guildRank f hide">ギルドランク：A</span>ギルド名ギルド名ギルド名</span></h1></div>
+				<div class="menuPanel"><button class="link menu"><span class="hide">メニュー</span></button></div>
+			</header>
+
+			<h1 class="mainHeader">アイテム</h1>
+
+			<div id="itemList">
+				<!-- //注意書きなし・使用可能 -->
+				<section class="contents contentsShadow statusData_icon">
+					<div class="columnBox">
+						<img src="../../img/item/101.png">
+						<div class="contentsInner">
+							<h1>アイテム名アイテム名</h1>
+							<dl>
+								<dt>所持数</dt><dd>99</dd>
+							</dl>
+							<p>説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明</p>
+						</div>
+					</div>
+					<button class="btn" data-href="#">使用する</button>
+				</section>
+				<!-- //注意書きあり・使用可能 -->
+				<section class="contents contentsShadow statusData_icon">
+					<div class="columnBox">
+						<img src="../../img/item/101.png">
+						<div class="contentsInner">
+							<h1>アイテム名アイテム名</h1>
+							<dl>
+								<dt>所持数</dt><dd>99</dd>
+							</dl>
+							<p>説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明</p>
+						</div>
+					</div>
+					<span class="label48">行動Pが残っています</span>
+					<button class="btn" data-href="#">使用する</button>
+				</section>
+				<!-- //注意書きあり・使用不可 -->
+				<section class="contents contentsShadow statusData_icon">
+					<div class="columnBox">
+						<img src="../../img/item/101.png">
+						<div class="contentsInner">
+							<h1>アイテム名アイテム名</h1>
+							<dl>
+								<dt>所持数</dt><dd>99</dd>
+							</dl>
+							<p>説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明</p>
+						</div>
+					</div>
+					<span class="label48">行動Pが満タンです</span>
+				</section>
+			</div>
+
+			<div class="arrowLink">
+				<button class="link next" data-href="#">ショップ</button>
+			</div>
+
+			<footer id="globalFooter">
+				<ul>
+					<li class="menuPanel"><span class="link mypage"><span class="hide">マイページ</span></span></li>
+					<li class="menuPanel"><span class="link quest"><span class="hide">クエスト</span></span></li>
+					<li class="menuPanel"><span class="link buttle"><span class="hide">バトル</span></span></li>
+					<li class="menuPanel"><span class="link gatcha"><span class="hide">ガチャ</span></span></li>
+					<li class="menuPanel"><span class="link menu"><span class="hide">マイページ</span></span></li>
+				</ul>
+			</footer>
+		</div>
+
+		<div class="modalArea">
+			<!-- //アイテム使用ポップアップ -->
+			<section id="useItem" class="modalBox">
+				<span class="close"><span>閉じる</span></span>
+				<h1>アイテム使用</h1>
+				<div class="itemUseConfirm">
+					<p>
+						アイテム名を使用しますか？
+					</p>
+					<img src="/img/equip/weapon.png" class="single">
+					<table>
+						<tr>
+							<th>行動P</th><td>99<span class="sepalator">→</span>99</td>
+						</tr>
+					</table>
+					<!-- //注意書きある場合ここから -->
+					<span class="label48">行動Pが99残っています</span>
+					<!-- //注意書きある場合ここまで -->
+				</div>
+				<div class="innerBtnBox">
+					<button class="btn cancel" data-href="#">やめる</button><button class="btn" data-href="#">使用する</button>
+				</div>
+			</section>
+		</div>
+
+	</body>
+</html>

@@ -1,0 +1,22 @@
+{
+    "status" : 200,
+	"addable_flg": true,
+    "partner_num": 1,
+    "partner_max_num": 2,
+    "partners": [
+        {
+            "user_id": 27,
+            "name": "たけさん",
+            "avatar_id": "10001",
+            "job_name": "みならい剣士",
+            "position_name": null,
+            "level": 19,
+            "attack": 46,
+            "defense": 82,
+            "sp_attack": 8,
+            "sp_defense": 49,
+            "warm_up_flg": null
+        }
+    ],
+    "npc_comment": "NPCコメントだよ！NPCコメントだよ！NPCコメントだよ！NPCコメントだよ！"
+}

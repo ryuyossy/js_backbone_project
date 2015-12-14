@@ -1,0 +1,205 @@
+{
+	"status": 200,
+	"version":5,
+	"user": {
+		"id": 1,
+		"gil": 179693,
+		"own_equip_num": 13,
+		"max_own_equip_num": 100,
+		"rare_medal_num": 20004
+	},
+	"compose_term": {
+		"percent": 10,
+		"kind": 1,
+		"start": "2012-10-11 12:00:00",
+		"end": "2012-10-17 12:00:00"
+	},
+	"equip_types": [
+		{
+			"text": "すべての武具",
+			"value": ""
+		},
+		{
+			"text": "武器",
+			"value": "1"
+		},
+		{
+			"text": "防具",
+			"value": "2"
+		}
+	],
+	"attribute_types": [
+		{
+			"text": "すべての属性",
+			"value": ""
+		},
+		{
+			"text": "火",
+			"value": "FIRE"
+		},
+		{
+			"text": "氷",
+			"value": "ICE"
+		},
+		{
+			"text": "雷",
+			"value": "THUNDER"
+		},
+		{
+			"text": "地",
+			"value": "EARTH"
+		},
+		{
+			"text": "光",
+			"value": "LIGHT"
+		},
+		{
+			"text": "闇",
+			"value": "DARK"
+		}
+	],
+	"rarity_types": [
+		{
+			"text": "すべてのレア度",
+			"value": ""
+		},
+		{
+			"text": "ノーマル",
+			"value": "N"
+		},
+		{
+			"text": "ハイノーマル",
+			"value": "HN"
+		},
+		{
+			"text": "レア",
+			"value": "R"
+		},
+		{
+			"text": "Sレア",
+			"value": "SR"
+		},
+		{
+			"text": "SSレア",
+			"value": "SSR"
+		},
+		{
+			"text": "レジェンド",
+			"value": "LEGEND"
+		}
+	],
+	"sort_types": [
+		{
+			"text": "攻防が高い順",
+			"value": "POWER_DESC"
+		},
+		{
+			"text": "攻防が低い順",
+			"value": "POWER_ASC"
+		},
+		{
+			"text": "最近入手した順",
+			"value": "GET_DATETIME_DESC"
+		},
+		{
+			"text": "昔に入手した順",
+			"value": "GET_DATETIME_ASC"
+		},
+		{
+			"text": "コストが高い順",
+			"value": "COST_DESC"
+		},
+		{
+			"text": "コストが低い順",
+			"value": "COST_ASC"
+		},
+		{
+			"text": "Lvが高い順",
+			"value": "LEVEL_DESC"
+		},
+		{
+			"text": "Lvが低い順",
+			"value": "LEVEL_ASC"
+		},
+		{
+			"text": "レア度が高い順",
+			"value": "RARITY_DESC"
+		},
+		{
+			"text": "レア度が低い順",
+			"value": "RARITY_ASC"
+		}
+	],
+	"equips": [
+		{
+			"id": 14003,
+			"user_equip_no": 1351677512024,
+			"name": "覇者の剣（梅）",
+			"lineage_name": "力",
+			"attribute": {},
+			"compose": {
+				"gil": 600,
+				"step": 0
+			},
+			"rarity_name": "Sレア",
+			"grow_type_name": "早熟",
+			"status": 0,
+			"cost": 8,
+			"exp": 151,
+			"exp_percent": 60,
+			"level": 15,
+			"max_level": 30,
+			"power": 295,
+			"special_power": 295,
+			"description": "その昔、この世に降り立った悪魔が持っていたの呪われし剣",
+			"protected_flg": false
+		},
+		{
+			"id": 13002,
+			"user_equip_no": 1350268201202,
+			"name": "炎の剣（竹）",
+			"lineage_name": "力",
+			"attribute": {},
+			"compose": {
+				"gil": 500,
+				"step": 4
+			},
+			"rarity_name": "レア",
+			"grow_type_name": "早熟",
+			"status": 1,
+			"cost": 7,
+			"exp": 289,
+			"exp_percent": 20,
+			"level": 28,
+			"max_level": 30,
+			"power": 379,
+			"special_power": 379,
+			"description": "炎の力が宿った剣",
+			"protected_flg": false
+		},
+		{
+			"id": 13002,
+			"user_equip_no": 1350262201202,
+			"name": "炎の剣（竹）",
+			"lineage_name": "力",
+			"attribute": {},
+			"compose": {
+				"gil": 500,
+				"step": 4
+			},
+			"rarity_name": "レア",
+			"grow_type_name": "早熟",
+			"cost": 11,
+			"exp": 250,
+			"exp_percent": 3,
+			"level": 25,
+			"max_level": 40,
+			"power": 3223,
+			"special_power": 4994,
+			"description": "炎の力が宿った剣",
+			"protected_flg": false
+		}
+	],
+	"compose_more_flg": true,
+	"selected_tab": 1
+}

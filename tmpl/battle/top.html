@@ -1,0 +1,476 @@
+<div class="jsShortTutorial" style="{{if !first_access_flg}}display:none{{/if}}">
+	<div class="battleShort">
+		<h1 class="mainHeader">バトル</h1>
+		<section class="questNvgation">
+			<div class="message arc">
+				<p>
+					<span>ギルドとギルドのガチンコバトル!!</br>60分に全てをたたきこめ!!</span>
+				</p>
+			</div>
+		</section>
+		<h1 class="subHeader">
+			<span class="subHeaderBg_l"></span>
+			<span>毎日定刻開戦!</span>
+			<span class="subHeaderBg_r"></span>
+		</h1>
+		<div class="questshortBn">
+			<img src="{{getImgRoot/}}/parts/shortTutorial_battle_war.png" alt="毎日定刻開戦!" class="title">
+		</div>
+		<h1 class="subHeader">
+			<span class="subHeaderBg_l"></span>
+			<span>相手よりも多くのBPを稼げ!</span>
+			<span class="subHeaderBg_r"></span>
+		</h1>
+		<div class="questshortBn">
+			<img src="{{getImgRoot/}}/parts/shortTutorial_battle_bp.png" alt="相手よりも多くのBPを稼げ!" class="title">
+		</div>
+		<button class="btn large shgoQuest jsButtonCloseShortTutorial">さっそくバトルへ</button>
+	</div>
+</div>
+
+
+
+<div class="jsNormalView" style="{{if first_access_flg}}display:none{{/if}}">
+	<div id="battleTop">
+		<section class="battleStatus">
+			<h1 class="battleName">ブレイブバトル</h1>
+			<!-- // ランキング(常時表示) -->
+			{{if ranking && ranking.order}}
+			<p class="battlePeriod"><span>期間</span>{{>ranking.start_date}}〜{{>ranking.end_date}}</p>
+			<dl class="currentRank{{if ranking.state === 'up'}} rankUp{{else ranking.state === 'stay'}} rankStay{{else ranking.state === 'down'}} rankDown{{/if}} link" data-href="guild/rank/">
+				<dt class="hide">現在のランキング</dt>
+				<dd><span>{{>ranking.order}}</span>位</dd>
+			</dl>
+			{{else ranking && guild.rank == 'F'}}
+			<p class="battlePeriod"><span>期間</span>{{>ranking.start_date}}〜{{>ranking.end_date}}</p>
+			<dl class="currentRank out link" data-href="guild/rank/">
+				<dt>ランキング参加なし</dt>
+				<dd>ギルドランクE以上から</dd>
+			</dl>
+			{{/if}}
+
+			<!-- //平常時・前回履歴あり --> 
+			{{if (state == "close" || state == "matching" || open_not_matched_flg) && before_battle}}
+				<!-- 前回勝利 -->
+				{{if before_battle.judge == 1}}
+				<section class="lastBattleResult win">
+					<h2>前回のバトル結果</h2>
+					<span class="hide">勝利</span>
+				</section>
+
+				<!-- 前回敗北 -->
+				{{else before_battle.judge == 2}}
+				<section class="lastBattleResult lose">
+					<h2>前回のバトル結果</h2>
+					<span class="hide">敗北</span>
+				</section>
+
+				<!-- 前回勝敗なし -->
+				{{else before_battle.judge == 3}}
+				<section class="lastBattleResult draw">
+					<h2>前回のバトル結果</h2>
+					<span class="hide">勝敗なし</span>
+				</section>
+				{{/if}}
+
+				{{if before_battle.judge == 1}}
+				<section class="pointResult win">
+				{{else before_battle.judge == 2}}
+				<section class="pointResult lose">
+				{{else before_battle.judge == 3}}
+				<section class="pointResult draw">
+				{{/if}}
+					<h3>{{>before_battle.date}} 第{{>before_battle.round}}試合<span>vs</span>{{>before_battle.enemy_guild_name}}</h3>
+					<table>
+						<tr>
+							<td class="myGuildPoint">{{>~commaFormat(before_battle.own_gp)}}<span>BP</span></td>
+							<td class="opponentGuildPoint">{{>~commaFormat(before_battle.enemy_gp)}}<span>BP</span></td>
+						</tr>
+					</table>
+
+					{{if before_battle.judge == 3}}
+					<p>戦況履歴はありません</p>
+					{{else}}
+					<button class="history link" data-href="battle/situation/detail/{{:before_battle.date_param}}/{{:before_battle.round}}/">戦況履歴</button>
+					{{/if}}
+
+				</section>
+			<!-- //平常時・前回履歴なし -->
+			{{else (state == "close" || state == "matching" || open_not_matched_flg) && before_battle == null}}
+				<section class="lastBattleResult normal noResult">
+					<span class="hide">仲間と協力バトル！めざせ！最高のギルド！！</span>
+				</section>
+			{{/if}}
+
+			<!-- //バトル前 -->
+			{{if state == "ready"}}
+				<section class="lastBattleResult ready noResult">
+					<span class="hide">対戦相手決定！！</span>
+					<section class="pointResult">
+						<h3>{{>current_battle.date}} 第{{>current_battle.round}}試合<span>vs</span>{{>enemy.name}}</h3>
+						<table>
+							<tr>
+								<td class="myGuildPoint">まもなく開催</td>
+								<td class="opponentGuildPoint">まもなく開催</td>
+							</tr>
+						</table>
+					</section>
+					<div class="metalPanel">
+						<table class="gergeTable middle">
+							<tr>
+								<th>AP</th>
+								<td class="gergeBox">
+									<div class="gergeBgFrame">
+										<div class="gergeBg"><span class="gerge battleP" style="width:{{>tp}}%;"></span></div>
+									</div>
+								</td>
+								<td>{{>tp}}/100</td>
+							</tr>
+						</table>
+					</div>
+				</section>
+			{{/if}}
+
+			<!-- //バトル中 -->
+			{{if state == "open" && !open_not_matched_flg}}
+				<section class="lastBattleResult onBattle noResult">
+					<span class="hide">バトル開催中</span>
+					{{if current_battle.own_gp > current_battle.enemy_gp}}
+					<section class="pointResult win">
+					{{else current_battle.own_gp < current_battle.enemy_gp}}
+					<section class="pointResult lose">
+					{{else}}
+					<section class="pointResult draw">
+					{{/if}}
+						<h3>{{>current_battle.date}} 第{{>current_battle.round}}試合<span>vs</span>{{>enemy.name}}</h3>
+						<table>
+							<tr>
+								<!-- // リアルタイムのBPを反映させる -->
+								<td class="myGuildPoint">{{>~commaFormat(current_battle.own_gp)}}<span>BP</span></td>
+								<td class="opponentGuildPoint">{{>~commaFormat(current_battle.enemy_gp)}}<span>BP</span></td>
+							</tr>
+						</table>
+					</section>
+					<div class="metalPanel">
+						<table class="gergeTable middle">
+							<tr>
+								<th>AP</th>
+								<td class="gergeBox">
+									<div class="gergeBgFrame">
+										<div class="gergeBg"><span class="gerge battleP" style="width:{{>tp}}%;"></span></div>
+									</div>
+								</td>
+								<td>{{>tp}}/100</td>
+							</tr>
+						</table>
+					</div>
+				</section>
+			{{/if}}
+		</section>
+
+		<!-- //平常時背景下 -->
+		{{if state == "close" || state == "matching" || open_not_matched_flg}}
+			<section class="battleControl normal">
+				<div class="nextBattleTime">
+					<p>
+						次のバトルは
+						<span class="numBox">
+						{{for ~split(next_battle.start_time,'')}}
+							{{if #data == ':'}}
+								<span class="numRedColon"><span class="hide">{{>#data}}</span></span>
+							{{else}}
+								<span class="numRed num_{{>#data}}"><span class="hide">{{>#data}}</span></span>
+							{{/if}}
+						{{/for}}
+						<span class="numRedTilde"><span class="hide">〜</span></span>
+						{{for ~split(next_battle.end_time,'')}}
+							{{if #data == ':'}}
+								<span class="numRedColon"><span class="hide">{{>#data}}</span></span>
+								{{else}}
+								<span class="numRed num_{{>#data}}"><span class="hide">{{>#data}}</span></span>
+								{{/if}}
+						{{/for}}
+						</span>
+					</p>
+				</div>
+				<div class="message taicho_arc">
+					<p>
+						{{if open_not_matched_flg}}
+						<span>マッチングできなかったようだ<br>次回ブレイブバトルから参加できるぞ</span>
+						{{else}}
+						<span>{{:npc_comment}}</span>
+						{{/if}}
+					</p>
+				</div>
+			</section>
+		{{/if}}
+
+		<!-- //バトル前背景下 -->
+		{{if state == "ready"}}
+			<section class="battleControl ready">
+				<button class="btn large ready" data-href="guild/">ギルドでバトル準備！</button>
+				<!-- TODO マッチングがまだ終了していない場合はどうする -->
+				<div class="message taicho_arc">
+					<p>
+						<span>{{:npc_comment}}</span>
+					</p>
+				</div>
+				<section class="contents contentsShadow statusData_icon link" data-href="guild/other/{{>enemy.guild_id}}/">
+					<h1><span class="hide">対戦相手</span>{{>enemy.name}}</h1>
+					<div class="columnBox">
+						<div class="iconBgRect_s gold"><img src="{{getImgRoot/}}/avatar/{{>enemy.master_avatar_id}}_140.png"></div>
+						<div class="contentsInner">
+							<dl>
+								<dt>ギルドLv.</dt><dd>{{>enemy.level}}</dd>
+								<dt>所属</dt><dd>{{>enemy.member_num}}/{{>enemy.max_member_num}}</dd>
+								<dt>総合BP</dt><dd>{{>~commaFormat(enemy.gp)}}</dd>
+								<dt>戦績</dt><dd>{{>enemy.total_win_num}}勝</dd>
+								<!--　リリース後 
+								<dt>最高コンボ数</dt><dd>攻撃999　応援999</dd>
+								-->
+							</dl>
+						</div>
+					</div>
+				</section>
+			</section>
+		{{/if}}
+
+		<!-- //バトル中 -->
+		{{if state == "open" && !open_not_matched_flg}}
+			<section class="battleControl onBattle">
+				<button class="btn_l battle onBattle" data-href="battle/"><span class="hide">戦場へ</span></button>
+				<div class="message taicho_arc">
+					<p>
+						<span>{{:npc_comment}}</span>
+					</p>
+				</div>
+			</section>
+		{{/if}}
+
+
+		<!-- //共通 -->
+		<div class="outerBtnBox">
+			<button class="btn" data-href="battle/schedule/">対戦スケジュール</button>
+			<button class="btn" data-href="battle/situation/list/">過去の戦績一覧</button>
+		</div>
+
+		<section class="itemDetail reward">
+			<h1 class="subHeader">
+				<span class="subHeaderBg_l"></span>
+				<span>報酬内容</span>
+				<span class="subHeaderBg_r"></span>
+			</h1>
+			<section class="contents contentsShadow statusData">
+				<h1>勝利報酬</h1>
+				<ul class="findingItem">
+					{{for rewards.win}}
+						{{if type===4}}
+						<li><img src="{{getImgRoot/}}/gacha/point.png"></li>
+						{{else type===5}}
+						<li><img src="{{getImgRoot/}}/item/gil.png"></li>
+						{{else type===8}}
+						<li><img src="{{getImgRoot/}}/item/medal.png"></li>
+						{{else type===11}}
+						<li><img src="{{getImgRoot/}}/item/materia.png"></li>
+						{{/if}}
+					{{/for}}
+				</ul>
+				<p class="rewardDescription">
+					{{for rewards.win}}
+						{{if #index!==0}}／{{/if}}
+						{{if type===4}}ガチャP{{>quantity}}P
+						{{else type===5}}{{>quantity}}ギル
+						{{else type===8}}レアメダル{{>quantity}}枚
+						{{else type===11}}マテリア{{>quantity}}個
+						{{/if}}
+					{{/for}}
+				</p>
+			</section>
+
+			<section class="contents contentsShadow statusData">
+				<h1>敗北報酬</h1>
+				<ul class="findingItem">
+					{{for rewards.lose}}
+						{{if type===4}}
+						<li><img src="{{getImgRoot/}}/gacha/point.png"></li>
+						{{else type===5}}
+						<li><img src="{{getImgRoot/}}/item/gil.png"></li>
+						{{else type===8}}
+						<li><img src="{{getImgRoot/}}/item/medal.png"></li>
+						{{else type===11}}
+						<li><img src="{{getImgRoot/}}/item/materia.png"></li>
+						{{/if}}
+					{{/for}}
+				</ul>
+				<p class="rewardDescription">
+					{{for rewards.lose}}
+						{{if #index!==0}}／{{/if}}
+						{{if type===4}}ガチャP{{>quantity}}P
+						{{else type===5}}{{>quantity}}ギル
+						{{else type===8}}レアメダル{{>quantity}}枚
+						{{else type===11}}マテリア{{>quantity}}個
+						{{/if}}
+					{{/for}}
+				</p>
+			</section>
+
+		</section>
+
+		<section class="battleCaption">
+			<h1 class="subHeader3">バトルの時間を待つ間に・・・</h1>
+			<div class="listMenu">
+				<ul>
+					<li><div class="link" data-href="gacha/"><span>ガチャで強力武器をゲット！</span></div></li>
+					<li><div class="link" data-href="compose/"><span>合成で強くなれ！</span></div></li>
+					<li><div class="link" data-href="mission/stage/"><span>クエストでAP回復！</span></div></li>
+				</ul>
+			</div>
+
+
+			<div class="banner">
+				{{for #data tmpl="#jsTemplateBanners" /}}
+				<p>
+					<button class="link" data-href="startdash/"><img src="{{getImgRoot/}}/ad/banner_startdash2.png"><br>└バトルに参加してガチャチケットGET！┘</button>
+				</p>
+			</div>
+
+			<div class="braveShort">
+				<h1 class="subHeader">
+					<span class="subHeaderBg_l"></span>
+					<span>ブレイブバトルとは?</span>
+					<span class="subHeaderBg_r"></span>
+				</h1>
+				<div class="questNvgation">
+					<span class="hide">ギルド同士のガチンコバトル！時間内に多くのBPを稼いだギルドが勝利！</span>
+				</div>
+				<h1 class="subHeader3">
+					<span>仲間とのコンボで効果アップ!</span>
+				</h1>
+				<div class="questshortBn">
+					<img src="{{getImgRoot/}}/parts/shortTutorial_brave_combo.png" alt="仲間と交互に攻撃でコンボ発生！コンボをつなぐと攻撃・エールの効果UP！" class="title">
+				</div>
+				<h1 class="subHeader3">
+					<span>バトルに参加してJExを獲得!</span>
+				</h1>
+				<div class="questshortBn"> 
+					<img src="{{getImgRoot/}}/parts/shortTutorial_brave_jexget.png" alt="攻撃・エール・アビリティなどでJExを獲得！さらなるジョブ・アビリティを会得しよう！" class="title">
+				</div>
+				<h1 class="subHeader3">
+					<span>ヤツらの襲来に備えろ!</span>
+				</h1>
+				<div class="questshortBn">
+					<img src="{{getImgRoot/}}/parts/shortTutorial_brave_guildRnk.png" alt="ランキングを勝ち抜きギルドランクアップ！ギルドランクが高いほど…？" class="title">
+				</div>
+			</div>
+		</section>
+
+		{{if 0}}
+		<!-- // old
+		{{if ranking}}
+		<section id="ranking">
+			<h1 class="subHeader">
+				<span class="subHeaderBg_l"></span><span>ランキング</span><span class="subHeaderBg_r"></span>
+			</h1>
+			{{if ranking.order}}
+				<dl class="rankStatus_l">
+
+					{{if ranking.state == "up"}}
+						<dt class="label48">ランクアップ圏内</dt>	
+					{{else ranking.state == "stay"}}
+						<dt class="label48">ランクステイ圏内</dt>
+					{{else ranking.state == "down"}}
+						<dt class="label48">ランクダウン圏内</dt>
+					{{/if}}
+
+					<dd>ランキング終了まであと<span>{{>ranking.rest_day}}日</span>！</dd>
+				</dl>
+
+				<article class="contents contentsShadow statusData_icon myGuild link" data-href="guild/">
+				<h1><span class="rankLabel rangeStay rankUp"><span class="rankNum">{{>ranking.order}}</span>位</span>{{>guild.name}}</h1>
+					<div class="columnBox">
+						<div class="iconBgRect_l gold"><img src="{{getImgRoot/}}/avatar/{{>guild.master_avatar_id}}_140.png"></div>
+						<div class="contentsInner">
+							<dl>
+								<dt>獲得BP</dt><dd>{{>guild.gp}}</dd>
+								<dt>ギルドマスター</dt><dd>{{>guild.master_name}}</dd>
+								<dt>ギルドLv.</dt><dd>{{>guild.level}}</dd>
+								<dt>所属人数</dt><dd>{{>guild.member_num}}/{{>guild.member_num_max}}</dd>
+							</dl>
+						</div>
+					</div>
+				</article>
+				<div class="arrowLink">
+					<button class="link next" data-href="guild/rank/">ぜんぶ見る</button>
+				</div>
+			{{else}}
+			<div class="exceptRank">
+				<section class="complateMessage">
+					<article>
+						{{if guild.rank == "F" || guild.rank == "G"}}
+						<h1>ランキングへの参加は<br>ギルドランクE以上からです</h1>
+						{{else}}
+						<h1>ランキングに参加していません。</h1>
+						{{/if}}
+					</article>
+				</section>
+				<p class="paramStatus">
+					<span class="headline">現在の獲得BP</span>{{>~commaFormat(guild.gp)}} BP
+				</p>
+
+				{{if guild.rank == "F" || guild.rank == "G"}}
+				<p class="lackPoint">
+				ランクアップまで残り<span>{{>~commaFormat(ranking.rankup_rest_gp)}}</span>BP
+				</p>
+				{{/if}}
+			</div>
+			<dl class="rankStatus_l">
+				{{if ranking.state == "up"}}
+				<dt class="label48 decision">ランクアップ確定</dt>
+				{{/if}}
+				<dd>ランキング終了まであと<span>{{>ranking.rest_day}}日</span>！</dd>
+			</dl>
+			{{/if}}
+		</section>
+		{{/if}}
+
+		<section id="guildBbs" class="jsGuildBbs">
+			<h1 class="subHeader">
+				<span class="subHeaderBg_l"></span><span>ギルド掲示板</span><span class="subHeaderBg_r"></span>
+			</h1>
+
+			<div class="postForm_icon">
+				<div class="formInner">
+					<div class="iconBgArc_s gold"><img src="{{getImgRoot/}}/avatar/{{>user.avatar_id}}_140.png"></div>
+					<div class="inputBox">
+						<textarea class="jsGuildBbsTopicTextarea" placeholder="つぶやく…"></textarea>
+						<button class="btn post jsGuildBbsTopicSubmit">投稿する</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="jsGuildBbsTopics">
+				<div class="jsListAll">
+					{{for #data tmpl="#jsTemplateGuildBbsTopics" /}}
+				</div>
+				{{if bbs_more_flg}}
+				<div class="arrowLink">
+					<span class="link next" data-href="bbs/">もっと見る</span>
+				</div>
+				{{/if}}
+			</div>
+		</section>
+		// ここまで非表示 -->
+		{{/if}}
+	</div>
+
+	<hr>
+
+	<div class="helpList">
+		<ul>
+			<li><button class="link" data-href="help/detail/201/">バトルってなに？</button></li>
+			<li><button class="link" data-href="help/detail/202/">バトルってどうやって遊ぶの？</button></li>
+			<li><button class="link" data-href="help/detail/206/">どうしたらバトルに勝てるの？</button></li>
+		</ul>
+	</div>
+
+</div>

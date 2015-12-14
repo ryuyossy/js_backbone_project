@@ -1,0 +1,74 @@
+{
+	"version":3,
+	"status": 200,
+	"date": "2013/01/07",
+	"date_param": "20130110",
+	"round": 2,
+	"enemy_guild_name": "平成維震軍",
+	"now_battle_flg": false,
+	"own_gp": 123456789,
+	"enemy_gp": 987654321,
+	"battle_situations": [
+		{
+			"situation_id": 30,
+			"happen_datetime": "2013-01-07T11:22:37",
+			"happen_datetime_str": "01/07 11:37",
+			"user_name": "はやかわ2",
+			"avatar_id": "10001",
+			"job_name": "みならい剣士",
+			"enemy_flg": false,
+			"sentence": "<dt><span>はやかわ</span>の攻撃!!</dt><dd><span>越中詩郎</span>に<span>96</span>のダメージ!!!</dd>"
+		},
+		{
+			"situation_id": 29,
+			"happen_datetime": "2013-01-07T11:22:26",
+			"happen_datetime_str": "01/07 11:26",
+			"user_name": "はやかわ",
+			"avatar_id": "10001",
+			"job_name": "みならい剣士",
+			"enemy_flg": false,
+			"sentence": "<dt><span>はやかわ</span>の攻撃!!</dt><dd><span>越中詩郎</span>に<span>106</span>のダメージ!!!</dd>"
+		},
+		{
+			"situation_id": 28,
+			"happen_datetime": "2013-01-07T11:22:37",
+			"happen_datetime_str": "01/07 11:37",
+			"user_name": "はやかわ",
+			"avatar_id": "10001",
+			"job_name": "みならい剣士",
+			"enemy_flg": true,
+			"sentence": "<dt><span>はやかわ</span>の攻撃!!</dt><dd><span>越中詩郎</span>に<span>96</span>のダメージ!!!</dd>"
+		},
+		{
+			"situation_id": 27,
+			"happen_datetime": "2013-01-07T11:22:26",
+			"happen_datetime_str": "01/07 11:26",
+			"user_name": "はやかわ",
+			"avatar_id": "10001",
+			"job_name": "みならい剣士",
+			"enemy_flg": true,
+			"sentence": "<dt><span>はやかわ</span>の攻撃!!</dt><dd><span>越中詩郎</span>に<span>106</span>のダメージ!!!</dd>"
+		},
+		{
+			"situation_id": 26,
+			"happen_datetime": "2013-01-07T11:22:37",
+			"happen_datetime_str": "01/07 11:37",
+			"user_name": "はやかわ",
+			"avatar_id": "10001",
+			"job_name": "みならい剣士",
+			"enemy_flg": true,
+			"sentence": "<dt><span>はやかわ</span>の攻撃!!</dt><dd><span>越中詩郎</span>に<span>96</span>のダメージ!!!</dd>"
+		},
+		{
+			"situation_id": 25,
+			"happen_datetime": "2013-01-07T11:22:26",
+			"happen_datetime_str": "01/07 11:26",
+			"user_name": "はやかわ",
+			"avatar_id": "10001",
+			"job_name": "みならい剣士",
+			"enemy_flg": false,
+			"sentence": "<dt><span>はやかわ</span>の攻撃!!</dt><dd><span>越中詩郎</span>に<span>106</span>のダメージ!!!</dd>"
+		}
+	],
+	"more_flg": true
+}

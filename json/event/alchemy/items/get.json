@@ -1,0 +1,61 @@
+{
+	"status": 200,
+	"normal_items": [
+		{
+			"type": 1,
+			"id": 101,
+			"name": "素敵なアイテム",
+			"description": "素敵なアイテムです",
+			"quantity": 1,
+			"great_success": false
+		},{
+			"type": 2,
+			"id": 101,
+			"name": "最高級の素材",
+			"description": "最高級の素材です",
+			"quantity": 1,
+			"great_success": false
+		},{
+			"type": 3,
+			"id": null,
+			"name": "武具（N〜R）",
+			"description": "とても強い武具です",
+			"quantity": 1,
+			"great_success": false
+		}
+	],
+	"silver_items": [
+		{
+			"type": 4,
+			"id": null,
+			"name": "ガチャポイント",
+			"description": "素敵なアイテムです",
+			"quantity": null,
+			"great_success": false
+		},{
+			"type": 5,
+			"id": null,
+			"name": "ギル",
+			"description": "素敵なアイテムです",
+			"quantity": null,
+			"great_success": false
+		}
+	],
+	"gold_items": [
+		{
+			"type": 6,
+			"id": null,
+			"name": "ガチャチケット",
+			"description": "素敵なアイテムです",
+			"quantity": null,
+			"great_success": false
+		},{
+			"type": 8,
+			"id": null,
+			"name": "レアメダル",
+			"description": "素敵なアイテムです",
+			"quantity": null,
+			"great_success": false
+		}
+	]
+}

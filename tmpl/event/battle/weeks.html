@@ -1,0 +1,128 @@
+<div id="container">
+	<div class="battleWeeks">
+		<div class="battleWeekBn">
+			<img src="{{>img_url_root}}/parts/battle_weeks_top.png" alt="バトルで勝利して、報酬を勝ち取れ!" class="title">
+			<section class="battleSummary">
+				<dl class="period">
+					<dt>開催期間</dt>
+					<dd>{{>~datetimeToJpSignage(start_datetime)}} 〜 {{>~datetimeToJpSignage(end_datetime)}}</dd>
+				</dl>
+			</section>
+		</div>
+		<p class="paramStatus">
+			<span class="headline">現在のポイント</span>{{>current_point}}pt
+		</p>
+		<h1 class="subHeader3">
+			<span>あと{{>next_rest_point}}ポイントで獲得!</span>
+		</h1>
+		<div class="pointGetList">
+			<section class="contents contentsShadow statusData_icon">
+				<div class="columnBox innerHeader">
+					{{giftThumb type=next_reward.type id=next_reward.id /}}
+					<div class="contentsInner">
+						<h1>{{>next_reward.point}}ポイントで獲得</h1>
+						{{if next_reward.type == 4 || next_reward.type == 5}}
+						<p>{{>next_reward.quantity}}{{>next_reward.name}}</p>
+						{{else next_reward.type == 6}}
+						<p>{{>next_reward.name}} × {{>next_reward.quantity}}枚</p>
+						{{else}}
+						<p>{{>next_reward.name}} × {{>next_reward.quantity}}個</p>
+						{{/if}}
+					</div>
+				</div>
+			</section>
+		</div>
+		<button class="btn large otherConfirm jsOtherRewardBtn">他の報酬を確認する</button>
+		<h1 class="subHeader">
+			<span class="subHeaderBg_l"></span>
+			<span>遊び方</span>
+			<span class="subHeaderBg_r"></span>
+		</h1>
+		<h1 class="subHeader3 headMarg">
+			<span>バトルに参加でポイントを獲得!!</span>
+		</h1>
+		<div class="outcomeTable">
+			<table>
+				<tr class="gameListBox">
+					<th class="gameBox borderNone"></th>
+					<th class="gameBox">第{{>point_table[0].round}}試合</th>
+					<th class="gameBox">第{{>point_table[1].round}}試合</th>
+					<th class="gameBox">第{{>point_table[2].round}}試合</th>
+					<th class="gameBox">第{{>point_table[3].round}}試合</th>
+				</tr>
+				<tr class="defeat">
+					<td class="winBox">勝利</td>
+					<td><span class="label48">{{>point_table[0].win_point}}pt</span></td>
+					<td><span class="label48">{{>point_table[1].win_point}}pt</span></td>
+					<td><span class="label48">{{>point_table[2].win_point}}pt</span></td>
+					<td><span class="label48">{{>point_table[3].win_point}}pt</span></td>
+				</tr>
+				<tr class="loose">
+					<td class="looseBox">敗北</td>
+					<td><span class="label48">{{>point_table[0].lose_point}}pt</span></td>
+					<td><span class="label48">{{>point_table[1].lose_point}}pt</span></td>
+					<td><span class="label48">{{>point_table[2].lose_point}}pt</span></td>
+					<td><span class="label48">{{>point_table[3].lose_point}}pt</span></td>
+				</tr>
+			</table>
+		</div>
+		<div class="message navico_arc">
+			<p>
+				<span>時間帯でもらえるポイントが違うから注意が必要よ!</span>
+			</p>
+		</div>
+		<button class="btn battle large jsCautionBtn">その他の注意事項を確認</button>
+		<h1 class="subHeader jsRewardList">
+			<span class="subHeaderBg_l"></span>
+			<span>報酬一覧</span>
+			<span class="subHeaderBg_r"></span>
+		</h1>
+		<div class="remunerationList">
+			{{for rewards }}
+			<section class="contents contentsShadow statusData_icon rmrCnt">
+				<div class="columnBox innerHeader">
+					{{giftThumb type id /}}
+					<div class="contentsInner">
+						<h1 class="qbn">{{>point}}ポイントで獲得</h1>
+						{{if type == 4 || type == 5}}
+						<p>{{>quantity}}{{>name}}</p>
+						{{else type == 6}}
+						<p>{{>name}} × {{>quantity}}枚</p>
+						{{else}}
+						<p>{{>name}} × {{>quantity}}個</p>
+						{{/if}}
+					</div>
+				</div>
+				{{if cleared_flg }}
+				<span class="cleared"><span class="hide">Cleared</span></span>
+				{{/if}}
+			</section>
+			{{/for}}
+		</div>
+
+		<hr>
+
+		<div class="arrowLink arrowGiftLink">
+			<button class="link next" data-href="gift/list/">ギフトを確認</button>
+		</div>
+		<div class="arrowLink">
+			<button class="link next" data-href="battle/top/">バトルへ</button>
+		</div>
+		<section class="caution jsCautionSection">
+			<article>
+				<h1>ご注意</h1>
+				<ul>
+					<li>各報酬は、期間中に1度しか獲得する事ができません。</li>
+					<li>
+						報酬の配布は、バトル終了後から少し時間が必要となります。
+						その間にギルドを移籍した場合、報酬を受け取る事が出来なくなるため、ご注意ください。
+					</li>
+					<li>
+						期間中、他のギルドに移籍した場合、そのギルドが既に獲得した場合、
+						そのギルドが既に獲得していた報酬は獲得する事が出来ません。
+					</li>
+				</ul>
+			</article>
+		</section>
+	</div>
+</div>

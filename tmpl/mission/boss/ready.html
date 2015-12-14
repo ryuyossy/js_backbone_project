@@ -1,0 +1,118 @@
+	<section id="bossBattle" class='stage{{>("00" + stage_id).slice(-3)}} bossEncount'>
+		<div class="contentsInner">
+			<img src="{{getImgRoot/}}/boss/ready/{{>stage_id}}_normal.png" class="boss_img">
+			<h2 class="bossName">{{>boss.name}}</h2>
+			<p>{{>boss.before_comment}}</p>
+		</div>
+	</section>
+
+	<section id="bossBattleStart" class="currentMember">
+		<div class="contents contentsShadow statusData">
+			<button class="btn_l battle" data-href="mission/boss/result/{{>stage_id}}/{{>field_id}}/"><span class="hide">戦う</span></button>
+			<h1>クエスト同行メンバー</h1>
+			<ul>
+				<li>
+					<div class="iconBgRect_l gold"><img src="{{getImgRoot/}}/avatar/{{>user.avatar_id}}_140.png"></div>
+					<h2>{{>user.name}}</h2>
+				</li>
+				{{if partners}}
+				{{for partners}}
+				<li>
+					<div class="iconBgRect_l gold"><img src="{{getImgRoot/}}/avatar/{{>avatar_id}}_140.png"></div>
+					<h2>{{>name}}</h2>
+				</li>
+				{{/for}}
+				{{/if}}
+				<!-- // メンバーが設定されていない場合は以下をループ -->
+				{{for ~unknownParterNum(partners.length)}}
+				<li>
+					<img src="{{getImgRoot/}}/parts/unknown_item.png">
+					<h2>???</h2>
+				</li>
+				{{/for}}
+			</ul>
+		</div>
+	</section>
+
+	<div class="message taicho_arc">
+		<p>
+			<span>一人で挑むのも良いが、仲間の力を借りることも出来るぞ！</span>
+		</p>
+	</div>
+
+	<h1 class="subHeader">
+		<span class="subHeader_l"></span>
+		<span>メンバーの追加・変更</span>
+		<span class="subHeader_r"></span>
+	</h1>
+
+	<section id="helpMember">
+		{{if partners}}
+		{{for partners}}
+		<section class="missionUserSelect jsUser" data-user-id="{{>user_id}}" data-user-name="{{>name}}">
+			<div class="contents contentsShadow">
+				<div class="statusData_icon">
+					<h1>{{>name}}<!-- //全角18文字まで --></h1>
+					<div class="columnBox">
+						<div class="iconBgRect_l gold"><img src="{{getImgRoot/}}/avatar/{{>avatar_id}}_140.png"></div>
+						<div class="contentsInner">
+							<dl>
+								<dt>Lv.</dt><dd>{{>level}}</dd><dt>ジョブ</dt><dd>{{>job_name}}<!-- //最大全角8文字 --></dd>
+								<dt>戦闘力</dt><dd>{{>power}}</dd>
+							</dl>
+							<div class="columnBox">
+								<dl>
+									<dt>攻撃</dt><dd>{{>attack_power}}</dd><dt>防御</dt><dd>{{>defence_power}}</dd>
+								</dl>
+								<dl>
+									<dt>特攻</dt><dd>{{>sp_attack_power}}</dd><dt>特防</dt><dd>{{>sp_defence_power}}</dd>
+								</dl>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="innerBtnBox">
+					<button class="btn cancel jsButtonMissionPartnerRemoveConfirm">外す</button><button class="btn" data-href="mission/partner/change/boss/{{>user_id}}/">変更する</button>
+				</div>
+			</div>
+		</section>
+		{{/for}}
+		{{/if}}
+		
+		<!-- // メンバーが一人も設定されていない場合に表示 -->
+		{{if partners.length == 0}}
+		<section class="dimmed">
+			<p>
+				追加されたメンバーはいません
+			</p>
+		</section>
+		{{/if}}
+	</section>
+
+	{{if partners.length < 2}}
+	<div class="callMember">
+		<p>あと{{:(2 - partners.length)}}人追加できます</p>
+		<button class="btn large" data-href="mission/partner/add/boss/">メンバーを呼ぶ</button>
+	</div>
+	{{/if}}
+
+	<hr>
+
+	<div class="linkGroup">
+		<div class="arrowLink">
+			<button class="link prev" data-href="mission/top/{{>stage_id}}/">フィールド選択へ戻る</button>
+		</div>
+
+		<div class="arrowLink">
+			<button class="link prev" data-href="mission/stage/">ステージ選択へ戻る</button>
+		</div>
+	</div>
+
+	<div class="helpList">
+		<ul>
+			<li><button class="link" data-href="help/detail/802/">ヤツらってなに？</button></li>
+			<li><button class="link" data-href="help/detail/312/">クエスト同行ってなに？</button></li>
+			<li><button class="link" data-href="help/detail/801/">クエストってなに？</button></li>
+		</ul>
+	</div>
+

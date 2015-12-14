@@ -1,0 +1,153 @@
+	<section id="missionTop" class="stage{{>("00" + stage.stage_id).slice(-3)}}{{for fields}}{{if (#index == 0 && progress_state == 2)}} bossEncount{{/if}}{{/for}}">
+		<div class="metalPanel">
+			<table class="gergeTable middle">
+				<tr>
+					<th>行動P</th>
+					<td class="gergeBox">
+						<div class="gergeBgFrame">
+							<div class="gergeBg">
+								<span class="gerge missionP" style="width:{{>user.mp_percent}}%;"></span>
+							</div>
+						</div>
+					</td>
+					<td>{{>user.mp}}/{{>user.max_mp}}</td>
+				</tr>
+				<tr>
+					<th>Ex.</th>
+					<td class="gergeBox">
+						<div class="gergeBgFrame">
+							<div class="gergeBg">
+								<span class="gerge missionExp" style="width:{{>user.exp_percent}}%;"></span>
+							</div>
+						</div>
+					</td>
+					<td>あと{{:user.exp_levelup - user.exp_current}}<!-- {{>user.exp_current}}/{{>user.exp_levelup}} --></td>
+				</tr>
+			</table>
+		</div>
+		<h2 class="stageName">{{>stage.name}}<!-- //全角14文字 --></h2>
+	</section>
+
+	<!-- //最新ステージ(フィールド名は全角16文字まで) -->
+	<section id="fieldSelect">
+	{{for fields}}
+		{{if #index == 0}}
+			{{if progress_state == 2}}
+			<section class="bossEncounter">
+				<img src="{{getImgRoot/}}/boss/silhouette/{{>#parent.parent.parent.parent.data.stage.stage_id}}.png" class="boss_img">
+				<p>
+					<span class="hide">なんか出た</span>
+				</p>
+				<button class="btn_l battle jsButtonJumpToBossReady" data-field-id="{{>field_id}}"><span class="hide">戦闘準備</span></button>
+			</section>
+			{{else}}
+			<section class="contents contentsShadow statusData newest">
+				<button class="btn_l{{if progress_state == 3}} cleared{{/if}}" data-href="mission/proceed/{{>#parent.parent.parent.parent.data.stage.stage_id}}/{{>field_id}}/"><span class="hide">{{if progress_state == 3}}Cleared{{else}}冒険する{{/if}}</span></button>
+				<div class="columnBox">
+					<h1><span>{{>field_name}}</h1>
+					<table class="gergeTable middle">
+						<tr>
+							<th>達成度</th>
+							<td class="gergeBox">
+								<div class="gergeBgFrame"><div class="gergeBg"><span class="gerge missionProgress" style="width:{{>progress_percent}}%;"></span></div></div>
+							</td>
+							<td>{{>progress_percent}}%</td>
+						</tr>
+					</table>
+					<dl>
+						<dt>行動P</dt><dd>-{{>use_mp}}</dd>
+						<dt>Ex</dt><dd>+{{>win_exp}}</dd>
+						<dt>ギル</dt><dd>+{{>win_gil_min}}～{{>win_gil_max}}</dd>
+					</dl>
+				</div>
+				<ul class="findingItem">
+					{{for equip_treasures}}
+						<li>
+						{{if get_flg}}
+							{{if type == "equipment"}}
+							{{equipThumb equip_id=id size="medium" /}}
+							{{else}}
+							<img src="{{getImgRoot/}}/treasure/{{>id}}_128.png">
+							{{/if}}
+						{{/if}}
+						</li>
+					{{/for}}
+				</ul>
+			</section>
+			{{/if}}
+		{{/if}}
+	{{/for}}
+	</section>
+
+	{{if 0}}
+	<!--
+	<div class="banner">
+		<p>
+			<button class="link" data-href="#"><img src="{{getImgRoot/}}/ad/banner.png"><br>└イベントバナースペース┘</button>
+		</p>
+	</div>
+	-->
+	{{/if}}
+	
+	{{if fields[0].progress_state !== 3 && fields.length > 1}}
+	<h1 class="subHeader">
+		<span class="subHeaderBg_l"></span>
+		<span>クリア済みフィールド</span>
+		<span class="subHeaderBg_r"></span>
+	</h1>
+	{{/if}}
+	
+	{{if fields.length !== 1}}
+	<section id="fieldList"{{if fields[0].progress_state == 2}} class="bossBattle"{{/if}}>
+	{{for fields}}
+		{{if (#index == 0 && progress_state == 2) || #index > 0}}
+		<section class="contents contentsShadow statusData">
+			<button class="btn_l" data-href="mission/proceed/{{>#parent.parent.parent.data.stage.stage_id}}/{{>field_id}}/"><span class="hide">Cleared</span></button>
+			<div class="columnBox">
+				<h1><span>{{>field_name}}</h1>
+				<table class="gergeTable middle">
+					<tr>
+						<th>達成度</th>
+						<td class="gergeBox"><div class="gergeBgFrame"><div class="gergeBg"><span class="gerge missionProgress" style="width:{{>progress_percent}}%;"></span></div></div></td>
+						<td>{{>progress_percent}}%</td>
+					</tr>
+				</table>
+				<dl>
+					<dt>行動P</dt><dd>-{{>use_mp}}</dd>
+					<dt>Ex</dt><dd>+{{>win_exp}}</dd>
+					<dt>ギル</dt><dd>+{{>win_gil_min}}～{{>win_gil_max}}</dd>
+				</dl>
+			</div>
+			<ul class="findingItem">
+				{{for equip_treasures}}
+				<li>
+					{{if get_flg}}
+					{{if type == "equipment"}}
+					{{equipThumb equip_id=id size="medium" /}}
+					{{else}}
+					<img src="{{getImgRoot/}}/treasure/{{>id}}_128.png">
+					{{/if}}
+					{{/if}}
+				</li>
+				{{/for}}
+			</ul>
+		</section>
+		{{/if}}
+	{{/for}}
+	</section>
+	{{/if}}
+	
+	<hr>
+
+	<div class="arrowLink">
+		<button class="link prev" data-href="mission/stage/">ステージ選択に戻る</button>
+	</div>
+
+	<div class="helpList">
+		<ul>
+			<li><button class="link" data-href="help/detail/801/">クエストってなに？</button></li>
+			<li><button class="link" data-href="help/detail/804/">お宝ってなに？</button></li>
+			<li><button class="link" data-href="help/detail/503/">APってなに？</button></li>
+		</ul>
+	</div>
+

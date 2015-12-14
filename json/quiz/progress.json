@@ -1,0 +1,10 @@
+{
+    "status": 200,
+    "quiz": {
+        "quiz_id": 1,
+        "chapter_id": 1,
+        "quiz": "ブレイブバトルでは、制限時間内に多くのBPを稼いだ方が勝利する？",
+        "last_quiz_flg": false
+    },
+    "chapter_name": "クエスト編"
+}

@@ -1,0 +1,50 @@
+{
+    "status": 200,
+    "bbs_more_flg": true,
+    "bbs_posts": [
+        {
+            "message_id": "110001",
+            "post_datetime": "8/10 12:12",
+            "user_id": 2233,
+            "user_name": "わかば弓士",
+            "avatar_id": "11001",
+            "body_text": "こんにちは",
+            "like_num": "5",
+            "reply_num": "3",
+            "self_liked_flg": false
+        },
+        {
+            "message_id": "110002",
+            "post_datetime": "8/10 12:12",
+            "user_id": 112,
+            "user_name": "シーフ",
+            "avatar_id": "11002",
+            "body_text": "こんにちは",
+            "like_num": "5",
+            "reply_num": "0",
+            "self_liked_flg": true
+        },
+        {
+            "message_id": "110002",
+            "post_datetime": "8/10 12:12",
+            "user_id": 112,
+            "user_name": "シーフ",
+            "avatar_id": "11002",
+            "body_text": "こんにちは",
+            "like_num": "5",
+            "reply_num": "3",
+            "self_liked_flg": true
+        }
+    ],
+    "user": {
+        "avatar_id": "11001",
+        "job_name": null,
+        "tp": null,
+        "user_id": "2233",
+        "user_name": null
+    },
+    "enemy_exist_flg": false,
+    "battle_start_rest": "03:05:51",
+    "battle_end_rest": null,
+    "img_url_root": "http://img-dev.braveguardian.jp"
+}

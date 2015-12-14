@@ -1,0 +1,491 @@
+@charset "utf-8";
+/*
+@mixin box_shadow_contents_l($offsetSize,$z_index:-1){
+	content:'';
+	position:absolute;
+	left:$offsetSize;
+	top:75%;
+	bottom:17px;
+	width:50%;
+	min-height:5px;
+	max-width:150px;
+	background:#544123;
+	-webkit-box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	-webkit-transform:rotate(-5deg);
+	transform:rotate(-5deg);
+	z-index:$z_index;
+}
+@mixin box_shadow_contents_r($offsetSize,$z-index:-1){
+	content:'';
+	position:absolute;
+	right:$offsetSize;
+	top:75%;
+	bottom:17px;
+	width:50%;
+	min-height:5px;
+	max-width:150px;
+	background:#544123;
+	-webkit-box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	-webkit-transform:rotate(5deg);
+	transform:rotate(5deg);
+	z-index:$z_index;
+}
+*/
+/*
+@mixin backgroundResize($position:0 -60px){
+	@media screen and (min-width:319px){
+		width:320px;
+		@include background-size(320px,auto);
+	}
+	@media screen and (min-width:359px){
+		width:360px;
+		@include background-size(360px,auto);
+	}
+	@media screen and (min-width:361px){
+		width:480px;
+		@include background-size(480px,auto);
+		background-position:$position;
+	}
+}
+*/
+/*
+@mixin display-box{
+	display:flexbox;
+	-webkit-display:flexbox;
+}
+@mixin box-align($position){
+	flex-align:$position;
+	-webkit-flex-align:$position;
+}
+@mixin box-flex($ratio){
+	flex:$ratio;
+	-webkit-flex:$ratio;
+}
+@mixin box-pack($position){
+	flex-pack:$position;
+	-webkitflex-pack:$position;
+}
+*/
+/* line 7, ../scss/others.scss */
+#fullScreen.topLargeHeader {
+  display: inline-block;
+  background: url("/img/background/title_toppage.png") center 0 no-repeat;
+  -webkit-background-size: 320px 340px;
+  height: 340px;
+  display: block;
+  margin: 0 auto 48px auto;
+  position: relative;
+}
+/* line 14, ../scss/others.scss */
+#fullScreen.topLargeHeader > h1 {
+  display: none;
+}
+/* line 17, ../scss/others.scss */
+#fullScreen.topLargeHeader .toMypage {
+  display: block;
+  width: 230px;
+  position: absolute;
+  bottom: -26px;
+  left: 45px;
+}
+/* line 23, ../scss/others.scss */
+#fullScreen.topLargeHeader .toMypage .hide:before {
+  visibility: visible;
+  content: "";
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: 32px;
+  top: -2px;
+  width: 140px;
+  height: 26px;
+  z-index: auto;
+  display: inline-block;
+  background: url("/img/parts/label_to_mypage.png") center 0 no-repeat;
+  -webkit-background-size: 140px 26px;
+}
+
+/* line 34, ../scss/others.scss */
+.mainHeader + #adminNotice {
+  margin-top: 8px;
+}
+
+/* line 38, ../scss/others.scss */
+#adminNotice .jsListAll ~ .arrowLink {
+  margin-bottom: 16px;
+}
+
+/* line 43, ../scss/others.scss */
+#adminNoticeDetail dt h1 {
+  margin-top: 8px;
+  font-size: 110%;
+  font-weight: bold;
+  color: #544123;
+}
+/* line 49, ../scss/others.scss */
+#adminNoticeDetail > .linkGroup {
+  margin-bottom: 16px;
+}
+
+/* line 58, ../scss/others.scss */
+#faqList .accordion {
+  margin-top: 8px;
+}
+/* line 61, ../scss/others.scss */
+#faqList ~ .linkGroup {
+  margin-bottom: 16px;
+}
+
+/* line 70, ../scss/others.scss */
+#help .message {
+  top: 0;
+  margin: 8px auto;
+}
+/* line 74, ../scss/others.scss */
+#help .accordion {
+  margin-bottom: 8px;
+}
+/* line 78, ../scss/others.scss */
+#help ~ .caution a {
+  display: block;
+  width: 95%;
+  margin: 16px auto;
+  padding: 8px 0;
+  border: 1px solid #A79F77;
+  color: #A79F77;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  color: #008C8C;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* line 94, ../scss/others.scss */
+#helpDetail .subHeader {
+  margin-bottom: 16px;
+}
+/* line 97, ../scss/others.scss */
+#helpDetail .contents {
+  width: 95%;
+  margin: 0 auto 8px auto;
+}
+/* line 101, ../scss/others.scss */
+#helpDetail .contents .contentsInner {
+  margin: 0 8px;
+  padding: 8px 0;
+  line-height: 1.7;
+}
+/* line 106, ../scss/others.scss */
+#helpDetail .contents img {
+  display: block;
+  margin: 16px auto;
+}
+/* line 111, ../scss/others.scss */
+#helpDetail .listMenu {
+  margin-top: 8px;
+}
+/* line 114, ../scss/others.scss */
+#helpDetail ~ .arrowLink {
+  margin-bottom: 32px;
+}
+
+/* line 122, ../scss/others.scss */
+.infoInner em.center, .infoInner .right, .infoInner .center, .infoInner .more, .infoInner .relateLink li a, .infoInner .border, .infoInner .notice, .infoInner .imgLeft .txtBox, .infoInner .imgRight .txtBox, .infoInner .imgCenter {
+  display: block;
+}
+
+/* line 126, ../scss/others.scss */
+.infoInner a {
+  color: #008c8c;
+  text-decoration: none;
+}
+/* line 129, ../scss/others.scss */
+.infoInner a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+/* line 133, ../scss/others.scss */
+.infoInner h2 {
+  margin: 8px 0 4px 0;
+  border-bottom: 1px solid #b9a46b;
+  font-weight: bold;
+  color: #544123;
+}
+/* line 139, ../scss/others.scss */
+.infoInner em {
+  font-weight: bold;
+  font-style: normal;
+  color: #8c0000;
+}
+/* line 143, ../scss/others.scss */
+.infoInner em.center {
+  text-align: center;
+}
+/* line 148, ../scss/others.scss */
+.infoInner .large, .infoInner .largeB {
+  font-size: 120%;
+}
+/* line 151, ../scss/others.scss */
+.infoInner .largeB {
+  font-weight: bold;
+}
+/* line 155, ../scss/others.scss */
+.infoInner .right {
+  text-align: right;
+}
+/* line 159, ../scss/others.scss */
+.infoInner .center {
+  text-align: center;
+}
+/* line 163, ../scss/others.scss */
+.infoInner .more {
+  position: relative;
+  margin: 16px 0;
+  text-align: right;
+}
+/* line 168, ../scss/others.scss */
+.infoInner .more a {
+  display: inline-block;
+  margin-right: 16px;
+}
+/* line 171, ../scss/others.scss */
+.infoInner .more a:after {
+  display: inline-block;
+  background: url("/img/parts/sprite_icon_parts_20130415_1.png") -97px -78px no-repeat;
+  -webkit-background-size: 140px 95px;
+  visibility: visible;
+  content: "";
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: auto;
+  top: 3px;
+  width: 9px;
+  height: 13px;
+  z-index: auto;
+  right: 0;
+}
+/* line 178, ../scss/others.scss */
+.infoInner .relateLink {
+  margin: 16px 0;
+}
+/* line 180, ../scss/others.scss */
+.infoInner .relateLink li {
+  position: relative;
+  border-top: 1px solid #b9a46b;
+}
+/* line 183, ../scss/others.scss */
+.infoInner .relateLink li:last-child {
+  border-bottom: 1px solid #b9a46b;
+}
+/* line 186, ../scss/others.scss */
+.infoInner .relateLink li:after {
+  display: inline-block;
+  background: url("/img/parts/sprite_icon_parts_20130415_1.png") -97px -78px no-repeat;
+  -webkit-background-size: 140px 95px;
+  visibility: visible;
+  content: "";
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: auto;
+  top: 50%;
+  width: 9px;
+  height: 13px;
+  z-index: auto;
+  right: 0;
+  margin-top: -6px;
+}
+/* line 192, ../scss/others.scss */
+.infoInner .relateLink li a {
+  padding: 8px 0;
+  color: #544123;
+}
+/* line 199, ../scss/others.scss */
+.infoInner .list, .infoInner .numList {
+  margin: 16px 0 16px 24px;
+}
+/* line 201, ../scss/others.scss */
+.infoInner .list li, .infoInner .numList li {
+  list-style: disc;
+}
+/* line 207, ../scss/others.scss */
+.infoInner .numList li {
+  list-style: decimal;
+}
+/* line 211, ../scss/others.scss */
+.infoInner .border {
+  width: 272px;
+  margin: 16px 0;
+  padding: 8px;
+  border: 1px solid #b9a46b;
+}
+/* line 218, ../scss/others.scss */
+.infoInner .notice {
+  margin: 16px 0;
+  padding: 4px 8px 4px 12px;
+  background-color: red;
+  -webkit-border-radius: 12px;
+  border-radius: 12px;
+  font-size: 85%;
+  color: #fff;
+}
+/* line 227, ../scss/others.scss */
+.infoInner .imgLeft, .infoInner .imgRight {
+  display: -webkit-box;
+  display: box;
+  -webkit-box-align: top;
+  box-align: top;
+  margin: 16px 0;
+}
+/* line 231, ../scss/others.scss */
+.infoInner .imgLeft img, .infoInner .imgRight img {
+  display: inline-block;
+  margin: 0 16px 0 0;
+}
+/* line 235, ../scss/others.scss */
+.infoInner .imgLeft .txtBox, .infoInner .imgRight .txtBox {
+  -webkit-box-flex: 1;
+  box-flex: 1;
+}
+/* line 240, ../scss/others.scss */
+.infoInner .imgRight {
+  -webkit-box-direction: reverse;
+  box-direction: reverse;
+}
+/* line 243, ../scss/others.scss */
+.infoInner .imgRight img {
+  margin: 0 0 0 16px;
+}
+/* line 247, ../scss/others.scss */
+.infoInner .imgCenter {
+  margin: 16px 0;
+  text-align: center;
+}
+/* line 251, ../scss/others.scss */
+.infoInner .imgCenter img {
+  display: block;
+  margin: 0 auto 8px auto;
+}
+
+/* line 271, ../scss/others.scss */
+#startDash .title {
+  display: block;
+  margin: 16px auto;
+}
+/* line 275, ../scss/others.scss */
+#startDash .subHeader3 {
+  margin-bottom: 8px;
+}
+/* line 278, ../scss/others.scss */
+#startDash .contents {
+  width: 95%;
+  margin: 0 auto 8px auto;
+}
+/* line 282, ../scss/others.scss */
+#startDash .contents .cleared {
+  display: inline-block;
+  background: url("/img/parts/cleared_stamp.png") 0 0 no-repeat;
+  -webkit-background-size: 76px 24px;
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  width: 76px;
+  height: 24px;
+}
+/* line 291, ../scss/others.scss */
+#startDash .message {
+  margin: 8px auto 8px auto;
+}
+/* line 294, ../scss/others.scss */
+#startDash .subHeader {
+  margin: 16px 0 8px 0;
+}
+/* line 298, ../scss/others.scss */
+#startDash .listMenu,
+#startDash .caution {
+  margin-bottom: 16px;
+}
+
+/* line 308, ../scss/others.scss */
+#globalHeader .headerTitle {
+  width: 100%;
+  height: 44px;
+  font-size: 110%;
+  font-weight: bold;
+  color: #706A46;
+  text-shadow: 1px 2px 3px black, 1px -1px 4px #a79f77, 0 0 3px black, 0 0 3px black;
+  line-height: 44px;
+  text-align: center;
+}
+
+/* line 320, ../scss/others.scss */
+#maintenance .contents {
+  width: 95%;
+  margin: 16px auto 0 auto;
+}
+/* line 324, ../scss/others.scss */
+#maintenance .contents h1 {
+  width: 95%;
+  margin: 0 auto 8px auto;
+  padding: 8px 0;
+  border-bottom: 1px solid #B9A46B;
+  font-weight: bold;
+  text-align: center;
+}
+/* line 333, ../scss/others.scss */
+#maintenance .contentsInner {
+  margin: 0 8px;
+  padding: 0 0 8px 0;
+}
+/* line 337, ../scss/others.scss */
+#maintenance .contentsInner .maintenancePeriod {
+  margin-bottom: 16px;
+  font-size: 85%;
+  text-align: center;
+}
+/* line 342, ../scss/others.scss */
+#maintenance .contentsInner .maintenancePeriod .label48 {
+  margin-top: 4px;
+  font-size: 110%;
+  font-weight: bold;
+}
+/* line 347, ../scss/others.scss */
+#maintenance .contentsInner .maintenancePeriod .attention {
+  display: block;
+  margin-top: 8px;
+  font-size: 75%;
+  text-align: left;
+}
+/* line 354, ../scss/others.scss */
+#maintenance .contentsInner .noticeBody {
+  margin-bottom: 16px;
+  font-size: 85%;
+}
+/* line 358, ../scss/others.scss */
+#maintenance .contentsInner h2 {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+/* line 362, ../scss/others.scss */
+#maintenance .contentsInner li {
+  font-size: 85%;
+}
+/* line 365, ../scss/others.scss */
+#maintenance .contentsInner li span {
+  display: inline-block;
+  margin-right: 4px;
+  font-size: 70%;
+}
+/* line 372, ../scss/others.scss */
+#maintenance > .btn.large, .infoInner #maintenance > .btn.largeB {
+  width: 90%;
+  margin: 32px auto;
+}
+
+/* line 383, ../scss/others.scss */
+#error .btn.large, #error .infoInner .btn.largeB, .infoInner #error .btn.largeB {
+  width: 90%;
+  margin: 32px auto;
+}

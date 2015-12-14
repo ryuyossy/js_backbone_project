@@ -1,0 +1,230 @@
+<h1 class="mainHeader">合成確認</h1>
+
+<div id="composeConfirm">
+	<h1 class="subHeader">
+		<span class="subHeaderBg_l"></span>
+		<span>{{if material_type===4}}限界突破{{else}}強化{{/if}}する武具</span>
+		<span class="subHeaderBg_r"></span>
+	</h1>
+	
+	{{for base}}
+	<section class="contents contentsShadow statusData_icon selected">
+		<h1>
+			{{>equip_name}} ({{:~getRarityText(rarity)}})
+			{{growTypeTag grow_type=grow_type /}}
+		</h1>
+		<div class="columnBox equipListStatus">
+			{{equipThumb equip_id=equip_id step=step size="medium" /}}
+			{{if protected_flg}}
+			<span class="label36_r4 protect">保護
+			{{else equip_status===1}}
+			<span class="label36_r4 main">メイン
+			{{else equip_status===2}}
+			<span class="label36_r4 sub">サブ
+			{{/if}}</span>
+			<div class="contentsInner">
+				<dl>
+					<dt>Lv.</dt><dd>{{>equip_level}}/{{>max_level}}</dd>
+					<dt>成長</dt><dd><div class="gergeBgFrame"><div class="gergeBg"><span class="gerge equipGrowth{{if equip_exp===100}} max{{/if}}" style="width:{{>equip_exp}}%;"></span></div></div></dd><dd>{{>equip_exp}}%</dd>
+					<dt>必要{{if equip_type === 1}}武器{{else}}防具{{/if}}P</dt><dd>{{>equip_cost}}</dd>
+				</dl>
+				<div class="columnBox">
+					<dl>
+						<dt>{{if equip_type === 1}}攻撃{{else}}防御{{/if}}</dt>
+						<dd>{{>power}}</dd>
+						<dt>属性</dt>
+						<dd>{{if attribute_name}}{{>attribute_name}}{{else}}−{{/if}}</dd>
+					</dl>
+					<dl>
+						<dt>特{{if equip_type === 1}}攻{{else}}防{{/if}}</dt>
+						<dd>{{>special_power}}</dd>
+						<dt>属性Lv</dt>
+						<dd>{{if attribute_level}}{{>attribute_level}}{{else}}−{{/if}}</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+	</section>
+	{{/for}}
+	
+	<h1 class="subHeader">
+		<span class="subHeaderBg_l"></span>
+		<span>合成する素材</span>
+		<span class="subHeaderBg_r"></span>
+	</h1>
+	
+	<div id="composeMaterialConfirm">
+		{{if rarity_up_flg}}
+		<span class="label48 jsNoticeMessageRare">レア以上が選択されています</span>
+		{{/if}}
+		{{if attribute_level_up_flg}}
+		<span class="label48 jsNoticeMessageAttrUp">属性レベルアップの可能性があります</span>
+		{{/if}}
+		{{if !not_enough_gil_flg}}
+		<span class="label48 jsNoticeMessageAttrUp">ギルが足りません</span>
+		{{/if}}
+		
+		{{if material_type === 1 || material_type === 4 || material_type === 5}}
+		<!-- 合成確認（武具）の時 -->
+		{{if equips.length > 0}}
+		<table class="equipConfirmList jsComposeEquip">
+			<tr>
+			{{for equips}}
+			{{if #index % 3 == 0}}
+			</tr>
+			<tr>
+			{{/if}}
+			<td>
+				{{if #parent.parent.data.equips.length===1}}
+				<div class="component" data-user-equip-no="{{>user_equip_no}}">
+				{{else}}
+				<div class="component jsButtonRemove" data-user-equip-no="{{>user_equip_no}}">
+				{{/if}}
+					{{equipThumb equip_id=equip_id step=step size="medium" /}}
+					<p>{{>equip_name}} ({{:~getRarityText(rarity)}})</p>
+				</div>
+			</td>
+			{{/for}}
+			</tr>
+		</table>
+		<section class="contents shadow expendConf">
+			<table>
+				<tr>
+					<th>消費ギル</th><td><span class="jsComposeGilTotal">{{> total_compose_gil}}</span>ギル</td>
+				</tr>
+			</table>
+		</section>
+		{{else}}
+		<section class="dimmed">
+			<p>合成可能な素材はありません。</p>
+		</section>
+		{{/if}}
+		{{/if}}
+		
+		{{if material_type == 2 && upgrade_material.id}}
+		<!-- 合成確認（強化素材）の時 -->
+		<section class="contents contentsShadow statusData_icon material">
+			<h1>
+				{{>upgrade_material.name}}
+			</h1>
+			<div class="columnBox equipListStatus">
+				<img src="{{getImgRoot/}}/material/{{>upgrade_material.id}}.png">
+				<div class="contentsInner">
+					<dl>
+						<dt>所持数</dt><dd>{{>upgrade_material.compose.use_num}}</dd>
+					</dl>
+					<p>
+						{{>upgrade_material.description}}
+					</p>
+				</div>
+			</div>
+		</section>
+		<section class="contents shadow expendConf">
+			<table>
+				<tr>
+					<th>使用数</th><td>{{>total_compose_num}}</td>
+				</tr>
+				<tr>
+					<th>消費ギル</th><td>{{> total_compose_gil}}ギル</td>
+				</tr>
+			</table>
+		</section>
+		{{/if}}
+		
+		{{if material_type == 3 && attribute_material.id}}
+		<!-- 合成確認（属性素材）の時 -->
+		<section class="contents contentsShadow statusData_icon material">
+			<h1>
+				{{>attribute_material.name}}
+			</h1>
+			<div class="columnBox equipListStatus">
+				<img src="{{getImgRoot/}}/material/{{>attribute_material.id}}.png">
+				<div class="contentsInner">
+					<dl>
+						<dt>所持数</dt><dd>{{>attribute_material.compose.use_num}}</dd>
+					</dl>
+					<p>
+						{{>attribute_material.description}}
+					</p>
+				</div>
+			</div>
+		</section>
+		<section class="contents shadow expendConf">
+			<table>
+				<tr>
+					<th>使用数</th><td>{{>total_compose_num}}</td>
+				</tr>
+				<tr>
+					<th>消費ギル</th><td>{{> total_compose_gil}}ギル</td>
+				</tr>
+			</table>
+		</section>
+		{{/if}}
+		
+		{{if ( equips.length > 0 || upgrade_material.id || attribute_material.id )}}
+		<div class="paramStatus">
+			<p><span class="headline">所持ギル</span>{{>user.gil}}<span class="sepalator">→</span><span class="jsResultGil">{{> user.gil - total_compose_gil}}</span></p>
+			{{if material_type == 1}}
+			<p><span class="headline">所持武具数</span>{{>user.own_equip_num}}<span class="sepalator">→</span><span class="jsResultOwnNum">{{> user.own_equip_num - equips.length}}</span></p>
+			{{/if}}
+		</div>
+		
+		<div class="outerBtnBox">
+			{{if material_type == 1 || material_type == 5}}
+			<button class="btn cancel" data-href="compose/base/1/">戻る</button>
+			{{else material_type == 2 || material_type == 3}}
+			<button class="btn cancel" data-href="compose/base/2/">戻る</button>
+			{{else}}
+			<button class="btn cancel" data-role="backpage">戻る</button>
+			{{/if}}
+			{{if not_enough_gil_flg && (equips.length > 0 || upgrade_material.id || attribute_material.id)}}
+			<button class="btn jsButtonSubmit">{{if material_type == 4}}限界突破する{{else}}合成する{{/if}}</button>
+			{{/if}}
+		</div>
+		
+		{{else}}
+		<button class="btn large cancel" data-role="backpage">戻る</button>
+		{{/if}}
+	</div>
+</div>
+
+<div class="banner">
+	<p>
+		<button class="link" data-href="raremedal/list/"><img src="{{getImgRoot/}}/ad/banner_announce_raremedal.png" alt="banner"><br>└レアメダルを集めてギルと交換！┘</button>
+	</p>
+	<p>
+		<button class="link" data-href="quiz/top/"><img src="{{getImgRoot/}}/ad/banner_quiz2.png"><br>└クイズに答えてギルや強化素材をゲット！┘</button>
+	</p>
+</div>
+
+{{escape}}
+<script id="jsTemplateComposeConfirmMaterials" type="text/x-jsrender">
+	<section class="contents contentsShadow statusData_icon confirmContents">
+		<h1>
+			{{>name}}
+			{{growTypeTag grow_type=grow_type /}}
+		</h1>
+		<div class="columnBox equipListStatus">
+			<img src="{{getImgRoot/}}/material/{{>id}}.png">
+			<div class="contentsInner">
+				<dl>
+					<dt>所持数</dt><dd>{{>compose.use_num}}</dd>
+				</dl>
+				<p>
+					{{>description}}
+				</p>
+			</div>
+		</div>
+	</section>
+	<section class="contents shadow expendConf defaultExpendConf">
+		<table>
+			<tr>
+				<th>使用数</th><td>{{>#parent.total_compose_num}}</td>
+			</tr>
+			<tr>
+				<th>消費ギル</th><td>{{> #parent.total_compose_gil}}ギル</td>
+			</tr>
+		</table>
+	</section>
+</script>
+{{/escape}}

@@ -1,0 +1,87 @@
+{
+    "status": 200,
+	"master_priv_flg": true,
+    "publish_flg": true,
+    "my_guild": {
+        "battle_win_num": 0,
+        "current_member_num": 2,
+        "gp": 0,
+        "guild_id": 7,
+        "guild_level": 1,
+        "guild_name": "ゆたぽん",
+        "guild_rank": "G",
+        "master_avatar_id": null,
+        "master_job_id": null,
+        "master_user_id": null,
+        "master_user_name": null,
+        "max_member_num": 15,
+        "scout_experience_name": "中級向け",
+        "scout_level_name": "10以上",
+        "scout_motivation_name": "★★☆☆☆"
+    },
+    "users": [
+        {
+            "user_id": 28,
+			"user_name": "まっくす",
+			"avatar_id": "10001",
+            "level": 1,
+            "job_name": "みならい剣士",
+            "attack": 3,
+            "defense": 2,
+            "sp_attack": 4,
+            "sp_defense": 7,
+			"profile_comment": "よろしくっす！"
+        },{
+            "user_id": 28,
+			"user_name": "あやぴ",
+			"avatar_id": "10001",
+            "level": 1,
+            "job_name": "みならい剣士",
+            "attack": 3,
+            "defense": 2,
+            "sp_attack": 4,
+            "sp_defense": 7,
+			"profile_comment": "よろしくっす！"
+        },{
+            "user_id": 28,
+			"user_name": "ゆたぽん",
+			"avatar_id": "10001",
+            "level": 1,
+            "job_name": "みならい剣士",
+            "attack": 3,
+            "defense": 2,
+            "sp_attack": 4,
+            "sp_defense": 7,
+			"profile_comment": "よろしくっす！"
+        }
+    ],
+    "guilds": [
+        {
+            "active_flg": true,
+            "battle_lose_num": 0,
+            "battle_win_num": 0,
+            "current_member_num": 1,
+            "gex": 0,
+            "gp": 0,
+            "guild_id": 4,
+            "guild_level": 1,
+            "guild_master_user_id": 4,
+            "guild_master_user_name": "ぬるぽさん",
+            "guild_name": "ぬるぽギルド",
+            "guild_rank": "F",
+            "ins_datetime": "2012-11-01T01:11:23",
+            "master_comment": null,
+            "max_member_num": 15,
+            "scout_admin_flg": true,
+            "scout_experience_name": "達人向け",
+            "scout_experience_type": 3,
+            "scout_level_name": "20以上",
+            "scout_level_type": 20,
+            "scout_motivation_name": "★★☆☆☆",
+            "scout_motivation_type": 2,
+            "table_name_suffix": null,
+            "upd_datetime": "2012-11-01T01:11:23"
+        }
+    ],
+	"invite_max_flg" : false
+}

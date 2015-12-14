@@ -1,0 +1,107 @@
+<h1 class="mainHeader">アビリティを変更</h1>
+
+<h1 id="abilityChange" class="subHeader">
+	<span class="subHeaderBg_l"></span>
+	<span>変更するアビリティ</span>
+	<span class="subHeaderBg_r"></span>
+</h1>
+
+<div id="abilitySetList">
+	<section class="contents contentsShadow statusData jsAbilityBefore" data-ability-id="{{>target.id}}" data-ability-name="{{>target.name}}">
+		<div class="contentsInner">
+			<h1>{{>target.name}}</h1>
+			<dl>
+				<dt>系統</dt><dd>{{>target.ancestry}}</dd>
+				{{if target.same_ancestry === true}}
+				<dd><span class="label32 growth_slow">同系統</span></dd>
+				{{/if}}
+				<dt>アビP</dt><dd>{{>target.equip_point}}</dd>
+				<dt>消費AP</dt><dd>{{if target.tp_cost !== null}}{{>target.tp_cost}}{{else}}-{{/if}}</dd>
+			</dl>
+			<p>{{>target.description}}</p>
+		</div>
+	</section>
+
+	<h1 class="subHeader">
+		<span class="subHeaderBg_l"></span>
+		<span>アビリティを選択</span>
+		<span class="subHeaderBg_r"></span>
+	</h1>
+
+	<section class="jsTabs">
+		<div class="tabNav">
+			<ul class="jsTabButtons">
+				<li><button class="select">攻撃</button></li>
+				<li><button>回復</button></li>
+				<li><button>サポート</button></li>
+			</ul>
+		</div>
+
+		<div class="jsTabInner">
+			<ul class="jsTabContents">
+				<li class="jsAbilityList1">
+					<div class="jsListAll"></div>
+
+					<div class="moreLink jsListMore" style="{{if !more_flg}}display:none{{/if}}">
+						<button class="link"><span>もっと見る</span></button>
+					</div>
+				</li>
+				<li class="jsAbilityList2">
+					<div class="jsListAll"></div>
+					<div class="moreLink jsListMore" style="{{if !more_flg}}display:none{{/if}}">
+						<button class="link"><span>もっと見る</span></button>
+					</div>
+				</li>
+				<li class="jsAbilityList3">
+					<div class="jsListAll"></div>
+					<div class="moreLink jsListMore" style="{{if !more_flg}}display:none{{/if}}">
+						<button class="link"><span>もっと見る</span></button>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</section>
+</div>
+
+<hr>
+
+<div class="arrowLink">
+	<button class="link prev" data-href="ability/{{>ability_set_type != 2}}/">アビリティトップへ戻る</button>
+</div>
+
+<div class="helpList">
+	<ul>
+		<li><button class="link" data-href="help/detail/208/">アビリティってなに？</button></li>
+		<li><button class="link" data-href="help/detail/402/">ジョブ系統ってなに？</button></li>
+	</ul>
+</div>
+
+{{escape}}
+<script id="jsTemplateAbilityChangeConfirm" type="text/x-jsrender">
+	<div class="modalInner abilityChange">
+		<p>アビリティを変更しますか？</p>
+		<div class="itemUseConfirm">
+			<div class="itemBox">
+				<div class="itemBoxInner">
+					<p>{{>before.name}}</p>
+				</div>
+				<!-- <span class="changeArrow"><span class="hide">→</span></span> -->
+				<span>→</span>
+				<div class="itemBoxInner">
+					<p>{{>after.name}}</p>
+				</div>
+			</div>
+		</div>
+		<div class="innerBtnBox">
+			<button class="btn cancel jsClosePopup">やめる</button>
+			<button class="btn jsClosePopup jsButtonAbilityChangeFix">変更する</button>
+		</div>
+	</div>
+</script>
+<script id="jsTemplateAbilityChangeComplete" type="text/x-jsrender">
+	<div class="modalInner">
+		<p>アビリティを変更しました。</p>
+		<button class="btn large close" data-href="ability/{{>ability_set_type != 2}}/">アビリティTOPへ戻る</button>
+	</div>
+</script>
+{{/escape}}

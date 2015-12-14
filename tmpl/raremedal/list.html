@@ -1,0 +1,91 @@
+<h1 class="mainHeader">レアメダル交換所</h1>
+<div class="statusLine">
+	<p>
+		<span class="headline">所持レアメダル</span> {{>rare_medal_num}}
+	</p>
+</div>
+	
+<div class="banner limitDuring">
+	{{for #data tmpl="#jsTemplateBanners" /}}
+</div>
+
+{{if 0}}
+<!-- // レアメダル：オープン前 -->
+<div id="rareMedal">
+	<img src="{{>img_url_root}}/parts/raremedal_title.png" class="title">
+	<div class="message navico_arc">
+		<p>
+			<span>レアメダル交換所オープンまでに<br>たくさんレアメダルを集めておいてね！</span>
+		</p>
+	</div>
+</div>
+{{else}}
+
+
+
+<div id="rareMedalList" class="jsPostExchange">
+	{{for rare_medals}}
+	<section class="contents contentsShadow statusData_icon{{if limit_end_datetime != null}} limit{{/if}} jsItems" data-item-id="{{>id}}">
+		{{if limit_end_datetime != null}}
+		<p class="contentsHeader">★期間限定★ {{>limit_end_datetime}}まで</p>
+		{{/if}}
+		<h1>{{>item_name}}</h1>
+		<div class="columnBox innerHeader">
+			{{giftThumb type=item_type id=item_id /}}
+			<div class="contentsInner">
+				<p><span class="headline">必要枚数</span> {{>need_rare_medal_num}}</p>
+				<p class="description">{{>description}}</p>
+				{{if exchange_limit_value > 0}}
+				<p><span class="headline">交換制限</span> 残り{{>exchange_limit_value - now_exchange_num}}個</p>
+				{{/if}}
+			</div>
+		</div>
+		<div class="numControl">
+			{{if #parent.parent.data.rare_medal_num >= need_rare_medal_num && (exchange_limit_value == 0 || now_exchange_num < exchange_limit_value)}}
+			<div class="jsCounter numControlSwitch" data-max="99" data-storage="buy_num">
+				<button class="jsCounterDecrement down_off"><span class="hide">−</span></button>
+				<input class="jsCounterNum qty" type="text" maxlength="2" value="1" style="width:50px">
+				<button class="jsCounterIncrement up_off"><span class="hide">＋</span></button>
+			</div>
+			<button class="btn jsCounterButton jsExchangeButton">交換する</button>
+			{{else}}
+			{{if exchange_limit_value && now_exchange_num >= exchange_limit_value}}
+			<p class="label48 notice">これ以上交換できません</p>
+			{{else}}
+			<p class="label48 notice">メダルが足りません</p>
+			{{/if}}
+			{{/if}}
+		</div>
+	</section>
+	{{/for}}
+	{{escape}}
+	<script id="jsTemplatePopupRaremedal" type="text/x-jsrender">
+		<div id="notifyWindow" class="modalInner">
+			<dl>
+				<dt>
+					<p>レアメダルと交換しますか？</p>
+					{{giftThumb type=rare_medal.item_type id=rare_medal.item_id /}}
+					<h2>{{>rare_medal.item_name}}</h2>
+				</dt>
+				<dd>
+					<span class="headline">個数</span>{{>qty}}<span class="headline">必要枚数</span> {{>rare_medal.need_rare_medal_num}}<br>
+					<span class="headline">所持レアメダル数</span>{{>rare_medal_num}} → {{> rare_medal_num - rare_medal.need_rare_medal_num * qty}}
+				</dd>
+			</dl>
+			<div class="innerBtnBox">
+				<button class="btn close jsClosePopup">やめる</button>
+				<button class="btn jsClosePopup jsExchangeSubmitButton" data-raremedal-item-id="{{>rare_medal.id}}" data-qty="{{>qty}}">交換する</button>
+			</div>
+		</div>
+	</script>
+	{{/escape}}
+</div>
+{{/if}}
+
+<hr>
+
+<div class="helpList">
+	<ul>
+		<li><button class="link" data-href="help/detail/1101/">レアメダルってなに？</button></li>
+	</ul>
+</div>

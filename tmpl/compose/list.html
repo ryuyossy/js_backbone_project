@@ -1,0 +1,156 @@
+<div class="jsShortTutorial" style="{{if !first_access_flg}}display:none{{/if}}">
+	<div class="composeShort">
+		<h1 class="mainHeader">合成</h1>
+		<section class="questNvgation">
+			<div class="message arc">
+				<p>
+					<span>武具の強化はガーディアンの基本だ!</br>準備を怠るな!!</span>
+				</p>
+			</div>
+		</section>
+		<h1 class="subHeader">
+			<span class="subHeaderBg_l"></span>
+			<span>武具を鍛えよう!</span>
+			<span class="subHeaderBg_r"></span>
+		</h1>
+		<div>
+			<img src="{{getImgRoot/}}/parts/shortTutorial_compose_equipTraining.png" alt="武具を鍛えよう!" class="title">
+		</div>
+		<h1 class="subHeader">
+			<span class="subHeaderBg_l"></span>
+			<span>同じ武具で限界突破!</span>
+			<span class="subHeaderBg_r"></span>
+		</h1>
+		<div>
+			<img src="{{getImgRoot/}}/parts/shortTutorial_compose_rebirth.png" alt="同じ武具で限界突破!" class="title">
+		</div>
+		<button class="btn large shgoQuest jsButtonCloseShortTutorial">さっそく合成へ</button>
+	</div>
+</div>
+
+
+
+
+
+<div id="composeList" class="jsNormalView" style="{{if first_access_flg}}display:none{{/if}}">
+	<h1 class="mainHeader">合成</h1>
+	<div class="statusLine">
+		<p>
+			<span class="headline">所持数</span>{{>user.own_equip_num}}<span class="denominator">/{{>user.max_own_equip_num}}</span>
+			<span class="headline">所持ギル</span>{{>user.gil}}
+		</p>
+	</div>
+	
+	<div class="banner discount">
+		{{for #data tmpl="#jsTemplateBanners" /}}
+	</div>
+	
+	<!-- //タブメニュー２（左右切り替えのみ） 左セレクト-->
+	<div class="tabNav2">
+		<ul>
+			<li><button class="left select">強化</button></li>
+			<li><button class="right" data-href="compose/compose-evolution/">限界突破</button></li>
+		</ul>
+	</div>
+
+	<div class="message taicho_arc">
+		<p><span>{{>navico_message}}</span></p>
+	</div>
+
+	<h1 class="subHeader">
+		<span class="subHeaderBg_l"></span>
+		<span>強化する武具を選択</span>
+		<span class="subHeaderBg_r"></span>
+	</h1>
+
+	<div class="jsComposeTop jsTabs">
+		<section class="contents contentsShadow narrow">
+			<div class="selectBox group">
+				<div class="line">
+					<label>
+						<select name="equip_type" class="jsFilterEquipType">
+						{{for equip_types}}
+							<option value="{{>value}}">{{>text}}</option>
+						{{/for}}
+						</select>
+						<span class="selector"></span>
+					</label>
+					<label>
+						<select name="attribute_type" class="jsFilterAttributeType">
+						{{for attribute_types}}
+							<option value="{{>value}}">{{>text}}</option>
+						{{/for}}
+						</select>
+						<span class="selector"></span>
+					</label>
+					<label>
+						<select name="rarity" class="jsFilterRarity">
+						{{for rarity_types}}
+							<option value="{{>value}}">{{>text}}</option>
+						{{/for}}
+						</select>
+						<span class="selector"></span>
+					</label>
+					<label>
+						<select name="sort_type" class="jsFilterSortType">
+						{{for sort_types}}
+							<option value="{{>value}}">{{>text}}</option>
+						{{/for}}
+						</select>
+						<span class="selector"></span>
+					</label>
+				</div>
+			</div>
+			<button class="btn selectBtn jsButtonFilter">表示する</button>
+		</section>
+
+		<div class="tabNav">
+			<ul class="jsTabButtons">
+				<!-- //アクティブタブ -->
+				<li><button class="select" name="allStuation">装備中</button></li>
+				<!-- //未選択 -->
+				<li><button name="ownSituation">すべて</button></li>
+			</ul>
+		</div>
+
+		<div class="jsTabInner">
+			<ul class="jsTabContents">
+				<li class="jsTabComposeEquip">
+					<div class="jsListAll"></div>
+					<div class="moreLink jsListMore" style="{{if !compose_more_flg}}display:none{{/if}}">
+						<button class="link"><span>もっと見る</span></button>
+					</div>
+				</li>
+				<li class="jsTabComposeAll">
+					<div class="jsListAll"></div>
+					<div class="moreLink jsListMore" style="{{if !compose_more_flg}}display:none{{/if}}">
+						<button class="link"><span>もっと見る</span></button>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<hr>
+
+	<div class="linkGroup">
+		<div class="arrowLink">
+			<button class="link next" data-href="deck/list/1/">装備へ</button>
+		</div>
+		<div class="arrowLink">
+			<button class="link next" data-href="equip/sell/list/">武具売却へ</button>
+		</div>
+	</div>
+
+	<div class="helpList">
+		<ul>
+			<li><button class="link" data-href="help/detail/704/">強化素材ってなに？</button></li>
+			<li><button class="link" data-href="help/detail/703/">おまかせで強化ってなに？</button></li>
+			<li><button class="link" data-href="help/detail/701/">合成ってなに？</button></li>
+			<li><button class="link" data-href="help/detail/707/">強化ってなに？</button></li>
+			<li><button class="link" data-href="help/detail/702/">限界突破ってなに？</button></li>
+		</ul>
+	</div>
+
+</div>
+

@@ -1,0 +1,36 @@
+@charset "utf-8";
+@import "base";
+@import "ruleset";
+
+// page parts
+// friend List
+#friendList{
+	
+	.btn.large{
+		margin:32px auto;
+	}
+	.contents{
+		width:95%;
+		margin:0 auto 8px auto;
+		
+		dt{
+			
+			&:nth-of-type(2),
+			&:nth-of-type(4),{
+				clear:none;
+				margin-left:8px;
+			}
+		}
+	}
+	.innerBtnBox{
+		width:95%;
+		margin:8px auto 0 auto;
+		
+		.jsPostFriendRemove{
+			width:145px;
+		}
+		.jsFriendRemoveButton{
+			width:100%;
+		}
+	}
+}

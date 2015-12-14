@@ -1,0 +1,129 @@
+@charset "utf-8";
+@import "base";
+@import "ruleset";
+
+#giftTop,
+#giftAllCatch{
+	margin:$content_margin 0 0 0;
+	.allCatch{
+		margin:$content_margin auto;
+	}
+	.contents{
+		width:95%;
+		margin:0 auto $inner_margin auto;
+		.btn{
+			width:60%;
+			margin:$inner_margin/2 auto 0 auto;
+		}
+		.label48{
+			width:80%;
+			margin:$inner_margin/2 auto;
+		}
+		.innerLink{
+			font-weight:bold;
+			color:#008C8C;
+		}
+	}
+	.jsTabGiftOpened{
+		.contents{
+			&:first-of-type{
+				margin-top:8px;
+			}
+		}
+	}
+}
+#giftTop{
+	.dimmed{
+		p{
+			margin-top:$inner_margin;
+		}
+	}
+}
+#giftAllCatch{
+	margin-top:$inner_margin;
+	~ .allCatch{
+		margin-top:$content_margin;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+/*
+%boxMarg {
+	margin: 8px auto 8px auto;
+}
+
+.tabM {
+	margin: 16px auto 16px auto;
+}
+
+.giftTav {
+	@extend %boxMarg;
+}
+
+.giftGetContents {
+	width: 95%;
+	margin: 8px auto 8px auto;
+	padding: 8px 0 0 0;
+}
+
+.giftContents {
+	margin-top: 8px;
+}
+
+#moreGetLink {
+	@extend %boxMarg;
+}
+
+.lsMar {
+	margin:8px;
+}
+
+.giftCaution {
+	margin-top: 32px;
+}
+
+.giftMoreLinks {
+	margin: 16px auto 0 auto;
+}
+
+#gfBtnMa {
+	margin: 32px auto 32px auto;
+}
+
+.giftHistory {  
+	width: 95%;  
+	margin: 0 auto 8px auto;  
+	padding: 8px 0 8px 0;  
+}  
+
+.giftBtnM {  
+	padding-bottom: 6px;  
+	.giftCatch {  
+		width: 60%;  
+		margin: 6px auto 0 auto;  
+	}  
+}  
+
+.labelM {  
+	padding-bottom: 6px;  
+	.giftLabel1 {  
+		width: 80%;  
+		margin: 6px auto 0 auto;
+	} 
+} 
+*/
+
+//giftPopUp
+.giftPopUp {
+	display: block;
+	-webkit-transform: scale(1);
+	z-index: 10000;
+}

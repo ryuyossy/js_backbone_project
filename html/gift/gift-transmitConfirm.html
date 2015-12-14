@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>送信確認</title>
+	<meta name="robots" content="noindex,nofollow">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+
+	<link rel="stylesheet" href="/css/common_parts.css">
+	<link rel="stylesheet" href="/css/gift.css">
+	<script src="/html/js/jquery-1.8.2.min.js"></script>
+	<script src="/html/js/parts.js"></script>
+</head>
+	<body>
+		<div id="container">
+			<header id="globalHeader">
+				<div class="menuPanel"><button class="link mypage"><span class="hide">マイページ</span></button></div>
+				<div class="guildNamePanel"><h1><span class="link"><span class="guildRank f hide">ギルドランク：A</span>ギルド名ギルド名ギルド名</span></h1></div>
+				<div class="menuPanel"><button class="link menu"><span class="hide">メニュー</span></button></div>
+			</header>
+			
+			<footer id="globalFooter">
+				<ul>
+					<li class="menuPanel"><span class="link mypage"><span class="hide">マイページ</span></span></li>
+					<li class="menuPanel"><span class="link quest"><span class="hide">クエスト</span></span></li>
+					<li class="menuPanel"><span class="link buttle"><span class="hide">バトル</span></span></li>
+					<li class="menuPanel"><span class="link gatcha"><span class="hide">ガチャ</span></span></li>
+					<li class="menuPanel"><span class="link menu"><span class="hide">マイページ</span></span></li>
+				</ul>
+			</footer>
+		</div>
+		
+		<div class="modalBox giftPopUp">
+			<span class="close"><span>閉じる</span></span>
+			<h1>送信確認</h1>
+			<div class="modalInner">
+				<!-- //武器変更＆アイテム移動 -->
+				<p>ギフトを送信しますか？</p>
+				<div class="itemUseConfirm">
+					<div class="itemBox">
+						<div class="itemBoxInner">
+							<img src="/img/equip/weapon.png">
+							<p>アイテム名</p>
+						</div>
+						<span class="changeArrow"><span class="hide">→</span></span>
+						<div class="itemBoxInner">
+							<img src="/img/equip/weapon.png">
+							<p>相手ユーザー名</p>
+						</div>
+					</div>
+				</div>
+				<div class="innerBtnBox">
+					<button class="btn cancel" data-href="#">やめる</button>
+					<button class="btn" data-href="#">送信する</button>
+				</div>
+			</div>
+		</div>
+
+	</body>
+</html>

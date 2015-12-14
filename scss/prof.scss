@@ -1,0 +1,338 @@
+@charset "utf-8";
+@import "base";
+@import "ruleset";
+
+// page parts
+// profile detail
+.myAvatar{
+	height:275px;
+	>img{
+		position:absolute;
+		left:120px;
+		top:0;
+		&[src$="00002_640.png"]{ //villager F
+			left:110px;
+		}
+		&[src$="10002_640.png"]{ //fencer F
+			left:110px;
+		}
+		&[src$="11001_640.png"]{ //soldier M
+			left:70px;
+		}
+		&[src$="21002_640.png"]{ //lancer F
+			left:100px;
+		}
+		&[src$="23001_640.png"]{ //thief M
+			left:110px;
+		}
+		&[src$="23002_640.png"]{ //thief F
+			left:130px;
+		}
+		&[src$="31002_640.png"]{ //magician F
+			left:110px;
+		}
+		&[src$="32002_640.png"]{ //scholar F
+			left:110px;
+		}
+		&[src$="33002_640.png"]{ //clown F
+			left:130px;
+		}
+		&[src$="21003_640.png"]{ //lancer F melancholy
+			left:110px;
+		}
+	}
+}
+#avatarStatus{
+	min-height:300px;
+	
+	&:after{
+		display:none;
+	}
+	.statusData{
+		position:absolute;
+		left:8px;
+		top:38px;
+		z-index:1;
+		
+		dl{
+			font-size:80%;
+			@include text_glow(#000);
+		}
+		dt{
+			color:#ff0000;
+			
+			&:nth-of-type(2){
+				clear:none;
+				margin-left:16px;
+			}
+			&:nth-of-type(4){
+				margin-bottom:8px;
+			}
+		}
+		dd{
+			color:#fff;
+			
+			&:nth-of-type(4){
+				margin-bottom:8px;
+			}
+		}
+	}
+	.equip{
+		top:186px;
+		.evolutionGerge_s{
+			left:25px;
+			top:58px;
+		}
+	}
+}
+.userName{
+	z-index:2;
+}
+.comment{
+	@include backgroundSize("/parts/bg_bubble_comment.png",0,0,no-repeat);
+	position:relative;
+	display:block;
+	width:306px;
+	height:70px;
+	margin:-16px auto $inner_margin auto;
+	&.link{
+		color:#333;
+	}
+	p{
+		padding:14px 24px 0 12px;
+		line-height:1.8em;
+	}
+	.edit{
+		&.on:before{
+			@include visible_object(auto,auto,18px,21px,auto);
+			background-color:rgba(0,0,0,0.3);
+			right:8px;
+			bottom:8px;
+		}
+		&:after{
+			@include backgroundSize("/parts/#{$icon_parts}.png",0,0,no-repeat);
+			@include visible_object(auto,auto,19px,21px,auto);
+			right:8px;
+			bottom:8px;
+		}
+	}
+}
+.myDate{
+	width:95%;
+	margin:0 auto;
+	.columnBox dl{
+		margin-bottom:$inner_margin;
+		dt{
+			&:nth-of-type(1),
+			&:nth-of-type(4){
+				margin-bottom:$inner_margin;
+			}
+		}
+		dd{
+			&:nth-of-type(1),
+			&:nth-of-type(4){
+				margin-bottom:$inner_margin;
+			}
+		}
+	}
+}
+.subHeader{
+	margin:$content_margin 0 $inner_margin 0;
+}
+#messageList,
+#messageDetail{
+	&.unitary{
+		margin:$inner_margin 0 0 0;
+	}
+	.dimmed{
+		p{
+			margin:0 auto;
+		}
+	}
+	.contents{
+		width:95%;
+		margin:0 auto $inner_margin auto;
+	}
+	.contentsInner{
+		@include display-box;
+		margin:0 $inner_margin;
+		padding:$inner_margin 0;
+	}
+	.iconBgArc_s{
+		margin:0;
+	}
+	.sender{
+		position:relative;
+		@include box-flex(1);
+		margin:0 0 0 $inner_margin;
+		
+		.link{
+			color:#544123;
+		}
+	}
+	.label36_r4{
+		position:absolute;
+		display:block;
+		padding:0 4px;
+		font-size:80%;
+	}
+	.time{
+		position:absolute;
+		right:8px;
+		display:block;
+		font-size:80%;
+		color:#B9A46B;
+	}
+	.senderName{
+		position:absolute;
+		bottom:0;
+		display:block;
+		width:100%;
+		text-align:left;
+		
+		span{
+			color:#008C8C;
+		}
+		
+		&:after{
+			@include backgroundSize("/parts/#{$icon_parts}.png",-97px,-78px,no-repeat);
+			@include visible_object(auto,0,9px,13px,auto);
+			right:0;
+		}
+	}
+	.moreLink{
+		margin-top:$inner_margin;
+	}
+	~ .arrowLink{
+		margin-bottom:$content_margin;
+	}
+}
+#messageDetail{
+	margin-top:$inner_margin;
+	.contents{
+		position:relative;
+		padding-bottom:$inner_margin;
+	}
+	.contentsInner{
+		border-bottom:1px solid #B9A46B;
+		&.link.on{
+			position:relative;
+			left:-8px;
+			width:288px;
+			padding:8px;
+		}
+	}
+	.sender{
+		.senderName{
+			color:#333;
+		}
+	}
+	.contentsBody{
+		margin:$inner_margin;
+		line-height:1.7;
+	}
+	.btn.large{
+		width:50%;
+		margin:0 auto;
+	}
+}
+#greet{
+	margin-bottom:0;
+	.topic:first-of-type{
+		margin-top:$inner_margin;
+	}
+	.dimmed{
+		p{
+			margin:0 auto $inner_margin auto;
+		}
+	}
+}
+#anotherPerson{
+	.outerBtnBox{
+		width:95%;
+		&:nth-of-type(1){
+			margin-bottom:$inner_margin/2;
+		}
+		&:nth-of-type(2){
+			margin-top:0;
+		}
+		.btn{
+			margin-right:0;
+		}
+	}
+}
+
+
+// comment input
+#commentInput{
+	&.postForm_message{
+		width:95%;
+		margin:$inner_margin auto $content_margin auto;
+		.btn.large{
+			margin-top:$content_margin;
+		}
+	}
+	~ .arrowLink{
+		margin-bottom:$content_margin;
+	}
+}
+
+
+// greet list
+#greetList{
+	.moreLink{
+		margin-top:$inner_margin;
+	}
+	.arrowLink{
+		margin-bottom:$content_margin;
+	}
+}
+
+
+// message input
+#messageInput{
+	margin-top:$inner_margin;
+	.contentsInner{
+		width:95%;
+		margin:0 auto;
+		@include display-box;
+		.iconBgArc_s{
+			margin:0;
+		}
+	}
+	.receiver{
+		display:block;
+		margin-left:$inner_margin;
+		color:#fff;
+	}
+	.postForm_message{
+		width:95%;
+		margin:$inner_margin auto 0 auto;
+		
+		.btn.large{
+			margin:$content_margin auto;
+		}
+	}
+	~ .arrowLink{
+		margin-bottom:$content_margin;
+	}
+}
+
+// modal inner
+#messageSendConfirm{
+	&.modalInner p{
+		text-align:left;
+		&:first-of-type{
+			text-align:center;
+		}
+	}
+}
+
+#messageComplate{
+	.dimmed p{
+		margin-top:$inner_margin;
+	}
+	~ .arrowLink{
+		margin-bottom:$content_margin;
+	}
+}

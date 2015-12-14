@@ -1,0 +1,69 @@
+{
+	"status" : 200,
+	"ability_id": 20001,
+	"win_ability_flg":true,
+	"win_ability":{
+		"avatar_id":"20001",
+		"id":83,
+		"name":"アイスブラスト"
+	},
+	"master_job_flg":true,
+	"master_job":{
+		"avatar_id":"20001",
+		"name":"みならいハンター"
+	},
+	"win_jobs": [
+		{
+			"id": 110,
+			"name": "ソルジャー"
+		},
+		{
+			"id": 120,
+			"name": "ナイト"
+		},
+		{
+			"id": 130,
+			"name": "サムライ"
+		}
+	],
+	"combo_users": [
+		{
+			"user_id": 2,
+			"avatar_id": 30001,
+			"name": "ノッポ"
+		}
+	],
+	"tension_max_flg": false,
+	"methods": [
+		{
+			"method_type": "attack",
+			"total_damage": 68,
+			"attribute_effect": [
+				{
+					"type": "火",
+					"total_damage": 300
+				},
+				{
+					"type": "氷",
+					"total_damage": 300
+				}
+			],
+			"targets": [
+				{
+					"name": "gg5",
+					"user_id": 232,
+					"avatar_id": "32001",
+					"fainted_flg": true,
+					"critical_flg": false
+				},
+				{
+					"name": "gg8",
+					"user_id": 235,
+					"avatar_id": "30001",
+					"fainted_flg": false,
+					"critical_flg": false
+				}
+			]
+		}
+	]
+}

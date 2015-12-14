@@ -1,0 +1,128 @@
+@charset "utf-8";
+/*
+@mixin box_shadow_contents_l($offsetSize,$z_index:-1){
+	content:'';
+	position:absolute;
+	left:$offsetSize;
+	top:75%;
+	bottom:17px;
+	width:50%;
+	min-height:5px;
+	max-width:150px;
+	background:#544123;
+	-webkit-box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	-webkit-transform:rotate(-5deg);
+	transform:rotate(-5deg);
+	z-index:$z_index;
+}
+@mixin box_shadow_contents_r($offsetSize,$z-index:-1){
+	content:'';
+	position:absolute;
+	right:$offsetSize;
+	top:75%;
+	bottom:17px;
+	width:50%;
+	min-height:5px;
+	max-width:150px;
+	background:#544123;
+	-webkit-box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	-webkit-transform:rotate(5deg);
+	transform:rotate(5deg);
+	z-index:$z_index;
+}
+*/
+/*
+@mixin backgroundResize($position:0 -60px){
+	@media screen and (min-width:319px){
+		width:320px;
+		@include background-size(320px,auto);
+	}
+	@media screen and (min-width:359px){
+		width:360px;
+		@include background-size(360px,auto);
+	}
+	@media screen and (min-width:361px){
+		width:480px;
+		@include background-size(480px,auto);
+		background-position:$position;
+	}
+}
+*/
+/*
+@mixin display-box{
+	display:flexbox;
+	-webkit-display:flexbox;
+}
+@mixin box-align($position){
+	flex-align:$position;
+	-webkit-flex-align:$position;
+}
+@mixin box-flex($ratio){
+	flex:$ratio;
+	-webkit-flex:$ratio;
+}
+@mixin box-pack($position){
+	flex-pack:$position;
+	-webkitflex-pack:$position;
+}
+*/
+/* line 6, ../scss/combo_festival.scss */
+#comboFestival .pageTitle {
+  position: relative;
+  display: inline-block;
+  background: url("/img/parts/event/combo/combo_title_springbig.png") 0 0 no-repeat;
+  -webkit-background-size: 304px 136px;
+  display: block;
+  width: 304px;
+  height: 136px;
+  margin: 8px auto 0 auto;
+}
+/* line 15, ../scss/combo_festival.scss */
+#comboFestival .subHeader {
+  margin-bottom: 8px;
+}
+
+/* line 24, ../scss/combo_festival.scss */
+#comboFestival .headMarg {
+  margin-top: 8px;
+}
+/* line 27, ../scss/combo_festival.scss */
+#comboFestival .message.taicho_arc {
+  margin: 8px auto 0 auto;
+  top: 0;
+}
+/* line 30, ../scss/combo_festival.scss */
+#comboFestival .message.taicho_arc .comboCnt {
+  color: #D80000;
+  font-weight: bold;
+}
+/* line 35, ../scss/combo_festival.scss */
+#comboFestival .comboDescription {
+  margin: 8px auto 16px auto;
+}
+/* line 38, ../scss/combo_festival.scss */
+#comboFestival .btn.battle.large {
+  margin-bottom: 16px;
+}
+/* line 41, ../scss/combo_festival.scss */
+#comboFestival .remunerationList {
+  margin: 8px 0 8px 0;
+}
+/* line 43, ../scss/combo_festival.scss */
+#comboFestival .remunerationList .rmrCnt {
+  width: 95%;
+  margin: 0 auto;
+  padding: 8px 0;
+  margin-bottom: 8px;
+}
+/* line 50, ../scss/combo_festival.scss */
+#comboFestival .arrowGiftLink {
+  margin-bottom: 2px;
+}
+/* line 53, ../scss/combo_festival.scss */
+#comboFestival .title {
+  display: block;
+  margin: 0 auto;
+}

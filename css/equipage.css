@@ -1,0 +1,332 @@
+@charset "utf-8";
+/*
+@mixin box_shadow_contents_l($offsetSize,$z_index:-1){
+	content:'';
+	position:absolute;
+	left:$offsetSize;
+	top:75%;
+	bottom:17px;
+	width:50%;
+	min-height:5px;
+	max-width:150px;
+	background:#544123;
+	-webkit-box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	-webkit-transform:rotate(-5deg);
+	transform:rotate(-5deg);
+	z-index:$z_index;
+}
+@mixin box_shadow_contents_r($offsetSize,$z-index:-1){
+	content:'';
+	position:absolute;
+	right:$offsetSize;
+	top:75%;
+	bottom:17px;
+	width:50%;
+	min-height:5px;
+	max-width:150px;
+	background:#544123;
+	-webkit-box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	-webkit-transform:rotate(5deg);
+	transform:rotate(5deg);
+	z-index:$z_index;
+}
+*/
+/*
+@mixin backgroundResize($position:0 -60px){
+	@media screen and (min-width:319px){
+		width:320px;
+		@include background-size(320px,auto);
+	}
+	@media screen and (min-width:359px){
+		width:360px;
+		@include background-size(360px,auto);
+	}
+	@media screen and (min-width:361px){
+		width:480px;
+		@include background-size(480px,auto);
+		background-position:$position;
+	}
+}
+*/
+/*
+@mixin display-box{
+	display:flexbox;
+	-webkit-display:flexbox;
+}
+@mixin box-align($position){
+	flex-align:$position;
+	-webkit-flex-align:$position;
+}
+@mixin box-flex($ratio){
+	flex:$ratio;
+	-webkit-flex:$ratio;
+}
+@mixin box-pack($position){
+	flex-pack:$position;
+	-webkitflex-pack:$position;
+}
+*/
+/* line 6, ../scss/equipage.scss */
+#myStatus {
+  width: 95%;
+  margin: 8px auto 0 auto;
+}
+/* line 10, ../scss/equipage.scss */
+#myStatus.statusData_icon {
+  padding: 0;
+}
+/* line 13, ../scss/equipage.scss */
+#myStatus .equipListStatus {
+  margin-top: -16px;
+  padding: 0;
+}
+/* line 18, ../scss/equipage.scss */
+#myStatus ~ .btn.large {
+  margin: 8px auto 16px auto;
+}
+
+/* line 22, ../scss/equipage.scss */
+.wrapColumBoxParam {
+  width: 100%;
+  display: -webkit-box;
+}
+/* line 25, ../scss/equipage.scss */
+.wrapColumBoxParam .inParm {
+  padding-top: 8px;
+  -webkit-box-flex: 1;
+  font-size: 12px;
+}
+/* line 29, ../scss/equipage.scss */
+.wrapColumBoxParam .inParm .up {
+  color: #FF0000;
+}
+
+/* line 36, ../scss/equipage.scss */
+#equipDeck .subHeader:nth-of-type(1) {
+  margin: 8px 0;
+}
+/* line 39, ../scss/equipage.scss */
+#equipDeck .subHeader:nth-of-type(2) {
+  margin: 0 0 8px 0;
+}
+/* line 44, ../scss/equipage.scss */
+#equipDeck .equipImageBox img {
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+/* line 48, ../scss/equipage.scss */
+#equipDeck .accordion {
+  margin-bottom: 8px;
+}
+/* line 53, ../scss/equipage.scss */
+#equipDeck .accordion.empty h1:after {
+  display: none;
+}
+/* line 58, ../scss/equipage.scss */
+#equipDeck .accordion li {
+  padding-bottom: 2px;
+}
+/* line 61, ../scss/equipage.scss */
+#equipDeck .accordion .innerBtnBox {
+  width: 100%;
+}
+
+/* line 66, ../scss/equipage.scss */
+.nowEquip {
+  width: 95%;
+  margin: 0 auto 16px auto;
+  padding-bottom: 8px;
+}
+/* line 71, ../scss/equipage.scss */
+.nowEquip .statusData {
+  margin: 8px;
+  padding: 8px 0 0 0;
+}
+/* line 75, ../scss/equipage.scss */
+.nowEquip li {
+  padding-bottom: 2px;
+}
+/* line 78, ../scss/equipage.scss */
+.nowEquip dl {
+  margin: 6px 0 8px 0;
+}
+/* line 81, ../scss/equipage.scss */
+.nowEquip .innerBtnBox {
+  width: 95%;
+  margin: 0 auto;
+}
+
+/* line 86, ../scss/equipage.scss */
+.weapon {
+  position: relative;
+}
+/* line 88, ../scss/equipage.scss */
+.weapon img {
+  -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+/* line 91, ../scss/equipage.scss */
+.weapon.link.on {
+  background-color: transparent;
+}
+/* line 93, ../scss/equipage.scss */
+.weapon.link.on:after {
+  visibility: visible;
+  content: "";
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 56px;
+  height: 56px;
+  z-index: auto;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* line 104, ../scss/equipage.scss */
+#equipSetEdit .paramStatus {
+  margin: 8px auto 16px auto;
+}
+/* line 106, ../scss/equipage.scss */
+#equipSetEdit .paramStatus .headline {
+  margin-left: 8px;
+}
+/* line 109, ../scss/equipage.scss */
+#equipSetEdit .paramStatus .numMax {
+  color: #999;
+}
+/* line 113, ../scss/equipage.scss */
+#equipSetEdit .subHeader {
+  margin-bottom: 8px;
+}
+/* line 116, ../scss/equipage.scss */
+#equipSetEdit .contents {
+  width: 95%;
+  margin: 0 auto 8px auto;
+}
+/* line 121, ../scss/equipage.scss */
+#equipSetEdit .equip_main .contents {
+  margin-bottom: 16px;
+}
+/* line 124, ../scss/equipage.scss */
+#equipSetEdit .equip_main .innerBtnBox {
+  margin: 8px auto 0 auto;
+  width: 60%;
+}
+/* line 132, ../scss/equipage.scss */
+#equipSetEdit .equip_sub .contents:last-of-type {
+  margin-bottom: 16px;
+}
+/* line 136, ../scss/equipage.scss */
+#equipSetEdit .equip_sub .innerBtnBox {
+  width: 98%;
+  margin: 8px auto 0 auto;
+}
+/* line 140, ../scss/equipage.scss */
+#equipSetEdit .equip_sub .innerBtnBox .btn {
+  margin-right: 0;
+  font-size: 85%;
+  line-height: 16px;
+}
+/* line 145, ../scss/equipage.scss */
+#equipSetEdit .equip_sub .innerBtnBox .btn:last-of-type {
+  margin-right: 0;
+}
+/* line 151, ../scss/equipage.scss */
+#equipSetEdit .btn.large {
+  margin: 16px auto;
+}
+
+/* line 156, ../scss/equipage.scss */
+#equipFilter {
+  width: 95%;
+  margin: 8px auto 16px auto;
+  padding: 8px 0;
+}
+
+/* line 165, ../scss/equipage.scss */
+#equipChange .contents,
+#equipChangeList .contents,
+#equipAdd .contents {
+  width: 95%;
+  margin: 8px auto 16px auto;
+}
+/* line 169, ../scss/equipage.scss */
+#equipChange .contentsInner,
+#equipChangeList .contentsInner,
+#equipAdd .contentsInner {
+  min-height: 90px;
+}
+
+/* line 175, ../scss/equipage.scss */
+#equipChangeList .contents,
+#equipAdd .contents {
+  margin: 0 auto 8px auto;
+}
+/* line 178, ../scss/equipage.scss */
+#equipChangeList .contentsInner,
+#equipAdd .contentsInner {
+  min-height: 94px;
+}
+/* line 181, ../scss/equipage.scss */
+#equipChangeList .label48,
+#equipAdd .label48 {
+  width: 60%;
+  margin: 4px auto 0 auto;
+}
+/* line 185, ../scss/equipage.scss */
+#equipChangeList .statusData_icon .columnBox + .btn,
+#equipAdd .statusData_icon .columnBox + .btn {
+  margin-top: 8px;
+}
+/* line 188, ../scss/equipage.scss */
+#equipChangeList ~ .btn.large,
+#equipAdd ~ .btn.large {
+  margin-top: 16px;
+}
+
+/* line 197, ../scss/equipage.scss */
+.modalInner .itemUseConfirm .equipImageBox {
+  width: 64px;
+  margin: 0 auto;
+}
+/* line 203, ../scss/equipage.scss */
+.modalInner .equipMainEdit .btn {
+  width: 40%;
+}
+/* line 208, ../scss/equipage.scss */
+.modalInner .equipListAdd .btn {
+  width: 40%;
+}
+/* line 213, ../scss/equipage.scss */
+.modalInner .equipListChange .btn {
+  width: 40%;
+}
+/* line 217, ../scss/equipage.scss */
+.modalInner > .btn.cancel {
+  display: block;
+  margin: 8px auto 0 auto;
+  width: 50%;
+}
+
+/* line 245, ../scss/equipage.scss */
+.eqcMargin {
+  margin: 32px 0 32px 0;
+}
+
+/* line 250, ../scss/equipage.scss */
+.deckPopup {
+  display: block;
+  -webkit-transform: scale(1);
+  z-index: 10000;
+}
+
+/* line 256, ../scss/equipage.scss */
+.dekBox {
+  width: 95%;
+  padding-top: 8px;
+  padding-bottom: 14px;
+}

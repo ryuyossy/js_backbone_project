@@ -1,0 +1,1017 @@
+@charset "utf-8";
+/*
+@mixin box_shadow_contents_l($offsetSize,$z_index:-1){
+	content:'';
+	position:absolute;
+	left:$offsetSize;
+	top:75%;
+	bottom:17px;
+	width:50%;
+	min-height:5px;
+	max-width:150px;
+	background:#544123;
+	-webkit-box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	-webkit-transform:rotate(-5deg);
+	transform:rotate(-5deg);
+	z-index:$z_index;
+}
+@mixin box_shadow_contents_r($offsetSize,$z-index:-1){
+	content:'';
+	position:absolute;
+	right:$offsetSize;
+	top:75%;
+	bottom:17px;
+	width:50%;
+	min-height:5px;
+	max-width:150px;
+	background:#544123;
+	-webkit-box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	-webkit-transform:rotate(5deg);
+	transform:rotate(5deg);
+	z-index:$z_index;
+}
+*/
+/*
+@mixin backgroundResize($position:0 -60px){
+	@media screen and (min-width:319px){
+		width:320px;
+		@include background-size(320px,auto);
+	}
+	@media screen and (min-width:359px){
+		width:360px;
+		@include background-size(360px,auto);
+	}
+	@media screen and (min-width:361px){
+		width:480px;
+		@include background-size(480px,auto);
+		background-position:$position;
+	}
+}
+*/
+/*
+@mixin display-box{
+	display:flexbox;
+	-webkit-display:flexbox;
+}
+@mixin box-align($position){
+	flex-align:$position;
+	-webkit-flex-align:$position;
+}
+@mixin box-flex($ratio){
+	flex:$ratio;
+	-webkit-flex:$ratio;
+}
+@mixin box-pack($position){
+	flex-pack:$position;
+	-webkitflex-pack:$position;
+}
+*/
+/* line 5, ../scss/job.scss */
+.avatar_img {
+  position: relative;
+  height: 275px;
+}
+/* line 8, ../scss/job.scss */
+.avatar_img img {
+  position: absolute;
+  top: 0;
+}
+/* line 11, ../scss/job.scss */
+.avatar_img img[src$="21003_640.png"] {
+  top: -50px;
+}
+/* line 15, ../scss/job.scss */
+.avatar_img ~ figcaption .btn {
+  margin-top: 16px;
+}
+
+/* line 20, ../scss/job.scss */
+.jobAvM {
+  margin-top: 8px;
+}
+/* line 22, ../scss/job.scss */
+.jobAvM .statusData_icon {
+  margin: 8px;
+}
+/* line 24, ../scss/job.scss */
+.jobAvM .statusData_icon .columnBox + .btn {
+  margin: 8px auto 0 auto;
+}
+/* line 27, ../scss/job.scss */
+.jobAvM .statusData_icon p {
+  padding-right: 16px;
+}
+
+/* line 32, ../scss/job.scss */
+.mainImage {
+  position: relative;
+  height: 161px;
+}
+/* line 37, ../scss/job.scss */
+.mainImage.jobType1::before {
+  display: block;
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  zoom: 0.5;
+  content: url('data:image/png;base64,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');
+  z-index: 5;
+}
+/* line 37, ../scss/job.scss */
+.mainImage.jobType2::before {
+  display: block;
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  zoom: 0.5;
+  content: url('data:image/png;base64,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');
+  z-index: 5;
+}
+/* line 37, ../scss/job.scss */
+.mainImage.jobType3::before {
+  display: block;
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  zoom: 0.5;
+  content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABPCAMAAABLT7LRAAAABGdBTUEAALGPC/xhBQAAAEhQTFRFJi1bJi5dJi1bJi1bJi9eAAAAT4bKZXaOpLbDscTQhpamMkuCNV6hU2J7Hzlsa6rQaoyxO0JbJi5dy+DoQktjfanbOnHD0+nxKmm0xAAAAAZ0Uk5TWMGMJOYAyuH/tQAABUpJREFUWMOdmYm2oyAMhnG5ogJqK9r3f9PJArKI2k7mnJlOq1//kBBiKv7urRF11bZvtraqRfNwg7iDAet9sra6hYpraQ42Ka31jqa1mhxU/ApsasfaT6YVMevmByDjSrSYWUaKEg6dVV3X7deGyLb+CthUcK2e2W6YuJ6VeAait2oO1t2rrB+AKG/q5sSuiRpFNndA5JE8aYxZnjWiyIyYAAWuHuiTlsx8QdRwi7gCYirr/eAF4n5PTNI8et2070nvIBBQchhGY+3yLBEXsm1KwIb0gUAAyQ9Y/51E0ticgRgP4HXzAgJXBK7w4hsgEkNkDiDzAAgCx08G1M5uiDmwZt7eAc+QQHTZGjb7ApvALva3ChnugA3kH30EPNsT73ME2xLvlgnEJgFW74nFW+/wZ7BnIBEnVSBO3mnhM5q+VwXeZx2C9WijdcBp0qVlFBGwJYdRnpXr52wr2RjpVDqYUrAM6t0GIAlU5Jz8XPLW/hWZzUy7uBAQI8K8/vMt8ER0EgULJHfNuN7xVgmYEf4dxmASbKRtqngVhVtBdaTzJW8Anlwji685JArKQb27/RYugiC79Bn7nkJincAiUZLEhoA15iAAPQkkjdK4N7KV69eMuDoRI4RlwrAIlzMKA+I+5fywdkiT5XVS6DWuDCSfBXrMOWj8x30iJ8q+IpDvAo/0jj4L9ph8dsQBFwtufvE95tgfAdhziPt+GJwKuB33Xw3AisuC9mnYW6fmBhiWgXJjdUAFG1rAEuqjLsBOMWHBDiAJxq94mSKQKomiDf0neAkD0ebAZHtEQFKcAnERhTiAKuPZW+CxCClQCBcT5pmxDza4AAQb7QMQonIAfWld76z/AuiCjALl5wm4mizyGRDCfABB4HAN/NCfX4HrmZcVnl7yFR74OgFb0QaX+1RhoTAaV9BltLtzoFfoN7OL7LGn6JBye9L4EyLKr0sgbeYReiRpubz34V7aQlTRRv8mVmpoIm/WMNoo/GI9nc7RGRuKOZevCHgktiO+0ltXcwc8SvxKxSFJbH7+UMbIZVl8DrlaTB7LxZRPxfUoXwQMe5l6pW0GnknO55WaHElvD+Vj0SvEvdzEwG7btmWRNruzp/54MQWXwxW+2hz10PE2cjhffBIZOr2P63mSQw/rYRsqNhryNhkOg8hG38eP/Rj1edbAOc/v7L5ih6jMqI+iOhSdujW9+zPlWMRuW/i7jwZsNVFUk4z0nW3C03zquV5u1+7jCDIm/xt4v3BisXEM4Q3Xxrahc3AHgJX9mmkKDSPyl9jmzZvrYuvQ2+icxod30uMNOfDgbZ332HVfE5aGvJnDwHKMxjJwS4GT776ogYVrC2GVnOXO7czlLQXq0B9iWE7N8GD97SSyhzaTv6HEQ2DUwaLEXGHgOSJnwAVvC48B/inglWbzgJDjZvnEm/0KhucUKKuRz33CQ6RJ8m9OeeBx9pwCG/oVPfLQxp0xacuW4VDgO32SglzEyj9y/2roYX7j0vOMQ4FT/qzHTlNh5u0Rvv2JhgJVGDyIMK8JzzImv4+fmreyzbuO5jdhRFBh7nCx336y5Pk7nznoZd5+tO5i5uCnGD8C54yXzG3+gzhnM5FssoRExUfVl+5ifBNeYfY17d+KnLun2Zeb9uF46St5ujDnPM0PcaCm9kckqKPBqfhywqn8sX+Jo3Fk1Xw11KWBMyFLOmeazaqr4XN57MxDZx41dR1vOxrT8aBXTz9NiRnZXgyy3XC8OCG+H92Lyk/alTrmM27SXon/+i3gT9Sl3wJq8b8/LjhoVbX4ewX81Vb1048Vf/8AuSt7vDXTTjYAAAAASUVORK5CYII=');
+  z-index: 5;
+}
+/* line 47, ../scss/job.scss */
+.mainImage .master, .mainImage #jobTree .contents ul li .newJob, #jobTree .contents ul li .mainImage .newJob {
+  display: block;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  font-size: 0;
+  overflow: hidden;
+}
+/* line 49, ../scss/job.scss */
+.mainImage .master:after, .mainImage #jobTree .contents ul li .newJob:after, #jobTree .contents ul li .mainImage .newJob:after {
+  display: inline-block;
+  background: url("/img/parts/label_jobmaster.png") 0 0 no-repeat;
+  -webkit-background-size: 58px 18px;
+  visibility: visible;
+  content: "";
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: auto;
+  top: 8px;
+  width: 58px;
+  height: 18px;
+  z-index: auto;
+  right: 8px;
+}
+/* line 55, ../scss/job.scss */
+.mainImage > img {
+  position: absolute;
+  top: -110px;
+  z-index: -1;
+}
+/* line 59, ../scss/job.scss */
+.mainImage > img.male {
+  left: -140px;
+}
+/* line 62, ../scss/job.scss */
+.mainImage > img.female {
+  left: 140px;
+}
+/* line 66, ../scss/job.scss */
+.mainImage > img[src$="11001_640.png"], .mainImage > img[src$="11001_640_silhouette.png"] {
+  left: -190px;
+}
+/* line 70, ../scss/job.scss */
+.mainImage > img[src$="11002_640.png"], .mainImage > img[src$="11002_640_silhouette.png"] {
+  left: 190px;
+}
+
+/* line 75, ../scss/job.scss */
+#jobDetail {
+  position: relative;
+  padding-top: 16px;
+  margin: 0 8px;
+}
+/* line 79, ../scss/job.scss */
+#jobDetail h1 {
+  margin-top: 8px;
+}
+/* line 82, ../scss/job.scss */
+#jobDetail .btn.regular {
+  width: 75%;
+  position: absolute;
+  top: -20px;
+  left: 12%;
+}
+/* line 88, ../scss/job.scss */
+#jobDetail .cant_change {
+  text-align: center;
+  padding-top: 12px;
+}
+/* line 91, ../scss/job.scss */
+#jobDetail .cant_change .label32 {
+  display: inline-block;
+  padding: 0 1em;
+}
+/* line 97, ../scss/job.scss */
+#jobDetail .master_bonuses dt {
+  display: inline-block;
+  padding: 0 0.5em;
+  -webkit-border-radius: 1em;
+  border-radius: 1em;
+  color: #fff;
+  clear: none;
+  margin-right: 0;
+}
+/* line 104, ../scss/job.scss */
+#jobDetail .master_bonuses dt.master_bonus1 {
+  background-color: #B73A10;
+}
+/* line 107, ../scss/job.scss */
+#jobDetail .master_bonuses dt.master_bonus2 {
+  background-color: #508643;
+}
+/* line 110, ../scss/job.scss */
+#jobDetail .master_bonuses dt.master_bonus3 {
+  background-color: #3A71C3;
+}
+/* line 114, ../scss/job.scss */
+#jobDetail .master_bonuses dd {
+  margin: 0 8px 0 4px;
+}
+/* line 116, ../scss/job.scss */
+#jobDetail .master_bonuses dd.plus {
+  color: #f00;
+}
+/* line 122, ../scss/job.scss */
+#jobDetail .conditions li {
+  font-size: 0.9em;
+}
+
+/* line 127, ../scss/job.scss */
+.mastered {
+  display: inline-block;
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAeCAMAAAAIG46tAAAABGdBTUEAALGPC/xhBQAAAEhQTFRF86VV+Pb08pU27rZ8uF0A////lUsAcmRV/fz6z2kBAAAA/+8o/9Ig//45/6US/70d//4o5XgD9YMF/6wW/54P/5kM/ogF/5IJs8t0qwAAAAt0Uk5TwFbUq6kyZQyA/ADjzlXAAAABO0lEQVQoz2XTWZKEIBAE0AJlUWhBULz/Tac2bSc6PzT0RYIGAKsm+HnhzD7c70BJRT280eObHdPosuOD/6Inaq2NMS68EfsbPdO4ruu8KMxekA3pxBx0QRaFNdzW08FhbfsSEGe1I9e8YYi5O6+ARbFSay29M7MuAfzLWNFJR9s9zIRnzygfTOYyzdv2GZZ9CAkya3WB52uqUuGBeVZG/L+tJDXSN2Jz6wWtEObfZu9ZeiXl32YvYvmTHrSCpF2s1rTx11qYcKF0XCqnD/9V3hAnMIR3FSdOaogGnH1UGLXgjGNYByEykh4bp2Za89FigNVMUj1PWc6DxqQZDS12hCFdDduASIu9OlZi3EO8iwaZkw3mIo0sLDQmMtmaLkY7XrGRTTc1apzU7RTVnuNg4ivm33EgdurGPQfpD4f0MgzBbEWSAAAAAElFTkSuQmCC') 0 2px no-repeat;
+  -webkit-background-size: 14px 15px;
+  display: block;
+}
+
+/* line 131, ../scss/job.scss */
+.unmastered {
+  display: inline-block;
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAeCAMAAAAIG46tAAAABGdBTUEAALGPC/xhBQAAAEhQTFRFaWlp////JCQk5+fn////NTU19fX1e3t7////Li4uBwcHHh4enp6eSkpK////AAAAPT09Nzc3UFBQREREV1dXXl5eY2NjZmZmYL0j8gAAABB0Uk5T+ECAiHjwVtQsqRBYsv6AAE/ZzXUAAADxSURBVCjPddPrDoMgDAXgKsi1oE6n7/+mays6NuUk/umXQ4wWGEtC9MNMGXwM5wwK+bmKDzVGKk1XqB6/2DMtV9j7E3uh9DqSErMoYZwPWkvIiefIGIaJiIbvEva0TEMg9GI03Cg7PeysfoRQjKCEWTRAFPtSYdYIfrmZnL2+Fg8p8Zn7X/jklECK+35XqkJqY4JnO7SF8kqwtpsr2DZawDYimDYacLaF1sGotue33RT9MoPPHwENb4LGJ0Qta+LyXTfM7liwLiP8GmDuztXssrK1WSVWltrprNBKHSyqrF19HUaTq5jfu8Jtoxm0cdfoAxWMPNN3nhIFAAAAAElFTkSuQmCC') 0 2px no-repeat;
+  -webkit-background-size: 14px 15px;
+  display: block;
+}
+
+/* line 135, ../scss/job.scss */
+#ability {
+  margin-top: 16px;
+}
+/* line 137, ../scss/job.scss */
+#ability .abBox {
+  margin: 8px auto;
+}
+/* line 140, ../scss/job.scss */
+#ability .contents {
+  position: relative;
+  margin: 8px auto;
+  padding-top: 8px;
+  width: 95%;
+}
+/* line 145, ../scss/job.scss */
+#ability .contents h1 {
+  margin-top: 0;
+  padding-left: 18px;
+}
+/* line 149, ../scss/job.scss */
+#ability .contents .label32 {
+  display: inline-block;
+  padding: 0 1em;
+  position: absolute;
+  right: 8px;
+  top: 10px;
+}
+/* line 157, ../scss/job.scss */
+#ability .contents .prof_detailData dd {
+  margin-right: 10px;
+}
+/* line 160, ../scss/job.scss */
+#ability .contents .prof_detailData dt:last-of-type {
+  clear: none;
+}
+/* line 164, ../scss/job.scss */
+#ability .contents p {
+  margin: 8px 0;
+}
+
+/* line 170, ../scss/job.scss */
+#myJob.metalPanel {
+  margin: 8px auto;
+  width: 312px;
+  height: 82px;
+}
+/* line 174, ../scss/job.scss */
+#myJob.metalPanel .link {
+  color: #333;
+}
+/* line 177, ../scss/job.scss */
+#myJob.metalPanel .link h1:after {
+  right: 8px;
+}
+/* line 183, ../scss/job.scss */
+#myJob .statusData_icon {
+  width: 304px;
+  left: -8px;
+  top: -22px;
+}
+/* line 188, ../scss/job.scss */
+#myJob .iconBgArc_l {
+  margin-bottom: 0;
+}
+/* line 190, ../scss/job.scss */
+#myJob .iconBgArc_l.type4 {
+  display: inline-block;
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJQAAACUCAMAAABC4vDmAAAAHlBMVEW8bBz0jCSmXxhsPhDMdh7LdR4AAADggSHzjCT/kybOu8x0AAAAB3RSTlO/w0cSfv4A0LYrLwAAAtRJREFUeNrt3A2K4zAMBWD9pXXuf+GF7m4fnZkS2Y5epmCd4ONJuC5YkdsvrIVaqIVaqIVaqIVaqIVaqG9lFiKyPUtEwuxClIVsb0rCLkC5AfQOZk5FvYru2x213V9cLJSja/d3BVY4AeXxVdRe696+yMJLUSCB86bSrHmUPUkQ7W1/rbb/h8FlZSgTiL55fpY9WWI1qHim9Fd0WK+sKEC5gHQsQl5giZ+Nsl4S4gLLzkVFgpRgxTkotO6AlGClWyh9pn2w+lSSMyGmOVZOJR2mfcbUo5JOEyUryZlAqlPlUQ8Txmme9VDNoeJhAumkrGIGZeeakJWNoxym0+pfVj6MEsz42SoZRQVM56qOxkoOB2rfa1Q2hJIKE4ZdRlCGIa9RWT/KMVBVDfRuVKB5VaroRTlMdQ30TlQAxY9KLggKKu9CBQcVXSiYaqeqB2VA1RXOqhxKYKqNShIo2phj1NMog6laZWmU8FCSRm0wVau2FArdI/UviQomKpIogaleJUkUgmIcVTmUAUUZqhwKJoIqiQpczRn9ixRKuEnJ56KUi9IUCiPFUeVQTFMPaiW1klqohfrNKOWi9HNRwkVJChXcEz1SKOMmZR+HQnHvU7ccSpkmTaKCeR2OJMqYKEuibkzULYvSRjNpGhW8pCKNct7fdk+gyP1D9xIoa6SgLINCVLSg8qjgoKIL5e2yMQeKHxWCyqO8XRYUUPyoEFQe5fUoT6C4UbUWI89KtDYovSVQ5GO92eBTpUpUjD7qUt4PTB7lrQzlEw8Fq1A29aSSPFBA0cdKZ5/paoHJR1FQ8UxA0VQwTaCgYpmAIqlgmkRBRTUBRTmvhlZUaq8MzU5fe1JK64CitDCKVul0IqaCVbrJe3uL2vXMNkLy8kXWVkcCqooFEgHVMfJq3DXy0HaQkYZfsnCvbyMKu/bTBKoKjaqG2fqIw0It1EIt1EIt1EIt1EJ9BOoPiAFn07pCDFYAAAAASUVORK5CYII=') -9px -9px no-repeat;
+  -webkit-background-size: 74px 74px;
+}
+/* line 193, ../scss/job.scss */
+#myJob .iconBgArc_l.type1 {
+  display: inline-block;
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJQAAACUCAMAAABC4vDmAAAAHlBMVEWZMA2CKQudMg2QLQxaHAeSLgwAAAChMw6uNw+3OhARfXebAAAAB3RSTlOwUtOCGP4AJVhJxgAAAt9JREFUeNrt3AtuGzEMBFD+FGvvf+EWcOxBHBihtNJsU5AneBgS6x9p+fgHq1CFKlShClWoQhWqUIX6VqEuYu1ZJuIaF6LUpb0pcb0AFQrQO5gGFfUiurXbo9rtq4uFCren5k1BZh4EVPirqL/Wi2ycJXMkcN5UgrUKpQ8SRMfRj6/VjwcMLt2GivssQQTP94LrPluxB+UgvQe9JgaWL0Yhpk8RQD+6wLJYjVKkBNIoS9eifIqE6fpU+UJUyN0E0ixLYhUq7Gk6JuupsjiLggkxnWPlVDJgOs6YRlQyaKJkJVnTsaCgOoeS1nLjlA+rNTmH8rsJpDUd9DMoXWtCVjqPitUmzFVMowwzvlplsyhvDaa1qtZ8DhUw7VDFFMp2mDDsNoNSDPkelSZQrOahgTGMcph2qXwUFTDta2AMohwoflRyQVBQxRDKOSgfQhlMO1U2gtLGQTUdQAlMe1WSR0VjoVqkUQrTbpWmUcJDSRrVdpvwWG8pFLpH6l8S5UyUJ1EC036VJFGMoPBeIYcKoLbXX1SkUAoTIypNofzWiaqbp1DCTUryKFKlUQYUY9IthYKJ0780ilaFqvYVqlD/C8q4KEuhhIuS34tyIqof3VMo5SalKVRwX/sihfroVFX2wyjTJAkUfdI9iVLmBwdNoj6YqPyXZp1mkjRKeUlpGhW8b10igSL3D91LoJSVlA79DMJR2dgPRp0SlA+hgpJUjyQKUfGDAuq6qHoMohAVPyig+FH1SKC4z6redWqthP+MAuqaBvaYXFXaiUqsKrEb2G1+/a0Tm5dfFCS8t0ugOGPlJ5dPd5jk9JruepPF+YVmngkotspizZI8ywQUV2Wx7vBilWnw8ILyvPLFxzwrTLr+7IkyTkBRWui7TukYMQG1e7J073nmVOdi+yHrOIlz8psXmQfvODpHEmWfkf8simsO7t+CXC//awJoTMQ16k8cClWoQhWqUIUqVKEK9StQfwDX12fcQtIBOwAAAABJRU5ErkJggg==') -9px -9px no-repeat;
+  -webkit-background-size: 74px 74px;
+}
+/* line 196, ../scss/job.scss */
+#myJob .iconBgArc_l.type2 {
+  display: inline-block;
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJQAAACUCAMAAABC4vDmAAAAHlBMVEU7ZDJNgUA2Wy1AazUpRSIAAAA/aTREcjlLfT5QhkND65OBAAAABnRSTlPJyU6JFQAe3itSAAAC9ElEQVR42u3cwXIaQQwEUI2ktWf+/4dTQIrO2k7SDDONXSXBgeOrllb4gGzHN6xCFapQhSpUoQpVqEIV6lO5R5i93csswv2FKA9oPpSFvwCVfga9X99nmKcU5QbNVwWXCpVhHzz98rq8Lx/OMIsUoDJOov51/QmL3IkC6ewZfYyOF1xg7UT5nQTP54Ls7vJtKLeTaPy7wMLIr0ddO8eRAIMrNqDSQIKIZl3CytUoR+dA4lgIy9eiAjGNhwthxUJUBkGiWJGrUGk3E0jzKksGxZoQ0zyLVRlvGk/WLSxGZYQJ4yRSGWUCaaOKRwVMK+qmiidQMI1VJqjmUb42J2Tl86i8PXdjZf3eDDmNMuyChXVV2SwqlueEuXqLOZTvyAkd9CmUwbRDZTMoR/OWF6J6DJVYULsamA+jAs3bpQoCpQoKOzQJlCgoqIJACYKCaSAqFhUwCaIiUbazeVjs9gjKEdTeqJxAiYLCWjAelQhqd1RJoETdwwPoNMpg2h2V0aj9QeG7hkU5xnx/VE6iAkHtjypIlAElGCoSBZMiKgKFkZINFYnSmWhUACVgvQeHQvcUUXEoA0qhMg6lNLEojJTm8ROi+L8UKqmlqA6UREWhxKZeSVVSL0mq9aFUte+H6iQqtEkFiepCE4lyLcopVGpRSaEOLergUK0LTY1EhTKpIFGuTMoJlHqo+sGiWteNFIFS9687jUpdUkmg1P1rB4/yLnv2eNTRdEHxqOiyzcmjckgqGRQqBDkNBMWhcnRVUDzqCN1E8ajUBcWjDhd8wxAo7a5qB4FSNzAJlHrWY/ZHXU3XPB6V+uYBpX8C/amfVEoHCiixCqZ5VLYNQ56zKKh0JqB0KpjmUVCpTEBpVS3XHV6sMkWuPFFZZFp8zLNqj/MoyWC13HEgJmgdUIqwEBOP2j1Zvvc8c8EiYFC7WZGSk9/Gi1qk7Di6kSQXn5G3/4vyJQf37a8g+cH9ObGI1gY0LcKz/olDoQpVqEIVqlCFKlShfgTqF3ImO9h74kH9AAAAAElFTkSuQmCC') -9px -9px no-repeat;
+  -webkit-background-size: 74px 74px;
+}
+/* line 199, ../scss/job.scss */
+#myJob .iconBgArc_l.type3 {
+  display: inline-block;
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJQAAACUCAMAAABC4vDmAAAAHlBMVEUwXqIpUIstWZoxYKYcOGAAAAA0Za83bLsuW506ccPe89JUAAAABnRSTlOoUoLOGACHQFUaAAAC+UlEQVR42u3c3W7qMBAE4P0jJu//wkeVIobCQayNd1Ikr3rXm08zdoDWRi5/cBZqoRZqoRZqoRZqoRZqoZ4m1MT9eht3MY0TUWrQPIybnoAKleubEQ0q6lm0HT+PLhYqzO8s23/mDucWBFQYRMe0rd1ma08wi0IUSABBgwENrEqU3kgA7W3/NW0/fnHv0jJU+INofzmHCyyPGtTRHEjv5rfLClDhEAGUZHWGJV2rCSGl556lc1GGmCDqT8smokIQ0z4wUEnMQoUnSMkOPTKoUhOmSyVZE0jjYWVVUm3C5FWSMOWqy1fo8SFKkNOEOVTyGcqOnKaQ0KCNofAch2liVjqOCuQ0bY6sYhjlyGm2ykdRNt+EdWVjqMC+q8gqhlCOBVWRlY+gFOXVRKX9qCgzocBulGFBVaksgWIFhR0YnSiDiR+VvAwKpqKsXkclZwSFqLpQDlOlyntQeuWgrtqBkloTdqDkUYGgqqOKNEqx9ao3oOZQaI8RlaRRP+3thPnpL4tSBFW/1DWJMqDq+7MkytFefX+eRGHvMfZfDhVoj9FfpFDKRWkKZVhSjEVlKZQgKMaikhTKgWL059+L2rioLYvaaZNGNS4qnxRv+/3BpBZqoRbqbpyL8u9FCRclKZQ16hPdUijlJqUpVFBf+5IfHC7cty7ZD6PMN3meRBkTZUmUMlGaRF2YqPwfzRrNJAkU+mO1l0YFDxUJFLk/tJdAaSO2l/83SKOgvO8fRo0SlHWhgpNUJFGIih8UUOdF1aIThaj4QQHFj6pFAsV9VrWmQ8dKaoNKHCthF9haDB5VqgzKhg91sV9ggDqjwBa9KIxWmRIHBenLyj48fFphko+P6c43eYyioOKZgGKrPOYckmeZgOKqPOZdvJhlkph5RYXwfEqgKp7tOv/aE2U5AUWp0Kqu0jFiAqp6ZWnt9cyh5qL8Ims/iXLlt+VFzYJ3OTpHEmVfI38vinMu3L8CuenpX00AjbuYxvoSh4VaqIVaqIVaqIVaqIX6CtQ/Mws6ODXUGigAAAAASUVORK5CYII=') -9px -9px no-repeat;
+  -webkit-background-size: 74px 74px;
+}
+/* line 203, ../scss/job.scss */
+#myJob .nameBox {
+  display: -webkit-box;
+  display: box;
+}
+/* line 205, ../scss/job.scss */
+#myJob .nameBox h1 {
+  font-weight: bold;
+}
+/* line 209, ../scss/job.scss */
+#myJob .master, #myJob #jobTree .contents ul li .newJob, #jobTree .contents ul li #myJob .newJob {
+  display: inline-block;
+  background: url("/img/parts/label_jobmaster.png") 0 0 no-repeat;
+  -webkit-background-size: 58px 18px;
+  display: block;
+  width: 58px;
+  height: 18px;
+  margin-left: 8px;
+}
+/* line 217, ../scss/job.scss */
+#myJob .abilities li {
+  display: inline-block;
+  width: 15px;
+  height: 0;
+  overflow: hidden;
+  padding-top: 18px;
+}
+
+/* line 227, ../scss/job.scss */
+#jobTop .message {
+  top: 0;
+  margin: 8px auto;
+}
+
+/* line 233, ../scss/job.scss */
+#jobTree .subHeader {
+  margin-bottom: 8px;
+}
+/* line 236, ../scss/job.scss */
+#jobTree .contentsborder h1 {
+  margin: 0 2px;
+}
+/* line 239, ../scss/job.scss */
+#jobTree .contents {
+  padding: 8px 0;
+  width: 95%;
+  margin: 0 auto 8px;
+}
+/* line 243, ../scss/job.scss */
+#jobTree .contents .contentsInner {
+  width: 272px;
+  margin: 0 0 0 4px;
+}
+/* line 247, ../scss/job.scss */
+#jobTree .contents ul {
+  position: relative;
+  height: 216px;
+  margin: 16px 0;
+}
+/* line 251, ../scss/job.scss */
+#jobTree .contents ul::before {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  content: "";
+  width: 216px;
+  height: 160px;
+  left: 28px;
+  top: 28px;
+  border: 2px solid #B9A46B;
+  border-right: 0;
+}
+/* line 263, ../scss/job.scss */
+#jobTree .contents ul::after {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  content: "";
+  width: 216px;
+  height: 0;
+  left: 28px;
+  top: 108px;
+  border-top: 2px solid #B9A46B;
+}
+/* line 274, ../scss/job.scss */
+#jobTree .contents ul li {
+  position: absolute;
+  width: 56px;
+  height: 56px;
+  z-index: 2;
+}
+/* line 279, ../scss/job.scss */
+#jobTree .contents ul li.on:after {
+  visibility: visible;
+  content: "";
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 110%;
+  z-index: auto;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+/* line 283, ../scss/job.scss */
+#jobTree .contents ul li::before {
+  position: absolute;
+  content: "";
+  width: 56px;
+  height: 56px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-border-radius: 56px;
+  border-radius: 56px;
+}
+/* line 292, ../scss/job.scss */
+#jobTree .contents ul li::before {
+  display: inline-block;
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHAAAABwCAMAAADxPgR5AAAAHlBMVEW5pGuDdEy5pGtwY0GOflJuYT8AAAColWGMfFC5pGvV+B9YAAAAB3RSTlOJycmBRxIAwsy6ZwAAAk5JREFUeNrt20GO4zAMRFFSJOX4/hcejYBOOUjUY9liYRbhqncPn7RXcUudGXcz1cdzVM3c68zIecz0MRg1XwwGsDEay0CH9rvpl8Fx3NZmf87WZjJT/sUdrX0wR9XiBggO2BgFeRUEt58akJdA1xdtylSfB+3IzZM2CYaCu0ZqzIAO7jrp50GDd0e0k2AYuHukxRkwFN5dUeN3EN6+YCAOQHjIuxv5LsrASxMlz4M4Bg3nWyfaGDT0LRuI76Cjb22jfwYDfasb4yOo8FY36ifQ4K0XDWDqAbFUfwMVXoaoAFMXCtFewYCXdcZ4AQ0LTU4UBGaLcQANXt5SDWBgoemJgkBOYgcVgZmJ+gM6AnMTvYMIJCR2MBCYnRgdNARmJ1oHlQdqB7HR/J3+BR2B+YneQNt44GYNVCaoDXzsxHlUcS7o4hsT3FyMC5rYTh0T5YLKBzcuuH3B5SP7F/yC/z1YuF7hg8IFhQ86F3Q+WLlglVqYXmmgMEFpoDNBb2ClnrCBzCOWDjoP9A4GD4wO1kLcaAedBXoHeYml/oDCAeUJBgeMJ1iFEwgwOIEAq3ACAQYnEGB1wjsIkPAulgqQkuhHkPDcgMFftRAWCjD3SY3Bj865BwSYfUYYACFmeGMwynqvxACEmOgBhJjrAYSY4wFMEeGNQYiyypOoQzDj7ZCJD+lWeD71qWBJOB/AhLXKhc89y408rxPg/Uv65U925c7LMA+CnOfmQZBl4nbg5sH5x6f4uk/nYY61WP3PAVKGmKBtCQjURUo5SEXEvc7MHw5qkybun2XPAAAAAElFTkSuQmCC') 0 0 no-repeat;
+  -webkit-background-size: 56px 56px;
+}
+/* line 295, ../scss/job.scss */
+#jobTree .contents ul li.selected::before {
+  width: 74px;
+  height: 74px;
+  -webkit-border-radius: 74px;
+  border-radius: 74px;
+  left: -9px;
+  top: -9px;
+}
+/* line 302, ../scss/job.scss */
+#jobTree .contents ul li.unpublished::before {
+  display: inline-block;
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAA3BAMAAACIpcUtAAAAGFBMVEWZmZmZmZmZmZmZmZmZmZmZmZkAAACZmZnnJLeyAAAAB3RSTlPrPaLIF3MASEKZGQAAAT5JREFUeF5t0zFPwzAQBWAXVLoiEMmKRElm1KpZWXBWECJZSXCua5q2yt8H3119Muebmq+nF8tPMUDz8DT/zfVzhk+k3ePMM66DdtUss2Z1JQFPQ3qLcPXxRTmT9dqtPC591DvyzmvOCz4LX3AGw6sF4PzgsjX0YyIEh1oYaCmKB49zMvjvaMn4JQfTU/5l9vhoaq83Qb9JMbZh40MczV2Ild3JwFuF5+KpKQHAfR5EW1IPVnRF54VoBrqef5qjZpHyTU0gKve7FZXUo421vdRp1OoLxFpSf7EO3F+sr/5NGQSVgAaCSpELEJXYTGnP/bNKNyeteypV6y6pTSJ3s1HKo3VIat2ktFokdPDViEo9W6UD9hhUVvVN3svniiqdYYYof7W6IVepXK5iHnVDJa3qhjKtbnUGrZAXKe1t0F9F88i9YFIMQwAAAABJRU5ErkJggg==') center center no-repeat;
+  -webkit-background-size: 21px 28px;
+  background-color: #333;
+}
+/* line 306, ../scss/job.scss */
+#jobTree .contents ul li .master, #jobTree .contents ul li .newJob {
+  display: inline-block;
+  background: url("/img/parts/label_jobmaster.png") 0 0 no-repeat;
+  -webkit-background-size: 58px 18px;
+  display: block;
+  position: absolute;
+  left: -9px;
+  bottom: -5px;
+  width: 58px;
+  height: 18px;
+  margin-left: 8px;
+}
+/* line 316, ../scss/job.scss */
+#jobTree .contents ul li .newJob {
+  display: inline-block;
+  background: url("/img/parts/label_newjob.png") 0 0 no-repeat;
+  -webkit-background-size: 58px 18px;
+}
+/* line 320, ../scss/job.scss */
+#jobTree .contents ul li .tapPoint {
+  position: absolute;
+  left: 16px;
+  top: -12px;
+  width: 24px;
+  height: 20px;
+  display: inline-block;
+  background: url("/img/parts/icon_job_tap_area.png") 0 0 no-repeat;
+  -webkit-background-size: 24px 20px;
+  z-index: 3;
+}
+/* line 329, ../scss/job.scss */
+#jobTree .contents ul li > img {
+  position: absolute;
+  top: -30px;
+  left: 10px;
+}
+/* line 338, ../scss/job.scss */
+#jobTree .contents:not(.special) .contentsBorder {
+  position: relative;
+}
+/* line 340, ../scss/job.scss */
+#jobTree .contents:not(.special) .contentsBorder h1::before {
+  display: none;
+}
+/* line 346, ../scss/job.scss */
+#jobTree .contents:not(.special) ul li:nth-of-type(3n) {
+  left: 141px;
+}
+/* line 349, ../scss/job.scss */
+#jobTree .contents:not(.special) ul li:nth-of-type(3n+1) {
+  left: 213px;
+}
+/* line 352, ../scss/job.scss */
+#jobTree .contents:not(.special) ul li:nth-of-type(3n+2) {
+  left: 69px;
+}
+/* line 355, ../scss/job.scss */
+#jobTree .contents:not(.special) ul li:first-of-type {
+  left: 0;
+}
+/* line 358, ../scss/job.scss */
+#jobTree .contents:not(.special) ul li:nth-of-type(-n+10) {
+  top: 160px;
+}
+/* line 361, ../scss/job.scss */
+#jobTree .contents:not(.special) ul li:nth-of-type(-n+7) {
+  top: 80px;
+}
+/* line 364, ../scss/job.scss */
+#jobTree .contents:not(.special) ul li:nth-of-type(-n+4) {
+  top: 0;
+}
+/* line 372, ../scss/job.scss */
+#jobTree .contents.type1 .contentsBorder:before {
+  display: inline-block;
+  background: url("/img/parts/jobtype1.png") 0 0 no-repeat;
+  -webkit-background-size: 41px 40px;
+  visibility: visible;
+  content: "";
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: -1px;
+  width: 40px;
+  height: 40px;
+  z-index: 2;
+}
+/* line 377, ../scss/job.scss */
+#jobTree .contents.type1 ul {
+  /*
+  li:not(.unpublished)::before{
+  	//background-color:#B73A10;
+  	@include backgroundSize_dataURI("/parts/bg_jobtree_pow.png", -9px, -9px, no-repeat);
+  }
+  */
+}
+/* line 388, ../scss/job.scss */
+#jobTree .contents.type1 ul li.selected::before {
+  display: inline-block;
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJQAAACUCAMAAABC4vDmAAAAMFBMVEX////////////////////////////x7u0AAADSurG7inqpWT6oNQ6ULw3///+3OhC9TeWrAAAACXRSTlMyOKEXVH3E9gBaArgpAAAEPklEQVR42u3ca3akIBAFYOQZQXH/u51fychc3qcoM4m1gu/cqqZbGxAf37Be1It6UR0ltJHWxq+yVhotnkMpbWwslDVasaOUlgACmNSKDyUwoXJiggOljItD5YxajNI2TpTVC1HaxclymhCFJA6WYCABiwi1yUhQcqNEmUhUhgy12UhWdiNAtWLavQ8hnF8VQvB+r4ZFgFKyAgpnoUIFJlUTNdk6hyCEuckWiqnWgajommqhGDc5f97qOI9/6jzOW+XjMtMoZesk4ICszLKqF4UmJAHoOq57HddfGLA6VWLIBKTEk6N9soZUYsC0h7voalTKCvuASvSbfEoCVREGYYGqE2ULMfWEhF0shGXHUAZiajaunRaGZQZQaAqQ0pQqgKoftcW03N/WXXP1yQouprX1opQF0ygJh6ugsqoTJcEEpNmwUCX7UGaNqaQyPaiNyoSVV20dKJs1XRSmvMoiqtE8MJFkBQ2sozZqE4aFqg1QtU+eBxNFVrC2yzpKp993YCLLKv0e1FWUS5sHJrKs0gY6QBWD8nQmXEV9JSpRDmqH9Yk0qx2iyqN0oXkMDdRFlFvYPFT5YlSiFJQDE7nKYVSIssuCwoKobB6lIKiFpguiUlmUSYICE30D06hMFuXSoMC0eKpcDiUyQbFGdaPku3dAUEtQR9o/RFkMijcqiyiVLuZgWqJKl3UFKJ2M+cGDOpJR14CSSffAxNE/CSh77x4EtUwVckMlciN18qHO3FCJzEjt0L2Fo75nhkpkVikPQa1L6vCZlUpwjhQWDFWCSkYKTFxDlaIEjNQjQ/Wpycz5wYk6MpMuWOccKzvpAtfzwGo6Aq7p4skPH378yihO01VBxVtBUIv7F29VQV3fEMWqepP6HUldb1LvTM0kVfmauRir+7uP05RH4aMob1K++NPFAOrZH3n4c5g1qcrPYQEotqSyDw5PrwnFRyz8+D38MPrspBce2x+ddHjsK78KuhijKr0KwqF67ksmRUnoH/sqJesvYvneutRfxKr4RP8ar6w/LPSPuXu29TdIeCAo0/zDiH/ljKL51xpPUvDXGqAMe1Qeutf4u5Y7qKh6/thmDsp2bQFgDkp3bZbYV5tgX0nXtpK1psa2Ev6oMKj+rUpsUx71wKYurua5ge1vjumTF/XIRsGdZaCiHNtS6TkGKm6Dm089g8mMb9OlN8E23YkNzYtNcZva+r3WZCY3ya80yenjBOtMVk0fvPBUJj9w8KJ9bIbINHhEBVX0a/sOpuFjT9SDFdzwsSccduIWTh0QQxVlWMFlTDSHDneCaQITwfHM2YUATaQHWadIaKI+8hsGZonmyC+qsPbOuEqHyc2iY+ToQlHxGPnaA/cl0NID99hCTMyHcNMEnySEZX7oJQ78113wXwzy469Q4b9shoPl9G+4wIj/qif+S7Gevz7svWitcSXde3nfi3pR/ynqDz1DEUgvJZHxAAAAAElFTkSuQmCC') 0 0 no-repeat;
+  -webkit-background-size: 74px 74px;
+}
+/* line 395, ../scss/job.scss */
+#jobTree .contents.type2 .contentsBorder:before {
+  display: inline-block;
+  background: url("/img/parts/jobtype2.png") 0 0 no-repeat;
+  -webkit-background-size: 40px 40px;
+  visibility: visible;
+  content: "";
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: -1px;
+  width: 40px;
+  height: 40px;
+  z-index: 2;
+}
+/* line 400, ../scss/job.scss */
+#jobTree .contents.type2 ul {
+  /*
+  li:not(.unpublished)::before{
+  	//background-color:#508643;
+  	@include backgroundSize_dataURI("/parts/bg_jobtree_tech.png", -9px, -9px, no-repeat);
+  }
+  */
+}
+/* line 411, ../scss/job.scss */
+#jobTree .contents.type2 ul li.selected::before {
+  display: inline-block;
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJQAAACUCAMAAABC4vDmAAAAMFBMVEX////////////////////////z8/IAAADFz8Kfspp2lG9HdzxBbDZNgEH///9QhkPUAPX4AAAACHRSTlNynYRUvSjtAK2p4MsAAASiSURBVHja7dxbktsgEAVQxGsAGdj/blOZuIzxpQdLiJaTqJPfVE5dGmHLgPj6wLpQF+pCvVFGyUXb9CirF6nMiSgldSJKS3UCSi02dcouihFlMCE6McOBMtKmTWWlmYxSOu0orSailE07y6oDUUjiYAkGErAOQpklHVCLORIl0kElDkMZnQ4rbYZR/ZicDyHH26NiDsG7wbDEQEw+5BtROfiBsETPZImp5AEEME/9WzOAoocOReufP+AihnAEJVOjbFifLVjPuDU045K7UUY3SeU//FNxjVU9aPcCVrexRMdEke4eqoC1SSU2mfyDVEQ55t9/7xVzE+Y3qcQGk4uvogxV24oqug0q8b7pPnKV6CfWiyv0VH2Ubsd0DwksHRYRlt6GktBNVUqQEF2F1egsuQUlmkOHKfUrViwYQvE+ysCDoJgwpD6rtBY8HAyB6q53NhIx7RjDaIl1sIfSpCnvLlKl30OJhglIu8JqqsQ7KAMm6KaRsFBl3kBpygR1kEojqjN4AU3jqkAMIIUyLVMhzVGZDmqpn+NgGq27qn62Lz+jVL3erWA6SLXW66D6EVW34HeTj047/Ezz3ez1dAIUGVSA59NBfYVtpQBFBOWKaYbK0VEJOqhYTDNUkY5KkEF5aPKDm92TUQkqKLveimlKVKulohLUAhPK4E3Kqu513UYZIiimqEwTJSGoYmKISjZRtgoKBm9CVlVUtoUyRFBsUZkahaMXIagpUcX2+Inm3PMQ1KSofDX/EFWNHpgmRVWNH6JUKmXhGTUtKptKKUAtqZSHoKZF5VOpBVD2ZfRYVPX4WUClp1rXFUiTUCs2VUEpGD0mlYemKihJzD3W+SdfUBpQHPWC0gUFLXVjM8XYbCqBC58rQXE0lcPlT/T7nL/TRavPI6DmqaDTC2qpUIymGrVUKA2oU5LSdxQuMpkXlXGhEY1FhhGFzwQalT8PFWNmVJ2PQlO8krpQV099FAq/y/CiArnMaECx9RS9IC+fkdRCfsjzvChPfshTn4FS9BcH3p4ivjic+vQkv2Lh9Dtt8hUUdvpZfU6/4HCcKAd9TrwKynyoTL8KwoXmtEWGfr3Ih4LXi/SLWCZUzBFfxNKvrLmS6ryy/tIw/5jnnu79DJIj/9yTvR+MfGRv82S6P63xRAU/rQFKQlSsQUni51rWqGLO9M+1pTRvVHVQmtwCwNtV/S0AuKskMj6jku1sK2F6rIfuthI6Kv6gcKsSW697Iqjupq7AtBIn29n+xjQDLREUsVGQoa1idrBRcMOWSs/RUMl0N5/OV8UXk9i8TTdMaPIN23RhACepwo4NzV8CVFNNYt8m+TDTpPceJwjzTNbsPnjhjzJ5OHgxcETFH2SCIypDh3ncESY3cJgHmv2YxsIDdXr8gJgfHTowmSOO0oWBmAaP0qFqvLPc2KFDVI0/HPzQ8UxUYfnhZkLT+JHf5Df0FnFyW044HO3ClvbGEjOOkaOLFmFZM/HAvfOBHjUQQTtNvJrAeR/CkyZ476ZfTcB/iQP/dRf/+sUg/Feo8LCs+h+u5eG/wIj/qqfPvxSL//qw66K13pV01+V9F+pC/aWoX85K8OSLZxuIAAAAAElFTkSuQmCC') 0 0 no-repeat;
+  -webkit-background-size: 74px 74px;
+}
+/* line 418, ../scss/job.scss */
+#jobTree .contents.type3 .contentsBorder:before {
+  display: inline-block;
+  background: url("/img/parts/jobtype3.png") 0 0 no-repeat;
+  -webkit-background-size: 40px 40px;
+  visibility: visible;
+  content: "";
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: -1px;
+  width: 40px;
+  height: 40px;
+  z-index: 2;
+}
+/* line 423, ../scss/job.scss */
+#jobTree .contents.type3 ul {
+  /*
+  li:not(.unpublished)::before{
+  	//background-color:#3A71C3;
+  	@include backgroundSize_dataURI("/parts/bg_jobtree_int.png", -9px, -9px, no-repeat);
+  }
+  */
+}
+/* line 434, ../scss/job.scss */
+#jobTree .contents.type3 ul li.selected::before {
+  display: inline-block;
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJQAAACUCAMAAABC4vDmAAAAMFBMVEX////////////////x8vQAAAC9x9dScZ+Tqclsi7gzY6ouWpw2abY4br7///86ccOgfLYUAAAABnRSTlNUgCi47QANRFg6AAAErklEQVR42u3c63IbIQwFYAEqhiSw7/+2dcdjnxC0FxZQ2nTVTGf6o+03R/Ku1wbo119YF+pCXagDZck4x/lV7Jwh+42ouyev1F2miAKI806xIUWUlROSE7MaKFtFtBuYnYwil0+Uo4ko4nyymCagQNJgkQIJrLEo6/KAcnYkyuRBZQahEJNaWNQZkw/xdru9v+r+hxh8Z1jUEVOI0Hypu6wjLNozcRaLA0BrsLD2d/dUdKp1X0Rvf37d6/3PT+k61UJqN3GE5lkfr98fBVfkdhW1jhNIT09dkIHVMljUYgIJnPSRygKsYLWoqMkUQHqInrWk5fFT2OAKTSpqMPnbkwTQIlXpeoy8b1DRcVP8RKpBsuwTKwqqRpSTYwJpOVBgyWG5NpSRpgmk5XCBJU2WaUEZsXUgNaBeLLGF5jjK5rL49oiplYS0nmHdOJdlj6IsC6azJMyWqGJ7EOUqE2I6WesqdwxlRBNI51n3f6ZWmSMoW5uKmLrCklT2AMqJJpCGq1yN2mkeTAPqpdppIG03L8I0UhW3G0ibzQswjVUFuYEyisr7HUyjVeV9kDZRXA4UTKNV5VjxFoqqgYJppKoaK9pAcdU8mAaq6gbyOorK5sE0GJXqBpaO1aDCY6CWCfUYq7AaFa0FxRio4ablMVa8FhWtXaPipOZhrMpZdzLKFkFNM2GsyqisiDJFUNOah+tCGZURUZ/d/Iag5jXwrfgvJZStg1omVh2VBUru3m1qUHgjKvePxNdeQFBzowoZ5QSUYlCIqris1yjKKEZQs6PijIJFGqmAoGZHFYShAoqL7iGouVEV/WOghJFCUPOjkoaKhJHy81G4gHphqEgYqYjuze9frIYKKFeOVNJBpXKoHFDaI4VaGyqqb3we3dPon69vf1TPeUBQGq+/UE86CXMO1HxVPelAub8D5YASXnyLUskvPxJuMhpzjnfFwo2G6isCuqeiKq4JF+pCaaIWtWpBXUldSXUkVd9mVJOqbzPyuwTdpPbeJeijkowSno91L57CMzIJj326KL/6dtjqolAlyq4/YukmJT5iCZOuiYriw6g46d8050BJk/49I0VbHwUlvUesJIwUUFwNlfpI8fbHi3qoYqS2P4j9SFpzvv5BLIYK/dPvXt75cN9roXxGub2vQRYd1LL3NYjNiqOOMUfZ3a/WFg3UsvnVGvqHqLSDMiLKZrWoEBTKHvhiOyTdoNyhJQBLUg2KDi2W8EnxGpX54LKSmKai4u6yEjkq7aBkFGWtWU9BDmp/UVdMSs3jneVvSq9ALoNqWSjok8ZAZde2pDIkhYHKtnHxaVAwmeZlunE8KjYs00UDp6pSPL6gGWXmqr6azLlF8nFmTu7sdoI4Lye2pzdehFGmcHLjhbxtZpCpY4uKoPIjTL4ydW574jhqnFCuf4NY6Gxd7wYxWcVxWEww9W869MOmCab+7Zk5dHcOpv6NrGB1k2Dq3/ILVjcpmwmbo304KPJZNk3ZRg5XuyiznbDhHq64BooQCeM0+2gC9iHECE2MIXjOG2V+6CEO+sdd6B8M8uOPUNE/bEaDxfQfHGCkf9ST/qFY33982HXQ2t6RdNfhfRfqQv2jqN+0QLFjZJTwywAAAABJRU5ErkJggg==') 0 0 no-repeat;
+  -webkit-background-size: 74px 74px;
+}
+/* line 440, ../scss/job.scss */
+#jobTree .contents.special ul {
+  height: auto;
+  min-height: 56px;
+}
+/* line 444, ../scss/job.scss */
+#jobTree .contents.special ul::before, #jobTree .contents.special ul::after {
+  display: none;
+}
+/* line 447, ../scss/job.scss */
+#jobTree .contents.special ul li {
+  position: relative;
+  float: left;
+  margin-right: 16px;
+  margin-bottom: 24px;
+}
+/* line 452, ../scss/job.scss */
+#jobTree .contents.special ul li:nth-of-type(4n) {
+  margin-right: 0;
+}
+/* line 459, ../scss/job.scss */
+#jobTree .contents.special ul li.selected::before {
+  display: inline-block;
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJQAAACUCAMAAABC4vDmAAAAMFBMVEX////////////////////x7uoAAADGsp/yyJ71p1i9kWTigiHLdiH0jST/////kyacsRpgAAAAB3RSTlOpVIAoxvYAE+ytjgAABF5JREFUeNrt3NtynDAMBmD5VGy29r7/27adZlZohdcYI0FTlIvcZCZffgkmC7bhxwXrRt2oG7WhnLHgfXmV92CNOxFlrC+V8taoojioDlNEOQS1YU4D5WwoXRWsE0YZKDsKjCDKhLKzghFAIUmDBfIkZB2MclAOKHBHomw5qOxhKOfLYeXdMKod0zTN8/xzUfM8T9NgWDAwTRPlUNo0MFmws3VhYiAGm8LOFsKu1lHR4+/X1zfq2tVC6DeFeclZqyVtDv0q6Gwdkl6e/MiLeuSXDFmdLYQuE5K+PLVCF2e1VdBlmlZEz/wklZ8vGbqmLhW0TZyEoGpxVocKtptmJDFRHfZizS1VG8VMAUkI6mMFpupDWdY6JBFTs5C10kLbg7KrrSMpdbNWW2i3oxy7EWBMzx2FYbGbg9uKcn5lnAhpIKzAhn0bCoZNvKoq2Iay3ISkURZX2S0oVzfJqNwGlK+ahFSeoxrNm4lptL5Uc6OBwJvHTUgaRa2rXAMF9D5+rAmzmvgVWEcZOlBoOlpFx8p8RNGf/T2TaDpYRf96hqoGNR9rwrniY2U+oAIbqIyoA1lsrAJF1YNCk0xW9aigHhQZcoGxqkcFtaACGSiRBgYeFUcBmXJsnpCKzjqsoxwJCpsnYXr+aSCNyq2iLA0KTTpR2VXU0h0kTXgFkl+5hnKVoNSichTFu4cm2aho/zjKF6wJUbJRTQXLr6BI99AkqyL94yijNOZYbNQNQ9ll99AkPVXL/lmG8rx72v3zDEWuPTSJ1vv1944yet3Deu+feUNZve6h6b1/FlF8pNAkXJWhgpWRwqA0oiqLoijHR+qMoXIEZa6BMgRllUcKVWzSEQXnoPIbCgjKXyMpX0U9dFGPKqroorAoqlRRqqYelKLqiknlO6kbdaOuh/IFK+miUsHy10fBNVBQ/Sdv0r2jT9V/8owuCouiTPWDQ9RNKhYs9+EjlmZS1Y9Y/PI76eJD1JmTzuacoMw5Q0VHynx6FKSJqj4K4kN16kghyp7SP9I9+/lBrN5Tl8qDWBwq/f6R7pXGw/2YT7j2fOs1SM76155tvTCKWT2o4pqv1nSSar5ao/2LWTsou+F1bVYOqrgNL7Zj1g0KNi0ByLpBmU2LJWLWDCpsXFaSZINKjWUlGJVaAzNtXti8VClKBhVbS5WwglIDM21e6Fn+9hTrYGP5Gy1QaWCmzYO+JZVRY6CK61x8muTvBsV2L9NNAqbOZbrYQFQJm4rbs/Q7yZrsvkXySdIEe7cTJDmTd7s3XiQpU3EDW1SiyP2pvkVFUcVNo9ue0uGtK358g1gcjGlsgxhXjYeVQsU0vukwjsfETePbM+Mu0tD2TK4aTwtT4qbxLb/ISh2zhKThLb+oGmAhiZlEtpGjq19UvBPccB8QxkFBbMM9byGHxZTSQpNSJCBW9pse4qB/3IX+wSDf/ggV/cNmNFjB/AcHGOkf9aR/KNb5x4fdB621jqS7D++7UTfqH0X9ApwL0nehgtXFAAAAAElFTkSuQmCC') 0 0 no-repeat;
+  -webkit-background-size: 74px 74px;
+}
+/* line 464, ../scss/job.scss */
+#jobTree .contents.special ~ .arrowLink {
+  margin-bottom: 16px;
+}
+
+/* line 488, ../scss/job.scss */
+#seasonAvatar .btn_l {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+}
+/* line 494, ../scss/job.scss */
+#seasonAvatar header h1 {
+  margin: 8px 0 0 0;
+  text-align: center;
+}
+/* line 498, ../scss/job.scss */
+#seasonAvatar header p {
+  display: inline-block;
+  background: url("/img/parts/season_avatar/discription.png") 0 0 no-repeat;
+  -webkit-background-size: 243px 57px;
+  display: block;
+  width: 243px;
+  height: 57px;
+  margin: 8px auto 16px auto;
+}
+/* line 507, ../scss/job.scss */
+#seasonAvatar .subHeader,
+#seasonAvatar .subHeader3 {
+  margin-bottom: 8px;
+}
+/* line 510, ../scss/job.scss */
+#seasonAvatar .contents {
+  width: 95%;
+  margin: 0 auto 8px auto;
+}
+/* line 513, ../scss/job.scss */
+#seasonAvatar .contents .contentsInner {
+  font-size: 90%;
+}
+/* line 518, ../scss/job.scss */
+#seasonAvatar .monthlyAvatar ul {
+  display: -webkit-box;
+  display: box;
+  width: 95%;
+  margin: 0 auto 16px auto;
+}
+/* line 523, ../scss/job.scss */
+#seasonAvatar .monthlyAvatar li {
+  width: 96px;
+  margin-right: 5px;
+  font-size: 80%;
+  color: #fff;
+  text-align: center;
+}
+/* line 530, ../scss/job.scss */
+#seasonAvatar .monthlyAvatar li:last-child {
+  margin-right: 0;
+}
+/* line 533, ../scss/job.scss */
+#seasonAvatar .monthlyAvatar li .iconBgRect_l {
+  width: 64px;
+  margin: 0 auto 4px auto;
+}
+/* line 541, ../scss/job.scss */
+#seasonAvatar .avatarEffect .contents:last-of-type {
+  margin-bottom: 16px;
+}
+/* line 545, ../scss/job.scss */
+#seasonAvatar .avatarEffect ul {
+  margin-top: 8px;
+}
+/* line 548, ../scss/job.scss */
+#seasonAvatar .avatarEffect li {
+  position: relative;
+  padding-left: 12px;
+}
+/* line 551, ../scss/job.scss */
+#seasonAvatar .avatarEffect li:before {
+  display: inline-block;
+  background: url("/img/parts/sprite_icon_parts_20130415_1.png") 0 -86px no-repeat;
+  -webkit-background-size: 140px 95px;
+  visibility: visible;
+  content: "";
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 8px;
+  height: 8px;
+  z-index: auto;
+}
+/* line 556, ../scss/job.scss */
+#seasonAvatar .avatarEffect li .up {
+  font-weight: bold;
+  color: #8c0000;
+}
+/* line 563, ../scss/job.scss */
+#seasonAvatar .getMethod .contents {
+  margin-bottom: 16px;
+}
+/* line 565, ../scss/job.scss */
+#seasonAvatar .getMethod .contents h1 {
+  margin-top: 8px;
+}
+/* line 568, ../scss/job.scss */
+#seasonAvatar .getMethod .contents .contentsInner {
+  margin-top: 0;
+}
+/* line 572, ../scss/job.scss */
+#seasonAvatar .getMethod .emblemList {
+  width: 95%;
+  margin: 8px auto 0 auto;
+}
+/* line 575, ../scss/job.scss */
+#seasonAvatar .getMethod .emblemList dt {
+  height: 50px;
+  margin-right: 8px;
+}
+/* line 578, ../scss/job.scss */
+#seasonAvatar .getMethod .emblemList dt:last-of-type {
+  height: 43px;
+}
+/* line 583, ../scss/job.scss */
+#seasonAvatar .getMethod .emblemList dd h1 {
+  margin-top: 0;
+  font-weight: bold;
+  color: #544123;
+}
+/* line 588, ../scss/job.scss */
+#seasonAvatar .getMethod .emblemList dd p {
+  font-size: inherit;
+  font-weight: normal;
+}
+/* line 594, ../scss/job.scss */
+#seasonAvatar .getMethod h3 {
+  font-weight: bold;
+  color: #ffc926;
+  text-shadow: -1px -1px 2px black, 1px -1px 2px black, -1px 1px 2px black, 1px 1px 2px black;
+  text-align: center;
+}
+/* line 600, ../scss/job.scss */
+#seasonAvatar .getMethod .paramStatus {
+  margin-top: 8px;
+  font-size: 90%;
+}
+/* line 604, ../scss/job.scss */
+#seasonAvatar .getMethod .message {
+  top: 0;
+  margin: 16px auto;
+}
+/* line 608, ../scss/job.scss */
+#seasonAvatar .getMethod .btn_l {
+  margin: 8px auto 16px auto;
+}
+/* line 611, ../scss/job.scss */
+#seasonAvatar .getMethod .specialGachaBtn {
+  margin: 8px 0 16px 0;
+  color: #fff;
+  text-align: center;
+}
+/* line 615, ../scss/job.scss */
+#seasonAvatar .getMethod .specialGachaBtn .btn_l {
+  margin-bottom: 4px;
+}
+/* line 618, ../scss/job.scss */
+#seasonAvatar .getMethod .specialGachaBtn .possess {
+  color: red;
+}
+/* line 622, ../scss/job.scss */
+#seasonAvatar .getMethod .dimmed p {
+  margin-top: 0;
+}
+/* line 630, ../scss/job.scss */
+#seasonAvatar .avatarDetail figure > img[src$="21003_640.png"],
+#seasonAvatar .jobAvatarDetail figure > img[src$="21003_640.png"] {
+  display: block;
+  margin-top: -50px;
+}
+/* line 636, ../scss/job.scss */
+#seasonAvatar .avatarDetail figcaption,
+#seasonAvatar .jobAvatarDetail figcaption {
+  margin-top: 8px;
+}
+/* line 638, ../scss/job.scss */
+#seasonAvatar .avatarDetail figcaption .contentsInner,
+#seasonAvatar .jobAvatarDetail figcaption .contentsInner {
+  margin-bottom: 8px;
+}
+/* line 641, ../scss/job.scss */
+#seasonAvatar .avatarDetail figcaption dl,
+#seasonAvatar .jobAvatarDetail figcaption dl {
+  width: 95%;
+  margin: 8px auto;
+}
+/* line 644, ../scss/job.scss */
+#seasonAvatar .avatarDetail figcaption dl dt,
+#seasonAvatar .jobAvatarDetail figcaption dl dt {
+  clear: none;
+  height: 18px;
+  margin: 0 2px 0 8px;
+  padding: 0 8px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  color: #fff;
+  line-height: 20px;
+}
+/* line 653, ../scss/job.scss */
+#seasonAvatar .avatarDetail figcaption dl dt:first-of-type,
+#seasonAvatar .jobAvatarDetail figcaption dl dt:first-of-type {
+  margin-left: 0;
+}
+/* line 656, ../scss/job.scss */
+#seasonAvatar .avatarDetail figcaption dl dt.pow,
+#seasonAvatar .jobAvatarDetail figcaption dl dt.pow {
+  background-color: #b73a10;
+}
+/* line 659, ../scss/job.scss */
+#seasonAvatar .avatarDetail figcaption dl dt.tec,
+#seasonAvatar .jobAvatarDetail figcaption dl dt.tec {
+  background-color: #508643;
+}
+/* line 662, ../scss/job.scss */
+#seasonAvatar .avatarDetail figcaption dl dt.int,
+#seasonAvatar .jobAvatarDetail figcaption dl dt.int {
+  background-color: #3a71c3;
+}
+/* line 666, ../scss/job.scss */
+#seasonAvatar .avatarDetail figcaption dl dd,
+#seasonAvatar .jobAvatarDetail figcaption dl dd {
+  font-weight: normal;
+}
+/* line 668, ../scss/job.scss */
+#seasonAvatar .avatarDetail figcaption dl dd .up,
+#seasonAvatar .jobAvatarDetail figcaption dl dd .up {
+  color: red;
+}
+/* line 673, ../scss/job.scss */
+#seasonAvatar .avatarDetail figcaption ul,
+#seasonAvatar .jobAvatarDetail figcaption ul {
+  width: 95%;
+  margin: 8px auto 0 auto;
+}
+/* line 676, ../scss/job.scss */
+#seasonAvatar .avatarDetail figcaption ul li,
+#seasonAvatar .jobAvatarDetail figcaption ul li {
+  display: inline-block;
+}
+/* line 681, ../scss/job.scss */
+#seasonAvatar .avatarDetail .btn_l,
+#seasonAvatar .jobAvatarDetail .btn_l {
+  margin-top: 16px;
+}
+/* line 686, ../scss/job.scss */
+#seasonAvatar .jobAvatarDetail figcaption {
+  position: relative;
+}
+/* line 688, ../scss/job.scss */
+#seasonAvatar .jobAvatarDetail figcaption .btn {
+  position: absolute;
+  left: 32px;
+  margin-top: 0;
+  z-index: 10;
+}
+/* line 694, ../scss/job.scss */
+#seasonAvatar .jobAvatarDetail figcaption .contents {
+  position: relative;
+  top: 16px;
+  margin-bottom: 32px;
+  padding-top: 24px;
+}
+/* line 701, ../scss/job.scss */
+#seasonAvatar .jobAvatarDetail figcaption .contentsInner .label48 {
+  width: 60%;
+  margin: 0 auto 8px auto;
+  font-size: 95%;
+  font-weight: normal;
+}
+/* line 708, ../scss/job.scss */
+#seasonAvatar .jobAvatarDetail figcaption h1 .close {
+  color: #8c0000;
+}
+/* line 712, ../scss/job.scss */
+#seasonAvatar .jobAvatarDetail .conditions {
+  margin-bottom: 8px;
+  font-size: 90%;
+}
+/* line 717, ../scss/job.scss */
+#seasonAvatar .jobAvatarDetail .emblem li {
+  position: relative;
+  width: 43px;
+  height: 43px;
+  visibility: hidden;
+}
+/* line 723, ../scss/job.scss */
+#seasonAvatar .jobAvatarDetail .emblem li.yet:after, #seasonAvatar .jobAvatarDetail .emblem li.got:after {
+  display: inline-block;
+  background: url("/img/emblem/season_avatar/frame.png") 0 0 no-repeat;
+  -webkit-background-size: 43px 43px;
+  visibility: visible;
+  content: "";
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 43px;
+  height: 43px;
+  z-index: auto;
+}
+/* line 729, ../scss/job.scss */
+#seasonAvatar .jobAvatarDetail .emblem.emblem_21003 li.got:after {
+  display: inline-block;
+  background: url("/img/emblem/season_avatar/21003.png") 0 0 no-repeat;
+  -webkit-background-size: 43px 43px;
+}
+/* line 734, ../scss/job.scss */
+#seasonAvatar .jobAvatarDetail .emblem.emblem_13003 li.got:after {
+  display: inline-block;
+  background: url("/img/emblem/season_avatar/13003.png") 0 0 no-repeat;
+  -webkit-background-size: 43px 43px;
+}
+/* line 739, ../scss/job.scss */
+#seasonAvatar .jobAvatarDetail .emblem.emblem_31003 li.got:after {
+  display: inline-block;
+  background: url("/img/emblem/season_avatar/31003.png") 0 0 no-repeat;
+  -webkit-background-size: 43px 43px;
+}

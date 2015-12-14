@@ -1,0 +1,84 @@
+{
+	"status":200,
+	"guild_name" : "サイババ団",
+	"guild_rank" : "A",
+	"rank_status" : "ランクステイ圏内",
+	"rank_rest_days" : "3",
+	"battle_start_rest" : "05:44",
+	"battle_end_rest" : "",
+	"stage": {
+		"stage_id": 1,
+		"name": "コッカラ草原",
+		"description":"初心者はこちら",
+		"clear_flg": true
+	},
+	"fields": [
+		{
+			"field_id": 2,
+			"field_name": "まよわない森",
+			"max_ability_cost_add": 0,
+			"max_protector_cost_add": 0,
+			"max_weapon_cost_add": 0,
+			"progress_percent": 100,
+			"progress_state": 2,
+			"rest_distance": 0,
+			"stage_name": "コッカラ草原",
+			"use_mp": 4,
+			"win_exp": 4,
+			"win_gil_max": 55,
+			"win_gil_min": 45,
+			"equip_treasures": [
+				{
+					"type": "equipment",
+					"id": 1,
+					"get_flg": true
+				},
+				{
+					"type": "treasure",
+					"id": 1,
+					"get_flg": false
+				}
+			]
+		},
+		{
+			"field_id": 1,
+			"field_name": "コッカラ草原",
+			"max_ability_cost_add": 0,
+			"max_protector_cost_add": 0,
+			"max_weapon_cost_add": 0,
+			"progress_percent": 100,
+			"progress_state": 1,
+			"rest_distance": 0,
+			"stage_name": "コッカラ草原",
+			"use_mp": 4,
+			"win_exp": 4,
+			"win_gil_max": 55,
+			"win_gil_min": 45,
+			"equip_treasures": [
+				{
+					"type": "equipment",
+					"id": 1,
+					"get_flg": true
+				},
+				{
+					"type": "equipment",
+					"id": 1,
+					"get_flg": false
+				},
+				{
+					"type": "treasure",
+					"id": 1,
+					"get_flg": false
+				}
+			]
+		}
+	],
+	"user": {
+		"mp": 40,
+		"max_mp": 100,
+		"mp_percent": 40,
+		"exp_current": 10,
+		"exp_levelup": 50,
+		"exp_percent": 20
+	}
+}

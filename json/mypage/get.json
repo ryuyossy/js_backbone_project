@@ -1,0 +1,184 @@
+{
+	"status": 200,
+	"app_version": "XXXXXXXXX",
+	"init_quest_flg" : false,
+	"guild_name": "サイババ団",
+	"rank_rest_days": "3",
+	"master_user_id": 124,
+	"battle_enemy_flg": false,
+	"next_tutorial_id": "9901",
+	"npc_comment": "<em>装備</em>はチェックした？お気に入りの装備はセットに保存できるよ！",
+	"npc_comment_url": "guild/",
+	"user": {
+		"user_id": 2233,
+		"user_name": "たけひろし",
+		"avatar_id": "20001",
+		"job_name": "みならい剣士",
+		"tp": 30
+	},
+	"level": 3,
+	"ticket_animation_id":null,
+  	"avatar_animation_id":null,
+	"login_bonus": null,
+	"guild_name": "サイババ団",
+	"position_name": "ギルドオーナー",
+	"guild_rank": "D",
+	"guild_rank_result": "stay",
+	"rank_status": "fix",
+	"job_tree_name": "初期ジョブ",
+	"profile_comment": "がんばりましょう！",
+	"power": 5552,
+	"attack": 1666,
+	"defense": 1575,
+	"sp_attack": 3385,
+	"sp_defense": 2971,
+	"gp": 0,
+	"mp": 100,
+	"max_mp": 100,
+    "main_weapon": {
+		"step": 0,
+        "user_equip_no": 13577836537564,
+        "equip_id": 110016
+    },
+    "main_protector": {
+		"step": 2,
+        "user_equip_no": 13577269582595,
+        "equip_id": 210009
+    },
+	"weapon_cost": 1111,
+	"max_weapon_cost": 2222,
+	"protector_cost": 3333,
+	"max_protector_cost": 4444,
+	"max_hp": 223,
+	"ap": 333,
+	"max_ap": 334,
+	"gil": 55555555555,
+	"gacha_p": 66666666666,
+	"latest_info_count": 1,
+	"guild_bp": 555,
+	"rankup_bp": 9876,
+	"infos": [
+		{
+			"message": "メッセージが届いています",
+			"notice_type": 9
+		},{
+			"message": "メッセージが届いています",
+			"notice_type": 9
+		},{
+			"message": "メッセージが届いています",
+			"notice_type": 9
+		}
+	],
+ 	"banners":[
+        {
+            "image_file_name":"banner_battleStrengthening.png",
+            "banner_text":"バトルで勝利して、報酬を勝ち取れ",
+            "redirect_path": "event/battle/weeks/"
+        }
+    ],
+	"compose_gil_discount_flg": true,
+    "ranking": {
+        "state": "out",
+		"rank": "F",
+		"order": null
+    },
+	"bbs_more_flg": true,
+	"bbs_posts": [
+		{
+			"message_id": "221351844347353",
+			"post_datetime": "11/02 17:19",
+			"user_id": 2,
+			"user_name": "たけひろし",
+			"avatar_id": "00001",
+			"body_text": "あああ",
+			"like_num": 3,
+			"reply_num": 2,
+			"self_liked_flg": false
+		},
+		{
+			"message_id": "221351844347352",
+			"post_datetime": "11/02 17:19",
+			"user_id": 2233,
+			"user_name": "たけひろし",
+			"avatar_id": "00001",
+			"body_text": "あああ",
+			"like_num": 1,
+			"reply_num": 0,
+			"self_liked_flg": true
+		},
+		{
+			"message_id": "221351844347351",
+			"post_datetime": "11/02 17:19",
+			"user_id": 22,
+			"user_name": "たけひろし",
+			"avatar_id": "00001",
+			"body_text": "あああ",
+			"like_num": 0,
+			"reply_num": 1,
+			"self_liked_flg": false
+		}
+	],
+	"greets_more_flg": true,
+	"greets": [
+		{
+			"greet_id": "1",
+			"greet_datetime": "11/05 10:00",
+			"from_user_id": 555,
+			"from_user_name": "ひろし２",
+			"from_avatar_id": "00001",
+			"body_text": "あああ"
+		}, {
+			"greet_id": "1",
+			"greet_datetime": "11/05 10:00",
+			"from_user_id": 666,
+			"from_user_name": "ひろし２",
+			"from_avatar_id": "00001",
+			"body_text": "あああ"
+		}, {
+			"greet_id": "1",
+			"greet_datetime": "11/05 10:00",
+			"from_user_id": 777,
+			"from_user_name": "ひろし２",
+			"from_avatar_id": "00001",
+			"body_text": "あああ"
+		}
+	],
+	"new_users_more_flg": true,
+	"new_users": [
+		{
+			"user_id": 32,
+			"avatar_id": "00001",
+			"level": 1,
+			"user_name": "くにおくん",
+			"guild_name": "熱血高校",
+			"job_name": "みならい剣士",
+			"attack": 111,
+			"defense": 222,
+			"sp_attack": 0,
+			"sp_defense": 0
+		}
+	],
+	"system_infos": [
+        {
+            "info_datetime": "12/11 15:53",
+            "info_id": 1,
+            "info_kind": 1,
+            "info_kind_name": "メンテナンス",
+            "title": "メンテナンスのお知らせ"
+        },
+        {
+            "info_datetime": "12/11 15:53",
+            "info_id": 2,
+            "info_kind": 2,
+            "info_kind_name": "重要",
+            "title": "重要なお知らせ"
+        },
+        {
+            "info_datetime": "12/11 15:53",
+            "info_id": 3,
+            "info_kind": 3,
+            "info_kind_name": "キャンペーン",
+            "title": "キャンペーン"
+        }
+	]
+}

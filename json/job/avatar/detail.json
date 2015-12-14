@@ -1,0 +1,55 @@
+{
+    "status": 200,
+    "avatar": {
+        "id": "31003",
+        "name": "【母の日】魔術師（女）",
+        "description": "『感謝を込めて、全部焼きます！』。母への感謝をファイヤーに込める女魔術師。",
+        "selected": false,
+        "changeable": true,
+        "initial_flg": false
+    },
+    "emblem": {
+        "emblem_id": "31003",
+        "own_num": 1,
+        "max_num": 4,
+        "dest_end_flg": true
+    },
+    "own_bonus": [
+        {
+            "type": 1,
+            "percent": 0
+        },
+        {
+            "type": 2,
+            "percent": 0
+        },
+        {
+            "type": 3,
+            "percent": 0.5
+        }
+    ],
+    "battle_bonus": {
+        "add_jex_start_date": "2013/05/01",
+        "add_jex_end_date": "2013/05/14",
+        "add_jex_percent": 10
+    },
+    "conditions": {
+        "jobs": [
+            {
+                "id": 300,
+                "name": "みならい術士"
+            }
+        ],
+        "job_num": 1,
+        "stages": [
+            {
+                "id": 1,
+                "name": "コッカラ草原"
+            }
+        ],
+        "items": [],
+        "equips": [],
+        "materials": []
+    },
+    "banners": []
+}

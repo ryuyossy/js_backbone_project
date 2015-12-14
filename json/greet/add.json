@@ -1,0 +1,10 @@
+{
+    "status" : 200,
+    "body_text": "おはようございます！",
+	"from_avatar_id": "00001",
+    "from_user_id": 2,
+    "from_user_name": "たけひろし",
+    "greet_datetime": "11/05 10:00",
+    "greet_id": "2_10_1353039985691",
+    "win_gacha_p": 3
+}

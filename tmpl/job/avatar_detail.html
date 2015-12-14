@@ -1,0 +1,80 @@
+<h1 class="mainHeader">{{>avatar.name}}</h1>
+
+{{if avatar.initial_flg}}
+<figure>
+	<div class="avatar_img"><img src="{{getImgRoot/}}/avatar/{{>avatar.id}}_640.png"></div>
+	<figcaption>
+		{{if avatar.changeable }}
+		<button class="btn large jsJobChange" data-avatar-id="{{>avatar.id}}">選択する</button>
+		{{else}}
+		<button class="btn large disable">選択不可</button>
+		{{/if}}
+	</figcaption>
+</figure>
+{{else}}
+<section id="seasonAvatar">
+	<div class="jobAvatarDetail">
+		<figure>
+			<div class="avatar_img"><img src="{{getImgRoot/}}/avatar/{{>avatar.id}}_640.png"></div>
+			<figcaption>
+				{{if avatar.changeable && emblem.own_num === emblem.max_num }}
+				<button class="btn large jsJobChange" data-avatar-id="{{>avatar.id}}">選択する</button>
+				{{else}}
+				<button class="btn large disable">選択不可</button>
+				{{/if}}
+				<section class="contents contentsShadow statusData">
+					<div class="contentsInner">
+						{{if emblem.own_num !== emblem.max_num }}
+						<span class="label48">必要エンブレムが足りません</span>
+						{{else !avatar.changeable }}
+						<span class="label48">転職条件を満たしていません</span>
+						{{/if}}
+						{{>avatar.description}}
+					</div>
+					<h1>所持ボーナス</h1>
+					<dl>
+						<dt class="pow">力</dt><dd><span class="up">+{{>own_bonus[0].percent}}%</span></dd>
+						<dt class="tec">技</dt><dd><span class="up">+{{>own_bonus[1].percent}}%</span></dd>
+						<dt class="int">知</dt><dd><span class="up">+{{>own_bonus[2].percent}}%</span></dd>
+					</dl>
+					<h1>バトルボーナス</h1>
+					<div class="contentsInner">
+						{{>~datetimeToJpSignageWithoutTime(battle_bonus.add_jex_start_date)}} ({{>~getDayFromDate(battle_bonus.add_jex_start_date)}}) 〜 {{>~datetimeToJpSignageWithoutTime(battle_bonus.add_jex_end_date)}} ({{>~getDayFromDate(battle_bonus.add_jex_end_date)}}) の期間中、ブレイブバトルで獲得できるJExが{{>battle_bonus.add_jex_percent}}%アップ！
+					</div>
+					<h1>転職条件</h1>
+					{{jobChangeConditions conditions=conditions /}}
+					<h1>必要なエンブレム{{if emblem.dest_end_flg }}<span class="close">＜配布終了＞</span>{{/if}}</h1>
+					<ul class="emblem emblem_{{>avatar.id}}">
+						{{for ~itelator(1, emblem.own_num)}}
+						<li class="got">●</li>
+						{{/for}}
+						{{if emblem.own_num !== emblem.max_num}}
+						{{for ~itelator(1, emblem.max_num - emblem.own_num)}}
+						<li class="yet">○</li>
+						{{/for}}
+						{{/if}}
+					</ul>
+				</section>
+			</figcaption>
+		</figure>
+	</div>
+</section>
+{{/if}}
+<hr>
+
+<div class="banner">
+	{{for #data tmpl="#jsTemplateBanners" /}}
+</div>
+
+<div class="linkGroup">
+	<div class="arrowLink"><button class="link prev" data-href="job/avatar_select/{{>avatar.id.substr(0,3)}}/">ジョブアバター選択に戻る</button></div>
+	<div class="arrowLink"><button class="link prev" data-href="job/">ジョブトップに戻る</button></div>
+</div>
+
+<div class="helpList">
+	<ul>
+		<li><button class="link" data-href="help/detail/401/">ジョブってなに？</button></li>
+		<li><button class="link" data-href="help/detail/408/">アバターチェンジってなに？</button></li>
+	</ul>
+</div>
+

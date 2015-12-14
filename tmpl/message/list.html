@@ -1,0 +1,31 @@
+<h1 class="mainHeader">メッセージ</h1>
+<section id="messageList" class="unitary">
+	<div class="jsMessageList jsListAll">
+		{{for #data tmpl="#jsTemplateMessage" /}}
+	</div>
+	{{if messages_more_flg}}
+	<div class="moreLink jsListMore">
+		<button class="link"><span>もっと見る</span></button>
+	</div>
+	{{/if}}
+</section>
+
+<section class="caution">
+	<article>
+		<ul>
+			<li>受け取ったメッセージは2週間保存されます。</li>
+		</ul>
+	</article>
+</section>
+
+<hr>
+
+<div class="arrowLink">
+	<button class="link prev" data-href="profile/">プロフに戻る</button>
+</div>
+
+<div class="helpList">
+	<ul>
+		<li><button class="link" data-href="help/detail/1002/">メッセージってなに？</button></li>
+	</ul>
+</div>	

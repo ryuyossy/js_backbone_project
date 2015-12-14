@@ -1,0 +1,401 @@
+<div id="jsTutorial">
+	
+	{{*// メイン画面}}
+	<div id="tutorial_main" class="jsTutorialMain" style="display:none">
+		{{if product_mode && tutorial_step == 0}}
+			<!-- CAMP Onetag -->
+			<script type="text/javascript" src="http://ot.ca-mpr.jp/s/sp/10/?i4ot=191" charset="UTF-8"></script>
+			<!-- CAMP Onetag -->
+		{{/if}}
+	</div>
+	
+	{{*// ユーザー登録画面}}
+	<div id="register" class="jsTutorialJoin" style="display:none">
+		<section class="contents contentsShadow">
+			<div class="contentsBorder">
+				<h1><span class="subscription hide">入隊申請書</span></h1>
+
+				<div class="registForm jsForm">
+					<h2 class="name"><span class="hide">名前</span><span class="caption">（10文字以内）</span></h2>
+					<label class="inputName">
+						<input type="text" class="jsTutorialJoinFormUserName jsFormLengthTarget" data-max="10" value="{{>user_name}}" placeholder="10文字以内">
+						<span class="textCount jsFormLengthCounter">10</span>
+					</label>
+					<span class="label48 alert">名前は提出後に変更できません</span>
+
+					<h2 class="sex"><span class="hide">性別</span></h2>
+					<div class="selectSex">
+						<label class="male">
+							<div class="check"><input type="radio" name="sex" class="jsTutorialJoinFormSexType" value="MAN" data-avatar-id="{{>avatars[0].avatar_id}}" checked="checked">男</div>
+							<div class="iconBgRect_l gold"><img src="{{getImgRoot/}}/avatar/{{>avatars[0].avatar_id}}_140.png"></div>
+						</label>
+						<label class="female">
+							<div class="check"><input type="radio" name="sex" class="jsTutorialJoinFormSexType" value="WOMAN" data-avatar-id="{{>avatars[1].avatar_id}}">女</div>
+							<div class="iconBgRect_l gold"><img src="{{getImgRoot/}}/avatar/{{>avatars[1].avatar_id}}_140.png"></div>
+						</label>
+					</div>
+					<span class="label48 caption">性別はあとから変更できます</span>
+				</div>
+
+				<button class="btn large jsTutorialJoinConfirm">提出する</button>
+			</div>
+		</section>
+	</div>
+	
+	{{*// 武具プレゼント画面}}
+	<div id="presentEquip" class="jsTutorialPresentEquip" style="display:none">
+		{{for #data tmpl="#jsTemplateEquip" /}}
+		<button class="btn large jsTutorialEquip">装備して戦場へ</button>
+	</div>
+	
+	{{*// バトル待機画面}}
+	<div class="jsTutorialBattle" style="display:none">
+	
+		<div id="battle">
+			<div class="battleInner">
+
+				<header id="battleHeader">
+					<div class="myGuildName">
+						<h1>熱血のジブンギルド</h1>
+						<p><span class="jsTutorialBattleBP">0</span> BP</p>
+					</div>
+
+					<div class="opponentGuildName">
+						<h1>情熱のアイテギルド</h1>
+						<p><span>0</span> BP</p>
+					</div>
+				</header>
+
+				<button class="link reload"><span class="hide">更新</span></button>
+				<div class="reloadTime">更新 <span class="jsTutorialReloadTime">00:00</span></div>
+				
+				<div class="jsCanvas">
+					<canvas id="canvas" width="320" height="200"></canvas>
+					<div class="jsLoaderBox"><div class="jsLoaderA"></div></div>
+				</div>
+				
+				<section id="battleStatus">
+					<div class="combo attack jsTutorialCombo" style="display:none"></div>
+				</section>
+
+				<div class="gergeBox">
+					<div class="tentionGerge">
+						<div class="gergeBg"><span class="gerge tention" style="width:90%;"></span></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<section id="battleMenu" class="metalPanel">
+			<div class="battleActionBtn jsBattleActionBtn">
+				<button class="btn_l battle regular">
+					<span class="hide">攻撃</span>
+					<span class="expend">消費AP 10</span>
+				</button>
+
+				<button class="btn_l battleWhite special ability_close">
+					<span class="hide">アビリティ</span>
+				</button>
+
+				<button class="btn_l turquoise recovery">
+					<span class="hide">HP回復</span>
+					<span class="expend">消費AP 20</span>
+				</button>
+			</div>
+
+
+			<section class="abilityList jsAbilityList" style="display: none;">
+				<article>
+					<div class="abilityInner">
+						<h1>村人パンチ</h1>
+						<p>村民の思いを込めた一撃で、敵1体に特殊攻撃ダメージ！</p>
+						<div class="description">
+							<dl>
+								<dt>消費AP</dt><dd>10（残り1回）</dd>
+							</dl>
+							<button class="btn_l red jsAbilityBtn">使う</button>
+						</div>
+					</div>
+				</article>
+			</section>
+
+			<section id="myStatus" class="statusData_icon">
+				<div class="columnBox">
+					<div class="iconBgArc_l blue"><img class="jsTutorialBattleAvatar" src=""></div>
+					<div class="contentsInner">
+						<h1>
+							<span class="formation vanGuard"><span class="hide">前衛</span></span><span class="jsTutorialBattleUserName"></span><!-- //全角14文字まで -->
+						</h1>
+						<table class="gergeTable short">
+							<tr>
+								<th>AP</th>
+								<td class="gergeBox">
+									<div class="gergeBgFrame">
+										<div class="gergeBg">
+											<span class="gerge battleP" style="width:90%;"></span>
+										</div>
+									</div>
+								</td>
+								<td>90/100</td>
+							</tr>
+							<tr>
+								<th>HP</th>
+								<td class="gergeBox">
+									<div class="gergeBgFrame">
+										<div class="gergeBg">
+											<span class="gerge hp" style="width:100%;"></span>
+										</div>
+									</div>
+								</td>
+								<td>5600/5600</td>
+							</tr>
+						</table>
+						<dl>
+							<dt class="job">ジョブ</dt><dd>村人</dd>
+							<dt class="jobExp">JEx.</dt><dd>110/5000</dd>
+						</dl>
+					</div>
+				</div>
+			</section>
+			<div class="innerBtnBox">
+				<button class="btn cheer">鼓舞でAP回復</button><button class="btn quest">クエストでAP回復</button>
+			</div>
+		</section>
+	</div>
+	
+	{{*// おさらい画面}}
+	<div id="tutorial_confirm" class="jsTutorialReview" style="display:none">
+		<div class="braveShort">
+			<h1 class="subHeader">
+				<span class="subHeaderBg_l"></span>
+				<span>ブレイブバトルとは？</span>
+				<span class="subHeaderBg_r"></span>
+			</h1>
+			<div class="questNvgation"></div>
+			<h1 class="subHeader3">
+				<span>仲間とのコンボで効果アップ!</span>
+			</h1>
+			<div class="questshortBn">
+				<img src="{{getImgRoot/}}/parts/shortTutorial_brave_combo.png" alt="仲間とのコンボで効果アップ!" class="title">
+			</div>
+			<h1 class="subHeader3">
+				<span>バトルに参加してJExを獲得!</span>
+			</h1>
+			<div class="questshortBn"> 
+				<img src="{{getImgRoot/}}/parts/shortTutorial_brave_jexget.png" alt="バトルに参加してJExを獲得!" class="title">
+			</div>
+			<h1 class="subHeader3">
+				<span>ヤツらの襲来に備えろ!</span>
+			</h1>
+			<div class="questshortBn">
+				<img src="{{getImgRoot/}}/parts/shortTutorial_brave_guildRnk.png" alt="ヤツらの襲来に備えろ!" class="title">
+			</div>
+		</div>
+		<h1 class="subHeader">
+			<span class="subHeaderBg_l"></span>
+			<span>報酬内容</span>
+			<span class="subHeaderBg_r"></span>
+		</h1>
+		<section class="itemDetail reward">
+			<section class="contents contentsShadow statusData">
+				<h1>勝利報酬</h1>
+				<ul class="findingItem">
+					<li><img src="{{getImgRoot/}}/item/gil.png"></li>
+					<li><img src="{{getImgRoot/}}/gacha/point.png"></li>
+					<li><img src="{{getImgRoot/}}/item/medal.png"></li>
+				</ul>
+			</section>
+			<section class="contents contentsShadow statusData">
+				<h1>敗北報酬</h1>
+				<ul class="findingItem">
+					<li><img src="{{getImgRoot/}}/item/gil.png"></li>
+					<li><img src="{{getImgRoot/}}/item/medal.png"></li>
+				</ul>
+			</section>
+		</section>
+		<section class="caution">
+			<article>
+				<ul>
+					<li>イベント、その他の事情により報酬内容が変更になることがあります。あらかじめご了承ください。</li>
+				</ul>
+			</article>
+		</section>
+		<button class="btn large jsTutorialButtonNext">次へ進む</button>
+	</div>
+	
+	{{*// 共通UI}}
+	<div id="tutorial_common" class="jsTutorialCommon">
+		<div class="story jsTutorialStory" style="display:none">
+			<p>ここは、とある時代のとある王国…</p>
+		</div>
+		<div class="progress jsTutorialGuide" style="display:none; z-index:1000">
+			<div class="gergeBox">
+				<h1>チュートリアル完了まで<span class="progressCount jsTutorialGergeNum">0/10</span></h1>
+				<div class="gergeBgFrame">
+					<div class="gergeBg"><span class="gerge tutorial jsTutorialGergeBar" style="width:0%;"></span></div>
+				</div>
+			</div>
+			<div class="navMessage jsTutorialGuideMain">
+				<figure class="jsTutorialGuideCharacter"></figure>
+				<p class="messageInner">
+					<span class="messageBody jsTutorialGuideMessage"></span>
+					<span class="proceed jsTutorialProceed" style="display:none"><span class="hide">進む</span></span>
+				</p>
+			</div>
+		</div>
+		<div class="btn single jsTutorialButtonSingle" style="display:none; z-index:1000">次へ進む</div>
+		<span class="tapArrow jsTutorialTapArrow" style="display:none; z-index:1000">
+			<span class="hide">TAP!</span>
+		</span>
+	</div>
+	
+	{{*// フルスクリーンアニメーション用要素}}
+	<div class="jsTutorialFullScreen" style="display:none">
+		<div class="jsTutorialGauge" style="display:none">
+			<header id="gaugeTitle">
+				<img class="chara jsTutorialGaugeAvatar" height="64" width="320" src="">
+				<h2><img class="title jsTutorialGaugeTitle" height="30" width="200" src="{{getImgRoot/}}/assets/attackgauge_attack_01.png"></h2>
+			</header>
+			<div id="whiteOut"></div>
+			<div id="stopGaugeMessage"></div>
+		</div>
+		<div id="fullScreen">
+			<div class="jsCanvas"></div>
+			<div class="pause"><button class="pushEnter">TAP SCREEN</button></div>
+		</div>
+	</div>
+	
+	{{*// スポットライト}}
+	<canvas id="jsTutorialSpotlight"></canvas>
+	
+	{{*// タップ用透明要素}}
+	<div id="jsTutorialTouch" style="z-index:2000"></div>
+	
+</div>
+
+{{escape}}
+
+<script id="jsTemplateTutorialJoinConfirm" type="text/x-jsrender">
+	<div class="modalInner registConfirm">
+		<p>
+			この内容で登録しますか？
+		</p>
+		<div class="registUserDate">
+			<div class="iconBgRect_l gold"><img src="{{getImgRoot/}}/avatar/0000{{if sex_type==='MAN'}}1{{else sex_type==='WOMAN'}}2{{/if}}_140.png"></div>
+			<span>名前</span>{{>user_name}}
+		</div>
+		<span class="label48 alert">名前は登録後に変更できません</span>
+		<div class="innerBtnBox">
+			<button class="btn cancel jsClosePopup">やめる</button>
+			<button class="btn jsClosePopup jsTutorialJoinFix">登録する</button>
+		</div>
+	</div>
+</script>
+
+<script id="jsTemplateTutorialJoinComplete" type="text/x-jsrender">
+	<div class="modalInner">
+		<p>登録が完了しました。</p>
+		<button class="btn short close jsCloseAllPopup jsTutorialJoinNext">次へ進む</button>
+	</div>
+</script>
+
+<script id="jsTemplateTutorialCombo" type="text/x-jsrender">
+	<span class="action"><span class="hide">攻撃</span></span>
+	<div class="chain">
+		<span class="numWhite num_{{>num}}"></span>
+	</div>
+	{{if is_chance}}
+	<!-- // コンボチャンス -->
+	<div class="remainingTime chance">
+		<div class="remainingTimeInner">
+			コンボチャンス！
+			<span class="rest">残り {{>time}}</span>
+		</div>
+	</div>
+	{{else}}
+	<!-- // 通常アタック -->
+	<div class="remainingTime">
+		<div class="remainingTimeInner">
+			コンボ待ち時間
+			<span class="rest">残り {{>time}}</span>
+		</div>
+	</div>
+	{{/if}}
+</script>
+
+<script id="jsTemplatePopupTutorialBuildGuildConfirm" type="text/x-jsrender">
+	<div class="modalInner makeGuild">
+		<p>
+			<span class="confirmGuildName">ギルド名（{{>user_name}}）</span>を設立しますか？
+			<span class="label48">ギルド名はあとから変更可能です</span>
+		</p>
+		<div class="innerBtnBox">
+			<button class="btn jsCloseAllPopup jsButtonTutorialBuildGuildComplete">設立する</button>
+		</div>
+		<div class="innerBtnBox">
+			<button class="btn jsCloseAllPopup jsButtonTutorialJoinGuildConfirm">加入できるギルドをもう一度探す</button>
+		</div>
+	</div>
+</script>
+
+<script id="jsTemplatePopupTutorialJoinGuildConfirm" type="text/x-jsrender">
+	<div class="modalInner joinGuild">
+		<table>
+			<tr><th>ギルド名</th><td>{{>guild_name}}</td></tr>
+			<tr><th>ギルドLv.</th><td>{{>guild_level}}</td></tr>
+			<tr><th>所属</th><td>{{>member_num}}/{{>max_member_num}}</td></tr>
+		</table>
+		<p>
+			このギルドに加入しますか？
+		</p>
+		<div class="innerBtnBox">
+			<button class="btn jsCloseAllPopup jsButtonTutorialJoinGuildComplete" data-guild-id="{{>guild_id}}">加入する</button>
+		</div>
+		<div class="innerBtnBox">
+			<button class="btn cancel jsCloseAllPopup jsButtonTutorialBuildGuildConfirm">やめる</button>
+		</div>
+	</div>
+</script>
+
+<script id="jsTemplatePopupTutorialBuildGuildComplete" type="text/x-jsrender">
+	<div class="modalInner organizeGuild">
+		<p>ギルドを設立しました。</p>
+		<button class="btn large jsCloseAllPopup jsButtonTutorialGuildNext">次へ進む</button>
+	</div>
+</script>
+
+<script id="jsTemplatePopupTutorialJoinGuildComplete" type="text/x-jsrender">
+	<div class="modalInner joinGuild">
+		<p>ギルドに加入しました。</p>
+		<button class="btn large jsCloseAllPopup jsButtonTutorialGuildNext">次へ進む</button>
+	</div>
+</script>
+
+<script id="jsTemplatePopupTutorialErrorBuildGuild" type="text/x-jsrender">
+	<div class="modalInner guildOrganizeError">
+		<p>通信エラーによりギルドを設立できませんでした。</p>
+		<button class="btn large jsClosePopup jsButtonTutorialBuildGuildConfirm">もう一度トライする</button>
+		<button class="btn large jsClosePopup jsButtonTutorialJoinGuildConfirm">オススメのギルドに加入する</button>
+	</div>
+</script>
+
+<script id="jsTemplatePopupTutorialErrorJoinGuild" type="text/x-jsrender">
+	<div class="modalInner guildJoinError">
+		<p>
+			{{>message}}
+		</p>
+		<button class="btn large jsClosePopup jsButtonTutorialBuildGuildConfirm">自分のギルドを設立する</button>
+		<button class="btn large jsClosePopup jsButtonTutorialJoinGuildConfirm">加入できるギルドをもう一度探す</button>
+	</div>
+</script>
+
+<script id="jsTemplatePopupTutorialError" type="text/x-jsrender">
+	<div class="modalInner progressError">
+		<p>
+			チュートリアルが正常に進行できませんでした。
+		</p>
+		<button class="btn large jsClosePopup jsButtonTutorialReload">再読み込み</button>
+	</div>
+</script>
+
+{{/escape}}

@@ -1,0 +1,1650 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>パーツサンプル（早く直したい）</title>
+	<meta name="robots" content="noindex,nofollow">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+
+	<link rel="stylesheet" href="/css/common_parts.css">
+	<style>
+	#avatarStatus{
+		background:url("/img/background/bg_mission001.jpg") 0 0 no-repeat;
+		background-size:320px 340px;
+	}
+	.statusData_icon .innerHeader dt{
+		clear:none;
+	}
+	.statusData_icon .innerHeader dt:nth-of-type(2),
+	.statusData_icon .innerHeader dt:nth-of-type(4){
+		clear:both;
+	}
+	.statusData_icon .innerHeader dt:nth-of-type(3),
+	.statusData_icon .innerHeader dt:nth-of-type(5){
+		margin-left:8px;
+	}
+	</style>
+
+	<script src="/html/js/jquery-1.8.2.min.js"></script>
+	<script src="/html/js/parts.js"></script>
+</head>
+	<body>
+
+		<!-- //注意事項
+			各パーツのinline styleはサンプルページ内でレイアウトの見難さを解消するためのアテです。そのまま使わないでください。
+			(同様の理由でheader内に記述してあるstyleもアテになります)
+			実際に設置するページ内のみで独自のプロパティを適用する際はページごとに用意されたscssファイルに記述してください。
+
+			※注意※
+			・「class="contentsShadow"」を使う場合は、内包するコンテンツボックスの高さを必ず85px以上にしてください。
+			・statusDataはデザインの段組に合わせてdlとtable、多段と単段を使い分けてください。
+			　ページ固有の段組（nth-of-typeなど）はページ固有のscssファイルに記述してください。
+		-->
+
+		<!-- //共通：グローバルヘッダ -->
+		<header id="globalHeader">
+			<div class="menuPanel"><button class="link mypage"><span class="hide">マイページ</span></button></div>
+			<!-- //通常 -->
+			<!--
+				<div class="battleTimeCount">
+				<div class="battleTimeInner">
+					<h1>次のバトルまで</h1>
+					<div class="numBox">
+						<span class="numGold num_1"><span class="hide">0</span></span>
+						<span class="numGold num_2"><span class="hide">1</span></span>
+						<span class="numGoldColon"><span class="hide">:</span></span>
+						<span class="numGold num_3"><span class="hide">2</span></span>
+						<span class="numGold num_5"><span class="hide">3</span></span>
+						<span class="numGoldColon"><span class="hide">:</span></span>
+						<span class="numGold num_4"><span class="hide">4</span></span>
+						<span class="numGold num_9"><span class="hide">5</span></span>
+					</div>
+				</div>
+			</div>
+-->
+			<!-- //バトル前 -->
+			<div class="battleTimeCount beforeBattle">
+				<div class="battleTimeInner">
+					<h1>まもなくバトル開催</h1>
+					<div class="numBox">
+						<span class="numGold num_1"><span class="hide">0</span></span>
+						<span class="numGold num_2"><span class="hide">1</span></span>
+						<span class="numGoldColon"><span class="hide">:</span></span>
+						<span class="numGold num_1"><span class="hide">2</span></span>
+						<span class="numGold num_9"><span class="hide">3</span></span>
+						<span class="numGoldColon"><span class="hide">:</span></span>
+						<span class="numGold num_4"><span class="hide">4</span></span>
+						<span class="numGold num_9"><span class="hide">5</span></span>
+					</div>
+				</div>
+			</div>
+			<!-- //バトル中 -->
+			<!--
+<div class="battleTimeCount onBattle">
+				<div class="battleTimeInner">
+					<h1>バトル終了まで</h1>
+					<div class="numBox">
+						<span class="numGold num_1"><span class="hide">0</span></span>
+						<span class="numGold num_1"><span class="hide">1</span></span>
+						<span class="numGoldColon"><span class="hide">:</span></span>
+						<span class="numGold num_4"><span class="hide">2</span></span>
+						<span class="numGold num_4"><span class="hide">3</span></span>
+						<span class="numGoldColon"><span class="hide">:</span></span>
+						<span class="numGold num_4"><span class="hide">4</span></span>
+						<span class="numGold num_4"><span class="hide">5</span></span>
+					</div>
+				</div>
+			</div>
+-->
+
+			<div class="menuPanel"><button class="link menu"><span class="hide">メニュー</span></button></div>
+		</header>
+
+		<!-- //共通：BGボックス -->
+		<div id="container">
+			
+			<!-- //メインヘッダ（ページタイトル） -->
+			<h1 class="mainHeader">メイン見出し</h1>
+			<!-- //ヘッダ下ステータス表示エリア（初期プロパティ：position:absolute） -->
+			<div class="statusLine" style="position:static;">
+				<!-- //ulで要素を入れるとマーキーっぽく動く。pなら中央寄せで固定。 -->
+				<p>ステータス表示</p>
+			</div>
+
+			<!-- //背景 -->
+			<section id="avatarStatus">
+				<!--
+					背景下の処理用スタイルです。
+					通常の1枚絵の最下部に、擬似要素で枠用の画像を表示させています。
+				-->
+			</section>
+
+			<section>
+				<!-- //ナビゲーションメッセージボックス -->
+				<div style="padding-bottom:32px;">
+					<!-- //ナビ子アイコン -->
+					<div class="message navico_arc" style="margin-bottom:8px;">
+						<!-- //メッセージはspan内に記述：最大全角38文字（それ以降は切れる） -->
+						<p>
+							<span>ナビ娘メッセージああああああああああああああああああああああああああああああ</span>
+						</p>
+					</div>
+					<!-- //隊長アイコン -->
+					<div class="message taicho_arc">
+						<!-- //メッセージはspan内に記述：最大全角38文字（それ以降は切れる） -->
+						<p>
+							<span>隊長メッセージあああああああああああああああああああああああああああああああ</span>
+						</p>
+					</div>
+				</div>
+
+				<!-- //掲示板 -->
+				<form method="post" class="postForm_icon" style="margin-bottom:8px;">
+					<div class="formInner">
+						<div class="iconBgArc_s gold"><img src="/img/avatar/00002_120.png"></div>
+						<div class="inputBox">
+							<textarea placeholder="つぶやく…"></textarea>
+							<!--button class="btn post" data-href="#">投稿する</button-->
+							<button class="btn share" data-href="#">掲示板にシェアする</button>
+						</div>
+					</div>
+				</form>
+
+				<section id="guildBbs">
+					<article class="contents contentsShadow topic">
+						<div class="contentsInner">
+							<div class="topicRoot">
+								<div class="contributor">
+								<div class="emblemIcon_s"><span class="guildRank D">A</span></div>
+									<!--div class="iconBgArc_s gold"><img src="/img/avatar/00002_120.png"></div-->
+									<h2>わかば弓士</h2>
+									<time>8/10 12:23</time>
+								</div>
+								<p>
+									コメントアイコンを押すとコメントが開きます（スライドメニュー）いいね押してない＆レス窓開いてるVer.
+									<span class="topicMenu">
+										<button class="link like" data-href="#"><span class="hide">いいね</span>999</button><button class="link resToggle open" data-href="#"><span class="hide">コメント</span>999</button>
+									</span>
+								</p>
+							</div>
+							<div class="resArea">
+								<div class="res">
+									<div class="contributor">
+										<div class="iconBgArc_s gold"><img src="/img/avatar/00002_120.png"></div>
+										<h2>シーフ</h2>
+										<time>8/10 15:40</time>
+									</div>
+									<p>
+										コメントにはいいねとかなくていいんですか？aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+									</p>
+								</div>
+								<div class="res master">
+									<div class="contributor">
+										<div class="iconBgArc_s gold"><img src="/img/avatar/00002_120.png"></div>
+										<h2>剣士</h2>
+										<time>8/10 21:40</time>
+									</div>
+									<p>
+										トピ主のコメントです
+									</p>
+								</div>
+								<div class="res">
+									<div class="contributor">
+										<div class="iconBgArc_s gold"><img src="/img/avatar/00002_120.png"></div>
+										<h2>サムライ</h2>
+										<time>8/10 00:43</time>
+									</div>
+									<p class="myComment">
+										自分のコメントです。テストテストテストテストテストテストテストテストテストテストテストテストテスト
+									</p>
+								</div>
+								<form method="post" class="postComment">
+									<label><input type="text" placeholder="コメントする…"></label><button class="btn">投稿する</button>
+								</form>
+							</div>
+						</div>
+					</article>
+				</section>
+
+				<!-- //挨拶 -->
+				<section id="greet">
+					<article class="contents contentsShadow topic">
+						<div class="contentsInner">
+							<div class="greetingBody">
+								<div class="contributor">
+									<div class="iconBgArc_s gold"><img src="/img/avatar/00002_120.png"></div>
+									<h2>わかば弓士</h2>
+									<time>8/10 12:23</time>
+								</div>
+								<p>
+									あいさつ本文あいさつ本文あいさつ本文あいさつ本文あいさつ本文あいさつ本文あいさつ本文あいさつ本文あいさつ本文
+									<span class="greetMenu"><span class="link reply">あいさつする</span></span>
+								</p>
+							</div>
+						</div>
+					</article>
+				</section>
+
+				<!-- //見出し1 -->
+				<h1 class="subHeader" style="margin-bottom:16px;">
+					<span class="subHeaderBg_l"></span>
+					<span>サブ見出し1</span>
+					<span class="subHeaderBg_r"></span>
+				</h1>
+
+				<!-- //コンテンツボックス（両端シャドウ）デフォルト幅100％ -->
+				<section class="contents contentsShadow" style="width:95%;margin:0 auto 32px auto;padding:8px 0;">
+					<!-- //80％固定幅ボタン -->
+					<button class="btn on large" data-href="#">large button(80%/ON)</button>
+					<button class="btn large" data-href="#">large button(80%/OFF)</button>
+					<!-- //赤いボタン -->
+					<button class="btn battle on large" data-href="#">large battle button(80%/ON)</button>
+					<button class="btn battle large" data-href="#">large battle button(80%/OFF)</button>
+					<!-- //ポップアップを閉じるときのボタン（40％固定幅） -->
+					<button class="btn on close" data-href="#">close(ON)</button>
+					<button class="btn close" data-href="#">close(OFF)</button>
+					<!-- //幅指定されたコンテンツボックス内での横並びボタン用ボックス（内包要素は自動・等間隔で横に並ぶ） -->
+					<div class="innerBtnBox">
+						<!-- //通常ボタン -->
+						<button class="btn" data-href="#">normal</button>
+						<!-- //取り消し・戻るボタン -->
+						<button class="btn cancel" data-href="#">cancel</button>
+						<!-- //無効ボタン -->
+						<button class="btn disable">disable</button>
+					</div>
+
+
+					<!-- //中身だけを中央寄せにしたい場合はcontentsInnerなどで囲んで横幅を指定（contentsInner=288px/panelInner=279px） -->
+					<div class="contentsInner" style="width:288px;margin:0 auto;">
+						<!-- //ラベル（AndroidでのみclipサイズがiOSやPCブラウザと異なる。要調査・修正） -->
+						<span class="label32" style="margin-bottom:4px;">ラベル：高さ16px</span>
+						<span class="label36" style="margin-bottom:4px;">ラベル：高さ18px</span>
+						<span class="label48" style="margin-bottom:4px;">ラベル：高さ24px</span>
+						<span class="label36_r4" style="margin-bottom:4px;">ラベル：高さ18px 角丸2px</span>
+						<span class="label32 growth_fast" style="margin-bottom:4px;">武具成長ステータス（早熟）</span>
+						<span class="label32 growth_ordinary" style="margin-bottom:4px;">武具成長ステータス（普通）</span>
+						<span class="label32 growth_slow" style="margin-bottom:4px;">武具成長ステータス（晩成）</span>
+						<span class="label32 jobType_power" style="margin-bottom:4px;">力</span>
+						<span class="label32 jobType_tech" style="margin-bottom:4px;">技</span>
+						<span class="label32 jobType_int" style="margin-bottom:4px;">知</span>
+						<!-- //ゲージ中 -->
+						<table class="gergeTable middle" style="position:relative;z-index:0;margin:0 auto;">
+							<tr>
+								<th>ラベル</th><td class="gergeBox"><div class="gergeBgFrame"><span class="gerge missionP" style="width:100%;"></span></div></td><td>000/000</td>
+							</tr>
+						</table>
+						<!-- //ゲージ小 -->
+						<table class="gergeTable short" style="position:relative;z-index:0;margin:0 8px 0 auto;">
+							<tr>
+								<th>ラベル</th><td class="gergeBox"><div class="gergeBgFrame"><span class="gerge missionP" style="width:100%;"></span></div></td><td>000000/000000</td>
+							</tr>
+						</table>
+					</div>
+				</section>
+
+				<!-- //ラベル：コンテンツ外（AndroidでのみclipサイズがiOSやPCブラウザと異なる。要調査・修正） -->
+				<span class="label32" style="margin:0 8px 4px 8px;">ラベル：高さ16px</span>
+				<span class="label36" style="margin:0 8px 4px 8px;">ラベル：高さ18px</span>
+				<span class="label48" style="margin:0 8px 4px 8px;">ラベル：高さ24px</span>
+				<span class="label36_r4" style="margin:0 8px 4px 8px;">ラベル：高さ18px 角丸2px</span>
+
+				<!-- //コンテンツボックス外のゲージ（クエスト進行度） -->
+				<div class="gergeBox" style="width:304px;margin:16px auto;">
+					<div class="gergeBgFrame" style="width:304px;"><span class="gerge missionP" style="width:100%;"></span></div>
+
+				</div>
+
+				<!-- //コンテンツボックス外のボタン -->
+				<button class="btn disable large" data-href="#">large button(80%)</button>
+				<div class="outerBtnBox">
+					<button class="btn" data-href="#">normal</button>
+					<button class="btn cancel" data-href="#">cancel</button>
+				</div>
+
+
+
+				<!-- //メタルのパネル デフォルト幅：95%-->
+				<section class="metalPanel" style="margin-bottom:16px;">
+					<!-- //メタルパネル内には必ずpanelInnerつける -->
+					<!-- //中身だけを中央寄せにしたい場合はcontentsInnerなどで囲んで横幅を指定（contentsInner=288px/panelInner=279px） -->
+					<div class="panelInner" style="width:279px;margin:0 auto;">
+						<!-- //ゲージ中 -->
+						<table class="gergeTable middle" style="position:relative;z-index:0;width:100%;">
+							<tr>
+								<th>ラベル</th><td class="gergeBox"><div class="gergeBgFrame"><span class="gerge missionP" style="width:50%;"></span></div></td><td>000/000</td>
+							</tr>
+						</table>
+						<!-- //ゲージ小 -->
+						<table class="gergeTable short" style="position:relative;z-index:0;margin:0 0 0 auto;">
+							<tr>
+								<th>ラベル</th><td class="gergeBox"><div class="gergeBgFrame"><span class="gerge missionP" style="width:50%;"></span></div></td><td>000000/000000</td>
+							</tr>
+						</table>
+						<!-- //バトル＆クエストで使うボタン -->
+						<button class="btn_l on" style="display:block;width:240px;margin:0 auto;">デフォルト(ON)</button>
+						<button class="btn_l" style="display:block;width:240px;margin:0 auto;">デフォルト(OFF)</button>
+						<button class="btn_l on red" style="display:block;width:240px;margin:0 auto;">red(ON)</button>
+						<button class="btn_l red" style="display:block;width:240px;margin:0 auto;">red(OFF)</button>
+						<button class="btn_l on redWhite" style="display:block;width:240px;margin:0 auto;">redWhite(ON)</button>
+						<button class="btn_l redWhite" style="display:block;width:240px;margin:0 auto;">redWhite(OFF)</button>
+						<button class="btn_l on turquoise" style="display:block;width:240px;margin:0 auto;">turquoise(ON)</button>
+						<button class="btn_l turquoise" style="display:block;width:240px;margin:0 auto;">turquoise(OFF)</button>
+						<button class="btn_l on battle" style="display:block;width:240px;margin:0 auto;">バトル用赤(ON)</button>
+						<button class="btn_l battle" style="display:block;width:240px;margin:0 auto;">バトル用赤(OFF)</button>
+					</div>
+				</section>
+
+				<!-- //単独リンク（矢印右：通常） -->
+				<div class="arrowLink">
+					<button class="link next" data-href="#">リンク先タイトル</button>
+				</div>
+
+				<!-- //リンクリスト -->
+				<div class="listMenu">
+					<ul>
+						<!-- //ラベル付きリストメニュー -->
+						<li><div class="link" data-href="#"><dl><dt class="label36_r4 event">イベント</dt><dd>リンク先リンク先リンク先リンク先リンク先リンク先</dd></dl></div></li>
+						<!-- //通常リストメニュー -->
+						<li><div class="link" data-href="#">リストリンク</div></li>
+						<li><div class="link" data-href="#">リストリンク</div></li>
+					</ul>
+				</div>
+
+				<!-- //単独リンク（矢印左） -->
+				<div class="arrowLink">
+					<button class="link prev" data-href="#">リンク先タイトル</button>
+				</div>
+
+				<!-- //単独リンクをグループ化 -->
+				<div class="linkGroup" style="margin-top:16px;">
+					<div class="arrowLink"><button class="link next" data-href="#">リンクグループ内1</button></div>
+					<div class="arrowLink"><button class="link next" data-href="#">リンクグループ内1</button></div>
+				</div>
+
+				<!-- //見出し2 -->
+				<h1 class="subHeader2" style="margin:16px 0 16px 0;">
+					<span class="subHeaderBg_l"></span>
+					<span>サブ見出し2</span>
+					<span class="subHeaderBg_r"></span>
+				</h1>
+
+				<!-- //ボーダー付き幅可変ボックス -->
+				<section class="contents contentsShadow" style="width:95%;margin:0 auto;padding:8px 0 8px 0;">
+					<div class="contentsBorder" style="width:auto;margin:0 8px;">
+						<h1 style="margin-bottom:8px;">見出し</h1>
+						<p style="width:auto;margin:0 8px;">
+							なかみのstyleはそれぞれページごとのSCSSファイルに記述
+						</p>
+					</div>
+				</section>
+
+				<!-- // アコーディオン：中身なし(基本使いません) -->
+				<div class="accordion empty link" data-href="#" style="margin:16px auto;">
+					<section class="contents shadow">
+					<h1>武器セット①</h1>
+					<span class="link">新規作成する</span>
+					</section>
+				</div>
+
+				<!-- // アコーディオン：中身あり閉じ -->
+				<div class="accordion" style="margin:16px auto;">
+					<section class="contents shadow">
+					<h1>武器セット①</h1>
+					</section>
+				</div>
+				<!-- // アコーディオン：中身あり開き -->
+				<div class="accordion open" style="margin:16px auto;">
+					<section class="contents shadow">
+					<h1>武器セット①</h1>
+						<!-- //開閉なかみ -->
+						<div class="accordionInner statusData equipSetStatus">
+							<ul>
+								<li>
+									<div class="equipImageBox">
+										<img src="/img/equip/weapon_128.png">
+										<div class="evolutionGerge_s">
+											<span class="evo1 hide">★</span>
+											<span class="evo2 hide">★</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="equipImageBox">
+										<img src="/img/equip/weapon_128.png">
+										<div class="evolutionGerge_s">
+											<span class="evo1 hide">★</span>
+											<span class="evo2 hide">★</span>
+											<span class="evo3 hide">★</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="equipImageBox">
+										<img src="/img/equip/weapon_128.png">
+										<div class="evolutionGerge_s">
+											<span class="evo1 hide">★</span>
+											<span class="evo2 hide">★</span>
+											<span class="evo3 hide">★</span>
+											<span class="evo4 hide">★</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="equipImageBox">
+										<img src="/img/equip/weapon_128.png">
+										<div class="evolutionGerge_s">
+											<span class="evo1 hide">★</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="equipImageBox">
+										<img src="/img/equip/weapon_128.png">
+										<div class="evolutionGerge_s">
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="equipImageBox">
+										<img src="/img/equip/weapon_128.png">
+										<div class="evolutionGerge_s">
+											<span class="evo1 hide">★</span>
+											<span class="evo2 hide">★</span>
+											<span class="evo3 hide">★</span>
+											<span class="evo4 hide">★</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="equipImageBox">
+										<img src="/img/equip/weapon_128.png">
+										<div class="evolutionGerge_s">
+											<span class="evo1 hide">★</span>
+											<span class="evo2 hide">★</span>
+											<span class="evo3 hide">★</span>
+											<span class="evo4 hide">★</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="equipImageBox">
+										<img src="/img/equip/weapon_128.png">
+										<div class="evolutionGerge_s">
+											<span class="evo1 hide">★</span>
+											<span class="evo2 hide">★</span>
+											<span class="evo3 hide">★</span>
+											<span class="evo4 hide">★</span>
+										</div>
+									</div>
+								</li>
+								<li class="blank">&nbsp;</li>
+								<li class="blank">&nbsp;</li>
+							</ul>
+							<dl>
+								<dt>武器P</dt><dd>999/999</dd>
+								<dt>攻撃</dt><dd>999999</dd>
+								<dt>特攻</dt><dd>999999</dd>
+							</dl>
+							<div class="innerBtnBox">
+								<button class="btn" data-href="#">装備する</button>
+								<button class="btn" data-href="#">削除する</button>
+								<button class="btn" data-href="#">編集する</button>
+							</div>
+						</div>
+					</section>
+				</div>
+
+				<!-- // よくある質問閉じ -->
+				<div class="accordion" style="margin:16px auto;">
+					<section class="contents shadow">
+					<h1>質問タイトル質問タイトル質問タイトル質問タイトル質問タイトル質問タイトル質問タイトル質問タイトル</h1>
+					</section>
+				</div>
+				<!-- // よくある質問開き -->
+				<div class="accordion open" style="margin:16px auto;">
+					<section class="contents shadow">
+					<h1>質問タイトル質問タイトル質問タイトル質問タイトル質問タイトル質問タイトル質問タイトル質問タイトル</h1>
+						<!-- //開閉なかみ -->
+						<div class="accordionInner">
+							<p>
+								回答回答回答回答回答回答回答回答回答回答<br>
+								回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答<br>
+								<br>
+								回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答
+							</p>
+						</div>
+					</section>
+				</div>
+
+				<!-- // ヘルプ閉じ -->
+				<div class="accordion" style="margin:16px auto;">
+					<section class="contents shadow">
+					<h1>ヘルプ大項目</h1>
+					</section>
+				</div>
+				<!-- // ヘルプ開き -->
+				<div class="accordion open" style="margin:16px auto;">
+					<section class="contents shadow">
+					<h1>ヘルプ大項目</h1>
+						<!-- //開閉なかみ（なぜかボタン押せないので後で調整）-->
+						<div class="accordionInner">
+							<ul class="help">
+								<li><button class="link" data-href="#">小項目小項目小項目小項目小項目小項目小項目</button></li>
+								<li><button class="link" data-href="#">小項目</button></li>
+								<li><button class="link" data-href="#">小項目</button></li>
+							</ul>
+						</div>
+					</section>
+				</div>
+
+				<!-- //図鑑用アイテムリスト（completeは限界突破、unidentifiedは未収得（未遭遇）のものです） -->
+				<section class="contents contentsShadow" style="width:95%;margin:16px auto;">
+					<ul class="collection">
+						<li class="complate">
+							<div class="equipImageBox">
+								<img src="/img/equip/weapon_128.png">
+								<div class="evolutionGerge_m">
+									<span class="evo1 hide">★</span>
+									<span class="evo2 hide">★</span>
+									<span class="evo3 hide">★</span>
+									<span class="evo4 hide">★</span>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="equipImageBox">
+								<img src="/img/equip/weapon_128.png">
+								<div class="evolutionGerge_m">
+									<span class="evo1 hide">★</span>
+									<span class="evo2 hide">★</span>
+									<span class="evo3 hide">★</span>
+									<span class="evo4 hide">★</span>
+								</div>
+							</div>
+						</li>
+						<li class="unidentified">
+							<div class="equipImageBox">
+								<img src="/img/equip/weapon_128.png">
+								<div class="evolutionGerge_m">
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="equipImageBox">
+								<img src="/img/equip/weapon_128.png">
+								<div class="evolutionGerge_m">
+									<span class="evo1 hide">★</span>
+									<span class="evo2 hide">★</span>
+									<span class="evo3 hide">★</span>
+								</div>
+							</div>
+						</li>
+
+						<li>
+							<div class="equipImageBox">
+								<img src="/img/equip/weapon_128.png">
+								<div class="evolutionGerge_m">
+									<span class="evo1 hide">★</span>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="equipImageBox">
+								<img src="/img/equip/weapon_128.png">
+								<div class="evolutionGerge_m">
+									<span class="evo1 hide">★</span>
+									<span class="evo2 hide">★</span>
+									<span class="evo3 hide">★</span>
+								</div>
+							</div>
+						</li>
+						<li class="unidentified">
+							<div class="equipImageBox">
+								<img src="/img/equip/weapon_128.png">
+								<div class="evolutionGerge_m">
+								</div>
+							</div>
+						</li>
+						<li class="unidentified">
+							<div class="equipImageBox">
+								<img src="/img/equip/weapon_128.png">
+								<div class="evolutionGerge_m">
+								</div>
+							</div>
+						</li>
+
+						<li class="unidentified">
+							<div class="equipImageBox">
+								<img src="/img/equip/weapon_128.png">
+								<div class="evolutionGerge_m">
+								</div>
+							</div>
+						</li>
+						<li class="complate">
+							<div class="equipImageBox">
+								<img src="/img/equip/weapon_128.png">
+								<div class="evolutionGerge_m">
+									<span class="evo1 hide">★</span>
+									<span class="evo2 hide">★</span>
+									<span class="evo3 hide">★</span>
+									<span class="evo4 hide">★</span>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="equipImageBox">
+								<img src="/img/equip/weapon_128.png">
+								<div class="evolutionGerge_m">
+									<span class="evo1 hide">★</span>
+									<span class="evo2 hide">★</span>
+									<span class="evo3 hide">★</span>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="equipImageBox">
+								<img src="/img/equip/weapon_128.png">
+								<div class="evolutionGerge_m">
+									<span class="evo1 hide">★</span>
+									<span class="evo2 hide">★</span>
+								</div>
+							</div>
+						</li>
+
+						<li class="complate">
+							<div class="equipImageBox">
+								<img src="/img/equip/weapon_128.png">
+								<div class="evolutionGerge_m">
+									<span class="evo1 hide">★</span>
+									<span class="evo2 hide">★</span>
+									<span class="evo3 hide">★</span>
+									<span class="evo4 hide">★</span>
+								</div>
+							</div>
+						</li>
+						<li class="unidentified">
+							<div class="equipImageBox">
+								<img src="/img/equip/weapon_128.png">
+								<div class="evolutionGerge_m">
+								</div>
+							</div>
+						</li>
+						<li class="complate">
+							<div class="equipImageBox">
+								<img src="/img/equip/weapon_128.png">
+								<div class="evolutionGerge_m">
+									<span class="evo1 hide">★</span>
+									<span class="evo2 hide">★</span>
+									<span class="evo3 hide">★</span>
+									<span class="evo4 hide">★</span>
+								</div>
+							</div>
+						</li>
+						<li class="complate">
+							<div class="equipImageBox">
+								<img src="/img/equip/weapon_128.png">
+								<div class="evolutionGerge_m">
+									<span class="evo1 hide">★</span>
+									<span class="evo2 hide">★</span>
+									<span class="evo3 hide">★</span>
+									<span class="evo4 hide">★</span>
+								</div>
+							</div>
+						</li>
+
+						<li class="unidentified">
+							<div class="equipImageBox">
+								<img src="/img/equip/weapon_128.png">
+								<div class="evolutionGerge_m">
+								</div>
+							</div>
+						</li>
+						<li class="unidentified">
+							<div class="equipImageBox">
+								<img src="/img/equip/weapon_128.png">
+								<div class="evolutionGerge_m">
+								</div>
+							</div>
+						</li>
+						<li class="unidentified">
+							<div class="equipImageBox">
+								<img src="/img/equip/weapon_128.png">
+								<div class="evolutionGerge_m">
+								</div>
+							</div>
+						</li>
+						<li class="unidentified">
+							<div class="equipImageBox">
+								<img src="/img/equip/weapon_128.png">
+								<div class="evolutionGerge_m">
+								</div>
+							</div>
+						</li>
+					</ul>
+				</section>
+
+				<!-- //お宝リスト（ラベル文字数が増えた場合に高さがずれるのでtableで対応） -->
+				<section class="contents contentsShadow" style="width:95%;margin:16px auto;">
+					<table class="treasureCollection">
+						<tr>
+							<td class="unidentified"><span class="img"><img src="/img/equip/weapon.png"></span><p>お宝名お宝名お宝名お宝名お宝名（99）</p></td>
+							<td><span class="img"><img src="/img/equip/weapon.png"></span><p>お宝名お宝名お宝名お宝名（99）</p></td>
+							<td><span class="img"><img src="/img/equip/weapon.png"></span><p>お宝名お宝名（99）</p></td>
+						</tr>
+						<tr>
+							<td class="unidentified"><span class="img"><img src="/img/equip/weapon.png"></span><p>お宝名（99）</p></td>
+							<td class="unidentified"><span class="img"><img src="/img/equip/weapon.png"></span><p>お宝名（99）</p></td>
+							<td><span class="img"><img src="/img/equip/weapon.png"></span><p>お宝名（99）</p></td>
+						</tr>
+							<td><span class="img"><img src="/img/equip/weapon.png"></span><p>お宝名（99）</p></td>
+							<td><span class="img"><img src="/img/equip/weapon.png"></span><p>お宝名（99）</p></td>
+							<td class="unidentified"><span class="img"><img src="/img/equip/weapon.png"></span><p>お宝名（99）</p></td>
+						</tr>
+					</table>
+				</section>
+
+				<!-- //売却＆合成確認用リスト（ラベル文字数が定形でなく高さがずれるのでtableで対応） -->
+				<form method="post" name="equipConfirmList">
+					<table class="equipConfirmList">
+						<tr>
+							<td>
+								<div class="component">
+									<div class="equipImageBox">
+										<img src="/img/equip/weapon_128.png" class="link" data-href="#">
+										<div class="evolutionGerge_m">
+											<span class="evo1 hide">★</span>
+											<span class="evo2 hide">★</span>
+											<span class="evo3 hide">★</span>
+											<span class="evo4 hide">★</span>
+										</div>
+									</div>
+									<p>イエローエレメントグローブ（SSR）</p>
+								</div>
+							</td>
+							
+							<td>
+								<div class="component">
+									<div class="equipImageBox">
+										<img src="/img/equip/weapon_128.png" class="link" data-href="#">
+										<div class="evolutionGerge_m">
+											<span class="evo1 hide">★</span>
+											<span class="evo2 hide">★</span>
+											<span class="evo3 hide">★</span>
+										</div>
+									</div>
+									<p>グローブ（N）</p>
+								</div>
+							</td>
+							<td>
+								<div class="component">
+									<div class="equipImageBox">
+										<img src="/img/equip/weapon_128.png" class="link" data-href="#">
+										<div class="evolutionGerge_m">
+											<span class="evo1 hide">★</span>
+											<span class="evo2 hide">★</span>
+										</div>
+									</div>
+									<p>グローリーランス（SR）</p>
+								</div>
+							</td>
+							<!--
+						</tr>
+						<tr>
+							<td>
+								<div class="component">
+									<div class="equipImageBox">
+										<img src="/img/equip/weapon_128.png" class="link" data-href="#">
+										<div class="evolutionGerge_m">
+											<span class="evo1 hide">★</span>
+										</div>
+									</div>
+									<p>グローリーランス（SR）</p>
+								</div>
+							</td>
+							<td>
+								<div class="component">
+									<div class="equipImageBox">
+										<img src="/img/equip/weapon_128.png" class="link" data-href="#">
+										<div class="evolutionGerge_m">
+											<span class="evo1 hide">★</span>
+											<span class="evo2 hide">★</span>
+											<span class="evo3 hide">★</span>
+										</div>
+									</div>
+									<p>イエローエレメントグローブ（SSR）</p>
+								</div>
+							</td>
+							<td>
+								<div class="component">
+									<div class="equipImageBox">
+										<img src="/img/equip/weapon_128.png" class="link" data-href="#">
+										<div class="evolutionGerge_m">
+											<span class="evo1 hide">★</span>
+											<span class="evo2 hide">★</span>
+											<span class="evo3 hide">★</span>
+											<span class="evo4 hide">★</span>
+										</div>
+									</div>
+									<p>グローブ（N）</p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div class="component noChoice">
+									<div class="equipImageBox">
+										<img src="/img/equip/weapon_128.png" class="link" data-href="#">
+										<div class="evolutionGerge_m">
+											<span class="evo1 hide">★</span>
+											<span class="evo2 hide">★</span>
+											<span class="evo3 hide">★</span>
+											<span class="evo4 hide">★</span>
+										</div>
+									</div>
+									<p>グローブ（N）</p>
+								</div>
+							</td>
+							<td>
+								<div class="component noChoice">
+									<div class="equipImageBox">
+										<img src="/img/equip/weapon_128.png" class="link" data-href="#">
+										<div class="evolutionGerge_m">
+											<span class="evo1 hide">★</span>
+											<span class="evo2 hide">★</span>
+											<span class="evo3 hide">★</span>
+											<span class="evo4 hide">★</span>
+										</div>
+									</div>
+									<p>グローリーランス（SR）</p>
+								</div>
+							</td>
+							<td>
+								<div class="component">
+									<div class="equipImageBox">
+										<img src="/img/equip/weapon_128.png" class="link" data-href="#">
+										<div class="evolutionGerge_m">
+											<span class="evo1 hide">★</span>
+											<span class="evo2 hide">★</span>
+											<span class="evo3 hide">★</span>
+											<span class="evo4 hide">★</span>
+										</div>
+									</div>
+									<p>イエローエレメントグローブ（SSR）</p>
+								</div>
+							</td>
+							-->
+						</tr>
+					</table>
+				</form>
+
+
+
+
+
+
+
+
+				<!-- //下に続きを読み込むボタン -->
+				<div class="moreLink" style="margin-top:16px;">
+					<button class="link" data-href="#"><span>もっと見る</span></button>
+				</div>
+				<!-- //読込中 -->
+				<div class="moreLink" style="margin-top:8px;">
+					<button class="link loading"><span>もっと見る</span></button>
+				</div>
+
+				<h1 class="subHeader3" style="margin:32px 0;">
+					<span>サブ見出し3</span>
+				</h1>
+
+				<!-- //タブメニュー（個数可変） -->
+				<div class="tabNav" style="margin-bottom:16px;">
+					<ul>
+						<!-- //アクティブタブ -->
+						<li><button class="select">タブ1</button></li>
+						<!-- //未選択 -->
+						<li><button>タブ2</button></li>
+						<li><button>タブ3</button></li>
+					</ul>
+				</div>
+
+				<!-- //タブメニュー（個数可変） -->
+				<div class="tabNav" style="margin-bottom:16px;">
+					<ul>
+						<!-- //アクティブタブ -->
+						<li><button class="select"><span>タブ1</span></button></li>
+						<!-- //未選択 -->
+						<li><button><span>タブ2</span></button></li>
+					</ul>
+				</div>
+
+				<!-- //タブメニュー２（左右切り替えのみ） -->
+				<div class="tabNav2" style="margin-bottom:8px;">
+					<ul>
+						<li><button class="left select">タブ１</button></li>
+						<li><button class="right">タブ２</button></li>
+					</ul>
+				</div>
+				<div class="tabNav2" style="margin-bottom:16px;">
+					<ul>
+						<li><button class="left">タブ１</button></li>
+						<li><button class="right select">タブ２</button></li>
+					</ul>
+				</div>
+
+				<!-- //コンテンツボックス（下部1pxシャドウ）デフォルト幅100％ -->
+				<section class="contents shadow" style="position:relative;width:95%;margin:16px auto;padding:8px 0;z-index:auto;">
+					<!-- //1行セレクトボックス -->
+					<form method="post" action="#" class="selectBox" style="width:auto;margin:0 8px;z-index:1;">
+						<select>
+							<option>選択項目1</option>
+							<option>選択項目2</option>
+							<option>選択項目3</option>
+						</select>
+						<span class="selector"></span>
+						<button class="btn selectBtn" data-href="#">決定</button>
+					</form>
+
+					<!-- //コインがない場合 -->
+					<div class="selectBox noMoney">
+						<p class="label48">コインが足りません</p>
+						<button class="btn selectBtn">コインを購入する</button>
+					</div>
+
+					<!-- //セレクトグループ -->
+					<form method="post" action="#" class="selectBox group">
+						<div class="line">
+							<label>
+								<select>
+									<option>選択項目1</option>
+									<option>選択項目2</option>
+									<option>選択項目3</option>
+								</select>
+								<span class="selector"></span>
+							</label>
+						</div>
+						<div class="line">
+							<label>
+								<select>
+									<option>選択項目1</option>
+									<option>選択項目2</option>
+									<option>選択項目3</option>
+								</select>
+								<span class="selector"></span>
+							</label>
+							<label>
+								<select>
+									<option>選択項目1</option>
+									<option>選択項目2</option>
+									<option>選択項目3</option>
+								</select>
+								<span class="selector"></span>
+							</label>
+							<label>
+								<select>
+									<option>選択項目1</option>
+									<option>選択項目2</option>
+									<option>選択項目3</option>
+								</select>
+								<span class="selector"></span>
+							</label>
+						</div>
+					</form>
+					<button class="btn selectBtn" data-href="#">表示する</button>
+
+					<!-- //チェックボックスのグループ -->
+					<form method="post" action="#" name="checkBoxGroup">
+						<div class="checkBox group">
+							<div class="line">
+								<label onclick="" class="checkBox"><input type="checkbox" name="checkBox"><span>選択する</span></label>
+								<label onclick="" class="checkBox"><input type="checkbox" name="checkBox"><span>選択する</span></label>
+								<label onclick="" class="checkBox"><input type="checkbox" name="checkBox" checked="checked"><span>Lv.1のみ</span></label>
+								<label onclick="" class="checkBox"><input type="checkbox" name="checkBox" disabled="disabled"><span>同属性のみ</span></label>
+							</div>
+						</div>
+						<button class="btn selectBtn" data-href="#">表示する</button>
+					</form>
+
+					<!-- //ON・OFFスイッチ -->
+					<form method="post" action="#" name="setUpToggle">
+						<div class="setUpToggle" style="width:95%;margin:8px auto;">
+							<label onclick="">
+								自動承認設定<input type="checkbox" checked="checked" name="setUpToggle">
+							</label>
+						</div>
+						<div class="setUpToggle" style="width:95%;margin:8px auto;">
+							<label onclick="">
+								自動承認設定<input type="checkbox" name="setUpToggle">
+							</label>
+						</div>
+					</form>
+
+
+					<!-- //購買数値コントロール -->
+					<div class="numControl" style="width:95%;margin:8px auto 0 auto;">
+						<div class="numControlSwitch">
+							<button class="link down_off"><span class="hide">−</span></button><input type="text" maxlength="2" value="1"><button class="link up_off"><span class="hide">＋</span></button>
+						</div>
+						<button class="btn" data-href="#">購入する</button>
+					</div>
+				</section>
+
+				<!-- //contentsボックス外のテキストエリア -->
+				<form method="post" name="postForm_message" class="postForm_message" style="width:95%;margin:16px auto;">
+					<label>
+						<textarea placeholder="メッセージを入力"></textarea>
+						<span class="textCount">100</span>
+					</label>
+					<button class="btn large" data-href="#">送信する</button>
+				</form>
+				
+				<!-- //contentボックス外のinput text -->
+				<div class="postForm_text" style="width:95%;margin:16px auto;">
+					<input type="text" placeholder="ギルド名ギルド名">
+					<button class="btn large" data-href="#">送信する</button>
+				</div>
+
+				<!-- //一括選択トグル 未チェック -->
+				<div class="allCheck" style="margin-bottom:8px;">
+					<button class="link off" data-href="#">上から10件を一括選択</button>
+				</div>
+				<!-- //一括選択トグル チェック済み -->
+				<div class="allCheck">
+					<button class="link on" data-href="#">上から10件を一括選択</button>
+				</div>
+				
+				<div class="selectList require" style="margin:16px auto;">
+					<table>
+						<tr>
+							<th>求めるLv.</th>
+							<td class="selectBox">
+								<select>
+									<option>選択項目1</option>
+									<option>選択項目2</option>
+									<option>選択項目3</option>
+								</select>
+								<span class="selector"></span>
+							</td>
+						</tr>
+						<tr>
+							<th>求めるやる気</th>
+							<td class="selectBox">
+								<select>
+									<option>選択項目1</option>
+									<option>選択項目2</option>
+									<option>選択項目3</option>
+								</select>
+								<span class="selector"></span>
+							</td>
+						</tr>
+						<tr>
+							<th>求める経験</th>
+							<td class="selectBox">
+								<select>
+									<option>選択項目1</option>
+									<option>選択項目2</option>
+									<option>選択項目3</option>
+								</select>
+								<span class="selector"></span>
+							</td>
+						</tr>
+					</table>
+					<button class="btn" data-href="#">掲載する</button>
+				</div>
+
+				<!--//ステータス：内側見出し（プロフ）-->
+				<section class="contents contentsShadow statusData" style="width:95%;margin:16px auto;z-index:auto;">
+					<h1>マイデータ</h1>
+					<div class="contentsInner">
+						<div class="columnBox prof_detailData">
+							<dl>
+								<dt>ジョブ系統</dt><dd>力系</dd>
+								<dt>攻撃</dt><dd>123456</dd>
+								<dt>防御</dt><dd>123456</dd>
+							</dl>
+							<dl>
+								<dt>Lv.</dt><dd>123</dd>
+								<dt>特攻</dt><dd>123456</dd>
+								<dt>特防</dt><dd>123456</dd>
+							</dl>
+						</div>
+						<dl>
+							<dt>進行</dt><dd>ステージ10</dd>
+							<dt>お宝</dt><dd>5種類</dd>
+							<dt>累計BP</dt><dd>123456789</dd>
+							<dt>戦績</dt><dd>1234勝/1234敗（勝率100％）</dd>
+							<dt>連勝記録</dt><dd>1234連勝</dd>
+							<dt>所属履歴</dt><dd>ギルド名ギルド名</dd>
+						</dl>
+					</div>
+				</section>
+
+				<!-- //ステータス：枠付（プロフ） -->
+				<section class="contents contentsShadow statusData" style="width:95%;margin:0 auto 16px auto;padding:8px 0;">
+					<div class="contentsBorder" style="width:auto;margin:0 8px;">
+						<h1>マクサルマクサルマクサル</h1>
+						<div class="contentsInner">
+							<dl>
+								<dt>所属</dt><dd>サイババ団サイババ団</dd>
+								<dt>役職</dt><dd>ギルドオーナー</dd>
+							</dl>
+							<div class="columnBox prof_myData">
+								<dl>
+									<dt>戦闘力</dt><dd>1234567</dd>
+									<dt>図鑑</dt><dd>12345/12345</dd>
+									<dt>ギル</dt><dd>123456789</dd>
+								</dl>
+								<dl>
+									<dt>獲得BP</dt><dd>123456789</dd>
+									<dt>所持武具</dt><dd>100/100</dd>
+									<dt>ガチャP</dt><dd>123456789</dd>
+								</dl>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- //装備 -->
+				<form method="post" action="#" name="equip">
+				<section class="contents contentsShadow statusData_icon" style="width:95%;margin:0 auto 16px auto;padding:8px 0;">
+					<h1>イエローエレメントグローブ（SSR）<span class="label32 growth_ordinary">普通</span></h1>
+					<div class="columnBox equipListStatus">
+						<div class="equipImageBox">
+							<img src="/img/equip/weapon_128.png">
+							<div class="evolutionGerge_m">
+								<span class="evo1 hide">★</span>
+								<span class="evo2 hide">★</span>
+								<span class="evo3 hide">★</span>
+								<span class="evo4 hide">★</span>
+							</div>
+						</div>
+						<span class="label36_r4 equip_new">保護</span>
+						<div class="contentsInner">
+							<dl>
+								<dt>Lv.</dt><dd>25/25</dd>
+								<dt>成長</dt><dd><div class="gergeBgFrame"><div class="gergeBg"><span class="gerge equipGrowth max" style="width:100%;"></span></div></div></dd><dd>50%</dd>
+								<dt>必要武器P</dt><dd>15</dd>
+							</dl>
+							<div class="columnBox">
+								<dl>
+									<dt>攻撃</dt><dd>123456</dd>
+									<dt>属性</dt><dd>雷</dd>
+								</dl>
+								<dl>
+									<dt>特攻</dt><dd>123456</dd>
+									<dt>属性Lv</dt><dd>10</dd>
+								</dl>
+							</div>
+						</div>
+					</div>
+					<label onclick="" class="checkBox"><input type="checkbox" name="equip"><span>選択する</span></label>
+				</section>
+				</form>
+
+
+				<!-- //アイコンあり（ステータスが混合/リンクあり） -->
+				<section class="contents contentsShadow statusData_icon link" style="width:95%;margin:0 auto 16px auto;padding:8px 0;">
+					<h1>ユーザー名</h1>
+					<div class="columnBox">
+						<div class="iconBgRect_l gold"><img src="/img/avatar/00002_120.png"></div>
+						<div class="contentsInner">
+							<dl>
+								<dt>Lv.</dt><dd>99</dd>
+								<dt>ジョブ</dt><dd>グラディエイター</dd>
+								<dt>戦闘力</dt><dd>123456789</dd>
+							</dl>
+							<div class="columnBox">
+								<dl>
+									<dt>攻撃</dt><dd>12345</dd>
+									<dt>防御</dt><dd>12345</dd>
+								</dl>
+								<dl>
+									<dt>特攻</dt><dd>12345</dd>
+									<dt>特防</dt><dd>12345</dd>
+								</dl>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- //アイコンあり（ステータスが混合でヘッダーがサイドカラム内に入る/リンクあり） -->
+				<section class="contents contentsShadow statusData_icon link" style="width:95%;margin:0 auto 32px auto;padding:8px 0;">
+					<div class="columnBox innerHeader">
+						<div class="emblemIcon_l"><span class="guildRank G">A</span></div>
+						<div class="contentsInner">
+							<h1>ギルド名</h1>
+							<dl>
+								<dt>所属</dt><dd>ギルド名ギルド名ギルド名ギル</dd>
+								<dt>Lv.</dt><dd>99</dd>
+								<dt>ジョブ</dt><dd>グラディエーター</dd>
+								<dt>総攻撃</dt><dd>123456</dd>
+								<dt>総防御</dt><dd>123456</dd>
+							</dl>
+						</div>
+					</div>
+				</section>
+
+				<!-- //ボス -->
+				<section class="contents contentsShadow statusData_icon link" style="width:95%;margin:0 auto 32px auto;padding:8px 0;">
+					<div class="columnBox bossListStatus innerHeader">
+						<div class="emblemIcon_ss"><span class="guildRank A">A</span></div>
+						<img src="/img/equip/240028_128.png">
+						<span class="label36_r4 grade_tough">強い</span>
+						<div class="contentsInner">
+							<h1>ボス名ボス名ボス名</h1>
+							<p>
+								説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明
+							</p>
+						</div>
+					</div>
+				</section>
+
+				<section class="contents contentsShadow statusData_icon" style="width:95%;margin:0 auto 32px auto;padding:8px 0;">
+					<div class="columnBox innerHeader">
+						<img src="/img/equip/weapon.png">
+						<div class="contentsInner">
+							<h1>プレゼント名</h1>
+							<dl>
+								<dt>数量</dt><dd>99</dd>
+							</dl>
+						</div>
+					</div>
+					<button class="link innerLink" data-href="#">アイテム一覧</button>
+				</section>
+
+				<section class="contents contentsShadow statusData_icon" style="width:95%;margin:0 auto 32px auto;padding:8px 0;">
+					<h1>お宝名お宝名お宝名お宝名お宝名</h1>
+					<div class="columnBox">
+						<img src="/img/equip/weapon.png">
+						<div class="contentsInner">
+							<p>説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明</p>
+						</div>
+					</div>
+				</section>
+
+				<section class="contents contentsShadow statusData_icon postForm_request" style="width:95%;margin:0 auto 32px auto;padding:8px 0;">
+					<div class="columnBox innerHeader">
+						<div class="iconBgRect_l gold"><img src="/img/avatar/00002_120.png"></div>
+						<div class="contentsInner">
+							<h1>ユーザー名ユーザー名ユーザー名</h1>
+							<p>
+								そこそこ集めた
+							</p>
+							<dl>
+								<dt>赤い水晶</dt><dd>99個保持</dd>
+							</dl>
+						</div>
+					</div>
+					<textarea placeholder="メッセージ内容を入力"></textarea>
+					<div class="innerBtnBox">
+						<button class="btn cancel" data-href="#">やめる</button>
+						<button class="btn" data-href="#">送信する</button>
+					</div>
+				</section>
+
+
+
+				<section class="contents contentsShadow statusData_icon" style="width:95%;margin:0 auto 32px auto;padding:8px 0;">
+					<div class="columnBox innerHeader link">
+						<div class="iconBgRect_l gold"><img src="/img/avatar/00002_120.png"></div>
+						<div class="contentsInner">
+							<h1>グラディエーター（男）</h1>
+						<p>
+							基本アバター
+						</p>
+						</div>
+					</div>
+					<button class="btn" data-href="#">選択する</button>
+				</section>
+				
+				<!-- //アイコン無し -->
+				<section class="contents contentsShadow statusData" style="width:95%;margin:0 auto 32px auto;">
+					<div class="columnBox link">
+						<div class="contentsInner" style="margin:0 8px;">
+							<h1>武具図鑑</h1>
+							<dl>
+								<dt>獲得数</dt><dd>999/999</dd>
+								<dt>Lv.Max</dt><dd>999</dd>
+							</dl>
+						</div>
+					</div>
+					<button class="btn" data-href="#" style="margin-top:8px;">選択する</button>
+				</section>
+				
+				<!-- //トップにラベルあり-->
+				<section class="contents contentsShadow statusData_icon" style="width:95%;margin:0 auto 16px auto;padding:8px 0 0 0;">
+					<p class="contentsHeader">★期間限定★ 2012/12/31 23:59まで</p>
+					<h1>アイテム名</h1>
+					<div class="columnBox innerHeader">
+						<img src="/img/equip/weapon.png">
+						<div class="contentsInner">
+							<dl>
+								<dt>必要枚数</dt><dd>1234</dd>
+								<dt>所持数</dt><dd>99</dd>
+							</dl>
+							<p>
+								説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明
+							</p>
+						</div>
+					</div>
+					<div class="numControl" style="width:95%;margin:8px auto 0 auto;">
+						<div class="numControlSwitch">
+							<button class="link down_off"><span class="hide">−</span></button><input type="text" maxlength="2" value="1"><button class="link up_off"><span class="hide">＋</span></button>
+						</div>
+						<button class="btn" data-href="#">購入する</button>
+					</div>
+				</section>
+
+
+				<!-- //ランキング -->
+				<section id="ranking">
+					<article class="contents contentsShadow statusData_icon link">
+						<h1><span class="rankLabel rangeUp rankDown"><span class="rankNum">1</span>位</span>ギルド名ギルド名</h1>
+						<div class="columnBox">
+							<div class="iconBgRect_l gold"><img src="/img/avatar/00002_120.png"></div>
+							<div class="contentsInner">
+								<dl>
+									<dt>獲得BP</dt><dd>123456</dd>
+									<dt>ギルドマスター</dt><dd>ユーザー名ユーザー名</dd>
+									<dt>ギルドLv.</dt><dd>99</dd>
+									<dt>所属人数</dt><dd>30/30</dd>
+								</dl>
+							</div>
+						</div>
+					</article>
+				</section>
+
+
+				<section class="contents shadow expendConf" style="width:95%;margin:0 auto;">
+					<table>
+						<tr>
+							<th>売却数</th><td>99</td>
+						</tr>
+						<tr>
+							<th>売却価格合計</th><td>123456789ギル</td>
+						</tr>
+					</table>
+				</section>
+
+				<section class="contents shadow expendConf" style="width:95%;margin:16px auto;">
+					<table>
+						<tr>
+							<th>消費ギル</th><td>123456789ギル</td>
+						</tr>
+					</table>
+				</section>
+
+				<p class="paramStatus" style="margin-bottom:16px;">
+					<span class="headline">所持ガチャP</span>123456
+				</p>
+				<p class="paramStatus">
+					<span class="headline">所持ガチャP</span>123456<span class="sepalator">→</span>123456
+				</p>
+
+				<!-- //メッセージ系：1行（ステータスなし） -->
+				<section class="dimmed">
+					<p>
+						メッセージを受信しました
+					</p>
+				</section>
+				<!-- //メッセージ系：完了その1（単一パラメータ・段落あり） -->
+				<section class="complateMessage">
+					<article>
+						<h1>アイテムを使用しました</h1>
+						<p>アイテム使用コメント</p>
+						<table>
+							<tr>
+								<th>所持数</th><td>99<span class="sepalator">→</span>99</td>
+							</tr>
+						</table>
+					</article>
+				</section>
+				<!-- //メッセージ系：完了その2（複数パラメータ）※うまい具合に多段で中央寄せできるタグの書き方が見つからなかったのでデータごとに単一テーブルにしてます。すみません… -->
+				<section class="complateMessage">
+					<article>
+						<h1>所持武具がいっぱいのため<br>一部の武具がギフトへ送られました</h1>
+						<table>
+							<tr>
+								<th>所持数</th><td>99<span class="sepalator">→</span>99</td>
+							</tr>
+						</table>
+						<table>
+							<tr>
+								<th>所持ギル</th><td>123456789<span class="sepalator">→</span>123456789</td>
+							</tr>
+						</table>
+					</article>
+				</section>
+				<!-- //メッセージ系：注意書き1（見出しあり・段落） -->
+				<section class="caution">
+					<article>
+						<h1>ご注意</h1>
+						<p>本名やメールアドレス、電話番号などの個人情報や、個人の特定がされる可能性のある情報の入力はお控えください。</p>
+					</article>
+				</section>
+				<!-- //メッセージ系：注意書き2（見出しあり・リスト） -->
+				<section class="caution">
+					<article>
+						<h1>ご注意</h1>
+						<ul>
+							<li>サーバのレスポンス、通信状況によって、ガチャの演出がスキップされることがあります。その場合でも武具の追加は正常に完了しております。ギフトをご確認ください。</li>
+							<li>プレミアムガチャを初回100Cでご購入された方は、次回より100Cではご購入できませんので、ご購入の際はご注意ください</li>
+						</ul>
+						<button class="link" data-href="#">特定商取引法に基づく表記</button>
+					</article>
+				</section>
+				<!-- //メッセージ系：注意書き3（見出しなし） -->
+				<section class="caution">
+					<article>
+						<ul>
+							<li>一度に10個まで一括売却できます。</li>
+							<li>装備中の武具は売却できません。</li>
+						</ul>
+					</article>
+				</section>
+
+				<hr>
+
+				<!-- //ヘルプリスト -->
+				<div class="helpList">
+					<ul>
+						<li><button class="link" data-href="#">ヘルプのタイトル</button></li>
+						<li><button class="link" data-href="#">ヘルプのタイトル</button></li>
+						<li><button class="link" data-href="#">ヘルプのタイトル</button></li>
+					</ul>
+				</div>
+
+				<!-- //アイテム・ボス詳細（限界突破などのラベルがつくページがありますが画像がないので後回しで。） -->
+				<section class="itemDetail">
+					<div class="description">
+						<div class="equipImageBox">
+							<span class="img unidentified"><img src="../img/equip/weapon_480.png"></span>
+							<div class="evolutionGerge_l">
+								<span class="evo1 hide">★</span>
+								<span class="evo2 hide">★</span>
+								<span class="evo3 hide">★</span>
+								<span class="evo4 hide">★</span>
+							</div>
+						</div>
+						<h1 class="itemName">名前名前名前名前名前名前<span class="label36_r4 bossGrade_strong">強い</span></h1>
+						<p>
+							説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明
+						</p>
+						<span class="label36_r4 equip_main">メイン</span>
+					</div>
+					<!-- //ここから下はアイテムまたはページ固有（これは武具） -->
+					<div class="contents contentsShadow statusData equipListStatus">
+						<div class="contentsInner">
+							<dl>
+								<dt>Lv.</dt><dd>25/25<span class="label32 growth_fast">早熟</span></dd>
+								<dt>成長</dt>
+								<dd>
+									<div class="gergeBgFrame"><div class="gergeBg"><span class="gerge equipGrowth max" style="width:100%;"></span></div></div></dd><dd>50%
+								</dd>
+								<dt>必要武器P</dt><dd>15</dd>
+							</dl>
+							<div class="columnBox">
+								<dl>
+									<dt>攻撃</dt><dd>123456</dd>
+									<dt>属性</dt><dd>雷</dd>
+								</dl>
+								<dl>
+									<dt>特攻</dt><dd>123456</dd>
+									<dt>属性Lv</dt><dd>10</dd>
+								</dl>
+							</div>
+							<dl>
+								<dt>売却価格</dt><dd>999999999</dd>
+							</dl>
+						</div>
+					</div>
+
+					<section class="contents contentsShadow statusData">
+						<h1>落とすアイテム</h1>
+						<ul class="findingItem">
+							<li>
+								<div class="equipImageBox">
+									<img src="/img/equip/weapon_128.png">
+									<div class="evolutionGerge_m">
+										<span class="evo1 hide">★</span>
+									</div>
+								</div>
+							</li>
+							<li><img src="../../img/parts/unknown_item.png"></li>
+							<li>
+								<div class="equipImageBox">
+									<img src="/img/equip/weapon_128.png">
+									<div class="evolutionGerge_m">
+										<span class="evo1 hide">★</span>
+										<span class="evo2 hide">★</span>
+										<span class="evo3 hide">★</span>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</section>
+
+					<div class="control_equip">
+						<button class="btn large" data-href="#">ベースにして合成する</button>
+						<button class="btn large" data-href="#">売却する</button>
+						<button class="btn large" data-href="#">欲しいものに追加する</button>
+						<button class="btn large" data-href="#">保護する</button>
+						<button class="btn large cancel" data-href="#">保護中</button>
+					</div>
+				</section>
+
+				<hr>
+
+			</section>
+
+		</div>
+
+		<!-- //共通：グローバルフッター -->
+		<footer id="globalFooter">
+			<ul>
+				<li class="menuPanel"><span class="link mypage"><span class="hide">マイページ</span></span></li>
+				<li class="menuPanel"><span class="link quest"><span class="hide">クエスト</span></span></li>
+				<li class="menuPanel"><span class="link buttle"><span class="hide">バトル</span></span></li>
+				<li class="menuPanel"><span class="link gatcha"><span class="hide">ガチャ</span></span></li>
+				<li class="menuPanel"><span class="link menu"><span class="hide">マイページ</span></span></li>
+			</ul>
+		</footer>
+
+		<div class="modalBox" style="display:block;-webkit-transform:scale(1);z-index:10000;">
+			<span class="close"><span>閉じる</span></span>
+			<h1>見出し</h1>
+			<div class="modalInner">
+				<!-- // 文言のみ
+				<p>
+						武器セット①に保存しますか？
+				</p>-->
+				<!-- // 複数パラメーター
+				<p>
+					武器をおすすめ装備しました
+				</p>
+				<div class="parameter">
+					<p><h2>攻撃</h2>999999（<span class="up">↑99999</span>）</p>
+					<p><h2>武器</h2>999999（<span class="down">↓99999</span>）</p>
+					<p><h2>防御</h2>999999（<span class="even">→</span>）</p>
+				</div>-->
+				<!-- //アイテム使用確認
+				<div class="itemUseConfirm">
+					<p>
+						アイテム名を使用しますか？
+					</p>
+					<img src="/img/equip/weapon.png" class="single">
+					<table>
+						<tr>
+							<th>行動P</th><td>99<span class="sepalator">→</span>99</td>
+						</tr>
+					</table>
+				</div>
+				<span class="label48">行動Pが99残っています</span>-->
+				<!-- //武器追加
+				<div class="itemUseConfirm">
+					<p>
+						装備にこの武器を追加しますか？
+					</p>
+					<img src="/img/equip/weapon.png" class="single">
+					<p>武器防具名</p>
+				</div>
+				<div class="parameter">
+					<p><h2>攻撃</h2>999999（<span class="up">↑99999</span>）</p>
+					<p><h2>武器</h2>999999（<span class="down">↓99999</span>）</p>
+					<p><h2>防御</h2>999999（<span class="even">→</span>）</p>
+				</div>-->
+				<!-- //武器変更＆アイテム移動 -->
+				<p>武器を変更しますか？</p>
+				<div class="itemUseConfirm">
+					<div class="itemBox">
+						<div class="itemBoxInner">
+							<div class="equipImageBox">
+								<img src="/img/equip/weapon_128.png">
+								<div class="evolutionGerge_m">
+									<span class="evo1 hide">★</span>
+									<span class="evo2 hide">★</span>
+									<span class="evo3 hide">★</span>
+									<span class="evo4 hide">★</span>
+								</div>
+							</div>
+							<p>武器防具名</p>
+						</div>
+						<span class="changeArrow"><span class="hide">→</span></span>
+						<div class="itemBoxInner">
+							<div class="equipImageBox">
+								<img src="/img/equip/weapon_128.png">
+								<div class="evolutionGerge_m">
+									<span class="evo1 hide">★</span>
+									<span class="evo2 hide">★</span>
+								</div>
+							</div>
+							<p>武器防具名</p>
+						</div>
+					</div>
+				</div>
+				<div class="parameter">
+					<p><h2>攻撃</h2>999999（<span class="up">↑99999</span>）</p>
+					<p><h2>武器</h2>999999（<span class="down">↓99999</span>）</p>
+					<p><h2>防御</h2>999999（<span class="even">→</span>）</p>
+				</div>
+				<!-- // お知らせ系
+				<dl id="adminNotice">
+					<dt><span class="label36_r4 system">メンテナンス</span>2012/12/13 21:21</dt>
+					<dd>
+						本文本文本文本文本文本文本文本文本文本文本文本文本文<br>
+						本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文<br>
+						<img src="../img/equip/weapon_l.png">
+						本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文
+					</dd>
+				</dl>-->
+
+				<div class="innerBtnBox">
+					<button class="btn cancel" data-href="#">やめる</button>
+					<button class="btn" data-href="#">装備する</button>
+				</div>
+			</div>
+		</div>
+
+	</body>
+</html>

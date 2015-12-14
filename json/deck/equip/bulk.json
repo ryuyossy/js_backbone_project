@@ -1,0 +1,15 @@
+{
+    "status" : 200,
+    "attack" : 8000,
+    "attack_diff" : 100,
+    "sp_attack" : 17000,
+    "sp_attack_diff" : -100,
+    "defense" : 6000,
+    "defense_diff" : 0,
+    "sp_defense" : 19000,
+    "sp_defense_diff" : -20,
+    "weapon_cost" : 50,
+    "weapon_cost_diff" : 10,
+    "protector_cost" : 30,
+    "protector_cost_diff" : -10
+}

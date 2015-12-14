@@ -1,0 +1,176 @@
+
+<!-- // ここから -->
+<section id="seasonAvatar">
+	<header>
+		<h1>
+			<img src="{{getImgRoot/}}/parts/season_avatar/{{>season_id}}_title.png" alt="シーズンアバター登場！！">
+		</h1>
+		<p>
+			<span class="hide">シーズンアバター。それは、季節の神様の力を受ける、特別なアバター…</span>
+		</p>
+	</header>
+	<section class="monthlyAvatar">
+		<h1 class="subHeader">
+			<span class="subHeaderBg_l"></span>
+			<span>今月のシーズンアバター</span>
+			<span class="subHeaderBg_r"></span>
+		</h1>
+		<ul>
+			{{for avatars}}
+			<li>
+				<div class="iconBgRect_l gold"><img src="{{getImgRoot/}}/avatar/{{>avatar_id}}_140.png"></div>
+				<p>{{>header_name}}<br>{{>avatar_name}}</p>
+			</li>
+			{{/for}}
+		</ul>
+	</section>
+	<section class="avatarEffect">
+		<h1 class="subHeader">
+			<span class="subHeaderBg_l"></span>
+			<span>シーズンアバターの効果</span>
+			<span class="subHeaderBg_r"></span>
+		</h1>
+		<h2 class="subHeader3">所持するだけでこんな効果が！！</h2>
+		<article class="contents contentsShadow statusData">
+			<h1>効果１</h1>
+			<div class="contentsInner">
+				{{>~datetimeToJpSignageWithoutTime(add_jex_start_date)}} ({{>~getDayFromDate(add_jex_start_date)}}) 〜 {{>~datetimeToJpSignageWithoutTime(add_jex_end_date)}} ({{>~getDayFromDate(add_jex_end_date)}}) の期間中、ブレイブバトルで獲得できるJExがアップ！
+				<ul>
+					{{for avatars}}
+					<li>{{>#index + 1}}種類{{if ~root('avatars').length - 1 == #index}}全部{{/if}}ゲットで<span class="up">{{>~root('add_jex_percent')*(#index + 1)}}％アップ！</span></li>
+					{{/for}}
+				</ul>
+			</div>
+		</article>
+		<article class="contents contentsShadow statusData">
+			<h1>効果２</h1>
+			<div class="contentsInner">
+				シーズンアバター所持ボーナスで、期間終了後も系統補正ボーナスが継続！！！
+			</div>
+		</article>
+	</section>
+	<section class="getMethod">
+		<h1 class="subHeader">
+			<span class="subHeaderBg_l"></span>
+			<span>シーズンアバターゲットの方法</span>
+			<span class="subHeaderBg_r"></span>
+		</h1>
+		<h2 class="subHeader3">ガチャを引いてエンブレムを集めよう！</h2>
+		<article class="contents contentsShadow statusData">
+			<div class="contentsInner">
+				対応するエンブレムをそれぞれ４つ集めるとシーズンアバターをゲット！<br>エンブレムは期間中、対象ガチャのオマケとしてついてきます。
+			</div>
+			<h1>{{>~getMonth(emblem_gacha.start_datetime)}}月のエンブレム</h1>
+			<dl class="emblemList">
+				{{for avatars}}
+				<dt><img src="{{getImgRoot/}}/emblem/season_avatar/{{>emblem_id}}.png"></dt>
+				<dd>
+					<h1>{{>emblem_name}}</h1>
+					<p>{{>header_name}}{{>avatar_name}}</p>
+				</dd>
+				{{/for}}
+			</dl>
+		</article>
+		<h2 class="subHeader3">エンブレムが獲得できるガチャはこちら！</h2>
+		<dl class="period">
+			<dt>開催期間</dt>
+			<dd>{{>~datetimeToJpSignage(emblem_gacha.start_datetime)}} 〜 {{>~datetimeToJpSignage(emblem_gacha.end_datetime)}}</dd>
+		</dl>
+
+		{{if emblem_gacha_status == 1}}
+		<h3>エンブレムが必ずついてくる！<br>特別チケットガチャ！</h3>
+		<p class="paramStatus">
+			<span class="headline">所持{{>emblem_gacha.ticket_name}}</span>
+			{{>emblem_gacha.ticket_num}}
+		</p>
+		<div class="message navico_arc">
+			<p>
+				<span>{{>emblem_gacha.ticket_name}}は開催まで毎日ログインボーナスでもらえるわよ！</span>
+			</p>
+		</div>
+
+		{{else emblem_gacha_status == 2}}
+		{{if emblem_gacha.ticket_num > 0}}
+		<h3>エンブレムが必ずついてくる！<br>特別チケットガチャ！</h3>
+		<p class="paramStatus">
+			<span class="headline">所持{{>emblem_gacha.ticket_name}}</span>
+			{{>emblem_gacha.ticket_num}}
+		</p>
+		<div class="specialGachaBtn">
+			<button class="btn_l orange jsButtonUseGachaTicket" data-gacha-id="{{>emblem_gacha.gacha_id}}">{{>emblem_gacha.ticket_name}}で引く</button>
+			└ 消費チケット<span class="possess">1枚</span> ┘
+		</div>
+		{{/if}}
+		<h3>期間中、特別プレミアムガチャで<br>エンブレム獲得のチャンス！</h3>
+		<button class="btn_l red" data-href="gacha/">プレミアムガチャを引きに行く</button>
+
+		{{else emblem_gacha_status == 3}}
+		<div class="dimmed">
+			<p>
+				開催期間が終了しました
+			</p>
+		</div>
+		{{/if}}
+
+	</section>
+	<section class="avatarDetail">
+		<h1 class="subHeader">
+			<span class="subHeaderBg_l"></span>
+			<span>シーズンアバター詳細</span>
+			<span class="subHeaderBg_r"></span>
+		</h1>
+		{{for avatars}}
+		<figure>
+			<img src="{{getImgRoot/}}/avatar/{{>avatar_id}}_640.png">
+			<figcaption class="contents contentsShadow statusData">
+				<h1>{{>header_name}}{{>avatar_name}}</h1>
+				<div class="contentsInner">
+					{{>avatar_description}}
+				</div>
+				<h1>シーズンアバター所持ボーナス</h1>
+				<dl>
+					{{for own_bonus}}
+					{{if type == 1}}
+					<dt class="pow">力</dt>
+					{{else type == 2}}
+					<dt class="tec">技</dt>
+					{{else type == 3}}
+					<dt class="int">知</dt>
+					{{/if}}
+					<dd><span class="up">+{{>percent}}%</span></dd>
+					{{/for}}
+				</dl>
+				<h1>必要なエンブレム</h1>
+				<ul>
+					{{for ~itelator(0, 3)}}
+					<li><img src="{{getImgRoot/}}/emblem/season_avatar/{{>#parent.parent.data.emblem_id}}.png"></li>
+					{{/for}}
+				</ul>
+			</figcaption>
+		</figure>
+		{{/for}}
+		{{if emblem_gacha_status == 2}}
+		<button class="btn_l red" data-href="gacha/">プレミアムガチャを引きに行く</button>
+		{{/if}}
+	</section>
+</section>
+
+<hr>
+
+<div class="arrowLink">
+	<button class="link next" data-href="mypage/"><span>マイページへ</span></button>
+</div>
+
+<section class="caution">
+	<article>
+		<h1>ご注意</h1>
+		<ul>
+			<li>獲得出来るエンブレムは、重複する場合があります。また、ガチャの特性上、すべてのエンブレムを揃えられない可能性があります。</li>
+			<li>獲得したアバターは、ジョブチェンジの際に選択する事が出来ます。</li>
+			<li>ただし、そのジョブの転職条件を満たしていない場合は、アバターを選択する事が出来ません。</li>
+			<li>同じエンブレムを必要個数以上獲得した場合、自動的に成長の光石（HN）に変換されてギフトへ送られます。</li>
+			<li>期間中にエンブレムを必要個数集められない場合、アバターを獲得する事は出来ません。</li>
+		</ul>
+	</article>
+</section>
+<!-- // ここまで -->

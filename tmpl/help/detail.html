@@ -1,0 +1,29 @@
+<div id="container">
+	<h1 class="mainHeader">ヘルプ</h1>
+	<div id="helpDetail">
+		<h1 class="subHeader">
+			<span class="subHeaderBg_l"></span>
+			<span>{{>title}}</span>
+			<span class="subHeaderBg_r"></span>
+		</h1>
+		<div class="contents contentsShadow infoInner">
+			<article class="contentsInner">
+				{{:body_text}}
+			</article>
+		</div>
+		
+		<!-- //ショートカット -->
+		<div class="listMenu">
+			<ul>
+				{{if next_help}}
+				<li><div class="link" data-href="help/detail/{{>next_help.help_id}}/">{{>next_help.title}}</div></li>
+				{{/if}}
+			</ul>
+		</div>
+	</div>
+	
+	<div class="arrowLink">
+		<button class="link prev" data-href="help/">もくじ</button>
+	</div>
+	
+</div>

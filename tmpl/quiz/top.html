@@ -1,0 +1,70 @@
+<div id="container">
+	<div id="quizTop">
+		<div id="braveQuiz">
+			<img src="{{>img_url_root}}/parts/quiz_title.png" alt="スタートダッシュキャンペーン" class="title">
+		</div>
+		<h1 class="subHeader3">
+			<span>完全クリアでこれをプレゼント!</span>
+		</h1>
+		<section class="contents contentsShadow statusData_icon quizCnt">
+			<div class="columnBox bossListStatus innerHeader">
+				{{giftThumb type=reward.gift_item_type id=reward.gift_item_id /}}
+				<div class="contentsInner">
+					<h1>完全クリア報酬</h1>
+					<p>{{>reward.gift_item_name}} × {{>reward.qty}}</p>
+				</div>
+			</div>
+		</section>
+		<h1 class="subHeader">
+			<span class="subHeaderBg_l"></span>
+			<span>クイズ</span>
+			<span class="subHeaderBg_r"></span>
+		</h1>
+		<div class="message navico_arc">
+			<p>
+				<span>頑張って全問正解してね!</span>
+			</p>
+		</div>
+		<div class="quizStageList">
+			{{for chapters}}
+			<section class="contents contentsShadow statusData_icon quizListCnt" {{if !clear_flg }}data-href="quiz/question/{{>chapter_id}}/{{>quiz_progress}}/"{{/if}}>
+				<div class="columnBox innerHeader">
+					<div class="rewardItem">
+						{{giftThumb type=item_type id=item_id /}}
+					</div>
+					<div class="contentsInner">
+						<h1 class="qbn">
+							<div class="chapterName">
+								{{>name}}
+							</div>
+							<div>
+								<span class="ques">正解数</span><span class="unques">{{if clear_flg }}{{>quiz_num}}{{else}}{{>quiz_progress - 1}}{{/if}}</span><span class="questio">/{{>quiz_num}}問</span>
+							</div>
+						</h1>
+						<p>{{>item_name}} × {{>qty}}</p>
+					</div>
+				</div>
+				{{if !clear_flg }}
+				<button class="innerLink">挑戦する</button>
+				{{else}}
+				<span class="cleared"></span>
+				{{/if}}
+			</section>
+			{{/for}}
+		</div>
+	</div>
+
+	<hr>
+
+	<div class="arrowLink">
+		<button class="link next" data-href="gift/list/">ギフトを確認</button>
+	</div>
+
+	<section class="caution">
+		<article>
+			<ul>
+				<li>報酬はギフトへ贈られます。</li>
+			</ul>
+		</article>
+	</section>
+</div>

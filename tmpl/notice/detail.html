@@ -1,0 +1,27 @@
+<h1 class="mainHeader">運営からのお知らせ</h1>
+<section id="adminNoticeDetail">
+	<div class="contents contentsShadow">
+		<dl>
+			<dt>
+				<span class="label36_r4 
+				{{if info_kind === 1}}maintenance{{/if}}
+				{{if info_kind === 2}}important{{/if}}
+				{{if info_kind === 3}}campaign{{/if}}
+				{{if info_kind === 4}}event{{/if}}
+				{{if info_kind === 5}}info{{/if}}">
+				{{>info_kind_name}}</span>{{>info_datetime}}
+				<h1>{{>title}}</h1>
+				</dt>
+			<dd class="infoInner">
+				{{:body}}
+			</dd>
+		</dl>
+	</div>
+
+	<hr>
+
+	<div class="linkGroup">
+		<div class="arrowLink"><button class="link prev" data-href="/notice/">運営からのお知らせ一覧に戻る</button></div>
+		<div class="arrowLink"><button class="link prev" data-href="/">トップに戻る</button></div>
+	</div>
+</section>

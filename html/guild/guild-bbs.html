@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>ギルド掲示板</title>
+	<meta name="robots" content="noindex,nofollow">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+
+	<link rel="stylesheet" href="/css/common_parts.css">
+	<link rel="stylesheet" href="/css/guild.css">
+	<script src="/html/js/jquery-1.8.2.min.js"></script>
+	<script src="/html/js/parts.js"></script>
+</head>
+	<body>
+		<div id="container">
+			<header id="globalHeader">
+				<div class="menuPanel"><button class="link mypage"><span class="hide">マイページ</span></button></div>
+				<div class="guildNamePanel"><h1><span class="link"><span class="guildRank f hide">ギルドランク：A</span>ギルド名ギルド名ギルド名</span></h1></div>
+				<div class="menuPanel"><button class="link menu"><span class="hide">メニュー</span></button></div>
+			</header>
+			<h1 class="mainHeader">ギルド掲示板</h1>
+			
+			<form method="post" class="postForm_icon postMargin">
+				<div class="formInner">
+					<div class="iconBgArc_s gold"><img src="/img/avatar/myAvatar_l.png"></div>
+					<div class="inputBox">
+						<textarea placeholder="つぶやく…"></textarea>
+						<!--button class="btn post" data-href="#">投稿する</button-->
+						<button class="btn share" data-href="#">投稿する</button>
+					</div>
+				</div>
+			</form>
+			
+			<section>
+				<article class="contents contentsShadow topic">
+					<div class="contentsInner">
+						<div class="topicRoot">
+							<div class="contributor">
+								<!--<div class="emblemIcon_s"><span class="guildRank f">A</span></div>-->
+								<div class="iconBgArc_s gold"><img src="/img/avatar/myAvatar_l.png"></div>
+								<h2>わかば弓士</h2>
+								<time>8/10 12:23</time>
+							</div>
+							<p>
+								ガチャで『武具名(SR)』をゲットしたよ!
+								<span class="topicMenu">
+									<button class="link like" data-href="#"><span class="hide">いいね</span>999</button><button class="link resToggle open" data-href="#"><span class="hide">コメント</span>999</button>
+								</span>
+							</p>
+						</div>
+					</div>
+				</article>
+			</section>
+			
+			<section>
+				<article class="contents contentsShadow topic">
+					<div class="contentsInner">
+						<div class="res">
+							<div class="contributor">
+								<!--<div class="emblemIcon_s"><span class="guildRank f">A</span></div>-->
+								<div class="iconBgArc_s gold"><img src="/img/avatar/myAvatar_l.png"></div>
+								<h2>マクサル</h2>
+								<time>8/10 12:23</time>
+							</div>
+							<p class="myComment">
+								自分の書き込みのいいね!ボタンは押せません。
+								<span class="topicMenu">
+									<button class="link like" data-href="#"><span class="hide">いいね</span>999</button><button class="link resToggle open" data-href="#"><span class="hide">コメント</span>999</button>
+								</span>
+							</p>
+						</div>
+					</div>
+				</article>
+			</section>
+			
+			<section id="guildBbs">
+					<article class="contents contentsShadow topic">
+						<div class="contentsInner">
+							<div class="topicRoot">
+								<div class="contributor">
+								<div class="emblemIcon_s"><span class="guildRank A">A</span></div>
+									<!--div class="iconBgArc_s gold"><img src="/img/avatar/myAvatar_l.png"></div-->
+									<h2>わかば弓士</h2>
+									<time>8/10 12:23</time>
+								</div>
+								<p>
+									コメントアイコンを押すとコメントが開きます（スライドメニュー）いいね押してない＆レス窓開いてるVer.
+									<span class="topicMenu">
+										<button class="link like" data-href="#"><span class="hide">いいね</span>999</button><button class="link resToggle open" data-href="#"><span class="hide">コメント</span>999</button>
+									</span>
+								</p>
+							</div>
+							<div class="resArea">
+								<div class="postComment">
+									<label><input type="text" placeholder="コメントする…"></label><button class="btn">投稿する</button>
+								</div>
+							</div>
+						</div>
+					</article>
+			</section>
+
+			<section>
+				<article class="contents contentsShadow topic">
+					<div class="contentsInner">
+						<div class="topicRoot">
+							<div class="contributor">
+								<div class="emblemIcon_s"><span class="guildRank f">A</span></div>
+								<!--<div class="iconBgArc_s gold"><img src="/img/avatar/myAvatar_l.png"></div>-->
+								<h2>サイババ団</h2>
+								<time>8/10 12:23</time>
+							</div>
+							<p>
+								新たな役職『勇敢な冒険者』を獲得しました!!
+								<span class="topicMenu">
+									<button class="link like" data-href="#"><span class="hide">いいね</span>999</button><button class="link resToggle open" data-href="#"><span class="hide">コメント</span>999</button>
+								</span>
+							</p>
+						</div>
+					</div>
+				</article>
+			</section>
+			
+			<div class="moreLink moreLinkMargin">
+				<button class="link" data-href="#"><span>もっと見る</span></button>
+			</div>
+			
+			<hr>
+			
+			<div class="arrowLink">
+				<button class="link prev" data-href="#">ギルドトップに戻る</button>
+			</div>
+			
+			<div class="helpList guildShopMember">
+				<ul>
+					<li><button class="link" data-href="#">ギルドについて</button></li>
+				</ul>
+				<ul>
+					<li><button class="link" data-href="#">ギルドについて</button></li>
+				</ul>
+			</div>
+
+			<footer id="globalFooter">
+				<ul>
+					<li class="menuPanel"><span class="link mypage"><span class="hide">マイページ</span></span></li>
+					<li class="menuPanel"><span class="link quest"><span class="hide">クエスト</span></span></li>
+					<li class="menuPanel"><span class="link buttle"><span class="hide">バトル</span></span></li>
+					<li class="menuPanel"><span class="link gatcha"><span class="hide">ガチャ</span></span></li>
+					<li class="menuPanel"><span class="link menu"><span class="hide">マイページ</span></span></li>
+				</ul>
+			</footer>
+		</div>
+		
+	</body>
+</html>

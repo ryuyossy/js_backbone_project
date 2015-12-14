@@ -1,0 +1,151 @@
+	<section id="cheer">
+		<h1 class="mainHeader">メンバー鼓舞</h1>
+
+		<div class="message taicho_arc">
+			<p>
+				<span>鼓舞でお互いのAPが回復出来るぞ！回数に制限があるから慎重にな&#65281;</span>
+			</p>
+		</div>
+		
+		<div class="metalPanel statusData jsUser">
+			<table class="gergeTable middle">
+				<tr>
+					<th>AP</th>
+					<td class="gergeBox">
+						<div class="gergeBgFrame">
+							<div class="gergeBg">
+								<span class="gerge battleP jsTpGauge" style="width:{{>tp}}%;"></span>
+							</div>
+						</div>
+					</td>
+					<td><span class="jsTp">{{>tp}}</span><span class="base">/100</span></td>
+				</tr>
+				<tr>
+					<td colspan="3">
+						<span class="headline">残り鼓舞回数</span><span class="jsRest">{{>rest_cheer_num}}</span><span class="base">/10</span>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<section id="ranking">
+			<h1 class="subHeader">
+				<span class="subHeaderBg_l"></span>
+				<span>前衛メンバー</span>
+				<span class="subHeaderBg_r"></span>
+			</h1>
+
+			{{filter users prop="back_flg" value=false}}
+				{{if #data}}
+				<article class="contents contentsShadow statusData_icon jsTarget">
+					<h1><span class="rank">{{>index + 1}}位</span>{{>name}}</h1>
+					<div class="columnBox">
+						<div class="iconBgRect_l gold"><img src="{{getImgRoot/}}/avatar/{{>avatar_id}}_140.png"></div>
+						<div class="contentsInner">
+							<dl>
+								<dt>Lv.</dt><dd>{{>level}}</dd>
+								<dt>ジョブ</dt><dd>{{>job_name}}</dd>
+								<dt>戦闘力</dt><dd>{{>power}}</dd>
+								<dt>AP</dt><dd><span class="jsTp">{{>tp}}</span>/100</dd>
+							</dl>
+						</div>
+					</div>
+					{{if cheered_flg}}
+					<button class="btn disable">鼓舞済み</button>
+					{{else}}
+					<button class="btn jsCheerDo" data-user-id="{{>user_id}}">鼓舞する</button>
+					{{/if}}
+				</article>
+				{{else}}
+				<section class="dimmed">
+					<p>
+						メンバーがいません
+					</p>
+				</section>
+				{{/if}}
+			{{/filter}}
+
+			<h1 class="subHeader">
+				<span class="subHeaderBg_l"></span>
+				<span>後衛メンバー</span>
+				<span class="subHeaderBg_r"></span>
+			</h1>
+
+			{{filter users prop="back_flg" value=true}}
+				{{if #data}}
+				<article class="contents contentsShadow statusData_icon jsTarget">
+					<h1><span class="rank">{{>index + 1}}位</span>{{>name}}</h1>
+					<div class="columnBox">
+						<div class="iconBgRect_l gold"><img src="{{getImgRoot/}}/avatar/{{>avatar_id}}_140.png"></div>
+						<div class="contentsInner">
+							<dl>
+								<dt>Lv.</dt><dd>{{>level}}</dd>
+								<dt>ジョブ</dt><dd>{{>job_name}}</dd>
+								<dt>戦闘力</dt><dd>{{>power}}</dd>
+								<dt>AP</dt><dd><span class="jsTp">{{>tp}}</span>/100</dd>
+							</dl>
+						</div>
+					</div>
+					{{if cheered_flg}}
+					<button class="btn disable">鼓舞済み</button>
+					{{else}}
+					<button class="btn jsCheerDo" data-user-id="{{>user_id}}">鼓舞する</button>
+					{{/if}}
+				</article>
+				{{else}}
+				<section class="dimmed">
+					<p>
+						メンバーがいません
+					</p>
+				</section>
+				{{/if}}
+			{{/filter}}
+		</section>
+
+		{{if new_user}}
+		<section id="newArrival">
+			<h1 class="subHeader2">
+				<span class="subHeaderBg_l"></span><span>新着ユーザー</span><span class="subHeaderBg_r"></span>
+			</h1>
+			{{for new_user}}
+			<article class="contents contentsShadow statusData_icon link" data-href="profile/other/{{>user_id}}/">
+				<div class="columnBox innerHeader">
+					<div class="iconBgRect_l gold"><img src="{{getImgRoot/}}/avatar/{{>avatar_id}}_140.png"></div>
+					<div class="contentsInner">
+						<h1>{{>name}}</h1>
+						<dl>
+							<dt>所属</dt><dd>{{>guild_name}}</dd>
+							<dt>Lv.</dt><dd>{{>level}}</dd>
+							<dt>ジョブ</dt><dd>{{>job_name}}</dd>
+							<dt>総攻撃</dt><dd>{{>total_attack_power}}</dd>
+							<dt>総防御</dt><dd>{{>total_defence_power}}</dd>
+						</dl>
+					</div>
+				</div>
+			</article>
+			{{/for}}
+			<div class="arrowLink">
+				<button class="link next" data-href="new_arrival/">ぜんぶ見る</button>
+			</div>
+		</section>
+		{{/if}}
+		
+	</section>
+
+	<hr>
+
+	<div class="linkGroup">
+		<div class="arrowLink">
+			<button class="link next" data-href="mission/stage/">クエストでAP回復</button>
+		</div>
+		<div class="arrowLink">
+			<button class="link prev" data-href="battle/">バトルへ戻る</button>
+		</div>
+	</div>
+
+	<section class="helpList">
+		<ul>
+			<li><button class="link" data-href="help/">鼓舞とは？</button></li>
+		</ul>
+	</section>
+

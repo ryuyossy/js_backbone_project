@@ -1,0 +1,230 @@
+	<h1 class="mainHeader">ガチャ</h1>
+	<div class="statusLine">
+		<p>
+			<span class="headline">所持武具数</span>
+			{{>own_equip_num}}<span class="denominator">/{{>max_own_equip_num}}</span>
+		</p>
+	</div>
+
+	<section id="gacha" class="jsGacha">
+		<div class="jsTabs">
+			<div class="tabNav2 jsTabButtons">
+				<ul>
+					<li><button class="left premiumGachaTab select">プレミアム</button></li>
+					<li><button class="right normalGachaTab">ノーマル</button></li>
+				</ul>
+			</div>
+		</div>
+		<div class="jsTabInner">
+			<ul class="jsTabContents">
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+	</section>
+
+	<div class="helpList">
+		<ul>
+			<li><button class="link" data-href="help/detail/901/">ガチャってなに？</button></li>
+		</ul>
+	</div>
+
+	<div class="jsLabiText LABI_textBox caution">
+		<article>
+			<h1>コラボキャンペーンからのお知らせ</h1>
+			<div class="LABI_text ALB-recommend-gacha"></div>
+		</article>
+	</div>
+
+	{{escape}}
+	<script id="jsTemplateNormal" type="text/x-jsrender">
+		<section class="tabInner sectionNormal">
+			<section id="newEquip">{{randomHeaderBanner /}}</section>
+			<div class="banner">
+				{{for #data tmpl="#jsTemplateBanners" /}}
+			</div>
+			<header>
+				<h1>1日1回無料！</h1>
+				<p>ガチャポイントで引けるガチャ。</p>
+				<p class="notice">毎日1回無料ガチャは午前0時にリセットされます。</p>
+			</header>
+			<p class="paramStatus">
+				<span class="headline">所持ガチャP</span>{{>own_gacha_p}}P
+				{{if own_equip_num == max_own_equip_num}}
+				<br><span class="headline">所持武具数</span>{{>own_equip_num}} / {{>max_own_equip_num}}
+				{{/if}}
+			</p>
+			{{if own_equip_num == max_own_equip_num}}
+			<section class="maxEequip">
+				<p class="label48">武具がいっぱいです</p>
+				<div class="innerBtnBox">
+					<button class="btn" data-href="compose/">合成する</button>
+					<button class="btn" data-href="equip/sell/list/">売却する</button>
+				</div>
+			</section>
+
+			<div class="btnBox">
+			{{for gachas}}
+				{{if add_equip_num === 1}}
+				<button class="btn disable">{{>gacha_name}}を引く</button>
+				{{else}}
+				<button class="btn disable">{{>gacha_name}}を引く</button>
+				{{/if}}
+			{{/for}}
+			</div>
+			{{else}}
+			<div class="btnBox">
+			{{for gachas}}
+				{{if notice_message}}<p class="label48">{{>notice_message}}</p>{{/if}}
+				{{if add_equip_num === 1}}
+					<button class="btn{{if notice_message}} disable{{else}} jsButtonJumpToNormalGacha{{/if}}" data-gacha-id="{{>gacha_id}}">{{>gacha_name}}を引く</button>
+				{{else}}
+					<button class="btn{{if notice_message}} disable{{else}} jsButtonJumpToNormalGacha{{/if}}" data-gacha-id="{{>gacha_id}}" data-equip-num="{{>add_equip_num}}">{{>gacha_name}}を引く</button>
+				{{/if}}
+				<p class="explain">└ 消費ガチャP <span class="consume">{{>use_gacha_p}}P</span> ┘</p>
+			{{/for}}
+			</div>
+			{{/if}}
+
+			<h1 class="subHeader3">
+				<span>あいさつしてガチャPをゲット！</span>
+			</h1>
+			<div class="listMenu">
+				<ul>
+					<li><div class="link" data-href="guild/members/">ギルドメンバー一覧へ</div></li>
+				</ul>
+			</div>
+
+			<hr>
+
+			<div class="banner">
+				<p>
+					<button class="link" data-href="raremedal/list/"><img src="{{getImgRoot/}}/ad/banner_announce_raremedal.png" alt="banner"><br>└レアメダルを集めてガチャPと交換！┘</button>
+				</p>
+			</div>
+
+			<div class="listMenu">
+				<ul>
+					<li><div class="link" data-href="compose/">合成へ</div></li>
+					<li><div class="link" data-href="equip/sell/list/">武器売却へ</div></li>
+				</ul>
+			</div>
+		</section>
+	</script>
+
+	<script id="jsTemplatePremium" type="text/x-jsrender">
+		<section class="tabInner sectionPremium">
+		{{if !current_emblems}}
+		<section id="newEquip">{{randomHeaderBanner /}}</section>
+
+		{{else}}
+		<section id="seasonAvatar">{{randomHeaderBanner emblems=current_emblems/}}</section>
+
+		{{emblemGotState current_emblems=current_emblems /}}
+
+		<div class="arrowLink">
+			<button class="link next" data-href="season_avatar/{{>season_id}}/">シーズンアバターってなに？</button>
+		</div>
+		{{/if}}
+
+		{{for gachas}}
+		{{if gacha_id !== 301 || gacha_id === 301 && ticket_own_num > 0}}
+		<h1 class="subHeader">
+			<span class="subHeaderBg_l"></span>
+			<span>{{>gacha_name}}</span>
+			<span class="subHeaderBg_r"></span>
+		</h1>
+		{{/if}}
+		{{if limited_term_flg == true}}
+		<dl class="period">
+			<dt>開催期間</dt>
+			<dd>{{>~datetimeToJpSignage(limited_term_start_datetime)}} 〜 {{>~datetimeToJpSignage(limited_term_end_datetime)}}
+			</dd>
+		</dl>
+		{{/if}}
+
+		{{if gacha_id === 301 && ticket_own_num > 0}}
+		<header class="emblemTicketGacha">
+			<h1>
+				エンブレムが必ず付いてくる！<br>
+				特別チケットガチャ！
+			</h1>
+		</header>
+		<p class="paramStatus">
+			<span class="headline">所持エンブレムチケット</span>{{>ticket_own_num}}
+		</p>
+		<div class="btnBox">
+			<button class="btn_l orange jsButtonUseGachaTicket" data-gacha-id="{{>gacha_id}}" data-equip-num="{{>add_equip_num}}">エンブレムガチャチケットで引く</button>
+			<p>└ 消費チケット <span class="consume">1枚</span> ┘</p>
+		</div>
+		<div class="arrowLink">
+			<button class="link next" data-href="gacha/draw-list/{{>gacha_id}}/">このガチャで出る武具</button>
+		</div>
+
+		{{else gacha_id !== 301}}
+		<header>
+			<img class="gacha_img" src="{{getImgRoot/}}/gacha/{{:gacha_id}}{{if limited_term_flg && !~root('current_emblems')}}_limited{{else emblem_omake_flg}}_season{{/if}}.png">
+			<div class="description">
+				<h1>{{>header_text}}</h1>
+				<p>{{>description}}</p>
+			</div>
+		</header>
+		<p class="paramStatus">
+			{{if ticket_own_num > 0}}
+				<span class="headline">所持{{>ticket_name}}</span>{{>ticket_own_num}}
+			{{else}}
+				<span class="headline">所持コイン</span>{{>~root('own_coin')}}
+			{{/if}}
+		</p>
+		<div class="btnBox">
+			{{if ticket_own_num > 0}}
+			<button class="btn_l red jsButtonUseGachaTicket" data-gacha-id="{{>gacha_id}}" data-equip-num="{{>add_equip_num}}">{{>ticket_name}}で引く</button>
+				<p>└ 消費チケット <span class="consume">1枚</span> ┘</p>
+			{{else}}
+				{{if notice_message}}
+				<p class="label48">{{>notice_message}}</p>
+				{{/if}}
+				<button class="btn_l red jsButtonJumpToBuyGacha" data-gacha-id="{{>gacha_id}}" data-equip-num="{{>add_equip_num}}">{{>gacha_name}}を引く</button>
+				{{if price_description}}
+					<p>└{{:price_description}}┘</p>
+				{{else}}
+					<p>└ 消費コイン <span class="consume">{{>price_coin}}コイン</span> ┘</p>
+				{{/if}}
+			{{/if}}
+		</div>
+		<div class="arrowLink">
+			<button class="link next" data-href="gacha/draw-list/{{>gacha_id}}/">このガチャで出る武具</button>
+		</div>
+		{{/if}}
+		{{/for}}
+
+		{{if rare_gacha_news.length > 0}}
+		<section id="rareReport">
+			<h1 class="subHeader2">
+				<span class="subHeaderBg_l"></span>
+				<span>レア速報</span>
+				<span class="subHeaderBg_r"></span>
+			</h1>
+			<div id="jsRareNewsList">
+				{{rareGachaNewsList rare_gacha_news=rare_gacha_news /}}
+			</div>
+		</section>
+		{{/if}}
+
+		<hr>
+
+		<section class="caution">
+			<article>
+				<h1>ご注意</h1>
+				<ul>
+					<li>ガチャで獲得出来る武具は、重複する場合があります。また、ガチャの特性上、すべての武具を揃えられないことがあります。<br>
+各ガチャに含まれる武具は、獲得出来る武具一覧でご確認をお願い致します。</li>
+					<li>サーバのレスポンス、通信状況によって、ガチャの演出がスキップされることがあります。その場合でも武具及びアイテムの追加は正常に完了しております。所持武具、ギフトをご確認ください。</li>
+					<li>プレミアムガチャを初回特別価格で購入された方は、次回より通常300C（初回は10C）での購入となりますのでご購入の際はご注意ください&#12290;</li>
+				</ul>
+			</article>
+		</section>
+	</section>
+
+	</script>
+	{{/escape}}

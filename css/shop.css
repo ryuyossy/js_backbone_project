@@ -1,0 +1,180 @@
+@charset "utf-8";
+/*
+@mixin box_shadow_contents_l($offsetSize,$z_index:-1){
+	content:'';
+	position:absolute;
+	left:$offsetSize;
+	top:75%;
+	bottom:17px;
+	width:50%;
+	min-height:5px;
+	max-width:150px;
+	background:#544123;
+	-webkit-box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	-webkit-transform:rotate(-5deg);
+	transform:rotate(-5deg);
+	z-index:$z_index;
+}
+@mixin box_shadow_contents_r($offsetSize,$z-index:-1){
+	content:'';
+	position:absolute;
+	right:$offsetSize;
+	top:75%;
+	bottom:17px;
+	width:50%;
+	min-height:5px;
+	max-width:150px;
+	background:#544123;
+	-webkit-box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	-webkit-transform:rotate(5deg);
+	transform:rotate(5deg);
+	z-index:$z_index;
+}
+*/
+/*
+@mixin backgroundResize($position:0 -60px){
+	@media screen and (min-width:319px){
+		width:320px;
+		@include background-size(320px,auto);
+	}
+	@media screen and (min-width:359px){
+		width:360px;
+		@include background-size(360px,auto);
+	}
+	@media screen and (min-width:361px){
+		width:480px;
+		@include background-size(480px,auto);
+		background-position:$position;
+	}
+}
+*/
+/*
+@mixin display-box{
+	display:flexbox;
+	-webkit-display:flexbox;
+}
+@mixin box-align($position){
+	flex-align:$position;
+	-webkit-flex-align:$position;
+}
+@mixin box-flex($ratio){
+	flex:$ratio;
+	-webkit-flex:$ratio;
+}
+@mixin box-pack($position){
+	flex-pack:$position;
+	-webkitflex-pack:$position;
+}
+*/
+/* line 6, ../scss/shop.scss */
+.shopContents, .shopBuyContents {
+  width: 95%;
+  margin: 8px auto 0 auto;
+}
+/* line 10, ../scss/shop.scss */
+.shopContents .statusData_icon, .shopBuyContents .statusData_icon {
+  padding: 8px 0 0 0;
+}
+/* line 13, ../scss/shop.scss */
+.shopContents .contents, .shopBuyContents .contents {
+  margin-bottom: 8px;
+}
+/* line 16, ../scss/shop.scss */
+.shopContents .contents.limit, .shopBuyContents .contents.limit {
+  margin-top: 24px;
+}
+
+/* line 21, ../scss/shop.scss */
+.shopNumControl {
+  width: 95%;
+  margin: 8px auto 0 auto;
+}
+
+/* line 25, ../scss/shop.scss */
+.shopBuyContents {
+  padding: 8px 0 8px 0;
+}
+
+/* line 29, ../scss/shop.scss */
+.shopBuySum {
+  width: 95%;
+  margin: 16px auto 0 auto;
+}
+
+/* line 34, ../scss/shop.scss */
+.shopCoinBuy article {
+  border: none;
+  padding: 0 0 0 0;
+}
+/* line 37, ../scss/shop.scss */
+.shopCoinBuy article p {
+  color: #fff;
+}
+
+/* line 43, ../scss/shop.scss */
+.coinWrap article {
+  margin: 16px auto 8px auto;
+}
+
+/* line 48, ../scss/shop.scss */
+.amgWrap article {
+  margin: 16px auto 8px auto;
+}
+
+/* line 53, ../scss/shop.scss */
+.shopBuyCaution article {
+  padding: 12px 0 12px 0;
+}
+/* line 55, ../scss/shop.scss */
+.shopBuyCaution article button {
+  padding-top: 12px;
+}
+/* line 58, ../scss/shop.scss */
+.shopBuyCaution article .boldLinks {
+  font-weight: bold;
+}
+
+/* line 63, ../scss/shop.scss */
+.buyErrorCoin {
+  margin: 6px auto 0 auto;
+  width: 60%;
+}
+
+/* line 69, ../scss/shop.scss */
+.completeWrap article {
+  padding: 0;
+  margin: 8px auto 16px auto;
+}
+/* line 73, ../scss/shop.scss */
+.completeWrap .paramStatus {
+  width: 95%;
+  margin: 16px auto;
+}
+/* line 77, ../scss/shop.scss */
+.completeWrap .statusCnt {
+  color: #fff;
+}
+
+/* line 81, ../scss/shop.scss */
+.buyCompContent {
+  margin: 0 auto;
+  text-align: center;
+}
+/* line 84, ../scss/shop.scss */
+.buyCompContent p:nth-child(1) {
+  color: white;
+  margin: 8px auto 16px auto;
+}
+/* line 88, ../scss/shop.scss */
+.buyCompContent p:nth-child(3) {
+  color: white;
+  margin: 4px auto 8px auto;
+  font-size: 12px;
+}
+
+/* line 94, ../scss/shop.scss */
+.buyItemLink, .confirmArrowLink {
+  margin-bottom: 16px;
+}

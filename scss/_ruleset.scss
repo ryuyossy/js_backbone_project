@@ -1,0 +1,282 @@
+// var
+$content_margin:16px;
+$content_margin_last:32px;
+$inner_margin:8px;
+$content_width:95%;
+$content_inner:90%;
+
+// body & list text
+$color_A:#544123;
+$color_A_rgb:rgb(84,65,35);
+// help text
+$color_B:#3c3826;
+$color_B_rgb:rgb(60,56,38);
+// help icon bg color
+$color_C:#78724c;
+$color_C_rgb:rgb(120,114,76);
+// help bg color
+$color_D:#a79f77;
+$color_D_rgb:rgb(167,159,119);
+// content & list bg color
+$color_E:#e0d3ab;
+$color_E_rgb:rgb(224,211,171);
+// my guild & my topic color
+$color_F:#CCCC66;
+$color_F_rgb:rgb(204,204,102);
+// avatar thumbs bg color $ border color & date color
+$color_G:#B9A46B;
+$color_G_rgb:rgb(185,164,107);
+// subHeader bg color param laber color
+$color_H:#8C0000;
+$color_H_rgb:rgb(140,0,0);
+// subHeader2 bg color & tab text color
+$color_I:#F3DE9F;
+$color_I_rgb:rgb(243,222,159);
+// link text color
+$color_J:#008C8C;
+$color_J_rgb:rgb(0,140,140);
+// default text color
+$color_K:#333333;
+$color_K_rgb:rgb(51,51,51);
+// dark bg label text color & strong text color
+$color_L:#FF0000;
+$color_L_rgb:rgb(255,0,0);
+// unknown
+$color_M:#968E5E;
+$color_M_rgb:rgb(150,142,94);
+// job type label pow
+$color_N:#B73A10;
+$color_N_rgb:rgb(183,58,16);
+// job type label tec
+$color_O:#508643;
+$color_O_rgb:rgb(80,134,67);
+// job type label int
+$color_P:#3A71C3;
+$color_P_rgb:rgb(58,113,195);
+// battle my guild color
+$color_Q:#006DD9;
+$color_Q_rgb:rgb(0,109,217);
+// battle opponent guild color
+$color_R:#B22D00;
+$color_R_rgb:rgb(178,45,0);
+
+
+
+// mixins
+@mixin txtset($size:14px,$colorCode:#333){
+	font-size:$size;
+	color:$colorCode;
+	overflow:hidden;
+	word-break:break-all;
+}
+@mixin imgsize($zoomsize:0.5){
+	zoom:$zoomsize;
+}
+@mixin backgroundSize($imgSrc,$offset_left,$offset_top,$repeats){
+	display:inline-block;
+	$imgWidth:round(image-width($imgSrc)/2);
+	$imgHeight:round(image-height($imgSrc)/2);
+	background:url("#{$img_path}#{$imgSrc}") $offset_left $offset_top $repeats;
+	-webkit-background-size:$imgWidth $imgHeight;
+}
+@mixin backgroundSize_dataURI($imgSrc,$offset_left,$offset_top,$repeats){
+	display:inline-block;
+	$imgWidth:round(image-width($imgSrc)/2);
+	$imgHeight:round(image-height($imgSrc)/2);
+	background:inline-image($imgSrc) $offset_left $offset_top $repeats;
+	-webkit-background-size:$imgWidth $imgHeight;
+}
+@mixin content_box($widthSize:95%){
+	width:$widthSize;
+	margin:0 auto;
+}
+@mixin btn_box($widthSize:80%){
+	width:$widthSize;
+	margin:$content_margin auto;
+	text-align:center;
+}
+@mixin menu_panel{
+	display:block;
+	width:60px;
+	text-align:center;
+}
+@mixin btn_detail($heightSize,$lineheightSize){
+	display:block;
+	height:$heightSize;
+	background-color:transparent;
+	font-size:90%;
+	font-weight:bold;
+	text-decoration:none;
+	text-align:center;
+	line-height:$lineheightSize;
+	cursor:pointer;
+}
+@mixin btn_parallel{
+	@include box-flex(1);
+	width:1px;
+	//margin-right:$inner_margin/2;
+}
+@mixin borderImage($imgSrc,$offset,$repeats,$borderSize,$color:#ffffff){
+	border-image:$imgSrc $offset $repeats;
+	-webkit-border-image:$imgSrc $offset $repeats;
+	border-width:$borderSize;
+	color:$color;
+}
+@mixin maskImage($imgSrc,$offset,$repeats,$bgColorCode){
+	mask-box-image:$imgSrc $offset $repeats;
+	-webkit-mask-box-image:$imgSrc $offset $repeats;
+	background-color:$bgColorCode;
+}
+@mixin linearGradient($topColor,$bottomColor){
+	background:$topColor;
+	@include background(linear-gradient($topColor 0%,$bottomColor 100%));
+}
+@mixin gergeGradient($topColor,$middleColorTop,$middleColorBottom,$bottomColor){
+	background:$topColor;
+	@include background(linear-gradient($topColor 0%,$middleColorTop 50%,$middleColorBottom 51%,$bottomColor 100%));
+}
+@mixin box_shadow($offset:0 2px 2px,$colorCode:rgba(0,0,0,0.5)){
+	-webkit-box-shadow:$offset $colorCode;
+	box-shadow:$offset $colorCode;
+}
+/*
+@mixin box_shadow_contents_l($offsetSize,$z_index:-1){
+	content:'';
+	position:absolute;
+	left:$offsetSize;
+	top:75%;
+	bottom:17px;
+	width:50%;
+	min-height:5px;
+	max-width:150px;
+	background:#544123;
+	-webkit-box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	-webkit-transform:rotate(-5deg);
+	transform:rotate(-5deg);
+	z-index:$z_index;
+}
+@mixin box_shadow_contents_r($offsetSize,$z-index:-1){
+	content:'';
+	position:absolute;
+	right:$offsetSize;
+	top:75%;
+	bottom:17px;
+	width:50%;
+	min-height:5px;
+	max-width:150px;
+	background:#544123;
+	-webkit-box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	-webkit-transform:rotate(5deg);
+	transform:rotate(5deg);
+	z-index:$z_index;
+}
+*/
+@mixin box_innerglow{
+	-webkit-box-shadow:0 0 8px rgba(84,65,35,0.5) inset;
+	box-shadow:0 0 8px rgba(84,65,35,0.5) inset;
+}
+@mixin text_glow($colorCode:#fff){
+	text-shadow:-1px -1px 2px $colorCode,1px -1px 2px $colorCode,-1px 1px 2px $colorCode,1px 1px 2px $colorCode;
+	//text-shadow:0 0 5px $colorCode,0 0 5px $colorCode,0 0 5px $colorCode,0 0 5px $colorCode;
+}
+@mixin text_shadow($offset_left:-1px,$offset_top:-1px,$shading:1px,$color:#000000){
+	text-shadow:$offset_left $offset_top $shading $color;
+}
+@mixin hidden_object($widthSize:0,$heightSize:0){
+	display:block;
+	visibility:hidden;
+	width:$widthSize;
+	height:$heightSize;
+	font-size:0;
+	overflow:hidden;
+}
+@mixin visible_object($offset_left,$offset_top,$widthSize,$heightSize,$z_index){
+	visibility:visible;
+	content:"";
+	display:block;
+	overflow:hidden;
+	position:absolute;
+	left:$offset_left;
+	top:$offset_top;
+	width:$widthSize;
+	height:$heightSize;
+	z-index:$z_index;
+}
+@mixin text_overflow{
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+}
+@mixin none_highlight{
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+	-webkit-touch-callout:none;
+}
+@mixin clearfix{
+	content:"";
+	display:block;
+	overflow:hidden;
+	clear:both;
+}
+@mixin main_bg_bottom{
+	@include backgroundSize("/background/bg_img_bottom.png",0,0,no-repeat);
+	@include visible_object(0,auto,320px,20px,auto);
+	bottom:0;
+}
+@mixin highlightBgColor{
+	background-color:rgba(0,0,0,0.3);
+}
+
+
+
+
+
+// media queries background resize
+/*
+@mixin backgroundResize($position:0 -60px){
+	@media screen and (min-width:319px){
+		width:320px;
+		@include background-size(320px,auto);
+	}
+	@media screen and (min-width:359px){
+		width:360px;
+		@include background-size(360px,auto);
+	}
+	@media screen and (min-width:361px){
+		width:480px;
+		@include background-size(480px,auto);
+		background-position:$position;
+	}
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+// flex-box alternative mixins
+/*
+@mixin display-box{
+	display:flexbox;
+	-webkit-display:flexbox;
+}
+@mixin box-align($position){
+	flex-align:$position;
+	-webkit-flex-align:$position;
+}
+@mixin box-flex($ratio){
+	flex:$ratio;
+	-webkit-flex:$ratio;
+}
+@mixin box-pack($position){
+	flex-pack:$position;
+	-webkitflex-pack:$position;
+}
+*/

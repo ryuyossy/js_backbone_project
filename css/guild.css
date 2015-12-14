@@ -1,0 +1,1257 @@
+@charset "utf-8";
+/*
+@mixin box_shadow_contents_l($offsetSize,$z_index:-1){
+	content:'';
+	position:absolute;
+	left:$offsetSize;
+	top:75%;
+	bottom:17px;
+	width:50%;
+	min-height:5px;
+	max-width:150px;
+	background:#544123;
+	-webkit-box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	-webkit-transform:rotate(-5deg);
+	transform:rotate(-5deg);
+	z-index:$z_index;
+}
+@mixin box_shadow_contents_r($offsetSize,$z-index:-1){
+	content:'';
+	position:absolute;
+	right:$offsetSize;
+	top:75%;
+	bottom:17px;
+	width:50%;
+	min-height:5px;
+	max-width:150px;
+	background:#544123;
+	-webkit-box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	-webkit-transform:rotate(5deg);
+	transform:rotate(5deg);
+	z-index:$z_index;
+}
+*/
+/*
+@mixin backgroundResize($position:0 -60px){
+	@media screen and (min-width:319px){
+		width:320px;
+		@include background-size(320px,auto);
+	}
+	@media screen and (min-width:359px){
+		width:360px;
+		@include background-size(360px,auto);
+	}
+	@media screen and (min-width:361px){
+		width:480px;
+		@include background-size(480px,auto);
+		background-position:$position;
+	}
+}
+*/
+/*
+@mixin display-box{
+	display:flexbox;
+	-webkit-display:flexbox;
+}
+@mixin box-align($position){
+	flex-align:$position;
+	-webkit-flex-align:$position;
+}
+@mixin box-flex($ratio){
+	flex:$ratio;
+	-webkit-flex:$ratio;
+}
+@mixin box-pack($position){
+	flex-pack:$position;
+	-webkitflex-pack:$position;
+}
+*/
+/* line 6, ../scss/guild.scss */
+#guildTop {
+  display: inline-block;
+  background: url("/img/background/bg_guild.jpg") 0 0 no-repeat;
+  -webkit-background-size: 320px 240px;
+  position: relative;
+  display: block;
+  height: 240px;
+}
+/* line 12, ../scss/guild.scss */
+#guildTop:after {
+  display: inline-block;
+  background: url("/img/background/bg_img_bottom.png") 0 0 no-repeat;
+  -webkit-background-size: 320px 20px;
+  visibility: visible;
+  content: "";
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: auto;
+  width: 320px;
+  height: 20px;
+  z-index: auto;
+  bottom: 0;
+}
+/* line 16, ../scss/guild.scss */
+#guildTop .emblemIcon_s {
+  position: absolute;
+  left: 8px;
+  top: 2px;
+  z-index: 11;
+}
+/* line 22, ../scss/guild.scss */
+#guildTop .edit {
+  position: relative;
+  display: inline-block;
+  background: url("/img/parts/sprite_icon_parts_20130415_1.png") 0 0 no-repeat;
+  -webkit-background-size: 140px 95px;
+  visibility: visible;
+  content: "";
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: auto;
+  top: 7px;
+  width: 20px;
+  height: 20px;
+  z-index: auto;
+  right: 14px;
+  z-index: 11;
+}
+/* line 29, ../scss/guild.scss */
+#guildTop .guildStatus {
+  position: absolute;
+  left: 8px;
+  top: 48px;
+  font-size: 80%;
+  color: #fff;
+  text-shadow: -1px -1px 2px black, 1px -1px 2px black, -1px 1px 2px black, 1px 1px 2px black;
+  z-index: 1;
+}
+/* line 38, ../scss/guild.scss */
+#guildTop .guildStatus span {
+  display: inline-block;
+  margin: 0 4px 0 8px;
+  font-weight: bold;
+  color: #ff0000;
+}
+/* line 44, ../scss/guild.scss */
+#guildTop .guildStatus span:first-of-type {
+  margin-left: 0;
+}
+/* line 49, ../scss/guild.scss */
+#guildTop .masterComment {
+  position: relative;
+  top: 130px;
+  width: 304px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: box;
+  z-index: 1;
+}
+/* line 57, ../scss/guild.scss */
+#guildTop .commentBox {
+  position: relative;
+  -webkit-box-flex: 1;
+  box-flex: 1;
+}
+/* line 60, ../scss/guild.scss */
+#guildTop .commentBox .edit {
+  right: 6px;
+  top: auto;
+  bottom: 8px;
+}
+/* line 66, ../scss/guild.scss */
+#guildTop .masterName {
+  position: relative;
+  left: 8px;
+  width: 175px;
+  padding-left: 62px;
+  font-size: 85%;
+  font-weight: bold;
+  color: #fff;
+  line-height: 20px;
+  text-shadow: -1px -1px 2px black, 1px -1px 2px black, -1px 1px 2px black, 1px 1px 2px black;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/* line 80, ../scss/guild.scss */
+#guildTop .masterName span {
+  display: inline-block;
+}
+/* line 83, ../scss/guild.scss */
+#guildTop .masterName span:before {
+  display: inline-block;
+  background: url("/img/parts/sprite_battle_parts.png") -315px -310px no-repeat;
+  -webkit-background-size: 450px 360px;
+  visibility: visible;
+  content: "";
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 58px;
+  height: 18px;
+  z-index: auto;
+}
+/* line 89, ../scss/guild.scss */
+#guildTop .commentBody {
+  position: relative;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-image: url("/img/parts/bg_bubble_w_l.png") 29 35 32 51 stretch;
+  -webkit-border-image: url("/img/parts/bg_bubble_w_l.png") 29 35 32 51 stretch;
+  border-width: 10px 10px 12px 14px;
+  color: inherit;
+  height: 62px;
+  margin-top: 2px;
+  font-size: 90%;
+  overflow: hidden;
+  line-height: 1.8;
+}
+/* line 101, ../scss/guild.scss */
+#guildTop .commentBody span {
+  display: block;
+  margin: -3px 20px 0 0;
+}
+/* line 107, ../scss/guild.scss */
+#guildTop .opponent {
+  display: inline-block;
+  background: url("/img/parts/text_opponent.png") 0 0 no-repeat;
+  -webkit-background-size: 189px 39px;
+  position: absolute;
+  left: 70px;
+  top: 77px;
+  display: block;
+  width: 189px;
+  height: 39px;
+}
+/* line 116, ../scss/guild.scss */
+#guildTop .battleTime {
+  display: inline-block;
+  background: url("/img/parts/text_onbattle.png") 0 0 no-repeat;
+  -webkit-background-size: 211px 66px;
+  position: absolute;
+  left: 58px;
+  top: 63px;
+  display: block;
+  width: 211px;
+  height: 66px;
+}
+/* line 125, ../scss/guild.scss */
+#guildTop ~ .btn.large {
+  width: 50%;
+  margin: 16px auto 0 auto;
+}
+
+/* line 131, ../scss/guild.scss */
+#guildAction .memberList {
+  position: relative;
+  width: 304px;
+  margin: -20px auto 0 auto;
+  display: -webkit-box;
+  display: box;
+}
+/* line 137, ../scss/guild.scss */
+#guildAction .memberList .iconBox {
+  position: relative;
+  margin: 0 8px 0 0;
+}
+/* line 140, ../scss/guild.scss */
+#guildAction .memberList .iconBox .iconBgArc_s {
+  margin-bottom: 0;
+}
+/* line 143, ../scss/guild.scss */
+#guildAction .memberList .iconBox:last-of-type {
+  margin-right: 0;
+}
+/* line 149, ../scss/guild.scss */
+#guildAction .memberList .over,
+#guildAction .memberList .yet {
+  display: inline-block;
+  background: url("/img/parts/sprite_battle_parts.png") -315px -332px no-repeat;
+  -webkit-background-size: 450px 360px;
+  position: absolute;
+  right: -2px;
+  bottom: -4px;
+  display: block;
+  width: 16px;
+  height: 23px;
+}
+/* line 158, ../scss/guild.scss */
+#guildAction .memberList .yet {
+  display: inline-block;
+  background: url("/img/parts/sprite_battle_parts.png") -333px -332px no-repeat;
+  -webkit-background-size: 450px 360px;
+}
+/* line 162, ../scss/guild.scss */
+#guildAction .memberList .more {
+  position: absolute;
+  right: 0;
+}
+/* line 165, ../scss/guild.scss */
+#guildAction .memberList .more .link {
+  display: inline-block;
+  background: url("/img/parts/sprite_battle_parts.png") -310px -265px no-repeat;
+  -webkit-background-size: 450px 360px;
+  position: relative;
+  display: block;
+  width: 64px;
+  height: 40px;
+  font-size: 85%;
+  color: inherit;
+  line-height: 43px;
+  text-align: left;
+}
+/* line 176, ../scss/guild.scss */
+#guildAction .memberList .more .link.on:before {
+  visibility: visible;
+  content: "";
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 64px;
+  height: 41px;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+/* line 181, ../scss/guild.scss */
+#guildAction .memberList .more .link:after {
+  display: inline-block;
+  background: url("/img/parts/sprite_icon_parts_20130415_1.png") -97px -78px no-repeat;
+  -webkit-background-size: 140px 95px;
+  visibility: visible;
+  content: "";
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: auto;
+  top: 50%;
+  width: 9px;
+  height: 13px;
+  z-index: auto;
+  right: 8px;
+  margin-top: -6px;
+}
+/* line 187, ../scss/guild.scss */
+#guildAction .memberList .more .link span {
+  display: inline-block;
+  margin-left: 12px;
+}
+/* line 194, ../scss/guild.scss */
+#guildAction .btn_l.onBattle {
+  display: block;
+  width: 80%;
+  margin: 16px auto 8px auto;
+}
+/* line 198, ../scss/guild.scss */
+#guildAction .btn_l.onBattle span:before {
+  display: inline-block;
+  background: url("/img/parts/sprite_battle_parts.png") -298px -1px no-repeat;
+  -webkit-background-size: 450px 360px;
+  visibility: visible;
+  content: "";
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: 86px;
+  top: -1px;
+  width: 64px;
+  height: 22px;
+  z-index: auto;
+}
+/* line 203, ../scss/guild.scss */
+#guildAction .message {
+  top: 0;
+}
+/* line 205, ../scss/guild.scss */
+#guildAction .message + .contents {
+  margin: 8px auto 0 auto;
+}
+/* line 208, ../scss/guild.scss */
+#guildAction .message + .listMenu {
+  margin-top: 8px;
+}
+/* line 211, ../scss/guild.scss */
+#guildAction .message + .btnBox {
+  margin-top: 16px;
+}
+/* line 215, ../scss/guild.scss */
+#guildAction .gergeBox {
+  width: 304px;
+  margin: 8px auto;
+}
+/* line 219, ../scss/guild.scss */
+#guildAction .contents {
+  width: 95%;
+  margin: 16px auto 0 auto;
+}
+/* line 223, ../scss/guild.scss */
+#guildAction h1 {
+  padding-left: 65px;
+}
+/* line 225, ../scss/guild.scss */
+#guildAction h1 span:before {
+  visibility: visible;
+  content: "";
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: 8px;
+  top: 11px;
+  width: 56px;
+  height: 13px;
+  z-index: auto;
+  display: inline-block;
+  background: url("/img/parts/sprite_battle_parts.png") -314px -245px no-repeat;
+  -webkit-background-size: 450px 360px;
+}
+/* line 230, ../scss/guild.scss */
+#guildAction dt {
+  clear: none;
+}
+/* line 233, ../scss/guild.scss */
+#guildAction dt:nth-of-type(3), #guildAction dt:nth-of-type(4) {
+  clear: both;
+}
+/* line 236, ../scss/guild.scss */
+#guildAction dt:nth-of-type(2) {
+  margin-left: 48px;
+}
+/* line 243, ../scss/guild.scss */
+#guildAction .btnBox {
+  margin: 16px 0 32px 0;
+}
+/* line 246, ../scss/guild.scss */
+#guildAction .outerBtnBox {
+  width: 95%;
+  margin: 4px auto;
+}
+/* line 250, ../scss/guild.scss */
+#guildAction .autoPermissionControl {
+  width: 95%;
+  margin: -24px auto 8px auto;
+}
+/* line 255, ../scss/guild.scss */
+#guildAction .btn.join {
+  margin: 16px auto 16px auto;
+}
+/* line 258, ../scss/guild.scss */
+#guildAction .dimmed {
+  margin-bottom: 32px;
+}
+/* line 261, ../scss/guild.scss */
+#guildAction ~ .subHeader {
+  margin: 16px 0 8px 0;
+}
+/* line 264, ../scss/guild.scss */
+#guildAction ~ .banner {
+  margin: 8px 0 16px 0;
+}
+/* line 267, ../scss/guild.scss */
+#guildAction ~ .arrowLink {
+  margin-bottom: 16px;
+}
+
+/* line 271, ../scss/guild.scss */
+.banner.bnMarg {
+  margin: 16px 0;
+}
+
+/* line 274, ../scss/guild.scss */
+.bbsOthM {
+  margin-top: 8px;
+}
+
+/* line 277, ../scss/guild.scss */
+#guildBbs {
+  margin-bottom: 0;
+}
+/* line 279, ../scss/guild.scss */
+#guildBbs .postForm_icon {
+  margin: 8px auto;
+}
+/* line 282, ../scss/guild.scss */
+#guildBbs .moreLink {
+  margin: 8px auto;
+}
+/* line 285, ../scss/guild.scss */
+#guildBbs .arrowLink.alertNoMem {
+  margin-bottom: 16px;
+}
+/* line 288, ../scss/guild.scss */
+#guildBbs ~ .banner {
+  margin-top: 16px;
+}
+
+/* member list */
+/* line 294, ../scss/guild.scss */
+#guildMemberList .statusLine {
+  text-align: center;
+}
+/* line 297, ../scss/guild.scss */
+#guildMemberList .message {
+  margin-bottom: 16px;
+}
+/* line 300, ../scss/guild.scss */
+#guildMemberList .gergeBox {
+  width: 304px;
+  margin: 0 auto;
+}
+/* line 304, ../scss/guild.scss */
+#guildMemberList .memberList {
+  margin: 8px 0 0 0;
+}
+/* line 306, ../scss/guild.scss */
+#guildMemberList .memberList .contents {
+  width: 95%;
+  margin: 0 auto 8px auto;
+}
+/* line 310, ../scss/guild.scss */
+#guildMemberList .memberList .contents h1 .order {
+  position: relative;
+  display: inline-block;
+  margin-right: 8px;
+  padding-left: 32px;
+  color: #8c0000;
+}
+/* line 316, ../scss/guild.scss */
+#guildMemberList .memberList .contents h1 .order:before {
+  display: inline-block;
+  background: url("/img/parts/sprite_icon_parts_20130415_1.png") -78px -3px no-repeat;
+  -webkit-background-size: 140px 95px;
+  visibility: visible;
+  content: "";
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 24px;
+  height: 14px;
+  z-index: auto;
+}
+/* line 323, ../scss/guild.scss */
+#guildMemberList .memberList .contents dt.label36_r4 {
+  margin: 0 8px 4px 0;
+  padding: 0 4px 0 4px;
+  background-color: #8C0000;
+  font-size: 100%;
+  color: #fff;
+}
+/* line 330, ../scss/guild.scss */
+#guildMemberList .memberList .contents dt:nth-of-type(5) {
+  clear: none;
+  margin-left: 8px;
+}
+/* line 337, ../scss/guild.scss */
+#guildMemberList .memberList .contents.title .contentsInner {
+  min-height: 88px;
+}
+/* line 343, ../scss/guild.scss */
+#guildMemberList .memberList .label36_r4.member_new,
+#guildMemberList .memberList .label36_r4.member_ace {
+  display: block;
+  position: absolute;
+  left: 8px;
+  top: 70px;
+  width: 64px;
+  color: #fff;
+  font-size: 85%;
+  text-align: center;
+}
+/* line 354, ../scss/guild.scss */
+#guildMemberList .memberList .columnBox ~ .btn {
+  width: 50%;
+  margin-top: 4px;
+  position: relative;
+  z-index: 2;
+}
+/* line 359, ../scss/guild.scss */
+#guildMemberList .memberList .columnBox ~ .btn.training {
+  width: 140px;
+  margin-top: 4px;
+}
+/* line 365, ../scss/guild.scss */
+#guildMemberList .memberList .innerBtnBox {
+  width: 95%;
+  margin: 4px auto 0 auto;
+}
+/* line 368, ../scss/guild.scss */
+#guildMemberList .memberList .innerBtnBox .btn {
+  position: relative;
+  z-index: 2;
+}
+/* line 373, ../scss/guild.scss */
+#guildMemberList .memberList .btn.training {
+  position: relative;
+  height: 40px;
+  line-height: 15px;
+}
+/* line 377, ../scss/guild.scss */
+#guildMemberList .memberList .btn.training span {
+  display: inline-block;
+  margin-left: 24px;
+}
+/* line 382, ../scss/guild.scss */
+#guildMemberList .memberList .btn.training.yet span:before {
+  display: inline-block;
+  background: url("/img/parts/sprite_battle_parts.png") -379px -331px no-repeat;
+  -webkit-background-size: 450px 360px;
+  visibility: visible;
+  content: "";
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: 6px;
+  top: -10px;
+  width: 22px;
+  height: 29px;
+  z-index: auto;
+}
+/* line 388, ../scss/guild.scss */
+#guildMemberList .memberList .btn.training.over span:before {
+  display: inline-block;
+  background: url("/img/parts/sprite_battle_parts.png") -354px -331px no-repeat;
+  -webkit-background-size: 450px 360px;
+  visibility: visible;
+  content: "";
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: 6px;
+  top: -10px;
+  width: 22px;
+  height: 29px;
+  z-index: auto;
+}
+/* line 395, ../scss/guild.scss */
+#guildMemberList .expulsionNotice {
+  width: 272px;
+  margin: 16px auto 0 auto;
+  padding: 4px 16px;
+  background-color: #ff0000;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  font-size: 85%;
+  color: #fff;
+  text-align: center;
+}
+/* line 405, ../scss/guild.scss */
+#guildMemberList ~ .helpList {
+  margin-top: 16px;
+}
+
+/* line 410, ../scss/guild.scss */
+.guildRankStatus ~ p {
+  color: #B9A46B;
+  font-size: 85%;
+  text-align: center;
+}
+
+/* line 416, ../scss/guild.scss */
+#ranking {
+  margin-bottom: 0;
+}
+/* line 419, ../scss/guild.scss */
+#ranking .label48 {
+  width: 80%;
+  margin: 16px auto;
+}
+/* line 423, ../scss/guild.scss */
+#ranking .label48.rankUp {
+  margin-top: 10px;
+  background-color: #2285b2;
+}
+/* line 427, ../scss/guild.scss */
+#ranking .label48.rankStay {
+  background-color: #6fa000;
+}
+/* line 430, ../scss/guild.scss */
+#ranking .label48.rankDown {
+  background-color: #b20d03;
+}
+/* line 435, ../scss/guild.scss */
+#ranking .contents dt.label36_r4 {
+  margin: 0 8px 4px 0;
+  padding: 0 4px 0 4px;
+  background-color: #8C0000;
+  font-size: 100%;
+  color: #fff;
+}
+/* line 442, ../scss/guild.scss */
+#ranking .contents dd:first-of-type {
+  font-weight: bold;
+  font-size: 110%;
+  vertical-align: middle;
+}
+/* line 448, ../scss/guild.scss */
+#ranking ~ .banner {
+  margin-bottom: 32px;
+}
+
+/* line 456, ../scss/guild.scss */
+#masterAuthority.postForm_text {
+  width: 95%;
+  margin: 8px auto 16px auto;
+}
+/* line 460, ../scss/guild.scss */
+#masterAuthority.postForm_message {
+  width: 95%;
+  margin: 8px auto 16px auto;
+}
+/* line 464, ../scss/guild.scss */
+#masterAuthority ~ .btn.large {
+  width: 90%;
+  margin-bottom: 16px;
+}
+/* line 468, ../scss/guild.scss */
+#masterAuthority ~ .arrowLink {
+  margin-bottom: 16px;
+}
+
+/* line 475, ../scss/guild.scss */
+#invitedList {
+  margin-top: 8px;
+}
+/* line 477, ../scss/guild.scss */
+#invitedList .contents {
+  width: 95%;
+  margin: 0 auto 8px auto;
+}
+/* line 480, ../scss/guild.scss */
+#invitedList .contents h1 {
+  margin-bottom: 8px;
+}
+/* line 484, ../scss/guild.scss */
+#invitedList dt {
+  margin: 0;
+}
+/* line 486, ../scss/guild.scss */
+#invitedList dt:nth-of-type(2n) {
+  clear: none;
+  margin-left: 8px;
+}
+/* line 491, ../scss/guild.scss */
+#invitedList .btn.large {
+  width: 60%;
+  margin: 8px auto 0 auto;
+}
+/* line 495, ../scss/guild.scss */
+#invitedList ~ .helpList {
+  margin-top: 16px;
+}
+
+/* line 502, ../scss/guild.scss */
+#guildJoinRequest {
+  margin-top: 8px;
+}
+/* line 504, ../scss/guild.scss */
+#guildJoinRequest .contents {
+  width: 95%;
+  margin: 0 auto 8px auto;
+}
+/* line 508, ../scss/guild.scss */
+#guildJoinRequest .contents p {
+  margin-top: 4px;
+}
+/* line 511, ../scss/guild.scss */
+#guildJoinRequest .contents .btn.large {
+  margin-top: 8px;
+}
+/* line 516, ../scss/guild.scss */
+#guildJoinRequest dt:nth-of-type(2n) {
+  clear: none;
+  margin-left: 8px;
+}
+/* line 521, ../scss/guild.scss */
+#guildJoinRequest .moreLink {
+  margin-top: 8px;
+}
+/* line 524, ../scss/guild.scss */
+#guildJoinRequest ~ .helpList {
+  margin-top: 16px;
+}
+
+/* line 531, ../scss/guild.scss */
+#guildPositionList {
+  margin-top: 8px;
+}
+/* line 533, ../scss/guild.scss */
+#guildPositionList .contents {
+  width: 95%;
+  margin: 0 auto 8px auto;
+}
+/* line 537, ../scss/guild.scss */
+#guildPositionList .contents .btn {
+  margin-top: 8px;
+}
+/* line 540, ../scss/guild.scss */
+#guildPositionList .contents .columnBox.link {
+  padding-right: 20px;
+}
+/* line 543, ../scss/guild.scss */
+#guildPositionList .contents h2 {
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #544123;
+}
+/* line 548, ../scss/guild.scss */
+#guildPositionList .contents .innerBtnBox {
+  margin: 0px auto;
+}
+/* line 553, ../scss/guild.scss */
+#guildPositionList.appoint .subHeader {
+  margin: 16px 0 8px 0;
+}
+/* line 557, ../scss/guild.scss */
+#guildPositionList.appoint .contentsShadow h1 {
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #544123;
+}
+/* line 563, ../scss/guild.scss */
+#guildPositionList.appoint .contentsShadow dt:nth-of-type(2n) {
+  clear: none;
+  margin-left: 8px;
+}
+/* line 570, ../scss/guild.scss */
+#guildPositionList ~ .helpList {
+  margin-top: 16px;
+}
+
+/* line 578, ../scss/guild.scss */
+#guildPlaza .message.navico_arc {
+  top: 0;
+}
+/* line 581, ../scss/guild.scss */
+#guildPlaza > .message {
+  margin: 8px auto;
+}
+/* line 585, ../scss/guild.scss */
+#guildPlaza.candidate .contents.shadow {
+  margin-bottom: 16px;
+}
+/* line 589, ../scss/guild.scss */
+#guildPlaza .contents.shadow {
+  margin-top: 8px;
+  padding: 8px 0;
+}
+/* line 593, ../scss/guild.scss */
+#guildPlaza .recommendUserList {
+  margin-top: 8px;
+}
+/* line 595, ../scss/guild.scss */
+#guildPlaza .recommendUserList ~ .subHeader {
+  margin: 16px 0 8px 0;
+}
+/* line 599, ../scss/guild.scss */
+#guildPlaza .contents {
+  width: 95%;
+  margin: 0 auto 8px auto;
+}
+/* line 602, ../scss/guild.scss */
+#guildPlaza .contents.myGuild {
+  background-color: #cccc66;
+}
+/* line 605, ../scss/guild.scss */
+#guildPlaza .contents p {
+  margin-top: 4px;
+}
+/* line 608, ../scss/guild.scss */
+#guildPlaza .contents .btn.large {
+  margin-top: 8px;
+}
+/* line 613, ../scss/guild.scss */
+#guildPlaza dt:nth-of-type(2n) {
+  clear: none;
+  margin-left: 8px;
+}
+/* line 618, ../scss/guild.scss */
+#guildPlaza .helpList {
+  margin-top: 16px;
+}
+/* line 621, ../scss/guild.scss */
+#guildPlaza .arrowLink.spaceBack {
+  margin-bottom: 2px;
+}
+/* line 624, ../scss/guild.scss */
+#guildPlaza .jsGuildEditButton {
+  width: 80%;
+}
+/* line 627, ../scss/guild.scss */
+#guildPlaza > .jsGuildJoin {
+  margin: 0px auto 16px;
+}
+
+/* line 631, ../scss/guild.scss */
+.modalInner.guilF {
+  width: 95%;
+}
+
+/* line 636, ../scss/guild.scss */
+#rearguardRequest .message.taicho_arc {
+  top: 0;
+  margin-top: 8px;
+}
+/* line 640, ../scss/guild.scss */
+#rearguardRequest #requestList {
+  margin-top: 8px;
+}
+/* line 643, ../scss/guild.scss */
+#rearguardRequest .contents {
+  width: 95%;
+  margin: 0 auto 8px auto;
+}
+/* line 646, ../scss/guild.scss */
+#rearguardRequest .contents.statusData_icon {
+  padding-bottom: 8px;
+}
+/* line 650, ../scss/guild.scss */
+#rearguardRequest .setUpToggle {
+  margin: 8px 8px 0 8px;
+}
+/* line 653, ../scss/guild.scss */
+#rearguardRequest ~ .helpList {
+  margin-top: 16px;
+}
+
+/* line 661, ../scss/guild.scss */
+#recruitmentGuild > .btn.large {
+  margin: 16px auto;
+}
+/* line 664, ../scss/guild.scss */
+#recruitmentGuild .contents {
+  width: 95%;
+  margin: 0 auto 8px auto;
+}
+/* line 667, ../scss/guild.scss */
+#recruitmentGuild .contents.condition {
+  margin: 16px auto 16px auto;
+  padding: 8px 0;
+}
+/* line 673, ../scss/guild.scss */
+#recruitmentGuild #recruitmentGuildList dl, #recruitmentGuild #myGuild dl {
+  margin-right: 10px;
+}
+/* line 677, ../scss/guild.scss */
+#recruitmentGuild #recruitmentGuildList dt:nth-of-type(2n), #recruitmentGuild #myGuild dt:nth-of-type(2n) {
+  clear: none;
+  margin-left: 8px;
+}
+/* line 682, ../scss/guild.scss */
+#recruitmentGuild #recruitmentGuildList .moreLink, #recruitmentGuild #myGuild .moreLink {
+  margin: 8px auto;
+}
+/* line 686, ../scss/guild.scss */
+#recruitmentGuild #myGuild {
+  margin: 8px auto 16px auto;
+  background-color: #cccc66;
+}
+/* line 690, ../scss/guild.scss */
+#recruitmentGuild .jsGuildEditButton {
+  width: 80%;
+  margin: 8px auto 0px;
+}
+/* line 694, ../scss/guild.scss */
+#recruitmentGuild ~ .helpList {
+  margin-top: 16px;
+}
+/* line 697, ../scss/guild.scss */
+#recruitmentGuild ~ .arrowLink.spaceBack {
+  margin-bottom: 2px;
+}
+
+/* line 706, ../scss/guild.scss */
+#guildLeave.complateMessage article {
+  padding: 24px 0;
+  margin: 8px auto;
+}
+/* line 710, ../scss/guild.scss */
+#guildLeave.complateMessage p {
+  font-size: 100%;
+}
+/* line 713, ../scss/guild.scss */
+#guildLeave.complateMessage dt, #guildLeave.complateMessage dd {
+  display: inline-block;
+  font-size: 85%;
+}
+/* line 717, ../scss/guild.scss */
+#guildLeave.complateMessage dt {
+  margin-left: 8px;
+  color: #ff0000;
+}
+/* line 721, ../scss/guild.scss */
+#guildLeave.complateMessage dd {
+  margin-left: 4px;
+  color: #fff;
+}
+/* line 727, ../scss/guild.scss */
+#guildLeave ~ .listMenu li:last-child {
+  margin-top: 16px;
+}
+
+/* line 734, ../scss/guild.scss */
+.selectList {
+  margin: 16px auto 16px auto;
+}
+
+/* line 737, ../scss/guild.scss */
+.arrowLink.guliBack {
+  margin: 16px auto;
+}
+
+/* line 743, ../scss/guild.scss */
+.modalInner.nameChangeComplate .btn.cancel {
+  display: block;
+  margin: 0 auto;
+}
+
+/* guild ranking */
+/* guild rank status */
+/* line 752, ../scss/guild.scss */
+.rankStatus, .rankStatus_l {
+  display: -webkit-box;
+  display: box;
+  -webkit-box-align: center;
+  box-align: center;
+  width: 95%;
+  margin: 0 auto;
+  padding: 5px 0 4px 0;
+}
+/* line 759, ../scss/guild.scss */
+.rankStatus .label32, .rankStatus_l .label32 {
+  padding: 0 8px;
+  background-color: #6fa000;
+  line-height: 18px;
+}
+/* line 764, ../scss/guild.scss */
+.rankStatus .label32.rankUp, .rankStatus_l .label32.rankUp {
+  margin-top: 10px;
+  background-color: #2285b2;
+}
+/* line 768, ../scss/guild.scss */
+.rankStatus .label32.rankStay, .rankStatus_l .label32.rankStay {
+  background-color: #6fa000;
+}
+/* line 771, ../scss/guild.scss */
+.rankStatus .label32.rankDown, .rankStatus_l .label32.rankDown {
+  background-color: #b20d03;
+}
+/* line 774, ../scss/guild.scss */
+.rankStatus .label32.out, .rankStatus_l .label32.out {
+  background-color: #999;
+}
+/* line 778, ../scss/guild.scss */
+.rankStatus dd, .rankStatus_l dd {
+  -webkit-box-flex: 1;
+  box-flex: 1;
+  margin: 0;
+  padding: 1px 0 0 5px;
+  font-size: 95%;
+}
+/* line 784, ../scss/guild.scss */
+.rankStatus dd span, .rankStatus_l dd span {
+  color: #ff0000;
+}
+
+/* line 790, ../scss/guild.scss */
+.rankStatus_l {
+  display: block;
+  width: 100%;
+  margin: 16px auto 8px auto;
+  padding: 0;
+}
+/* line 797, ../scss/guild.scss */
+.rankStatus_l .label48 {
+  line-height: 24px;
+}
+/* line 800, ../scss/guild.scss */
+.rankStatus_l .label48.rankUp {
+  margin-top: 10px;
+  background-color: #2285b2;
+}
+/* line 804, ../scss/guild.scss */
+.rankStatus_l .label48.rankStay {
+  background-color: #6fa000;
+}
+/* line 807, ../scss/guild.scss */
+.rankStatus_l .label48.rankDown {
+  background-color: #b20d03;
+}
+/* line 810, ../scss/guild.scss */
+.rankStatus_l .label48.out {
+  background-color: #999;
+}
+/* line 814, ../scss/guild.scss */
+.rankStatus_l dd {
+  padding: 0;
+  font-size: 85%;
+  color: #fff;
+  text-align: center;
+}
+
+/* line 821, ../scss/guild.scss */
+#ranking {
+  margin-bottom: 32px;
+}
+/* line 825, ../scss/guild.scss */
+#ranking .exceptRank .complateMessage article {
+  margin-top: 8px;
+  padding: 16px 0;
+}
+/* line 830, ../scss/guild.scss */
+#ranking .exceptRank ~ .rankStatus_l .label48 {
+  margin-bottom: 4px !important;
+}
+/* line 835, ../scss/guild.scss */
+#ranking .paramStatus {
+  font-size: 80%;
+}
+/* line 838, ../scss/guild.scss */
+#ranking .lackPoint {
+  margin-top: 8px;
+  color: #fff;
+  text-align: center;
+}
+/* line 843, ../scss/guild.scss */
+#ranking .lackPoint span {
+  display: inline-block;
+  margin: 0 4px;
+  color: #ff0000;
+}
+/* line 850, ../scss/guild.scss */
+#ranking .contents {
+  width: 95%;
+  margin: 0 auto 8px auto;
+}
+/* line 854, ../scss/guild.scss */
+#ranking .contents h1 {
+  position: relative;
+  top: 2px;
+  padding: 0 0 4px 70px;
+}
+/* line 859, ../scss/guild.scss */
+#ranking .contents h1 .rankLabel {
+  position: absolute;
+  left: -12px;
+  top: -3px;
+  display: inline-block;
+  background: url("/img/parts/sprite_battle_parts.png") -184px -113px no-repeat;
+  -webkit-background-size: 450px 360px;
+  width: 61px;
+  height: 22px;
+  color: #fff;
+  font-size: 75%;
+  color: #1F3F00;
+  line-height: 21px;
+  text-align: right;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+  z-index: auto;
+}
+/* line 874, ../scss/guild.scss */
+#ranking .contents h1 .rankLabel.rangeUp {
+  display: inline-block;
+  background: url("/img/parts/sprite_battle_parts.png") -184px -89px no-repeat;
+  -webkit-background-size: 450px 360px;
+  color: #00303F;
+}
+/* line 878, ../scss/guild.scss */
+#ranking .contents h1 .rankLabel.rangeUp:before {
+  display: inline-block;
+  background: url("/img/parts/sprite_battle_parts.png") -239px -165px no-repeat;
+  -webkit-background-size: 450px 360px;
+  visibility: visible;
+  content: "";
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: 4px;
+  top: 6px;
+  width: 16px;
+  height: 10px;
+  z-index: 1;
+}
+/* line 883, ../scss/guild.scss */
+#ranking .contents h1 .rankLabel.rangeDown {
+  display: inline-block;
+  background: url("/img/parts/sprite_battle_parts.png") -185px -137px no-repeat;
+  -webkit-background-size: 450px 360px;
+  color: #400000;
+}
+/* line 887, ../scss/guild.scss */
+#ranking .contents h1 .rankLabel.rankUp:after {
+  visibility: visible;
+  content: "";
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: 62px;
+  top: 4px;
+  width: 13px;
+  height: 13px;
+  z-index: auto;
+  display: inline-block;
+  background: url("/img/parts/sprite_battle_parts.png") -186px -162px no-repeat;
+  -webkit-background-size: 450px 360px;
+}
+/* line 891, ../scss/guild.scss */
+#ranking .contents h1 .rankLabel.rankStay:after {
+  visibility: visible;
+  content: "";
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: 62px;
+  top: 4px;
+  width: 13px;
+  height: 13px;
+  z-index: auto;
+  display: inline-block;
+  background: url("/img/parts/sprite_battle_parts.png") -223px -162px no-repeat;
+  -webkit-background-size: 450px 360px;
+}
+/* line 895, ../scss/guild.scss */
+#ranking .contents h1 .rankLabel.rankDown:after {
+  visibility: visible;
+  content: "";
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: 62px;
+  top: 4px;
+  width: 13px;
+  height: 13px;
+  z-index: auto;
+  display: inline-block;
+  background: url("/img/parts/sprite_battle_parts.png") -205px -162px no-repeat;
+  -webkit-background-size: 450px 360px;
+}
+/* line 899, ../scss/guild.scss */
+#ranking .contents h1 .rankLabel .rankTxt {
+  display: inline-block;
+  margin-right: 12px;
+}
+/* line 903, ../scss/guild.scss */
+#ranking .contents h1 .rankLabel .rankNum {
+  display: inline-block;
+  margin: 0 2px 0 0;
+  font-size: 150%;
+  text-align: right;
+  vertical-align: baseline;
+}
+/* line 912, ../scss/guild.scss */
+#ranking .contents.link.statusData_icon h1:after {
+  right: 0;
+  top: 50px;
+}
+/* line 916, ../scss/guild.scss */
+#ranking .contents.myGuild {
+  background-color: #CCCC66;
+}

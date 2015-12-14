@@ -1,0 +1,36 @@
+{
+    "status": 200,
+    "greets_more_flg": true,
+    "greets": [
+        {
+            "body_text": "こんにちは！",
+            "from_avatar_id": "10001",
+            "from_user_id": 123123,
+            "from_user_name": "ぬるぽさん",
+            "greet_datetime": "11/16 17:03",
+            "greet_id": "2_10_1353052987390",
+            "win_gacha_p": 0
+        },
+        {
+            "body_text": "ごきげんよう！",
+            "from_avatar_id": "10001",
+            "from_user_id": 654654,
+            "from_user_name": "ぬるぽさん",
+            "greet_datetime": "11/16 17:03",
+            "greet_id": "2_10_1353052986183",
+            "win_gacha_p": 0
+        },
+        {
+            "body_text": "こんにちは！",
+            "from_avatar_id": "10001",
+            "from_user_id": 789789,
+            "from_user_name": "ぬるぽさん",
+            "greet_datetime": "11/16 17:03",
+            "greet_id": "2_10_1353052984885",
+            "win_gacha_p": 0
+        }
+    ],
+	"user" : {
+		"user_id" : 654654
+	}
+}

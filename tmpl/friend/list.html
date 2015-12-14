@@ -1,0 +1,59 @@
+<h1 class="subHeader">
+	<span class="subHeaderBg_1"></span>
+	<span>フレンドリスト</span>
+	<span class="subHeaderBg_r"></span>
+</h1>
+
+<div id="friendList">
+	
+	<button class="btn large jsGreetAll">全員にあいさつする</button>
+	
+	<div class="jsFriendList">
+		{{for friends}}
+		<article class="contents contentsShadow statusData_icon" data-list-id="{{>id}}">
+			<div class="columnBox link" data-href="#">
+				<div class="iconBgRect_l gold">
+					<img src="{{getImgRoot/}}/avatar/{{:avatar_id}}_140.png">
+				</div>
+				<div class="contentsInner">
+					<h1><span>{{>name}}</span></h1>
+					<dl>
+						<dt>Lv</dt>
+						<dd>{{>level}}</dd>
+						<dt>ジョブ</dt>
+						<dd>{{>job_name}}</dd>
+						<dt>総攻撃</dt>
+						<dd>{{>attack}}</dd>
+						<dt>総防御</dt>
+						<dd>{{>defense}}</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="innerBtnBox">
+				<button class="btn" data-href="greet/add/{{>id}}/">あいさつする</button>
+				<div class="jsPostFriendRemove"><div id="jsPostFriendRemoveForm" class="postFriendRemove"><button class="btn cancel jsFriendRemoveButton" data-friend-user-id="{{>id}}">解除する</button></div></div>
+			</div>
+		</article>
+		{{/for}}
+	</div>
+	
+	<hr>
+	
+	<div class="helpList">
+		<ul>
+			<li><button class="link" data-href="help/">フレンド登録とは</button></li>
+		</ul>
+	</div>
+	
+</div>
+
+{{escape}}
+<script id="jsTemplatePopupFriendRemove" type="text/x-jsrender">
+	<div id="notifyWindow" class="modalInner">
+		<ul>
+			<li>{{>friend_user_name}}さんのフレンド登録を解除しますか？</li>
+			<li><span class="btn close jsClosePopup">やめる</span> <span class="btn link jsClosePopup" data-href="/friend/remove/do/{{>user_id}}/{{>friend_user_id}}/">削除する</span></li>
+		</ul>
+	</div>
+</script>
+{{/escape}}

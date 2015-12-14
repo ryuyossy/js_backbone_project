@@ -1,0 +1,65 @@
+<h1 class="mainHeader">武具詳細</h1>
+
+<div id="equipDetail">
+	<section class="itemDetail{{if max_level_flg}} limitMax{{/if}} ">
+		<div class="description">
+			{{equipThumb equip_id=equip_id step=step size="large" get_flg=get_flg /}}
+			<h1 class="itemName">{{>equip_name}} ({{:~getRarityText(rarity)}})</h1>
+			<p>
+				{{>description}}
+			</p>
+		</div>
+		<!-- //ここから下はアイテムまたはページ固有（これは武具） -->
+		<div class="contents contentsShadow statusData equipListStatus">
+			<div class="contentsInner">
+				<dl>
+					<dt>MAX Lv.</dt>
+					<dd>{{>max_level}} {{growTypeTag grow_type=grow_type /}}</dd>
+					
+				</dl>
+				<div class="columnBox">
+					<dl>
+						<dt>レア度</dt>
+						<dd>{{:~getRarityKanaText(rarity)}}</dd>
+						<dt>{{if equip_type === 1}}攻撃{{else}}防御{{/if}}</dt>
+						<dd>{{>power}}</dd>
+						<dt>属性</dt>
+						<dd>{{if attribute_name}}{{>attribute_name}}{{else}}−{{/if}}</dd>
+					</dl>
+					<dl>
+						<dt>必要{{if equip_type === 1}}武器{{else}}防具{{/if}}P</dt>
+						<dd>{{>equip_cost}}</dd>
+						<dt>{{if equip_type === 1}}特攻{{else}}特防{{/if}}</dt>
+						<dd>{{>special_power}}</dd>
+						<dt>属性Lv</dt>
+						<dd>{{if attribute_level}}{{>attribute_level}}{{else}}−{{/if}}</dd>
+					</dl>
+				</div>
+				<dl>
+					<dt>売却価格</dt>
+					<dd>{{>sell_price}}ギル</dd>
+				</dl>
+			</div>
+		</div>
+	</section>
+</div>
+
+<!--
+<section>
+	<button class="btn off large" data-href="want/add/{{>equip_id}}">欲しいもの登録</button>
+</section>
+-->
+
+<hr>
+
+<div class="arrowLink">
+	<button class="link prev" data-href="collection/equip/list/">武具図鑑へ戻る</button>
+</div>
+
+<div class="helpList">
+	<ul>
+		<li><button class="link" data-href="help/detail/601/">武具ってなに？</button></li>
+		<li><button class="link" data-href="help/detail/602/">成長タイプってなに？</button></li>
+		<li><button class="link" data-href="help/detail/608/">保護ってなに？</button></li>
+	</ul>
+</div>

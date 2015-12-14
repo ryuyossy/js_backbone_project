@@ -1,0 +1,90 @@
+{
+    "status": 200,
+    "user": {
+        "user_id": 4,
+        "user_name": null,
+        "avatar_id": null,
+        "tp": null,
+        "job_name": null
+    },
+    "user_id": 3,
+    "level": 25,
+    "user_name": "ぬるぽさん",
+    "guild_id" : "4",
+    "guild_name": "ぬるぽギルド",
+    "position_name": "ギルドマスター",
+    "guild_rank": "D",
+    "avatar_id": "00002",
+    "job_name": "村人",
+    "job_tree_name": "初期ジョブ系",
+    "lineage_type_name": "特殊",
+    "profile_comment": "aaaa",
+    "gil": null,
+    "gacha_p": null,
+    "attack": 4920,
+    "defense": 1560,
+    "sp_attack": 9557,
+    "sp_defense": 3604,
+    "gp": 9876543210,
+    "mp": 55,
+    "max_mp": 55,
+    "tp": 100,
+    "max_own_equip_num": 100,
+    "own_equip_num": 80,
+    "max_collect_equip_num": 300,
+    "current_collect_equip_num": 16,
+    "main_weapon": {
+        "user_equip_no": 13576276578434,
+        "equip_id": 120003,
+        "step": 3
+    },
+    "main_protector": {
+        "user_equip_no": 13576276185739,
+        "equip_id": 220001,
+        "step": 4
+    },
+    "seed_type": null,
+    "seed_rest_time": null,
+    "else_seed_flg": null,
+    "messages_more_flg": null,
+    "messages": null,
+    "greets_more_flg": false,
+    "greets": [
+        {
+            "body_text": "こんにちは！",
+            "from_avatar_id": "10001",
+            "from_user_id": 76,
+            "from_user_name": "ぬるぽさん",
+            "greet_datetime": "11/16 17:03",
+            "greet_id": "2_10_1353052987390",
+            "win_gacha_p": 0
+        },
+        {
+            "body_text": "ごきげんよう！",
+            "from_avatar_id": "10001",
+            "from_user_id": 4,
+            "from_user_name": "ぬるぽさん",
+            "greet_datetime": "11/16 17:03",
+            "greet_id": "2_10_1353052986183",
+            "win_gacha_p": 0
+        },
+        {
+            "body_text": "こんにちは！",
+            "from_avatar_id": "10001",
+            "from_user_id": 309,
+            "from_user_name": "ぬるぽさん",
+            "greet_datetime": "11/16 17:03",
+            "greet_id": "2_10_1353052984885",
+            "win_gacha_p": 0
+        }
+	],
+    "stage_id": null,
+    "treasure_kind_num": null,
+    "win_num": null,
+    "lose_num": null,
+    "win_percent": null,
+    "cheered_flg": false,
+    "battle_power": 19641,
+	"invitable_flg": true,
+	"invite_max_flg" : true
+}

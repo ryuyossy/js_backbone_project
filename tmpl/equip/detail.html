@@ -1,0 +1,91 @@
+<h1 class="mainHeader">武具詳細</h1>
+
+<div id="equipDetail">
+	<section class="itemDetail{{if equip_level===max_level}}{{if step == 4}} limitMax{{else}} max{{/if}}{{/if}}">
+		<div class="description">
+			{{equipThumb equip_id=equip_id step=step size="large" /}}
+	
+			<h1 class="itemName">
+				{{>equip_name}}  ({{:~getRarityText(rarity)}})
+			</h1>
+			<p>{{>description}}</p>
+			{{if equip_status === 1}}<span class="label36_r4 equip_main">メイン</span>{{/if}}
+			{{if equip_status === 2}}<span class="label36_r4 equip_sub">サブ</span>{{/if}}
+		</div>
+		<!-- //ここから下はアイテムまたはページ固有（これは武具） -->
+		<div class="contents contentsShadow statusData equipListStatus">
+			<div class="contentsInner">
+				<dl>
+					<dt>Lv.</dt>
+					<dd>
+						{{>equip_level}}/{{>max_level}}
+						{{growTypeTag grow_type=grow_type /}}
+					</dd>
+					<dt>成長</dt>
+					<dd>
+						<div class="gergeBgFrame">
+							<div class="gergeBg">
+								<span class="gerge equipGrowth {{if equip_exp==100}}max{{/if}}" style="width: {{>equip_exp}}%;"></span>
+							</div>
+						</div>
+					</dd>
+					<dd>{{>equip_exp}}%</dd>
+				</dl>
+	            <div class="columnBox">
+	                <dl>
+	                <dt>レア度</dt>
+					<dd>{{:~getRarityKanaText(rarity)}}</dd>
+	                    <dt>{{if equip_type === 1}}攻撃{{else}}防御{{/if}}</dt>
+	                    <dd>{{>power}}</dd>
+						<dt>属性</dt>
+						<dd>{{if attribute_name}}{{>attribute_name}}{{else}}−{{/if}}</dd>
+	                </dl>
+	                <dl>
+					<dt>必要{{if equip_type === 1}}武器{{else}}防具{{/if}}P</dt>
+					<dd>{{>equip_cost}}</dd>
+	                    <dt>{{if equip_type === 1}}特攻{{else}}特防{{/if}}</dt>
+	                    <dd>{{>special_power}}</dd>
+						<dt>属性Lv</dt>
+						<dd>{{if attribute_level}}{{>attribute_level}}{{else}}−{{/if}}</dd>
+	                </dl>
+	            </div>
+	            <dl>
+	                <dt>売却価格</dt><dd>{{>sell_price}}ギル</dd>
+	            </dl>
+			</div>
+		</div>
+	</section>
+	
+	<section class="equipBtnLists">
+		{{if equip_level!==max_level || step !== 4}}
+		<button class="btn large {{if equip_level===max_level}}jsButtonComposeEvolution{{else}}jsButtonCompose{{/if}}" >ベースにして合成する</button>
+		{{/if}}
+		<button class="btn large jsButtonSell"{{if protected_flg || equip_status!==0}} style="display:none"{{/if}}>売却する</button>
+		{{if protected_flg}}
+		<button class="btn close jsButtonProtect" data-equip-status="{{>equip_status}}" data-equip-id="{{>user_equip_no}}">保護中</button>
+		{{else}}
+		<button class="btn large jsButtonProtect" data-equip-status="{{>equip_status}}" data-equip-id="{{>user_equip_no}}">保護する</button>
+		{{/if}}
+	</section>
+</div>
+
+<hr>
+
+<section class="linkGroup">
+	<div class="arrowLink">
+		<button class="link prev" data-href="equip/list/">所持武具に戻る</button>
+	</div>
+	<div class="arrowLink">
+		<button class="link prev" data-href="deck/list/1/">装備に戻る</button>
+	</div>
+</section>
+
+<div class="helpList">
+	<ul>
+		<li><button class="link" data-href="help/detail/601/">武具ってなに？</button></li>
+		<li><button class="link" data-href="help/detail/701/">合成ってなに？</button></li>
+		<li><button class="link" data-href="help/detail/609/">売却ってなに？</button></li>
+		<li><button class="link" data-href="help/detail/608/">保護ってなに？</button></li>
+		<li><button class="link" data-href="help/detail/602/">成長タイプってなに？</button></li>
+	</ul>
+</div>

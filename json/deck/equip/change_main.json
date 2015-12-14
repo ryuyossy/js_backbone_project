@@ -1,0 +1,15 @@
+{
+    "status" : 200,
+    "guild_name" : "サイババ団",
+    "guild_rank" : "A",
+    "rank_status" : "ランクステイ圏内",
+    "rank_rest_days" : "3",
+    "battle_start_rest" : "05:44",
+    "battle_end_rest" : "",
+    "power" : "8000",
+    "power_diff" : "100",
+    "sp_power" : "87900",
+    "sp_power_diff" : "-100",
+    "equip_cost" : "50",
+    "equip_cost_diff" : "10"
+}

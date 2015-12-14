@@ -1,0 +1,69 @@
+<h1 class="mainHeader">ギルド広場</h1>
+<div id="guildPlaza">
+
+	<div class="message navico_arc booksNaviko_Arc">
+		<p>
+			<span>ギルドメンバーの勧誘・募集はここ！<br>仲間を見つけて最強ギルドを目指してね！</span>
+		</p>
+	</div>
+
+	<h1 class="subHeader">
+		<span class="subHeaderBg_l"></span>
+		<span>おすすめユーザー</span>
+		<span class="subHeaderBg_r"></span>
+	</h1>
+
+	<div class="recommendUserList">
+		{{for #data tmpl="#jsTemplateGuildCandidateList" /}}
+		<div class="arrowLink">
+			<button class="link next" data-href="guild/candidate/">ぜんぶ見る</button>
+		</div>
+	</div>
+
+	<h1 class="subHeader">
+		<span class="subHeaderBg_l"></span>
+		<span>メンバー募集中ギルド</span>
+		<span class="subHeaderBg_r"></span>
+	</h1>
+
+	{{if master_priv_flg}}
+	{{if publish_flg}}
+	<section class="contents contentsShadow statusData_icon link myGuild jsList" data-list-id="{{>my_guild.guild_id}}" data-href="/guild/">
+		<div class="columnBox innerHeader">
+			<div class="emblemIcon_l"><span class="guildRank {{>my_guild.guild_rank}}">{{>my_guild.guild_rank}}</span></div>
+			<div class="contentsInner">
+				<h1>{{>my_guild.guild_name}}</h1>
+				<dl>
+					<dt>ギルドLv.</dt><dd>{{>my_guild.guild_level}}</dd>
+					<dt>所属</dt><dd>{{>my_guild.current_member_num}}</dd>
+					<dt>Lv.</dt><dd>{{>my_guild.scout_level_name}}</dd>
+					<dt>やる気</dt><dd>{{>my_guild.scout_motivation_name}}</dd>
+					<dt>経験</dt><dd>{{>my_guild.scout_experience_name}}</dd>
+				</dl>
+			</div>
+		</div>
+		<button class="btn large jsGuildJoin jsGuildEditButton" data-href="guild/menbo/edit/">掲載内容を編集する</button>
+	</section>
+	{{else}}
+	<button class="btn large jsGuildJoin" data-href="guild/menbo/edit/">自分のギルドを掲載する</button>
+	{{/if}}
+	{{/if}}
+
+	{{for #data tmpl="#jsTemplateGuildMenboList" /}}
+
+	<div class="arrowLink">
+		<button class="link next" data-href="guild/menbo/">ぜんぶ見る</button>
+	</div>
+
+	<hr>
+
+	<div class="arrowLink">
+		<button class="link prev" data-href="guild/">ギルドトップに戻る</button>
+	</div>
+
+	<div class="helpList">
+		<ul>
+			<li><button class="link" data-href="help/detail/303/">メンバーが増えると？</button></li>
+		</ul>
+	</div>
+</div>

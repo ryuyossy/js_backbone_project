@@ -1,0 +1,30 @@
+{
+    "status": 200,
+    "changeable": true,
+    "target": {
+        "id": 118,
+        "name": "村人パンチ",
+        "equip_point": 5,
+        "tp_cost": 10,
+        "description": "村人の魂のこもったパンチ",
+        "ancestry": "特殊",
+        "same_ancestry": false,
+        "set_type": 1,
+        "lack_cost": false
+    },
+    "ability_effect_type": 1,
+    "abilities": [
+        {
+            "id": 119,
+            "name": "見よう見まね",
+            "equip_point": 20,
+            "tp_cost": 20,
+            "description": "\"他のユーザの攻撃技をモノマネしてみる\nどれを真似するかはランダムで抽選\nただし、効果量は10%。\"",
+            "ancestry": "特殊",
+            "same_ancestry": false,
+            "set_type": 1,
+            "lack_cost": false
+        }
+    ],
+    "more_flg": true
+}

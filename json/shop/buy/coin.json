@@ -1,0 +1,22 @@
+{
+    "status": 200,
+    "guild_name" : "サイババ団",
+    "guild_rank" : "A",
+    "rank_status" : "ランクステイ圏内",
+    "rank_rest_days" : "3",
+    "battle_start_rest" : "05:44",
+    "battle_end_rest" : "",
+    "result_message": "回復ドリンク（M）×2を購入しました。",
+    "result_code": "OK",
+    "item_name": "回復ドリンク（M）",
+	"item_id":1,
+    "result_ame_g": 30000,
+    "result_coin": 20000,
+    "own_num": 2,
+    "guild_name": "あめしょ",
+    "guild_rank": "F",
+    "rank_status": "ランキング圏内",
+    "rank_rest_days": 0,
+    "battle_start_rest": "04:47:15",
+    "battle_end_rest": null
+}

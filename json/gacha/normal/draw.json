@@ -1,0 +1,69 @@
+{
+	"status": 200,
+	"version":6,
+	"gacha_id": 6,
+	"gacha_name": "ノーマルガチャ",
+	"free_gacha_flg" : false,
+	"own_equip_num": 14,
+	"max_own_equip_num": 100,
+	"own_coin": null,
+	"own_ame_gold": null,
+	"own_gacha_p": 1994,
+	"own_gacha_p_before": 2004,
+	"own_ticket_num": null,
+	"npc_message": null,
+	"notice_message": null,
+	"equips": [
+		{
+			"equip_id": 130003,
+			"user_equip_no": null,
+			"equip_name": "ひのきのぼう（松）",
+			"rarity": 1,
+			"rarity_name": "ノーマル",
+			"equip_status": null,
+			"equip_type": 1,
+			"description": "道ばたで拾った木のぼう",
+			"equip_level": 1,
+			"max_level": 20,
+			"grow_type": 1,
+			"grow_type_name": "早熟",
+			"equip_exp": 0,
+			"equip_cost": 5,
+			"power": 225,
+			"special_power": 513,
+			"attribute_name": null,
+			"attribute_level": null,
+			"sell_price": 250,
+			"protected_flg": null,
+			"sent_gift_flg": true,
+			"new_flg": true
+		}
+	],
+	"rare_gacha_news": [
+		{
+			"user_id": 28,
+			"user_name": "たけさん",
+			"equip_id": 250010,
+			"equip_name": "ロトの剣（梅）",
+			"got_datetime": "12/27 16:51",
+			"rarity": 5,
+			"rarity_name": "SSレア"
+		},
+		{
+			"user_id": 28,
+			"user_name": "たけさん",
+			"equip_id": 240025,
+			"equip_name": "ロトの剣（梅）",
+			"got_datetime": "12/27 16:51",
+			"rarity": 5,
+			"rarity_name": "SSレア"
+		}
+	],
+    "banners": [
+        {
+            "banner_text": null,
+            "image_file_name": "banner_compose_half.png",
+            "redirect_path": "compose/"
+        }
+    ]
+}

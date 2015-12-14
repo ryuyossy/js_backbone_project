@@ -1,0 +1,340 @@
+@charset "utf-8";
+@import "base";
+@import "ruleset";
+
+#newEquip,
+#seasonAvatar{
+	margin:0;
+	text-align:center;
+}
+
+// season avatar
+#emblemGotState{
+	&.contents{
+		width:95%;
+		margin:-3px auto 0 auto;
+		padding:$inner_margin 0;
+	}
+	.contentsBorder{
+		h1{
+			margin-top:0 !important;
+		}
+	}
+	dl{
+		width:95%;
+		margin:$inner_margin auto 0 auto;
+		&:last-of-type{
+			margin-bottom:$inner_margin/2;
+		}
+		&:after{
+			@include clearfix;
+		}
+	}
+	dt{
+		float:left;
+		clear:both;
+		position:relative;
+		width:64px;
+		height:64px;
+		&.unidentified{
+			&:after{
+				@include visible_object(0,0,100%,100%,auto);
+				background-color:rgba(0,0,0,0.5);
+			}
+		}
+		&.link.on:after{
+			@include visible_object(0,0,100%,100%,auto);
+			background-color:rgba(0,0,0,0.3);
+		}
+	}
+	dd{
+		margin-left:72px;
+		h2{
+			font-weight:bold;
+			color:$color_A;
+		}
+		ul{
+			margin-top:$inner_margin/4;
+			li{
+				position:relative;
+				display:inline-block;
+				width:43px;
+				height:43px;
+				visibility:hidden;
+				&.yet:after,
+				&.got:after{
+					@include backgroundSize("/emblem/season_avatar/frame.png",0,0,no-repeat);
+					@include visible_object(0,0,43px,43px,auto);
+				}
+				&.got.new:before{
+					@include visible_object(6px,auto,32px,14px,3);
+					bottom:-4px;
+					content:"NEW";
+					background-color:#FFBF00;
+					@include border-radius(10px);
+					font-size:70%;
+					@include box_shadow(0 1px 1px);
+					color:#fff;
+					text-align:center;
+					line-height:14px;
+				}
+			}
+			&.emblem_21003{
+				li.got:after{
+					@include backgroundSize("/emblem/season_avatar/21003.png",0,0,no-repeat);
+				}
+			}
+			&.emblem_13003{
+				li.got:after{
+					@include backgroundSize("/emblem/season_avatar/13003.png",0,0,no-repeat);
+				}
+			}
+			&.emblem_31003{
+				li.got:after{
+					@include backgroundSize("/emblem/season_avatar/31003.png",0,0,no-repeat);
+				}
+			}
+		}
+	}
+}
+
+// page parts
+#gacha{
+	.tabNav2{
+		margin:$inner_margin auto;
+	}
+	.subHeader3{
+		margin:$content_margin 0 $inner_margin 0 !important;
+	}
+	.paramStatus{
+		margin-bottom:$inner_margin;
+		font-size:90%;
+	}
+	.btnBox{
+		color:#fff;
+		text-align:center;
+		.btn,
+		.btn_l{
+			width:80%;
+			font-size:90%;
+			/*&[data-gacha-id="202"]{
+				font-size:90%;
+			}*/
+		}
+		.btn{
+			margin:$inner_margin auto 0 auto;
+		}
+		.label48{
+			width:60%;
+			margin:0 auto $inner_margin auto;
+			font-weight:normal;
+		}
+	}
+	.consume{
+		color:$color_L;
+	}
+	.arrowLink{
+		margin:$inner_margin auto $content_margin auto;
+	}
+	.sectionPremium,
+	.sectionNormal{
+		h1{
+			margin-top:$content_margin;
+		}
+		header{
+			@include display-box;
+			width:95%;
+			margin:$inner_margin auto;
+			color:#fff;
+			.gacha_img{
+				display:block;
+				width:128px;
+				height:128px;
+				margin-right:$content_margin;
+			}
+			.description{
+				@include box-flex(1);
+			}
+			h1{
+				font-weight:bold;
+				color: #ffc926;
+				@include text_glow(#000000);
+			}
+			&.emblemTicketGacha{
+				h1{
+					width:100%;
+					margin-top:0;
+					text-align:center;
+				}
+			}
+		}
+	}
+	.sectionNormal{
+		.banner{
+			margin:$inner_margin auto $content_margin auto;
+		}
+		header{
+			display:block;
+			margin-top:0;
+		}
+	}
+	.maxEequip{
+		.label48{
+			width:60%;
+			margin:0 auto;
+			font-weight:normal;
+		}
+		.innerBtnBox{
+			margin-top:$inner_margin;
+		}
+	}
+}
+#gachaBuyConfirm{
+	.contents{
+		width:95%;
+		margin:$inner_margin auto;
+		&.expendConf{
+			margin:0 auto $content_margin auto;
+		}
+	}
+	.gacha_img{
+		@include box_shadow(2px 2px 2px);
+	}
+	.paramStatus{
+		font-size:90%;
+		~ .label48{
+			width:60%;
+			margin:$inner_margin auto 0 auto;
+			font-weight:normal;
+		}
+		~ .btn{
+			margin-bottom:$content_margin;
+		}
+	}
+	~ .caution{
+		article{
+			padding-bottom:$inner_margin;
+		}
+		.link{
+			font-weight:bold;
+		}
+	}
+}
+#gachaResult{
+	.contents{
+		width:95%;
+		margin:0 auto;
+	}
+	.paramStatus{
+		margin:$content_margin auto;
+		font-size:85%;
+		color:#fff;
+		.notice{
+			display:block;
+			margin-bottom:$inner_margin;
+			font-size:100%;
+		}
+	}
+	.gacgaBonus{
+		.subHeader3{
+			margin:$content_margin 0 $inner_margin 0;
+		}
+	}
+	.complateMessage{
+		article{
+			padding:$inner_margin 0;
+		}
+		.paramStatus{
+			width:95%;
+			margin:$inner_margin auto 0 auto;
+		}
+	}
+	.btnBox{
+		margin-bottom:$content_margin;
+		.btn,
+		.btn_l{
+			display:block;
+			width:80%;
+			font-size:90%;
+			margin:0 auto $inner_margin/2 auto;
+			&:first-of-type{
+				margin-bottom:$content_margin;
+			}
+			&:last-of-type{
+				margin-bottom:0;
+			}
+		}
+	}
+	#emblemGotState{
+		margin-top:$content_margin;
+	}
+	&.single{
+		.equipImageBox{
+			margin-top:$content_margin;
+		}
+		.equipListStatus{
+			margin-top:$inner_margin;
+		}
+	}
+	&.multi{
+		.contents{
+			margin-bottom:8px;
+			&:first-of-type{
+				margin-top:8px;
+			}
+		}
+	}
+}
+#rareReport{
+	h1{
+		margin-bottom:$inner_margin;
+	}
+	.contents{
+		width:95%;
+		margin:0 auto $inner_margin auto;
+	}
+}
+#drawlist{
+	.contents{
+		width:95%;
+		margin:0 auto $inner_margin auto;
+	}
+	.rate{
+		.contents{
+			margin:$inner_margin auto $content_margin auto;
+		}
+		.statusData .contentsInner{
+			margin-top:0;
+		}
+	}
+	.equipNameList{
+		.contents{
+			&:first-of-type{
+				margin-top:$inner_margin;
+			}
+		}
+		.contentsInner h1{
+			color:$color_A;
+		}
+		dl{
+			margin-bottom:$inner_margin;
+			&:last-of-type{
+				margin-bottom:0;
+			}
+			dt:nth-of-type(2){
+				clear:none;
+				margin-left:$inner_margin;
+			}
+			dd{
+				
+			}
+		}
+	}
+	.arrowLink{
+		margin-bottom:$content_margin;
+	}
+}
+
+#jsGachaResult{
+	display:none;
+}

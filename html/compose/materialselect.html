@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>素材選択武具</title>
+	<meta name="robots" content="noindex,nofollow">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+
+	<link rel="stylesheet" href="/css/common_parts.css">
+	<link rel="stylesheet" href="/css/compose.css">
+	<script src="/html/js/jquery-1.8.2.min.js"></script>
+	<script src="/html/js/parts.js"></script>
+</head>
+	<body>
+		<header id="globalHeader">
+			<div class="menuPanel"><button class="link mypage"><span class="hide">マイページ</span></button></div>
+			<div class="guildNamePanel"><h1><span class="link"><span class="guildRank f hide">ギルドランク：A</span>ギルド名ギルド名ギルド名</span></h1></div>
+			<div class="menuPanel"><button class="link menu"><span class="hide">メニュー</span></button></div>
+		</header>
+
+		<div id="container">
+			<h1 class="mainHeader">合成</h1>
+
+			<div class="statusLine">
+				<p><span>所持数</span> 1234567890　<span>所持ギル</span> 123456</p>
+			</div>
+
+			<!-- //タブメニュー２（左右切り替えのみ） 左セレクト-->
+               <div class="tabNav2 composeTabMenu">
+				<ul>
+					<li><button class="left select">強化</button></li>
+					<li><button class="right" data-href="#">限界突破</button></li>
+                    </ul>
+               </div>
+
+			<h1 class="subHeader composeSubHeader">
+				<span class="subHeaderBg_l"></span>
+				<span>強化する武具</span>
+				<!-- 限界突破・素材選択時
+				<span>限界突破する武具</span>
+				-->
+				<span class="subHeaderBg_r"></span>
+			</h1>
+
+			<section class="contents contentsShadow statusData_icon composeSelectArmar">
+				<h1>イエローエレメントグローブ（SSR）<span class="label32 growth_ordinary">普通</span></h1>
+				<div class="columnBox equipListStatus">
+					<img src="/img/equip/weapon.png">
+					<span class="label36_r4 protect">保護</span>
+					<div class="contentsInner">
+						<dl>
+							<dt>Lv.</dt><dd>25/25</dd>
+							<dt>成長</dt><dd><div class="gergeBgFrame"><div class="gergeBg"><span class="gerge equipGrowth max" style="width:100%;"></span></div></div></dd><dd>50%</dd>
+							<dt>必要武器P</dt><dd>15</dd>
+						</dl>
+						<div class="columnBox">
+							<dl>
+								<dt>攻撃</dt><dd>123456</dd>
+								<dt>属性</dt><dd>雷</dd>
+							</dl>
+							<dl>
+								<dt>特攻</dt><dd>123456</dd>
+								<dt>属性Lv</dt><dd>10</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+				<div class="innerBtnBox">
+					<button class="btn" data-href="#">変更する</button>
+					<button class="btn" data-href="#">限界突破へ</button>
+					<!-- 限界突破・素材選択
+					<button class="btn" data-href="#">強化へ</button>
+					-->
+				</div>
+			</section>
+
+			<h1 class="subHeader composeSubHeader">
+				<span class="subHeaderBg_l"></span>
+				<span>素材を選択</span>
+				<span class="subHeaderBg_r"></span>
+			</h1>
+
+			<!--素材選択エラー・ギル不足時。 限界突破・素材選択エラー・ギル不足時。
+			<span class="label48 gillBelow">ギルが足りません</span>
+			-->
+
+			<div class="tabNav composeMaterialTavNav">
+				<ul>
+					<!-- //アクティブタブ -->
+					<li><button class="select"><span>武具</span></button></li>
+					<!-- //未選択 -->
+					<li><button><span>強化/属性素材</span></button></li>
+				</ul>
+			</div>
+
+			<button class="btn large" data-href="#">おまかせで強化する</button>
+
+			<section class="contents shadow materialSelects">
+				<!-- //セレクトグループ -->
+				<div class="selectBox group">
+					<div class="line">
+						<label>
+							<select>
+								<option>すべての武具</option>
+								<option>選択項目2</option>
+								<option>選択項目3</option>
+							</select>
+							<span class="selector"></span>
+						</label>
+						<label>
+							<select>
+								<option>入手した手順</option>
+								<option>選択項目2</option>
+								<option>選択項目3</option>
+							</select>
+							<span class="selector"></span>
+						</label>
+					</div>
+					<div class="line">
+						<!-- check時はchecked="checked"を付与する -->
+						<label onclick="" class="checkBox"><input type="checkbox" name="equip"><span>Lv.1のみ</span></label>
+						<label onclick="" class="checkBox"><input type="checkbox" name="equip"><span>同属性のみ</span></label>
+					</div>
+				</div>
+				<button class="btn selectBtn" data-href="#">表示する</button>
+			</section>
+
+			<!--- 素材選択エラー 素材なしの時のメッセージ
+			<section class="dimmed">
+				<p>
+					合成可能な素材がありません
+				</p>
+			</section>
+			-->
+
+			<!-- //一括選択トグル 未チェック。 チェック済の時はonを付与-->
+			<div class="allCheck composeToggleCheck">
+				<button class="link off" data-href="#">上から10件を一括選択</button>
+			</div>
+
+			<section class="contents contentsShadow statusData_icon composeContents">
+				<h1>イエローエレメントグローブ（SSR）<span class="label32 growth_ordinary">普通</span></h1>
+				<div class="columnBox equipListStatus">
+					<img src="/img/equip/weapon.png">
+					<span class="label36_r4 protect">保護</span>
+					<div class="contentsInner">
+						<dl>
+							<dt>Lv.</dt><dd>25/25</dd>
+							<dt>成長</dt><dd><div class="gergeBgFrame"><div class="gergeBg"><span class="gerge equipGrowth max" style="width:100%;"></span></div></div></dd><dd>100%</dd>
+							<dt>必要武器P</dt><dd>15</dd>
+						</dl>
+						<div class="columnBox">
+							<dl>
+								<dt>攻撃</dt><dd>123456</dd>
+								<dt>属性</dt><dd>雷</dd>
+							</dl>
+							<dl>
+								<dt>特攻</dt><dd>123456</dd>
+								<dt>属性Lv</dt><dd>10</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+				<label onclick="" class="checkBox"><input type="checkbox" name="equip"><span>選択する</span></label>
+			</section>
+
+			<form method="post" action="#" name="equip">
+				<section class="contents contentsShadow statusData_icon composeContents">
+					<h1>イエローエレメントグローブ（SSR）<span class="label32 growth_slow">晩生</span></h1>
+					<div class="columnBox equipListStatus">
+						<img src="/img/equip/weapon.png">
+						<span class="label36_r4 sub">サブ</span>
+						<div class="contentsInner">
+							<dl>
+								<dt>Lv.</dt><dd>25/25</dd>
+								<dt>成長</dt><dd><div class="gergeBgFrame"><div class="gergeBg"><span class="gerge equipGrowth" style="width:50%;"></span></div></div></dd><dd>50%</dd>
+								<dt>必要武器P</dt><dd>15</dd>
+							</dl>
+						<div class="columnBox">
+							<dl>
+								<dt>攻撃</dt><dd>123456</dd>
+								<dt>属性</dt><dd>雷</dd>
+							</dl>
+							<dl>
+								<dt>特攻</dt><dd>123456</dd>
+								<dt>属性Lv</dt><dd>10</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+				<label onclick="" class="checkBox"><input type="checkbox" name="equip"><span>選択する</span></label>
+				</section>
+			</form>
+
+			<form method="post" action="#" name="equip">
+				<section class="contents contentsShadow statusData_icon composeContents">
+					<h1>イエローエレメントグローブ（SSR）<span class="label32 growth_fast">早熟</span></h1>
+					<div class="columnBox equipListStatus">
+						<img src="/img/equip/weapon.png">
+						<span class="label36_r4 main">メイン</span>
+						<div class="contentsInner">
+							<dl>
+								<dt>Lv.</dt><dd>25/25</dd>
+								<dt>成長</dt><dd><div class="gergeBgFrame"><div class="gergeBg"><span class="gerge equipGrowth" style="width:50%;"></span></div></div></dd><dd>50%</dd>
+								<dt>必要武器P</dt><dd>15</dd>
+							</dl>
+						<div class="columnBox">
+							<dl>
+								<dt>攻撃</dt><dd>123456</dd>
+								<dt>属性</dt><dd>雷</dd>
+							</dl>
+							<dl>
+								<dt>特攻</dt><dd>123456</dd>
+								<dt>属性Lv</dt><dd>10</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+				<label onclick="" class="checkBox"><input type="checkbox" name="equip" disabled="disabled"><span>選択する</span></label>
+				</section>
+			</form>
+
+			<!-- 素材選択　強化/属性素材選択時リスト -->
+			<section class="contents contentsShadow statusData_icon materialContents">
+				<h1>【強化素材名】</h1>
+				<div class="columnBox innerHeader">
+					<img src="/img/equip/weapon.png">
+					<div class="contentsInner">
+						<dl>
+							<dt>必要枚数</dt><dd>1234</dd>
+							<dt>所持数</dt><dd>99</dd>
+						</dl>
+						<p>
+							説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明
+						</p>
+					</div>
+				</div>
+				<div class="numControl mtNumControl">
+					<div class="numControlSwitch">
+						<button class="link down_off"><span class="hide">−</span></button><input type="text" maxlength="2" value="1"><button class="link up_off"><span class="hide">＋</span></button>
+					</div>
+					<button class="btn" data-href="#">合成する</button>
+				</div>
+			</section>
+
+			<div class="moreLink composeMoreLink">
+				<button class="link" data-href="#"><span>もっと見る</span></button>
+			</div>
+
+			<div class="selectCount">
+				<span>選択中 : <span class="countColor">1</span>/10</span>
+			</div>
+
+			<button class="btn large" data-href="#">合成する</button>
+
+			<hr>
+
+			<section class="composeMargins">
+				<!--素材選択エラー 素材なし時 限界突破・素材選択エラー・ギル不足時
+				<div class="arrowLink composeArrowLink">
+					<button class="link next" data-href="#">クエスト</button>
+				</div>
+				<div class="arrowLink composeArrowLink">
+					<button class="link next" data-href="#">ガチャ</button>
+				</div>
+				<div class="arrowLink composeArrowLink">
+					<button class="link next" data-href="#">武具売却</button>
+				</div>
+				-->
+				<div class="arrowLink composeArrowLink">
+					<button class="link next" data-href="#">武具一覧</button>
+				</div>
+			</section>
+
+			<div class="helpList">
+				<ul>
+					<li><button class="link" data-href="#">合成について</button></li>
+					<li><button class="link" data-href="#">属性Lv.とは？</button></li>
+					<li><button class="link" data-href="#">強化素材とは？</button></li>
+					<li><button class="link" data-href="#">限界突破とは？</button></li>
+				</ul>
+			</div>
+
+			<footer id="globalFooter">
+				<ul>
+					<li class="menuPanel"><span class="link mypage"><span class="hide">マイページ</span></span></li>
+					<li class="menuPanel"><span class="link quest"><span class="hide">クエスト</span></span></li>
+					<li class="menuPanel"><span class="link buttle"><span class="hide">バトル</span></span></li>
+					<li class="menuPanel"><span class="link gatcha"><span class="hide">ガチャ</span></span></li>
+					<li class="menuPanel"><span class="link menu"><span class="hide">マイページ</span></span></li>
+				</ul>
+			</footer>
+
+		</div>
+
+	</body>
+</html>

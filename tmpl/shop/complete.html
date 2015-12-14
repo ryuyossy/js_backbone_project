@@ -1,0 +1,40 @@
+	<h1 class="mainHeader">購入完了</h1>
+
+	{{if result_code === 'OK'}}
+		<section class="complateMessage completeWrap">
+			<article>
+				<div class="buyCompContent">
+					<p>
+						{{>result_message}}
+					</p>
+					{{if set_sales_flg }}
+						<img src="{{getImgRoot/}}/itemset/{{>item_id}}.png" class="single">
+					{{else}}
+						<img src="{{getImgRoot/}}/item/{{>item_id}}.png" class="single">
+					{{/if}}
+					<p>{{>item_name}}</p>
+				</div>
+				<p class="paramStatus">
+					{{if set_sales_flg === false}}
+						<span class="headline">所持数</span><span class="statusCnt">{{>own_num}}</span><br>
+					{{/if}}
+					<span class="headline">所持{{if payment==='coin'}}コイン{{else}}アメG{{/if}}</span><span class="statusCnt">{{if payment==='coin'}}{{>result_coin}}{{else}}{{>result_ame_g}}{{/if}}</span>
+				</p>
+			</article>
+		</section>
+		{{if set_sales_flg }}
+		<button class="btn large" data-href="item/list/">すぐに使用する</button>
+		{{else}}
+		<button class="btn large jsButtonItemUseConfirm" data-item-id="{{>item_id}}">すぐに使用する</button>
+		{{/if}}
+		<button class="btn large" data-href="shop/list/">続けて買い物をする</button>
+
+	{{else}}
+	{{/if}}
+
+		<hr>
+
+		<div class="arrowLink buyItemLink">
+			<button class="link next" data-href="item/list/">アイテム一覧へ</button>
+		</div>
+

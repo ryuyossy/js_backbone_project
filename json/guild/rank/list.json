@@ -1,0 +1,45 @@
+{
+    "status" : 200,
+    "guild_name" : "サイババ団",
+    "guild_rank" : "A",
+    "rank_status" : "ランクステイ圏内",
+    "rank_rest_days" : "3",
+    "battle_start_rest" : "05:44",
+    "battle_end_rest" : "",
+    "guild_ranks": [
+        {
+            "rank": 4,
+            "guild_name": "ぎるどめー",
+            "guild_id": 123,
+            "gp": 10000,
+            "master_user_id": 123,
+            "master_user_name": "マスター名",
+            "master_avatar_id": "0001",
+            "guild_level": 10,
+            "member_num": 5,
+            "max_member_num": 20
+        }, {
+            "rank": 5,
+            "guild_name": "ぎるどめい",
+            "guild_id": 124,
+            "gp": 10000,
+            "master_user_id": 124,
+            "master_user_name": "マスター名",
+            "master_avatar_id": "0001",
+            "guild_level": 10,
+            "member_num": 5,
+            "max_member_num": 20
+        }, {
+            "rank": 6,
+            "guild_name": "ぎるどめえ",
+            "guild_id": 124,
+            "gp": 10000,
+            "master_user_id": 124,
+            "master_user_name": "マスター名",
+            "master_avatar_id": "0001",
+            "guild_level": 10,
+            "member_num": 5,
+            "max_member_num": 20
+        }
+    ]
+}

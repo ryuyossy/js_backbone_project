@@ -1,0 +1,74 @@
+@import "base";
+
+@-webkit-keyframes whiteOut{
+      0%{opacity: .8}
+	 15%{opacity: 0}
+     25%{opacity: .8}
+     35%{opacity: 0}
+    100%{opacity: 1}
+}
+#whiteOut{
+	width:640px;
+	height:0;
+	position:absolute;
+	left:-100px;
+	top: 0;
+	-webkit-animation-duration: 0.9s;
+	-webkit-animation-delay: 0;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-fill-mode: both;
+	background-color:#fff;
+	opacity:1;
+	z-index:4;
+}
+#whiteOut.start{
+	-webkit-animation-name: whiteOut;
+	height:1400px;
+}
+
+
+#gaugeTitle{
+	height:66px;
+	background: inline-image('assets/gauge_title_bg.png') repeat-x;
+	position: relative;
+	img{
+		zoom:1;
+	}
+	.chara{
+		display: block;
+		position: absolute;
+		width: 320px;
+		height: 64px;
+		top: 1px;
+		left: -128px;
+	}
+	h2{
+		position: relative;
+		height:66px;
+		overflow: hidden;
+		padding-top:66px;
+		@include box-sizing(border-box);
+		.title{
+			display: block;
+			position: absolute;
+			top:18px;
+			right:0;
+		}
+		&::after{
+			display: block;
+			position: absolute;
+			content: "";
+			left:0;
+			top:0;
+			width: 100%;
+			height: 100%;
+			background: inline-image('assets/gauge_title_border.png') repeat-x;
+		}
+	}
+}
+#stopGaugeMessage{
+	margin-top:5px;
+	height:37px;
+	background: inline-image('assets/imgTitle.png') center center no-repeat;
+}

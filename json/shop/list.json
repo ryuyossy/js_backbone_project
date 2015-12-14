@@ -1,0 +1,49 @@
+{
+	"status": 200,
+	"guild_name" : "サイババ団",
+	"guild_rank" : "A",
+	"rank_status" : "ランクステイ圏内",
+	"rank_rest_days" : "3",
+	"battle_start_rest" : "05:44",
+	"battle_end_rest" : "",
+	"own_ame_g": 120,
+	"own_coin": 20,
+	"sales": [
+		{
+			"buy_limit_desc": null,
+			"buy_limit_num_flg": false,
+			"buy_limit_rest": null,
+			"description": "任務値が半分だけ回復する。",
+			"item_id": 1,
+			"item_name": "回復ドリンク（M）",
+			"own_num": 3,
+			"price_coin": 100,
+			"set_sales_flg": false,
+			"shop_item_id": 1
+		},
+		{
+			"buy_limit_desc": null,
+			"buy_limit_num_flg": false,
+			"buy_limit_rest": null,
+			"description": "ふしぎなたねの成長を促す栄養剤。開花までの時間が1時間短縮する。",
+			"item_id": 2,
+			"item_name": "ヨクソダ～ツ（M）",
+			"own_num": 0,
+			"price_coin": 100,
+			"set_sales_flg": false,
+			"shop_item_id": 2
+		},
+		{
+			"buy_limit_desc": "セール※期間中5回まで購入可！！",
+			"buy_limit_num_flg": true,
+			"buy_limit_rest": 5,
+			"description": "ポーションセット(任務チャージ*1 ヨクソダーツ*1)",
+			"item_id": 3,
+			"item_name": "アイテムセット",
+			"own_num": null,
+			"price_coin": 500,
+			"set_sales_flg": true,
+			"shop_item_id": 3
+		}
+	]
+}

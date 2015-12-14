@@ -1,0 +1,111 @@
+
+
+
+<div class="jsShortTutorial" style="{{if !first_access_flg}}display:none{{/if}}">
+	<div class="questShort">
+		<h1 class="mainHeader">クエスト</h1>
+		<section class="questNvgation">
+			<div class="message arc">
+				<p>
+					<span>皆を困らすヤツらを追い払うのじゃ!</br>成功した者には褒美を使わすぞ!!</span>
+				</p>
+			</div>
+		</section>
+		<h1 class="subHeader">
+			<span class="subHeaderBg_l"></span>
+			<span>Ex獲得でLvアップ!</span>
+			<span class="subHeaderBg_r"></span>
+		</h1>
+		<div class="questshortBn">
+			<img src="{{getImgRoot/}}/parts/shortTutorial_quest_lvup.png" alt="Ex獲得でLvアップ!" class="title">
+		</div>
+		<h1 class="subHeader">
+			<span class="subHeaderBg_l"></span>
+			<span>ヤツらを倒すと豪華報酬!</span>
+			<span class="subHeaderBg_r"></span>
+		</h1>
+		<div class="questshortBn">
+			<img src="{{getImgRoot/}}/parts/shortTutorial_quest_remuneration.png" alt="ヤツらを倒すと豪華報酬!" class="title">
+		</div>
+		<button class="btn large shgoQuest jsButtonCloseShortTutorial">さっそくクエストへ</button>
+	</div>
+</div>
+
+
+
+<div class="jsNormalView" style="{{if first_access_flg}}display:none{{/if}}">
+
+	<section id="stageSelect">
+		<h1 class="mainHeader">ステージ選択</h1>
+		<div class="metalPanel">
+			<table class="gergeTable middle">
+				<tr>
+					<th>行動P</th>
+					<td class="gergeBox">
+						<div class="gergeBgFrame">
+							<div class="gergeBg">
+								<span class="gerge missionP" style="width:{{>user.mp_percent}}%;"></span>
+							</div>
+						</div>
+					</td>
+					<td>{{>user.mp}}/{{>user.max_mp}}</td>
+				</tr>
+				<tr>
+					<th>Ex.</th>
+					<td class="gergeBox">
+						<div class="gergeBgFrame">
+							<div class="gergeBg">
+								<span class="gerge missionExp" style="width:{{>user.exp_percent}}%;"></span>
+							</div>
+						</div>
+					</td>
+					<td>あと{{:user.exp_levelup - user.exp_current}}</td>
+				</tr>
+			</table>
+		</div>
+		{{if npc_comment }}
+		<div class="message navico_arc">
+			<p>
+				<span>{{>npc_comment}}</span>
+			</p>
+		</div>
+		{{/if}}
+		<div class="stageList">
+			{{sort stages reverse="true"}}
+				<section class="contents shadow link" data-href="mission/top/{{>stage_id}}/">
+				{{if clear_flg}}<!-- // クリア済みステージの場合 -->
+				<span class="cleared"><span class="hide">Cleared</span></span>
+				{{else}}<!-- // 新着ステージの場合 -->
+				<span class="label36_r4 newStage">NEW</span>
+				{{/if}}
+				<h1 class="stage{{>stage_id}}"><span class="hide">Stage{{>stage_id}}</span></h1>
+					<p>{{>name}}</p>
+				</section>
+			{{/sort}}
+		</div>
+	</section>
+
+	{{if 0}}
+	<!--
+	<div class="banner">
+		<p>
+			<button class="link" data-link="#"><img src="{{getImgRoot/}}/ad/banner.png"><br>└イベントバナースペース┘</button>
+		</p>
+	</div>
+	-->
+	{{/if}}
+
+	<hr>
+
+	<div class="helpList">
+		<ul>
+			<li><button class="link" data-href="help/detail/801/">クエストってなに？</button></li>
+			<li><button class="link" data-href="help/detail/804/">お宝ってなに？</button></li>
+			<li><button class="link" data-href="help/detail/503/">APってなに？</button></li>
+		</ul>
+	</div>
+
+</div>
+
+
+

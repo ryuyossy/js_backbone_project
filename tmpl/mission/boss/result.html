@@ -1,0 +1,84 @@
+<div id="fullScreen">
+<canvas id="canvas" width="320" height="200"></canvas>
+<div class="pause"><button class="pushEnter">TAP SCREEN</button></div>
+<div class="jsCanvasTextBox"></div><div class="jsCanvasTextNext">▼</div>
+</div>
+
+
+<div id="jsBossResult">
+	<section id="bossBattle" class='stage{{>("00" + stage_id).slice(-3)}} bossEncount'>
+		<div class="contentsInner">
+			{{if win_flg}}
+			<img src="{{getImgRoot/}}/boss/result/{{>stage_id}}_win.png" class="boss_img">
+			{{else}}
+			<img src="{{getImgRoot/}}/boss/result/{{>stage_id}}_lose.png" class="boss_img">
+			{{/if}}
+			<h2 class="bossName">{{>boss.name}}</h2>
+			<p>{{>boss.comment}}</p>
+		</div>
+	</section>
+
+	{{if win_flg}}
+	<section id="bossBattleResult" class="contents contentsShadow getItems">
+		{{if next.all_stage_clear_flg}}
+			<button class="btn_l nextStage" data-href="mission/stage/"><span class="hide">次のステージへ進む</span></button>
+		{{else}}
+			{{if next.stage_clear_flg}}
+				<button class="btn_l nextStage" data-href="mission/stage/"><span class="hide">次のステージへ進む</span></button>
+			{{else}}
+				<button class="btn_l nextField" data-href="mission/proceed/{{>next.stage_id}}/{{>next.field_id}}/"><span class="hide">次のフィールドへ進む</span></button>
+			{{/if}}
+		{{/if}}
+		<div class="contentsBorder">
+			<h1>獲得アイテム</h1>
+			<table>
+				<tr><th>Ex</th><td>{{>boss.win_exp}}Ex</td></tr>
+				<tr><th>ギル</th><td>{{>boss.win_gil}}ギル</td></tr>
+				<tr><th>ガチャP</th><td>{{>boss.win_gacha_point}}P</td></tr>
+				{{for rewards}}
+				<tr><th>{{>name}}</th><td>{{>number}}個</td></tr>
+				{{/for}}
+			</table>
+			<button class="btn" data-href="gift/list/">ギフトを確認する</button>
+		</div>
+	</section>
+	{{else}}
+	<section id="bossBattleLose">
+		<div class="message taicho_arc">
+			<p>
+				<span>むむ、敵ながらなかなかやるな！<br>しっかり準備を整えて再挑戦だ&#65281;</span>
+			</p>
+		</div>
+		<div class="listMenu">
+			<ul>
+				<li><div class="link" data-href="guild/space/">ギルド広場でメンバーを探す</div></li>
+				<li><div class="link" data-href="compose/">合成で武具を強化</div></li>
+				<li><div class="link" data-href="gacha/">ガチャで強力武具をゲット</div></li>
+				<li><div class="link" data-href="deck/list/1/">装備を確認</div></li>
+			</ul>
+		</div>
+		<button class="btn_l battle" data-href="/mission/boss/ready/{{>stage_id}}/{{>field_id}}/"><span class="hide">再挑戦する</span></button>
+	</section>
+	{{/if}}
+
+	<!-- //ここから共通 -->
+	<hr>
+
+	<div class="linkGroup">
+		<div class="arrowLink">
+			<button class="link prev" data-href="mission/top/{{>stage_id}}/">フィールド選択へ戻る</button>
+		</div>
+
+		<div class="arrowLink">
+			<button class="link prev" data-href="mission/stage/">ステージ選択へ戻る</button>
+		</div>
+	</div>
+
+	<div class="helpList">
+        	<ul>
+			<li><button class="link" data-href="help/detail/802/">ヤツらってなに？</button></li>
+			<li><button class="link" data-href="help/detail/312/">クエスト同行ってなに？</button></li>
+			<li><button class="link" data-href="help/detail/801/">クエストってなに？</button></li>
+		</ul>
+	</div>	
+</div>

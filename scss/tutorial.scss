@@ -1,0 +1,591 @@
+@charset "utf-8";
+@import "base";
+@import "ruleset";
+
+// extend parts
+%spriteImageUrl{
+	@include backgroundSize("/parts/#{$tutorial_parts}.png",0,0,no-repeat);
+	display:block;
+}
+%mainBg{
+	@include backgroundSize("/background/bg_tutorial_main.jpg",0,0,no-repeat);
+	display:block;
+}
+
+// page parts
+// common parts
+.story{
+	position:absolute;
+	left:31px;
+	top:189px;
+	width:258px;
+	background-color:rgba(0,0,0,0.5);
+	@include border-radius(8px);
+	border:1px solid #fff;
+	color:#fff;
+	@include text-glow(#000);
+	
+	p{
+		padding:15px 0;
+		text-align:center;
+	}
+}
+
+// tutorial
+#tutorial_main{
+	position:relative;
+	width:320px;
+	height:416px;
+	@extend %mainBg;
+}
+
+#tutorial_common{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	
+	.progress{
+		position:absolute;
+		top:130px;
+		width:100%;
+		height:160px;
+		background-color:#544123;
+		overflow:hidden;
+		
+		.gergeBox{
+			width:304px;
+			margin:0 auto;
+		}
+		h1{
+			position:relative;
+			margin:9px 2px 0 2px;
+			font-size:70%;
+			color:#fff;
+			
+			.progressCount{
+				position:absolute;
+				right:0;
+			}
+		}
+		.gergeBg{
+			position:relative;
+			top:-3px;
+			height:8px;
+			background-color:#00468C;
+		}
+		.gerge.tutorial{
+			position:relative;
+			top:0px;
+			@include gergeGradient(#99CDFF, #59ADFF, #0D87FF, #005CB6);
+			z-index:10;
+		}
+		
+		~ div.btn.single{
+			position:absolute;
+			left:32px;
+			top:300px;
+			width:80%;
+			pointer-events:none;
+		}
+		~ .btnBox{
+			position:absolute;
+			left:32px;
+			top:300px;
+			width:256px;
+			
+			.btn{
+				width:100%;
+				
+				&:first-of-type{
+					margin-bottom:8px;
+				}
+			}
+		}
+	}
+	.navMessage{
+		position:relative;
+		
+		.proceed{
+			position:absolute;
+			width:14px;
+			height:13px;
+			@extend %spriteImageUrl;
+			background-position:-1px -21px;
+		}
+		&.navico{
+			
+			.navico{
+				position:absolute;
+				right:0;
+				width:96px;
+				height:113px;
+				@extend %spriteImageUrl;
+				background-position:-250px -128px;
+			}
+			.messageInner{
+				position:absolute;
+				left:8px;
+				top:8px;
+				width:220px;
+				height:102px;
+				@extend %spriteImageUrl;
+				background-position:0 -220px;
+				
+				.messageBody{
+					display:block;
+					margin:10px 18px 10px 10px;
+				}
+			}
+			.proceed{
+				right:20px;
+				bottom:12px;
+			}
+		}
+		&.elder{
+			.elder{
+				position:absolute;
+				width:108px;
+				height:122px;
+				@extend %spriteImageUrl;
+				background-position:-237px 0;
+			}
+			.messageInner{
+				position:absolute;
+				right:8px;
+				top:8px;
+				width:220px;
+				height:102px;
+				@extend %spriteImageUrl;
+				background-position:-1px -113px;
+				
+				.messageBody{
+					display:block;
+					margin:10px 10px 10px 18px;
+				}
+			}
+			.proceed{
+				right:12px;
+				bottom:12px;
+			}
+		}
+	}
+	.tapArrow{
+		position:absolute;
+		width:66px;
+		height:74px;
+		@extend %spriteImageUrl;
+		background-position:-142px -30px;
+	}
+	.tapArrow_up{
+		position:absolute;
+		width:66px;
+		height:75px;
+		@extend %spriteImageUrl;
+		background-position:-69px -29px;
+	}
+}
+
+// tutorial battle{
+#myStatus{
+	&.statusData_icon{
+		//padding-bottom:0;
+	}
+	.columnBox{
+		height:auto !important;
+	}
+	dl{
+		font-size:80%;
+	}
+}
+
+// register
+#register{
+	.contents{
+		width:95%;
+		margin:8px auto;
+		padding:8px 0;
+	}
+	.contentsBorder{
+		min-height:85px;
+		
+		h1{
+			height:20px;
+			margin:-4px 6px 0 4px;
+			.subscription:after{
+				@include visible_object(88px,9px,89px,17px,auto);
+				@extend %spriteImageUrl;
+				background-position:0 -1px;
+			}
+		}
+	}
+	.registForm{
+		width:95%;
+		margin:16px auto 0 auto;
+
+		input{
+			-webkit-appearance:none;
+		}
+		h2{
+			position:relative;
+			&:before{
+				@include visible_object(0,2px,13px,12px,auto);
+				@extend %spriteImageUrl;
+				background-position:-97px -5px;
+			}
+			&.name{
+				.hide:before{
+					@include visible_object(18px,0,31px,16px,auto);
+					@extend %spriteImageUrl;
+					background-position:-117px -3px;
+				}
+				.caption{
+					position:relative;
+					left:48px;
+					top:-1px;
+					color:#B8A46B;
+				}
+			}
+			&.sex{
+				margin-top:32px;
+				
+				.hide:before{
+					@include visible_object(18px,0,31px,15px,auto);
+					@extend %spriteImageUrl;
+					background-position:-159px -4px;
+				}
+			}
+		}
+		.inputName{
+			position:relative;
+			display:block;
+			
+			input[type="text"]{
+				display:block;
+				width:240px;
+				padding:8px;
+				@include border-radius(4px);
+				border:1px solid #ccc;
+				@include box_shadow(1px 1px 1px,rgba(0,0,0,0.7) inset);
+				font-size:110%;
+			}
+			.textCount{
+				position:absolute;
+				right:10px;
+				bottom:4px;
+				color:#DFD2AB;
+			}
+		}
+		.selectSex{
+			margin-top:24px;
+			@include display-box;
+			font-weight:bold;
+			
+			label{
+				@include display-box;
+				@include box-align(center);
+				@include box-flex(1);
+				
+				&.male{
+					margin-right:24px;
+				}
+			}
+			input[type="radio"]{
+				display:inline-block;
+				width:24px;
+				height:25px;
+				margin-right:6px;
+				@extend %spriteImageUrl;
+				background-position:-44px -19px;
+				border:none;
+				vertical-align:bottom;
+				&:checked{
+					//height:21px;
+					background-position:-18px -19px;
+				}
+			}
+			.iconBgRect_l{
+				margin-left:10px;
+			}
+		}
+		.label48{
+			width:90%;
+			margin:8px auto;
+			font-size:85%;
+			
+			&.caption{
+				background-color:#b9a46b;
+			}
+		}
+		
+		~ .btn.large{
+			width:55%;
+			margin-top:32px;
+		}
+	}
+}
+// present equip
+#presentEquip{
+	margin-top:8px;
+	.contents{
+		width:95%;
+		margin:0 auto 8px auto;
+		&.contentsShadow{
+			min-height:122px;
+		}
+	}
+	
+	> .btn.large{
+		margin:32px auto;
+	}
+}
+// confirm
+#tutorial_confirm{
+	.braveShort {
+		.subHeader {
+			margin-top: 1px;
+		}
+		.subHeader3 {
+			color: #f3de9f
+		}
+		.questNvgation {
+			@include backgroundSize("/parts/shortTutorial_brave_top.png",0,0,no-repeat);
+			display:block;
+			height:160px;
+		}
+		.questshortBn {
+			margin:16px auto 0 auto;
+		}
+		.title {
+			display:block;
+			margin:0 auto;
+		}
+		.shgoQuest {
+			margin: $content_margin_last auto $content_margin_last auto;
+		}
+	}
+	.review{
+		margin-bottom:32px;
+		
+		.subHeader3{
+			margin-top:0 !important;
+			background-color:#544123;
+		}
+		article{
+			position:relative;
+			color:#fff;
+	
+			p{
+				position:relative;
+				top:15px;
+				height:90px;
+				font-size:85%;
+				line-height:1.7em;
+			}
+		}
+		.caption1{
+			@include backgroundSize("/parts/battle_ready_caption_chara001.png",215px,bottom,no-repeat);
+			display:block;
+	
+			p{
+				left:8px;
+			}
+		}
+		.caption2{
+			@include backgroundSize("/parts/battle_ready_caption_chara002.png",0,bottom,no-repeat);
+			display:block;
+	
+			h1{
+				margin-top:6px;
+			}
+			p{
+				left:115px;
+			}
+		}
+		.caption3{
+			@include backgroundSize("/parts/battle_ready_caption_chara003.png",right,bottom,no-repeat);
+			display:block;
+	
+			h1{
+				margin-top:6px;
+			}
+			p{
+				left:8px;
+			}
+		}
+		.caption4{
+			@include backgroundSize("/parts/battle_ready_caption_chara004.png",0,bottom,no-repeat);
+			display:block;
+	
+			h1{
+				margin-top:6px;
+			}
+			p{
+				left:115px;
+			}
+		}
+		.caption5{
+			@include backgroundSize("/parts/battle_ready_caption_chara005.png",right,bottom,no-repeat);
+			display:block;
+	
+			h1{
+				margin-top:6px;
+			}
+			p{
+				left:8px;
+			}
+		}
+		.caption6{
+			@include backgroundSize("/parts/battle_ready_caption_boss.png",left,bottom,no-repeat);
+			display:block;
+	
+			h1{
+				margin-top:6px;
+			}
+			p{
+				left:115px;
+			}
+		}
+	}
+	.reward{
+		margin:16px auto 8px auto;
+		.contents{
+			margin:0 auto 8px auto;
+		}
+	}
+	> .btn.large{
+		margin:32px auto;
+	}
+}
+// tutorial_complate
+#tutorial_complate{
+	position:relative;
+	.subHeader{
+		margin-top:24px;
+	}
+	.jobList{
+		@include display-box;
+		margin:16px 8px 32px 8px;
+		color:#fff;
+		
+		~ .subHeader{
+			margin-bottom:16px;
+		}
+	}
+	.jobListInner{
+		@include box-flex(1);
+		text-align:center;
+		.iconBgRect_l{
+			margin:0 auto;
+		}
+		h1{
+			margin-top:4px;
+			font-size:90%;
+		}
+	}
+	.rewardList{
+		.contents{
+			width:95%;
+			margin:0 auto 8px auto;
+		}
+	}
+	.listMenu{
+		margin-top:24px;
+	}
+	.btn.large{
+		margin:32px auto;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+// modal
+%demo{
+	display:block;
+	-webkit-transform:scale(1);
+	z-index:10000;
+}
+.modalBox{
+	// demo
+	//@extend %demo;
+	
+	// main
+	.makeGuild{
+		.confirmGuildName{
+			display:block;
+			color:#8C0000;
+		}
+		.label48{
+			background-color:#B9A46B;
+		}
+	}
+	.joinGuild{
+		table{
+			width:100%;
+			margin-top:8px;
+		}
+		th{
+			width:45%;
+			padding:2px 4px 0 0;
+			color:#8C0000;
+			text-align:right;
+		}
+		td{
+			padding:2px 0;
+			vertical-align:baseline;
+			text-align:left;
+		}
+	}
+	// register
+	.registConfirm{
+		.iconBgRect_l{
+			margin:0 auto 8px auto;
+		}
+		.registUserDate{
+			text-align:center;
+			span{
+				display:inline-block;
+				margin-right:4px;
+				color:#8C0000;
+			}
+		}
+	}
+	// confirm & error
+	.organizeGuild,
+	.joinGuild,
+	.progressError{
+		.btn.large{
+			width:60%;
+			margin-bottom:0;
+		}
+	}
+	.guildOrganizeError,
+	.guildJoinError{
+		.btn.large{
+			width:100%;
+			&:last-of-type{
+				margin-bottom:0;
+			}
+		}
+	}
+	
+	.innerBtnBox{
+		margin-top:0;
+	}
+}
+
+
+
+
+
+
+
+

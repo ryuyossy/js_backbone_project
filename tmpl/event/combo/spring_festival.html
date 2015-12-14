@@ -1,0 +1,75 @@
+	<div id="container">
+		<section id="comboFestival">
+			<h1 class="pageTitle"><span class="hide">仲間の絆で報酬ゲット！ブレガー春のコンボまつり</span></h1>
+			<!-- <img src="{{>img_url_root}}/parts/event/combo/springFestival_top.png" alt="みんなでコンボを繋いで報酬ゲット！！" class="title"> -->
+			<dl class="period">
+				<dt>開催期間</dt>
+				<dd>{{>~datetimeToJpSignage(start_datetime)}} 〜 {{>~datetimeToJpSignage(end_datetime)}}</dd>
+			</dl>
+			
+			<h1 class="subHeader">
+				<span class="subHeaderBg_l"></span>
+				<span>遊び方</span>
+				<span class="subHeaderBg_r"></span>
+			</h1>
+			
+			<h1 class="subHeader3">
+				<span>ブレイブバトルでコンボを繋ごう！！</span>
+			</h1>
+			<div class="message taicho_arc">
+				<p>
+					<span>各試合で繋いだ<span class="comboCnt">最大コンボ数</span>に応じて<br>豪華報酬をゲットできるぞ！！</span>
+				</p>
+			</div>
+			<div class="comboDescription">
+				<img src="{{>img_url_root}}/parts/event/combo/springFestival_comboDescription.png" alt="ブレイブバトルでコンボを繋ごう！！" class="title">
+			</div>
+			<button class="btn battle large jsCautionBtn">その他の注意事項を確認</button>
+			<h1 class="subHeader">
+				<span class="subHeaderBg_l"></span>
+				<span>報酬一覧</span>
+				<span class="subHeaderBg_r"></span>
+			</h1>
+			<div class="remunerationList">
+				{{for every_battle_rewards }}
+				<section class="contents contentsShadow statusData_icon rmrCnt">
+					<div class="columnBox innerHeader">
+						{{giftThumb type id /}}
+						<div class="contentsInner">
+							<h1 class="qbn">{{>combo_num}}コンボ達成！</h1>
+							<p>攻撃orエールコンボで獲得！！</p>
+							{{if type == 4 || type == 5}}
+							<p>{{>quantity}}{{>name}}</p>
+							{{else}}
+							<p>{{>name}} × {{>quantity}}</p>
+							{{/if}}
+						</div>
+					</div>
+				</section>
+				{{/for}}
+			</div>
+		</section>
+
+		<hr>
+
+		<div class="linkGroup">
+			<div class="arrowLink"><button class="link next" data-href="gift/list/">ギフトを確認</button></div>
+			<div class="arrowLink"><button class="link next" data-href="battle/{{if battle_state != 4}}top/{{/if}}">バトルへ</button></div>
+		</div>
+		
+		<section class="caution jsCautionSection">
+			<article>
+				<h1>ご注意</h1>
+				<ul>
+					<li>
+						各バトルでの最大コンボ数は、そのバトル中に繋がれた攻撃コンボと
+						エールコンボの中で一番大きなコンボ数とします。
+					</li>
+					<li>
+						報酬の配布は、バトル終了後から少し時間が必要となります。
+						その間にギルドを移籍した場合、報酬を受け取る事が出来なくなるためご注意ください。
+					</li>
+				</ul>
+			</article>
+		</section>
+	</div>

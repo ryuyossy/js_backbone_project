@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>バトル｜TOP
+	</title>
+	<meta name="robots" content="noindex,nofollow">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="/css/common_parts.css">
+	<link rel="stylesheet" href="/css/battle.css">
+	<script src="/html/js/jquery-1.8.2.min.js"></script>
+	<script src="/html/js/parts.js"></script>
+</head>
+	<body>
+		<header id="globalHeader">
+			<div class="menuPanel"><button class="link mypage"><span class="hide">マイページ</span></button></div>
+			<!-- //バトル前 -->
+			<div class="battleTimeCount beforeBattle">
+				<div class="battleTimeInner">
+					<h1>まもなくバトル開催</h1>
+					<div class="numBox">
+						<span class="numGold num_1"><span class="hide">0</span></span>
+						<span class="numGold num_2"><span class="hide">1</span></span>
+						<span class="numGoldColon"><span class="hide">:</span></span>
+						<span class="numGold num_1"><span class="hide">2</span></span>
+						<span class="numGold num_9"><span class="hide">3</span></span>
+						<span class="numGoldColon"><span class="hide">:</span></span>
+						<span class="numGold num_4"><span class="hide">4</span></span>
+						<span class="numGold num_9"><span class="hide">5</span></span>
+					</div>
+				</div>
+			</div>
+			<div class="menuPanel"><button class="link menu"><span class="hide">メニュー</span></button></div>
+		</header>
+		
+		<div id="container">
+			
+			<div id="battleTop">
+				
+				<section class="battleStatus">
+					<h1 class="battleName">ブレイブバトル</h1>
+					<p class="battlePeriod"><span>期間</span>12月24日〜12月30日</p>
+					
+					<!-- //平常時・ランクE以上・前回勝利 
+					<section class="lastBattleResult win">
+						<h2>前回のバトル結果</h2>
+						<span class="hide">勝利</span>
+					</section>
+					<dl class="currentRank">
+						<dt>ランキング</dt>
+						<dd>現在<span>6</span>位</dd>
+					</dl>
+					<section class="pointResult win">
+						<h3>12月24日 第2試合<span>vs</span>ギルド名ギルド名ギルド名</h3>
+						<table>
+							<tr>
+								<td class="myGuildPoint">123456789<span>BP</span></td>
+								<td class="opponentGuildPoint">123456789<span>BP</span></td>
+							</tr>
+						</table>
+						<button class="link">戦況履歴</button>
+					</section>-->
+					
+					<!-- //平常時・ランクE以上・前回敗北 
+					<section class="lastBattleResult lose">
+						<h2>前回のバトル結果</h2>
+						<span class="hide">敗北</span>
+					</section>
+					<dl class="currentRank">
+						<dt>ランキング</dt>
+						<dd>現在<span>6</span>位</dd>
+					</dl>
+					<section class="pointResult lose">
+						<h3>12月24日 第2試合<span>vs</span>ギルド名ギルド名ギルド名</h3>
+						<table>
+							<tr>
+								<td class="myGuildPoint">123456789<span>BP</span></td>
+								<td class="opponentGuildPoint">123456789<span>BP</span></td>
+							</tr>
+						</table>
+						<button class="link">戦況履歴</button>
+					</section>-->
+					
+					<!-- //平常時・ランクE以上・前回勝敗なし 
+					<section class="lastBattleResult draw">
+						<h2>前回のバトル結果</h2>
+						<span class="hide">勝敗なし</span>
+					</section>
+					<dl class="currentRank">
+						<dt>ランキング</dt>
+						<dd>現在<span>6</span>位</dd>
+					</dl>
+					<section class="pointResult draw">
+						<h3>12月24日 第2試合<span>vs</span>ギルド名ギルド名ギルド名</h3>
+						<table>
+							<tr>
+								<td class="myGuildPoint">123456789<span>BP</span></td>
+								<td class="opponentGuildPoint">123456789<span>BP</span></td>
+							</tr>
+						</table>
+						<p>戦況履歴はありません</p>
+					</section>-->
+					
+					<!-- //平常時・ランクE以上・前回履歴なし 
+					<section class="lastBattleResult noResult">
+						<span class="hide">仲間と協力バトル！めざせ！最高のギルド！！</span>
+					</section>
+					<dl class="currentRank">
+						<dt>ランキング</dt>
+						<dd>現在<span>6</span>位</dd>
+					</dl>-->
+					
+					<!-- //平常時・ランクGまたはF・前回履歴なし 
+					<section class="lastBattleResult normal noResult">
+						<span class="hide">仲間と協力バトル！めざせ！最高のギルド！！</span>
+					</section>
+					<dl class="currentRank out">
+						<dt>ランキング</dt>
+						<dd>参加なし</dd>
+					</dl>-->
+					
+					
+					
+					
+					
+					
+					<!-- //バトル前・ランクE以上 
+					<section class="lastBattleResult ready noResult">
+						<span class="hide">対戦相手決定！！</span>
+						<div class="metalPanel">
+							<table class="gergeTable middle">
+								<tr>
+									<th>AP</th>
+									<td class="gergeBox">
+										<div class="gergeBgFrame">
+											<div class="gergeBg"><span class="gerge battleP" style="width:50%;"></span></div>
+										</div>
+									</td>
+									<td>999/999</td>
+								</tr>
+							</table>
+						</div>
+					</section>
+					<dl class="currentRank">
+						<dt>ランキング</dt>
+						<dd>現在<span>10</span>位</dd>
+					</dl>-->
+					
+					<!-- //バトル中・ランクE以上 -->
+					<section class="lastBattleResult onBattle noResult">
+						<span class="hide">バトル開催中</span>
+						<div class="metalPanel">
+							<table class="gergeTable middle">
+								<tr>
+									<th>AP</th>
+									<td class="gergeBox">
+										<div class="gergeBgFrame">
+											<div class="gergeBg"><span class="gerge battleP" style="width:100%;"></span></div>
+										</div>
+									</td>
+									<td>999/999</td>
+								</tr>
+							</table>
+						</div>
+					</section>
+					<dl class="currentRank">
+						<dt>ランキング</dt>
+						<dd>現在<span>10</span>位</dd>
+					</dl>
+					
+					
+				</section>
+
+				<!-- //平常時背景下 
+				<section class="battleControl normal">
+					<div class="nextBattleTime">
+						<p>
+							次のバトルは
+							<span class="numBox">
+							<span class="numRed num_1"><span class="hide">0</span></span>
+							<span class="numRed num_1"><span class="hide">0</span></span>
+							<span class="numRedColon"><span class="hide">:</span></span>
+							<span class="numRed num_1"><span class="hide">0</span></span>
+							<span class="numRed num_2"><span class="hide">0</span></span>
+							<span class="numRedTilde"><span class="hide">〜</span></span>
+							<span class="numRed num_1"><span class="hide">0</span></span>
+							<span class="numRed num_9"><span class="hide">0</span></span>
+							<span class="numRedColon"><span class="hide">:</span></span>
+							<span class="numRed num_5"><span class="hide">0</span></span>
+							<span class="numRed num_9"><span class="hide">0</span></span>
+							</span>
+						</p>
+					</div>
+					<div class="message taicho_arc">
+						<p>
+							<span>次回ブレイブバトル開催まで、今しばらく待つがよい</span>
+						</p>
+					</div>
+				</section>-->
+				
+				<!-- //バトル前背景下 
+				<section class="battleControl ready">
+					<button class="btn large ready" data-href="#">ギルドでバトル準備！</button>
+					<div class="message taicho_arc">
+						<p>
+							<span>ブレイブバトルの対戦相手が決まったようじゃ！</span>
+						</p>
+					</div>
+					<section class="contents contentsShadow statusData_icon link">
+						<h1><span class="hide">対戦相手</span>ギルド名ギルド名ギルド名ギルド</h1>
+						<div class="columnBox">
+							<div class="iconBgRect_s gold"><img src="/img/avatar/myAvatar_l.png"></div>
+							<div class="contentsInner">
+								<dl>
+									<dt>ギルドLv.</dt><dd>99</dd>
+									<dt>所属</dt><dd>20/20</dd>
+									<dt>総合BP</dt><dd>9999999</dd>
+									<dt>戦績</dt><dd>9999勝</dd>
+									<dt>最高コンボ数</dt><dd>攻撃999　応援999</dd>
+								</dl>
+							</div>
+						</div>
+					</section>
+				</section>-->
+				
+				<!-- //バトル中 -->
+				<section class="battleControl onBattle">
+					<button class="btn_l battle onBattle" data-href="#"><span class="hide">戦場へ</span></button>
+					<div class="message taicho_arc">
+						<p>
+							<span>ブレイブバトルは始まっておる！<br>今すぐ戦場へ行くのじゃ！！</span>
+						</p>
+					</div>
+					<section class="contents contentsShadow statusData_icon link">
+						<h1><span class="hide">対戦相手</span>ギルド名ギルド名ギルド名ギルド</h1>
+						<div class="columnBox">
+							<div class="iconBgRect_s gold"><img src="/img/avatar/0001_120.png"></div>
+							<div class="contentsInner">
+								<dl>
+									<dt>ギルドLv.</dt><dd>99</dd>
+									<dt>所属</dt><dd>20/20</dd>
+									<dt>総合BP</dt><dd>9999999</dd>
+									<dt>戦績</dt><dd>9999勝</dd>
+									<dt>最高コンボ数</dt><dd>攻撃999　応援999</dd>
+								</dl>
+							</div>
+						</div>
+					</section>
+				</section>
+
+
+
+
+
+				<!-- //共通 -->
+				<button class="btn large">対戦スケジュールを見る</button>
+				
+				<section class="battleCaption">
+					<article class="caption1">
+						<h1 class="subHeader3">バトルに参加してJExを獲得！</h1>
+						<p>
+							攻撃・エールを出すたびJExを獲得。<br>
+							JExを貯めて、アビリティや上級ジョブを<br>
+							ゲットしよう！！
+						</p>
+					</article>
+					<article class="caption2">
+						<h1 class="subHeader3">仲間とコンボで効果アップ！</h1>
+						<p>
+							コンボを繋ぐほど、攻撃・エールの<br>
+							効果がアップ。<br>
+							獲得JExもアップするぞ！！
+						</p>
+					</article>
+					<article class="caption3">
+						<h1 class="subHeader3">参加するだけで報酬ゲット！</h1>
+						<p>
+							バトルに参加すると、必ず報酬が<br>
+							ゲットできる。<br>
+							勝てばさらに報酬アップ！！<br>
+						</p>
+					</article>
+					<article class="caption4">
+						<h1 class="subHeader3">ヤツらの襲来に備えろ！</h1>
+						<p>
+							BPを貯めてギルドランクをアップ<br>
+							させよう。<br>
+							ギルドランクが高いほど・・・？
+						</p>
+					</article>
+					<h1 class="subHeader3 caption5">バトルの時間を待つ間に・・・</h1>
+					<div class="listMenu">
+						<ul>
+							<li><div class="link" data-link="#"><span>ガチャで強力武器をゲット！</span></div></li>
+							<li><div class="link" data-link="#"><span>合成で強くなれ！</span></div></li>
+							<li><div class="link" data-link="#"><span>クエストでAPアップ！</span></div></li>
+						</ul>
+					</div>
+				</section>
+	
+				<div class="banner">
+					<p>
+						<button class="link" data-link="#"><img src="/img/ad/banner.png" alt="banner"><br>└イベントバナースペース┘</button>
+					</p>
+				</div>
+				
+				<section id="ranking">
+					<h1 class="subHeader">
+						<span class="subHeaderBg_l"></span><span>ランキング</span><span class="subHeaderBg_r"></span>
+					</h1>
+					<dl class="rankStatus_l">
+						<dt class="label48">ランクステイ圏内</dt>
+						<dd>ランキング終了まであと<span>3日</span>！</dd>
+					</dl>
+					
+					<article class="contents contentsShadow statusData_icon myGuild link">
+						<h1><span class="rankLabel rangeStay rankUp"><span class="rankNum">6</span>位</span>ギルド名ギルド名ギルド名ギルド<!-- 15文字まで --></h1>
+						<div class="columnBox">
+							<div class="iconBgRect_l gold"><img src="/img/avatar/myAvatar_l.png"></div>
+							<div class="contentsInner">
+								<dl>
+									<dt>獲得BP</dt><dd>123456</dd>
+									<dt>ギルドマスター</dt><dd>ユーザー名ユーザー<!-- ユーザー名最大9文字まで --></dd>
+									<dt>ギルドLv.</dt><dd>99</dd>
+									<dt>所属人数</dt><dd>30/30</dd>
+								</dl>
+							</div>
+						</div>
+					</article>
+					<div class="arrowLink">
+						<button class="link next">ぜんぶ見る</button>
+					</div>
+				</section>
+	
+				<section id="guildBbs">
+					<h1 class="subHeader">
+						<span class="subHeaderBg_l"></span><span>ギルド掲示板</span><span class="subHeaderBg_r"></span>
+					</h1>
+					
+					<div class="postForm_icon">
+						<div class="formInner">
+							<div class="iconBgArc_s gold"><img src="/img/avatar/myAvatar_l.png"></div>
+							<div class="inputBox">
+								<textarea placeholder="つぶやく…"></textarea>
+								<button class="btn post" data-href="#">投稿する</button>
+							</div>
+						</div>
+					</div>
+					<article class="contents contentsShadow topic">
+						<div class="contentsInner">
+							<div class="topicRoot">
+								<div class="contributor">
+									<div class="iconBgArc_s gold"><img src="/img/avatar/myAvatar_l.png" alt="各種アバター画像（マイページTOP表示用を流用）"></div>
+									<h2>わかば弓士</h2>
+									<time>8/10 12:23</time>
+								</div>
+								<p>
+									コメントアイコンを押すとコメントが開きます（スライドメニュー）いいねが押されてる＆レス窓開いてないVer.
+									<span class="topicMenu">
+										<button class="link like over" data-link="#"><span class="hide">いいね</span>3</button><button class="link resToggle" data-link="#"><span class="hide">コメント</span>3</button>
+									</span>
+								</p>
+							</div>
+						</div>
+					</article>
+					<div class="arrowLink">
+						<span class="link next" data-link="#">ぜんぶ見る</span>
+					</div>
+				</section>
+				
+			</section>
+			
+			<hr>
+			
+			<section class="helpList">
+				<ul>
+					<li><button class="link" data-link="#">バトルとは？</button></li>
+				</ul>
+			</section>
+			
+		</div>
+		
+		<footer id="globalFooter">
+			<ul>
+				<li class="menuPanel"><span class="link mypage"><span class="hide">マイページ</span></span></li>
+				<li class="menuPanel"><span class="link quest"><span class="hide">クエスト</span></span></li>
+				<li class="menuPanel"><span class="link buttle"><span class="hide">バトル</span></span></li>
+				<li class="menuPanel"><span class="link gatcha"><span class="hide">ガチャ</span></span></li>
+				<li class="menuPanel"><span class="link menu"><span class="hide">マイページ</span></span></li>
+			</ul>
+		</footer>
+		
+	</body>
+</html>

@@ -1,0 +1,36 @@
+{
+    "status" : 200,
+    "position_description": "ギルド設立者でマスター権限を持つ。",
+    "position_id": 1,
+    "members": [
+        {
+            "guild_rank": "F",
+            "defense": 63451235,
+            "profile_comment": "さあ",
+            "sp_defense": 3337,
+            "win_gp_total": 534,
+            "sp_attack": 4545,
+            "game_start_datetime": "2012-12-11T19:04:51",
+            "belong_guild_name": "たけさん",
+            "avatar_id": "10001",
+            "position_name": null,
+            "user_name": "たけさん",
+            "level": 1,
+            "job_tree_name": "初期ジョブ",
+            "battle_power": 23535,
+            "job_name": "みならい剣士",
+            "main_protector": null,
+            "position_id": null,
+            "user_id": 27,
+            "main_weapon": null,
+            "attack": 6352,
+            "gp": 3634
+        }
+    ],
+    "user": {
+        "user_name": "ギールマース",
+        "user_id": 28,
+        "avatar_id": "10002"
+    },
+    "position_name": "ギルドオーナー"
+}

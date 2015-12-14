@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>装備トップ</title>
+	<meta name="robots" content="noindex,nofollow">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+
+	<link rel="stylesheet" href="/css/common_parts.css">
+	<link rel="stylesheet" href="/css/equipage.css">
+	<script src="/html/js/jquery-1.8.2.min.js"></script>
+	<script src="/html/js/parts.js"></script>
+</head>
+	<body>
+		<div id="container">
+			<header id="globalHeader">
+				<div class="menuPanel"><button class="link mypage"><span class="hide">マイページ</span></button></div>
+				<div class="guildNamePanel"><h1><span class="link"><span class="guildRank f hide">ギルドランク：A</span>ギルド名ギルド名ギルド名</span></h1></div>
+				<div class="menuPanel"><button class="link menu"><span class="hide">メニュー</span></button></div>
+			</header>
+			<h1 class="mainHeader">装備</h1>
+			
+			<!-- //装備 -->
+			<form method="post" action="#" name="equip">
+				<section class="contentsShadow statusData_icon metalPanels" id="eqMargins">
+					<div class="columnBox equipListStatus">
+						<div class="iconBgArc_l gold"><img src="/img/avatar/myAvatar_l.png"></div>
+						<div class="contentsInner">
+							<dl>
+								<dt>戦闘力</dt><dd>1234567</dd>
+							</dl>
+							<div class="columnBox">
+								<dl>
+									<dt>攻撃</dt><dd>123456</dd>
+									<dt>特攻</dt><dd>1234</dd>
+								</dl>
+								<dl>
+									<dt>防御</dt><dd>123456</dd>
+									<dt>特防</dt><dd>123456</dd>
+								</dl>
+								<div class="wrapColumBoxParam">
+									<div class="inParm">
+										<span class="label32 jobType_power">力</span>
+										<span class="clred">+0.5%</span>
+									</div>
+									<div class="inParm">
+										<span class="label32 jobType_tech">技</span>
+										<span>+0.5%</span>
+									</div>
+									<div class="inParm">
+										<span class="label32 jobType_int">知</span>
+										<span>+0.5%</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</form>
+				
+			<button class="btn large" id="eqLargeBtn" data-href="#">一括装備する</button>
+			
+			<div class="tabNav eqTabNav">
+				<ul>
+					<!-- //アクティブタブ -->
+					<li><button class="select"><span>武器</span></button></li>
+					<!-- //未選択 -->
+					<li><button><span>防具</span></button></li>
+				</ul>
+			</div>
+
+			<h1 class="subHeader eqTabNav">
+				<span class="subHeaderBg_l"></span>
+				<span>現在の装備</span>
+				<span class="subHeaderBg_r"></span>
+			</h1>
+			
+			<div class="accordion open accd">
+				<section class="contents shadow">
+					<!-- //開閉なかみ -->
+					<div class="accordionInner statusData equipSetStatus">
+						<ul>
+							<li><img src="/img/equip/weapon.png"></li>
+							<li><img src="/img/equip/weapon.png"></li>
+							<li><img src="/img/equip/weapon.png"></li>
+							<li><img src="/img/equip/weapon.png"></li>
+							<li><img src="/img/equip/weapon.png"></li>
+							<li><img src="/img/equip/weapon.png"></li>
+							<li><img src="/img/equip/weapon.png"></li>
+							<li><img src="/img/equip/weapon.png"></li>
+							<li class="blank">&nbsp;</li>
+							<li class="blank">&nbsp;</li>
+						</ul>
+						<dl>
+							<dt>武器P</dt><dd>999/999</dd>
+							<dt>攻撃</dt><dd>999999</dd>
+							<dt>特攻</dt><dd>999999</dd>
+						</dl>
+						<div class="innerBtnBox">
+							<button class="btn" data-href="#">武器セットに保存</button>
+							<button class="btn" data-href="#">編集する</button>
+						</div>
+					</div>
+				</section>
+			</div>
+			
+			<h1 class="subHeader eqSubHeader2">
+				<span class="subHeaderBg_l"></span>
+				<span>武器セット</span>
+				<span class="subHeaderBg_r"></span>
+			</h1>
+			
+			<div class="accordion open eqAccordion">
+				<section class="contents shadow">
+					<h1>武器セット①</h1>
+					<!-- //開閉なかみ -->
+					<div class="accordionInner statusData equipSetStatus">
+						<ul>
+							<li><img src="/img/equip/weapon.png"></li>
+							<li><img src="/img/equip/weapon.png"></li>
+							<li><img src="/img/equip/weapon.png"></li>
+							<li><img src="/img/equip/weapon.png"></li>
+							<li><img src="/img/equip/weapon.png"></li>
+							<li><img src="/img/equip/weapon.png"></li>
+							<li><img src="/img/equip/weapon.png"></li>
+							<li><img src="/img/equip/weapon.png"></li>
+							<li class="blank">&nbsp;</li>
+							<li class="blank">&nbsp;</li>
+						</ul>
+						<dl>
+							<dt>武器P</dt><dd>999/999</dd>
+							<dt>攻撃</dt><dd>999999</dd>
+							<dt>特攻</dt><dd>999999</dd>
+						</dl>
+						<div class="innerBtnBox">
+							<button class="btn" data-href="#">装備する</button>
+							<button class="btn" data-href="#">削除する</button>
+							<button class="btn" data-href="#">編集する</button>
+						</div>
+					</div>
+				</section>
+			</div>
+			
+			<div class="accordion eqlists1">
+				<section class="contents shadow">
+					<h1>武器セット①</h1>
+				</section>
+			</div>
+
+			<div class="accordion empty link eqlists2" data-href="#">
+				<section class="contents shadow">
+					<h1>武器セット①</h1>
+					<span class="link">新規作成する</span>
+				</section>
+			</div>
+
+			<hr>
+			
+			<div class="helpList">
+				<ul>
+					<li><button class="link" data-href="#">ヘルプ</button></li>
+				</ul>
+				<ul>
+					<li><button class="link" data-href="#">ヘルプ</button></li>
+				</ul>
+			</div>
+			
+			<footer id="globalFooter">
+				<ul>
+					<li class="menuPanel"><span class="link mypage"><span class="hide">マイページ</span></span></li>
+					<li class="menuPanel"><span class="link quest"><span class="hide">クエスト</span></span></li>
+					<li class="menuPanel"><span class="link buttle"><span class="hide">バトル</span></span></li>
+					<li class="menuPanel"><span class="link gatcha"><span class="hide">ガチャ</span></span></li>
+					<li class="menuPanel"><span class="link menu"><span class="hide">マイページ</span></span></li>
+				</ul>
+			</footer>
+
+		</div>
+
+	</body>
+</html>

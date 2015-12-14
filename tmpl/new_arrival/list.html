@@ -1,0 +1,15 @@
+<h1 class="mainHeader">新着ユーザー一覧</h1>
+<section id="newArrival" class="userList jsNewArrivalRankingList">
+	<div class="jsListAll">{{for #data tmpl="#jsTemplateNewArrival" /}}</div>
+	{{if more_flg}}
+	<div class="moreLink jsListMore">
+		<button class="link"><span>もっと見る</span></button>
+	</div>
+	{{/if}}
+</section>
+
+<hr>
+
+<div class="arrowLink">
+	<button class="link prev" data-href="mypage/">マイページに戻る</button>
+</div>

@@ -1,0 +1,45 @@
+{
+	"status":200,
+	"guild_name" : "サイババ団",
+	"guild_rank" : "A",
+	"rank_status" : "ランクステイ圏内",
+	"rank_rest_days" : "3",
+	"battle_start_rest" : "05:44",
+	"battle_end_rest" : "",
+	"tp": 30,
+	"rest_cheer_num": 5,
+	"users": [
+		{
+			"user_id": 2,
+			"avatar_id": 20001,
+			"name": "ツシマ",
+			"level": 3,
+			"power": 1234,
+			"job_name": "剣士",
+			"tp": 40,
+			"back_flg": false,
+			"cheered_flg": false
+		},
+		{
+			"user_id": 3,
+			"avatar_id": 20001,
+			"name": "まっくす",
+			"level": 3,
+			"power": 1234,
+			"job_name": "剣士",
+			"tp": 40,
+			"back_flg": false,
+			"cheered_flg": false
+		}
+	],
+	"new_user" : {
+		"user_id": 2,
+		"avatar_id": 20001,
+		"name": "ツシマ",
+		"guild_name": "ツシマクライシス",
+		"level": 3,
+		"total_attack_power": 1234,
+		"total_defence_power": 1234,
+		"job_name": "剣士"
+	}
+}  

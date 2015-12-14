@@ -1,0 +1,48 @@
+<section id="drawlist" class="jsItem">
+	<h1 class="mainHeader">{{>gacha_name}}獲得武具一覧</h1>
+	<section class="rate">
+		<h1 class="subHeader">
+			<span class="subHeaderBg_l"></span>
+			<span>レアリティ別提供割合</span>
+			<span class="subHeaderBg_r"></span>
+		</h1>
+		<section class="contents shadow statusData">
+			<div class="contentsInner">
+				<dl>
+					{{for rarities}}
+					<dt>{{:~getRarityKanaText(rarity)}}</dt><dd>{{>percent}}%</dd>
+					{{/for}}
+				</dl>
+			</div>
+		</section>
+	</section>
+
+	<section class="equipNameList">
+		<h1 class="subHeader">
+			<span class="subHeaderBg_l"></span>
+			<span>武具一覧</span>
+			<span class="subHeaderBg_r"></span>
+		</h1>
+		{{for rarity_equips}}
+		<section class="contents contentsShadow statusData">
+			<h1>{{:~getRarityKanaText(rarity)}} {{>kind_num}}種</h1>
+			<div class="contentsInner">
+				{{for equips}}
+				<h1>{{>equip_name}}</h1>
+				<dl>
+					<dt>必要{{if equip_id < 200000}}武器{{else}}防具{{/if}}Ｐ</dt><dd>{{>equip_cost}}</dd>
+					{{if attribute_name}}<dt>属性</dt><dd>{{>attribute_name}}</dd>{{/if}}
+				</dl>
+				{{/for}}
+			</div>
+		</section>
+		{{/for}}
+	</section>
+
+	<hr>
+
+	<div class="arrowLink">
+		<button class="link prev" data-href="gacha/buy/">ガチャTOPへ</button>
+	</div>
+
+</section>

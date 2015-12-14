@@ -1,0 +1,258 @@
+@charset "utf-8";
+/*
+@mixin box_shadow_contents_l($offsetSize,$z_index:-1){
+	content:'';
+	position:absolute;
+	left:$offsetSize;
+	top:75%;
+	bottom:17px;
+	width:50%;
+	min-height:5px;
+	max-width:150px;
+	background:#544123;
+	-webkit-box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	-webkit-transform:rotate(-5deg);
+	transform:rotate(-5deg);
+	z-index:$z_index;
+}
+@mixin box_shadow_contents_r($offsetSize,$z-index:-1){
+	content:'';
+	position:absolute;
+	right:$offsetSize;
+	top:75%;
+	bottom:17px;
+	width:50%;
+	min-height:5px;
+	max-width:150px;
+	background:#544123;
+	-webkit-box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	-webkit-transform:rotate(5deg);
+	transform:rotate(5deg);
+	z-index:$z_index;
+}
+*/
+/*
+@mixin backgroundResize($position:0 -60px){
+	@media screen and (min-width:319px){
+		width:320px;
+		@include background-size(320px,auto);
+	}
+	@media screen and (min-width:359px){
+		width:360px;
+		@include background-size(360px,auto);
+	}
+	@media screen and (min-width:361px){
+		width:480px;
+		@include background-size(480px,auto);
+		background-position:$position;
+	}
+}
+*/
+/*
+@mixin display-box{
+	display:flexbox;
+	-webkit-display:flexbox;
+}
+@mixin box-align($position){
+	flex-align:$position;
+	-webkit-flex-align:$position;
+}
+@mixin box-flex($ratio){
+	flex:$ratio;
+	-webkit-flex:$ratio;
+}
+@mixin box-pack($position){
+	flex-pack:$position;
+	-webkitflex-pack:$position;
+}
+*/
+/* line 6, ../scss/raremedal.scss */
+.banner.limitDuring {
+  margin-top: 8px;
+}
+/* line 8, ../scss/raremedal.scss */
+.banner.limitDuring > p {
+  color: #008c8c;
+}
+/* line 10, ../scss/raremedal.scss */
+.banner.limitDuring > p > button {
+  cursor: default;
+}
+
+/* line 18, ../scss/raremedal.scss */
+#rareMedalList .contents {
+  width: 95%;
+  margin: 0 auto 8px auto;
+}
+/* line 21, ../scss/raremedal.scss */
+#rareMedalList .contents:first-of-type {
+  margin-top: 8px;
+}
+/* line 24, ../scss/raremedal.scss */
+#rareMedalList .contents.limit {
+  margin-top: 20px;
+}
+/* line 29, ../scss/raremedal.scss */
+#rareMedalList .contentsInner p .headline {
+  color: #8c0000;
+}
+/* line 33, ../scss/raremedal.scss */
+#rareMedalList .numControl {
+  width: 95%;
+  margin: 8px auto 0 auto;
+  padding-bottom: 0;
+}
+/* line 38, ../scss/raremedal.scss */
+#rareMedalList .label48.notice {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* line 45, ../scss/raremedal.scss */
+#notifyWindow dt {
+  margin-bottom: 8px;
+  text-align: center;
+}
+/* line 48, ../scss/raremedal.scss */
+#notifyWindow dt h2 {
+  font-size: 90%;
+}
+/* line 52, ../scss/raremedal.scss */
+#notifyWindow dd {
+  font-size: 80%;
+  text-align: center;
+  line-height: 1.7;
+}
+/* line 56, ../scss/raremedal.scss */
+#notifyWindow dd .headline {
+  display: inline-block;
+  margin: 0 8px;
+  color: #8c0000;
+}
+/* line 63, ../scss/raremedal.scss */
+#notifyWindow .innerBtnBox .btn.close {
+  margin: 0;
+}
+
+/* line 71, ../scss/raremedal.scss */
+#rareMedalResult .complateMessage article {
+  margin-top: 8px;
+  padding: 0;
+}
+/* line 75, ../scss/raremedal.scss */
+#rareMedalResult .complateMessage .paramStatus {
+  width: 95%;
+  margin: 8px auto;
+  color: #fff;
+}
+
+/* line 98, ../scss/raremedal.scss */
+#rareMedal .title {
+  display: block;
+  margin: 8px auto;
+}
+/* line 102, ../scss/raremedal.scss */
+#rareMedal .message {
+  margin-bottom: 16px;
+}
+
+/*
+.jsPostExchange{
+	width: 95%;
+	margin: 16px auto 0 auto;
+	//padding: 8px 0 0 0;
+	.statusData_icon {
+		padding: 8px 0 0 0;
+	}
+	.contents{
+		margin-bottom:8px;
+
+		&.limit{
+			margin-top:24px;
+		}
+	}
+	img {
+		width: 128px;
+		height: 128px;
+	}
+	.red{
+		color:#8C0000;
+	}
+}
+.contentsInner{
+	.exchangeInfo{
+		p{
+			display:inline-block;
+		}
+	}
+	.description{
+		margin: 5px 0px;
+	}
+}
+.shopNumControl {
+	width: 95%;
+	margin: 8px auto 0 auto;
+}
+
+.exchangeNotify{
+	width: 100%;
+	text-align: center;
+	p{
+		width: 80%;
+		margin: 3px auto;
+	}
+}
+#notifyWindow{
+	img {
+		width: 128px;
+		height: 128px;
+	}
+	ul{
+		text-align: center;
+	}
+	li:nth-child(1){
+		margin: 8px auto;
+	}
+	li:nth-child(3){
+		margin: 3px auto 8px;
+		font-size: 13px;
+	}
+	.innerBtnBox{
+		width: 100%;
+		margin: $inner_margin auto 0 auto;
+		font-size:110%;
+	}
+	.btn{
+		width: $content_width;
+	}
+	.label{
+		font-size: 90%;
+		color: #8C0000;
+	}
+	.spacer{
+		display: inline-block;
+		width: 10px;
+		margin: 0;
+		padding: 0;
+	}
+}
+.exchangedItemMessage{
+	margin: 10px auto 2px;
+	color: white;
+	text-align: center;
+	h2{
+		margin: 10px auto;
+	}
+	img{
+		width: 128px;
+		height: 128px;
+	}
+}
+.exchangedItemInfo{
+	p{
+		font-size: 12px;
+	}
+}
+*/

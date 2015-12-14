@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>クイズトップ</title>
+	<meta name="robots" content="noindex,nofollow">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="/css/common_parts.css">
+	<link rel="stylesheet" href="/css/quiz.css">
+	<script src="/html/js/jquery-1.8.2.min.js"></script>
+	<script src="/html/js/parts.js"></script>
+</head>
+<body>
+	
+	<header id="globalHeader">
+		<div class="menuPanel"><button class="link mypage"><span class="hide">マイページ</span></button></div>
+		<div class="battleTimeCount">
+			<div class="battleTimeInner">
+				<h1>次のバトルまで</h1>
+				<div class="numBox">
+					<span class="numGold num_1"><span class="hide">0</span></span>
+					<span class="numGold num_2"><span class="hide">1</span></span>
+					<span class="numGoldColon"><span class="hide">:</span></span>
+					<span class="numGold num_3"><span class="hide">2</span></span>
+					<span class="numGold num_5"><span class="hide">3</span></span>
+					<span class="numGoldColon"><span class="hide">:</span></span>
+					<span class="numGold num_4"><span class="hide">4</span></span>
+					<span class="numGold num_9"><span class="hide">5</span></span>
+				</div>
+			</div>
+		</div>
+		<div class="menuPanel"><button class="link menu"><span class="hide">メニュー</span></button></div>
+	</header>
+		
+	<div id="container">
+		<div id="quizTop">
+			<div id="braveQuiz">
+				<img src="/img/parts/quiz_title.png" alt="スタートダッシュキャンペーン" class="title">
+			</div>
+			<h1 class="subHeader3">
+				<span>完全クリアでこれをプレゼント!</span>
+			</h1>
+			<section class="contents contentsShadow statusData_icon quizCnt">
+				<div class="columnBox bossListStatus innerHeader">
+					<img src="/img/equip/240028_128.png">
+					<div class="contentsInner">
+						<h1>完全クリア報酬</h1>
+						<p>
+							レアガチャ券 × 1枚
+						</p>
+					</div>
+				</div>
+			</section>
+			<h1 class="subHeader">
+				<span class="subHeaderBg_l"></span>
+				<span>クイズ</span>
+				<span class="subHeaderBg_r"></span>
+			</h1>
+			<div class="message navico_arc">
+				<p>
+					<span>頑張って全問正解してね!</span>
+				</p>
+			</div>
+			<div class="quizStageList">
+				<section class="contents contentsShadow statusData_icon quizListCnt">
+					<div class="columnBox innerHeader">
+						<img src="/img/equip/weapon.png">
+						<div class="contentsInner">
+							<h1 class="qbn">
+								クエスト編
+								<div>
+									<span class="ques">正解数</span><span class="unques">5</span><span class="questio">/5問</span>
+								</div>
+							</h1>
+							<p>全問正解で元気のハチミツ (50)</p>
+						</div>
+					</div>
+					<!--
+					<button class="link innerLink" data-href="#">挑戦する</button>
+					-->
+					<!-- //クリアした章の場合のみ表示↓ -->
+					<span class="cleared"><span class="hide">Cleared</span></span>
+				</section>
+				<section class="contents contentsShadow statusData_icon quizListCnt">
+					<div class="columnBox innerHeader">
+						<img src="/img/equip/weapon.png">
+						<div class="contentsInner">
+							<h1 class="qbn">
+								バトル編
+								<div>
+									<span class="ques">正解数</span><span class="unques">5</span><span class="questio">/5問</span>
+								</div>
+							</h1>
+							<p>全問正解で元気のハチミツ (50)</p>
+						</div>
+					</div>
+					<button class="link innerLink" data-href="#">挑戦する</button>
+					<!-- //クリアした章の場合のみ表示↓ 
+					<span class="cleared"><span class="hide">Cleared</span></span>
+					-->
+				</section>
+				<section class="contents contentsShadow statusData_icon quizListCnt">
+					<div class="columnBox innerHeader">
+						<img src="/img/equip/weapon.png">
+						<div class="contentsInner">
+							<h1 class="qbn">
+								ジョブ編
+								<div>
+									<span class="ques">正解数</span><span class="unques">5</span><span class="questio">/5問</span>
+								</div>
+							</h1>
+							<p>全問正解で匠の書 (100)</p>
+						</div>
+					</div>
+					<button class="link innerLink" data-href="#">挑戦する</button>
+					<!-- //クリアした章の場合のみ表示↓ 
+					<span class="cleared"><span class="hide">Cleared</span></span>
+					-->
+				</section>
+				<section class="contents contentsShadow statusData_icon quizListCnt">
+					<div class="columnBox innerHeader">
+						<img src="/img/equip/weapon.png">
+						<div class="contentsInner">
+							<h1 class="qbn">
+								装備編
+								<div>
+									<span class="ques">正解数</span><span class="unques">5</span><span class="questio">/5問</span>
+								</div>
+							</h1>
+							<p>全問正解で成長の光石 (HN)</p>
+						</div>
+					</div>
+					<button class="link innerLink" data-href="#">挑戦する</button>
+					<!-- //クリアした章の場合のみ表示↓ 
+					<span class="cleared"><span class="hide">Cleared</span></span>
+					-->
+				</section>
+				<section class="contents contentsShadow statusData_icon quizListCnt">
+					<div class="columnBox innerHeader">
+						<img src="/img/equip/weapon.png">
+						<div class="contentsInner">
+							<h1 class="qbn">
+								合成編
+								<div>
+									<span class="ques">正解数</span><span class="unques">5</span><span class="questio">/5問</span>
+								</div>
+							</h1>
+							<p>全問正解で成長の光石 (HN)</p>
+						</div>
+					</div>
+					<button class="link innerLink" data-href="#">挑戦する</button>
+					<!-- //クリアした章の場合のみ表示↓ 
+					<span class="cleared"><span class="hide">Cleared</span></span>
+					-->
+				</section>
+			</div>
+		</div>
+				
+		<hr>
+		
+		<div class="arrowLink">
+			<button class="link next" data-href="#">ギフトを確認</button>
+		</div>
+		
+		<section class="caution">
+			<article>
+				<ul>
+					<li>報酬はギフトへ贈られます。</li>
+				</ul>
+			</article>
+		</section>
+
+	</div>
+		
+	<footer id="globalFooter">
+		<ul>
+			<li class="menuPanel"><span class="link mypage"><span class="hide">マイページ</span></span></li>
+			<li class="menuPanel"><span class="link quest"><span class="hide">クエスト</span></span></li>
+			<li class="menuPanel"><span class="link buttle"><span class="hide">バトル</span></span></li>
+			<li class="menuPanel"><span class="link gatcha"><span class="hide">ガチャ</span></span></li>
+			<li class="menuPanel"><span class="link menu"><span class="hide">マイページ</span></span></li>
+		</ul>
+	</footer>
+
+</body>
+</html>

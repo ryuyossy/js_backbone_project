@@ -1,0 +1,10 @@
+<header id="gaugeTitle">
+	<img class="chara" height="64" width="320" src="{{getImgRoot/}}/assets/attackgauge_id{{>query.avatar_id}}.png">
+	<h2><img class="title" height="30" width="200" src="{{getImgRoot/}}/assets/{{if query.ability_id}}gauge_abilityTitle_{{>query.ability_id}}{{else}}attackgauge_attack_01{{/if}}.png"></h2>
+</header>
+
+<div id="whiteOut"></div>
+<div id="stopGaugeMessage"></div>
+<div id="fullScreen">
+	<canvas id="canvas" width="320" height="200"></canvas>
+</div>

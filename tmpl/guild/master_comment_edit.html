@@ -1,0 +1,46 @@
+<h1 class="mainHeader">マスターコメント</h1>
+
+<div id="masterAuthority" class="postForm_message jsForm">
+	<label>
+		<textarea class="jsFormLengthTarget jsGuildMasterComment" placeholder="マスターコメントを入力" data-max="30">{{>master_comment}}</textarea>
+		<!-- <span class="txtCnt jsFormLengthCounter"></span> -->
+		<span class="textCount jsFormLengthCounter">30</span>
+	</label>
+</div>
+
+<button class="btn large jsButtonGuildMasterCommentEditConfirm">変更する</button>
+
+<section class="caution">
+	<article>
+		<h1>ご注意</h1>
+		<ul>
+			<li>本名やメールアドレス、電話番号などの個人情報や、個人の特定がされる可能性のある情報の入力はお控えください。</li>
+			<li>絵文字の入力はできません。</li>
+		</ul>
+	</article>
+</section>
+
+<hr>
+
+<div class="arrowLink">
+	<button class="link prev" data-href="guild/">ギルドトップに戻る</button>
+</div>
+
+{{escape}}
+<script id="jsTemplatePopupMasterCommentEditConfirm" type="text/x-jsrender">
+	<div class="modalInner">
+		<p>この内容に変更しますか？</p>
+		<p>{{>master_comment}}</p>
+		<div class="innerBtnBox">
+			<button class="btn cancel jsClosePopup">やめる</button><button class="btn jsClosePopup jsButtonGuildMasterCommentEditFix">変更する</button>
+		</div>
+	</div>
+</script>
+
+<script id="jsTemplatePopupMasterCommentEditComplete" type="text/x-jsrender">
+	<div class="modalInner nameChangeComplate">
+		<p>コメントを変更しました。</p>
+		<span class="btn large cancel" data-href="guild/">ギルドTOPへ戻る</span>
+	</div>
+</script>
+{{/escape}}

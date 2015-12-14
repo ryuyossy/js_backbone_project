@@ -1,0 +1,28 @@
+	<h1 class="mainHeader">勧誘されているギルド</h1>
+
+	<div class="statusLine">
+		<p>{{>invite_num}}件</p>
+	</div>
+
+	<div id="invitedList" class="jsGuildInvitedList">
+		<div id="guildList" class="jsListAll">
+			{{for #data tmpl="#jsTemplateGuildInvitedList" /}}
+		</div>
+		{{if more_flg}}
+		<div class="moreLink moreLinkMargin jsListMore">
+			<button class="link"><span>もっと見る</span></button>
+		</div>
+		{{/if}}
+	</div>
+	
+	<hr>
+	
+	<div class="arrowLink">
+		<button class="link prev" data-href="#guild/">ギルドトップに戻る</button>
+	</div>
+
+	<div class="helpList">
+		<ul>
+			<li><button class="link" data-href="help/detail/303/">メンバーが増えると？</button></li>
+		</ul>
+	</div>

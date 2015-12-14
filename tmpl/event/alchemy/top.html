@@ -1,0 +1,63 @@
+<section id="alchemy" class="top">
+	<header>
+		<h1>
+			<span class="hide">錬金マテリアを集めて、アイテムに錬金してもらおう！</span>
+		</h1>
+		<dl class="period">
+			<dt>開催期間</dt>
+			<dd>{{datetime event_datetime.start format="M月d日 HH:mm" /}} 〜 {{datetime event_datetime.end format="M月d日 HH:mm" /}}</dd>
+		</dl>
+	</header>
+	<p class="paramStatus">
+		<span class="headline">所持錬金マテリア</span>{{>materia_num}}個
+	</p>
+	<div class="btnBox">
+		<button class="btn_l bronze{{if materia_num < 10}} alchemy_disable{{/if}} jsButtonAlchemySubmit" data-kama-type="1">普通の釜で錬金する</button>
+		<p>└ 錬金マテリア<span class="consume">10個消費</span> ┘</p>
+		<button class="btn_l silver{{if materia_num < 40}} alchemy_disable{{/if}} jsButtonAlchemySubmit" data-kama-type="2">銀の釜で錬金する</button>
+		<p>└ 錬金マテリア<span class="consume">40個消費</span> ┘</p>
+		<button class="btn_l gold{{if materia_num < 80}} alchemy_disable{{/if}} jsButtonAlchemySubmit" data-kama-type="3">金の釜で錬金する</button>
+		<p>└ 錬金マテリア<span class="consume">80個消費</span> ┘</p>
+	</div>
+	<div class="arrowLink">
+		<button class="link next" data-href="event/alchemy/items/"><span>錬金で作れるアイテム一覧</span></button>
+	</div>
+	<h1 class="subHeader">
+		<span class="subHeaderBg_l"></span>
+		<span>遊び方</span>
+		<span class="subHeaderBg_r"></span>
+	</h1>
+	<h2 class="subHeader3">
+		錬金マテリアを集めて錬金してもらおう！
+	</h2>
+	<article>
+		<p class="discription">
+			<span class="hide">集めた錬金マテリアをミッちゃんが錬金するといろんなアイテムに変化するよ！</span>
+		</p>
+		<div class="message mitsuyo_arc">
+			<p>
+				<span>錬金マテリアは、クエストかバトルに参加するともらえるよ！</span>
+			</p>
+		</div>
+		<div class="acquireTerm">
+			<h1>◆ 錬金マテリア取得可能期間 ◆</h1>
+			<p>{{datetime materia_get_datetime.start format="M月d日 HH:mm" /}}〜{{datetime materia_get_datetime.end format="M月d日 HH:mm" /}}</p>
+		</div>
+	</article>
+	<div class="listMenu">
+		<ul>
+			<li><div class="link" data-href="mission/stage/">クエストへ</div></li>
+			<li><div class="link" data-href="battle/top/">バトルへ</div></li>
+		</ul>
+	</div>
+	<hr>
+	<section class="caution">
+		<article>
+			<h1>ご注意</h1>
+			<ul>
+				<li>錬金マテリアを引き継ぐことはできません。<br>本イベント期間内に取得した錬金マテリアは、本イベント期間の終了とともに消滅しますのでご注意ください。</li>
+				<li>錬金されたアイテムは全てギフトに届きます。</li>
+			</ul>
+		</article>
+	</section>
+</section>

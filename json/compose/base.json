@@ -1,0 +1,513 @@
+{
+	"version" : 2,
+	"status": 200,
+	"user": {
+		"id": 1,
+		"gil": 195553,
+		"own_equip_num": 12,
+		"max_own_equip_num": 100,
+		"rare_medal_num": 19990
+	},
+	"compose_term": {
+		"percent": 20,
+		"kind": 1,
+		"start": "2012-10-21T00:00:00",
+		"end": "2012-10-24T00:00:00"
+	},
+	"equip_types": [
+		{
+			"text": "すべての武具",
+			"value": ""
+		},
+		{
+			"text": "武器",
+			"value": "1"
+		},
+		{
+			"text": "防具",
+			"value": "2"
+		}
+	],
+	"attribute_types": [
+		{
+			"text": "すべての属性",
+			"value": ""
+		},
+		{
+			"text": "火",
+			"value": "FIRE"
+		},
+		{
+			"text": "氷",
+			"value": "ICE"
+		},
+		{
+			"text": "雷",
+			"value": "THUNDER"
+		},
+		{
+			"text": "地",
+			"value": "EARTH"
+		},
+		{
+			"text": "光",
+			"value": "LIGHT"
+		},
+		{
+			"text": "闇",
+			"value": "DARK"
+		}
+	],
+	"rarity_types": [
+		{
+			"text": "すべてのレア度",
+			"value": ""
+		},
+		{
+			"text": "ノーマル",
+			"value": "N"
+		},
+		{
+			"text": "ハイノーマル",
+			"value": "HN"
+		},
+		{
+			"text": "レア",
+			"value": "R"
+		},
+		{
+			"text": "Sレア",
+			"value": "SR"
+		},
+		{
+			"text": "SSレア",
+			"value": "SSR"
+		},
+		{
+			"text": "レジェンド",
+			"value": "LEGEND"
+		}
+	],
+	"sort_types": [
+		{
+			"text": "攻防が高い順",
+			"value": "POWER_DESC"
+		},
+		{
+			"text": "攻防が低い順",
+			"value": "POWER_ASC"
+		},
+		{
+			"text": "最近入手した順",
+			"value": "GET_DATETIME_DESC"
+		},
+		{
+			"text": "昔に入手した順",
+			"value": "GET_DATETIME_ASC"
+		},
+		{
+			"text": "コストが高い順",
+			"value": "COST_DESC"
+		},
+		{
+			"text": "コストが低い順",
+			"value": "COST_ASC"
+		},
+		{
+			"text": "Lvが高い順",
+			"value": "LEVEL_DESC"
+		},
+		{
+			"text": "Lvが低い順",
+			"value": "LEVEL_ASC"
+		},
+		{
+			"text": "レア度が高い順",
+			"value": "RARITY_DESC"
+		},
+		{
+			"text": "レア度が低い順",
+			"value": "RARITY_ASC"
+		},
+		{
+			"text": "限界突破が多い順",
+			"value": "STEP_DESC"
+		},
+		{
+			"text": "限界突破が少ない順",
+			"value": "STEP_ASC"
+		}
+	],
+	"level1": true,
+	"same_attribute": false,
+	"base": {
+		"equip_id": 120001,
+		"user_equip_no": 1350437453379,
+		"equip_name": "アサルトアーマー",
+		"lineage_name": "力",
+		"attribute_level": null,
+		"attribute_name": null,
+		"compose": {
+			"gil": 100,
+			"step": 1
+		},
+		"grow_type_name": "早熟",
+		"rarity_name": "SR",
+		"equip_status": 2,
+		"equip_cost": 8,
+		"exp": 151,
+		"equip_exp": 37,
+		"equip_level": 15,
+		"max_level": 30,
+		"power": 295,
+		"special_power": 295,
+		"description": "",
+		"protected_flg": false,
+		"equip_type": 1
+	},
+	"equips": [
+		{
+			"equip_id": 230001,
+			"user_equip_no": 1249420567780,
+			"equip_name": "木のブーメラン",
+			"lineage_name": "技",
+			"attribute_level": 4,
+			"attribute_name": "火",
+			"compose": {
+				"gil": 100
+			},
+			"step": 0,
+			"rarity_name": "ノーマル",
+			"grow_type_name": "早熟",
+			"equip_status": 0,
+			"equip_cost": 2,
+			"exp": 2,
+			"equip_exp": 98,
+			"equip_level": 1,
+			"max_level": 20,
+			"power": 87,
+			"special_power": 101,
+			"description": "木製の大型のブーメラン",
+			"protected_flg": true,
+			"equip_type": 1
+		},
+		{
+			"equip_id": 230002,
+			"user_equip_no": 1249420567777,
+			"equip_name": "メリケンサック",
+			"lineage_name": "力",
+			"attribute_level": null,
+			"attribute_name": null,
+			"compose": {
+				"gil": 100
+			},
+			"step": 1,
+			"rarity_name": "ノーマル",
+			"grow_type_name": "早熟",
+			"equip_status": 2,
+			"equip_cost": 1,
+			"exp": 1,
+			"equip_exp": 22,
+			"equip_level": 20,
+			"max_level": 20,
+			"power": 132,
+			"special_power": 177,
+			"description": "",
+			"protected_flg": false,
+			"equip_type": 1
+		},
+		{
+			"equip_id": 230003,
+			"user_equip_no": 1249923905364,
+			"equip_name": "バトルスーツ",
+			"lineage_name": "力",
+			"attribute_level": 4,
+			"attribute_name": "火",
+			"compose": {
+				"gil": 100
+			},
+			"step": 4,
+			"rarity_name": "ハイノーマル",
+			"grow_type_name": "普通",
+			"equip_status": 0,
+			"equip_cost": 8,
+			"exp": 8,
+			"equip_exp": 55,
+			"equip_level": 30,
+			"max_level": 30,
+			"power": 143,
+			"special_power": 227,
+			"description": "",
+			"protected_flg": false,
+			"equip_type": 1
+		},
+		{
+			"equip_id": 230003,
+			"user_equip_no": 1249923905364,
+			"equip_name": "バトルスーツ",
+			"lineage_name": "力",
+			"attribute_level": 4,
+			"attribute_name": "火",
+			"compose": {
+				"gil": 100
+			},
+			"step": 4,
+			"rarity_name": "ハイノーマル",
+			"grow_type_name": "普通",
+			"equip_status": 0,
+			"equip_cost": 8,
+			"exp": 8,
+			"equip_exp": 55,
+			"equip_level": 30,
+			"max_level": 30,
+			"power": 143,
+			"special_power": 227,
+			"description": "",
+			"protected_flg": false,
+			"equip_type": 1
+		},
+		{
+			"equip_id": 230003,
+			"user_equip_no": 1249923905364,
+			"equip_name": "バトルスーツ",
+			"lineage_name": "力",
+			"attribute_level": 4,
+			"attribute_name": "火",
+			"compose": {
+				"gil": 100
+			},
+			"step": 4,
+			"rarity_name": "ハイノーマル",
+			"grow_type_name": "普通",
+			"equip_status": 0,
+			"equip_cost": 8,
+			"exp": 8,
+			"equip_exp": 55,
+			"equip_level": 30,
+			"max_level": 30,
+			"power": 143,
+			"special_power": 227,
+			"description": "",
+			"protected_flg": false,
+			"equip_type": 1
+		},
+		{
+			"equip_id": 230003,
+			"user_equip_no": 1249923905364,
+			"equip_name": "バトルスーツ",
+			"lineage_name": "力",
+			"attribute_level": 4,
+			"attribute_name": "火",
+			"compose": {
+				"gil": 100
+			},
+			"step": 4,
+			"rarity_name": "ハイノーマル",
+			"grow_type_name": "普通",
+			"equip_status": 0,
+			"equip_cost": 8,
+			"exp": 8,
+			"equip_exp": 55,
+			"equip_level": 30,
+			"max_level": 30,
+			"power": 143,
+			"special_power": 227,
+			"description": "",
+			"protected_flg": false,
+			"equip_type": 1
+		},
+		{
+			"equip_id": 230003,
+			"user_equip_no": 1249923905364,
+			"equip_name": "バトルスーツ",
+			"lineage_name": "力",
+			"attribute_level": 4,
+			"attribute_name": "火",
+			"compose": {
+				"gil": 100
+			},
+			"step": 4,
+			"rarity_name": "ハイノーマル",
+			"grow_type_name": "普通",
+			"equip_status": 0,
+			"equip_cost": 8,
+			"exp": 8,
+			"equip_exp": 55,
+			"equip_level": 30,
+			"max_level": 30,
+			"power": 143,
+			"special_power": 227,
+			"description": "",
+			"protected_flg": false,
+			"equip_type": 1
+		},
+		{
+			"equip_id": 230003,
+			"user_equip_no": 1249923905364,
+			"equip_name": "バトルスーツ",
+			"lineage_name": "力",
+			"attribute_level": 4,
+			"attribute_name": "火",
+			"compose": {
+				"gil": 100
+			},
+			"step": 4,
+			"rarity_name": "ハイノーマル",
+			"grow_type_name": "普通",
+			"equip_status": 0,
+			"equip_cost": 8,
+			"exp": 8,
+			"equip_exp": 55,
+			"equip_level": 30,
+			"max_level": 30,
+			"power": 143,
+			"special_power": 227,
+			"description": "",
+			"protected_flg": false,
+			"equip_type": 1
+		},
+		{
+			"equip_id": 230003,
+			"user_equip_no": 1249923905364,
+			"equip_name": "バトルスーツ",
+			"lineage_name": "力",
+			"attribute_level": 4,
+			"attribute_name": "火",
+			"compose": {
+				"gil": 100
+			},
+			"step": 4,
+			"rarity_name": "ハイノーマル",
+			"grow_type_name": "普通",
+			"equip_status": 0,
+			"equip_cost": 8,
+			"exp": 8,
+			"equip_exp": 55,
+			"equip_level": 30,
+			"max_level": 30,
+			"power": 143,
+			"special_power": 227,
+			"description": "",
+			"protected_flg": false,
+			"equip_type": 1
+		},
+		{
+			"equip_id": 230003,
+			"user_equip_no": 1249923905364,
+			"equip_name": "バトルスーツ",
+			"lineage_name": "力",
+			"attribute_level": 4,
+			"attribute_name": "火",
+			"compose": {
+				"gil": 100
+			},
+			"step": 4,
+			"rarity_name": "ハイノーマル",
+			"grow_type_name": "普通",
+			"equip_status": 0,
+			"equip_cost": 8,
+			"exp": 8,
+			"equip_exp": 55,
+			"equip_level": 30,
+			"max_level": 30,
+			"power": 143,
+			"special_power": 227,
+			"description": "",
+			"protected_flg": false,
+			"equip_type": 1
+		}
+	],
+	"compose_more_flg" : true,
+    "upgrade_materials": [
+        {
+            "id": 101,
+            "name": "強化素材-壱",
+            "attribute": {},
+            "rarity_name": "ノーマル",
+            "compose": {
+                "gil": 100,
+                "use_num": 19,
+                "win_exp": 100
+            },
+            "description": "強化素材-壱の説明"
+        },
+        {
+            "id": 102,
+            "name": "強化素材-弐",
+            "attribute": {},
+            "rarity_name": "レア",
+            "compose": {
+                "gil": 200,
+                "use_num": 19,
+                "win_exp": 200
+            },
+            "description": ""
+        },
+        {
+            "id": 103,
+            "name": "強化素材-三",
+            "attribute": {},
+            "rarity_name": "SSレア",
+            "compose": {
+                "gil": 300,
+                "use_num": 23,
+                "win_exp": 300
+            },
+            "description": ""
+        }
+    ],
+    "attribute_materials": [
+        {
+            "id": 201,
+            "name": "火の結晶",
+            "attribute": {
+                "level": 2,
+                "name": "火"
+            },
+            "rarity_name": "ノーマル",
+            "compose": {
+                "gil": 100,
+                "use_num": 8,
+                "win_exp": 0
+            },
+            "description": "火の結晶の説明。"
+        },
+        {
+            "id": 202,
+            "name": "氷の結晶",
+            "attribute": {
+                "level": 1,
+                "name": "氷"
+            },
+            "rarity_name": "ノーマル",
+            "compose": {
+                "gil": 100,
+                "use_num": 18,
+                "win_exp": 0
+            },
+            "description": "氷の結晶の説明。"
+        },
+        {
+            "id": 203,
+            "name": "地の結晶",
+            "attribute": {
+                "level": 1,
+                "name": "地"
+            },
+            "rarity_name": "レア",
+            "compose": {
+                "gil": 200,
+                "use_num": 30,
+                "win_exp": 0
+            },
+            "description": "地の結晶の説明。"
+        }
+    ],
+	"banners": [
+		{
+			"banner_text": null,
+			"image_file_name": "banner_compose_half.png",
+			"redirect_path": null
+		}
+	]
+}

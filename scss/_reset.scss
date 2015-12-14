@@ -1,0 +1,164 @@
+section, nav, article, aside, hgroup,header, footer, figure, figcaption, details {
+	display: block;
+}
+video, audio, canvas {
+	display: inline-block;
+}
+audio:not([controls]) {
+	display: none;
+}
+[hidden] {
+	display: none;
+}
+html {
+	overflow-y: scroll;
+	-webkit-text-size-adjust: 100%;
+	font-size: 100%;
+}
+body {
+	margin: 0;
+	font-family: ArialMT, "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+	user-select: none;
+	-webkit-user-select: none;
+}
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	font-size: 1em;
+	font-weight:normal;
+}
+p, blockquote, dl, dd, figure {
+	margin: 0;
+}
+hr {
+	box-sizing: content-box;
+	height: auto;
+	color: inherit;
+}
+pre {
+	margin: 0;
+	font-family: monospace, sans-serif;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
+ol, ul {
+	margin: 0;
+	padding: 0;
+}
+li {
+	list-style: none;
+}
+
+/* Text-level semantics */
+a:focus {
+	outline: thin dotted;
+}
+a:hover, a:active {
+	outline: 0;
+}
+strong, b {
+	font-weight: bold;
+}
+small {
+	font-size: 0.83em;
+}
+q {
+	quotes: none;
+}
+code, samp, kbd {
+	font-family: monospace, sans-serif;
+}
+mark {
+	background-color: yellow;
+	color: black;
+}
+sub, sup {
+	position: relative;
+	font-size: 0.83em;
+	line-height: 0;
+	vertical-align: baseline;
+}
+sub {
+	bottom: -0.25em;
+}
+sup {
+	top: -0.5em;
+}
+/* Embedded content */
+img {
+	border: 0;
+}
+svg:not(:root) {
+	overflow: hidden;
+}
+
+/* Tabular data */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+caption {
+	padding: 0;
+	text-align: left;
+}
+th, td {
+	vertical-align: baseline;
+	padding: 0;
+	text-align: left;
+}
+
+/* Forms */
+form {
+	margin: 0;
+}
+fieldset {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+legend {
+	border: 0;
+}
+input, button, select, textarea {
+	margin: 0;
+	font-family: inherit;
+	font-size: 1.5em;
+	color: inherit;
+}
+input, button {
+	vertical-align: inherit;
+	line-height: normal;
+}
+input::-moz-focus-inner, button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+input[type="search"] {
+	-webkit-appearance: textfield;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+}
+input[type="search"]:focus {
+	outline-offset: -2px;
+}
+input[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+input[type="checkbox"], input[type="radio"] {
+	padding: 0;
+	box-sizing: border-box;
+}
+input[type="submit"], input[type="reset"], input[type="button"], button {
+	-webkit-appearance: none;
+	cursor: pointer;
+}
+select {
+	background-color: inherit;
+	line-height: normal;
+}
+textarea {
+	overflow: auto;
+	vertical-align: top;
+}
+*{
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}

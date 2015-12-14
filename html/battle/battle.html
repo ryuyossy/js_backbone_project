@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>バトルTOP</title>
+	<meta name="robots" content="noindex,nofollow">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="/css/common_parts.css">
+	<link rel="stylesheet" href="/css/battle.css">
+	<script src="/html/js/jquery-1.8.2.min.js"></script>
+	<script src="/html/js/parts.js"></script>
+</head>
+	<body>
+		<header id="globalHeader">
+			<div class="menuPanel"><button class="link mypage"><span class="hide">マイページ</span></button></div>
+			<div class="guildNamePanel"><h1><span class="link"><span class="guildRank f hide">ギルドランク：A</span>ギルド名ギルド名ギルド名</span></h1></div>
+			<div class="menuPanel"><button class="link menu"><span class="hide">メニュー</span></button></div>
+		</header>
+		<div id="container">
+			<div id="battle">
+				<div class="battleInner">
+
+					<canvas></canvas>
+
+					<header id="battleHeader">
+						<div class="myGuildName">
+							<h1>ギルド名ギルド名ギルド名</h1>
+							<p><span>123456</span> BP</p>
+						</div>
+
+						<div class="opponentGuildName">
+							<h1>ギルド名ギルド名ギルド名</h1>
+							<p><span>123456</span> BP</p>
+						</div>
+					</header>
+
+					<section id="myGuildStatus">
+						<div class="combo attack">
+							<span class="action"><span class="hide">攻撃</span></span>
+							<div class="chain">
+								<span class="numWhite num_9"><span class="hide">9</span></span>
+								<span class="numWhite num_9"><span class="hide">9</span></span>
+								<!-- <span class="numWhite num_9"><span class="hide">9</span></span> -->
+							</div>
+						</div>
+						<div class="remainingTime">
+							残り 12:12
+						</div>
+					</section>
+
+					<section id="opponentGuildStatus">
+						<div class="combo yell">
+							<span class="action"><span class="hide">エール</span></span>
+							<div class="chain">
+								<span class="numWhite num_9"><span class="hide">9</span></span>
+								<span class="numWhite num_9"><span class="hide">9</span></span>
+								<span class="numWhite num_9"><span class="hide">9</span></span>
+							</div>
+						</div>
+						<div class="remainingTime">
+							残り 12:12
+						</div>
+					</section>
+
+					<div class="gergeBox">
+						<div class="tentionGerge max">
+							<div class="gergeBg">
+								<span class="gerge tention" style="width:100%;"></span>
+							</div>
+						</div>
+					</div>
+
+					<button class="link reload" data-href="#"><span class="hide">更新</span></button>
+				</div>
+			</div>
+
+			<section id="battleMenu" class="metalPanel">
+				<div class="battleActionBtn">
+					<button class="btn_l red regular" data-href="#">
+						<span class="hide">攻撃</span>
+						<span class="expend">消費AP 10</span>
+					</button>
+					<!--//必殺：OPEN -->
+					<button class="btn_l redWhite on special ability_open" data-href="#">
+						<span class="hide">必殺</span>
+					</button>
+					<!--//必殺：CLOSE
+					<button class="btn_l redWhite special ability_close" data-href="#">
+						<span class="hide">必殺</span>
+					</button>-->
+					<!--// 必殺：後衛
+					<button class="btn_l red special" data-href="#">
+						<span class="hide">必殺</span>
+						<span class="expend">消費AP 20</span>
+					</button>-->
+					<!--//回復 -->
+					<button class="btn_l red recovery" data-href="#">
+						<span class="hide">HP回復</span>
+						<span class="expend">消費AP 20</span>
+					</button>
+					<!-- //エール
+					<button class="btn_l turquoise yell" data-href="#">
+						<span class="hide">エール</span>
+						<span class="expend">消費AP 20</span>
+					</button>-->
+				</div>
+
+				<section class="abilityList">
+					<article>
+						<div class="abilityInner">
+							<h1>アビリティ名</h1>
+							<p>説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明</p>
+							<div class="description">
+								<dl>
+									<dt>消費AP</dt><dd>100（残り1回）</dd>
+								</dl>
+								<button class="btn_l red" data-href="#">使う</button>
+							</div>
+						</div>
+					</article>
+					<article>
+						<div class="abilityInner">
+							<h1>アビリティ名</h1>
+							<p>説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明</p>
+							<div class="description">
+								<dl>
+									<dt>消費AP</dt><dd>999<span class="disable">（残り0回）</span></dd>
+								</dl>
+								<button class="btn_l disable">回数制限</button>
+							</div>
+						</div>
+					</article>
+					<article>
+						<div class="abilityInner">
+							<h1>アビリティ名</h1>
+							<p>説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明説明</p>
+							<div class="description">
+								<dl>
+									<dt>消費AP</dt><dd>100（残り1回）</dd>
+								</dl>
+								<button class="btn_l disable">AP不足</button>
+							</div>
+						</div>
+					</article>
+				</section>
+
+				<section id="myStatus" class="statusData_icon">
+					<div class="columnBox">
+						<div class="iconBgArc_l blue"><img src="/img/avatar/myAvatar_l.png"></div>
+						<div class="contentsInner">
+							<h1>
+								<span class="formation vanGuard"><span class="hide">前衛</span></span>マクサルマクサルマクサル
+							</h1>
+							<table class="gergeTable short">
+								<tr>
+									<th>AP</th>
+									<td class="gergeBox">
+										<div class="gergeBgFrame">
+											<div class="gergeBg">
+												<span class="gerge battleP" style="width:50%;"></span>
+											</div>
+										</div>
+									</td>
+									<td>123456/999999</td>
+								</tr>
+								<tr>
+									<th>HP</th>
+									<td class="gergeBox">
+										<div class="gergeBgFrame">
+											<div class="gergeBg">
+												<span class="gerge hp" style="width:95%;"></span>
+											</div>
+										</div>
+									</td>
+									<td>123456/999999</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div id="jobStatusFrames">
+						<article>
+							<h1>みならいハンターみならいハンター</h1>
+							<table class="jobTables">
+								<tr class="jobsExp">
+									<th>ジョブ経験値</th>
+									<td>512345/500000</td>
+									<td>JEx</td>
+								</tr>
+							</table>
+							<table class="jobTables">
+								<tr class="abilityGet">
+									<th>アビリティ</th>
+									<td class="abliIco">
+										<ul class="abilitiesIco">
+											<li class="mastered">●</li>
+											<li class="mastered">●</li>
+											<li class="mastered">●</li>
+											<li class="unmastered">○</li>
+										</ul>
+									</td>
+									<td class="nextCnt">次回獲得まで12345</td>
+									<td>JEx</td>
+								</tr>
+							</table>
+						</article>
+					</div>
+				</section>
+				<div class="innerBtnBox">
+					<button class="btn cheer" data-href="#">鼓舞でAP回復</button><button class="btn quest" data-href="#">クエストでAP回復</button>
+				</div>
+			</section>
+
+			<section id="strategy" class="contents contentsShadow">
+				<div class="contentsBorder">
+					<h1>現在の作戦</h1>
+					<p>
+						ガンガンいこうぜ！
+					</p>
+				</div>
+			</section>
+
+			<!--section id="strategy" class="contents contentsShadow change">
+				<div class="contentsBorder">
+					<h1>現在の作戦</h1>
+					<form method="post" action="#" class="selectBox">
+						<select name="strategyList">
+							<option>ガンガン行こうぜ</option>
+							<option>いのちだいじに</option>
+							<option>まほうつかうな</option>
+						</select>
+						<span class="selector"></span>
+						<button class="btn selectBtn" data-href="#">更新</button>
+					</form>
+				</div>
+			</section-->
+
+			<div id="situation">
+				<div class="tabNav">
+					<ul>
+						<li><button class="select" name="allStuation"><span>みんなの戦況</span></button></li>
+						<li><button name="ownSituation"><span>自分の戦況</span></button></li>
+					</ul>
+				</div>
+				<div class="tabInner">
+					<!-- //みんなの戦況（デフォルト表示） -->
+					<section id="allStuation" class="situation">
+						<article class="fellow contents contentsShadow">
+							<div class="contentsInner">
+								<div class="contributor">
+									<div class="iconBgArc_s gold"><img src="/img/avatar/myAvatar_l.png" alt="各種アバター画像（マイページTOP表示用を流用）"></div>
+									<h2>わかば弓士</h2>
+									<time>10/10 12:23</time>
+								</div>
+								<dl>
+									<dt>攻撃！</dt>
+									<dd>
+										<span>相手ユーザー名</span>に<span>999</span>ダメージ！
+									</dd>
+								</dl>
+							</div>
+						</article>
+						<article class="opponent contents contentsShadow">
+							<div class="contentsInner">
+								<div class="contributor">
+									<div class="iconBgArc_s gold"><img src="/img/avatar/myAvatar_l.png" alt="各種アバター画像（マイページTOP表示用を流用）"></div>
+									<h2>剣士</h2>
+									<time>10/10 12:23</time>
+								</div>
+								<dl>
+									<dt>攻撃！</dt>
+									<dd>
+										<span>相手ユーザー名</span>に<span>999</span>ダメージ！
+									</dd>
+								</dl>
+							</div>
+						</article>
+						<article class="fellow contents contentsShadow">
+							<div class="contentsInner">
+								<div class="contributor">
+									<div class="iconBgArc_s gold"><img src="/img/avatar/myAvatar_l.png" alt="各種アバター画像（マイページTOP表示用を流用）"></div>
+									<h2>グラディエーター</h2>
+									<time>10/10 12:23</time>
+								</div>
+								<dl>
+									<dt>攻撃！</dt>
+									<dd>
+										<span>相手ユーザー名</span>に<span>999</span>ダメージ！<br>
+										さらに<span>地属性</span>が発動！<br>
+										敵全体に<span>999</span>ダメージ！
+									</dd>
+								</dl>
+							</div>
+						</article>
+					</section>
+					<!-- //自分の戦況 -->
+					<section id="ownSituation" class="situation">
+						<article class="fellow contents contentsShadow">
+							<div class="contentsInner">
+								<div class="contributor">
+									<div class="iconBgArc_s gold"><img src="/img/avatar/myAvatar_l.png" alt="各種アバター画像（マイページTOP表示用を流用）"></div>
+									<h2>マクサル</h2>
+									<time>10/10 12:23</time>
+								</div>
+								<dl>
+									<dt>エール！</dt>
+									<dd>
+										<span>マクサル</span>の攻撃が<span>999</span>増加した！
+									</dd>
+								</dl>
+							</div>
+						</article>
+						<article class="opponent contents contentsShadow">
+							<div class="contentsInner">
+								<div class="contributor">
+									<div class="iconBgArc_s gold"><img src="/img/avatar/myAvatar_l.png" alt="各種アバター画像（マイページTOP表示用を流用）"></div>
+									<h2>相手ユーザー名</h2>
+									<time>10/10 12:23</time>
+								</div>
+								<dl>
+									<dt>攻撃！</dt>
+									<dd>
+										<span>マクサル</span>に<span>999</span>ダメージ！
+									</dd>
+								</dl>
+							</div>
+						</article>
+						<article class="fellow contents contentsShadow">
+							<div class="contentsInner">
+								<div class="contributor">
+									<div class="iconBgArc_s gold"><img src="/img/avatar/myAvatar_l.png" alt="各種アバター画像（マイページTOP表示用を流用）"></div>
+									<h2>マクサル</h2>
+									<time>10/10 12:23</time>
+								</div>
+								<dl>
+									<dt>攻撃！</dt>
+									<dd>
+										<span>相手ユーザー名</span>に<span>999</span>ダメージ！<br>
+										さらに<span>地属性</span>が発動！<br>
+										敵全体に<span>999</span>ダメージ！<br>
+										99 JExを獲得
+									</dd>
+								</dl>
+							</div>
+						</article>
+					</section>
+				</div>
+				<div class="arrowLink">
+					<button class="link next" data-href="#">もっと見る</button>
+				</div>
+			</div>
+
+			<section id="guildBbs">
+				<h1 class="subHeader">
+					<span class="subHeaderBg_l"></span><span>ギルド掲示板</span><span class="subHeaderBg_r"></span>
+				</h1>
+
+				<form method="post" class="postForm_icon">
+					<div class="formInner">
+						<div class="iconBgArc_s gold"><img src="/img/avatar/myAvatar_l.png"></div>
+						<div class="inputBox">
+							<textarea placeholder="つぶやく…"></textarea>
+							<button class="btn post" data-href="#">投稿する</button>
+						</div>
+					</div>
+				</form>
+
+				<article class="contents contentsShadow topic">
+					<div class="contentsInner">
+						<div class="topicRoot">
+							<div class="contributor">
+								<div class="iconBgArc_s gold"><img src="/img/avatar/myAvatar_l.png" alt="各種アバター画像（マイページTOP表示用を流用）"></div>
+								<h2>わかば弓士</h2>
+								<time>8/10 12:23</time>
+							</div>
+							<p>
+								コメントアイコンを押すとコメントが開きます（スライドメニュー）いいね押してない＆レス窓開いてるVer.
+								<span class="topicMenu">
+									<button class="link like" data-href="#"><span class="hide">いいね</span>999</button><button class="link resToggle open" data-href="#"><span class="hide">コメント</span>999</button>
+								</span>
+							</p>
+						</div>
+						<div class="resArea">
+							<div class="res">
+								<div class="contributor">
+									<div class="iconBgArc_s gold"><img src="/img/avatar/myAvatar_l.png"></div>
+									<h2>シーフ</h2>
+									<time>8/10 15:40</time>
+								</div>
+								<p>
+									コメントにはいいねとかなくていいんですか？aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+								</p>
+							</div>
+							<div class="res master">
+								<div class="contributor">
+									<div class="iconBgArc_s gold"><img src="/img/avatar/myAvatar_l.png"></div>
+									<h2>剣士</h2>
+									<time>8/10 21:40</time>
+								</div>
+								<p>
+									トピ主のコメントです
+								</p>
+							</div>
+							<div class="res">
+								<div class="contributor">
+									<div class="iconBgArc_s gold"><img src="/img/avatar/myAvatar_l.png"></div>
+									<h2>サムライ</h2>
+									<time>8/10 00:43</time>
+								</div>
+								<p class="myComment">
+									自分のコメントです。テストテストテストテストテストテストテストテストテストテストテストテストテスト
+								</p>
+							</div>
+							<form method="post" class="postComment">
+								<label><input type="text" placeholder="コメントする…"></label><button class="btn">投稿する</button>
+							</form>
+						</div>
+					</div>
+				</article>
+				<article class="contents contentsShadow topic">
+					<div class="contentsInner">
+						<div class="topicRoot">
+							<div class="contributor">
+								<div class="iconBgArc_s gold"><img src="/img/avatar/myAvatar_l.png"></div>
+								<h2>わかば弓士</h2>
+								<time>8/10 12:23</time>
+							</div>
+							<p class="myTopic">
+								コメントアイコンを押すとコメントが開きます（スライドメニュー）いいねがない＆レス窓開いてるVer.※自分の書き込みにはいいねがでません
+								<span class="topicMenu">
+									<button class="link resToggle open" data-href="#"><span class="hide">コメント</span>3</button>
+								</span>
+							</p>
+						</div>
+						<div class="resArea">
+							<div class="res">
+								<div class="contributor">
+									<div class="iconBgArc_s gold"><img src="/img/avatar/myAvatar_l.png"></div>
+									<h2>シーフ</h2>
+									<time>8/10 15:40</time>
+								</div>
+								<p>
+									コメントにはいいねとかなくていいんですか？aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+								</p>
+							</div>
+							<div class="res master">
+								<div class="contributor">
+									<div class="iconBgArc_s gold"><img src="/img/avatar/myAvatar_l.png" alt="各種アバター画像（マイページTOP表示用を流用）"></div>
+									<h2>サムライ</h2>
+									<time>8/10 00:43</time>
+								</div>
+								<p class="myComment">
+									自分がトピ主の時のコメントです。テストテストテストテストテストテストテストテストテスト
+								</p>
+							</div>
+							<form method="post" class="postComment">
+								<label><input type="text" placeholder="コメントする…"></label><button class="btn" data-href="#">投稿する</button>
+							</form>
+						</div>
+					</div>
+				</article>
+				<article class="contents contentsShadow topic">
+					<div class="contentsInner">
+						<div class="topicRoot">
+							<div class="contributor">
+								<div class="iconBgArc_s gold"><img src="/img/avatar/myAvatar_l.png"></div>
+								<h2>わかば弓士</h2>
+								<time>8/10 12:23</time>
+							</div>
+							<p>
+								コメントアイコンを押すとコメントが開きます（スライドメニュー）いいねが押されてる＆レス窓開いてないVer.
+								<span class="topicMenu">
+									<button class="link like over" data-href="#"><span class="hide">いいね</span>3</button><button class="link resToggle" data-href="#"><span class="hide">コメント</span>3</button>
+								</span>
+							</p>
+						</div>
+					</div>
+				</article>
+				<div class="arrowLink">
+					<span class="link next" data-href="#">もっと見る</span>
+				</div>
+			</section>
+
+			<section class="helpList">
+				<ul>
+					<li><button class="link" data-href="#">バトルとは？</button></li>
+					<li><button class="link" data-href="#">コンボ攻撃とは？</button></li>
+					<li><button class="link" data-href="#">合体技とは？</button></li>
+					<li><button class="link" data-href="#">作戦とは？</button></li>
+				</ul>
+			</section>
+		</div>
+
+		<footer id="globalFooter">
+			<ul>
+				<li class="menuPanel"><span class="link mypage"><span class="hide">マイページ</span></span></li>
+				<li class="menuPanel"><span class="link quest"><span class="hide">クエスト</span></span></li>
+				<li class="menuPanel"><span class="link buttle"><span class="hide">バトル</span></span></li>
+				<li class="menuPanel"><span class="link gatcha"><span class="hide">ガチャ</span></span></li>
+				<li class="menuPanel"><span class="link menu"><span class="hide">マイページ</span></span></li>
+			</ul>
+		</footer>
+	</body>
+</html>

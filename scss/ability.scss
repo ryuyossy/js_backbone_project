@@ -1,0 +1,227 @@
+@charset "utf-8";
+@import "base";
+@import "ruleset";
+
+//common
+.modalInner{
+	&.abilityChange{
+		.itemUseConfirm .itemBox .itemBoxInner P{
+			font-size:85%;
+		}
+	}
+	&.abilityAddComplate{
+		.btn.large{
+			margin-bottom:$inner_margin/2;
+			&:last-of-type{
+				margin-bottom:0;
+			}
+		}
+	}
+}
+
+//ability top
+.abiliSetMes {
+	width:95%;
+	margin:16px auto 0 auto;
+	@include border-radius(10px);
+	background-color:#d90000;
+	font-size:85%;
+	color:#fff;
+	text-align:center;
+	
+	span{
+		display:block;
+		margin:0 16px;
+		padding:4px 0;
+	}
+}
+#myData{
+	
+	&.metalPanel{
+		margin:8px auto 8px auto;
+	}
+	&.statusData_icon{
+		padding:0;
+	}
+	.metalPanelInner{
+		margin:-12px 0 0 -8px;
+	}
+	.nameBox{
+		@include display-box;
+		margin-bottom:8px;
+		h1 {
+			font-weight: bold;
+		}
+		.master{
+			@include backgroundSize("/parts/label_jobmaster.png",0,0,no-repeat);
+			display:block;
+			width:58px;
+			height:19px;
+			margin-left:8px;
+		}
+	}
+	.btn{
+		margin:8px auto 0 auto;
+	}
+}
+.abliRelease {
+	width: 40%;
+}
+// ability list(common_parts)
+#abilitySetList{
+	
+	.tabNav{
+		margin-bottom:8px;
+	}
+	.contents{
+		width:95%;
+		margin:0 auto 8px auto;
+		
+		dt{
+			&:nth-of-type(3){
+				clear:none;
+				margin-left:8px;
+			}
+		}
+		dd{
+			.label32{
+				margin-left:8px;
+				padding:0 8px;
+			}
+			.pointEmpty{
+				color:#ff0000;
+			}
+		}
+		.innerBtnBox{
+			margin:8px auto 0 auto;
+		}
+		.shortage{
+			width:55%;
+			margin:8px auto 0 auto;
+			font-size:85%;
+		}
+		.contentsInner ~ .btn.large{
+			width:50%;
+			margin:8px auto 0 auto;
+		}
+		.abilityName {
+			font-weight: bold;
+		}
+	}
+	.contentsInner{
+		margin-top:0;
+		h1 {
+			font-weight: bold;
+		}
+		p{
+			margin-top:8px;
+		}
+	}
+	// ability top
+	~ .btn.large{
+		margin-top:16px;
+	}
+	// abilityChange
+	.jsAbilityBefore{
+		margin-bottom:16px;
+	}
+	.subHeader{
+		margin-bottom:8px;
+	}
+	//abilityAdd & abilityChange
+	.moreLink{
+		margin-top:8px;
+	}
+	~ .arrowLink{
+		margin-bottom:16px;
+	}
+	.dimmed p {
+		margin: 8px auto 16px auto;
+	}
+}
+
+// abilityAdd & abilityChange h1
+#abilityAdd,
+#abilityChange{
+	margin-bottom:8px;
+}
+.innerBtnBox.abtp {
+	width: 60%;
+}
+
+
+
+
+
+
+/* old style
+
+.labelAbili {
+	margin-left: 6px;
+	width: 30%;
+	font-weight: bold;
+}
+
+.abiliChangeContent {
+	width: 95%;
+	margin: 0 auto 32px auto;
+	padding: 8px 0;
+}
+
+.wordMgn {
+	padding: 4px 8px 0 8px;
+}
+
+.abliType {
+	margin-bottom:4px;
+	margin-left: 8px;
+	font-weight: bold;
+}
+
+.abiliContent {
+	width: 95%;
+	margin: 0 auto 8px auto;
+	padding: 8px 0;
+}
+
+.abliReturn {
+	margin-bottom: 32px;
+}
+
+.abiliChangeHead {
+	margin-bottom:16px;
+}
+
+.abiliChangeTop {
+	margin-top:16px;
+}
+
+.abiliAddLabel {
+	margin: 4px auto 4px auto;
+	width: 60%;
+}
+
+.abiliBtnBox {
+	margin: 8px auto 8px auto;
+}
+
+#abiliAddBtn {
+	margin: 32px auto 16px auto;
+}
+
+#eqMargins {
+	margin: 9px auto 16px auto;
+	
+}
+*/
+
+
+
+
+
+//abillty popUp
+.abiliPopUp {
+	display: block;
+	-webkit-transform: scale(1);
+	z-index: 10000;
+}

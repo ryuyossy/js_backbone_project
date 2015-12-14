@@ -1,0 +1,42 @@
+{
+    "status": 200,
+    "changeable": false,
+    "front": true,
+    "job_name": "みならい剣士",
+    "job_mastered": true,
+    "avatar_id":"10001",
+    "ability_point_front": 50,
+    "ability_point_max_front": 110,
+    "ability_point_back": 50,
+    "ability_point_max_back": 110,
+    "attack_power": 4920,
+    "special_attack_power": 9557,
+    "defense_power": 1560,
+    "special_defense_power": 3604,
+    "abilities": [
+        {
+            "id": 118,
+            "name": "村人パンチ",
+            "equip_point": 5,
+            "tp_cost": 10,
+            "description": "村人の魂のこもったパンチ",
+            "ancestry": "特殊",
+            "same_ancestry": false,
+            "set_type": 1,
+            "lack_cost": false
+        },
+        {
+            "id": 119,
+            "name": "見よう見まね",
+            "equip_point": 20,
+            "tp_cost": 20,
+            "description": "\"他のユーザの攻撃技をモノマネしてみる\nどれを真似するかはランダムで抽選\nただし、効果量は10%。\"",
+            "ancestry": "特殊",
+            "same_ancestry": false,
+            "set_type": 1,
+            "lack_cost": false
+        }
+    ],
+	"first_access_flg":true,
+    "max_ability_num":4
+}

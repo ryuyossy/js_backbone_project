@@ -1,0 +1,36 @@
+<h1 class="mainHeader">ジョブアバター選択</h1>
+
+<div class="jobAvM">
+{{for avatars}}
+	<section class="contents contentsShadow statusData_icon link">
+		<div class="columnBox innerHeader" data-href="job/avatar_detail/{{>id}}/">
+			<div class="iconBgRect_l gold"><img src="{{getImgRoot/}}/avatar/{{>id}}_140.png"></div>
+			<div class="contentsInner">
+				<h1>{{>name}}</h1>
+				<p>
+					{{>description}}
+				</p>
+			</div>
+		</div>
+		{{if changeable}}
+		<button class="btn jsJobChange" data-avatar-id="{{>id}}">選択する</button>
+		{{else}}
+		<button class="btn disable">選択できません</button>
+		{{/if}}
+	</section>
+{{/for}}
+</div>
+
+<hr>
+
+<div class="linkGroup">
+	{{if job_id}}<div class="arrowLink"><button class="link prev" data-href="job/avatar_detail/{{>job_id}}/">ジョブ詳細へ戻る</button></div>{{/if}}
+	<div class="arrowLink"><button class="link prev" data-href="job/">ジョブトップに戻る</button></div>
+</div>
+
+<div class="helpList">
+	<ul>
+		<li><button class="link" data-href="help/detail/401/">ジョブってなに？</button></li>
+		<li><button class="link" data-href="help/detail/408/">アバターチェンジってなに？</button></li>
+	</ul>
+</div>

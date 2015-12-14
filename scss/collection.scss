@@ -1,0 +1,275 @@
+@charset "utf-8";
+@import "base";
+@import "ruleset";
+
+//extend data
+%collectionContents {
+	width: 95%;
+	margin: 0 auto 8px auto;
+	padding: 8px 0;
+}
+// common parts
+.statusLine{
+	font-size:85%;
+	text-align:center;
+}
+
+
+// collection top
+.booksNaviko_Arc{
+	padding-bottom:$inner_margin;
+}
+
+#collectionContentsM,
+.collectionBonusMargin{
+	margin:$content_margin auto $content_margin_last auto;
+
+	.contents{
+		margin:0 auto $inner_margin auto;
+
+		> .btn{
+			position:relative;
+			margin-top:$inner_margin;
+			z-index:auto;
+		}
+	}
+	.contentsInner{
+		margin:0 $inner_margin;
+	}
+	h1{
+		font-size:110%;
+		margin-bottom:$inner_margin/2;
+	}
+	.statusData_icon img{
+		box-shadow:none;
+		-webkit-box-shadow:none;
+	}
+}
+
+// collection bonus
+.collectionBonusMargin{
+	margin:$content_margin auto 0 auto;
+}
+.remain{
+	color:#f00;
+}
+
+// collection list
+.contents{
+	position:relative;
+	width:95%;
+	margin:$content_margin auto $content_margin auto;
+	padding:8px 0;
+	z-index:auto;
+}
+
+.collectionEquipList{
+	.contents{
+		padding-bottom:0;
+	}
+	.collection{
+		@include box-sizing(border-box);
+		padding:0;
+		li{
+			margin-bottom:8px;
+		}
+		.dimmed{
+			padding-bottom:8px;
+		}
+	}
+	.jsLoaderA {
+		position:relative;
+		top:-16px;
+	}
+}
+.selectBox~.btn{
+	padding:0 1em;
+	margin:0 auto;
+	display:block;
+}
+
+// collection equip
+.collectionEquipLink {
+	@extend #collectionContentsM;
+}
+
+// collection treasure
+#treasureContentsM {
+	margin: $content_margin 0 16px 0;
+}
+
+.collectionTreasureDetailLink{
+	.questLink{
+		margin-top:8px;
+	}
+}
+.completed{
+	color:red;
+}
+.contents.contentsshadow{
+	min-height:0;
+}
+
+// cllection series list
+.collectionCtM {
+	margin-top: $content_margin;
+
+	.contents{
+		position:relative;
+		margin: $inner_margin auto $inner_margin auto;
+	}
+	.contentsInner{
+
+		h1{
+			color:#544123;
+		}
+		p{
+			margin-bottom:4px;
+		}
+		dd{
+			color:#666;
+
+			span{
+				color:#333;
+			}
+		}
+		.cleared{
+			@include backgroundSize("/parts/cleared_stamp.png",0,0,no-repeat);
+			position:absolute;
+			right:16px;
+			bottom:0;
+			width:76px;
+			height:24px;
+		}
+	}
+}
+
+.jsGuildMember.close{
+	.jsTreasureMessageSend{
+		display:block;
+	}
+	.jsPostTreasureMessageSendForm{
+		display:none;
+	}
+}
+.jsGuildMember.open{
+	.jsTreasureMessageSend{
+		display:none;
+	}
+	.jsPostTreasureMessageSendForm{
+		display:block;
+	}
+}
+.innerBtnBox .btn.close{
+	margin:0 auto;
+}
+
+// collection bonus
+.collectionBonusMargin {
+	margin-top: $content_margin;
+}
+
+// collection equip & treasure detail
+#equipDetail,
+#treasureDetail{
+	.itemDetail{
+		margin-top:$content_margin;
+	}
+	.description{
+		p{
+			margin-bottom:$inner_margin;
+		}
+	}
+	.contents{
+		margin-bottom:0;
+	}
+	~ .arrowLink{
+		margin-bottom:$content_margin;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+// collection equip detail(old)
+.eqM {
+	margin-top:16px;
+}
+
+.cmpSubHead {
+	margin-bottom: $content_margin;
+}
+
+.dsMargin {
+	@extend .cmpSubHead;
+}
+
+.collectionDetailM {
+	@extend .collectionBonusMargin;
+}
+
+.collectionArrowLinkes {
+	@extend #collectionContentsM;
+}
+.btn.jsTreasureMessageSend.ordered {
+	margin-top: 8px;
+}
+// collection series
+.tSeriesHead2 {
+	margin: $content_margin_last auto $content_margin auto;
+}
+
+// collection treasureDetail
+.treasureDetail {
+	margin: $content_margin 0 $content_margin 0;
+}
+
+.detailPostForm {
+	@extend %collectionContents;
+}
+
+.tDetailStatus {
+	@extend %collectionContents;
+	margin: 0 auto $inner_margin auto;
+}
+
+
+
+// collection theyDetail
+.theyDtClBox {
+	width: 95%;
+	margin: $content_margin auto 0 auto;
+	z-index: auto;
+	padding: $inner_margin 0 0 0;
+}
+
+#theyDetailDown {
+	margin: $inner_margin auto 0 auto;
+}
+
+// collection treasureSeries
+.clgridBox {
+	width: 95%;
+	margin: 16px auto;
+}
+
+.compContents {
+	width:95%;
+	margin:0 auto 16px auto;
+	padding:8px 0;
+}
+// collection popoUp
+.collectionPop {
+	display:block;
+	-webkit-transform:scale(1);
+	z-index:10000;
+}

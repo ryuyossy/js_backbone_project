@@ -1,0 +1,77 @@
+		<h1 class="mainHeader">ガチャ</h1>
+
+		<div class="statusLine">
+			<p>
+				<span class="headline">所持コイン</span>{{>own_coin}}
+			</p>
+		</div>
+
+		<div id="gachaBuyConfirm">
+			<section class="contents contentsShadow statusData_icon">
+				<h1>{{>gacha_name}}</h1>
+				<div class="columnBox innerHeader">
+					<img class="gacha_img" src="{{getImgRoot/}}/gacha/{{:gacha_id}}{{if limited_term_flg && !emblem_omake_flg}}_limited{{else emblem_omake_flg}}_season{{/if}}.png">
+					<div class="contentsInner">
+						<dl>
+							<dt>価格</dt><dd>{{>price_coin}}コイン</dd>
+						</dl>
+						<p>
+							{{>description}}
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="contents shadow expendConf">
+				<table>
+					<tr>
+						<th>購入数</th><td>{{>buy_num}}</td>
+					</tr>
+					<tr>
+						<th>購入価格合計</th><td>{{>price_coin_total}}コイン</td>
+					</tr>
+				</table>
+			</section>
+
+			<p class="paramStatus">
+				<span class="headline">所持コイン</span>{{>own_coin}}<span class="sepalator">→</span>{{>result_coin}}
+			</p>
+			{{if result_coin < 0 }}
+			<span class="label48">コインが足りません</span>
+			{{/if}}
+			{{if result_coin < 0 }}
+			<a class="btn large" href="{{>coin_buy_url}}">コインを購入する</a>
+			{{else}}
+			{{if add_equip_num === 1}}
+	    	<button class="btn large" data-href="gacha/buy/draw-single/{{>gacha_id}}/COIN/">コインで購入する</button>
+	    	{{else}}
+	    	<button class="btn large" data-href="gacha/buy/draw-multi/{{>gacha_id}}/COIN/{{:add_equip_num}}/">コインで購入する</button>
+	    	{{/if}}
+			{{/if}}
+
+			<p class="paramStatus">
+				<span class="headline">所持アメG</span>{{>own_ame_g}}<span class="sepalator">→</span>{{>result_ame_g}}
+			</p>
+			{{if result_ame_g < 0 }}
+			<span class="label48">アメGが足りません</span>
+	        {{/if}}
+
+			{{if add_equip_num === 1}}
+	        <button class="btn large {{if result_ame_g < 0 }}disable{{/if}}" data-href="gacha/buy/draw-single/{{>gacha_id}}/AMEGOLD/">アメGで購入する</button>
+	        {{else}}
+	        <button class="btn large {{if result_ame_g < 0 }}disable{{/if}}" data-href="gacha/buy/draw-multi/{{>gacha_id}}/AMEGOLD/{{:add_equip_num}}/">アメGで購入する</button>
+	        {{/if}}
+		</div>
+
+		<hr>
+
+		<section class="caution">
+			<article>
+				<h1>ご注意</h1>
+				<ul>
+					<li>サーバのレスポンス、通信状況によって、ガチャの演出がスキップされることがあります。その場合でも武具の追加は正常に完了しております。ギフトをご確認ください。</li>
+					<li>プレミアムガチャを初回100Cでご購入された方は、次回より100Cではご購入できませんので、ご購入の際はご注意ください</li>
+				</ul>
+				<a href="http://s.amebame.com/#tradelaw/app/1349686748" target="_blank" class="link">特定商取引法に基づく表記</a>
+			</article>
+		</section>

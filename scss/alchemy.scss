@@ -1,0 +1,149 @@
+@charset "utf-8";
+@import "base";
+@import "ruleset";
+
+/*common parts - period */
+.period{
+	@include backgroundSize("/parts/bg_period.png",0,0,no-repeat);
+	display:block;
+	width:290px;
+	height:43px;
+	margin:$inner_margin auto $inner_margin - 2 auto;
+	text-align:center;
+	dt{
+		padding-top:2px;
+		font-size:75%;
+		color:#F3DE9F;
+	}
+	dd{
+		margin-top:-4px;
+		font-size:85%;
+		color:#fff;
+		span{
+			font-size:115%;
+		}
+	}
+}
+
+/* page parts */
+#alchemy{
+	.message{
+		top:0;
+	}
+	.contents{
+		width:95%;
+		margin:0 auto;
+	}
+	&.top{
+		header h1{
+			width:304px;
+			height:136px;
+			margin:$inner_margin auto 0 auto;
+			@include backgroundSize("/parts/event/alchemy/event_alchemy_title.png",0,0,no-repeat);
+			display:block;
+		}
+		.period{
+			margin:0 auto;
+		}
+		.paramStatus{
+			margin-top:$content_margin;
+			font-size:90%;
+			font-weight:bold;
+		}
+		.btnBox{
+			margin:$content_margin 0 $content_margin 0;
+			color:#fff;
+			text-align:center;
+			.btn_l{
+				display:block;
+				width:80%;
+				margin:$inner_margin auto 0 auto;
+				font-size:120%;
+				line-height:17px;
+				&:first-of-type{
+					margin-top:0;
+				}
+				&.alchemy_disable{
+					pointer-events: none;
+					&:after{
+						@include visible_object(-12px,-12px,250px,45px,auto);
+						background-color:rgba(0,0,0,0.3);
+						@include border-radius(12px);
+					}
+				}
+			}
+			p{
+				font-size:90%;
+				.consume{
+					display:inline-block;
+					margin-left:$inner_margin;
+					color:$color_L;
+				}
+			}
+		}
+		.subHeader{
+			margin:$content_margin 0 $inner_margin 0;
+		}
+		.discription{
+			width:320px;
+			height:136px;
+			@include backgroundSize("/parts/event/alchemy/event_alchemy_discription.png",0,0,no-repeat);
+			display:block;
+		}
+		.message{
+			margin:$inner_margin auto $content_margin auto;
+		}
+		.acquireTerm{
+			font-size:90%;
+			color:#fff;
+			text-align:center;
+			h1{
+				font-weight:bold;
+				color:#F2DE9F;
+			}
+		}
+	}
+	&.itemList{
+		.silver,
+		.gold{
+			margin-top:$content_margin;
+		}
+		.subHeader{
+			margin:0 0 $inner_margin 0;
+		}
+		.contents{
+			margin-bottom:$inner_margin;
+		}
+		.arrowLink{
+			margin-bottom:$content_margin;
+		}
+	}
+	&.result{
+		.message{
+			margin:$inner_margin auto;
+		}
+		.contents{
+			margin-bottom:$inner_margin;
+			&:last-of-type{
+				margin-bottom:0;
+			}
+		}
+		.complateMessage{
+			article{
+				padding:0;
+			}
+			p{
+				width:95%;
+				margin:$content_margin auto;
+				font-size:100%;
+				&.paramStatus{
+					font-size:80%;
+					color:#fff;
+				}
+			}
+		}
+	}
+}
+
+
+

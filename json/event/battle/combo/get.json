@@ -1,0 +1,42 @@
+{
+    "status" : 200,
+    "start_datetime": "2013/04/08 00:00:00",
+    "end_datetime": "2013/04/12 23:59:59",
+    "every_battle_rewards": [
+        {
+            "combo_num": 5,
+            "id": 5000,
+            "name": "ギル",
+            "quantity": 1,
+            "type": 5
+        },
+        {
+            "combo_num": 25,
+            "id": 3000,
+            "name": "ガチャポイント",
+            "quantity": 1,
+            "type": 4
+        },
+        {
+            "combo_num": 50,
+            "type": 1,
+            "id": 101,
+            "name": "元気のハチミツ（50）",
+            "quantity": 4
+        },
+        {
+            "combo_num": 150,
+            "type": 1,
+            "id": 101,
+            "name": "元気のハチミツ（50）",
+            "quantity": 4
+        },
+        {
+            "combo_num": 300,
+            "type": 1,
+            "id": 101,
+            "name": "元気のハチミツ（50）",
+            "quantity": 4
+        }
+    ]
+}

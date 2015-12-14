@@ -1,0 +1,49 @@
+{
+	"status" : 200,
+    "bbs_posts": [
+        {
+            "avatar_id": "00001",
+            "body_text": "taketaketakeさんが新たなギルドへ旅立ちました。",
+            "like_num": 0,
+            "message_id": "10111353377642852",
+            "post_date": "11/20 11:14",
+            "post_type": 2,
+            "reply_num": 0,
+            "self_liked_flg": false,
+            "user_id": 11,
+            "user_name": "taketaketake"
+        },
+        {
+            "avatar_id": "00001",
+            "body_text": "宜しくお願い致します。",
+            "like_num": 0,
+            "message_id": "1021353377563316",
+            "post_date": "11/20 11:12",
+            "post_type": 1,
+            "reply_num": 0,
+            "self_liked_flg": false,
+            "user_id": 2,
+            "user_name": "たけひろし"
+        },
+        {
+            "avatar_id": "00001",
+            "body_text": "ﾜｯｼｮｲヽ(ﾟ∀ﾟ)メ(ﾟ∀ﾟ)メ(ﾟ∀ﾟ)ノﾜｯｼｮｲ",
+            "like_num": 0,
+            "message_id": "1021353377563316",
+            "post_date": "11/20 11:12",
+            "post_type": 1,
+            "reply_num": 0,
+            "self_liked_flg": false,
+            "user_id": 2233,
+            "user_name": "まっくす氏"
+        }
+    ],
+	"user" : {
+		"avatar_id": "00002",
+		"job_name": null,
+		"tp": null,
+		"user_id": 2233,
+		"user_name": null
+	},
+    "bbs_more_flg": true
+}

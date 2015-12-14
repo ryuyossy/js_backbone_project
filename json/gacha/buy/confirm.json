@@ -1,0 +1,21 @@
+{
+    "status": 200,
+    "guild_name" : "サイババ団",
+    "guild_rank" : "A",
+    "rank_status" : "ランクステイ圏内",
+    "rank_rest_days" : "3",
+    "battle_start_rest" : "05:44",
+    "battle_end_rest" : "",
+    "notice_message": null,
+    "own_ame_g": 1000,
+    "price_coin": 3000,
+    "result_ame_g": 700,
+    "result_coin": 2700,
+    "add_equip_num": 10,
+    "buy_num": 1,
+    "price_coin_total": 300,
+    "description": "説明",
+    "own_coin": 3000,
+    "gacha_id": 202,
+    "gacha_name": "10連プレミアムガチャ"
+}

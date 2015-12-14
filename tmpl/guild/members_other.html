@@ -1,0 +1,43 @@
+<h1 class="mainHeader">メンバー一覧</h1>
+
+<section id="guildMemberList">
+	<div class="statusLine">
+		<dl><dt>所属人数</dt><dd><span>{{>member_num}}</span>/{{>max_member_num}}人</dd></dl>
+	</div>
+
+	<section class="memberList">
+		{{for members}}
+		<article class="contents contentsShadow statusData_icon link">
+			<h1><span class="order">{{>rank}}位</span>{{>user_name}}</h1>
+			<div class="columnBox" data-href="profile/other/{{>user_id}}/">
+				<div class="iconBgRect_l gold"><img src="{{getImgRoot/}}/avatar/{{>avatar_id}}_140.png"></div>
+				{{if new_flg}}<span class="label36_r4 member_new">NEW</span>{{else #index == 0}}<span class="label36_r4 member_ace">エース</span>{{/if}}
+				<div class="contentsInner">
+					<dl>
+						<dt>戦闘力</dt><dd>{{>battle_power}}</dd>
+						<dt>獲得BP</dt><dd>{{>~commaFormat(win_bp_total)}}</dd>
+						<dt>役職</dt><dd>{{>position_name}}</dd>
+						<dt>Lv.</dt><dd>{{>level}}</dd>
+						<dt>ジョブ</dt><dd>{{>job_name}}</dd>
+						<dt>最終プレイ</dt><dd>{{>play_time}}</dd>
+					</dl>
+				</div>
+			</div>
+		</article>
+		{{/for}}
+	</section>
+
+</section>
+
+<hr>
+
+<div class="arrowLink">
+	<button class="link prev" data-href="guild/other/{{>guild_id}}/">ギルドトップに戻る</button>
+</div>
+
+<div class="helpList">
+    <ul>
+        <li><button class="link" data-href="help/detail/303/">メンバーが増えると？</button></li>
+        <li><button class="link" data-href="help/detail/215/">手合わせってなに？</button></li>
+    </ul>
+</div>

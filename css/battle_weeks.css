@@ -1,0 +1,219 @@
+@charset "utf-8";
+/*
+@mixin box_shadow_contents_l($offsetSize,$z_index:-1){
+	content:'';
+	position:absolute;
+	left:$offsetSize;
+	top:75%;
+	bottom:17px;
+	width:50%;
+	min-height:5px;
+	max-width:150px;
+	background:#544123;
+	-webkit-box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	-webkit-transform:rotate(-5deg);
+	transform:rotate(-5deg);
+	z-index:$z_index;
+}
+@mixin box_shadow_contents_r($offsetSize,$z-index:-1){
+	content:'';
+	position:absolute;
+	right:$offsetSize;
+	top:75%;
+	bottom:17px;
+	width:50%;
+	min-height:5px;
+	max-width:150px;
+	background:#544123;
+	-webkit-box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	-webkit-transform:rotate(5deg);
+	transform:rotate(5deg);
+	z-index:$z_index;
+}
+*/
+/*
+@mixin backgroundResize($position:0 -60px){
+	@media screen and (min-width:319px){
+		width:320px;
+		@include background-size(320px,auto);
+	}
+	@media screen and (min-width:359px){
+		width:360px;
+		@include background-size(360px,auto);
+	}
+	@media screen and (min-width:361px){
+		width:480px;
+		@include background-size(480px,auto);
+		background-position:$position;
+	}
+}
+*/
+/*
+@mixin display-box{
+	display:flexbox;
+	-webkit-display:flexbox;
+}
+@mixin box-align($position){
+	flex-align:$position;
+	-webkit-flex-align:$position;
+}
+@mixin box-flex($ratio){
+	flex:$ratio;
+	-webkit-flex:$ratio;
+}
+@mixin box-pack($position){
+	flex-pack:$position;
+	-webkitflex-pack:$position;
+}
+*/
+/* line 5, ../scss/battle_weeks.scss */
+.battleWeeks .pointGetList .contents, .battleWeeks .remunerationList .rmrCnt {
+  width: 95%;
+  margin: 0 auto;
+  padding: 8px 0;
+}
+
+/* line 10, ../scss/battle_weeks.scss */
+.battleWeeks .outcomeTable .defeat td, .battleWeeks .outcomeTable .loose td {
+  text-align: center;
+  vertical-align: middle;
+  color: white;
+}
+
+/* line 15, ../scss/battle_weeks.scss */
+.battleWeeks .outcomeTable .defeat .label48, .battleWeeks .outcomeTable .loose .label48 {
+  margin: 0 8px;
+}
+
+/* line 18, ../scss/battle_weeks.scss */
+.battleWeeks .outcomeTable th, .battleWeeks .outcomeTable td {
+  border: 1px #968F5B solid;
+}
+
+/* line 32, ../scss/battle_weeks.scss */
+.battleWeeks .battleWeekBn {
+  position: relative;
+  margin: 8px auto 0 auto;
+}
+/* line 35, ../scss/battle_weeks.scss */
+.battleWeeks .battleWeekBn .battleSummary {
+  position: absolute;
+  top: 128px;
+  left: 16px;
+  width: 290px;
+  height: 43px;
+}
+/* line 43, ../scss/battle_weeks.scss */
+.battleWeeks .paramStatus {
+  margin: 52px auto 16px auto;
+}
+/* line 46, ../scss/battle_weeks.scss */
+.battleWeeks .pointGetList {
+  margin: 8px auto 16px auto;
+}
+/* line 52, ../scss/battle_weeks.scss */
+.battleWeeks .otherConfirm, .battleWeeks .btn.battle.large {
+  margin-bottom: 16px;
+}
+/* line 55, ../scss/battle_weeks.scss */
+.battleWeeks .headMarg {
+  margin-top: 8px;
+}
+/* line 58, ../scss/battle_weeks.scss */
+.battleWeeks .outcomeTable {
+  margin-top: 10px;
+}
+/* line 60, ../scss/battle_weeks.scss */
+.battleWeeks .outcomeTable table {
+  width: 304px;
+  height: 110px;
+  margin: 0 auto;
+}
+/* line 71, ../scss/battle_weeks.scss */
+.battleWeeks .outcomeTable .gameListBox {
+  background-color: #E0D4A9;
+}
+/* line 73, ../scss/battle_weeks.scss */
+.battleWeeks .outcomeTable .gameListBox .borderNone {
+  border-left: none;
+  border-top: none;
+  background-color: #544120;
+}
+/* line 78, ../scss/battle_weeks.scss */
+.battleWeeks .outcomeTable .gameListBox .gameBox {
+  width: 60px;
+  height: 30px;
+  text-align: center;
+  vertical-align: middle;
+  color: #53401F;
+}
+/* line 87, ../scss/battle_weeks.scss */
+.battleWeeks .outcomeTable .defeat .winBox {
+  background-color: #dc0000;
+  width: 60px;
+  height: 40px;
+  text-align: center;
+  vertical-align: middle;
+  color: white;
+  font-weight: bold;
+}
+/* line 98, ../scss/battle_weeks.scss */
+.battleWeeks .outcomeTable .loose .looseBox {
+  background-color: #0081b0;
+  width: 60px;
+  height: 40px;
+  text-align: center;
+  vertical-align: middle;
+  color: white;
+  font-weight: bold;
+}
+/* line 104, ../scss/battle_weeks.scss */
+.battleWeeks .outcomeTable .loose .label48 {
+  background-color: #0082AE;
+}
+/* line 110, ../scss/battle_weeks.scss */
+.battleWeeks .message.navico_arc {
+  margin: 8px auto 16px auto;
+}
+/* line 116, ../scss/battle_weeks.scss */
+.battleWeeks .remunerationList {
+  margin: 8px 0 8px 0;
+}
+/* line 118, ../scss/battle_weeks.scss */
+.battleWeeks .remunerationList .rmrCnt {
+  margin-bottom: 8px;
+}
+/* line 121, ../scss/battle_weeks.scss */
+.battleWeeks .remunerationList .rmrCnt .cleared {
+  display: inline-block;
+  background: url("/img/parts/cleared_stamp.png") 0 0 no-repeat;
+  -webkit-background-size: 76px 24px;
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  width: 76px;
+  height: 24px;
+}
+/* line 131, ../scss/battle_weeks.scss */
+.battleWeeks .arrowGiftLink {
+  margin-bottom: 2px;
+}
+/* line 134, ../scss/battle_weeks.scss */
+.battleWeeks .questNvgation {
+  display: inline-block;
+  background: url("/img/parts/shortTutorial_brave_top.png") 0 0 no-repeat;
+  -webkit-background-size: 320px 160px;
+  display: block;
+  height: 160px;
+}
+/* line 139, ../scss/battle_weeks.scss */
+.battleWeeks .questshortBn {
+  margin: 16px auto 0 auto;
+}
+/* line 142, ../scss/battle_weeks.scss */
+.battleWeeks .title {
+  display: block;
+  margin: 0 auto;
+}

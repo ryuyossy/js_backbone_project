@@ -1,0 +1,338 @@
+{
+	"status" : 200,
+	"guild_name" : "サイババ団",
+    "guild_rank" : "A",
+    "rank_status" : "ランクステイ圏内",
+    "rank_rest_days" : "3",
+    "battle_start_rest" : "05:44",
+    "battle_end_rest" : "",
+    "own_num": 100,
+    "max_own_num": 100,
+    "gil": 99889,
+	"has_normal_flg": true,
+    "equip_types": [
+        {
+            "text": "すべての武具",
+            "value": ""
+        },
+        {
+            "text": "武器",
+            "value": "1"
+        },
+        {
+            "text": "防具",
+            "value": "2"
+        }
+    ],
+    "attribute_types": [
+        {
+            "text": "すべての属性",
+            "value": ""
+        },
+        {
+            "text": "火",
+            "value": "FIRE"
+        },
+        {
+            "text": "氷",
+            "value": "ICE"
+        },
+        {
+            "text": "雷",
+            "value": "THUNDER"
+        },
+        {
+            "text": "地",
+            "value": "EARTH"
+        },
+        {
+            "text": "光",
+            "value": "LIGHT"
+        },
+        {
+            "text": "闇",
+            "value": "DARK"
+        }
+    ],
+    "rarity_types": [
+        {
+            "text": "すべてのレア度",
+            "value": ""
+        },
+        {
+            "text": "ノーマル",
+            "value": "N"
+        },
+        {
+            "text": "ハイノーマル",
+            "value": "HN"
+        },
+        {
+            "text": "レア",
+            "value": "R"
+        },
+        {
+            "text": "Sレア",
+            "value": "SR"
+        },
+        {
+            "text": "SSレア",
+            "value": "SSR"
+        },
+        {
+            "text": "レジェンド",
+            "value": "LEGEND"
+        }
+    ],
+    "sort_types": [
+        {
+            "text": "攻防が高い順",
+            "value": "POWER_DESC"
+        },
+        {
+            "text": "攻防が低い順",
+            "value": "POWER_ASC"
+        },
+        {
+            "text": "最近入手した順",
+            "value": "GET_DATETIME_DESC"
+        },
+        {
+            "text": "昔に入手した順",
+            "value": "GET_DATETIME_ASC"
+        },
+        {
+            "text": "コストが高い順",
+            "value": "COST_DESC"
+        },
+        {
+            "text": "コストが低い順",
+            "value": "COST_ASC"
+        },
+        {
+            "text": "Lvが高い順",
+            "value": "LEVEL_DESC"
+        },
+        {
+            "text": "Lvが低い順",
+            "value": "LEVEL_ASC"
+        },
+        {
+            "text": "レア度が高い順",
+            "value": "RARITY_DESC"
+        },
+        {
+            "text": "レア度が低い順",
+            "value": "RARITY_ASC"
+        }
+    ],
+    "more_flg": true,
+    "equips": [
+        {
+            "equip_id": 210001,
+            "user_equip_no": 13541838790747,
+            "equip_name": "鍋のふた",
+            "rarity_name": "ノーマル",
+            "equip_status": 0,
+            "equip_type": 2,
+            "description": "家庭用の鍋のふた",
+            "equip_level": 1,
+            "max_level": 20,
+            "grow_type_name": "早熟",
+            "equip_exp": 100,
+            "equip_cost": 5,
+            "power": 222,
+            "special_power": 523,
+            "attribute_name": null,
+            "attribute_level": null,
+            "sell_price": 250,
+			"protected_flg": false
+        },
+        {
+            "equip_id": 110001,
+            "user_equip_no": 13541838790851,
+            "equip_name": "ひのきのぼう（松）",
+            "rarity_name": "ノーマル",
+            "equip_status": 0,
+            "equip_type": 1,
+            "description": "道ばたで拾った木のぼう",
+            "equip_level": 1,
+            "max_level": 20,
+            "grow_type_name": "晩成",
+            "equip_exp": 50,
+            "equip_cost": 5,
+            "power": 227,
+            "special_power": 518,
+            "attribute_name": null,
+            "attribute_level": null,
+            "sell_price": 250,
+			"protected_flg": true
+        },
+        {
+            "equip_id": 210001,
+            "user_equip_no": 13541838790747,
+            "equip_name": "鍋のふた",
+            "rarity_name": "ノーマル",
+            "equip_status": 0,
+            "equip_type": 2,
+            "description": "家庭用の鍋のふた",
+            "equip_level": 1,
+            "max_level": 20,
+            "grow_type_name": "普通",
+            "equip_exp": 0,
+            "equip_cost": 5,
+            "power": 222,
+            "special_power": 523,
+            "attribute_name": null,
+            "attribute_level": null,
+            "sell_price": 250,
+			"protected_flg": false
+        },
+        {
+            "equip_id": 110001,
+            "user_equip_no": 13541838790851,
+            "equip_name": "ひのきのぼう（松）",
+            "rarity_name": "ノーマル",
+            "equip_status": 1,
+            "equip_type": 1,
+            "description": "道ばたで拾った木のぼう",
+            "equip_level": 1,
+            "max_level": 20,
+            "grow_type_name": "早熟",
+            "equip_exp": 20,
+            "equip_cost": 5,
+            "power": 227,
+            "special_power": 518,
+            "attribute_name": null,
+            "attribute_level": null,
+            "sell_price": 250,
+			"protected_flg": false
+        },
+        {
+            "equip_id": 210001,
+            "user_equip_no": 13541838790747,
+            "equip_name": "鍋のふた",
+            "rarity_name": "ノーマル",
+            "equip_status": 0,
+            "equip_type": 2,
+            "description": "家庭用の鍋のふた",
+            "equip_level": 1,
+            "max_level": 20,
+            "grow_type_name": "晩成",
+            "equip_exp": 100,
+            "equip_cost": 5,
+            "power": 222,
+            "special_power": 523,
+            "attribute_name": null,
+            "attribute_level": null,
+            "sell_price": 250,
+			"protected_flg": false
+        },
+        {
+            "equip_id": 110001,
+            "user_equip_no": 13541838790851,
+            "equip_name": "ひのきのぼう（松）",
+            "rarity_name": "ノーマル",
+            "equip_status": 2,
+            "equip_type": 1,
+            "description": "道ばたで拾った木のぼう",
+            "equip_level": 1,
+            "max_level": 20,
+            "grow_type_name": "普通",
+            "equip_exp": 100,
+            "equip_cost": 5,
+            "power": 227,
+            "special_power": 518,
+            "attribute_name": null,
+            "attribute_level": null,
+            "sell_price": 250,
+			"protected_flg": false
+        },
+        {
+            "equip_id": 210001,
+            "user_equip_no": 13541838790747,
+            "equip_name": "鍋のふた",
+            "rarity_name": "ノーマル",
+            "equip_status": 0,
+            "equip_type": 2,
+            "description": "家庭用の鍋のふた",
+            "equip_level": 1,
+            "max_level": 20,
+            "grow_type_name": "早熟",
+            "equip_exp": 80,
+            "equip_cost": 5,
+            "power": 222,
+            "special_power": 523,
+            "attribute_name": null,
+            "attribute_level": null,
+            "sell_price": 250,
+			"protected_flg": false
+        },
+        {
+            "equip_id": 110001,
+            "user_equip_no": 13541838790851,
+            "equip_name": "ひのきのぼう（松）",
+            "rarity_name": "ノーマル",
+            "equip_status": 0,
+            "equip_type": 1,
+            "description": "道ばたで拾った木のぼう",
+            "equip_level": 1,
+            "max_level": 20,
+            "grow_type_name": "晩成",
+            "equip_exp": 30,
+            "equip_cost": 5,
+            "power": 227,
+            "special_power": 518,
+            "attribute_name": null,
+            "attribute_level": null,
+            "sell_price": 250,
+			"protected_flg": false
+        },
+        {
+            "equip_id": 210001,
+            "user_equip_no": 13541838790747,
+            "equip_name": "鍋のふた",
+            "rarity_name": "ノーマル",
+            "equip_status": 0,
+            "equip_type": 2,
+            "description": "家庭用の鍋のふた",
+            "equip_level": 1,
+            "max_level": 20,
+            "grow_type_name": "普通",
+            "equip_exp": 50,
+            "equip_cost": 5,
+            "power": 222,
+            "special_power": 523,
+            "attribute_name": null,
+            "attribute_level": null,
+            "sell_price": 250,
+			"protected_flg": false
+        },
+        {
+            "equip_id": 110001,
+            "user_equip_no": 13541838790851,
+            "equip_name": "ひのきのぼう（松）",
+            "rarity_name": "ノーマル",
+            "equip_status": 0,
+            "equip_type": 1,
+            "description": "道ばたで拾った木のぼう",
+            "equip_level": 1,
+            "max_level": 20,
+            "grow_type_name": "早熟",
+            "equip_exp": 100,
+            "equip_cost": 5,
+            "power": 227,
+            "special_power": 518,
+            "attribute_name": null,
+            "attribute_level": null,
+            "sell_price": 250,
+			"protected_flg": false
+        }
+    ],
+    "guild_name": "take",
+    "guild_rank": "F",
+    "rank_status": "ランキング圏内",
+    "rank_rest_days": 0,
+    "battle_start_rest": "03:54:33",
+    "battle_end_rest": null
+}

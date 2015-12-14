@@ -1,0 +1,474 @@
+{
+    "status": 200,
+    "gacha_id": 202,
+    "gacha_name": "10連プレミアムガチャ",
+    "free_gacha_flg": false,
+    "own_equip_num": 91,
+    "max_own_equip_num": 110,
+    "own_coin": 74945,
+    "own_coin_before": 77645,
+    "own_ame_gold": null,
+    "own_ame_gold_before": null,
+    "own_gacha_p": null,
+    "own_gacha_p_before": null,
+    "own_ticket_num": null,
+    "own_ticket_num_before": null,
+    "use_ticket_name": null,
+    "npc_message": null,
+    "notice_message": null,
+    "equips": [
+        {
+            "equip_id": 230032,
+            "user_equip_no": 13661961702287,
+            "equip_name": "ステージ衣装",
+            "rarity": 3,
+            "equip_status": null,
+            "equip_type": 2,
+            "description": "どんな者の心を癒すと言われたエンターティナーのステージ衣装。レッツパーリー！",
+            "equip_level": 1,
+            "max_level": 40,
+            "grow_type": 1,
+            "equip_exp": 0,
+            "exp_percent": null,
+            "equip_cost": 9,
+            "power": 1084,
+            "special_power": 1076,
+            "attribute_type": 0,
+            "attribute_name": null,
+            "attribute_level": null,
+            "sell_price": 2250,
+            "protected_flg": null,
+            "step": 0,
+            "sent_gift_flg": false,
+            "new_flg": true
+        },
+        {
+            "equip_id": 130032,
+            "user_equip_no": 13661961702328,
+            "equip_name": "悪魔の教典",
+            "rarity": 3,
+            "equip_status": null,
+            "equip_type": 1,
+            "description": "この世に災いをもたらすという悪魔をたたえる異端の教典。",
+            "equip_level": 1,
+            "max_level": 40,
+            "grow_type": 3,
+            "equip_exp": 0,
+            "exp_percent": null,
+            "equip_cost": 10,
+            "power": 1264,
+            "special_power": 1252,
+            "attribute_type": 0,
+            "attribute_name": null,
+            "attribute_level": null,
+            "sell_price": 2500,
+            "protected_flg": null,
+            "step": 0,
+            "sent_gift_flg": false,
+            "new_flg": true
+        },
+        {
+            "equip_id": 240015,
+            "user_equip_no": 13661961702367,
+            "equip_name": "ベルベットコート",
+            "rarity": 4,
+            "equip_status": null,
+            "equip_type": 2,
+            "description": "王国銃士隊に支給される戦闘向けのコート。あったかいです。",
+            "equip_level": 1,
+            "max_level": 60,
+            "grow_type": 3,
+            "equip_exp": 0,
+            "exp_percent": null,
+            "equip_cost": 12,
+            "power": 1988,
+            "special_power": 2430,
+            "attribute_type": 0,
+            "attribute_name": null,
+            "attribute_level": null,
+            "sell_price": 6000,
+            "protected_flg": null,
+            "step": 0,
+            "sent_gift_flg": false,
+            "new_flg": true
+        },
+        {
+            "equip_id": 230020,
+            "user_equip_no": 13661961702498,
+            "equip_name": "夕日のケープ",
+            "rarity": 3,
+            "equip_status": null,
+            "equip_type": 2,
+            "description": "暮れる夕日のように赤いケープ。お手々つないで帰りましょう。",
+            "equip_level": 1,
+            "max_level": 40,
+            "grow_type": 3,
+            "equip_exp": 0,
+            "exp_percent": null,
+            "equip_cost": 11,
+            "power": 1400,
+            "special_power": 1401,
+            "attribute_type": 0,
+            "attribute_name": null,
+            "attribute_level": null,
+            "sell_price": 2750,
+            "protected_flg": null,
+            "step": 0,
+            "sent_gift_flg": false,
+            "new_flg": true
+        },
+        {
+            "equip_id": 230010,
+            "user_equip_no": 13661961702516,
+            "equip_name": "ビクトリーアーマー",
+            "rarity": 3,
+            "equip_status": null,
+            "equip_type": 2,
+            "description": "勝利を導く女神の祝福をうけた鎧。形から入るのも大切です。",
+            "equip_level": 1,
+            "max_level": 40,
+            "grow_type": 3,
+            "equip_exp": 0,
+            "exp_percent": null,
+            "equip_cost": 11,
+            "power": 1388,
+            "special_power": 1401,
+            "attribute_type": 0,
+            "attribute_name": null,
+            "attribute_level": null,
+            "sell_price": 2750,
+            "protected_flg": null,
+            "step": 0,
+            "sent_gift_flg": false,
+            "new_flg": true
+        },
+        {
+            "equip_id": 130022,
+            "user_equip_no": 13661961702542,
+            "equip_name": "卍手裏剣",
+            "rarity": 3,
+            "equip_status": null,
+            "equip_type": 1,
+            "description": "獲物を切り裂く、卍の形をした巨大な手裏剣。投げ手も切り裂かれないようご注意です。",
+            "equip_level": 1,
+            "max_level": 40,
+            "grow_type": 2,
+            "equip_exp": 0,
+            "exp_percent": null,
+            "equip_cost": 9,
+            "power": 1090,
+            "special_power": 1101,
+            "attribute_type": 0,
+            "attribute_name": null,
+            "attribute_level": null,
+            "sell_price": 2250,
+            "protected_flg": null,
+            "step": 0,
+            "sent_gift_flg": false,
+            "new_flg": false
+        },
+        {
+            "equip_id": 230033,
+            "user_equip_no": 13661961702567,
+            "equip_name": "海賊帽",
+            "rarity": 3,
+            "equip_status": null,
+            "equip_type": 2,
+            "description": "七つの海を股にかけた大海賊のキャプテンが被っていた帽子。海賊王にっ、もういいですね。。",
+            "equip_level": 1,
+            "max_level": 40,
+            "grow_type": 2,
+            "equip_exp": 0,
+            "exp_percent": null,
+            "equip_cost": 9,
+            "power": 1098,
+            "special_power": 1095,
+            "attribute_type": 0,
+            "attribute_name": null,
+            "attribute_level": null,
+            "sell_price": 2250,
+            "protected_flg": null,
+            "step": 0,
+            "sent_gift_flg": false,
+            "new_flg": false
+        },
+        {
+            "equip_id": 130024,
+            "user_equip_no": 13661961702598,
+            "equip_name": "ブルーランス",
+            "rarity": 3,
+            "equip_status": null,
+            "equip_type": 1,
+            "description": "凍てつく鉱石から削られた穂先を持つランス。ひんやりしてます。",
+            "equip_level": 1,
+            "max_level": 40,
+            "grow_type": 2,
+            "equip_exp": 0,
+            "exp_percent": null,
+            "equip_cost": 10,
+            "power": 1237,
+            "special_power": 1233,
+            "attribute_type": 0,
+            "attribute_name": null,
+            "attribute_level": null,
+            "sell_price": 2500,
+            "protected_flg": null,
+            "step": 0,
+            "sent_gift_flg": false,
+            "new_flg": true
+        },
+        {
+            "equip_id": 130019,
+            "user_equip_no": 13661961702624,
+            "equip_name": "スターダストダガー",
+            "rarity": 3,
+            "equip_status": null,
+            "equip_type": 1,
+            "description": "星屑のようにきらめく刀身を持つ短剣。切られた者はお星様になります。",
+            "equip_level": 1,
+            "max_level": 40,
+            "grow_type": 3,
+            "equip_exp": 0,
+            "exp_percent": null,
+            "equip_cost": 11,
+            "power": 1391,
+            "special_power": 1393,
+            "attribute_type": 0,
+            "attribute_name": null,
+            "attribute_level": null,
+            "sell_price": 2750,
+            "protected_flg": null,
+            "step": 0,
+            "sent_gift_flg": false,
+            "new_flg": true
+        },
+        {
+            "equip_id": 140009,
+            "user_equip_no": 13661961702640,
+            "equip_name": "紅蓮のドリル",
+            "rarity": 4,
+            "equip_status": null,
+            "equip_type": 1,
+            "description": "猛火を吹きながら回転する強力なドリル。裸眼で見ると危険です。",
+            "equip_level": 1,
+            "max_level": 60,
+            "grow_type": 3,
+            "equip_exp": 0,
+            "exp_percent": null,
+            "equip_cost": 12,
+            "power": 2002,
+            "special_power": 2442,
+            "attribute_type": 0,
+            "attribute_name": null,
+            "attribute_level": null,
+            "sell_price": 6000,
+            "protected_flg": null,
+            "step": 0,
+            "sent_gift_flg": false,
+            "new_flg": false
+        }
+    ],
+    "omakes": [],
+    "before_emblems": [
+        {
+            "emblem_id": "21003",
+            "emblem_name": "無気力のエンブレム",
+            "avatar_id": "21003",
+            "avatar_header_name": "【五月病】",
+            "avatar_name": "ランサー（女）",
+            "current_num": 4,
+            "max_num": 4,
+            "won_flg": true
+        },
+        {
+            "emblem_id": "13003",
+            "emblem_name": "鯉のエンブレム",
+            "avatar_id": "13003",
+            "avatar_header_name": "【鯉のぼり】",
+            "avatar_name": "サムライ（男）",
+            "current_num": 3,
+            "max_num": 4,
+            "won_flg": false
+        },
+        {
+            "emblem_id": "31003",
+            "emblem_name": "母のエンブレム",
+            "avatar_id": "31003",
+            "avatar_header_name": "【母の日】",
+            "avatar_name": "魔術師（女）",
+            "current_num": 4,
+            "max_num": 4,
+            "won_flg": true
+        }
+    ],
+    "current_emblems": [
+        {
+            "emblem_id": "21003",
+            "emblem_name": "無気力のエンブレム",
+            "avatar_id": "21003",
+            "avatar_header_name": "【五月病】",
+            "avatar_name": "ランサー（女）",
+            "current_num": 4,
+            "max_num": 4,
+            "won_flg": true
+        },
+        {
+            "emblem_id": "13003",
+            "emblem_name": "鯉のエンブレム",
+            "avatar_id": "13003",
+            "avatar_header_name": "【鯉のぼり】",
+            "avatar_name": "サムライ（男）",
+            "current_num": 4,
+            "max_num": 4,
+            "won_flg": true
+        },
+        {
+            "emblem_id": "31003",
+            "emblem_name": "母のエンブレム",
+            "avatar_id": "31003",
+            "avatar_header_name": "【母の日】",
+            "avatar_name": "魔術師（女）",
+            "current_num": 4,
+            "max_num": 4,
+            "won_flg": true
+        }
+    ],
+    "win_emblem_ids": [
+        "21003",
+        "31003",
+        "21003",
+        "21003",
+        "13003"
+    ],
+    "win_avatars": [
+        {
+            "avatar_id": "13003",
+            "avatar_header_name": "【鯉のぼり】",
+            "avatar_name": "サムライ（男）"
+        }
+    ],
+    "surplus_emblem_flg": true,
+    "special_bg": "201305",
+    "rare_gacha_news": [
+        {
+            "user_id": 32,
+            "avatar_id": "32002",
+            "user_name": "たけさん11",
+            "equip_id": 140009,
+            "equip_name": "紅蓮のドリル",
+            "got_datetime": "04/17 19:56",
+            "rarity": 4
+        },
+        {
+            "user_id": 32,
+            "avatar_id": "32002",
+            "user_name": "たけさん11",
+            "equip_id": 240015,
+            "equip_name": "ベルベットコート",
+            "got_datetime": "04/17 19:56",
+            "rarity": 4
+        },
+        {
+            "user_id": 32,
+            "avatar_id": "32002",
+            "user_name": "たけさん11",
+            "equip_id": 240024,
+            "equip_name": "陰陽師の狩衣",
+            "got_datetime": "04/17 19:35",
+            "rarity": 4
+        },
+        {
+            "user_id": 32,
+            "avatar_id": "32002",
+            "user_name": "たけさん11",
+            "equip_id": 250009,
+            "equip_name": "ムーンライトタリスマン",
+            "got_datetime": "04/17 19:35",
+            "rarity": 5
+        }
+    ],
+    "banners": [],
+    "enemy_exist_flg": false,
+    "battle_state": 1,
+    "battle_start_rest": "01:03:49",
+    "battle_end_rest": null,
+    "system_date": "2013/04/17 19:56:10",
+    "battle_end_date": null,
+    "battle_start_date": "2013/04/17 21:00:00",
+    "img_url_root": "http://img-dev.braveguardian.jp",
+    "tutorial_step": null,
+    "product_mode": false,
+    "token": "5b2f377acd9f706c6898e7d6eb9f952d9111cb2adefd6909dcc645a3e0907a3b",
+    "app_version": "XXXXXXXXX"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

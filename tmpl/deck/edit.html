@@ -1,0 +1,150 @@
+<h1 class="mainHeader">{{if equip_type === 1}}武器{{else}}防具{{/if}}デッキ編集</h1>
+
+<div id="equipSetEdit">
+	<section class="paramStatus">
+		<p><span class="headline">{{if equip_type === 1}}武器{{else}}防具{{/if}}P</span><span class="costNum">{{>cost_sum}}</span><span class="numMax">/{{>cost_max}}</span></p>
+		<p>
+			<span class="headline">{{if equip_type === 1}}攻撃{{else}}防御{{/if}}</span><span class="powerNum">{{>power_sum}}</span>
+			<span class="headline">特{{if equip_type === 1}}攻{{else}}防{{/if}}</span><span class="spPowerNum">{{>sp_power_sum}}</span>
+		</p>
+	</section>
+
+	<h1 class="subHeader">
+		<span class="subHeaderBg_l"></span>
+		<span>メイン{{if equip_type === 1}}武器{{else}}防具{{/if}}({{if main_equip == null}}0{{else}}1{{/if}}/1)</span>
+		<span class="subHeaderBg_r"></span>
+	</h1>
+
+	<div class="equip_main">
+		<section class="contents contentsShadow statusData_icon">
+		  {{if main_equip !== null}}
+			<h1>{{>main_equip.equip_name}} ({{:~getRarityText(main_equip.rarity)}})
+				{{growTypeTag grow_type=main_equip.grow_type /}}</h1>
+			<div class="columnBox equipListStatus">
+				{{equipThumb equip_id=main_equip.equip_id step=main_equip.step size="medium" /}}
+				{{if main_equip.protected_flg}}<span class="label36_r4 protect">保護</span>{{/if}}
+				<div class="contentsInner">
+					<dl>
+						<dt>Lv.</dt><dd>{{>main_equip.equip_level}}/{{>main_equip.max_level}}</dd>
+						<dt>成長</dt><dd><div class="gergeBgFrame"><div class="gergeBg"><span class="gerge equipGrowth{{if main_equip.equip_exp===100}} max{{/if}}" style="width:{{>main_equip.equip_exp}}%;"></span></div></div></dd><dd>{{>main_equip.equip_exp}}%</dd>
+						<dt>必要{{if main_equip.equip_type === 1}}武器{{else}}防具{{/if}}P</dt><dd>{{>main_equip.equip_cost}}</dd>
+					</dl>
+					<div class="columnBox">
+						<dl>
+							<dt>{{if main_equip.equip_type === 1}}攻撃{{else}}防御{{/if}}</dt>
+							<dd>{{>main_equip.power}}</dd>
+							<dt>属性</dt>
+							<dd>{{if main_equip.attribute_name}}{{>main_equip.attribute_name}}{{else}}−{{/if}}</dd>
+						</dl>
+						<dl>
+							<dt>特{{if main_equip.equip_type === 1}}攻{{else}}防{{/if}}</dt>
+							<dd>{{>main_equip.special_power}}</dd>
+							<dt>属性Lv</dt>
+							<dd>{{if main_equip.attribute_level}}{{>main_equip.attribute_level}}{{else}}−{{/if}}</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+			<div class="innerBtnBox">
+				<!-- 外すボタンはナシになりました -->
+				<button class="btn" data-href="deck/equip/change-list/{{>main_equip.equip_type}}/{{>#parent.data.query.deck_no}}/0/{{>main_equip.user_equip_no}}/">変更する</button>
+			</div>
+		  {{else}}
+		    なし
+		  {{/if}}
+		</section>
+	</div>
+
+	<h1 class="subHeader">
+		<span class="subHeaderBg_l"></span>
+		<span>サブ{{if equip_type === 1}}武器{{else}}防具{{/if}}(<span class="jsSubEquipNum">{{>(sub_equips.length)}}</span>/9)</span>
+		<span class="subHeaderBg_r"></span>
+	</h1>
+
+	<div class="equip_sub">
+		{{for sub_equips}}
+		<section class="contents contentsShadow statusData_icon subEquip jsSubEquip" data-equip-type="{{>equip_type}}" data-place-no="{{>#index +1}}" data-equip-name="{{>equip_name}}">
+			<h1>{{>equip_name}} ({{:~getRarityText(rarity)}})
+				{{growTypeTag grow_type=grow_type /}}</h1>
+			<div class="columnBox equipListStatus">
+				{{equipThumb equip_id=equip_id step=step size="medium" /}}
+				{{if protected_flg}}<span class="label36_r4 protect">保護</span>{{/if}}
+				<div class="contentsInner">
+					<dl>
+						<dt>Lv.</dt><dd>{{>equip_level}}/{{>max_level}}</dd>
+						<dt>成長</dt><dd><div class="gergeBgFrame"><div class="gergeBg"><span class="gerge equipGrowth{{if equip_exp===100}} max{{/if}}" style="width:{{>equip_exp}}%;"></span></div></div></dd><dd>{{>equip_exp}}%</dd>
+						<dt>必要{{if equip_type === 1}}武器{{else}}防具{{/if}}P</dt><dd>{{>equip_cost}}</dd>
+					</dl>
+					<div class="columnBox">
+						<dl>
+							<dt>{{if equip_type === 1}}攻撃{{else}}防御{{/if}}</dt>
+							<dd>{{>power}}</dd>
+							<dt>属性</dt>
+							<dd>{{if attribute_name}}{{>attribute_name}}{{else}}−{{/if}}</dd>
+						</dl>
+						<dl>
+							<dt>特{{if equip_type === 1}}攻{{else}}防{{/if}}</dt>
+							<dd>{{>special_power}}</dd>
+							<dt>属性Lv</dt>
+							<dd>{{if attribute_level}}{{>attribute_level}}{{else}}−{{/if}}</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+			<div class="innerBtnBox">
+				<button class="btn cancel jsButtonDeckDisarmConfirm">外す</button>
+		        <button class="btn" data-href="deck/equip/change-list/{{>equip_type}}/{{>#parent.parent.data.deck_no}}/{{>#index +1}}/{{>user_equip_no}}/">変更する</button>
+		        <button class="btn jsButtonDeckChangeMainConfirm">メインにする</button>
+			</div>
+		</section>
+		{{/for}}
+	</div>
+
+	<button class="btn large jsButtonEquipAdd" style="{{if sub_equips.length === 9}}display:none{{/if}}">装備{{if equip_type === 1}}武器{{else}}防具{{/if}}を追加する</button>
+
+</div>
+
+<div class="arrowLink">
+	<button class="link prev" data-href="deck/list/{{>equip_type}}/">{{if equip_type === 1}}武器{{else}}防具{{/if}}装備に戻る</button>
+</div>
+
+<hr>
+
+<div class="helpList">
+	<ul>
+		<li><button class="link" data-href="help/detail/605/">装備ってなに？</button></li>
+		<li><button class="link" data-href="help/detail/606/">武器P・防具Pってなに？</button></li>
+		<li><button class="link" data-href="help/detail/607/">武器デッキ・防具デッキってなに？</button></li>
+	</ul>
+</div>
+
+{{escape}}
+
+<script id="jsTemplatePopupDeckDisarm" type="text/x-jsrender">
+	<div class="modalInner">
+        <p>{{>equip_name}}を装備から外しますか？</p>
+		<div class="innerBtnBox">
+			<button class="btn cancel jsClosePopup">やめる</button>
+			<button class="btn jsClosePopup jsButtonDeckDisarmFix">外す</button>
+		</div>
+    </div>
+</script>
+
+<script id="jsTemplatePopupDeckChangeMainConfirm" type="text/x-jsrender">
+	<div class="modalInner">
+        <p>{{>equip_name}}をメイン装備にしますか？</p>
+		<div class="innerBtnBox smallBtn">
+			<button class="btn cancel jsClosePopup">やめる</button>
+			<button class="btn jsClosePopup jsButtonDeckChangeMainFix">メインにする</button>
+		</div>
+    </div>
+</script>
+
+<script id="jsTemplatePopupDeckChangeMainComplete" type="text/x-jsrender">
+	<div class="modalInner equipMainEdit">
+		<p>メイン装備しました。</p>
+		<button class="btn cancel jsButtonDeckChangeMainEnd">閉じる</button>
+	</div>
+</script>
+
+{{/escape}}

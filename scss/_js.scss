@@ -1,0 +1,188 @@
+/* Mainmenu */
+.jsMainmenu{
+	-webkit-transform : translate(0, -400px);
+	-webkit-transition : -webkit-transform 0.3s;
+
+	.jsMainmenuMypage{
+		z-index:5200;
+	}
+	.jsMainmenuClose{
+		z-index:5201;
+	}
+}
+.jsMainmenuBG{
+	z-index:5000;
+	display:none;
+	position:absolute;
+	left:0;
+	width:100%;
+	background-color:rgba(0, 0, 0, 0.5);
+}
+
+
+
+/* Popup */
+
+#jsPopups{
+	z-index:10000;
+	display:none;
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}
+
+.jsPopupContents .btns{
+	text-align:center;
+	.btn.close{
+		display:inline-block;
+		width: auto;
+	}
+}
+
+
+/* Loader */
+@-webkit-keyframes animationRolling {
+	0% { -webkit-transform:rotate(0deg); }
+	8% { -webkit-transform:rotate(30deg); }
+	17% { -webkit-transform:rotate(60deg); }
+	25% { -webkit-transform:rotate(90deg); }
+	33% { -webkit-transform:rotate(120deg); }
+	42% { -webkit-transform:rotate(150deg); }
+	50% { -webkit-transform:rotate(180deg); }
+	58% { -webkit-transform:rotate(210deg); }
+	67% { -webkit-transform:rotate(240deg); }
+	75% { -webkit-transform:rotate(270deg); }
+	83% { -webkit-transform:rotate(300deg); }
+	92% { -webkit-transform:rotate(330deg); }
+	100% { -webkit-transform:rotate(360deg); }
+}
+
+#jsLoaderS{
+	z-index: 20000;
+	display:none;
+	position:absolute;
+	width:64px;
+	height:64px;
+	background-image:inline-image('loader/loader_s_base.png');
+	background-repeat:no-repeat;
+	background-size:64px 64px;
+}
+#jsLoaderInnerS{
+	width:20px;
+	height:20px;
+	margin: 22px;
+	background-image:inline-image('loader/loader_s_circle.png');
+	background-repeat:no-repeat;
+	background-size:20px 20px;
+	-webkit-animation:animationRolling steps(1) 0.7s infinite;
+}
+
+.jsLoaderA{
+	width:20px;
+	height:20px;
+	margin: 20px auto;
+	background-image:inline-image('loader/loader_s_circle.png');
+	background-repeat:no-repeat;
+	background-size:20px 20px;
+	-webkit-animation:animationRolling steps(1) 0.7s infinite;
+}
+
+#fullScreen .jsLoaderA{
+	margin-top:-100px;
+}
+.jsLoaderDark{
+	background-image:inline-image('loader/loading_s_circle_dark.png');
+}
+
+#jsLoaderTransparent{
+	display : none;
+	z-index : 20000;
+	position : absolute;
+	top : 0;
+	left : 0;
+	width : 100%;
+}
+
+
+/* Guild */
+
+#guildBbs{
+	#jsPostTopicForm{
+		display:none;
+	}
+	.jsTopicComments{
+		display:none;
+	}
+}
+
+
+/* Tutorial */
+
+#jsTutorial{
+	position:relative;
+	margin:0 auto;
+	width:320px;
+	height:480px;
+}
+
+.jsTutorialProceed{
+	-webkit-animation:animationJumpingWait 0.5s infinite;
+}
+
+@-webkit-keyframes animationJumpingWait{
+	0% {
+		-webkit-transform : translate3d(0, -10px, 0);
+		-webkit-animation-timing-function: ease-in;
+	}
+	50% {
+		-webkit-transform : translate3d(0, 5px, 0);
+		-webkit-animation-timing-function: ease-out;
+	}
+	100% {
+		-webkit-transform : translate3d(0, -10px, 0);
+		-webkit-animation-timing-function: ease-in;
+	}
+}
+
+#jsTutorialSpotlight {
+	display:none;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:500;
+}
+
+.jsTutorialTapArrow {
+	-webkit-animation:animationJumpingWait 0.5s infinite;
+}
+
+/* Canvas */
+.jsCanvasTextBox{
+	display: none;
+	position:absolute;
+	width:310px;
+	height:61px;
+	margin: 5px;
+	padding: 5px;
+	bottom: 0;
+	@include box-sizing(border-box);
+	background:rgba(0,0,0,.7);
+	color: #fff;
+	font-size:80%;
+	line-height:17px;
+}
+
+.jsCanvasTextNext{
+	display: none;
+	position: absolute;
+	bottom: 5px;
+	right: 10px;
+	color: #fff;
+	font-size:80%;
+	line-height:17px;
+	-webkit-animation-name: opacity;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-iteration-count: infinite;
+}

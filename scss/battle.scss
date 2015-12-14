@@ -1,0 +1,1596 @@
+@charset "utf-8";
+@import "base";
+@import "ruleset";
+
+//page parts
+
+#battleTop{
+	.outerBtnBox{
+		width:95%;
+		margin:$content_margin auto;
+		.btn{
+			height:44px;
+		}
+	}
+	.btn.large{
+		margin:$content_margin_last auto;
+	}
+	.btn.large.ready,
+	.btn_l.onBattle{
+		position:relative;
+		margin:-22px auto 0 auto;
+		z-index:2;
+	}
+	.btn_l.onBattle{
+		display:block;
+		width:80%;
+
+		span:before{
+			@include visible_object(86px,0,64px,22px,auto);
+			@include backgroundSize("/parts/#{$guildBattle_parts}.png",-297px,-1px,no-repeat);
+		}
+	}
+	.postForm_icon{
+		textarea{
+			width:217px;
+			height:20px;
+		}
+		.btn {
+			line-height: 22px;
+		}
+	}
+	button.submit.btn.jsPostTopicCommentSubmit {
+		line-height: 18px;
+	}
+	.battleControl{
+		position:relative;
+		&.normal{
+			~ .outerBtnBox{
+				margin-top:44px;
+			}
+		}
+		&.ready,
+		&.onBattle{
+			.contents{
+				width:95%;
+				margin:0 auto 32px auto;
+			}
+			h1{
+				padding-left:65px;
+				span:before{
+					@include visible_object(8px,11px,56px,13px,auto);
+					@include backgroundSize("/parts/#{$guildBattle_parts}.png",-313px,-245px,no-repeat);
+				}
+			}
+			dt{
+				clear:none;
+				&:nth-of-type(3),
+				&:nth-of-type(4){
+					clear:both;
+				}
+				&:nth-of-type(2){
+					margin-left:48px;
+				}
+				&:nth-of-type(4){
+					//margin-left:26px;
+				}
+			}
+		}
+		&.ready{
+			.message{
+				top:0;
+				margin-top:$inner_margin;
+			}
+			.contents{
+				margin:$inner_margin auto $content_margin auto;
+			}
+			~ .outerBtnBox{
+				//margin-top:0;
+			}
+		}
+		&.onBattle{
+			.message{
+				top:0;
+				margin-top:$inner_margin;
+			}
+			~ .outerBtnBox{
+				margin:$inner_margin auto $content_margin auto;
+			}
+		}
+	}
+	.banner{
+		margin:$content_margin auto;
+	}
+	#ranking{
+		margin-bottom:40px;
+	}
+	#guildBbs{
+		margin-bottom:0;
+	}
+	.itemDetail{
+		.subHeader{
+			margin-bottom:$inner_margin;
+		}
+		.contents{
+			margin-bottom:$inner_margin;
+			&:last-of-type{
+				margin-bottom:$content_margin;
+			}
+		}
+		.rewardDescription{
+			width:95%;
+			margin:$inner_margin auto 0 auto;
+		}
+	}
+}
+.helpList.topHelp {
+	margin: 0 auto 16px auto;	
+}
+.pointResult{
+	position:relative;
+	top:136px;
+	color:#fff;
+	text-align:center;
+
+	h3{
+		margin-bottom:$inner_margin/2;
+		font-size:95%;
+		letter-spacing:0.1em;
+		text-shadow:-1px -1px 4px #000,1px -1px 4px #000,-1px 1px 4px #000,1px 1px 4px #000;
+
+		span{
+			display:inline-block;
+			margin:0 $inner_margin;
+			color:#ff0000;
+		}
+	}
+	table{
+		@include backgroundSize("/parts/#{$guildBattle_parts}.png",0,-179px,no-repeat);
+		display:block;
+		width:288px;
+		height:24px;
+		margin:0 auto;
+		font-size:120%;
+		color:#fff;
+	}
+	td{
+		width:144px;
+		line-height:25px;
+		text-align:center;
+
+		span{
+			display:inline-block;
+			margin-left:$inner_margin/2;
+		}
+	}
+	&.win{
+		.opponentGuildPoint{
+			color:#D8967F;
+		}
+	}
+	&.lose{
+		.myGuildPoint{
+			color:#80B6EC;
+		}
+	}
+	&.draw{
+		.opponentGuildPoint{
+			color:#D8967F;
+		}
+		.myGuildPoint{
+			color:#80B6EC;
+		}
+		p{
+			margin-top:$inner_margin/2;
+			@include text_shadow(0px,1px,1px);
+		}
+	}
+}
+.battleStatus{
+	position:relative;
+	@include backgroundSize("/background/bg_battle.jpg",0,0,no-repeat);
+	display:block;
+	height:270px;
+
+	&:after{
+		@include main_bg_bottom;
+	}
+	.battleName{
+		z-index:1;
+	}
+	.battlePeriod{
+		position:absolute;
+		left:8px;
+		top:48px;
+		font-size:80%;
+		color:#fff;
+		@include text_glow(#000);
+		z-index:1;
+
+		span{
+			display:inline-block;
+			margin-right:$inner_margin/2;
+			color:#ff0000;
+		}
+	}
+	.lastBattleResult{
+		position:relative;
+		top:72px;
+		width:140px;
+		margin:0 auto;
+
+		h2{
+			color:#fff;
+			font-size:85%;
+			text-align:center;
+		}
+		&.win{
+			span:before{
+				@include visible_object(0,20px,140px,56px,auto);
+				@include backgroundSize("/parts/#{$guildBattle_parts}.png",0,0,no-repeat);
+			}
+		}
+		&.lose{
+			span:before{
+				@include visible_object(0,20px,140px,56px,auto);
+				@include backgroundSize("/parts/#{$guildBattle_parts}.png",0,-59px,no-repeat);
+			}
+		}
+		&.draw{
+			width:180px;
+			span:before{
+				@include visible_object(0,20px,180px,56px,auto);
+				@include backgroundSize("/parts/#{$guildBattle_parts}.png",0,-119px,no-repeat);
+			}
+		}
+		&.noResult{
+			top:30px;
+			left:-30px;
+			display:block;
+			width:360px;
+			height:210px;
+			z-index:0;
+
+			&.normal{
+				@include backgroundSize("/parts/battle_top_chara_img.png",30px,-40px,no-repeat);
+			}
+			&.ready,
+			&.onBattle{
+				.metalPanel{
+					left:10px;
+					top:120px;
+					width:307px;
+					height:30px;
+					z-index:0;
+				}
+				.gergeTable{
+					margin-top:-13px;
+					width:100%;
+					font-size:75%;
+					z-index:1;
+
+					th{
+						width:25px;
+					}
+					.gergeBgFrame{
+						width:200px;
+					}
+				}
+				.hide:before{
+					@include visible_object(100px,55px,189px,39px,auto);
+					@include backgroundSize("/parts/text_opponent.png",0,0,no-repeat);
+				}
+				.pointResult{
+					left:9px;
+					top:110px;
+					table{
+						@include backgroundSize("/parts/#{$guildBattle_parts}.png",0,-208px,no-repeat);
+						tr{
+							visibility:hidden;
+						}
+					}
+				}
+			}
+			&.onBattle{
+				.hide:before{
+					@include visible_object(88px,40px,211px,66px,auto);
+					@include backgroundSize("/parts/text_onbattle.png",0,0,no-repeat);
+				}
+				.pointResult{
+					table{
+						@include backgroundSize("/parts/#{$guildBattle_parts}.png",0,-179px,no-repeat);
+						tr{
+							visibility:visible;
+						}
+					}
+				}
+			}
+		}
+	}
+	.history.link{
+		position:relative;
+		display:inline-block;
+		margin-top:$inner_margin;
+		padding-right:15px;
+		color:#fff;
+		@include text_shadow(0px,1px,1px);
+		&:after{
+			@include visible_object(auto,3px,9px,13px,auto);
+			right:0;
+			@include backgroundSize("/parts/#{$icon_parts}.png",-97px,-78px,no-repeat);
+		}
+	}
+}
+.nextBattleTime{
+	position:absolute;
+	left:32px;
+	top:-18px;
+	@include backgroundSize("/parts/#{$guildBattle_parts}.png",0,-310px,no-repeat);
+	display:block;
+	width:260px;
+	height:46px;
+	margin:0 auto;
+	font-size:80%;
+	color:#8C0000;
+	text-align:center;
+	p{
+		padding-top:$inner_margin/2;
+		span{
+			display:block;
+			&.numBox{
+				position:relative;
+				top:0;
+				@include display-box;
+				@include box-align(end);
+				@include box-pack(center);
+			}
+			&.numRed{
+				margin-left:1px;
+			}
+			&.numRedColon{
+				position:relative;
+				top:1px;
+				margin:0 3px 0 2px;
+			}
+			&.numRedTilde{
+				position:relative;
+				top:-3px;
+				margin:0 2px 0 4px;
+			}
+		}
+	}
+	+ .message{
+		top:36px;
+		height:50px;
+	}
+}
+.battleCaption{
+	.subHeader3{
+		margin:0 0 $inner_margin 0;
+	}
+	.listMenu{
+		margin:$inner_margin auto $content_margin auto;
+	}
+}
+body.android2 .nextBattleTime p span.numBox{
+	top:3px;
+}
+.battleCaption{
+	.subHeader{
+		margin-bottom:8px;
+	}
+	.subHeader3{
+		background-color:#544123;
+		&.caption0{
+			margin-top:16px;
+		}
+		+ .listMenu{
+			margin-bottom:16px;
+		}
+	}
+	.listMenu {
+		margin: 8px auto;
+	}
+	article{
+		position:relative;
+		color:#fff;
+
+		p{
+			position:relative;
+			top:15px;
+			height:90px;
+			font-size:85%;
+			line-height:1.7em;
+		}
+	}
+	/*
+	.caption1{
+		@include backgroundSize("/parts/battle_ready_caption_chara001.png",215px,bottom,no-repeat);
+		display:block;
+
+		p{
+			left:8px;
+		}
+	}
+	.caption2{
+		@include backgroundSize("/parts/battle_ready_caption_chara002.png",0,bottom,no-repeat);
+		display:block;
+
+		h1{
+			margin-top:6px;
+		}
+		p{
+			left:115px;
+		}
+	}
+	.caption3{
+		@include backgroundSize("/parts/battle_ready_caption_chara003.png",right,bottom,no-repeat);
+		display:block;
+
+		h1{
+			margin-top:6px;
+		}
+		p{
+			left:8px;
+		}
+	}
+	.caption3{
+		@include backgroundSize("/parts/battle_ready_caption_chara003.png",right,bottom,no-repeat);
+		display:block;
+
+		h1{
+			margin-top:6px;
+		}
+		p{
+			left:8px;
+		}
+	}
+	.caption4{
+		@include backgroundSize("/parts/battle_ready_caption_chara004.png",0,bottom,no-repeat);
+		display:block;
+
+		h1{
+			margin-top:6px;
+		}
+		p{
+			left:115px;
+		}
+	}
+	.caption5{
+		@include backgroundSize("/parts/battle_ready_caption_chara005.png",right,bottom,no-repeat);
+		display:block;
+
+		h1{
+			margin-top:6px;
+		}
+		p{
+			left:8px;
+		}
+	}
+	.caption6{
+		@include backgroundSize("/parts/battle_ready_caption_boss.png",left,bottom,no-repeat);
+		display:block;
+
+		h1{
+			margin-top:6px;
+		}
+		p{
+			left:115px;
+		}
+	}
+	*/
+}
+
+/* situation list */
+#situationList{
+	margin:$inner_margin 0;
+
+	~ .banner{
+		margin-bottom:$content_margin;
+	}
+}
+.arrowLink.btTop {
+	margin-bottom:8px;
+}
+.helpList.situationHelp {
+	margin-top:16px;
+}
+.match{
+	.contents{
+		width:95%;
+		margin:0 auto $inner_margin auto;
+	}
+	h1{
+		margin:0 $inner_margin $inner_margin $inner_margin;
+		padding:$inner_margin 0 $inner_margin/2 0;
+		border-bottom:1px solid #B9A46B;
+
+		span{
+			display:inline-block;
+			margin-right:$content_margin;
+		}
+	}
+	.pointResult{
+		top:0;
+		dl{
+			color:#544123;
+		}
+		dt{
+			position:relative;
+			float:left;
+			display:block;
+			width:78px;
+			height:20px;
+			margin-left:8px;
+
+		}
+		dd{
+			float:left;
+			display:block;
+			font-size:90%;
+			span{
+				display:inline-block;
+				margin-right:$inner_margin;
+				color:#8C0000;
+			}
+		}
+		&.win{
+			.hide:before{
+				@include visible_object(0,0,70px,19px,auto);
+				@include backgroundSize("/parts/#{$guildBattle_parts}.png",-144px,0,no-repeat);
+			}
+		}
+		&.lose{
+			.hide:before{
+				@include visible_object(0,0,71px,19px,auto);
+				@include backgroundSize("/parts/#{$guildBattle_parts}.png",-143px,-21px,no-repeat);
+			}
+		}
+		&.draw{
+			.hide:before{
+				@include visible_object(0,0,71px,19px,auto);
+				@include backgroundSize("/parts/#{$guildBattle_parts}.png",-218px,-21px,no-repeat);
+			}
+		}
+		&.onBattle{
+			.hide:before{
+				@include visible_object(0,0,70px,19px,auto);
+				@include backgroundSize("/parts/#{$guildBattle_parts}.png",-144px,-43px,no-repeat);
+			}
+			.btn{
+				display:block;
+				width:60%;
+				margin:$inner_margin auto 0 auto;
+			}
+		}
+		&.opponentDecision{
+			dl{
+				margin-bottom:8px;
+			}
+			.hide:before{
+				@include visible_object(0,0,70px,19px,auto);
+				@include backgroundSize("/parts/#{$guildBattle_parts}.png",-144px,-64px,no-repeat);
+			}
+			.btn{
+				display:block;
+				width:60%;
+				margin:$inner_margin auto 0 auto;
+			}
+		}
+		&.opponentSelect{
+			.hide:before{
+				@include visible_object(0,0,70px,19px,auto);
+				@include backgroundSize("/parts/#{$guildBattle_parts}.png",-218px,0,no-repeat);
+			}
+		}
+		&.arrange{
+			.hide:before{
+				@include visible_object(0,0,71px,19px,auto);
+				@include backgroundSize("/parts/#{$guildBattle_parts}.png",-217px,-42px,no-repeat);
+			}
+		}
+		table{
+			margin-top:$inner_margin;
+		}
+		.clearfix{
+			@include clearfix;
+		}
+	}
+	.link{
+		position:relative;
+		display:block;
+		width:95%;
+		height:40px;
+		margin:$inner_margin $inner_margin 0 $inner_margin;
+		border-top:1px solid #B9A46B;
+		color:inherit;
+		text-align:left;
+		line-height:40px;
+
+		&:after{
+			@include visible_object(auto,50%,9px,13px,auto);
+			right:0;
+			margin-top:-8px;
+			@include backgroundSize("/parts/#{$icon_parts}.png",-97px,-78px,no-repeat);
+		}
+
+		&.disable{
+			color:#B9A46B;
+			pointer-events:none;
+
+			&:after{
+				background:none;
+			}
+		}
+	}
+}
+/* situation_detail */
+.resultStatus{
+	@extend .match;
+	margin:$inner_margin auto $content_margin auto;
+	.contents{
+		padding:8px 0;
+	}
+	~ .moreLink{
+		margin-top:-16px;
+	}
+	~ .banner{
+		margin-bottom:$content_margin_last;
+	}
+}
+
+/* schedule List */
+#schedule{
+	margin:8px 0 0 0;
+
+	.accordion{
+
+		&.empty{
+
+			h1:after{
+				display:none;
+			}
+		}
+
+		.contents{
+			position:relative;
+			margin-bottom:$inner_margin;
+		}
+
+		h1{
+			padding-bottom:$inner_margin/2;
+			border-bottom:1px solid #B9A46B;
+
+			span{
+				position:relative;
+				display:inline-block;
+				margin-left:$content_margin_last;
+
+				&:before{
+					@include visible_object(-18px,7px,13px,12px,auto);
+					@include backgroundSize("/parts/#{$icon_parts}.png",-14px,-78px,no-repeat);
+				}
+			}
+		}
+		.match{
+			margin-top:$inner_margin;
+		}
+	}
+	.pointResult{
+
+		dt{
+			margin-left:0;
+		}
+	}
+	.accordionInner{
+
+		p{
+			font-size:85%;
+			color:#333;
+			text-align:left;
+		}
+	}
+	.link{
+		width:100%;
+		margin:8px 0 -8px 0;
+		color:#544123;
+	}
+	~ .listMenu{
+		margin-top:$inner_margin;
+	}
+	~ .helpList{
+		margin-top:$content_margin;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* navico announcement about battle situation */
+$moveStartPosition: 700px;
+$centerPosition: 0px - $moveStartPosition;
+$moveEndPosition: $centerPosition - $moveStartPosition;
+$beforeCenterPosition: $centerPosition + 4px;
+$afterCenterPosition: $centerPosition - 4px;
+.navicoAnnouncementOfBattle{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	margin-top: 58px;
+	margin-left:$moveStartPosition + 6px;
+	z-index: 150;
+	display: none;
+}
+.moveNavicoAnnounce{
+	-webkit-animation-name: moveNavicoAnnouncementOfBattle;
+	animation-name: moveNavicoAnnouncementOfBattle;
+	-webkit-animation-duration: 5.5s;
+	animation-duration: 5.5s;
+	-webkit-animation-iteration-count: 1;
+	animation-iteration-count: 1;
+	-webkit-animation-timing-function: cubic-bezier;
+	animation-timing-function: cubic-bezier;
+}
+.navicoWin{
+	@include backgroundSize("/battle/recommend_01.png",0px,0px,no-repeat);
+}
+.navicoLose{
+	@include backgroundSize("/battle/recommend_02.png",0px,0px,no-repeat);
+}
+.navicoApCure{
+	@include backgroundSize("/battle/recommend_03.png",0px,0px,no-repeat);
+}
+.navicoHpCure{
+	@include backgroundSize("/battle/recommend_04.png",0px,0px,no-repeat);
+}
+.navicoYell{
+	@include backgroundSize("/battle/recommend_05.png",0px,0px,no-repeat);
+}
+.navicoAttack{
+	@include backgroundSize("/battle/recommend_06.png",0px,0px,no-repeat);
+}
+.navicoWait{
+	@include backgroundSize("/battle/recommend_07.png",0px,0px,no-repeat);
+}
+.navicoTensionMax{
+	@include backgroundSize("/battle/recommend_08.png",0px,0px,no-repeat);
+}
+.navicoSpecialYell{
+	@include backgroundSize("/battle/recommend_09.png",0px,0px,no-repeat);
+}
+.navicoMoreAttack{
+	@include backgroundSize("/battle/recommend_10.png",0px,0px,no-repeat);
+}
+
+@-webkit-keyframes moveNavicoAnnouncementOfBattle{
+	0%{-webkit-transform: translateX($moveStartPosition);}
+	35%{-webkit-transform: translateX($moveStartPosition);}
+	48%{-webkit-transform: translateX($beforeCenterPosition);}
+	50%{-webkit-transform: translateX($centerPosition);}
+	80%{-webkit-transform: translateX($centerPosition);}
+	82%{-webkit-transform: translateX($afterCenterPosition);}
+	100%{-webkit-transform: translateX($moveEndPosition);}
+}
+
+/* battle */
+#battle{
+	@include backgroundSize("/background/bg_battle.jpg",center,0,no-repeat);
+	position:relative;
+	display:block;
+	z-index:0;
+
+	&:after{
+		@include main_bg_bottom;
+	}
+
+	.battleInner{
+		position:relative;
+		height:272px;
+		margin:0 auto;
+		@include box-sizing(border-box);
+		padding-top:10px;
+	}
+	canvas{
+		position:relative;
+		top:-16px;
+		-webkit-transform:scale(1);
+	}
+	.jsLoaderBox{
+		position:absolute;
+		@include box-sizing(border-box);
+		top:100px;
+		left:135px;
+		width:60px;
+		height:40px;
+		padding:8px 0;
+		@include border-radius(5px);
+		background:rgba(0,0,0,.5);
+		.jsLoaderA{
+			margin:0 auto;
+		}
+	}
+	.gergeBox{
+		position:absolute;
+		left:8px;
+		bottom:29px;
+		z-index:2;
+	}
+	.reload{
+		span:before{
+			@include visible_object(138px,4px,48px,48px,4);
+			display: block;
+			@include backgroundSize("/parts/#{$guildBattle_parts}.png",-264px,-310px,no-repeat);
+		}
+	}
+	.reloadTime{
+		position:absolute;
+		left:130px;
+		top:40px;
+		width:60px;
+		height:24px;
+		background-color:rgba(0,0,0,0.5);
+		@include border-radius(0px 0px 8px 8px);
+		font-size:60%;
+		color:#fff;
+		@include text-glow(#000);
+		line-height:34px;
+		text-align:center;
+		z-index:2;
+	}
+}
+
+#battleHeader{
+	@include backgroundSize("/parts/#{$guildBattle_parts}.png",0,-237px,no-repeat);
+	position:absolute;
+	top:10px;
+	left:8px;
+	@include display-box;
+	@include box-align(center);
+	width:304px;
+	height:32px;
+	margin:0 auto;
+	color:#fff;
+	z-index:3;
+
+	.myGuildName{
+		@include box-flex(1);
+		width:1px;
+		height:32px;
+		display:block;
+		h1{
+			position:relative;
+			left:4px;
+			top:2px;
+			width:126px;
+			font-size:65%;
+			@include text_shadow(-1px,-1px,1px,rgba(0,0,0,0.5));
+			@include text_overflow;
+		}
+		p{
+			position:relative;
+			left:5px;
+			top:2px;
+			width:126px;
+			font-size:80%;
+			font-weight:bold;
+
+			span{
+				font-size:110%;
+			}
+		}
+		&.lose p{
+			color:#999;
+		}
+	}
+	.opponentGuildName{
+		@extend .myGuildName;
+		display:block;
+
+		h1{
+			left:22px;
+			text-align:right;
+		}
+		p{
+			left:22px;
+			text-align:right;
+		}
+	}
+}
+#battleStatus{
+	position:absolute;
+	top:142px;
+	width:100%;
+	z-index:3;
+	.combo{
+		width:88px;
+		&.attack,
+		&.yell{
+			position:absolute;
+			@include display-box;
+			@include box-align(center);
+			&:before{
+				@include visible_object(4px,21px,32px,11px,auto);
+				@include backgroundSize("/parts/#{$guildBattle_parts}.png",-255px,-119px,no-repeat);
+			}
+			.action{
+				position:relative;
+				left:4px;
+				display:block;
+				width:30px;
+				height:10px;
+				background-color:#ff0000;
+				@include border-radius(4px);
+				span:before{
+					@include backgroundSize("/parts/#{$guildBattle_parts}.png",-255px,-88px,no-repeat);
+					@include visible_object(6px,1px,16px,8px,auto);
+				}
+			}
+			.chain{
+				position:relative;
+				left:8px;
+				@include display-box;
+				@include box-align(end);
+				@include box-pack(center);
+				width:50px;
+				height:30px;
+
+				.numWhite{
+					margin-left:-6px;
+					&:first-of-type{
+						margin-left:0;
+					}
+				}
+			}
+			.remainingTime{
+				position:absolute;
+				left:-6px;
+				top:34px;
+				width:88px;
+				height:30px;
+				background-color:rgba(0,0,0,0.5);
+				@include border-radius(8px);
+				font-size:60%;
+				color:#fff;
+				@include text_glow(#000000);
+				.remainingTimeInner{
+					margin:0 8px 0 12px;
+				}
+				.rest{
+					position:relative;
+					left:16px;
+					display:block;
+					font-weight:bold;
+					font-size:125%;
+					&:before{
+						@include backgroundSize("/parts/#{$guildBattle_parts}.png",-235px,-67px,no-repeat);
+						@include visible_object(-16px,1px,14px,14px,auto);
+					}
+				}
+				&.reset{
+					.rest{
+						color:#666;
+						&:before{
+							background:url("#{$img_path}/parts/#{$guildBattle_parts}.png") -218px -67px no-repeat;
+						}
+					}
+				}
+				&.chance{
+					background-color:transparent;
+					font-weight:bold;
+					text-shadow:0px 1px 1px #d90000,0px 0px 1px #d90000,1px 0px 1px #d90000,0px -1px 1px #d90000,-1px -1px 1px #d90000,-1px 0px 1px #d90000;
+
+					@include backgroundSize("/parts/#{$guildBattle_parts}.png",-304px,-179px,no-repeat);
+					.rest:before{
+						background:url("#{$img_path}/parts/#{$guildBattle_parts}.png") -253px -67px no-repeat;
+					}
+				}
+			}
+		}
+		&.yell{
+			right:-6px;
+			@include box-direction(reverse);
+			&:before{
+				left:auto;
+				right:8px;
+			}
+			.action{
+				background-color:#008C23;
+				left:0;
+				right:8px;
+				span:before{
+					width:24px;
+					left:3px;
+					@include backgroundSize("/parts/#{$guildBattle_parts}.png",-256px,-104px,no-repeat);
+				}
+			}
+			.chain{
+				left:-2px;
+			}
+			.remainingTime{
+				left:auto;
+				.remainingTimeInner{
+					margin:0 12px 0 8px;
+				}
+				&.chance{
+					@include backgroundSize("/parts/#{$guildBattle_parts}.png",-304px,-212px,no-repeat);
+				}
+			}
+		}
+	}
+}
+#battleMenu{
+	top:-5px;
+	margin:0 auto;
+
+	.innerBtnBox{
+		width:100%;
+		margin:0;
+
+		.btn,
+		.btn_l{
+			margin-right:0;
+		}
+	}
+}
+.battleActionBtn{
+	position:relative;
+	@include display-box;
+	@include box-align(center);
+	@include box-pack(center);
+	width:100%;
+	margin:-40px 0 $inner_margin 0;
+
+	.btn_l{
+		display:block;
+		@include box-flex(1);
+		width:1px;
+		margin-left:-2px;
+
+		&:first-of-type{
+			margin-left:0;
+		}
+		.expend{
+			position:relative;
+			top:11px;
+			font-size:75%;
+			font-weight:normal !important;
+			@include text_shadow(-1px,-1px,1px,rgba(0,0,0,0.5));
+		}
+		&.disable{
+			@include borderImage(inline-image("parts/bg_btn_l_disable.png"), 22 26 24 26, stretch !important, 11px 13px 12px 13px);
+		}
+		&.regular .hide:before{
+			@include visible_object(15px,-5px,35px,20px,auto);
+			@include backgroundSize("/parts/#{$guildBattle_parts}.png",-297px,-28px,no-repeat);
+		}
+		&.regular.disable .hide:before{
+			top:-4px;
+			@include backgroundSize("/parts/#{$guildBattle_parts}.png",-374px,-26px,no-repeat);
+		}
+		&.special{
+			&.hide:before,
+			&.ability_close{
+				.hide:before{
+					@include visible_object(-3px,-5px,70px,33px,auto);
+					@include backgroundSize("/parts/#{$guildBattle_parts}.png",-297px,-52px,no-repeat);
+				}
+			}
+			&.ability_open{
+				.hide:before{
+					@include visible_object(-3px,-5px,70px,33px,auto);
+					@include backgroundSize("/parts/#{$guildBattle_parts}.png",-297px,-88px,no-repeat);
+				}
+			}
+		}
+		&.recovery .hide:before{
+			@include visible_object(5px,-5px,57px,20px,auto);
+			@include backgroundSize("/parts/#{$guildBattle_parts}.png",-297px,-149px,no-repeat);
+		}
+		&.recovery.disable .hide:before{
+			top:-4px;
+			@include backgroundSize("/parts/#{$guildBattle_parts}.png",-374px,-52px,no-repeat);
+		}
+		&.yell .hide:before{
+			@include visible_object(7px,-5px,52px,19px,auto);
+			@include backgroundSize("/parts/#{$guildBattle_parts}.png",-297px,-125px,no-repeat);
+		}
+		&.yell.disable .hide:before{
+			left:9px;
+			top:-4px;
+			@include backgroundSize("/parts/#{$guildBattle_parts}.png",-375px,-2px,no-repeat);
+		}
+	}
+	.frontYell{
+		position:absolute;
+		left:8px;
+		top:3px;
+		width:76px;
+		height:41px;
+		@include backgroundSize("/parts/#{$guildBattle_parts}.png",-374px,-76px,no-repeat);
+		z-index:10;
+		.expend{
+			position:relative;
+			top:10px;
+			left:2px;
+			display:block;
+			-webkit-transform:rotate(-5deg);
+			transform:rotate(-5deg);
+			font-size:75%;
+			color:#fff;
+		}
+		&.disable{
+			@include backgroundSize("/parts/#{$guildBattle_parts}.png",-374px,-119px,no-repeat);
+			pointer-events:none;
+		}
+	}
+}
+.abilityList{
+	margin:0 0 $content_margin 0;
+	font-size:90%;
+
+	article{
+		position:relative;
+		margin-bottom:$inner_margin;
+		border:1px solid #D0D0D0;
+		@include border-radius(8px);
+		@include box_shadow(inset 0 1px 1px,#FEFEFE);
+
+		&:after{
+			@include visible_object(0,0,100%,100%,11);
+			bottom:-1px;
+			@include border-radius(8px);
+			@include box_shadow(0 1px 1px,#FEFEFE);
+		}
+	}
+	.abilityInner{
+		margin:$inner_margin;
+	}
+	h1 {
+		font-weight: bold;
+	}
+	h1,dt{
+		color:#8C0000;
+	}
+	p{
+		margin:$inner_margin/2 0;
+
+		&.noAbility{
+			margin:16px 0;
+			color:#999;
+			text-align:center;
+		}
+	}
+	.description{
+		position:relative;
+		@include display-box;
+		@include box-align(center);
+		height:39px;
+		background-color:#ffffff;
+		@include border-radius(8px);
+
+		.btn_l{
+			position:absolute;
+			right:-4px;
+			top:-3px;
+			width:90px;
+			height:45px;
+			font-size:100%;
+			z-index:15;
+		}
+	}
+	dl{
+		@include display-box;
+		margin:0 0 0 $inner_margin;
+		dt{
+			margin-right:$inner_margin;
+			vertical-align:top;
+		}
+		dd{
+			margin-right:140px;
+			vertical-align:top;
+		}
+		.disable{
+			color:#ff0000;
+		}
+	}
+}
+#myStatus{
+	margin-top:-10px;
+	z-index:0;
+	.columnBox{
+		padding:0;
+		height: 74px;
+	}
+	h1{
+		position:relative;
+		color:#544123;
+		font-size:90%;
+		@include text_overflow;
+		font-weight: bold;
+	}
+	.formation{
+		display:block;
+		float:left;
+		width:40px;
+		height:18px;
+		margin-right:$inner_margin/2;
+		@include box-shadow(1px 1px 2px,rgba(0,0,0,0.3));
+		border-radius: 9px;
+		&.vanGuard{
+			background-color:#0085B2;
+			.hide:before{
+				@include visible_object(9px,4px,20px,10px,auto);
+				@include backgroundSize("/parts/#{$guildBattle_parts}.png",-265px,-147px,no-repeat);
+			}
+		}
+		&.rearGuard{
+			background-color:#008C46;
+			.hide:before{
+				@include visible_object(9px,4px,20px,10px,auto);
+				@include backgroundSize("/parts/#{$guildBattle_parts}.png",-265px,-165px,no-repeat);
+			}
+		}
+	}
+	.gergeTable{
+		width:100%;
+		margin-top:$inner_margin/2;
+
+		th{
+			width:2em;
+		}
+		td{
+			text-align:left;
+		}
+		.gergeBox{
+			width:114px;
+		}
+	}
+	.gergeBgFrame{
+		width:110px;
+		margin-right:$inner_margin/2;
+	}
+	.gergeBg{
+		width:106px;
+	}
+	.gerge{
+		z-index:0;
+	}
+	.overMaximum{
+		color: #d80000;
+		font-weight: bold;
+	}
+	.denominator{
+		color: #777;
+	}
+	#jobStatusFrames {
+		position:relative;
+		background: #ccc;
+		border:1px solid #bbb;
+		@include border-radius(8px);
+		article {
+			padding: 4px 8px 0 8px;
+			h1 {
+				color: #333333;
+				font-weight: bold;
+				font-size: 85%;
+			}
+			.jobTables {
+				line-height: 16px;
+				tr {
+					width: 540px;
+					font-size: 80%;
+				}
+				td {
+					padding-left: 4px;
+				}
+				.abilityGet {
+					.abliIco {
+						padding-left: 0px;
+					}
+					.abilitiesIco {
+						li {
+							display: inline-block;
+							text-indent: -99999px;
+						}
+						.mastered {
+							@include backgroundSize_dataURI('parts/job_icon_mastered.png',0,2px,no-repeat);
+							width: 14px;
+						}
+						.unmastered {
+							@include backgroundSize_dataURI('parts/job_icon_unmastered.png',0,2px,no-repeat);
+							width: 14px;
+						}
+					}
+					.nextCnt {
+						padding-left: 8px;
+					}
+				}
+			}
+		}
+		&:after, &:before {
+			bottom: 100%;
+			border: solid transparent;
+			content: " ";
+			height: 0;
+			width: 0;
+			position: absolute;
+			pointer-events: none;
+		}
+		&:after {
+			border-color: rgba(204, 204, 204, 0);
+			border-bottom-color: #ccc;
+			border-width: 12px;
+			left: 10%;
+			margin-left: -12px;
+		}
+		&:before {
+			border-color: rgba(187, 187, 187, 0);
+			border-bottom-color: #bbb;
+			border-width: 13px;
+			left: 10%;
+			margin-left: -13px;
+		}
+	}
+}
+
+.btMargin {
+	margin: $content_margin auto $content_margin auto;
+}
+/* strategy */
+#strategy{
+	position:relative;
+	width:95%;
+	margin:-$content_margin auto $content_margin_last auto;
+	padding:$inner_margin 0 $inner_margin/2 0;
+	text-align:center;
+	p{
+		margin:$inner_margin $inner_margin $inner_margin/2;
+	}
+
+	/* strategy change */
+	&.change{
+		padding-bottom:$inner_margin;
+
+		.selectBox{
+			width:auto;
+			margin:$inner_margin $inner_margin $inner_margin/2;
+		}
+	}
+}
+/* situation */
+#situation{
+	.tabNav{
+		margin-bottom:$inner_margin;
+		li{
+			position:relative;
+			overflow:inherit;
+		}
+		.badge{
+			position:absolute;
+			right:-7px;
+			top:-5px;
+			display:block;
+			width:27px;
+			height:28px;
+			@include backgroundSize_dataURI("/parts/bg_notify_count.png",0,0,no-repeat);
+			@include txtset(90%,#ffffff);
+			font-weight:bold;
+			text-align:center;
+			line-height:25px;
+		}
+	}
+	.situationList{
+		.allCheck{
+			width:100%;
+			margin-bottom:$inner_margin;
+		}
+	}
+	.arrowLink{
+		margin-bottom:$content_margin;
+	}
+}
+.situation{
+	margin-top:$inner_margin;
+	padding:0;
+
+	.contents{
+		margin:0 auto $inner_margin auto;
+		padding:$inner_margin 0;
+
+		&.opponent{
+			margin-left:0;
+		}
+	}
+}
+.fellow{
+	h2,
+	dd span{
+		color:#2A80D0;
+	}
+	dl{
+		margin:-21px 0 0 50px;
+	}
+}
+.opponent{
+	h2,
+	dd span{
+		color:#B42C00;
+	}
+	dl{
+		margin:-21px 50px 0 0;
+	}
+}
+/* bbs */
+#guildBbs{
+
+	.postForm_icon{
+		margin:8px auto 4px auto;
+	}
+}
+
+// only battle page
+.subHeader_battle{
+	position:relative;
+	width:100%;
+	height: 32px;
+	@include text_shadow(0, -1px, 1px, #333);
+	font-weight:bold;
+	color:#f3de9f;
+	text-align: center;
+	line-height: 32px;
+
+	.subHeaderBg{
+		@include box-sizing(border-box);
+		@include borderImage(inline-image("parts/bg_subheader.png"), 31 47 36 46, stretch, 16px 23px 18px 23px, inherit);
+		position: absolute;
+		display:block;
+		width:100%;
+		height: 32px;
+		z-index:3;
+	}
+	.subHeaderBg_l {
+		@include backgroundSize("/parts/#{$icon_parts}.png", -104px, -31px, no-repeat);
+		position: absolute;
+		left: 18px;
+		top: 4px;
+		display: block;
+		width: 23px;
+		height: 24px;
+		z-index: 2;
+	}
+	.subHeaderBg_r {
+		@include backgroundSize("/parts/#{$icon_parts}.png", -104px, -56px, no-repeat);
+		position: absolute;
+		right: 18px;
+		top: 4px;
+		display: block;
+		width: 23px;
+		height: 24px;
+		z-index: 2;
+	}
+	span:nth-of-type(3) {
+		position: absolute;
+		left: 16px;
+		top: 0;
+		display: block;
+		width: 291px;
+		height: 32px;
+		background-color: #8c0000;
+		@include border-radius(10px);
+		z-index: 1;
+	}
+}
+
+/* cheerTargetSelect */
+#cheer{
+	.metalPanel{
+		margin:24px auto $content_margin_last auto;
+		height:65px;
+		z-index:0;
+
+		table{
+			margin-top:-20px;
+			width:100%;
+		}
+		tr:nth-of-type(2){
+
+			td{
+				text-align:center;
+			}
+		}
+		th{
+			padding-right:$content_margin_last;
+		}
+		.headline{
+			display:inline-block;
+			margin-right:$inner_margin;
+			color:#8C0000;
+		}
+		.base{
+			color:#999;
+		}
+	}
+
+	#ranking{
+		.contents{
+			width:95%;
+			margin:0 auto 8px auto;
+		}
+
+		.subHeader{
+			margin-bottom:$content_margin;
+
+			&:nth-of-type(2){
+				margin-top:$content_margin_last;
+			}
+		}
+		article{
+
+			h1{
+				position:relative;
+				padding:0;
+
+				.rank{
+					margin:0 $inner_margin 0 27px;
+					color:#8C0000;
+
+					&:before{
+						@include visible_object(0,2px,24px,14px,auto);
+						@include backgroundSize("/parts/#{$icon_parts}.png",-78px,-3px,no-repeat);
+					}
+				}
+			}
+			.contentsInner{
+
+				dt{
+					&:nth-of-type(2){
+						clear:none;
+						margin-left:$inner_margin;
+					}
+				}
+			}
+			.btn{
+				width:50%;
+			}
+		}
+		.moreLink{
+			margin-top:$content_margin;
+		}
+	}
+	#newArrival{
+
+		.subHeader2{
+			margin:$content_margin_last 0 0 0;
+		}
+		.contents{
+			width:95%;
+			margin:$content_margin auto $inner_margin auto;
+			padding-bottom:0;
+		}
+		.contentsInner{
+
+			dt{
+				&:nth-of-type(3),
+				&:nth-of-type(5)
+				{
+					clear:none;
+					margin-left:$inner_margin;
+				}
+			}
+		}
+	}
+}

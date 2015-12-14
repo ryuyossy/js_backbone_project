@@ -1,0 +1,105 @@
+{
+    "status": 200,
+    "positions": [
+        {
+            "current_num": 1,
+            "limit_num": 1,
+            "position_description": "ギルド設立者でマスター権限を持つ。",
+            "position_id": 1,
+            "position_name": "ギルドマスター",
+            "user": {
+                "avatar_id": "11001",
+                "job_name": "みならい剣士",
+                "tp": 100,
+                "user_id": 1,
+                "user_name": "馬場浩介1"
+            }
+        },
+        {
+            "current_num": 1,
+            "limit_num": 1,
+            "position_description": "マスター権限を持つ。",
+            "position_id": 2,
+            "position_name": "ギルド執行役",
+            "user": {
+                "avatar_id": "11002",
+                "job_name": "みならいハンター",
+                "tp": 80,
+                "user_id": 2,
+                "user_name": "馬場浩介2"
+            }
+        },
+        {
+            "current_num": 0,
+            "limit_num": 10,
+            "position_description": "",
+            "position_id": 3,
+            "position_name": "期待の戦士",
+            "user": null
+        },
+        {
+            "current_num": 0,
+            "limit_num": 10,
+            "position_description": "",
+            "position_id": 3,
+            "position_name": "期待の戦士",
+            "user": null
+        },
+        {
+            "current_num": 0,
+            "limit_num": 10,
+            "position_description": "",
+            "position_id": 3,
+            "position_name": "期待の戦士",
+            "user": null
+        },
+        {
+            "current_num": 0,
+            "limit_num": 10,
+            "position_description": "",
+            "position_id": 3,
+            "position_name": "期待の戦士",
+            "user": null
+        },
+        {
+            "current_num": 0,
+            "limit_num": 10,
+            "position_description": "",
+            "position_id": 3,
+            "position_name": "期待の戦士",
+            "user": null
+        },
+        {
+            "current_num": 0,
+            "limit_num": 10,
+            "position_description": "",
+            "position_id": 3,
+            "position_name": "期待の戦士",
+            "user": null
+        },
+        {
+            "current_num": 0,
+            "limit_num": 5,
+            "position_description": "",
+            "position_id": 4,
+            "position_name": "不屈な冒険家",
+            "user": null
+        },
+        {
+            "current_num": 0,
+            "limit_num": 5,
+            "position_description": "",
+            "position_id": 4,
+            "position_name": "不屈な冒険家",
+            "user": null
+        }
+    ],
+    "master_priv_flg": true,
+    "user" : {
+        "avatar_id": "11001",
+        "job_name": null,
+        "tp": null,
+        "user_id": 1,
+        "user_name": null
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "status": 200,
+    "changeable": true,
+    "ability_effect_type": 1,
+    "abilities": [
+        {
+            "id": 1,
+            "name": "石を投げる",
+            "equip_point": 10,
+            "tp_cost": 15,
+            "description": "後衛からの敵単体に通常攻撃を行う",
+            "ancestry": "力",
+            "same_ancestry": false,
+            "set_type": 1,
+            "lack_cost":true
+        },
+        {
+            "id": 51,
+            "name": "三段突き",
+            "equip_point": 30,
+            "tp_cost": 20,
+            "description": "敵単体へ連続攻撃。コンボ数+2",
+            "ancestry": "技",
+            "same_ancestry": true,
+            "set_type": 1,
+            "lack_cost":false
+        }
+    ],
+    "more_flg": true
+}

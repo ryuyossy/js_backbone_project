@@ -1,0 +1,29 @@
+{
+	"status": 200,
+    "treasure": {
+        "treasure_name": "紫の水晶",
+        "own_num": 2,
+        "description": "紫の水晶の説明紫の水晶の説明紫の水晶の説明紫の水晶の説明",
+        "treasure_id": 14,
+        "series_id": 1,
+        "mission_stage_enabled":true
+    },
+    "members": [
+		{
+			"user_id": 2,
+			"user_name": "me",
+			"level": 10,
+			"avatar_id": "10001",
+			"count": 3,
+			"collect_status": "そこそこ集めた"
+		},
+		{
+			"user_id": 3,
+			"user_name": "awawawa",
+			"level": 9,
+			"avatar_id": "10001",
+			"count": 10,
+			"collect_status": "コンプ済み"
+		}
+    ]
+}

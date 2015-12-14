@@ -1,0 +1,18 @@
+{
+    "status" : 200,
+    "guild_name" : "サイババ団",
+    "guild_rank" : "A",
+    "rank_status" : "ランクステイ圏内",
+    "rank_rest_days" : "3",
+    "battle_start_rest" : "05:44",
+    "battle_end_rest" : "",
+    "user_name": "たけさん",
+    "user_id": 28,
+    "avatar_id": "10001",
+    "guild_name": "たけさん",
+    "guild_rank": "F",
+    "rank_status": "ランキング圏内",
+    "rank_rest_days": 0,
+    "battle_start_rest": "45:47",
+    "battle_end_rest": null
+}

@@ -1,0 +1,63 @@
+<h1 class="mainHeader">ギフト</h1>
+
+<div class="statusLine">
+	<p>
+		<span class="headline">未開封ギフト</span>{{>unopened_num}}<span class="denominator">/{{>max_unopened_num}}</span>
+	</p>
+</div>
+
+<div id="giftTop">
+	<div class="jsTabs">
+		<div class="tabNav">
+		<ul class="jsTabButtons">
+			<li><button class="select">未開封</button></li>
+			<li><button>受け取り履歴</button></li>
+		</ul>
+		</div>
+		<div class="jsTabInner">
+			<ul class="jsTabContents">
+				<li class="jsTabGiftUnopened">
+					<div class="jsListAll"></div>
+					<div class="moreLink jsListMore" style="{{if !more_flg}}display:none{{/if}}">
+						<button class="link"><span>もっと見る</span></button>
+					</div>
+					<section class="caution">
+						<article>
+							<ul>
+								<li>未開封のギフトは200件を超えると、古いものから順に削除されます。</li>
+							</ul>
+						</article>
+					</section>
+				</li>
+				<li class="jsTabGiftOpened">
+					<div class="jsListAll"></div>
+					<div class="moreLink jsListMore" style="{{if !more_flg}}display:none{{/if}}">
+						<button class="link"><span>もっと見る</span></button>
+					</div>
+					<section class="caution">
+						<article>
+							<ul>
+								<li>受け取り履歴は2週間保存されます。</li>
+							</ul>
+						</article>
+					</section>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="jsLabiText LABI_textBox caution">
+	<article>
+		<h1>コラボキャンペーンからのお知らせ</h1>
+		<div class="LABI_text ALB-recommend-giftbox"></div>
+	</article>
+</div>
+
+<hr>
+
+<div class="helpList">
+	<ul>
+		<li><button class="link" data-href="help/detail/1301/">ギフトってなに？</button></li>
+	</ul>
+</div>

@@ -1,0 +1,22 @@
+<section id="item" class="jsItem">
+    <h1 class="subHeader">
+        <span class="subHeaderBg_l"></span>
+        <span>一括装備完了</span>
+        <span class="subHeaderBg_r"></span>
+    </h1>
+    <article class="contents contentsShadow topic jsTopic" >
+		武器・防具をオススメ装備しました
+		
+        <div>攻撃{{>attack}}({{if attack_diff >=0}}+{{/if}}{{>attack_diff}})</div>
+        <div>特攻{{>sp_attack}}({{if sp_attack_diff >=0}}+{{/if}}{{>sp_attack_diff}})</div>
+        <div>武器P{{>weapon_cost}}({{if weapon_cost_diff >=0}}+{{/if}}{{>weapon_cost_diff}})</div>
+        
+        <div>防御{{>defense}}({{if defense_diff >=0}}+{{/if}}{{>defense_diff}})</div>
+        <div>特防{{>sp_defense}}({{if sp_defense_diff >=0}}+{{/if}}{{>sp_defense_diff}})</div>
+        <div>防具P{{>protector_cost}}({{if protector_cost_diff >=0}}+{{/if}}{{>protector_cost_diff}})</div>
+        
+	    
+	    <button class="link" data-href="deck/list/1/">装備トップ</button>
+    </article>
+
+</section>

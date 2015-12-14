@@ -1,0 +1,109 @@
+{
+    "status": 200,
+    "user": null,
+    "user_id": 4,
+    "level": 34,
+    "user_name": "たけさん",
+    "guild_name": "たけさん",
+    "position_name": "ギルドマスター",
+    "guild_rank": "D",
+    "avatar_id": "20002",
+    "job_name": "みならいハンター",
+    "job_tree_name": "初期ジョブ系",
+    "lineage_type_name": "技",
+    "profile_comment": "めちゃくちゃがんばりまーす！！めちゃくちゃがんばりまーす！！",
+    "gil": 300159,
+    "gacha_p": 6436,
+    "attack": 7829,
+    "defense": 9294,
+    "sp_attack": 5756,
+    "sp_defense": 6934,
+    "gp": 9876543210,
+    "mp": 65,
+    "max_mp": 65,
+    "tp": 100,
+    "max_own_equip_num": 100,
+    "own_equip_num": 96,
+    "max_collect_equip_num": 300,
+    "current_collect_equip_num": 104,
+    "main_weapon": {
+        "user_equip_no": 13577836537564,
+        "equip_id": 110016,
+        "step": 4
+    },
+    "main_protector": {
+        "user_equip_no": 13577269582595,
+        "equip_id": 210009,
+        "step": 3
+    },
+    "seed_type": 0,
+    "seed_rest_time": null,
+    "else_seed_flg": false,
+    "messages_more_flg": true,
+    "messages": [
+        {
+            "body_text": "あああ",
+            "from_avatar_id": "00001",
+            "from_user_id": 10,
+            "from_user_name": "take",
+            "new_flg": true,
+            "message_datetime": "01/06 20:39",
+            "message_id": "1"
+        },
+		{
+            "body_text": "あああ",
+            "from_avatar_id": "00001",
+            "from_user_id": 10,
+            "from_user_name": "take",
+            "new_flg": true,
+            "message_datetime": "01/06 20:39",
+            "message_id": "1"
+        },
+		{
+            "body_text": "あああ",
+            "from_avatar_id": "00001",
+            "from_user_id": 10,
+            "from_user_name": "take",
+            "new_flg": false,
+            "message_datetime": "01/01 00:00",
+            "message_id": "1"
+        }
+    ],
+    "greets_more_flg": true,
+    "greets": [
+        {
+            "body_text": "こんにちは！",
+            "from_avatar_id": "10001",
+            "from_user_id": 4,
+            "from_user_name": "ぬるぽさん",
+            "greet_datetime": "11/16 17:03",
+            "greet_id": "2_10_1353052987390",
+            "win_gacha_p": 0
+        },
+        {
+            "body_text": "ごきげんよう！",
+            "from_avatar_id": "10001",
+            "from_user_id": 4,
+            "from_user_name": "ぬるぽさん",
+            "greet_datetime": "11/16 17:03",
+            "greet_id": "2_10_1353052986183",
+            "win_gacha_p": 0
+        },
+        {
+            "body_text": "こんにちは！",
+            "from_avatar_id": "10001",
+            "from_user_id": 4,
+            "from_user_name": "ぬるぽさん",
+            "greet_datetime": "11/16 17:03",
+            "greet_id": "2_10_1353052984885",
+            "win_gacha_p": 0
+        }
+    ],
+    "stage_id": 5,
+    "treasure_kind_num": 1,
+    "win_num": 8,
+    "lose_num": 13,
+    "win_percent": 38,
+    "cheered_flg": null,
+    "battle_power": 29813
+}

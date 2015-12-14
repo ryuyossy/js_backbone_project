@@ -1,0 +1,117 @@
+<section id="guildTop" class="master">
+	<div class="emblemIcon_s"><span class="hide guildRank {{>guild_rank}}">ギルドランク：{{>guild_rank}}</span></div>
+	<h1 class="guildName">
+		<span class="guildNameText">{{>guild_name}}<!-- //9文字を超えると丸め --></span>
+	</h1>
+	<p class="guildStatus">
+		<span>ギルドLv.</span>{{>guild_level}}<span>総合BP</span>{{>~commaFormat(gp)}}<span>戦績</span>{{>win_num}}勝
+	</p>
+	<div class="masterComment">
+		<div class="iconBgArc_l gold link" data-href="profile/other/{{>master_user_id}}/">
+			<img src="{{getImgRoot/}}/avatar/{{>master_avatar_id}}_140.png">
+		</div>
+		<div class="commentBox">
+			<h1 class="masterName"><span class="hide">MASTER</span>{{>master_user_name}}<!-- //14文字を超えると丸め --></h1>
+			<p class="commentBody">
+				<span>{{>master_comment}}<!-- //30文字で切り --></span>
+			</p>
+		</div>
+	</div>
+	<!--
+	<dl class="currentRank">
+		<dt>ランキング</dt>
+		<dd>現在<span>2</span>位</dd>
+	</dl>
+	 -->
+
+</section>
+
+<!-- //共通：ギルドメンバーリスト(通常およびバトル中、他人のギルド表示の場合はおしりのspanはつかない) -->
+<section id="guildAction">
+	<section class="memberList">
+		{{for members}}
+			{{if #index<5}}
+			<div class="iconBox"><div class="iconBgArc_s gold link{{if warm_up_flg}} training_yet{{/if}}"{{if #parent.parent.parent.data.user.user_id!=user_id}} data-href="profile/other/{{>user_id}}/"{{/if}}><img src="{{getImgRoot/}}/avatar/{{>avatar_id}}_140.png"></div></div>
+			{{/if}}
+		{{/for}}
+		<div class="more">
+			<button class="link" data-href="guild/members/other/{{>guild_id}}/"><span>{{>current_member_num}}/{{>max_member_num}}</span></button>
+		</div>
+	</section>
+
+	{{if battle_state===3 || battle_state===4}}
+	<!-- //他人のギルド・ギルド加入できない時間帯 -->
+	<section class="dimmed">
+		{{if battle_state===3}}
+		<p>バトル準備中のため入団希望は出せません</p>
+		{{else battle_state===4}}
+		<p>バトル中のため入団希望は出せません</p>
+		{{/if}}
+	</section>
+	{{else guild_master_flg && !alone_guild_flg}}
+	<!-- // ギルドマスターかつギルドにメンバーがいる場合は申請不可 -->
+	<button class="btn large join disable">入団不可</button>
+	{{else candidated_flg}}
+	<!-- // 勧誘済みの場合 -->
+	<button class="btn large join jsGuildJoin" data-guild-id="{{>guild_id}}">加入する</button>
+	{{else join_requested_flg}}
+	<!-- // 既に申請済みの場合 -->
+	<button class="btn large join">入団希望申請中</button>
+	{{else}}
+	<!-- //他人のギルド・ギルド加入ボタン -->
+	<button class="btn large join jsButtonGuildJoinRequest">入団申請する</button>
+	{{/if}}
+</section>
+
+<!-- //ここから共通 -->
+<div class="banner">
+	<p>
+        	<button class="link" data-href="startdash/"><img src="{{getImgRoot/}}/ad/banner_startdash.png"><br>└バトルに参加してガチャチケットゲット&#65281;┘</button>
+       	</p>
+</div>
+
+{{if battle_state!==3 && battle_state!==4}}
+<h1 class="subHeader">
+	<span class="subHeaderBg_l"></span>
+	<span>ギルド掲示板</span>
+	<span class="subHeaderBg_r"></span>
+</h1>
+
+<!-- //掲示板 -->
+<section id="guildBbs" class="jsGuildBbs jsGuildBbsTopics">
+	<div class="jsListAll">
+		{{for #data tmpl="#jsTemplateGuildBbsTopics" /}}
+	</div>
+	<div class="arrowLink">
+		<span class="link next" data-href="guild/bbs/other/{{>guild_id}}/">ぜんぶ見る</span>
+	</div>
+</section>
+{{/if}}
+
+<hr>
+
+<div class="arrowLink">
+	<button class="link next" data-href="guild/space/">ギルド広場</button>
+</div>
+
+{{escape}}
+<script id="jsTemplatePopupGuildJoinRequestConfirm" type="text/x-jsrender">
+	<div class="modalInner">
+		<p>このギルドに入団希望を申請しますか？</p>
+		<div class="innerBtnBox">
+			<button class="btn cancel jsClosePopup">やめる</button><button class="btn jsClosePopup jsButtonGuildJoinRequestFix">申請する</button>
+		</div>
+	</div>
+</script>
+
+<script id="jsTemplatePopupGuildJoinRequestComplete" type="text/x-jsrender">
+	<div class="modalInner" class="jsPopupGuildJoinRequestComplete">
+		<p>{{>result_message}}</p>
+		{{if result_type===2}}
+		<button class="btn short close jsClosePopup" data-href="guild/">閉じる</button>
+		{{else}}
+		<button class="btn short close jsCloseAllPopup">閉じる</button>
+		{{/if}}
+	</div>
+</script>
+{{/escape}}

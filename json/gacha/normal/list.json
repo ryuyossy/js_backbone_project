@@ -1,0 +1,49 @@
+{
+	"status" : 200,
+	"guild_name" : "サイババ団",
+    "guild_rank" : "A",
+    "rank_status" : "ランクステイ圏内",
+    "rank_rest_days" : "3",
+    "battle_start_rest" : "05:44",
+    "battle_end_rest" : "",
+  "own_equip_num" : "60",
+  "max_own_equip_num" : "200",
+  "own_gacha_p" : 100,
+  "error_message" : "",
+  "banners": [],
+  "gachas" : [
+    { "gacha_id" : "1",
+      "use_gacha_p" : 0,
+      "gacha_name" : "1日1回無料ガチャ",
+      "description" : "1日1回だけ無料です。",
+      "notice_message" : "",
+      "add_equip_num" : 1
+    },
+    { "gacha_id" : "2",
+      "use_gacha_p" : 100,
+      "gacha_name" : "ノーマル10連ガチャ",
+      "description" : "ガチャPを1000使うノーマルガチャです。",
+      "add_equip_num" : 10
+    }
+  ],
+	"rare_gacha_news": [
+		{
+			"user_id": 28,
+			"user_name": "たけさん",
+			"equip_id": 250010,
+			"equip_name": "ロトの剣（梅）",
+			"got_datetime": "12/27 16:51",
+			"rarity": 5,
+			"rarity_name": "SSレア"
+		},
+		{
+			"user_id": 28,
+			"user_name": "たけさん",
+			"equip_id": 240025,
+			"equip_name": "ロトの剣（梅）",
+			"got_datetime": "12/27 16:51",
+			"rarity": 5,
+			"rarity_name": "SSレア"
+		}
+	]
+}

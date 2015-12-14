@@ -1,0 +1,330 @@
+{
+    "status": 200,
+    "current_job": {
+        "id":100,
+        "avatar_id": "20001",
+        "name": "みならいハンター",
+        "type": 2,
+        "master_bonuses": [
+            {"type":1, "percent":0},
+            {"type":2, "percent":1},
+            {"type":3, "percent":0}
+        ],
+        "win_jex": 0,
+        "master_jex": 1000,
+        "mastered": false
+    },
+    "abilities": [
+        {
+            "id": 1,
+            "name": "石を投げる",
+            "mastered":true
+        },
+        {
+            "id": 2,
+            "name": "石を投げる",
+            "mastered":true
+        },
+        {
+            "id": 3,
+            "name": "石を投げる",
+            "mastered":false
+        }
+    ],
+    "job_trees": [
+        {
+            "type":1,
+            "name": "力",
+            "root_job": {
+                "id": 100,
+                "name": "みならい剣士",
+                "selected": false,
+                "changeable": true,
+                "mastered": true,
+                "published": true,
+				"experienced": true
+            },
+            "lines": [
+                {
+                    "name": "ソルジャー系",
+                    "jobs": [
+                        {
+                            "id": 110,
+                            "name": "ソルジャー",
+                            "selected": false,
+                            "changeable": true,
+                            "mastered": false,
+                            "published":true,
+							"experienced": false
+                        },
+                        {
+                            "id": -1,
+                            "name": "unknown",
+                            "selected": false,
+                            "changeable": false,
+                            "img_url": "",
+                            "mastered": false,
+                            "published":false,
+							"experienced": true
+                        },
+                        {
+                            "id": -1,
+                            "name": "unknown",
+                            "selected": false,
+                            "changeable": false,
+                            "img_url": "",
+                            "mastered": false,
+                            "published":false,
+							"experienced": true
+                        }
+                    ]
+                },
+                {
+                    "name": "ソルジャー系",
+                    "jobs": [
+                        {
+                            "id": 120,
+                            "name": "ソルジャー",
+                            "selected": false,
+                            "changeable": true,
+                            "mastered": false,
+                            "published":true,
+							"experienced": false
+                        },
+                        {
+                            "id": -1,
+                            "name": "unknown",
+                            "selected": false,
+                            "changeable": false,
+                            "img_url": "",
+                            "mastered": false,
+                            "published":false,
+							"experienced": true
+                        },
+                        {
+                            "id": -1,
+                            "name": "unknown",
+                            "selected": false,
+                            "changeable": false,
+                            "img_url": "",
+                            "mastered": false,
+                            "published":false,
+							"experienced": true
+                        }
+                    ]
+                },
+                {
+                    "name": "ソルジャー系",
+                    "jobs": [
+                        {
+                            "id": 130,
+                            "name": "ソルジャー",
+                            "selected": false,
+                            "changeable": true,
+                            "mastered": false,
+                            "published":true,
+							"experienced": false
+                        },
+                        {
+                            "id": -1,
+                            "name": "unknown",
+                            "selected": false,
+                            "changeable": false,
+                            "img_url": "",
+                            "mastered": false,
+                            "published":false,
+							"experienced": true
+                        },
+                        {
+                            "id": -1,
+                            "name": "unknown",
+                            "selected": false,
+                            "changeable": false,
+                            "img_url": "",
+                            "mastered": false,
+                            "published":false,
+							"experienced": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type":2,
+            "name": "技",
+            "root_job": {
+                "id": 200,
+                "name": "みならい弓士",
+                "selected": true,
+                "changeable": true,
+                "mastered": false,
+                "published": true,
+				"experienced": true
+            },
+            "lines": [
+                {
+                    "name": "ソルジャー系",
+                    "jobs": [
+                        {
+                            "id": 210,
+                            "name": "ソルジャー",
+                            "selected": false,
+                            "changeable": false,
+                            "mastered": false,
+                            "published":true,
+							"experienced": false
+                        },
+                        {
+                            "id": -1,
+                            "name": "unknown",
+                            "selected": false,
+                            "changeable": false,
+                            "img_url": "",
+                            "mastered": false,
+                            "published":false,
+							"experienced": true
+                        },
+                        {
+                            "id": -1,
+                            "name": "unknown",
+                            "selected": false,
+                            "changeable": false,
+                            "img_url": "",
+                            "mastered": false,
+                            "published":false,
+							"experienced": true
+                        }
+                    ]
+                },
+                {
+                    "name": "ソルジャー系",
+                    "jobs": [
+                        {
+                            "id": 220,
+                            "name": "ソルジャー",
+                            "selected": false,
+                            "changeable": false,
+                            "mastered": false,
+                            "published":true,
+							"experienced": false
+                        },
+                        {
+                            "id": -1,
+                            "name": "unknown",
+                            "selected": false,
+                            "changeable": false,
+                            "img_url": "",
+                            "mastered": false,
+                            "published":false,
+							"experienced": true
+                        },
+                        {
+                            "id": -1,
+                            "name": "unknown",
+                            "selected": false,
+                            "changeable": false,
+                            "img_url": "",
+                            "mastered": false,
+                            "published":false,
+							"experienced": true
+                        }
+                    ]
+                },
+                {
+                    "name": "ソルジャー系",
+                    "jobs": [
+                        {
+                            "id": 230,
+                            "name": "ソルジャー",
+                            "selected": false,
+                            "changeable": false,
+                            "mastered": false,
+                            "published":true,
+							"experienced": false
+                        },
+                        {
+                            "id": -1,
+                            "name": "unknown",
+                            "selected": false,
+                            "changeable": false,
+                            "img_url": "",
+                            "mastered": false,
+                            "published":false,
+							"experienced": true
+                        },
+                        {
+                            "id": -1,
+                            "name": "unknown",
+                            "selected": false,
+                            "changeable": false,
+                            "img_url": "",
+                            "mastered": false,
+                            "published":false,
+							"experienced": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type":3,
+            "name": "知",
+            "root_job": {
+                "id": 300,
+                "name": "みならい術士",
+                "selected": false,
+                "changeable": true,
+                "mastered": false,
+                "published": true,
+				"experienced": true
+            },
+            "lines": [
+                {
+                    "name": "ソルジャー系",
+                    "jobs": [
+                        {
+                            "id": 310,
+                            "name": "ソルジャー",
+                            "selected": false,
+                            "changeable": false,
+                            "mastered": false,
+                            "published":true,
+							"experienced": false
+                        },
+                        {
+                            "id": 311,
+                            "name": "unknown",
+                            "selected": false,
+                            "changeable": false,
+                            "img_url": "",
+                            "mastered": false,
+                            "published":false,
+							"experienced": true
+                        },
+                        {
+                            "id": -1,
+                            "name": "unknown",
+                            "selected": false,
+                            "changeable": false,
+                            "img_url": "",
+                            "mastered": false,
+                            "published":false,
+							"experienced": true
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "isolated_jobs": [
+        {
+            "id": 0,
+            "name": "村人",
+            "selected": false,
+            "changeable": true,
+            "mastered": false,
+            "published":true
+        }
+    ],
+	"first_access_flg":false
+}

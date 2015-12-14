@@ -1,0 +1,61 @@
+{
+    "status" : 200,
+    "guild_name" : "サイババ団",
+    "guild_rank" : "A",
+    "rank_status" : "ランクステイ圏内",
+    "rank_rest_days" : "3",
+    "battle_start_rest" : "05:44",
+    "battle_end_rest" : "",
+    "invite_num": 1,
+    "more_flg": true,
+    "guilds": [
+        {
+            "guild_name": "take",
+            "guild_id": 10,
+            "gp": null,
+            "master_user_id": null,
+            "master_user_name": null,
+            "master_job_id": null,
+            "guild_level": 1,
+            "current_member_num": 3,
+            "max_member_num": 15,
+            "scout_level_name": "Lv10以上",
+            "scout_experience_name": "初心者OK",
+            "scout_motivation_name": "★☆☆☆☆"
+        },
+        {
+            "guild_name": "take",
+            "guild_id": 10,
+            "gp": null,
+            "master_user_id": null,
+            "master_user_name": null,
+            "master_job_id": null,
+            "guild_level": 1,
+            "current_member_num": 3,
+            "max_member_num": 15,
+            "scout_level_name": "Lv10以上",
+            "scout_experience_name": "初心者OK",
+            "scout_motivation_name": "★☆☆☆☆"
+        },
+        {
+            "guild_name": "take",
+            "guild_id": 10,
+            "gp": null,
+            "master_user_id": null,
+            "master_user_name": null,
+            "master_job_id": null,
+            "guild_level": 1,
+            "current_member_num": 3,
+            "max_member_num": 15,
+            "scout_level_name": "Lv10以上",
+            "scout_experience_name": "初心者OK",
+            "scout_motivation_name": "★☆☆☆☆"
+        }
+    ],
+    "guild_name": "たけさん",
+    "guild_rank": "F",
+    "rank_status": "ランキング圏内",
+    "rank_rest_days": 0,
+    "battle_start_rest": "00:22:31",
+    "battle_end_rest": null
+}

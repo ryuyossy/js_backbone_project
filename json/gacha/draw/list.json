@@ -1,0 +1,79 @@
+{
+    "status" : 200,
+    "guild_name" : "サイババ団",
+    "guild_rank" : "A",
+    "rank_status" : "ランクステイ圏内",
+    "rank_rest_days" : "3",
+    "battle_start_rest" : "05:44",
+    "battle_end_rest" : "",
+  "rarities" : [
+    {
+      "rarity_name" : "レア",
+      "percent" : "80"
+    },
+    {
+      "rarity_name" : "Sレア",
+      "percent" : "15"
+    },
+    {
+      "rarity_name" : "SSレア",
+      "percent" : "5"
+    }
+  ],
+  "rarity_equips" : [
+      {
+        "rarity_name" : "レア",
+        "kind_num" : "2",
+        "equips" : [
+            { "equip_id" : "13001",
+              "equip_name" : "レア武器1",
+              "equip_type" : "1",
+              "equip_cost" : "20",
+              "attribute_name" : "火"
+            },
+            { "equip_id" : "23001",
+              "equip_name" : "レア防具1",
+              "equip_type" : "2",
+              "equip_cost" : "18",
+              "attribute_name" : ""
+            }
+        ]
+      },
+      {
+        "rarity_name" : "Sレア",
+        "kind_num" : "2",
+        "equips" : [
+            { "equip_id" : "14001",
+              "equip_name" : "Sレア武器1",
+              "equip_type" : "1",
+              "equip_cost" : "20",
+              "attribute_name" : "火"
+            },
+            { "equip_id" : "24001",
+              "equip_name" : "Sレア防具1",
+              "equip_type" : "2",
+              "equip_cost" : "18",
+              "attribute_name" : ""
+            }
+        ]
+      },
+      {
+        "rarity_name" : "SSレア",
+        "kind_num" : "2",
+        "equips" : [
+            { "equip_id" : "15001",
+              "equip_name" : "SSレア武器1",
+              "equip_type" : "1",
+              "equip_cost" : "20",
+              "attribute_name" : "火"
+            },
+            { "equip_id" : "25001",
+              "equip_name" : "SSレア防具1",
+              "equip_type" : "2",
+              "equip_cost" : "18",
+              "attribute_name" : ""
+            }
+        ]
+      }
+  ]
+}

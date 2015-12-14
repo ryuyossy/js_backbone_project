@@ -1,0 +1,29 @@
+{
+	"status":200,
+	"field": {
+		"state": 1,
+		"progress_percent_after": 100,
+		"rest_distance_after": 0
+	},
+	"user": {
+		"mp_after": 150,
+		"mp_percent_after": 100,
+		"max_mp_after": 150,
+		"win_gil": 30,
+		"gil_after": 1500,
+		"exp_current_after": 0,
+		"exp_levelup_after": 20,
+		"exp_percent_after": 0
+	},
+	"clear_bonus": {
+		"weapon_cost_add": 0,
+		"protector_cost_add": 0,
+		"ability_cost_add": 0
+	},
+	"action": {
+		"type": "collectionItem",
+		"collection_event_id":1,
+		"collection_item_id":1,
+		"collection_item_num":5
+	}
+}

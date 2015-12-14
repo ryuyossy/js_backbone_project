@@ -1,0 +1,947 @@
+@charset "utf-8";
+@import "base";
+@import "ruleset";
+
+/* page parts */
+/* common */
+.findingItem{
+	li{
+		img{
+			-webkit-transition-property:opacity;
+			-webkit-transition-duration:.5s;
+			-webkit-transition-timing-function:ease-in;
+		}
+		&.got img{
+			opacity:1;
+		}
+		&.yet img{
+			-webkit-transition-property:none;
+			opacity:0;
+		}
+	}
+}
+
+/* mission */
+#missionTop{
+	position:relative;
+	height:240px;
+	margin:0 auto;
+
+	&:after{
+		@include main_bg_bottom;
+	}
+
+	&.stage001{
+		@include backgroundSize("/background/bg_mission_stage1.jpg",0,0,no-repeat);
+		display:block;
+	}
+	&.stage002{
+		@include backgroundSize("/background/bg_mission_stage2.jpg",0,0,no-repeat);
+		display:block;
+	}
+	&.stage003{
+		@include backgroundSize("/background/bg_mission_stage3.jpg",0,0,no-repeat);
+		display:block;
+	}
+	&.stage004{
+		@include backgroundSize("/background/bg_mission_stage4.jpg",0,0,no-repeat);
+		display:block;
+	}
+	&.stage005{
+		@include backgroundSize("/background/bg_mission_stage5.jpg",0,0,no-repeat);
+		display:block;
+	}
+	//new
+	&.stage006{
+		@include backgroundSize("/background/bg_mission_stage6.jpg",0,0,no-repeat);
+		display:block;
+	}
+	&.stage007{
+		@include backgroundSize("/background/bg_mission_stage7.jpg",0,0,no-repeat);
+		display:block;
+	}
+	&.stage008{
+		@include backgroundSize("/background/bg_mission_stage8.jpg",0,0,no-repeat);
+		display:block;
+	}
+	&.bossEncount{
+		&:before{
+			@include visible_object(0,0,100%,100%,auto);
+			background-color:rgba(0,0,0,0.5);
+		}
+	}
+	.metalPanel{
+		position:absolute;
+		left:5px;
+		bottom:24px;
+		width:310px;
+		height:60px;
+		margin:0 auto;
+		z-index:2;
+	}
+	.gergeTable{
+		width:100%;
+		margin-top:-15px;
+		font-size:80%;
+
+		th{
+			padding-right:$content_margin;
+		}
+		.gergeBgFrame{
+			width:170px;
+		}
+	}
+	.stageName{
+		z-index:2;
+	}
+}
+#fieldSelect,
+#fieldList{
+	.contents{
+		width:95%;
+		margin:-5px auto 0 auto;
+	}
+	.btn_l{
+		display:block;
+		top:-25px;
+		width:240px;
+		margin:0 auto;
+
+		span:before{
+			@include visible_object(58px,0px,95px,22px,inherit);
+			@include backgroundSize("/parts/#{$mission_parts}.png",-1px,-30px,no-repeat);
+		}
+	}
+	.columnBox{
+		width:95%;
+		margin:-17px auto 0 auto;
+		z-index:0;
+
+		h1{
+			margin-bottom:$inner_margin;
+			padding-bottom:$inner_margin/2;
+			border-bottom:1px solid #B9A46B;
+			font-weight:bold;
+			color:$color_A;
+
+			span{
+				display:inline-block;
+				margin-right:$content_margin;
+			}
+		}
+	}
+	.gergeTable,
+	dl{
+		width:100%;
+	}
+	dt{
+		clear:none;
+	}
+	dd{
+		margin-right:$content_margin;
+	}
+	.gergeBgFrame{
+		width:190px;
+	}
+	.gergeBg{
+		width:186px;
+	}
+	.findingItem{
+		margin:$inner_margin $inner_margin 0 $inner_margin+4px;
+	}
+	//newest field
+	.newest{
+		margin-bottom:16px;
+		.btn_l{
+			span:before{
+				@include visible_object(64px,0px,82px,22px,inherit);
+				@include backgroundSize("/parts/#{$mission_parts}.png",-1px,-2px,no-repeat);
+			}
+
+			&.cleared{
+				span:before{
+					@include visible_object(58px,0px,95px,22px,inherit);
+					@include backgroundSize("/parts/#{$mission_parts}.png",-1px,-30px,no-repeat);
+				}
+			}
+		}
+	}
+	.bossEncounter{
+		position:relative;
+		width:100%;
+		margin:-5px 0 0 0;
+		padding:0;
+		z-index:auto;
+
+		.boss_img{
+			position:absolute;
+			left:0;
+			top:-480px;
+			z-index:0;
+		}
+		p{
+			position:absolute;
+			left:0;
+			top:-180px;
+			@include backgroundSize("/parts/text_missionboss_emerge.png",0,0,no-repeat);
+			display:block;
+			width:320px;
+			height:80px;
+			margin:0 auto;
+			font-size:100%;
+		}
+		.btn_l{
+			top:-15px;
+
+			span:before{
+				@include visible_object(63px,0px,90px,22px,inherit);
+				@include backgroundSize("/parts/#{$mission_parts}.png",-1px,-85px,no-repeat);
+			}
+		}
+	}
+	&.once{
+		display:none;
+	}
+	~ .subHeader{
+		margin-top:-$inner_margin/2;
+	}
+	~ .banner{
+		margin:$content_margin_last 0 0 0;
+		&.bossBattle{
+			margin:$content_margin 0 0 0;
+			padding-bottom:16px;
+		}
+	}
+	~ .arrowLink{
+		margin-bottom:$content_margin;
+	}
+}
+#fieldList{
+	margin-top:24px;
+	.contents{
+		margin:0 auto 24px auto;
+		&.first-of-type{
+
+		}
+		&:last-of-type{
+			margin-bottom:$content_margin;
+		}
+	}
+}
+
+
+/* stage select */
+#stageSelect{
+	.metalPanel{
+		width:310px;
+		height:60px;
+		margin:8px auto 0px;
+		z-index:2;
+		table{
+			font-size: 80%;
+			margin-top: -15px;
+		}
+		th{
+			padding-right: 16px;
+		}
+		td:nth-of-type(2n){
+			padding-right: 4px;
+		}
+	}
+	.message{
+		margin-bottom:8px;
+	}
+	~ .banner{
+		margin:$content_margin_last 0 0 0;
+	}
+}
+.stageList{
+	width:300px;
+	margin:$inner_margin auto $content_margin auto;
+	.contents{
+		position:relative;
+		margin-bottom:$inner_margin;
+		&.shadow{
+			@include border-radius(8px);
+			&.link.on:after{
+				z-index:5;
+			}
+			&:before{
+				@include border-radius(8px);
+			}
+		}
+	}
+	h1{
+		position:relative;
+		top:10px;
+		width:278px;
+		height:52px;
+		margin:0 auto;
+		&.stage1,
+		&.stage2,
+		&.stage3,
+		&.stage4,
+		&.stage5{
+			@include backgroundSize("/background/#{$mission_area_1-5}.png",0,0,no-repeat);
+			display:block;
+		}
+		&.stage6,
+		&.stage7,
+		&.stage8,
+		&.stage9,
+		&.stage10{
+			@include backgroundSize("/background/#{$mission_area_6-10}.png",0,0,no-repeat);
+			display:block;
+		}
+		span:before{
+			@include backgroundSize("/parts/#{$mission_parts}.png",-187px,-1px,no-repeat);
+			@include visible_object(8px,15px,57px,21px,auto);
+		}
+		&.stage1{
+			background-position:0 0;
+			span:before{
+				width:57px;
+				background-position:-187px -1px;
+			}
+		}
+		&.stage2{
+			background-position:0px -52px;
+			span:before{
+				width:59px;
+				background-position:-187px -29px;
+			}
+		}
+		&.stage3{
+			background-position:0 -104px;
+			span:before{
+				width:59px;
+				background-position:-187px -58px;
+			}
+		}
+		&.stage4{
+			background-position:0 -156px;
+			span:before{
+				width:60px;
+				background-position:-187px -86px;
+			}
+		}
+		&.stage5{
+			background-position:0 -208px;
+			span:before{
+				width:59px;
+				background-position:-187px -115px;
+			}
+		}
+		&.stage6{
+			background-position:0 0;
+			span:before{
+				width:60px;
+				background-position:-186px -141px;
+			}
+		}
+		&.stage7{
+			background-position:0 -52px;
+			span:before{
+				width:60px;
+				background-position:-186px -167px;
+			}
+		}
+		&.stage8{
+			background-position:0 -104px;
+			span:before{
+				width:60px;
+				background-position:-186px -193px;
+			}
+		}
+	}
+	p{
+		position:relative;
+		width:100%;
+		height:40px;
+		margin-top:10px;
+		padding:0 10px;
+		color:$color_A;
+		font-weight:bold;
+		line-height:40px;
+		text-align:left;
+		z-index:2;
+
+		&:after{
+			@include visible_object(280px,12px,9px,13px,11);
+			@include backgroundSize("/parts/#{$icon_parts}.png",-97px,-78px,no-repeat);
+		}
+	}
+	.newStage{
+		position:absolute;
+		left:200px;
+		top:71px;
+		width:72px;
+		height:20px;
+		background-color:#FFBF00;
+		line-height:20px;
+		z-index:3;
+	}
+	.cleared{
+		@include visible_object(200px,69px,76px,24px,3);
+		@include backgroundSize("/parts/cleared_stamp.png",0,0,no-repeat);
+	}
+}
+
+/* mission proceed */
+.jsGauge{
+	-webkit-transform-origin: 0 50%;
+	-webkit-animation-fill-mode: both;
+}
+#missionProceed{
+	position:relative;
+	height:240px;
+	z-index:0;
+	overflow:hidden;
+
+	&:after{
+		@include main_bg_bottom;
+	}
+
+	.canvas{
+		display:block;
+		position:absolute;
+		width:320px;
+		height:240px;
+		background-color:rgba(255,255,255,0.3);
+		z-index:auto;
+		top: -20px;
+
+		img{
+			zoom:1;
+		}
+	}
+	.gergeBox{
+		position:relative;
+		top:$inner_margin;
+		z-index:0;
+	}
+	.gergeBgFrame{
+		position:relative;
+		width:300px;
+		height:16px;
+		margin:0 auto;
+	}
+	.gergeBg{
+		position:absolute;
+		width:268px;
+		height:10px;
+	}
+	.gerge{
+		position:absolute;
+		height:8px;
+	}
+	.modalBox.levelUp{
+		top:32px;
+		left:8px;
+	}
+}
+#missionControl{
+	position:relative;
+	margin:0 auto;
+	top:-5px;
+	z-index:0;
+	&.metalPanel{
+		width:97%;
+	}
+	.btn_l{
+		top:-40px;
+		display:block;
+		width:240px;
+		margin:0 auto;
+
+		span:before{
+			@include visible_object(83px,0px,52px,22px,inherit);
+			@include backgroundSize("/parts/#{$mission_parts}.png",-1px,-58px,no-repeat);
+		}
+		&.disable{
+			pointer-events:auto;
+			@include borderImage(inline-image("parts/bg_btn_l_disable.png"), 22 26 24 26, stretch !important, 11px 13px 12px 13px);
+			span:before{
+				@include backgroundSize("/parts/sprite_mission_parts.png",-57px,-58px,no-repeat);
+			}
+		}
+	}
+	.statusData{
+		position:relative;
+		top: -32px;
+		font-size:90%;
+		padding:0;
+
+		.gergeTable{
+			width:100%;
+		}
+		.gergeBgFrame{
+			width:170px;
+		}
+		.gergeBox{
+			padding-right:$inner_margin;
+		}
+		th{
+			padding-right:$content_margin;
+		}
+		td{
+			text-align:right;
+		}
+		dt{
+			clear:none;
+
+			&:nth-of-type(2){
+				margin-left:$content_margin_last;
+			}
+		}
+		&+.findingItem{
+			margin-top:-16px;
+		}
+	}
+	+ hr{
+		margin-top:$inner_margin/2;
+	}
+	+ .listMenu{
+		margin:$content_margin auto;
+	}
+}
+
+/* mission boss battle Ready & help member call */
+#bossBattle{
+	@extend #missionTop;
+	p{
+		position:relative;
+		top:-80px;
+		width:80%;
+		height:44px;
+		margin:0 auto;
+		border:1px solid rgba(255,255,255,0.5);
+		@include border-radius(8px);
+		background-color:rgba(0,0,0,0.5);
+		color:#fff;
+		line-height:44px;
+		text-align:center;
+	}
+	.boss_img{
+		position:relative;
+		display:block;
+	}
+	~ .subHeader{
+		margin:$content_margin 0 $inner_margin 0;
+	}
+}
+#bossBattleStart,
+#helpMember{
+	.subHeader{
+		margin-bottom:$content_margin;
+	}
+	.change{
+		.contents{
+			margin-bottom:$content_margin;
+		}
+	}
+	.contents{
+		top:-5px;
+		width:95%;
+		margin:0 auto $inner_margin auto;
+	}
+	.btn_l{
+		top:-26px;
+		display:block;
+		width:240px;
+		margin:0 auto;
+
+		span:before{
+			@include visible_object(17px,-1px,177px,22px,auto);
+			@include backgroundSize("/parts/#{$mission_parts}.png",-1px,-141px,no-repeat);
+		}
+	}
+	h1{
+		margin-top:-16px;
+	}
+	+ h2{
+		margin:0 0 $content_margin 0;
+	}
+	&.partner,
+	&.guild{
+		margin-top:$content_margin;
+		.subHeader{
+			margin-bottom:$inner_margin;
+		}
+	}
+	&.guild{
+		.statusData_icon{
+			h1:after{
+				margin-top:-8px;
+			}
+			.columnBox > dl{
+				width:40%;
+			}
+			.innerBtnBox{
+				padding-bottom:0;
+			}
+		}
+		.callMember{
+			.btn.large{
+				margin-top:16px;
+			}
+			.arrowLink{
+				margin-top:16px;
+			}
+		}
+		.dimmed{
+			~ .arrowLink{
+				margin-bottom:4px;
+			}
+		}
+		> .helpList{
+			margin-top:16px;
+		}
+	}
+	&.currentMember{
+		.contents{
+			margin-bottom:0;
+		}
+		ul{
+			@include display-box;
+			@include box-pack(center);
+			margin:8px 8px 0 8px;
+		}
+		li{
+			@include box-flex(1);
+			display:block;
+			width:1px;
+			text-align:center;
+		}
+		.iconBgRect_l{
+			margin:0 auto;
+		}
+		h2{
+			margin-top:2px;
+			font-size:80%;
+			color:#544123;
+		}
+	}
+}
+#helpMember{
+	.contents{
+		top:0;
+		margin-bottom:8px;
+	}
+	.contentsInner{
+
+		dt:nth-of-type(2){
+			clear:none;
+			margin-left:8px;
+		}
+		.columnBox dt:nth-of-type(2){
+			clear:both;
+			margin-left:0;
+		}
+	}
+	h1{
+		margin-top:0;
+	}
+	.innerBtnBox{
+		width:95%;
+		margin:0 auto;
+		padding-bottom:$inner_margin;
+	}
+	.helpMemberList{
+
+		.contents{
+			margin-bottom:$inner_margin;
+		}
+		.btn{
+			width:50%;
+			margin-top:$inner_margin/2;
+		}
+		.moreLink{
+			margin-top:$content_margin;
+		}
+	}
+	~ .helpList{
+		margin-top:16px;
+	}
+	&.partner ~ .helpList{
+		margin-top:16px;
+	}
+	.dimmed p{
+		margin:0 auto;
+	}
+}
+.modalInner.questWithM p {
+	padding-top: 2px;
+}
+.callMember{
+	margin-top:$content_margin;
+
+	p{
+		color:#ffffff;
+		text-align:center;
+	}
+}
+
+/* mission boss battle result */
+#bossBattleResult{
+
+	&.contents{
+		width:95%;
+		top:-5px;
+		margin:0 auto;
+		padding-bottom:$inner_margin;
+
+		.btn_l{
+			top:-15px;
+			display:block;
+			width:240px;
+			margin:0 auto;
+
+			&.nextField span:before{
+				@include visible_object(15px,-1px,180px,22px,inherit);
+				@include backgroundSize("/parts/#{$mission_parts}.png",-1px,-170px,no-repeat);
+			}
+			&.nextStage span:before{
+				@include visible_object(21px,-1px,171px,22px,inherit);
+				@include backgroundSize("/parts/#{$mission_parts}.png",-1px,-198px,no-repeat);
+			}
+		}
+	}
+	.contentsBorder{
+		margin-top:-$inner_margin;
+	}
+	table{
+		width:95%;
+		margin:0 8px;
+	}
+	tr{
+		border-bottom:1px solid #B9A46B;
+	}
+	th,td{
+		padding:8px 0;
+	}
+	th{
+		width:60%;
+		color:#8C0000;
+		font-weight:normal;
+	}
+	td{
+		width:40%;
+		text-align:right;
+		vertical-align:middle;
+	}
+	.btn{
+		width:55%;
+		margin:$content_margin auto $content_margin/2 auto;
+	}
+}
+#bossBattleLose{
+	margin-top:-32px;
+
+	.message{
+		margin-bottom:$inner_margin;
+	}
+	.btn_l{
+		display:block;
+		width:80%;
+		margin:0 auto;
+
+		span:before{
+			@include visible_object(67px,-1px,96px,23px,inherit);
+			@include backgroundSize("/parts/#{$mission_parts}.png",-1px,-113px,no-repeat);
+		}
+	}
+}
+
+/* mission point loss */
+#missionPointLack{
+	.metalPanel{
+		height:60px;
+		text-align:center;
+		z-index:auto;
+		+ .banner{
+			margin-top:$inner_margin;
+			+ .subHeader{
+				margin-top:$content_margin;
+			}
+		}
+		+ .subHeader{
+			margin-top:$inner_margin;
+		}
+	}
+	.statusData{
+		margin:20px auto 0 auto;
+		padding:0;
+		font-size:90%;
+
+		.gergeTable{
+			width:100%;
+			margin:-15px 0 0 0;
+		}
+		.gergeBox{
+			padding-right:$inner_margin;
+		}
+		th{
+			padding-right:$content_margin;
+		}
+		td{
+			text-align:right;
+		}
+		dl{
+			display:inline-block;
+			width:auto;
+			margin:0 auto;
+			font-size:100%;
+		}
+		dt,dd{
+			padding-bottom:0;
+		}
+	}
+	.subHeader{
+		margin-bottom:$inner_margin;
+	}
+	.contents{
+		width:95%;
+		margin:0 auto $inner_margin auto;
+	}
+	.numControl{
+		width:95%;
+		margin:$inner_margin auto 0 ;
+		padding-bottom:0;
+	}
+	.statusData_icon .columnBox + .btn {
+		margin: $inner_margin auto 0 auto;
+	}
+}
+
+/* mission modal area */
+.jsProceedLevelUpPopup{
+	opacity:0;
+	display:none;
+}
+.missionModalBox{
+	opacity:0;
+	display:none;
+	position:relative;
+	top:20px;
+	z-index:10000;
+	width:280px;
+	margin:6px auto 0;
+	color:#544123;
+
+	&.equipData,
+	&.treasureData,
+	&.materialData{
+		font-size:90%;
+
+		.label32{
+			margin:0 $inner_margin;
+		}
+		dl{
+			font-size:90%;
+		}
+		dt{
+			&:nth-of-type(2n){
+				clear:none;
+				margin-left:$inner_margin;
+			}
+		}
+		.btn{
+			display:block;
+			width:80%;
+			height:38px;
+			margin:$inner_margin auto 0 auto;
+			line-height:10px;
+		}
+	}
+	&.treasureData{
+		dt{
+			&:nth-of-type(2n){
+				clear:both;
+				margin-left:0;
+			}
+		}
+	}
+	&.materialData{
+		dl{
+			margin-top:$inner_margin/2;
+		}
+	}
+}
+.modalBox{
+	-webkit-transform: scale(1);
+
+	.equipData{
+		width:95%;
+		margin:0 auto;
+		font-size:90%;
+
+		h2{
+			margin-bottom:$inner_margin;
+			border-bottom:1px solid #B9A46B;
+		}
+		.label32{
+			margin:0 $inner_margin;
+		}
+		dt{
+			&:nth-of-type(2n){
+				clear:none;
+				margin-left:$inner_margin;
+			}
+		}
+	}
+	p{
+		margin-top:0;
+		font-size:90%;
+	}
+	.limit{
+		display:block;
+
+		span{
+			color:#8C0000;
+		}
+	}
+	// level up
+	&.levelUp{
+		h1{
+			//padding-bottom:12px;
+			font-size:130%;
+			line-height:1.3;
+			.nextLevel{
+				display:inline-block;
+				margin:0 8px;
+			}
+		}
+		h2{
+			margin-bottom:4px;
+		}
+		&.statusData{
+			padding-bottom:0;
+			.columnBox{
+				> dl{
+					&:nth-of-type(1){
+						width:43%;
+					}
+					&:nth-of-type(2){
+						width:57%;
+					}
+				}
+			}
+		}
+		.modalInner{
+			color:#333;
+		}
+		p{
+			position:relative;
+			top:8px;
+			margin-bottom:0;
+			font-size:100%;
+			text-align:left;
+		}
+	}
+}
+#equipMax_start{
+	p{
+		margin-top:$inner_margin;
+	}
+}

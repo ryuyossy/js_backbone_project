@@ -1,0 +1,36 @@
+<div id="container">
+	<h1 class="mainHeader">
+		{{>chapter_name}}
+	</h1>
+	<div id="quizQuestion">
+		<h1 class="subHeader">
+			<span class="subHeaderBg_l"></span>
+			<span>
+				{{if quiz.last_quiz_flg }}
+				最終問題
+				{{else}}
+				第{{> ~numberToChaineseNumeral(quiz.quiz_id) }}問
+				{{/if}}
+			</span>
+			<span class="subHeaderBg_r"></span>
+		</h1>
+		<div class="message {{>~chapterToNavicoCharacter(quiz.chapter_id)}}">
+			<p>
+				<!-- // 最大全角61文字（それ以降は切れる） -->
+				<span>{{>quiz.quiz}}</span>
+			</p>
+			<div class="outerBtnBox quizMb">
+				<button class="btn btnMaru" data-href="quiz/answer/{{>quiz.chapter_id}}/{{>quiz.quiz_id}}/true/">
+					<img src="{{>img_url_root}}/parts/quiz_maru.png" alt="まる">
+				</button>
+				<button class="btn btnBatu" data-href="quiz/answer/{{>quiz.chapter_id}}/{{>quiz.quiz_id}}/false/">
+					<img src="{{>img_url_root}}/parts/quiz_batu.png" alt="ばつ">
+				</button>
+			</div>
+		</div>
+		<hr>
+		<div class="arrowLink">
+			<button class="link prev" data-href="quiz/top/">クイズトップへ戻る</button>
+		</div>
+	</div>
+</div>

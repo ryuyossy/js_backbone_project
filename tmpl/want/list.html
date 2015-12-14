@@ -1,0 +1,67 @@
+<!-- とりあえず仮なのでマイページを使用する -->
+<section id="ranking">
+	<h1 class="subHeader">
+		<span class="subHeaderBg_1"></span>
+		<span>欲しいものリスト</span>
+		<span class="subHeaderBg_r"></span>
+	</h1>
+	<h1>
+		<span>{{>want_list_count}}/{{>max_want_list_count}}</span>
+	</h1>
+</section>
+
+{{for equips}}
+<article class="contents contentsShadow guildStatus">
+	<h2>
+		<span>{{>name}}</span>{{:~getRarityText(rarity)}}
+	</h2>
+		<div class="contentsInner">
+			<div class="iconBgRect_s gold">
+				<img src="{{: ~existImageFile('../../img/equip/', id, 'unknown_equip')}}">
+			</div>
+			<table>
+				<tr>
+					<th>MAXLv</th>
+					<td>{{>max_level}}</td>
+					<td colspan=2>{{>~getGrowText(grow_type)}}</td>
+				</tr>
+				<tr>
+					<th>必要武器P</th>
+					<td>{{>cost}}</td>
+					<td colspan=2></td>
+				</tr>
+				<tr>
+					<th>攻撃</th>
+					<td>{{>power}}</td>
+					<th>総防御</th>
+					<td>{{>special_power}}</td>
+				</tr>
+				<tr>
+					<th>属性</th>
+					<td>{{>attribute_name}}</td>
+					<td colspan=2></td>
+				</tr>
+				<tr>
+					<td colspan=4>
+					<div class="jsPostRemove">
+					<div id="jsPostRemoveForm" class="postRemove">
+						<span class="btn link jsWantRemoveButton">リストから削除する</span>
+					</div>
+					</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+</article>
+{{/for}}
+
+{{escape}}
+<script id="jsTemplatePopupWant" type="text/x-jsrender">
+	<div id="notifyWindow" class="modalInner">
+		<ul>
+			<li>{{>equip_name}}をリストから削除しますか？</li>
+			<li><span class="btn close jsClosePopup">やめる</span> <span class="btn link jsClosePopup" data-href="/want/remove/do/{{>equip_id}}/">削除する</span></li>
+		</ul>
+	</div>
+</script>
+{{/escape}}

@@ -1,0 +1,102 @@
+@charset "utf-8";
+@import "base";
+@import "ruleset";
+
+//boolean
+$flag_type: false;
+// placeholder
+%arcPosition {
+	left: 5px;
+}
+%marginBo {
+	margin-bottom: $inner_margin;
+}
+// mixin
+@mixin use_Styles($imgSrc1,$imgSrc2,$flag_juge) {
+	.questNvgation {
+		$flag_type: $flag_juge;
+		@if $flag_type {
+			@include backgroundSize($imgSrc1,0,0,no-repeat);
+			display:block;
+			height:145px;
+		} @else {
+			@extend %marginBo;
+		}
+		.arc {
+			@extend %arcPosition;
+			@include backgroundSize_dataURI($imgSrc2, 0, 0, no-repeat);
+		}
+	}
+	.questshortBn {
+		margin: $inner_margin auto $content_margin auto;
+	}
+	.shgoQuest {
+		margin: $content_margin_last auto $content_margin_last auto;
+	}
+	.title {
+		display:block;
+		margin:16px auto 32px auto;
+	}
+	.message {
+		margin:8px auto 0 auto;
+	}
+}
+// quest_shorttutorial
+.questShort {
+	@include use_Styles("/parts/shortTutorial_quest_top.png","/parts/navi_icon_king_arc.png",true);
+}
+// job_shorttutorial
+.jobShort {
+	@include use_Styles("/parts/shortTutorial_job_top.png","/parts/navi_icon_taicho_arc.png",true);
+}
+// ability_shorttutorial
+.abilityShort {
+	@include use_Styles("","/parts/navi_icon_senshi_arc.png",false);
+}
+// compose_shorttutorial
+.composeShort {
+	@include use_Styles("","/parts/navi_icon_taicho_arc.png",false);
+}
+// battle_shorttutorial
+.battleShort {
+	@include use_Styles("","/parts/navi_icon_taicho_arc.png",false);
+}
+// deck_shorttutorial
+.deckShort {
+	.titles {
+		display:block;
+		margin:0 auto 32px auto;
+	}
+	@include use_Styles("","/parts/navi_icon_navico_arc.png",false);
+}
+//guild shortTutorial
+.guildShort {
+	@include use_Styles("","/parts/navi_icon_taicho_arc.png",false);
+	.guildNewMeet {
+		margin-top: 0;
+	}
+}
+// bravebattle_shorttutorial
+.braveShort {
+	.subHeader {
+		margin-bottom: 0;
+	}
+	.subHeader3 {
+		color: #f3de9f
+	}
+	.questNvgation {
+		@include backgroundSize("/parts/shortTutorial_brave_top.png",0,0,no-repeat);
+		display:block;
+		height:160px;
+	}
+	.questshortBn {
+		margin:8px auto 8px auto;
+	}
+	.title {
+		display:block;
+		margin:0 auto;
+	}
+	.shgoQuest {
+		margin: $content_margin_last auto $content_margin_last auto;
+	}
+}

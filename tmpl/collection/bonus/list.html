@@ -1,0 +1,46 @@
+<h1 class="mainHeader">図鑑ボーナス</h1>
+
+<div class="collectionBonusMargin">
+		<section class="contents contentsShadow statusData">
+			<h1>武具を集めてランクアップ！</h1>
+			<div class="columnBox">
+				<div class="contentsInner">
+					<dl>
+						<dt>収集屋ランク</dt><dd>{{>collector_rank}}</dd>
+						<dt>発見種類数</dt><dd>{{>collect_equip_num}}</dd>
+						<dt>現在の効果</dt><dd>カード所持数が{{>add_max_own_equip_num}}枚アップ</dd>
+						<dt>次のランクアップまで</dt><dd>あと<span class="remain">{{>next_collector_rank_equip_num}}枚</span></dd>
+					</dl>
+				</div>
+			</div>
+		</section>
+
+		<section class="contents contentsShadow statusData">
+			<h1>武具を育ててランクアップ！</h1>
+			<div class="columnBox">
+				<div class="contentsInner">
+					<dl>
+						<dt>育成屋ランク</dt><dd>{{>trainer_rank}}</dd>
+						<dt>限界達成種類数</dt><dd>{{>lv_max_num}}</dd>
+						<dt>現在の効果</dt><dd>行動Pの回復時間が{{>reduce_mp_recover_sec}}秒短縮</dd>
+						<dt>次のランクアップまで</dt><dd>あと<span class="remain">{{>next_trainer_rank_lv_max_num}}枚</span></dd>
+					</dl>
+				</div>
+			</div>
+		</section>
+</div>
+
+<hr>
+
+<div class="arrowLink collectionEquipLink">
+	<button class="link prev" data-href="collection/top/">図鑑トップへ戻る</button>
+</div>
+
+<div class="helpList">
+	<ul>
+		<li><button class="link" data-href="help/detail/1402/">図鑑ボーナスってなに？</button></li>
+		<li><button class="link" data-href="help/detail/603/">どうやって武具を集めるの？</button></li>
+		<li><button class="link" data-href="help/detail/1404/">限界達成ってなに？</button></li>
+	</ul>
+</div>
+

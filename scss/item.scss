@@ -1,0 +1,45 @@
+@charset "utf-8";
+@import "base";
+@import "ruleset";
+
+/* page parts */
+/* item list */
+#itemList{
+	margin:$content_margin 0 0 0;
+
+	.contents{
+		width:95%;
+		margin:0 auto $inner_margin auto;
+
+		&:last-of-type{
+			margin-bottom:$content_margin_last;
+		}
+	}
+
+	.label48{
+		margin:$inner_margin $inner_margin 0 $inner_margin;
+		font-size:90%;
+	}
+
+	+ .arrowLink{
+		margin-bottom:$content_margin_last;
+	}
+	
+	.statusData_icon .columnBox + .btn {
+		margin: $inner_margin auto 0 auto;
+	}
+}
+
+/* item used */
+#itemUsed{
+
+	.complateMessage{
+
+		td{
+
+			&:nth-of-type(2){
+				padding:0 $inner_margin;
+			}
+		}
+	}
+}

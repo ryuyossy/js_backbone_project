@@ -1,0 +1,195 @@
+@charset "utf-8";
+/*
+@mixin box_shadow_contents_l($offsetSize,$z_index:-1){
+	content:'';
+	position:absolute;
+	left:$offsetSize;
+	top:75%;
+	bottom:17px;
+	width:50%;
+	min-height:5px;
+	max-width:150px;
+	background:#544123;
+	-webkit-box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	-webkit-transform:rotate(-5deg);
+	transform:rotate(-5deg);
+	z-index:$z_index;
+}
+@mixin box_shadow_contents_r($offsetSize,$z-index:-1){
+	content:'';
+	position:absolute;
+	right:$offsetSize;
+	top:75%;
+	bottom:17px;
+	width:50%;
+	min-height:5px;
+	max-width:150px;
+	background:#544123;
+	-webkit-box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	-webkit-transform:rotate(5deg);
+	transform:rotate(5deg);
+	z-index:$z_index;
+}
+*/
+/*
+@mixin backgroundResize($position:0 -60px){
+	@media screen and (min-width:319px){
+		width:320px;
+		@include background-size(320px,auto);
+	}
+	@media screen and (min-width:359px){
+		width:360px;
+		@include background-size(360px,auto);
+	}
+	@media screen and (min-width:361px){
+		width:480px;
+		@include background-size(480px,auto);
+		background-position:$position;
+	}
+}
+*/
+/*
+@mixin display-box{
+	display:flexbox;
+	-webkit-display:flexbox;
+}
+@mixin box-align($position){
+	flex-align:$position;
+	-webkit-flex-align:$position;
+}
+@mixin box-flex($ratio){
+	flex:$ratio;
+	-webkit-flex:$ratio;
+}
+@mixin box-pack($position){
+	flex-pack:$position;
+	-webkitflex-pack:$position;
+}
+*/
+/* line 6, ../scss/gift.scss */
+#giftTop,
+#giftAllCatch {
+  margin: 16px 0 0 0;
+}
+/* line 8, ../scss/gift.scss */
+#giftTop .allCatch,
+#giftAllCatch .allCatch {
+  margin: 16px auto;
+}
+/* line 11, ../scss/gift.scss */
+#giftTop .contents,
+#giftAllCatch .contents {
+  width: 95%;
+  margin: 0 auto 8px auto;
+}
+/* line 14, ../scss/gift.scss */
+#giftTop .contents .btn,
+#giftAllCatch .contents .btn {
+  width: 60%;
+  margin: 4px auto 0 auto;
+}
+/* line 18, ../scss/gift.scss */
+#giftTop .contents .label48,
+#giftAllCatch .contents .label48 {
+  width: 80%;
+  margin: 4px auto;
+}
+/* line 22, ../scss/gift.scss */
+#giftTop .contents .innerLink,
+#giftAllCatch .contents .innerLink {
+  font-weight: bold;
+  color: #008C8C;
+}
+/* line 29, ../scss/gift.scss */
+#giftTop .jsTabGiftOpened .contents:first-of-type,
+#giftAllCatch .jsTabGiftOpened .contents:first-of-type {
+  margin-top: 8px;
+}
+
+/* line 37, ../scss/gift.scss */
+#giftTop .dimmed p {
+  margin-top: 8px;
+}
+
+/* line 42, ../scss/gift.scss */
+#giftAllCatch {
+  margin-top: 8px;
+}
+/* line 44, ../scss/gift.scss */
+#giftAllCatch ~ .allCatch {
+  margin-top: 16px;
+}
+
+/*
+%boxMarg {
+	margin: 8px auto 8px auto;
+}
+
+.tabM {
+	margin: 16px auto 16px auto;
+}
+
+.giftTav {
+	@extend %boxMarg;
+}
+
+.giftGetContents {
+	width: 95%;
+	margin: 8px auto 8px auto;
+	padding: 8px 0 0 0;
+}
+
+.giftContents {
+	margin-top: 8px;
+}
+
+#moreGetLink {
+	@extend %boxMarg;
+}
+
+.lsMar {
+	margin:8px;
+}
+
+.giftCaution {
+	margin-top: 32px;
+}
+
+.giftMoreLinks {
+	margin: 16px auto 0 auto;
+}
+
+#gfBtnMa {
+	margin: 32px auto 32px auto;
+}
+
+.giftHistory {  
+	width: 95%;  
+	margin: 0 auto 8px auto;  
+	padding: 8px 0 8px 0;  
+}  
+
+.giftBtnM {  
+	padding-bottom: 6px;  
+	.giftCatch {  
+		width: 60%;  
+		margin: 6px auto 0 auto;  
+	}  
+}  
+
+.labelM {  
+	padding-bottom: 6px;  
+	.giftLabel1 {  
+		width: 80%;  
+		margin: 6px auto 0 auto;
+	} 
+} 
+*/
+/* line 125, ../scss/gift.scss */
+.giftPopUp {
+  display: block;
+  -webkit-transform: scale(1);
+  z-index: 10000;
+}

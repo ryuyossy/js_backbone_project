@@ -1,0 +1,52 @@
+{
+    "status": 200,
+    "system_infos": [
+        {
+            "body": null,
+            "info_datetime": "12/11 15:53",
+            "info_id": 1,
+            "info_kind": 1,
+            "info_kind_name": "メンテナンス",
+            "title": "メンテナンスのお知らせ"
+        },
+        {
+            "body": null,
+            "info_datetime": "12/11 15:53",
+            "info_id": 2,
+            "info_kind": 2,
+            "info_kind_name": "重要",
+            "title": "重要なお知らせ"
+        },
+        {
+            "body": null,
+            "info_datetime": "12/11 15:53",
+            "info_id": 3,
+            "info_kind": 3,
+            "info_kind_name": "キャンペーン",
+            "title": "キャンペーン"
+        },
+        {
+            "body": null,
+            "info_datetime": "12/11 15:53",
+            "info_id": 4,
+            "info_kind": 4,
+            "info_kind_name": "イベント",
+            "title": "イベント"
+        },
+        {
+            "body": null,
+            "info_datetime": "12/11 15:53",
+            "info_id": 5,
+            "info_kind": 5,
+            "info_kind_name": "お知らせ",
+            "title": "お知らせ"
+        }
+    ],
+    "more_flg": true,
+    "guild_name": "どどどどど",
+    "guild_rank": "F",
+    "rank_status": "ランキング圏内",
+    "rank_rest_days": 0,
+    "battle_start_rest": "16:58",
+    "battle_end_rest": null
+}

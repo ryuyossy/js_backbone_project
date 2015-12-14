@@ -1,0 +1,991 @@
+@charset "utf-8";
+/*
+@mixin box_shadow_contents_l($offsetSize,$z_index:-1){
+	content:'';
+	position:absolute;
+	left:$offsetSize;
+	top:75%;
+	bottom:17px;
+	width:50%;
+	min-height:5px;
+	max-width:150px;
+	background:#544123;
+	-webkit-box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	-webkit-transform:rotate(-5deg);
+	transform:rotate(-5deg);
+	z-index:$z_index;
+}
+@mixin box_shadow_contents_r($offsetSize,$z-index:-1){
+	content:'';
+	position:absolute;
+	right:$offsetSize;
+	top:75%;
+	bottom:17px;
+	width:50%;
+	min-height:5px;
+	max-width:150px;
+	background:#544123;
+	-webkit-box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	-webkit-transform:rotate(5deg);
+	transform:rotate(5deg);
+	z-index:$z_index;
+}
+*/
+/*
+@mixin backgroundResize($position:0 -60px){
+	@media screen and (min-width:319px){
+		width:320px;
+		@include background-size(320px,auto);
+	}
+	@media screen and (min-width:359px){
+		width:360px;
+		@include background-size(360px,auto);
+	}
+	@media screen and (min-width:361px){
+		width:480px;
+		@include background-size(480px,auto);
+		background-position:$position;
+	}
+}
+*/
+/*
+@mixin display-box{
+	display:flexbox;
+	-webkit-display:flexbox;
+}
+@mixin box-align($position){
+	flex-align:$position;
+	-webkit-flex-align:$position;
+}
+@mixin box-flex($ratio){
+	flex:$ratio;
+	-webkit-flex:$ratio;
+}
+@mixin box-pack($position){
+	flex-pack:$position;
+	-webkitflex-pack:$position;
+}
+*/
+/* line 6, ../scss/mypage.scss */
+.subHeader {
+  margin-bottom: 8px !important;
+}
+
+/* line 9, ../scss/mypage.scss */
+.subHeader2 {
+  margin-bottom: 8px !important;
+}
+
+/* line 14, ../scss/mypage.scss */
+#greet .topic:first-of-type {
+  margin-top: 0;
+}
+
+/* line 20, ../scss/mypage.scss */
+#myPage {
+  position: relative;
+}
+/* line 22, ../scss/mypage.scss */
+#myPage .avatarStatus {
+  position: relative;
+  width: 320px;
+  height: 300px;
+  display: inline-block;
+  background: url("/img/background/bg_mypage.jpg") center 0 no-repeat;
+  -webkit-background-size: 320px 300px;
+}
+/* line 27, ../scss/mypage.scss */
+#myPage .avatarStatus.onBattle {
+  display: inline-block;
+  background: url("/img/background/bg_mypage_onbattle.jpg") center 0 no-repeat;
+  -webkit-background-size: 320px 300px;
+}
+/* line 30, ../scss/mypage.scss */
+#myPage .avatarStatus:after {
+  display: inline-block;
+  background: url("/img/background/bg_img_bottom.png") 0 0 no-repeat;
+  -webkit-background-size: 320px 20px;
+  visibility: visible;
+  content: "";
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: auto;
+  width: 320px;
+  height: 20px;
+  z-index: auto;
+  bottom: 0;
+  z-index: 2;
+}
+/* line 34, ../scss/mypage.scss */
+#myPage .avatarStatus .nameBox {
+  position: absolute;
+  bottom: 44px;
+  z-index: 2;
+}
+/* line 38, ../scss/mypage.scss */
+#myPage .avatarStatus .nameBox h1 {
+  position: relative;
+  left: 8px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: -1px -1px 2px black, 1px -1px 2px black, -1px 1px 2px black, 1px 1px 2px black;
+}
+/* line 44, ../scss/mypage.scss */
+#myPage .avatarStatus .nameBox h1:after {
+  display: inline-block;
+  background: url("/img/parts/sprite_mypage_parts_20130403_2.png") 0 -162px no-repeat;
+  -webkit-background-size: 480px 170px;
+  visibility: visible;
+  content: "";
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: -8px;
+  top: auto;
+  width: 180px;
+  height: 8px;
+  z-index: auto;
+  bottom: -4px;
+}
+/* line 50, ../scss/mypage.scss */
+#myPage .avatarStatus .nameBox dl {
+  position: relative;
+  top: 4px;
+  width: 100%;
+  font-size: 80%;
+  color: #fff;
+  text-shadow: -1px -1px 2px black, 1px -1px 2px black, -1px 1px 2px black, 1px 1px 2px black;
+}
+/* line 58, ../scss/mypage.scss */
+#myPage .avatarStatus .nameBox dt, #myPage .avatarStatus .nameBox dd {
+  float: left;
+  vertical-align: top;
+}
+/* line 62, ../scss/mypage.scss */
+#myPage .avatarStatus .nameBox dt {
+  margin: 0 2px 0 8px;
+  color: #ff0000;
+}
+/* line 67, ../scss/mypage.scss */
+#myPage .avatarStatus .myAvatar {
+  position: relative;
+  top: 0;
+  z-index: 1;
+}
+/* line 71, ../scss/mypage.scss */
+#myPage .avatarStatus .myAvatar .prof {
+  position: absolute;
+  top: 64px;
+  left: 48px;
+  display: block;
+  width: 214px;
+  height: 160px;
+}
+/* line 80, ../scss/mypage.scss */
+#myPage .avatarStatus .currentRank {
+  position: absolute;
+  top: auto;
+  right: 12px;
+  bottom: 22px;
+  width: 88px;
+  height: 55px;
+}
+/* line 88, ../scss/mypage.scss */
+#myPage .avatarStatus .currentRank.rankStay {
+  display: inline-block;
+  background: url("/img/parts/sprite_mypage_parts_20130403_2.png") -82px 0 no-repeat;
+  -webkit-background-size: 480px 170px;
+  display: block;
+}
+/* line 91, ../scss/mypage.scss */
+#myPage .avatarStatus .currentRank.rankStay dd {
+  color: #1F3F00;
+}
+/* line 95, ../scss/mypage.scss */
+#myPage .avatarStatus .currentRank.rankUp {
+  display: inline-block;
+  background: url("/img/parts/sprite_mypage_parts_20130403_2.png") -266px 0 no-repeat;
+  -webkit-background-size: 480px 170px;
+  display: block;
+}
+/* line 98, ../scss/mypage.scss */
+#myPage .avatarStatus .currentRank.rankUp dd {
+  color: #00303F;
+}
+/* line 102, ../scss/mypage.scss */
+#myPage .avatarStatus .currentRank.rankDown {
+  display: inline-block;
+  background: url("/img/parts/sprite_mypage_parts_20130403_2.png") -174px 0 no-repeat;
+  -webkit-background-size: 480px 170px;
+  display: block;
+}
+/* line 105, ../scss/mypage.scss */
+#myPage .avatarStatus .currentRank.rankDown dd {
+  color: #400000;
+}
+/* line 110, ../scss/mypage.scss */
+#myPage .avatarStatus .currentRank dt:before {
+  display: inline-block;
+  background: url("/img/parts/sprite_mypage_parts_20130403_2.png") -3px -2px no-repeat;
+  -webkit-background-size: 480px 170px;
+  visibility: visible;
+  content: "";
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: 4px;
+  top: 5px;
+  width: 75px;
+  height: 35px;
+  z-index: 1;
+}
+/* line 115, ../scss/mypage.scss */
+#myPage .avatarStatus .currentRank dd {
+  position: absolute;
+  right: 10px;
+  bottom: 12px;
+  font-size: 120%;
+  font-weight: bold;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+}
+/* line 122, ../scss/mypage.scss */
+#myPage .avatarStatus .currentRank dd span {
+  display: inline-block;
+  width: 26px;
+  margin-right: 4px;
+  font-size: 160%;
+  text-align: center;
+}
+/* line 130, ../scss/mypage.scss */
+#myPage .avatarStatus .currentRank.out {
+  display: inline-block;
+  background: url("/img/parts/sprite_mypage_parts_20130403_2.png") -359px 0 no-repeat;
+  -webkit-background-size: 480px 170px;
+  display: block;
+}
+/* line 133, ../scss/mypage.scss */
+#myPage .avatarStatus .currentRank.out dt {
+  display: none;
+}
+/* line 136, ../scss/mypage.scss */
+#myPage .avatarStatus .currentRank.out dd {
+  right: 0;
+  bottom: 14px;
+  display: block;
+  width: 100%;
+  font-size: 75%;
+  color: #333;
+  text-align: center;
+  text-shadow: 0px 2px 1px white, 0px 1px 1px white, 1px 1px 1px white, 1px 0px 1px white, 2px 0px 1px white, 1px -1px 1px white, 1px -2px 1px white, 0px -2px 1px white, -1px -2px 1px white, -2px -2px 1px white, -2px -1px 1px white, -2px 0px 1px white, -2px 1px 1px white, -1px 1px 1px white;
+}
+/* line 145, ../scss/mypage.scss */
+#myPage .avatarStatus .currentRank.out dd span {
+  font-size: 110%;
+  color: #ff0000;
+}
+/* line 151, ../scss/mypage.scss */
+#myPage .avatarStatus .currentRank.link.on:after {
+  visibility: visible;
+  content: "";
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: auto;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+/* line 157, ../scss/mypage.scss */
+#myPage .message.navico {
+  position: absolute;
+  top: 0;
+  display: -webkit-box;
+  display: box;
+  -webkit-box-align: center;
+  box-align: center;
+}
+/* line 162, ../scss/mypage.scss */
+#myPage .message.navico .navicoImg {
+  position: relative;
+  left: -30px;
+  display: block;
+}
+/* line 167, ../scss/mypage.scss */
+#myPage .message.navico p {
+  width: 206px;
+  margin: -12px 0 0 -28px;
+  display: inline-block;
+  background: url("/img/parts/bg_bubble_message_s.png") 0 0 no-repeat;
+  -webkit-background-size: 207px 50px;
+}
+/* line 171, ../scss/mypage.scss */
+#myPage .message.navico p em {
+  font-weight: bold;
+  font-style: normal;
+  color: #008C8C;
+}
+/* line 178, ../scss/mypage.scss */
+#myPage .message.navico.opponent p {
+  position: relative;
+  top: -12px;
+  left: -14px;
+  width: 189px;
+  height: 39px;
+  margin: 0;
+  display: inline-block;
+  background: url("/img/parts/text_opponent.png") 0 0 no-repeat;
+  -webkit-background-size: 189px 39px;
+}
+/* line 186, ../scss/mypage.scss */
+#myPage .message.navico.opponent p.link.on:after {
+  visibility: visible;
+  content: "";
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: auto;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+/* line 193, ../scss/mypage.scss */
+#myPage .message.navico.onBattle P {
+  position: relative;
+  top: -12px;
+  left: -28px;
+  width: 211px;
+  height: 66px;
+  margin: 0;
+  display: inline-block;
+  background: url("/img/parts/text_onbattle.png") 0 0 no-repeat;
+  -webkit-background-size: 211px 66px;
+}
+/* line 201, ../scss/mypage.scss */
+#myPage .message.navico.onBattle P.link.on:after {
+  visibility: visible;
+  content: "";
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: auto;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+/* line 208, ../scss/mypage.scss */
+#myPage .waitingNotice {
+  position: absolute;
+  right: 6px;
+  top: 6px;
+  width: 51px;
+  height: 57px;
+  display: inline-block;
+  background: url("/img/parts/sprite_mypage_parts_20130403_2.png") -311px -110px no-repeat;
+  -webkit-background-size: 480px 170px;
+  z-index: 100;
+}
+/* line 216, ../scss/mypage.scss */
+#myPage .waitingNotice.on:after {
+  visibility: visible;
+  content: "";
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 52px;
+  height: 57px;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+/* line 221, ../scss/mypage.scss */
+#myPage .notification {
+  position: absolute;
+  right: 0;
+  top: 8px;
+  width: 55px;
+  height: 48px;
+  display: inline-block;
+  background: url("/img/parts/sprite_mypage_parts_20130403_2.png") -311px -61px no-repeat;
+  -webkit-background-size: 480px 170px;
+  z-index: 100;
+}
+/* line 230, ../scss/mypage.scss */
+#myPage .notification.on:after {
+  visibility: visible;
+  content: "";
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 52px;
+  height: 52px;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+/* line 235, ../scss/mypage.scss */
+#myPage .notification .badge {
+  visibility: visible;
+  position: absolute;
+  right: 4px;
+  top: 25px;
+  display: block;
+  width: 27px;
+  height: 28px;
+  display: inline-block;
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADYAAAA4CAMAAACBkfufAAAAYFBMVEVgYGDe3t4oKCj7+/ve3t729vaPj4+7u7vy8vIAAAAAAAD97e0BAQEAAAAAAAAUFBQAAAD71dLkOCr7zMj4pqD7wbz3g3r////dEQD6sqz1eW/sBgD4mZLFIwD3joXQGwAdlcTVAAAAEXRSTlOALn6czMOdxWhvXvtJLxgLAPj5MXMAAAIXSURBVHhexdHrjpswEAXgZBccEgNTc81tt+//lvWZITNaCrHVPz1ESER8Osfi8OufssMqTTajqvSzxpcVZbDjpwrN5zHBSNEK0jtW6TrvA372XO2zV1UIvSa85Ocms4G+X8Xr0C1WChrHfnWNfWBXrpl19eNmeuszBlVJ1W54aUUrdhR124244w9GVIJB7Tuwkn6wStQQr50M4ioyRoQFfkiEXyJiZmW3FLtZ3UFPFp7JBD4dKeOyNOO6FyPe6J/pfHteScLaIrL+OyN9ZEX7YjjakMMGHE4YUYvu55SRJ07TEoG1DU46ZQVvNi0Zu2flL/aVlf/IfGTd74x0UXllpbCv5AVWKivw3XLa8N0KZS6ykMNCZE5ZPfPKa+rCxrk2hpXDNZkBG43VjusSSMqcsab2kd1S7BaVr5uFad39vbprGRivvOB0vnu8SYdFxYU3gvHKA+rC9fG4Pq7bv4CyQ90o4zq3uJ2IclwmTOoup1l27i+cTxcpEyZ152JGpi01zUhx5jJhWvdxYufva3T3rE4fS5kycWc4wKkz001AUGdRylAXZ0bnPBjkOHFG/cNFFSeiTJk6DF1HBpoyZg5wC6lascUBusIb8YUDWtSaiRMY49yJ4xyeGJkyhqhjaLmoAjC2LoSEhYDRqj1GLSAk2xqkboBMGbMsEBQ43g3tMqsEbZsWBAYowSKEBMadgFLMKGIkwXLzB52/6iS7o1KBAAAAAElFTkSuQmCC') 0 0 no-repeat;
+  -webkit-background-size: 27px 28px;
+  font-size: 90%;
+  color: white;
+  overflow: hidden;
+  word-break: break-all;
+  font-weight: bold;
+  text-align: center;
+  line-height: 25px;
+}
+/* line 249, ../scss/mypage.scss */
+#myPage .notification ~ .waitingNotice {
+  top: 64px;
+}
+/* line 254, ../scss/mypage.scss */
+#myPage .mainNavi {
+  position: relative;
+}
+/* line 256, ../scss/mypage.scss */
+#myPage .mainNavi .belongsGuildName {
+  position: relative;
+  top: -26px;
+  left: 58px;
+  width: 204px;
+  display: inline-block;
+  background: url("/img/parts/bg_mypage guildname.png") 0 0 no-repeat;
+  -webkit-background-size: 204px 57px;
+  z-index: 3;
+}
+/* line 264, ../scss/mypage.scss */
+#myPage .mainNavi .belongsGuildName .emblemIcon_l {
+  left: 73px;
+  top: 16px;
+}
+/* line 267, ../scss/mypage.scss */
+#myPage .mainNavi .belongsGuildName .emblemIcon_l.link.on {
+  background-color: transparent;
+}
+/* line 269, ../scss/mypage.scss */
+#myPage .mainNavi .belongsGuildName .emblemIcon_l.link.on:after {
+  visibility: visible;
+  content: "";
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+/* line 275, ../scss/mypage.scss */
+#myPage .mainNavi .belongsGuildName h1 {
+  position: relative;
+  width: 130px;
+  margin: 20px auto 0 auto;
+  font-size: 80%;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: -1px -1px 2px black, 1px -1px 2px black, -1px 1px 2px black, 1px 1px 2px black;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/* line 285, ../scss/mypage.scss */
+#myPage .mainNavi .belongsGuildName h1.link.on {
+  background-color: transparent;
+}
+/* line 287, ../scss/mypage.scss */
+#myPage .mainNavi .belongsGuildName h1.link.on:after {
+  visibility: visible;
+  content: "";
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+/* line 294, ../scss/mypage.scss */
+#myPage .mainNavi .missionBtn {
+  display: inline-block;
+  background: url("/img/parts/btn_mp_mission.png") -1px -1px no-repeat;
+  -webkit-background-size: 102px 206px;
+  position: absolute;
+  left: 8px;
+  top: -20px;
+  display: block;
+  width: 99px;
+  height: 100px;
+  z-index: 4;
+}
+/* line 304, ../scss/mypage.scss */
+#myPage .mainNavi .missionBtn.link.on {
+  display: inline-block;
+  background: url("/img/parts/btn_mp_mission.png") -1px -105px no-repeat;
+  -webkit-background-size: 102px 206px;
+}
+/* line 309, ../scss/mypage.scss */
+#myPage .mainNavi .battleBtn {
+  display: inline-block;
+  background: url("/img/parts/btn_mp_battle_n.png") -1px -1px no-repeat;
+  -webkit-background-size: 102px 206px;
+  position: absolute;
+  right: 8px;
+  top: -20px;
+  display: block;
+  width: 99px;
+  height: 100px;
+  z-index: 4;
+}
+/* line 318, ../scss/mypage.scss */
+#myPage .mainNavi .battleBtn.link {
+  display: block;
+}
+/* line 320, ../scss/mypage.scss */
+#myPage .mainNavi .battleBtn.link.on {
+  display: inline-block;
+  background: url("/img/parts/btn_mp_battle_n.png") -1px -105px no-repeat;
+  -webkit-background-size: 102px 206px;
+}
+/* line 325, ../scss/mypage.scss */
+#myPage .mainNavi .gergeBg {
+  position: absolute;
+  left: 18px;
+  top: 68px;
+  width: 64px;
+  height: 10px;
+  z-index: 5;
+}
+/* line 333, ../scss/mypage.scss */
+#myPage .mainNavi .gerge {
+  height: 9px;
+}
+/* line 337, ../scss/mypage.scss */
+#myPage .mainNavi.battleReady .battleBtn {
+  display: inline-block;
+  background: url("/img/parts/btn_mp_battle_b.png") -1px -1px no-repeat;
+  -webkit-background-size: 102px 206px;
+}
+/* line 339, ../scss/mypage.scss */
+#myPage .mainNavi.battleReady .battleBtn.on {
+  display: inline-block;
+  background: url("/img/parts/btn_mp_battle_b.png") -1px -105px no-repeat;
+  -webkit-background-size: 102px 206px;
+}
+/* line 345, ../scss/mypage.scss */
+#myPage .mainNavi.onBattle .battleBtn {
+  display: inline-block;
+  background: url("/img/parts/btn_mp_onbattle.png") -1px -1px no-repeat;
+  -webkit-background-size: 102px 206px;
+}
+/* line 347, ../scss/mypage.scss */
+#myPage .mainNavi.onBattle .battleBtn.on {
+  display: inline-block;
+  background: url("/img/parts/btn_mp_onbattle.png") -1px -105px no-repeat;
+  -webkit-background-size: 102px 206px;
+}
+/* line 353, ../scss/mypage.scss */
+#myPage .equipStatus {
+  position: relative;
+  top: -8px;
+  width: 90%;
+  margin: 0 auto;
+  border-image: url("/img/parts/bg_equip_frame.png") 21 26 31 25 stretch;
+  -webkit-border-image: url("/img/parts/bg_equip_frame.png") 21 26 31 25 stretch;
+  border-width: 10px 13px 15px 12px;
+  color: inherit;
+}
+/* line 360, ../scss/mypage.scss */
+#myPage .equipStatus h1 {
+  position: absolute;
+  top: -10px;
+  left: 98px;
+  display: inline-block;
+  background: url("/img/parts/btn_equip.png") -2px 0 no-repeat;
+  -webkit-background-size: 100px 100px;
+  display: block;
+  width: 96px;
+  height: 46px;
+}
+/* line 368, ../scss/mypage.scss */
+#myPage .equipStatus h1.link.on {
+  display: inline-block;
+  background: url("/img/parts/btn_equip.png") -2px -50px no-repeat;
+  -webkit-background-size: 100px 100px;
+}
+/* line 373, ../scss/mypage.scss */
+#myPage .equipStatus .weapon,
+#myPage .equipStatus .armor {
+  position: relative;
+  width: 64px;
+  height: 64px;
+}
+/* line 377, ../scss/mypage.scss */
+#myPage .equipStatus .weapon img,
+#myPage .equipStatus .armor img {
+  -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+/* line 380, ../scss/mypage.scss */
+#myPage .equipStatus .weapon.link.on,
+#myPage .equipStatus .armor.link.on {
+  background-color: transparent;
+}
+/* line 382, ../scss/mypage.scss */
+#myPage .equipStatus .weapon.link.on:after,
+#myPage .equipStatus .armor.link.on:after {
+  visibility: visible;
+  content: "";
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 64px;
+  height: 64px;
+  z-index: auto;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+/* line 388, ../scss/mypage.scss */
+#myPage .equipStatus .armor {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+/* line 393, ../scss/mypage.scss */
+#myPage .equipStatus p.paramStatus {
+  position: absolute;
+  left: 88px;
+  top: 43px;
+  width: 110px;
+  padding: 2px 4px;
+  font-size: 95%;
+  text-shadow: -1px -1px 2px black, 1px -1px 2px black, -1px 1px 2px black, 1px 1px 2px black;
+}
+/* line 401, ../scss/mypage.scss */
+#myPage .equipStatus p.paramStatus span {
+  display: inline-block;
+  margin-right: 4px;
+  color: #ff0000;
+}
+/* line 407, ../scss/mypage.scss */
+#myPage .equipStatus div.paramStatus {
+  display: -webkit-box;
+  display: box;
+  width: 100%;
+  margin: 6px 0 0 0;
+  text-align: left;
+}
+/* line 412, ../scss/mypage.scss */
+#myPage .equipStatus div.paramStatus .status {
+  -webkit-box-flex: 1;
+  box-flex: 1;
+  width: 1px;
+  margin: 0 8px;
+  text-shadow: -1px -1px 2px black, 1px -1px 2px black, -1px 1px 2px black, 1px 1px 2px black;
+  font-size: 100%;
+}
+/* line 418, ../scss/mypage.scss */
+#myPage .equipStatus div.paramStatus .status.attack {
+  text-align: right;
+}
+/* line 421, ../scss/mypage.scss */
+#myPage .equipStatus div.paramStatus .status span {
+  color: #999;
+}
+/* line 425, ../scss/mypage.scss */
+#myPage .equipStatus div.paramStatus h2 {
+  display: inline-block;
+  margin-right: 4px;
+  color: #ff0000;
+}
+/* line 432, ../scss/mypage.scss */
+#myPage .subNavi {
+  display: -webkit-box;
+  display: box;
+  width: 304px;
+  margin: 6px auto 16px auto;
+}
+/* line 436, ../scss/mypage.scss */
+#myPage .subNavi button {
+  cursor: pointer;
+  margin-right: 8px;
+}
+/* line 439, ../scss/mypage.scss */
+#myPage .subNavi button:last-of-type {
+  margin-right: 0;
+}
+/* line 442, ../scss/mypage.scss */
+#myPage .subNavi button.composeBtn {
+  display: inline-block;
+  background: url("/img/parts/sprite_mypage_parts_20130403_2.png") -1px -60px no-repeat;
+  -webkit-background-size: 480px 170px;
+  display: block;
+  width: 96px;
+  height: 46px;
+}
+/* line 447, ../scss/mypage.scss */
+#myPage .subNavi button.composeBtn.on {
+  background-position: -1px -112px;
+}
+/* line 450, ../scss/mypage.scss */
+#myPage .subNavi button.composeBtn.discount {
+  background-position: -372px -60px;
+}
+/* line 452, ../scss/mypage.scss */
+#myPage .subNavi button.composeBtn.discount.on {
+  background-position: -372px -112px;
+}
+/* line 457, ../scss/mypage.scss */
+#myPage .subNavi button.gachaBtn {
+  display: inline-block;
+  background: url("/img/parts/sprite_mypage_parts_20130403_2.png") -106px -60px no-repeat;
+  -webkit-background-size: 480px 170px;
+  display: block;
+  width: 96px;
+  height: 46px;
+}
+/* line 462, ../scss/mypage.scss */
+#myPage .subNavi button.gachaBtn.on {
+  background-position: -106px -112px;
+}
+/* line 466, ../scss/mypage.scss */
+#myPage .subNavi button.jobBtn {
+  display: inline-block;
+  background: url("/img/parts/sprite_mypage_parts_20130403_2.png") -211px -60px no-repeat;
+  -webkit-background-size: 480px 170px;
+  display: block;
+  width: 96px;
+  height: 46px;
+}
+/* line 471, ../scss/mypage.scss */
+#myPage .subNavi button.jobBtn.on {
+  background-position: -211px -112px;
+}
+/* line 478, ../scss/mypage.scss */
+#myPage .myStatus .contents {
+  width: 95%;
+  margin: 0 auto 16px auto;
+}
+/* line 481, ../scss/mypage.scss */
+#myPage .myStatus .contents .btn {
+  width: 50%;
+}
+/* line 485, ../scss/mypage.scss */
+#myPage .myStatus .columnBox {
+  margin: 8px;
+}
+/* line 489, ../scss/mypage.scss */
+#myPage .myStatus dd span {
+  color: #666;
+}
+
+/* line 494, ../scss/mypage.scss */
+.listMenu.adminNoticeFirst {
+  margin: 8px auto;
+}
+/* line 496, ../scss/mypage.scss */
+.listMenu.adminNoticeFirst li {
+  background-color: rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.5);
+}
+/* line 500, ../scss/mypage.scss */
+.listMenu.adminNoticeFirst .link {
+  color: #fff;
+}
+/* line 502, ../scss/mypage.scss */
+.listMenu.adminNoticeFirst .link.on {
+  background-color: rgba(224, 211, 171, 0.3);
+}
+/* line 506, ../scss/mypage.scss */
+.listMenu.adminNoticeFirst .label36_r4 {
+  margin-right: 8px;
+  padding: 2px 2px 2px 3px;
+  background-color: #78724C;
+  font-size: 10px;
+}
+
+/* line 513, ../scss/mypage.scss */
+.listMenu.newInfo {
+  margin: 0 auto;
+}
+/* line 515, ../scss/mypage.scss */
+.listMenu.newInfo + .banner {
+  margin-top: 16px;
+}
+
+/* line 519, ../scss/mypage.scss */
+.postForm_icon {
+  margin: 0 auto 6px auto;
+}
+
+/* line 522, ../scss/mypage.scss */
+#guildBbs {
+  margin-bottom: 0;
+}
+/* line 524, ../scss/mypage.scss */
+#guildBbs + .banner {
+  margin: 16px auto;
+}
+/* line 527, ../scss/mypage.scss */
+#guildBbs .arrowLink.alllinkm {
+  margin-bottom: 16px;
+}
+
+/* line 531, ../scss/mypage.scss */
+button.btn.post.jsGuildBbsTopicSubmit {
+  line-height: 22px;
+}
+
+/* line 534, ../scss/mypage.scss */
+.btn {
+  line-height: 18px;
+}
+
+/* line 538, ../scss/mypage.scss */
+#newArrival article {
+  width: 95%;
+  margin: 0 auto 8px auto;
+}
+/* line 544, ../scss/mypage.scss */
+#newArrival dt:nth-of-type(3), #newArrival dt:nth-of-type(5) {
+  clear: none;
+}
+/* line 550, ../scss/mypage.scss */
+#newArrival dd:nth-of-type(2), #newArrival dd:nth-of-type(4) {
+  margin-right: 8px;
+}
+/* line 554, ../scss/mypage.scss */
+#newArrival .arrowLink {
+  margin-bottom: 16px;
+}
+/* line 557, ../scss/mypage.scss */
+#newArrival.userList {
+  padding-top: 8px;
+}
+/* line 560, ../scss/mypage.scss */
+#newArrival ~ .arrowLink {
+  margin-bottom: 16px;
+}
+/* line 563, ../scss/mypage.scss */
+#newArrival ~ .helpList {
+  margin-top: 16px;
+}
+
+/* line 568, ../scss/mypage.scss */
+#adminNotice .arrowLink {
+  margin-bottom: 16px;
+}
+
+/* line 577, ../scss/mypage.scss */
+.modalBox.battleWaitNotice h1 {
+  text-align: left;
+}
+/* line 579, ../scss/mypage.scss */
+.modalBox.battleWaitNotice h1 span {
+  margin-left: 48px;
+}
+/* line 582, ../scss/mypage.scss */
+.modalBox.battleWaitNotice h1:before {
+  display: inline-block;
+  background: url("/img/parts/sprite_mypage_parts_20130403_2.png") -311px -110px no-repeat;
+  -webkit-background-size: 480px 170px;
+  visibility: visible;
+  content: "";
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: -10px;
+  top: 0;
+  width: 51px;
+  height: 57px;
+  z-index: 1;
+}
+/* line 586, ../scss/mypage.scss */
+.modalBox.battleWaitNotice h1:after {
+  display: none;
+}
+/* line 590, ../scss/mypage.scss */
+.modalBox.battleWaitNotice .bgNavico {
+  position: relative;
+  left: -6px;
+  top: 10px;
+  display: inline-block;
+  background: url("/img/parts/bg_mypage_battle_waiting.png") 0 0 no-repeat;
+  -webkit-background-size: 264px 115px;
+  display: block;
+  width: 264px;
+  height: 115px;
+}
+/* line 598, ../scss/mypage.scss */
+.modalBox.battleWaitNotice .bgNavico p {
+  position: relative;
+  left: 12px;
+  top: 12px;
+  width: 150px;
+  height: 80px;
+  font-size: 90%;
+  color: #333333;
+  text-align: left;
+}
+/* line 607, ../scss/mypage.scss */
+.modalBox.battleWaitNotice .bgNavico p em {
+  color: #ff0000;
+  font-style: normal;
+}
+/* line 612, ../scss/mypage.scss */
+.modalBox.battleWaitNotice .bgNavico ~ .btn.large {
+  position: relative;
+  top: 8px;
+  width: 90%;
+}
+/* line 616, ../scss/mypage.scss */
+.modalBox.battleWaitNotice .bgNavico ~ .btn.large.close {
+  margin-bottom: 8px;
+}
+
+/* line 624, ../scss/mypage.scss */
+body.android2 #myPage .avatarStatus .currentRank.out dd {
+  left: 2px;
+  bottom: 16px;
+}
+
+/* line 631, ../scss/mypage.scss */
+.loginBonus .rubric {
+  color: #8c0000;
+  display: inline-block;
+  margin-right: 4px;
+}
+/* line 636, ../scss/mypage.scss */
+.loginBonus .receiveGiftBtn {
+  width: 100%;
+}
+/* line 639, ../scss/mypage.scss */
+.loginBonus button {
+  width: 80%;
+  margin: 4px auto;
+}

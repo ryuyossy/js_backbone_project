@@ -1,0 +1,59 @@
+{
+	"status":200,
+	"mp_loss_flg": false,
+	"stage": {
+		"stage_id": 2,
+		"name": "コッカラ草原",
+		"description": "初心者はこちら",
+		"clear_flg": false
+	},
+	"field": {
+		"field_id": 1,
+		"field_name": "コッカラフィールド",
+		"progress_state": 1,
+		"progress_percent": 60,
+		"rest_distance": 30,
+		"use_mp": 10,
+		"win_exp": 10,
+		"win_gil_min": 50,
+		"win_gil_max": 80,
+		"equip_treasures": [
+			{
+				"type": "equipment",
+				"id": 110001,
+				"get_flg": true
+			},
+			{
+				"type": "treasure",
+				"id": 12,
+				"get_flg": false
+			}
+		]
+	},
+	"user": {
+		"avatar_id": 10001,
+		"mp": 50,
+		"max_mp": 150,
+		"mp_percent": 33,
+		"tp": 80,
+		"gil": 1200,
+		"level": 3,
+		"exp_current": 50,
+		"exp_levelup": 100,
+		"exp_percent": 50,
+		"equip_num": 50,
+		"max_equip_num": 100
+	},
+	"partners": [
+		{
+			"user_id": 1,
+			"avatar_id": 30001,
+			"name": "ブー"
+		},
+		{
+			"user_id":2,
+			"avatar_id": 20001,
+			"name": "ぼの"
+		}
+	]
+}

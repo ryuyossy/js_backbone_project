@@ -1,0 +1,36 @@
+@charset "utf-8";
+@import "base";
+@import "ruleset";
+
+// battle_what
+#battleWhat {
+	.message.navico_arc {
+		top: 0;
+		margin-top: 8px;
+	}
+	.banner {
+		margin: 8px 0;
+	}
+	.battleDoingList {
+		margin: 8px auto;
+		.doingLists {
+			width:95%;
+			margin:0 auto 8px auto;
+			padding:8px 0;
+		}
+		.description {
+			padding: 0 8px;
+			.txtColor {
+				display: inline-block;
+				color: #D80000;
+			}
+		}
+		.doingBtn {
+			margin-top:8px;
+		}
+	}
+	~ .arrowLink.mypageLinks {
+		margin-bottom: 16px;
+	}
+}
+

@@ -1,0 +1,198 @@
+@charset "utf-8";
+/*
+@mixin box_shadow_contents_l($offsetSize,$z_index:-1){
+	content:'';
+	position:absolute;
+	left:$offsetSize;
+	top:75%;
+	bottom:17px;
+	width:50%;
+	min-height:5px;
+	max-width:150px;
+	background:#544123;
+	-webkit-box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	-webkit-transform:rotate(-5deg);
+	transform:rotate(-5deg);
+	z-index:$z_index;
+}
+@mixin box_shadow_contents_r($offsetSize,$z-index:-1){
+	content:'';
+	position:absolute;
+	right:$offsetSize;
+	top:75%;
+	bottom:17px;
+	width:50%;
+	min-height:5px;
+	max-width:150px;
+	background:#544123;
+	-webkit-box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	-webkit-transform:rotate(5deg);
+	transform:rotate(5deg);
+	z-index:$z_index;
+}
+*/
+/*
+@mixin backgroundResize($position:0 -60px){
+	@media screen and (min-width:319px){
+		width:320px;
+		@include background-size(320px,auto);
+	}
+	@media screen and (min-width:359px){
+		width:360px;
+		@include background-size(360px,auto);
+	}
+	@media screen and (min-width:361px){
+		width:480px;
+		@include background-size(480px,auto);
+		background-position:$position;
+	}
+}
+*/
+/*
+@mixin display-box{
+	display:flexbox;
+	-webkit-display:flexbox;
+}
+@mixin box-align($position){
+	flex-align:$position;
+	-webkit-flex-align:$position;
+}
+@mixin box-flex($ratio){
+	flex:$ratio;
+	-webkit-flex:$ratio;
+}
+@mixin box-pack($position){
+	flex-pack:$position;
+	-webkitflex-pack:$position;
+}
+*/
+/* line 9, ../scss/equip.scss */
+#equipList .tabNav,
+#equipList .tabNav2,
+#equipSellList .tabNav,
+#equipSellList .tabNav2 {
+  margin: 8px auto 16px auto;
+}
+/* line 11, ../scss/equip.scss */
+#equipList .tabNav ~ .btn.large,
+#equipList .tabNav2 ~ .btn.large,
+#equipSellList .tabNav ~ .btn.large,
+#equipSellList .tabNav2 ~ .btn.large {
+  margin: 16px auto;
+}
+/* line 15, ../scss/equip.scss */
+#equipList .contents,
+#equipSellList .contents {
+  width: 95%;
+  margin: 0 auto 8px auto;
+}
+/* line 18, ../scss/equip.scss */
+#equipList .contents.narrow,
+#equipSellList .contents.narrow {
+  margin-bottom: 16px;
+  padding: 8px 0;
+}
+
+/* line 26, ../scss/equip.scss */
+#equipSellList .contents.narrow {
+  margin-top: 8px;
+}
+/* line 28, ../scss/equip.scss */
+#equipSellList .contents.narrow ~ .allCheck {
+  margin: 16px auto 8px auto;
+}
+/* line 32, ../scss/equip.scss */
+#equipSellList .contents .label48 {
+  width: 60%;
+  margin: 4px auto 0 auto;
+}
+/* line 38, ../scss/equip.scss */
+#equipSellList #equipSelectList ~ .paramStatus {
+  margin: 16px auto 0 auto;
+}
+/* line 40, ../scss/equip.scss */
+#equipSellList #equipSelectList ~ .paramStatus .headline {
+  margin: 0;
+}
+
+/* line 47, ../scss/equip.scss */
+#equipDetail .itemDetail {
+  margin-top: 16px;
+}
+/* line 53, ../scss/equip.scss */
+#equipDetail .label36_r4.equip_main, #equipDetail .label36_r4.equip_sub, #equipDetail .label36_r4.equip_protect {
+  margin-bottom: 8px;
+}
+/* line 57, ../scss/equip.scss */
+#equipDetail .contents {
+  margin-top: 8px;
+}
+/* line 61, ../scss/equip.scss */
+#equipDetail .equipBtnLists .btn.close {
+  width: 80%;
+}
+
+/* line 68, ../scss/equip.scss */
+#equipSellConfirm .noticeMessage .label48 {
+  width: 95%;
+  margin: 8px auto;
+}
+/* line 73, ../scss/equip.scss */
+#equipSellConfirm .equipConfirmList {
+  margin-top: 16px;
+}
+/* line 75, ../scss/equip.scss */
+#equipSellConfirm .equipConfirmList .component:after {
+  top: -8px;
+  right: 8px;
+}
+/* line 79, ../scss/equip.scss */
+#equipSellConfirm .equipConfirmList td {
+  padding-bottom: 16px;
+}
+/* line 81, ../scss/equip.scss */
+#equipSellConfirm .equipConfirmList td p {
+  text-align: center;
+}
+/* line 86, ../scss/equip.scss */
+#equipSellConfirm .equipConfirmList tr:last-of-type td {
+  padding-bottom: 0;
+}
+/* line 91, ../scss/equip.scss */
+#equipSellConfirm .expendConf {
+  width: 95%;
+  margin: 16px auto 8px auto;
+}
+/* line 96, ../scss/equip.scss */
+#equipSellConfirm .paramStatus table {
+  width: 100%;
+  text-align: center;
+}
+/* line 100, ../scss/equip.scss */
+#equipSellConfirm .paramStatus .headline {
+  padding-right: 8px;
+}
+/* line 105, ../scss/equip.scss */
+#equipSellConfirm .outerBtnBox .btn {
+  height: 44px;
+}
+/* line 109, ../scss/equip.scss */
+#equipSellConfirm ~ .arrowLink {
+  margin-bottom: 16px;
+}
+
+/* line 115, ../scss/equip.scss */
+#equipSellComplate .complateMessage article {
+  margin: 8px auto;
+}
+/* line 118, ../scss/equip.scss */
+#equipSellComplate .complateMessage p {
+  color: #fff;
+}
+/* line 120, ../scss/equip.scss */
+#equipSellComplate .complateMessage p.paramStatus {
+  width: 95%;
+  margin: 0 auto;
+}

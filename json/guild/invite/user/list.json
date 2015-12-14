@@ -1,0 +1,50 @@
+{
+    "status" : 200,
+    "guild_name" : "サイババ団",
+    "guild_rank" : "A",
+    "rank_status" : "ランクステイ圏内",
+    "rank_rest_days" : "3",
+    "battle_start_rest" : "05:44",
+    "battle_end_rest" : "",
+    "invite_num": 3,
+    "more_flg": true,
+    "users": [
+        {
+            "user_id": 10,
+            "avatar_id": "00001",
+            "level": 1,
+            "user_name": "take",
+            "job_name": "村人",
+            "attack": 100,
+            "defense": 200,
+            "sp_attack": 300,
+            "sp_defense": 400
+        },{
+            "user_id": 11,
+            "avatar_id": "00001",
+            "level": 1,
+            "user_name": "まっくす",
+            "job_name": "村人",
+            "attack": 100,
+            "defense": 200,
+            "sp_attack": 300,
+            "sp_defense": 400
+        },{
+            "user_id": 12,
+            "avatar_id": "00001",
+            "level": 1,
+            "user_name": "ゆたぽん",
+            "job_name": "村人",
+            "attack": 100,
+            "defense": 200,
+            "sp_attack": 300,
+            "sp_defense": 400
+        }
+    ],
+    "guild_name": "たけさん",
+    "guild_rank": "F",
+    "rank_status": "ランキング圏内",
+    "rank_rest_days": 0,
+    "battle_start_rest": "00:00:25",
+    "battle_end_rest": null
+}

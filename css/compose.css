@@ -1,0 +1,306 @@
+@charset "utf-8";
+/*
+@mixin box_shadow_contents_l($offsetSize,$z_index:-1){
+	content:'';
+	position:absolute;
+	left:$offsetSize;
+	top:75%;
+	bottom:17px;
+	width:50%;
+	min-height:5px;
+	max-width:150px;
+	background:#544123;
+	-webkit-box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	-webkit-transform:rotate(-5deg);
+	transform:rotate(-5deg);
+	z-index:$z_index;
+}
+@mixin box_shadow_contents_r($offsetSize,$z-index:-1){
+	content:'';
+	position:absolute;
+	right:$offsetSize;
+	top:75%;
+	bottom:17px;
+	width:50%;
+	min-height:5px;
+	max-width:150px;
+	background:#544123;
+	-webkit-box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	-webkit-transform:rotate(5deg);
+	transform:rotate(5deg);
+	z-index:$z_index;
+}
+*/
+/*
+@mixin backgroundResize($position:0 -60px){
+	@media screen and (min-width:319px){
+		width:320px;
+		@include background-size(320px,auto);
+	}
+	@media screen and (min-width:359px){
+		width:360px;
+		@include background-size(360px,auto);
+	}
+	@media screen and (min-width:361px){
+		width:480px;
+		@include background-size(480px,auto);
+		background-position:$position;
+	}
+}
+*/
+/*
+@mixin display-box{
+	display:flexbox;
+	-webkit-display:flexbox;
+}
+@mixin box-align($position){
+	flex-align:$position;
+	-webkit-flex-align:$position;
+}
+@mixin box-flex($ratio){
+	flex:$ratio;
+	-webkit-flex:$ratio;
+}
+@mixin box-pack($position){
+	flex-pack:$position;
+	-webkitflex-pack:$position;
+}
+*/
+/* line 6, ../scss/compose.scss */
+.banner.discount {
+  margin: 0 auto;
+}
+/* line 8, ../scss/compose.scss */
+.banner.discount > p {
+  margin: 8px auto 16px auto;
+  color: #008c8c;
+}
+/* line 11, ../scss/compose.scss */
+.banner.discount > p > button {
+  cursor: default;
+}
+
+/* line 25, ../scss/compose.scss */
+#composeList .tabNav,
+#composeList .tabNav2,
+#composeEvolutionList .tabNav,
+#composeEvolutionList .tabNav2,
+#composeBase .tabNav,
+#composeBase .tabNav2,
+#composeEvolutionBase .tabNav,
+#composeEvolutionBase .tabNav2,
+#composeConfirm .tabNav,
+#composeConfirm .tabNav2 {
+  margin: 8px auto 16px auto;
+}
+/* line 28, ../scss/compose.scss */
+#composeList .tabNav,
+#composeEvolutionList .tabNav,
+#composeBase .tabNav,
+#composeEvolutionBase .tabNav,
+#composeConfirm .tabNav {
+  margin-bottom: 8px;
+}
+/* line 31, ../scss/compose.scss */
+#composeList .contents,
+#composeEvolutionList .contents,
+#composeBase .contents,
+#composeEvolutionBase .contents,
+#composeConfirm .contents {
+  width: 95%;
+  margin: 0 auto 8px auto;
+}
+/* line 35, ../scss/compose.scss */
+#composeList .contents.narrow, #composeList .contents.selected,
+#composeEvolutionList .contents.narrow,
+#composeEvolutionList .contents.selected,
+#composeBase .contents.narrow,
+#composeBase .contents.selected,
+#composeEvolutionBase .contents.narrow,
+#composeEvolutionBase .contents.selected,
+#composeConfirm .contents.narrow,
+#composeConfirm .contents.selected {
+  margin: 8px auto 16px auto;
+  padding: 8px 0;
+}
+/* line 38, ../scss/compose.scss */
+#composeList .contents.narrow .innerBtnBox, #composeList .contents.selected .innerBtnBox,
+#composeEvolutionList .contents.narrow .innerBtnBox,
+#composeEvolutionList .contents.selected .innerBtnBox,
+#composeBase .contents.narrow .innerBtnBox,
+#composeBase .contents.selected .innerBtnBox,
+#composeEvolutionBase .contents.narrow .innerBtnBox,
+#composeEvolutionBase .contents.selected .innerBtnBox,
+#composeConfirm .contents.narrow .innerBtnBox,
+#composeConfirm .contents.selected .innerBtnBox {
+  margin: 8px auto 0 auto;
+}
+/* line 42, ../scss/compose.scss */
+#composeList .contents .contentsInner,
+#composeEvolutionList .contents .contentsInner,
+#composeBase .contents .contentsInner,
+#composeEvolutionBase .contents .contentsInner,
+#composeConfirm .contents .contentsInner {
+  min-height: 98px;
+}
+/* line 46, ../scss/compose.scss */
+#composeList .contents.material .contentsInner,
+#composeEvolutionList .contents.material .contentsInner,
+#composeBase .contents.material .contentsInner,
+#composeEvolutionBase .contents.material .contentsInner,
+#composeConfirm .contents.material .contentsInner {
+  min-height: inherit;
+}
+/* line 49, ../scss/compose.scss */
+#composeList .contents.material .numControl,
+#composeEvolutionList .contents.material .numControl,
+#composeBase .contents.material .numControl,
+#composeEvolutionBase .contents.material .numControl,
+#composeConfirm .contents.material .numControl {
+  width: 95%;
+  margin: 8px auto 0 auto;
+  padding: 4px 0 0 0;
+}
+/* line 55, ../scss/compose.scss */
+#composeList .contents.expendConf,
+#composeEvolutionList .contents.expendConf,
+#composeBase .contents.expendConf,
+#composeEvolutionBase .contents.expendConf,
+#composeConfirm .contents.expendConf {
+  margin: 8px auto;
+}
+/* line 59, ../scss/compose.scss */
+#composeList .label48,
+#composeEvolutionList .label48,
+#composeBase .label48,
+#composeEvolutionBase .label48,
+#composeConfirm .label48 {
+  width: 60%;
+  margin: 4px auto 0 auto;
+}
+/* line 63, ../scss/compose.scss */
+#composeList .btn.jsButtonSelectEquip,
+#composeEvolutionList .btn.jsButtonSelectEquip,
+#composeBase .btn.jsButtonSelectEquip,
+#composeEvolutionBase .btn.jsButtonSelectEquip,
+#composeConfirm .btn.jsButtonSelectEquip {
+  margin-top: 4px;
+}
+
+/* line 71, ../scss/compose.scss */
+#composeList .message,
+#composeEvolutionList .message,
+#composeBase .message,
+#composeEvolutionBase .message {
+  top: 0;
+  margin-bottom: 16px;
+}
+
+/* line 77, ../scss/compose.scss */
+#composeMaterialList .btn.large {
+  margin: 16px auto;
+}
+/* line 80, ../scss/compose.scss */
+#composeMaterialList .allCheck {
+  margin-bottom: 8px;
+}
+/* line 84, ../scss/compose.scss */
+#composeMaterialList .selectConfirm .paramStatus {
+  margin: 16px auto;
+}
+/* line 87, ../scss/compose.scss */
+#composeMaterialList .selectConfirm .btn.large {
+  margin: 0 auto;
+}
+/* line 93, ../scss/compose.scss */
+#composeMaterialList.evolutionMaterial .contents:first-of-type {
+  margin-top: 8px;
+}
+/* line 99, ../scss/compose.scss */
+#composeMaterialList .selectConfirm .headline {
+  margin-right: 0;
+}
+/* line 103, ../scss/compose.scss */
+#composeMaterialList .jsList .checkBox {
+  margin: 8px auto 0 auto;
+}
+
+/* line 108, ../scss/compose.scss */
+#composeMaterialConfirm .contents.material {
+  margin-top: 8px;
+}
+/* line 111, ../scss/compose.scss */
+#composeMaterialConfirm .label48 {
+  width: 95%;
+  margin: 8px auto;
+}
+/* line 116, ../scss/compose.scss */
+#composeMaterialConfirm .equipConfirmList .component:after {
+  top: -8px;
+  right: 8px;
+}
+/* line 120, ../scss/compose.scss */
+#composeMaterialConfirm .equipConfirmList td {
+  padding-bottom: 16px;
+}
+/* line 122, ../scss/compose.scss */
+#composeMaterialConfirm .equipConfirmList td p {
+  text-align: center;
+}
+/* line 127, ../scss/compose.scss */
+#composeMaterialConfirm .equipConfirmList tr:last-of-type td {
+  padding-bottom: 0;
+}
+/* line 133, ../scss/compose.scss */
+#composeMaterialConfirm .dimmed p {
+  margin: 8px auto;
+}
+/* line 137, ../scss/compose.scss */
+#composeMaterialConfirm .outerBtnBox {
+  margin-bottom: 16px;
+}
+/* line 139, ../scss/compose.scss */
+#composeMaterialConfirm .outerBtnBox .btn {
+  height: 44px;
+}
+/* line 143, ../scss/compose.scss */
+#composeMaterialConfirm .btn.large {
+  margin: 16px auto;
+}
+
+/* line 148, ../scss/compose.scss */
+#composeResult .itemDetail {
+  margin-top: 16px;
+}
+/* line 152, ../scss/compose.scss */
+#composeResult .complateMessage article {
+  margin: -8px auto 16px auto;
+}
+/* line 154, ../scss/compose.scss */
+#composeResult .complateMessage article .paramStatus {
+  font-size: 100%;
+}
+/* line 160, ../scss/compose.scss */
+#composeResult .btnBox .btn.large {
+  margin: 0 auto;
+}
+/* line 162, ../scss/compose.scss */
+#composeResult .btnBox .btn.large:nth-of-type(1) {
+  margin-bottom: 8px;
+}
+/* line 167, ../scss/compose.scss */
+#composeResult ~ .arrowLink {
+  margin-bottom: 8px;
+}
+/* line 171, ../scss/compose.scss */
+#composeResult ~ .linkGroup .arrowLink {
+  margin-bottom: 4px;
+}
+
+/* line 179, ../scss/compose.scss */
+.jsTabComposeBaseEquip .composeMoreLink.hide,
+.jsTabComposeBaseEquip .jsComposeConfirm.hide {
+  display: none;
+}

@@ -1,0 +1,49 @@
+<h1 class="mainHeader">ギルド掲示板</h1>
+
+<section id="guildBbs" class="jsGuildBbs">
+
+	<div class="postForm_icon">
+		<div class="formInner">
+			<div class="iconBgArc_s gold"><img src="{{getImgRoot/}}/avatar/{{>user.avatar_id}}_140.png"></div>
+			<div class="inputBox">
+				<textarea class="jsGuildBbsTopicTextarea" placeholder="つぶやく…"></textarea>
+				<button class="btn share jsGuildBbsTopicSubmit">投稿する</button>
+			</div>
+		</div>
+	</div>
+
+	<section class="jsGuildBbsTopics">
+		<div class="jsListAll">
+			{{for #data tmpl="#jsTemplateGuildBbsTopics" /}}
+		</div>
+		{{if bbs_more_flg}}
+		<div class="moreLink jsListMore">
+			<button class="link"><span>もっと見る</span></button>
+		</div>
+		{{/if}}
+	</section>
+	
+	<section class="caution">
+		<article>
+			<ul>
+				<li>本名やメールアドレス、電話番号などの個人情報や、個人の特定がされる可能性のある情報の入力はお控えください。</li>
+				<li>絵文字の入力はできません。</li>
+				<li>掲示板への投稿は2週間保存されます。</li>
+			</ul>
+		</article>
+	</section>
+
+	<hr>
+	
+	<section class="linkGroup">
+		{{if battle_state===4}}
+		<div class="arrowLink">
+			<button class="link prev" data-href="battle/">バトルに戻る</button>
+		</div>
+		{{/if}}
+		<div class="arrowLink alertNoMem">
+			<button class="link prev" data-href="guild/">ギルドトップに戻る</button>
+		</div>
+	</section>
+
+</section>

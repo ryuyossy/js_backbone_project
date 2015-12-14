@@ -1,0 +1,67 @@
+{
+	"version":2,
+	"status": 200,
+	"win_flg": true,
+	"user": {
+		"avatar_id": "31003"
+	},
+	"partners":[
+		{
+			"avatar_id": "21003"
+		},
+		{
+			"avatar_id": "13003"
+		}
+	],
+	"boss": {
+		"name": "パッとしないヤツ（序）",
+		"comment": "ほっといてよ。。もう。",
+		"win_exp": 50,
+		"win_gil": 2000
+	},
+	"rewards": [
+		{
+			"type": "item",
+			"reward_id": 101,
+			"name": "回復ドリンク（M）",
+			"number": 1
+		},
+		{
+			"type": "item",
+			"reward_id": 201,
+			"name": "ヨクソダ～ツ（M）",
+			"number": 1
+		}
+	],
+	"level_up": {
+		"level_after": 5,
+		"win_mp_max": 0,
+		"mp_max_after": 50,
+		"win_weapon_cost": 1,
+		"weapon_cost_after": 7,
+		"win_protector_cost": 1,
+		"protecotr_cost_after": 54,
+		"win_ability_cost": 1,
+		"ability_cost_after": 3
+	},
+	"next": {
+		"stage_id": 1,
+		"field_id": 3,
+		"stage_clear_flg": true,
+		"all_stage_clear_flg": false
+	},
+	"win_jobs": [
+		{
+			"id": 110,
+			"name": "ソルジャー"
+		},
+		{
+			"id": 120,
+			"name": "ナイト"
+		},
+		{
+			"id": 130,
+			"name": "サムライ"
+		}
+	]
+}

@@ -1,0 +1,43 @@
+<h1 class="mainHeader">お宝図鑑</h1>
+
+<div class="statusLine">
+	<dl>
+		<dt>発見種類数</dt><dd><span>{{>total_series_treasure_collect_num}}</span>/{{>total_series_treasure_num}}</dd>
+		<dt>シリーズコンプ</dt><dd><span>{{>total_series_collect_num}}</span>/{{>total_series_num}}</dd>
+	</dl>
+</div>
+
+<div class="collectionCtM">
+{{for series}}
+	<section class="contents contentsShadow statusData_icon link" data-href="collection/treasure/list/{{>series_id}}/">
+		<div class="columnBox innerHeader">
+			<img src="{{getImgRoot/}}/treasure/{{>disp_treasure_id}}_128.png">
+			<div class="contentsInner">
+				<h1>{{>series_name}}</h1>
+				<p{{if user_series_treasure_collect_num == total_series_treasure_num}} class="completed"{{/if}}>{{>collect_status}}</p>
+				<dl>
+					<dt>発見種類数</dt>
+					<dd class="treasureCount"><span>{{>user_series_treasure_collect_num}}</span>/{{>total_series_treasure_num}}</dd>
+				</dl>
+				<!-- //20130123 コンプ済みの場合スタンプを表示 -->
+				{{if user_series_treasure_collect_num == total_series_treasure_num}}
+				<span class="cleared"><span class="hide">Cleared</span></span>
+				{{/if}}
+			</div>
+		</div>
+	</section>
+{{/for}}
+</div>
+<hr>
+<!-- //単独リンク（矢印左） -->
+<div class="arrowLink collectionEquipLink">
+	<button class="link prev" data-href="collection/top/">図鑑トップへ戻る</button>
+</div>
+
+<!-- //ヘルプリスト -->
+<div class="helpList">
+	<ul>
+		<li><button class="link" data-href="help/detail/1403/">お宝図鑑ってなに？</button></li>
+	</ul>
+</div>
+

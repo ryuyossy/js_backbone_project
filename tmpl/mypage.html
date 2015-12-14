@@ -1,0 +1,294 @@
+{{if guild_rank_result || ticket_animation_id || avatar_animation_id}}
+<div id="fullScreen">
+	<canvas id="canvas" width="320" height="200"></canvas>
+	<div class="pause"><button class="pushEnter">TAP SCREEN</button></div>
+</div>
+{{/if}}
+
+<div id="jsMypage">
+
+	<section id="myPage">
+		<section class="avatarStatus{{if battle_end_rest}} onBattle{{/if}}">
+			<div class="nameBox">
+				<h1>{{>user.user_name}}</h1>
+				<dl>
+					<dt>Lv.</dt><dd>{{>level}}</dd>
+					<dt>ジョブ</dt><dd>{{>user.job_name}}</dd>
+				</dl>
+			</div>
+			<figure class="myAvatar">
+				<img src="{{getImgRoot/}}/avatar/{{>user.avatar_id}}_640.png">
+				<span class="prof link" data-href="profile/"></span>
+			</figure>
+
+		{{if guild_rank && ranking}}
+			{{if guild_rank === "F"}}
+			<dl class="currentRank out link" data-href="guild/rank/">
+				<dt>ランキング参加なし</dt>
+				<dd>ギルドランクEまで<br>残り<span>{{>rankup_bp}}</span>BP</dd>
+			</dl>
+			{{else ranking.order}}
+			<dl class="currentRank{{if ranking.state === 'up'}} rankUp{{else ranking.state === 'stay'}} rankStay{{else ranking.state === 'down'}} rankDown{{/if}} link" data-href="guild/rank/">
+				<dt class="hide">現在のランキング</dt>
+				<dd><span>{{>ranking.order}}</span>位</dd>
+			</dl>
+			{{/if}}
+		{{/if}}
+
+			{{if battle_end_rest}}
+			{{*// バトル中}}
+			<section class="message navico onBattle">
+				<img src="{{getImgRoot/}}/parts/navico.png" class="navicoImg">
+				<p class="link" data-href="battle/top/">
+					<span class="hide">バトル開催中</span>
+				</p>
+			</section>
+			{{else enemy_exist_flg}}
+			{{*// バトル前}}
+			<section class="message navico opponent">
+				<img src="{{getImgRoot/}}/parts/navico.png" class="navicoImg">
+				<p class="link" data-href="guild/">
+					<span class="hide">対戦相手決定！</span>
+				</p>
+			</section>
+			{{else}}
+			{{*// 通常}}
+			<section class="message navico jsNavico">
+				<img src="{{getImgRoot/}}/parts/navico.png" class="navicoImg">
+				{{if npc_comment_url}}
+				<p class="jsNavicoMessage" data-href="{{:npc_comment_url}}">
+				{{else}}
+				<p class="jsNavicoMessage">
+				{{/if}}
+					<span>{{:npc_comment}}</span>
+				</p>
+			</section>
+			{{/if}}
+
+			{{if latest_info_count}}
+			<button class="notification jsNotifyIcon">
+				<span class="hide">お知らせ</span><span class="badge">{{>latest_info_count}}</span>
+			</button>
+			{{/if}}
+
+			{{if next_tutorial_id}}
+			<button class="waitingNotice jsButtonWaitingNotice">
+			{{else}}
+			<button class="waitingNotice" data-href="waiting_notice/">
+			{{/if}}
+				<span class="hide">バトルまで何する？</span>
+			</button>
+
+		</section>
+
+		<section class="mainNavi{{if battle_end_rest}} onBattle{{else enemy_exist_flg}} battleReady{{/if}}">
+			<section class="belongsGuildName">
+				<div class="emblemIcon_l link" data-href="guild/"><span class="guildRank {{>guild_rank}} hide">ギルドランク{{>guild_rank}}</span></div>
+				<h1 class="link" data-href="guild/">{{>guild_name}}</h1>
+			</section>
+			<div class="missionBtn link" data-href="mission/stage/">
+				<span class="hide">クエスト</span>
+				<div class="gergeBg">
+					<span class="gerge missionP" style="width:{{>mp/max_mp*100}}%"></span>
+				</div>
+			</div>
+			<div class="battleBtn link" data-href="battle/top/">
+				<span class="hide">バトル</span>
+				<div class="gergeBg">
+					<span class="gerge battleP" style="width:{{>user.tp}}%"></span>
+				</div>
+			</div>
+		</section>
+
+		{{if main_weapon || main_protector}}
+		<section class="equipStatus">
+			<h1 class="link" data-href="deck/list/1/"><span class="hide">装備</span></h1>
+			{{if main_weapon }}
+			<div class="weapon link" data-href="deck/list/1/">{{equipThumb equip_id=main_weapon.equip_id step=main_weapon.step size="medium" /}}</div>
+			{{/if}}
+			{{if main_protector }}
+			<div class="armor link" data-href="deck/list/2/">{{equipThumb equip_id=main_protector.equip_id step=main_protector.step size="medium" /}}</div>
+			{{/if}}
+			<p class="paramStatus"><span>戦闘力</span>{{>power}}</p>
+			<!-- // パラメータ -->
+			<div class="paramStatus">
+				<section class="status attack">
+					<h2>攻撃力</h2>{{>attack}}<br>
+					<h2>特攻力</h2>{{>sp_attack}}<br>
+					<h2>武器P</h2>{{>weapon_cost}}<span>/{{>max_weapon_cost}}</span>
+				</section>
+				<section class="status defense">
+					<h2>防御力</h2>{{>defense}}<br>
+					<h2>特防力</h2>{{>sp_defense}}<br>
+					<h2>防具P</h2>{{>protector_cost}}<span>/{{>max_protector_cost}}</span>
+				</section>
+			</div>
+		</section>
+		{{/if}}
+
+		<section class="subNavi">
+			<button class="composeBtn{{if compose_gil_discount_flg}} discount{{/if}}" data-href="compose/"><span class="hide">合成</span></button>
+			<button class="gachaBtn" data-href="gacha/"><span class="hide">ガチャ</span></button>
+			<button class="jobBtn" data-href="job/"><span class="hide">ジョブ</span></button>
+		</section>
+
+		<section class="myStatus">
+			<div class="contents contentsShadow statusData">
+				<h1>ステータス</h1>
+				<div class="columnBox">
+					<dl>
+						<dt>Lv.</dt><dd>{{>level}}</dd>
+						<dt>行動P</dt><dd>{{>mp}}<span>/{{>max_mp}}</span></dd>
+						<dt>所持ギル</dt><dd>{{>gil}}</dd>
+					</dl>
+					<dl>
+						<dt>Max HP</dt><dd>{{>max_hp}}</dd>
+						<dt>AP</dt><dd>{{>ap}}<span>/{{>max_ap}}</span></dd>
+						<dt>ガチャP</dt><dd>{{>gacha_p}}</dd>
+					</dl>
+				</div>
+				<button class="btn" data-href="profile/">プロフィール</button>
+			</div>
+		</section>
+
+	</section>
+
+	<h1 class="subHeader">
+		<span class="subHeaderBg_l"></span>
+		<span>新着情報</span>
+		<span class="subHeaderBg_r"></span>
+	</h1>
+	{{*// 運営からのお知らせの最新1件を表示 }}
+	{{if system_infos.length > 0}}
+	<div class="listMenu adminNoticeFirst">
+		<ul>
+			<li>
+				<div class="link" data-href="notice/detail/{{>system_infos[0].info_id}}/">
+					<dl>
+						<dt class="label36_r4">運営より</dt><dd>{{>system_infos[0].title}}</dd>
+					</dl>
+				</div>
+			</li>
+		</ul>
+	</div>
+	{{/if}}
+	<!-- // 新着 -->
+	<div class="listMenu newInfo jsNoticeList">
+		<ul>
+			{{for infos}}
+			<li data-href="{{:path}}">
+				<div class="link">
+					<dl><dt class="label36_r4">NEW</dt><dd>{{>message}}</dd></dl>
+				</div>
+			</li>
+			{{/for}}
+		</ul>
+	</div>
+
+	{{*// バナー:画像はimg/ad/の中にあります}}
+	<div class="banner">
+		{{for #data tmpl="#jsTemplateBanners" /}}
+		<p>
+			<button class="link" data-href="startdash/"><img src="{{getImgRoot/}}/ad/banner_startdash2.png"><br>└バトルに参加してガチャチケットGET！┘</button>
+		</p>
+		<p>
+			<button class="link" data-href="quiz/top/"><img src="{{getImgRoot/}}/ad/banner_quiz2.png"><br>└ブレガークイズで英雄の心得を覚えよう！┘</button>
+		</p>
+		<p>
+			{{if product_mode}}
+			<a href="https://s.amebame.com/#group/{{:official_circle_id}}">
+			{{else}}
+			<a href="https://s.sb-amebame.com/#group/{{:official_circle_id}}">
+			{{/if}}
+				<button class="link"><img src="{{getImgRoot/}}/ad/banner_circle2.png"><br>└公式サークルはこちら┘</button>
+			</a>
+		</p>
+	</div>
+
+	<section id="guildBbs" class="jsGuildBbs">
+		<h1 class="subHeader">
+			<span class="subHeaderBg_l"></span><span>ギルド掲示板</span><span class="subHeaderBg_r"></span>
+		</h1>
+
+		<div class="postForm_icon">
+			<div class="formInner">
+				<div class="iconBgArc_s gold"><img src="{{getImgRoot/}}/avatar/{{>user.avatar_id}}_140.png"></div>
+				<div class="inputBox">
+					<textarea class="jsGuildBbsTopicTextarea" placeholder="つぶやく…"></textarea>
+					<button class="btn post jsGuildBbsTopicSubmit">投稿する</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="jsGuildBbsTopics">
+			<div class="jsListAll">
+				{{for #data tmpl="#jsTemplateGuildBbsTopics" /}}
+			</div>
+			{{if bbs_more_flg}}
+			<div class="arrowLink">
+				<span class="link next" data-href="guild/bbs/">ぜんぶ見る</span>
+			</div>
+			{{/if}}
+		</div>
+	</section>
+
+	<div class="banner">
+		<p>
+			<button class="link" data-href="guild/space/"><img src="{{getImgRoot/}}/ad/banner_guildplaza.png"><br>└ギルドメンバーを探すなら┘</button>
+		</p>
+	</div>
+
+	<section id="greet" class="jsGreet">
+		<h1 class="subHeader">
+			<span class="subHeaderBg_l"></span><span>あいさつ</span><span class="subHeaderBg_r"></span>
+		</h1>
+		<div class="jsGreets">
+			{{for #data tmpl="#jsTemplateGreet" /}}
+		</div>
+		{{if greets_more_flg}}
+		<div class="arrowLink">
+			<span class="link next" data-href="greet/">ぜんぶ見る</span>
+		</div>
+		{{/if}}
+
+	</section>
+
+	<section id="newArrival">
+		<h1 class="subHeader2">
+			<span class="subHeaderBg_l"></span><span>新着ユーザー</span><span class="subHeaderBg_r"></span>
+		</h1>
+		{{for #data tmpl="#jsTemplateNewArrival" /}}
+		<div class="arrowLink">
+			<button class="link next" data-href="new_arrival/">ぜんぶ見る</button>
+		</div>
+	</section>
+
+	<section id="adminNotice">
+		<h2 class="subHeader2">
+			<span class="subHeaderBg_l"></span><span>運営からのお知らせ</span><span class="subHeaderBg_r"></span>
+		</h2>
+		{{for #data tmpl="#jsTemplateNotice" /}}
+	</section>
+	
+	<div class="rotationBannerAds"></div>
+
+</div>
+
+{{escape}}
+<script id="jsTemplatePopupWaitingNotice" type="text/x-jsrender">
+	<div class="modalBox battleWaitNotice jsPopupWaitingNotice jsPopup">
+		<span class="close jsClosePopup"><span>閉じる</span></span>
+		<h1><span>{{>title}}</span></h1>
+		<div class="modalInner">
+			<article class="bgNavico">
+				<p>{{:body}}</p>
+			</article>
+			{{if href}}
+			<button class="btn large" data-href="{{>href}}">{{>btn_val}}</button>
+			{{else}}
+			<button class="btn large close jsClosePopup jsButtonFinishWaitingNotice">{{>btn_val}}</button>
+			{{/if}}
+		</div>
+	</div>
+</script>
+{{/escape}}

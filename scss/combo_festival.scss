@@ -1,0 +1,57 @@
+@charset "utf-8";
+@import "base";
+@import "ruleset";
+
+#comboFestival{
+	.pageTitle{
+		position:relative;
+		//@include backgroundSize("/parts/event/combo/combo_title_spring.png",0,0,no-repeat);
+		@include backgroundSize("/parts/event/combo/combo_title_springbig.png",0,0,no-repeat);
+		display:block;
+		width:304px;
+		height:136px;
+		margin:$inner_margin auto 0 auto;
+	}
+	.subHeader{
+		margin-bottom:$inner_margin;
+	}
+}
+
+
+
+// bravebattle_shorttutorial
+#comboFestival {
+	.headMarg {
+		margin-top: 8px;
+	}
+	.message.taicho_arc {
+		margin: 8px auto 0 auto;
+		top: 0;
+		.comboCnt {
+			color: #D80000;
+			font-weight: bold;
+		}
+	}
+	.comboDescription {
+		margin: 8px auto 16px auto;
+	}
+	.btn.battle.large {
+		margin-bottom: 16px;
+	}
+	.remunerationList {
+		margin: $inner_margin 0 $inner_margin 0;
+		.rmrCnt {
+			width:95%;
+			margin:0 auto;
+			padding:8px 0;
+			margin-bottom: $inner_margin;
+		}
+	}
+	.arrowGiftLink {
+		margin-bottom: 2px;
+	}
+	.title {
+		display:block;
+		margin:0 auto;
+	}
+}

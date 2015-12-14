@@ -1,0 +1,3969 @@
+@charset "utf-8";
+/* line 3, ../../scss/sencha/quest.scss */
+#an-anim > ol {
+  list-style: none;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 10, ../../scss/sencha/quest.scss */
+#an-anim .an-stage {
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 17, ../../scss/sencha/quest.scss */
+#an-anim .an-stage div {
+  position: absolute;
+}
+
+/* line 21, ../../scss/sencha/quest.scss */
+#imgQuestBg01 {
+  -webkit-transform: translate(-50px, 0px);
+  width: 458px;
+  height: 272px;
+  top: 0;
+  left: 0;
+}
+
+@-webkit-keyframes ani-imgQuestBg01 {
+  /* line 30, ../../scss/sencha/quest.scss */
+  0% {
+    -webkit-transform: translate(-50px, 0px);
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 35, ../../scss/sencha/quest.scss */
+  29.6117% {
+    -webkit-transform: translate(-50px, 0px);
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 40, ../../scss/sencha/quest.scss */
+  59.7087% {
+    -webkit-transform: translate(-138px, 0px);
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 45, ../../scss/sencha/quest.scss */
+  64.5630% {
+    -webkit-transform: translate(-138px, 0px);
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 50, ../../scss/sencha/quest.scss */
+  64.5631% {
+    -webkit-transform: translate(0px, 0px);
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 55, ../../scss/sencha/quest.scss */
+  100% {
+    -webkit-transform: translate(-50px, 0px);
+    -webkit-animation-timing-function: linear;
+  }
+}
+
+/* line 61, ../../scss/sencha/quest.scss */
+.scene1 #imgQuestBg01 {
+  -webkit-animation-name: ani-imgQuestBg01;
+  -webkit-animation-duration: 1.03s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+}
+
+/* line 68, ../../scss/sencha/quest.scss */
+#imgQuestBg01 {
+  -webkit-transform: translate(-50px, 0px);
+  -webkit-animation-timing-function: linear;
+}
+
+/* line 73, ../../scss/sencha/quest.scss */
+#imgShadow03 {
+  -webkit-transform: translate(-143px, 215px);
+  width: 48px;
+  height: 16px;
+  top: 0;
+  left: 0;
+}
+
+@-webkit-keyframes ani-imgShadow03 {
+  /* line 82, ../../scss/sencha/quest.scss */
+  0% {
+    -webkit-transform: translate(-143px, 215px) scale(1, 1);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 88, ../../scss/sencha/quest.scss */
+  19.5122% {
+    -webkit-transform: translate(-126px, 215px) scale(0.77, 0.8);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 94, ../../scss/sencha/quest.scss */
+  39.0244% {
+    -webkit-transform: translate(-114px, 215px) scale(1, 1);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 100, ../../scss/sencha/quest.scss */
+  49.5935% {
+    -webkit-transform: translate(-114px, 215px) scale(1, 1);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 106, ../../scss/sencha/quest.scss */
+  98.374% {
+    -webkit-transform: translate(114px, 215px) scale(1, 1);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 112, ../../scss/sencha/quest.scss */
+  100% {
+    -webkit-transform: translate(114px, 215px) scale(1, 1);
+    -webkit-animation-timing-function: linear;
+    opacity: 0;
+  }
+}
+
+/* line 119, ../../scss/sencha/quest.scss */
+.scene1 #imgShadow03 {
+  -webkit-animation-name: ani-imgShadow03;
+  -webkit-animation-duration: 0.615s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+}
+
+/* line 126, ../../scss/sencha/quest.scss */
+#imgShadow03 {
+  -webkit-transform: translate(114px, 215px) scale(1, 1);
+  -webkit-animation-timing-function: linear;
+  opacity: 0;
+}
+
+/* line 132, ../../scss/sencha/quest.scss */
+#imgShadow02 {
+  -webkit-transform: translate(-71px, 185px);
+  width: 48px;
+  height: 16px;
+  top: 0;
+  left: 0;
+}
+
+@-webkit-keyframes ani-imgShadow02 {
+  /* line 141, ../../scss/sencha/quest.scss */
+  0% {
+    -webkit-transform: translate(-71px, 185px) scale(1, 1);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 147, ../../scss/sencha/quest.scss */
+  19.5122% {
+    -webkit-transform: translate(-54px, 185px) scale(0.77, 0.8);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 153, ../../scss/sencha/quest.scss */
+  39.0244% {
+    -webkit-transform: translate(-42px, 185px) scale(1, 1);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 159, ../../scss/sencha/quest.scss */
+  49.5935% {
+    -webkit-transform: translate(-42px, 185px) scale(1, 1);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 165, ../../scss/sencha/quest.scss */
+  98.374% {
+    -webkit-transform: translate(180px, 185px) scale(1, 1);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 171, ../../scss/sencha/quest.scss */
+  100% {
+    -webkit-transform: translate(180px, 185px) scale(1, 1);
+    -webkit-animation-timing-function: linear;
+    opacity: 0;
+  }
+}
+
+/* line 178, ../../scss/sencha/quest.scss */
+.scene1 #imgShadow02 {
+  -webkit-animation-name: ani-imgShadow02;
+  -webkit-animation-duration: 0.615s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+}
+
+/* line 185, ../../scss/sencha/quest.scss */
+#imgShadow02 {
+  -webkit-transform: translate(180px, 185px) scale(1, 1);
+  -webkit-animation-timing-function: linear;
+  opacity: 0;
+}
+
+/* line 191, ../../scss/sencha/quest.scss */
+#imgShadow01 {
+  -webkit-transform: translate(42px, 200px);
+  width: 48px;
+  height: 16px;
+  top: 0;
+  left: 0;
+}
+
+@-webkit-keyframes ani-imgShadow01 {
+  /* line 200, ../../scss/sencha/quest.scss */
+  0% {
+    -webkit-transform: translate(42px, 200px) scale(1, 1);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 206, ../../scss/sencha/quest.scss */
+  12.4675% {
+    -webkit-transform: translate(62px, 200px) scale(0.77, 0.8);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 212, ../../scss/sencha/quest.scss */
+  24.9351% {
+    -webkit-transform: translate(74px, 200px) scale(1, 1);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 218, ../../scss/sencha/quest.scss */
+  31.6883% {
+    -webkit-transform: translate(74px, 200px) scale(1, 1);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 224, ../../scss/sencha/quest.scss */
+  62.8571% {
+    -webkit-transform: translate(324px, 200px) scale(1, 1);
+    -webkit-animation-timing-function: ease;
+    opacity: 1;
+  }
+
+  /* line 230, ../../scss/sencha/quest.scss */
+  63.8961% {
+    -webkit-transform: translate(324px, 200px) scale(1, 1);
+    -webkit-animation-timing-function: ease;
+    opacity: 0;
+  }
+
+  /* line 236, ../../scss/sencha/quest.scss */
+  81.039% {
+    -webkit-transform: translate(-0.42503px, 200px) scale(1, 1);
+    -webkit-animation-timing-function: linear;
+    opacity: 0;
+  }
+
+  /* line 242, ../../scss/sencha/quest.scss */
+  82.0779% {
+    -webkit-transform: translate(0px, 200px) scale(1, 1);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 248, ../../scss/sencha/quest.scss */
+  92.987% {
+    -webkit-transform: translate(32px, 200px) scale(0.81, 0.81);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 254, ../../scss/sencha/quest.scss */
+  100% {
+    -webkit-transform: translate(42px, 200px) scale(1, 1);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+}
+
+/* line 261, ../../scss/sencha/quest.scss */
+.scene1 #imgShadow01 {
+  -webkit-animation-name: ani-imgShadow01;
+  -webkit-animation-duration: 0.9625s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+}
+
+/* line 268, ../../scss/sencha/quest.scss */
+#imgShadow01 {
+  -webkit-transform: translate(42px, 200px) scale(1, 1);
+  -webkit-animation-timing-function: linear;
+  opacity: 1;
+}
+
+/* line 274, ../../scss/sencha/quest.scss */
+#imgKenshi06 {
+  -webkit-transform: translate(-138px, 106px);
+  width: 128px;
+  height: 128px;
+  top: 0;
+  left: 0;
+}
+
+@-webkit-keyframes ani-imgKenshi06 {
+  /* line 283, ../../scss/sencha/quest.scss */
+  0% {
+    -webkit-transform: translate(-138px, 106px);
+    -webkit-animation-timing-function: linear;
+    opacity: 0;
+  }
+
+  /* line 289, ../../scss/sencha/quest.scss */
+  46.3415% {
+    -webkit-transform: translate(-138px, 106px);
+    -webkit-animation-timing-function: linear;
+    opacity: 0;
+  }
+
+  /* line 295, ../../scss/sencha/quest.scss */
+  49.5935% {
+    -webkit-transform: translate(-138px, 106px);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 301, ../../scss/sencha/quest.scss */
+  98.374% {
+    -webkit-transform: translate(135px, 106px);
+    -webkit-animation-timing-function: ease-in;
+    opacity: 1;
+  }
+
+  /* line 307, ../../scss/sencha/quest.scss */
+  100% {
+    -webkit-transform: translate(135px, 106px);
+    -webkit-animation-timing-function: ease-in;
+    opacity: 0;
+  }
+}
+
+/* line 314, ../../scss/sencha/quest.scss */
+.scene1 #imgKenshi06 {
+  -webkit-animation-name: ani-imgKenshi06;
+  -webkit-animation-duration: 0.615s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+}
+
+/* line 321, ../../scss/sencha/quest.scss */
+#imgKenshi06 {
+  -webkit-transform: translate(135px, 106px);
+  -webkit-animation-timing-function: ease-in;
+  opacity: 0;
+}
+
+/* line 327, ../../scss/sencha/quest.scss */
+#imgKenshi05 {
+  -webkit-transform: translate(-158px, 104px);
+  width: 128px;
+  height: 128px;
+  top: 0;
+  left: 0;
+}
+
+@-webkit-keyframes ani-imgKenshi05 {
+  /* line 336, ../../scss/sencha/quest.scss */
+  0% {
+    -webkit-transform: translate(-158px, 104px);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 342, ../../scss/sencha/quest.scss */
+  39.3443% {
+    -webkit-transform: translate(-140px, 74px);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 348, ../../scss/sencha/quest.scss */
+  78.6885% {
+    -webkit-transform: translate(-129px, 104px);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 354, ../../scss/sencha/quest.scss */
+  93.4426% {
+    -webkit-transform: translate(-129px, 104px);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 360, ../../scss/sencha/quest.scss */
+  100% {
+    -webkit-transform: translate(-129px, 104px);
+    -webkit-animation-timing-function: linear;
+    opacity: 0;
+  }
+}
+
+/* line 367, ../../scss/sencha/quest.scss */
+.scene1 #imgKenshi05 {
+  -webkit-animation-name: ani-imgKenshi05;
+  -webkit-animation-duration: 0.305s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+}
+
+/* line 374, ../../scss/sencha/quest.scss */
+#imgKenshi05 {
+  -webkit-transform: translate(-129px, 104px);
+  -webkit-animation-timing-function: linear;
+  opacity: 0;
+}
+
+/* line 380, ../../scss/sencha/quest.scss */
+#imgKenshi04 {
+  -webkit-transform: translate(-66px, 76px);
+  width: 128px;
+  height: 128px;
+  top: 0;
+  left: 0;
+}
+
+@-webkit-keyframes ani-imgKenshi04 {
+  /* line 389, ../../scss/sencha/quest.scss */
+  0% {
+    -webkit-transform: translate(-66px, 76px);
+    -webkit-animation-timing-function: linear;
+    opacity: 0;
+  }
+
+  /* line 395, ../../scss/sencha/quest.scss */
+  46.3415% {
+    -webkit-transform: translate(-66px, 76px);
+    -webkit-animation-timing-function: linear;
+    opacity: 0;
+  }
+
+  /* line 401, ../../scss/sencha/quest.scss */
+  49.5935% {
+    -webkit-transform: translate(-66px, 76px);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 407, ../../scss/sencha/quest.scss */
+  98.374% {
+    -webkit-transform: translate(207px, 76px);
+    -webkit-animation-timing-function: ease-in;
+    opacity: 1;
+  }
+
+  /* line 413, ../../scss/sencha/quest.scss */
+  100% {
+    -webkit-transform: translate(207px, 76px);
+    -webkit-animation-timing-function: ease-in;
+    opacity: 0;
+  }
+}
+
+/* line 420, ../../scss/sencha/quest.scss */
+.scene1 #imgKenshi04 {
+  -webkit-animation-name: ani-imgKenshi04;
+  -webkit-animation-duration: 0.615s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+}
+
+/* line 427, ../../scss/sencha/quest.scss */
+#imgKenshi04 {
+  -webkit-transform: translate(207px, 76px);
+  -webkit-animation-timing-function: ease-in;
+  opacity: 0;
+}
+
+/* line 433, ../../scss/sencha/quest.scss */
+#imgKenshi03 {
+  -webkit-transform: translate(-86px, 74px);
+  width: 128px;
+  height: 128px;
+  top: 0;
+  left: 0;
+}
+
+@-webkit-keyframes ani-imgKenshi03 {
+  /* line 442, ../../scss/sencha/quest.scss */
+  0% {
+    -webkit-transform: translate(-86px, 74px);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 448, ../../scss/sencha/quest.scss */
+  39.3443% {
+    -webkit-transform: translate(-68px, 44px);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 454, ../../scss/sencha/quest.scss */
+  78.6885% {
+    -webkit-transform: translate(-57px, 74px);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 460, ../../scss/sencha/quest.scss */
+  93.4426% {
+    -webkit-transform: translate(-57px, 74px);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 466, ../../scss/sencha/quest.scss */
+  100% {
+    -webkit-transform: translate(-57px, 74px);
+    -webkit-animation-timing-function: linear;
+    opacity: 0;
+  }
+}
+
+/* line 473, ../../scss/sencha/quest.scss */
+.scene1 #imgKenshi03 {
+  -webkit-animation-name: ani-imgKenshi03;
+  -webkit-animation-duration: 0.305s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+}
+
+/* line 480, ../../scss/sencha/quest.scss */
+#imgKenshi03 {
+  -webkit-transform: translate(-57px, 74px);
+  -webkit-animation-timing-function: linear;
+  opacity: 0;
+}
+
+/* line 486, ../../scss/sencha/quest.scss */
+#imgKenshi02 {
+  -webkit-transform: translate(50px, 91px);
+  width: 128px;
+  height: 128px;
+  top: 0;
+  left: 0;
+}
+
+@-webkit-keyframes ani-imgKenshi02 {
+  /* line 495, ../../scss/sencha/quest.scss */
+  0% {
+    -webkit-transform: translate(50px, 91px);
+    -webkit-animation-timing-function: linear;
+    opacity: 0;
+  }
+
+  /* line 501, ../../scss/sencha/quest.scss */
+  25.0219% {
+    -webkit-transform: translate(50px, 91px);
+    -webkit-animation-timing-function: linear;
+    opacity: 0;
+  }
+
+  /* line 507, ../../scss/sencha/quest.scss */
+  26.7779% {
+    -webkit-transform: translate(50px, 91px);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 513, ../../scss/sencha/quest.scss */
+  53.1168% {
+    -webkit-transform: translate(323px, 91px);
+    -webkit-animation-timing-function: ease-in;
+    opacity: 1;
+  }
+
+  /* line 519, ../../scss/sencha/quest.scss */
+  53.9947% {
+    -webkit-transform: translate(323px, 91px);
+    -webkit-animation-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  /* line 525, ../../scss/sencha/quest.scss */
+  57.5066% {
+    -webkit-transform: translate(-131px, 91px);
+    -webkit-animation-timing-function: linear;
+    opacity: 0;
+  }
+
+  /* line 531, ../../scss/sencha/quest.scss */
+  58.3845% {
+    -webkit-transform: translate(-131px, 91px);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 537, ../../scss/sencha/quest.scss */
+  72.432% {
+    -webkit-transform: translate(5px, 91px);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 543, ../../scss/sencha/quest.scss */
+  78.5777% {
+    -webkit-transform: translate(18px, 55px);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 549, ../../scss/sencha/quest.scss */
+  84.504% {
+    -webkit-transform: translate(26px, 91px);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 555, ../../scss/sencha/quest.scss */
+  89.0255% {
+    -webkit-transform: translate(26px, 81px);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 561, ../../scss/sencha/quest.scss */
+  93.1895% {
+    -webkit-transform: translate(26px, 91px);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 567, ../../scss/sencha/quest.scss */
+  99.9122% {
+    -webkit-transform: translate(26px, 91px);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 573, ../../scss/sencha/quest.scss */
+  100% {
+    -webkit-transform: translate(26px, 91px);
+    -webkit-animation-timing-function: linear;
+    opacity: 0;
+  }
+}
+
+/* line 580, ../../scss/sencha/quest.scss */
+.scene1 #imgKenshi02 {
+  -webkit-animation-name: ani-imgKenshi02;
+  -webkit-animation-duration: 1.139s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+}
+
+/* line 587, ../../scss/sencha/quest.scss */
+#imgKenshi02 {
+  -webkit-transform: translate(26px, 91px);
+  -webkit-animation-timing-function: linear;
+  opacity: 0;
+}
+
+/* line 593, ../../scss/sencha/quest.scss */
+#imgKenshi01 {
+  -webkit-transform: translate(30px, 89px);
+  width: 128px;
+  height: 128px;
+  top: 0;
+  left: 0;
+}
+
+@-webkit-keyframes ani-imgKenshi01 {
+  /* line 602, ../../scss/sencha/quest.scss */
+  0% {
+    -webkit-transform: translate(30px, 89px);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 608, ../../scss/sencha/quest.scss */
+  10.5356% {
+    -webkit-transform: translate(48px, 59px);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 614, ../../scss/sencha/quest.scss */
+  21.0711% {
+    -webkit-transform: translate(59px, 89px);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 620, ../../scss/sencha/quest.scss */
+  25.0219% {
+    -webkit-transform: translate(59px, 89px);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 626, ../../scss/sencha/quest.scss */
+  26.7779% {
+    -webkit-transform: translate(59px, 89px);
+    -webkit-animation-timing-function: linear;
+    opacity: 0;
+  }
+
+  /* line 632, ../../scss/sencha/quest.scss */
+  93.0641% {
+    -webkit-transform: translate(59px, 89px);
+    -webkit-animation-timing-function: linear;
+    opacity: 0;
+  }
+
+  /* line 638, ../../scss/sencha/quest.scss */
+  99.9122% {
+    -webkit-transform: translate(26px, 91px);
+    -webkit-animation-timing-function: linear;
+    opacity: 0;
+  }
+
+  /* line 644, ../../scss/sencha/quest.scss */
+  100% {
+    -webkit-transform: translate(26px, 91px);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+}
+
+/* line 651, ../../scss/sencha/quest.scss */
+.scene1 #imgKenshi01 {
+  -webkit-animation-name: ani-imgKenshi01;
+  -webkit-animation-duration: 1.139s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+}
+
+/* line 658, ../../scss/sencha/quest.scss */
+#imgKenshi01 {
+  -webkit-transform: translate(26px, 91px);
+  -webkit-animation-timing-function: linear;
+  opacity: 1;
+}
+
+/* line 664, ../../scss/sencha/quest.scss */
+#imgelf01 {
+  -webkit-transform: translate(10px, 69px) rotateX(0deg) rotateY(0deg) rotateZ(10deg);
+  width: 42px;
+  height: 50px;
+  top: 0;
+  left: 0;
+  -webkit-animation-iteration-count: 1;
+}
+
+@-webkit-keyframes ani-imgelf01 {
+  /* line 674, ../../scss/sencha/quest.scss */
+  0% {
+    -webkit-transform: translate(10px, 69px) rotateX(0deg) rotateY(0deg) rotateZ(10deg);
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 679, ../../scss/sencha/quest.scss */
+  28.7349% {
+    -webkit-transform: translate(10px, 69px) rotateX(0deg) rotateY(0deg) rotateZ(10deg);
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 684, ../../scss/sencha/quest.scss */
+  57.9408% {
+    -webkit-transform: translate(319px, 69px) rotateX(0deg) rotateY(0deg) rotateZ(10deg);
+    -webkit-animation-timing-function: ease-in;
+  }
+
+  /* line 689, ../../scss/sencha/quest.scss */
+  61.7093% {
+    -webkit-transform: translate(319px, 69px) rotateX(0deg) rotateY(0deg) rotateZ(10deg);
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 694, ../../scss/sencha/quest.scss */
+  62.6514% {
+    -webkit-transform: translate(-51px, 69px) rotateX(0deg) rotateY(0deg) rotateZ(10deg);
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 699, ../../scss/sencha/quest.scss */
+  100% {
+    -webkit-transform: translate(10px, 69px) rotateX(0deg) rotateY(0deg) rotateZ(10deg);
+    -webkit-animation-timing-function: ease-out;
+  }
+}
+
+/* line 705, ../../scss/sencha/quest.scss */
+.scene1 #imgelf01 {
+  -webkit-animation-name: ani-imgelf01;
+  -webkit-animation-duration: 1.0614s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+}
+
+/* line 712, ../../scss/sencha/quest.scss */
+#imgelf01 {
+  -webkit-transform: translate(10px, 69px) rotateX(0deg) rotateY(0deg) rotateZ(10deg);
+  -webkit-animation-timing-function: ease-out;
+}
+
+/* line 717, ../../scss/sencha/quest.scss */
+#imgKemuri01 {
+  -webkit-transform: translate(51px, 171px) scale(0.52, 0.52);
+  width: 64px;
+  height: 64px;
+  top: 0;
+  left: 0;
+}
+
+@-webkit-keyframes ani-imgKemuri01 {
+  /* line 726, ../../scss/sencha/quest.scss */
+  0% {
+    -webkit-transform: translate(51px, 171px) scale(0.52, 0.52);
+    opacity: 0;
+    -webkit-animation-timing-function: ease;
+  }
+
+  /* line 732, ../../scss/sencha/quest.scss */
+  29.6104% {
+    -webkit-transform: translate(51px, 171px) scale(0.52, 0.52);
+    opacity: 0;
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 738, ../../scss/sencha/quest.scss */
+  31.6883% {
+    -webkit-transform: translate(51px, 171px) scale(0.52, 0.52);
+    opacity: 1;
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 744, ../../scss/sencha/quest.scss */
+  36.8831% {
+    -webkit-transform: translate(47px, 171px) scale(0.68916, 0.6084);
+    opacity: 0.4;
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 750, ../../scss/sencha/quest.scss */
+  62.8571% {
+    -webkit-transform: translate(110px, 153px) scale(1.7316, 0.7644);
+    opacity: 0;
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 756, ../../scss/sencha/quest.scss */
+  75.8442% {
+    -webkit-transform: translate(-12px, 174px) scale(0.5668, 0.59514);
+    opacity: 0;
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 762, ../../scss/sencha/quest.scss */
+  82.0779% {
+    -webkit-transform: translate(-32px, 171px) scale(1.014, 0.64609);
+    opacity: 1;
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 768, ../../scss/sencha/quest.scss */
+  100% {
+    -webkit-transform: translate(-2px, 161px) scale(1.014, 0.64609);
+    opacity: 0;
+    -webkit-animation-timing-function: linear;
+  }
+}
+
+/* line 775, ../../scss/sencha/quest.scss */
+.scene1 #imgKemuri01 {
+  -webkit-animation-name: ani-imgKemuri01;
+  -webkit-animation-duration: 0.9625s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+}
+
+/* line 782, ../../scss/sencha/quest.scss */
+#imgKemuri01 {
+  -webkit-transform: translate(-2px, 161px) scale(1.014, 0.64609);
+  opacity: 0;
+  -webkit-animation-timing-function: linear;
+}
+
+/* line 788, ../../scss/sencha/quest.scss */
+#imgDesignCover01 {
+  -webkit-transform: translate(-50px, 0px);
+  width: 458px;
+  height: 272px;
+  top: 0;
+  left: 0;
+}
+
+@-webkit-keyframes ani-imgDesignCover01 {
+  /* line 797, ../../scss/sencha/quest.scss */
+  0% {
+    -webkit-transform: translate(-50px, 0px);
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 802, ../../scss/sencha/quest.scss */
+  29.6117% {
+    -webkit-transform: translate(-50px, 0px);
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 807, ../../scss/sencha/quest.scss */
+  59.7087% {
+    -webkit-transform: translate(-138px, 0px);
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 812, ../../scss/sencha/quest.scss */
+  64.5630% {
+    -webkit-transform: translate(-138px, 0px);
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 817, ../../scss/sencha/quest.scss */
+  64.5631% {
+    -webkit-transform: translate(0px, 0px);
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 822, ../../scss/sencha/quest.scss */
+  100% {
+    -webkit-transform: translate(-50px, 0px);
+    -webkit-animation-timing-function: linear;
+  }
+}
+
+/* line 828, ../../scss/sencha/quest.scss */
+.scene1 #imgDesignCover01 {
+  -webkit-animation-name: ani-imgDesignCover01;
+  -webkit-animation-duration: 1.03s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+}
+
+/* line 835, ../../scss/sencha/quest.scss */
+#imgDesignCover01 {
+  -webkit-transform: translate(-50px, 0px);
+  -webkit-animation-timing-function: linear;
+}
+
+/* line 840, ../../scss/sencha/quest.scss */
+#imgDashEf2 {
+  -webkit-transform: translate(-116px, 0px);
+  width: 546px;
+  height: 272px;
+  top: 0;
+  left: 0;
+}
+
+@-webkit-keyframes ani-imgDashEf2 {
+  /* line 849, ../../scss/sencha/quest.scss */
+  0% {
+    -webkit-transform: translate(-116px, 0px);
+    -webkit-animation-timing-function: linear;
+    opacity: 0;
+  }
+
+  /* line 855, ../../scss/sencha/quest.scss */
+  86.3541% {
+    -webkit-transform: translate(-116px, 0px);
+    -webkit-animation-timing-function: linear;
+    opacity: 0;
+  }
+
+  /* line 861, ../../scss/sencha/quest.scss */
+  88.6667% {
+    -webkit-transform: translate(-116px, 0px);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 867, ../../scss/sencha/quest.scss */
+  100% {
+    -webkit-transform: translate(-548px, 0px);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+}
+
+/* line 874, ../../scss/sencha/quest.scss */
+.scene1 #imgDashEf2 {
+  -webkit-animation-name: ani-imgDashEf2;
+  -webkit-animation-duration: 0.75s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+}
+
+/* line 881, ../../scss/sencha/quest.scss */
+#imgDashEf2 {
+  -webkit-transform: translate(-548px, 0px);
+  -webkit-animation-timing-function: linear;
+  opacity: 1;
+}
+
+/* line 887, ../../scss/sencha/quest.scss */
+#imgDashEf1 {
+  -webkit-transform: translate(323px, 0px);
+  width: 546px;
+  height: 272px;
+  top: 0;
+  left: 0;
+}
+
+@-webkit-keyframes ani-imgDashEf1 {
+  /* line 896, ../../scss/sencha/quest.scss */
+  0% {
+    -webkit-transform: translate(323px, 0px);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 902, ../../scss/sencha/quest.scss */
+  82.3542% {
+    -webkit-transform: translate(323px, 0px);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 908, ../../scss/sencha/quest.scss */
+  92.1287% {
+    -webkit-transform: translate(-226px, 0px);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 914, ../../scss/sencha/quest.scss */
+  97.7444% {
+    -webkit-transform: translate(-226px, 0px);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 920, ../../scss/sencha/quest.scss */
+  100% {
+    -webkit-transform: translate(-226px, 0px);
+    -webkit-animation-timing-function: linear;
+    opacity: 0;
+  }
+}
+
+/* line 927, ../../scss/sencha/quest.scss */
+.scene1 #imgDashEf1 {
+  -webkit-animation-name: ani-imgDashEf1;
+  -webkit-animation-duration: 0.665s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+}
+
+/* line 934, ../../scss/sencha/quest.scss */
+#imgDashEf1 {
+  -webkit-transform: translate(-226px, 0px);
+  -webkit-animation-timing-function: linear;
+  opacity: 0;
+}
+
+/* line 940, ../../scss/sencha/quest.scss */
+#tapControllBtn-3 {
+  -webkit-transform: translate(81px, 230px);
+  width: 158px;
+  height: 34px;
+  top: 0;
+  left: 0;
+}
+
+/* line 948, ../../scss/sencha/quest.scss */
+#tapControllBtn-3 {
+  -webkit-transform: translate(81px, 230px);
+}
+
+/* line 952, ../../scss/sencha/quest.scss */
+#tapControllBtn {
+  -webkit-transform: translate(0px, 0px);
+  width: 158px;
+  height: 34px;
+  background-color: #c2c2c2;
+  top: 0;
+  left: 0;
+  -webkit-border-top-left-radius: 10px;
+  -webkit-border-top-right-radius: 10px;
+  -webkit-border-bottom-right-radius: 10px;
+  -webkit-border-bottom-left-radius: 10px;
+}
+
+/* line 965, ../../scss/sencha/quest.scss */
+#tapControllBtn {
+  -webkit-transform: translate(0px, 0px);
+}
+
+/* line 969, ../../scss/sencha/quest.scss */
+#txtTapEvent {
+  -webkit-transform: translate(45px, 10px);
+  width: 71px;
+  height: 14px;
+  top: 0;
+  left: 0;
+  line-height: 100%;
+}
+
+/* line 978, ../../scss/sencha/quest.scss */
+#txtTapEvent {
+  -webkit-transform: translate(45px, 10px);
+}
+
+/* line 982, ../../scss/sencha/quest.scss */
+#an-scene-0 .an-stage {
+  height: 272px;
+  width: 320px;
+  background-color: #544120;
+}
+
+/* line 988, ../../scss/sencha/quest.scss */
+#imgTresuareBox01 {
+  -webkit-transform: translate(204px, -89px);
+  width: 91px;
+  height: 82px;
+  top: 0;
+  left: 0;
+}
+
+@-webkit-keyframes ani-imgTresuareBox01 {
+  /* line 997, ../../scss/sencha/quest.scss */
+  0% {
+    -webkit-transform: translate(204px, -89px) rotateX(0deg) rotateY(0deg) rotateZ(-15deg);
+    -webkit-animation-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  /* line 1003, ../../scss/sencha/quest.scss */
+  15.625% {
+    -webkit-transform: translate(204px, 138px) rotateX(0deg) rotateY(0deg) rotateZ(-15deg);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 1009, ../../scss/sencha/quest.scss */
+  22.9167% {
+    -webkit-transform: translate(204px, 138px) rotateX(0deg) rotateY(0deg) rotateZ(5deg);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 1015, ../../scss/sencha/quest.scss */
+  30.2083% {
+    -webkit-transform: translate(204px, 138px) rotateX(0deg) rotateY(0deg) rotateZ(-2deg);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 1021, ../../scss/sencha/quest.scss */
+  40.625% {
+    -webkit-transform: translate(204px, 138px) rotateX(0deg) rotateY(0deg) rotateZ(1deg);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 1027, ../../scss/sencha/quest.scss */
+  45.8333% {
+    -webkit-transform: translate(204px, 138px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 1033, ../../scss/sencha/quest.scss */
+  67.7083% {
+    -webkit-transform: translate(204px, 138px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 1039, ../../scss/sencha/quest.scss */
+  68.75% {
+    -webkit-transform: translate(204px, 138px) rotateX(0deg) rotateY(0deg) rotateZ(-5deg);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 1045, ../../scss/sencha/quest.scss */
+  71.875% {
+    -webkit-transform: translate(204px, 138px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 1051, ../../scss/sencha/quest.scss */
+  75% {
+    -webkit-transform: translate(204px, 138px) rotateX(0deg) rotateY(0deg) rotateZ(2deg);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 1057, ../../scss/sencha/quest.scss */
+  78.125% {
+    -webkit-transform: translate(204px, 138px) rotateX(0deg) rotateY(0deg) rotateZ(-2deg);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 1063, ../../scss/sencha/quest.scss */
+  81.25% {
+    -webkit-transform: translate(204px, 138px) rotateX(0deg) rotateY(0deg) rotateZ(-5deg);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 1069, ../../scss/sencha/quest.scss */
+  84.375% {
+    -webkit-transform: translate(204px, 138px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 1075, ../../scss/sencha/quest.scss */
+  87.5% {
+    -webkit-transform: translate(204px, 138px) rotateX(0deg) rotateY(0deg) rotateZ(2deg);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 1081, ../../scss/sencha/quest.scss */
+  90.625% {
+    -webkit-transform: translate(204px, 138px) rotateX(0deg) rotateY(0deg) rotateZ(-2deg);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 1087, ../../scss/sencha/quest.scss */
+  93.75% {
+    -webkit-transform: translate(204px, 138px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 1093, ../../scss/sencha/quest.scss */
+  97.1354% {
+    -webkit-transform: translate(204px, 138px) rotateX(0deg) rotateY(0deg) rotateZ(-30deg);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 1099, ../../scss/sencha/quest.scss */
+  100% {
+    -webkit-transform: translate(204px, 138px) rotateX(0deg) rotateY(0deg) rotateZ(-30deg);
+    -webkit-animation-timing-function: linear;
+    opacity: 0;
+  }
+}
+
+/* line 1106, ../../scss/sencha/quest.scss */
+.scene2 #imgTresuareBox01 {
+  -webkit-animation-name: ani-imgTresuareBox01;
+  -webkit-animation-duration: 0.96s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+}
+
+/* line 1113, ../../scss/sencha/quest.scss */
+.end #imgTresuareBox01 {
+  -webkit-transform: translate(204px, 138px) rotateX(0deg) rotateY(0deg) rotateZ(-30deg);
+  opacity: 0;
+  -webkit-animation: none;
+}
+
+/* line 1119, ../../scss/sencha/quest.scss */
+#imgTresuareBox01 {
+  -webkit-transform: translate(204px, 138px) rotateX(0deg) rotateY(0deg) rotateZ(-30deg);
+  -webkit-animation-timing-function: linear;
+  opacity: 0;
+}
+
+/* line 1125, ../../scss/sencha/quest.scss */
+#imgTresuareBox02 {
+  -webkit-transform: translate(205px, 112px);
+  width: 91px;
+  height: 82px;
+  top: 0;
+  left: 0;
+}
+
+@-webkit-keyframes ani-imgTresuareBox02 {
+  /* line 1134, ../../scss/sencha/quest.scss */
+  0% {
+    -webkit-transform: translate(205px, 112px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    opacity: 0;
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 1140, ../../scss/sencha/quest.scss */
+  65.493% {
+    -webkit-transform: translate(205px, 112px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    opacity: 0;
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 1146, ../../scss/sencha/quest.scss */
+  67.6056% {
+    -webkit-transform: translate(205px, 104px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    opacity: 1;
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 1152, ../../scss/sencha/quest.scss */
+  76.0563% {
+    -webkit-transform: translate(205px, 61px) rotateX(0deg) rotateY(0deg) rotateZ(18deg);
+    opacity: 1;
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 1158, ../../scss/sencha/quest.scss */
+  85.9155% {
+    -webkit-transform: translate(205px, 139px) rotateX(0deg) rotateY(0deg) rotateZ(-5deg);
+    opacity: 1;
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 1164, ../../scss/sencha/quest.scss */
+  92.9577% {
+    -webkit-transform: translate(205px, 139px) rotateX(0deg) rotateY(0deg) rotateZ(3deg);
+    opacity: 1;
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 1170, ../../scss/sencha/quest.scss */
+  100% {
+    -webkit-transform: translate(205px, 139px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    opacity: 1;
+    -webkit-animation-timing-function: linear;
+  }
+}
+
+/* line 1177, ../../scss/sencha/quest.scss */
+.scene2 #imgTresuareBox02 {
+  -webkit-animation-name: ani-imgTresuareBox02;
+  -webkit-animation-duration: 1.42s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+  opacity: 1;
+}
+
+/* line 1185, ../../scss/sencha/quest.scss */
+.end #imgTresuareBox02 {
+  -webkit-transform: translate(205px, 139px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  opacity: 1;
+  -webkit-animation: none;
+}
+
+/* line 1191, ../../scss/sencha/quest.scss */
+#imgTresuareBox02 {
+  -webkit-transform: translate(205px, 139px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  opacity: 0;
+  -webkit-animation-timing-function: linear;
+}
+
+/* line 1197, ../../scss/sencha/quest.scss */
+#imgSplashGroup01 {
+  -webkit-transform: translate(189px, 147px);
+  width: 79px;
+  height: 62px;
+  top: 0;
+  left: 0;
+}
+
+/* line 1205, ../../scss/sencha/quest.scss */
+#imgSplashGroup01 {
+  -webkit-transform: translate(189px, 147px);
+}
+
+/* line 1209, ../../scss/sencha/quest.scss */
+#imgSplash01 {
+  -webkit-transform: translate(-2px, 22px) scale(0.9, 0.9);
+  width: 36px;
+  height: 36px;
+  top: 0;
+  left: 0;
+  -webkit-animation-iteration-count: 1;
+}
+
+@-webkit-keyframes ani-imgSplash01 {
+  /* line 1219, ../../scss/sencha/quest.scss */
+  0% {
+    -webkit-transform: translate(-2px, 22px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(0.9, 0.9);
+    opacity: 0;
+    -webkit-animation-timing-function: ease;
+  }
+
+  /* line 1225, ../../scss/sencha/quest.scss */
+  80.6372% {
+    -webkit-transform: translate(-2px, 22px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(0.9, 0.9);
+    opacity: 0;
+    -webkit-animation-timing-function: ease;
+  }
+
+  /* line 1231, ../../scss/sencha/quest.scss */
+  81.0405% {
+    -webkit-transform: translate(-2px, 22px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(0.612, 0.612);
+    opacity: 0;
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 1237, ../../scss/sencha/quest.scss */
+  89.9152% {
+    -webkit-transform: translate(-2px, 22px) rotateX(0deg) rotateY(0deg) rotateZ(30deg) scale(0.9, 0.9);
+    opacity: 1;
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 1243, ../../scss/sencha/quest.scss */
+  100% {
+    -webkit-transform: translate(-2px, 22px) rotateX(0deg) rotateY(0deg) rotateZ(80deg) scale(0.9, 0.9);
+    opacity: 0;
+    -webkit-animation-timing-function: linear;
+  }
+}
+
+/* line 1250, ../../scss/sencha/quest.scss */
+.scene2 #imgSplash01 {
+  -webkit-animation-name: ani-imgSplash01;
+  -webkit-animation-duration: 1.4166s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+}
+
+/* line 1257, ../../scss/sencha/quest.scss */
+.end #imgSplash01 {
+  -webkit-transform: translate(-2px, 22px) rotateX(0deg) rotateY(0deg) rotateZ(80deg) scale(0.9, 0.9);
+  opacity: 0;
+  -webkit-animation: none;
+}
+
+/* line 1263, ../../scss/sencha/quest.scss */
+#imgSplash01 {
+  -webkit-transform: translate(-2px, 22px) rotateX(0deg) rotateY(0deg) rotateZ(80deg) scale(0.9, 0.9);
+  opacity: 0;
+  -webkit-animation-timing-function: linear;
+}
+
+/* line 1269, ../../scss/sencha/quest.scss */
+#imgSplash02 {
+  -webkit-transform: translate(45px, 10px) scale(0.9, 0.9);
+  width: 36px;
+  height: 36px;
+  top: 0;
+  left: 0;
+  -webkit-animation-iteration-count: 1;
+}
+
+@-webkit-keyframes ani-imgSplash02 {
+  /* line 1279, ../../scss/sencha/quest.scss */
+  0% {
+    -webkit-transform: translate(45px, 10px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(0.9, 0.9);
+    opacity: 0;
+    -webkit-animation-timing-function: ease;
+  }
+
+  /* line 1285, ../../scss/sencha/quest.scss */
+  82.0827% {
+    -webkit-transform: translate(45px, 10px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(0.9, 0.9);
+    opacity: 0;
+    -webkit-animation-timing-function: ease;
+  }
+
+  /* line 1291, ../../scss/sencha/quest.scss */
+  82.456% {
+    -webkit-transform: translate(45px, 10px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(0.612, 0.612);
+    opacity: 0;
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 1297, ../../scss/sencha/quest.scss */
+  90.6681% {
+    -webkit-transform: translate(45px, 10px) rotateX(0deg) rotateY(0deg) rotateZ(30deg) scale(0.9, 0.9);
+    opacity: 1;
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 1303, ../../scss/sencha/quest.scss */
+  100% {
+    -webkit-transform: translate(45px, 10px) rotateX(0deg) rotateY(0deg) rotateZ(80deg) scale(0.9, 0.9);
+    opacity: 0;
+    -webkit-animation-timing-function: linear;
+  }
+}
+
+/* line 1310, ../../scss/sencha/quest.scss */
+.scene2 #imgSplash02 {
+  -webkit-animation-name: ani-imgSplash02;
+  -webkit-animation-duration: 1.5308s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+}
+
+/* line 1317, ../../scss/sencha/quest.scss */
+.end #imgSplash02 {
+  -webkit-transform: translate(45px, 10px) rotateX(0deg) rotateY(0deg) rotateZ(80deg) scale(0.9, 0.9);
+  opacity: 0;
+  -webkit-animation: none;
+}
+
+/* line 1323, ../../scss/sencha/quest.scss */
+#imgSplash02 {
+  -webkit-transform: translate(45px, 10px) rotateX(0deg) rotateY(0deg) rotateZ(80deg) scale(0.9, 0.9);
+  opacity: 0;
+  -webkit-animation-timing-function: linear;
+}
+
+/* line 1329, ../../scss/sencha/quest.scss */
+#imgSplash03 {
+  -webkit-transform: translate(44px, 28px) scale(0.9, 0.9);
+  width: 36px;
+  height: 36px;
+  top: 0;
+  left: 0;
+  -webkit-animation-iteration-count: 1;
+}
+
+@-webkit-keyframes ani-imgSplash03 {
+  /* line 1339, ../../scss/sencha/quest.scss */
+  0% {
+    -webkit-transform: translate(44px, 28px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(0.9, 0.9);
+    opacity: 0;
+    -webkit-animation-timing-function: ease;
+  }
+
+  /* line 1345, ../../scss/sencha/quest.scss */
+  83.4709% {
+    -webkit-transform: translate(44px, 28px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(0.9, 0.9);
+    opacity: 0;
+    -webkit-animation-timing-function: ease;
+  }
+
+  /* line 1351, ../../scss/sencha/quest.scss */
+  83.8153% {
+    -webkit-transform: translate(44px, 28px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(0.612, 0.612);
+    opacity: 0;
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 1357, ../../scss/sencha/quest.scss */
+  91.3911% {
+    -webkit-transform: translate(44px, 28px) rotateX(0deg) rotateY(0deg) rotateZ(30deg) scale(0.9, 0.9);
+    opacity: 1;
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 1363, ../../scss/sencha/quest.scss */
+  100% {
+    -webkit-transform: translate(44px, 28px) rotateX(0deg) rotateY(0deg) rotateZ(80deg) scale(0.9, 0.9);
+    opacity: 0;
+    -webkit-animation-timing-function: linear;
+  }
+}
+
+/* line 1370, ../../scss/sencha/quest.scss */
+.scene2 #imgSplash03 {
+  -webkit-animation-name: ani-imgSplash03;
+  -webkit-animation-duration: 1.6594s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+}
+
+/* line 1377, ../../scss/sencha/quest.scss */
+.end #imgSplash03 {
+  -webkit-transform: translate(44px, 28px) rotateX(0deg) rotateY(0deg) rotateZ(80deg) scale(0.9, 0.9);
+  opacity: 0;
+  -webkit-animation: none;
+}
+
+/* line 1383, ../../scss/sencha/quest.scss */
+#imgSplash03 {
+  -webkit-transform: translate(44px, 28px) rotateX(0deg) rotateY(0deg) rotateZ(80deg) scale(0.9, 0.9);
+  opacity: 0;
+  -webkit-animation-timing-function: linear;
+}
+
+/* line 1389, ../../scss/sencha/quest.scss */
+#imgSplash04 {
+  -webkit-transform: translate(16px, 0px) scale(0.9, 0.9);
+  width: 36px;
+  height: 36px;
+  top: 0;
+  left: 0;
+  -webkit-animation-iteration-count: 1;
+}
+
+@-webkit-keyframes ani-imgSplash04 {
+  /* line 1399, ../../scss/sencha/quest.scss */
+  0% {
+    -webkit-transform: translate(16px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(0.9, 0.9);
+    opacity: 0;
+    -webkit-animation-timing-function: ease;
+  }
+
+  /* line 1405, ../../scss/sencha/quest.scss */
+  84.635% {
+    -webkit-transform: translate(16px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(0.9, 0.9);
+    opacity: 0;
+    -webkit-animation-timing-function: ease;
+  }
+
+  /* line 1411, ../../scss/sencha/quest.scss */
+  84.9551% {
+    -webkit-transform: translate(16px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(0.612, 0.612);
+    opacity: 0;
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 1417, ../../scss/sencha/quest.scss */
+  91.9974% {
+    -webkit-transform: translate(16px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(30deg) scale(0.9, 0.9);
+    opacity: 1;
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 1423, ../../scss/sencha/quest.scss */
+  100% {
+    -webkit-transform: translate(16px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(80deg) scale(0.9, 0.9);
+    opacity: 0;
+    -webkit-animation-timing-function: linear;
+  }
+}
+
+/* line 1430, ../../scss/sencha/quest.scss */
+.scene2 #imgSplash04 {
+  -webkit-animation-name: ani-imgSplash04;
+  -webkit-animation-duration: 1.7851s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+}
+
+/* line 1437, ../../scss/sencha/quest.scss */
+.end #imgSplash04 {
+  -webkit-transform: translate(16px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(80deg) scale(0.9, 0.9);
+  opacity: 0;
+  -webkit-animation: none;
+}
+
+/* line 1443, ../../scss/sencha/quest.scss */
+#imgSplash04 {
+  -webkit-transform: translate(16px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(80deg) scale(0.9, 0.9);
+  opacity: 0;
+  -webkit-animation-timing-function: linear;
+}
+
+/* line 1449, ../../scss/sencha/quest.scss */
+#shapeWhite01 {
+  -webkit-transform: translate(0px, 0px) scale(1, 1);
+  width: 320px;
+  height: 272px;
+  background-color: white;
+  top: 0;
+  left: 0;
+  opacity: 0.8;
+}
+
+@-webkit-keyframes ani-shapeWhite01 {
+  /* line 1460, ../../scss/sencha/quest.scss */
+  0% {
+    -webkit-transform: translate(0px, 0px) scale(1, 1);
+    opacity: 0;
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 1466, ../../scss/sencha/quest.scss */
+  79.1273% {
+    -webkit-transform: translate(0px, 0px) scale(1, 1);
+    opacity: 0;
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 1472, ../../scss/sencha/quest.scss */
+  79.9851% {
+    -webkit-transform: translate(0px, 0px) scale(1, 1);
+    opacity: 0;
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 1478, ../../scss/sencha/quest.scss */
+  85.9893% {
+    -webkit-transform: translate(0px, 0px) scale(1, 1);
+    opacity: 1;
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 1484, ../../scss/sencha/quest.scss */
+  92.6369% {
+    -webkit-transform: translate(0px, 0px) scale(1, 1);
+    opacity: 0.8;
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 1490, ../../scss/sencha/quest.scss */
+  100% {
+    -webkit-transform: translate(0px, 0px) scale(1, 1);
+    opacity: 0;
+    -webkit-animation-timing-function: linear;
+  }
+}
+
+/* line 1497, ../../scss/sencha/quest.scss */
+.scene2 #shapeWhite01 {
+  -webkit-animation-name: ani-shapeWhite01;
+  -webkit-animation-duration: 1.1658s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+}
+
+/* line 1504, ../../scss/sencha/quest.scss */
+.end #shapeWhite01 {
+  -webkit-transform: translate(0px, 0px) scale(1, 1);
+  opacity: 0;
+  -webkit-animation: none;
+}
+
+/* line 1510, ../../scss/sencha/quest.scss */
+#shapeWhite01 {
+  -webkit-transform: translate(0px, 0px) scale(1, 1);
+  opacity: 0;
+  -webkit-animation-timing-function: linear;
+}
+
+/* line 1516, ../../scss/sencha/quest.scss */
+#imgGachaP01 {
+  -webkit-transform: translate(189px, 71px);
+  width: 106px;
+  height: 107px;
+  top: 0;
+  left: 0;
+}
+
+@-webkit-keyframes ani-imgGachaP01 {
+  /* line 1525, ../../scss/sencha/quest.scss */
+  0% {
+    -webkit-transform: translate(189px, 71px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    opacity: 0;
+  }
+
+  /* line 1530, ../../scss/sencha/quest.scss */
+  66.8333% {
+    -webkit-transform: translate(189px, 71px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    opacity: 0;
+  }
+
+  /* line 1535, ../../scss/sencha/quest.scss */
+  100% {
+    -webkit-transform: translate(189px, 31px) rotateX(0deg) rotateY(360deg) rotateZ(0deg);
+    opacity: 1;
+  }
+}
+
+/* line 1541, ../../scss/sencha/quest.scss */
+.scene2 #imgGachaP01 {
+  -webkit-animation-name: ani-imgGachaP01;
+  -webkit-animation-duration: 1.5s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+  opacity: 1;
+}
+
+/* line 1549, ../../scss/sencha/quest.scss */
+.end #imgGachaP01 {
+  -webkit-transform: translate(189px, 31px) rotateX(0deg) rotateY(360deg) rotateZ(0deg);
+  opacity: 1;
+  -webkit-animation: none;
+}
+
+/* line 1555, ../../scss/sencha/quest.scss */
+#imgGachaP01 {
+  -webkit-transform: translate(189px, 31px) rotateX(0deg) rotateY(360deg) rotateZ(0deg);
+  opacity: 0;
+}
+
+/* line 1560, ../../scss/sencha/quest.scss */
+#imgTp01 {
+  -webkit-transform: translate(189px, 71px);
+  width: 106px;
+  height: 107px;
+  top: 0;
+  left: 0;
+}
+
+@-webkit-keyframes ani-imgGachaP01 {
+  /* line 1569, ../../scss/sencha/quest.scss */
+  0% {
+    -webkit-transform: translate(189px, 71px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    opacity: 0;
+  }
+
+  /* line 1574, ../../scss/sencha/quest.scss */
+  66.8333% {
+    -webkit-transform: translate(189px, 71px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    opacity: 0;
+  }
+
+  /* line 1579, ../../scss/sencha/quest.scss */
+  100% {
+    -webkit-transform: translate(189px, 31px) rotateX(0deg) rotateY(360deg) rotateZ(0deg);
+    opacity: 1;
+  }
+}
+
+/* line 1585, ../../scss/sencha/quest.scss */
+.scene2 #imgTp01 {
+  -webkit-animation-name: ani-imgGachaP01;
+  -webkit-animation-duration: 1.5s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+  opacity: 1;
+}
+
+/* line 1593, ../../scss/sencha/quest.scss */
+.end #imgTp01 {
+  -webkit-transform: translate(189px, 31px) rotateX(0deg) rotateY(360deg) rotateZ(0deg);
+  opacity: 1;
+  -webkit-animation: none;
+}
+
+/* line 1599, ../../scss/sencha/quest.scss */
+#imgTp01 {
+  -webkit-transform: translate(189px, 31px) rotateX(0deg) rotateY(360deg) rotateZ(0deg);
+  opacity: 0;
+}
+
+/* line 1604, ../../scss/sencha/quest.scss */
+#imgRecovery01 {
+  -webkit-transform: translate(175px, 35px);
+  width: 49px;
+  height: 49px;
+  top: 0;
+  left: 0;
+}
+
+@-webkit-keyframes ani-imgRecovery01 {
+  /* line 1613, ../../scss/sencha/quest.scss */
+  0% {
+    -webkit-transform: translate(175px, 35px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1, 1);
+    opacity: 0;
+  }
+
+  /* line 1618, ../../scss/sencha/quest.scss */
+  89.2038% {
+    -webkit-transform: translate(175px, 35px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1, 1);
+    opacity: 0;
+  }
+
+  /* line 1623, ../../scss/sencha/quest.scss */
+  94.6019% {
+    -webkit-transform: translate(175px, 35px) rotateX(0deg) rotateY(0deg) rotateZ(20deg) scale(1.4, 1.4);
+    opacity: 1;
+  }
+
+  /* line 1628, ../../scss/sencha/quest.scss */
+  100% {
+    -webkit-transform: translate(175px, 35px) rotateX(0deg) rotateY(0deg) rotateZ(100deg) scale(1, 1);
+    opacity: 0;
+  }
+}
+
+/* line 1634, ../../scss/sencha/quest.scss */
+.scene2 #imgRecovery01 {
+  -webkit-animation-name: ani-imgRecovery01;
+  -webkit-animation-duration: 1.8525s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+}
+
+/* line 1641, ../../scss/sencha/quest.scss */
+.end #imgRecovery01 {
+  -webkit-transform: translate(175px, 35px) rotateX(0deg) rotateY(0deg) rotateZ(100deg) scale(1, 1);
+  opacity: 0;
+  -webkit-animation: none;
+}
+
+/* line 1647, ../../scss/sencha/quest.scss */
+#imgRecovery01 {
+  -webkit-transform: translate(175px, 35px) rotateX(0deg) rotateY(0deg) rotateZ(100deg) scale(1, 1);
+  opacity: 0;
+}
+
+/* line 1652, ../../scss/sencha/quest.scss */
+#imgRecovery02 {
+  -webkit-transform: translate(215px, 83px);
+  width: 49px;
+  height: 49px;
+  top: 0;
+  left: 0;
+}
+
+@-webkit-keyframes ani-imgRecovery02 {
+  /* line 1661, ../../scss/sencha/quest.scss */
+  0% {
+    -webkit-transform: translate(215px, 83px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1, 1);
+    opacity: 0;
+  }
+
+  /* line 1666, ../../scss/sencha/quest.scss */
+  89.7567% {
+    -webkit-transform: translate(215px, 83px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1, 1);
+    opacity: 0;
+  }
+
+  /* line 1671, ../../scss/sencha/quest.scss */
+  94.8784% {
+    -webkit-transform: translate(215px, 83px) rotateX(0deg) rotateY(0deg) rotateZ(20deg) scale(1.4, 1.4);
+    opacity: 1;
+  }
+
+  /* line 1676, ../../scss/sencha/quest.scss */
+  100% {
+    -webkit-transform: translate(215px, 83px) rotateX(0deg) rotateY(0deg) rotateZ(100deg) scale(1, 1);
+    opacity: 0;
+  }
+}
+
+/* line 1682, ../../scss/sencha/quest.scss */
+.scene2 #imgRecovery02 {
+  -webkit-animation-name: ani-imgRecovery02;
+  -webkit-animation-duration: 1.9525s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+}
+
+/* line 1689, ../../scss/sencha/quest.scss */
+.end #imgRecovery02 {
+  -webkit-transform: translate(215px, 83px) rotateX(0deg) rotateY(0deg) rotateZ(100deg) scale(1, 1);
+  opacity: 0;
+  -webkit-animation: none;
+}
+
+/* line 1695, ../../scss/sencha/quest.scss */
+#imgRecovery02 {
+  -webkit-transform: translate(215px, 83px) rotateX(0deg) rotateY(0deg) rotateZ(100deg) scale(1, 1);
+  opacity: 0;
+}
+
+/* line 1700, ../../scss/sencha/quest.scss */
+#imgRecovery03 {
+  -webkit-transform: translate(265px, 48px);
+  width: 49px;
+  height: 49px;
+  top: 0;
+  left: 0;
+}
+
+@-webkit-keyframes ani-imgRecovery03 {
+  /* line 1709, ../../scss/sencha/quest.scss */
+  0% {
+    -webkit-transform: translate(265px, 48px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1, 1);
+    opacity: 0;
+  }
+
+  /* line 1714, ../../scss/sencha/quest.scss */
+  90.2558% {
+    -webkit-transform: translate(265px, 48px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1, 1);
+    opacity: 0;
+  }
+
+  /* line 1719, ../../scss/sencha/quest.scss */
+  95.1279% {
+    -webkit-transform: translate(265px, 48px) rotateX(0deg) rotateY(0deg) rotateZ(20deg) scale(1.4, 1.4);
+    opacity: 1;
+  }
+
+  /* line 1724, ../../scss/sencha/quest.scss */
+  100% {
+    -webkit-transform: translate(265px, 48px) rotateX(0deg) rotateY(0deg) rotateZ(100deg) scale(1, 1);
+    opacity: 0;
+  }
+}
+
+/* line 1730, ../../scss/sencha/quest.scss */
+.scene2 #imgRecovery03 {
+  -webkit-animation-name: ani-imgRecovery03;
+  -webkit-animation-duration: 2.0525s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+}
+
+/* line 1737, ../../scss/sencha/quest.scss */
+.end #imgRecovery03 {
+  -webkit-transform: translate(265px, 48px) rotateX(0deg) rotateY(0deg) rotateZ(100deg) scale(1, 1);
+  opacity: 0;
+  -webkit-animation: none;
+}
+
+/* line 1743, ../../scss/sencha/quest.scss */
+#imgRecovery03 {
+  -webkit-transform: translate(265px, 48px) rotateX(0deg) rotateY(0deg) rotateZ(100deg) scale(1, 1);
+  opacity: 0;
+}
+
+/* line 1748, ../../scss/sencha/quest.scss */
+#imgGachaPget {
+  -webkit-transform: translate(163px, 162px);
+  width: 158px;
+  height: 47px;
+  top: 0;
+  left: 0;
+}
+
+@-webkit-keyframes ani-imgGachaPget {
+  /* line 1757, ../../scss/sencha/quest.scss */
+  0% {
+    -webkit-transform: translate(163px, 162px);
+    opacity: 0;
+    -webkit-animation-timing-function: ease;
+  }
+
+  /* line 1763, ../../scss/sencha/quest.scss */
+  89.6552% {
+    -webkit-transform: translate(163px, 162px);
+    opacity: 0;
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 1769, ../../scss/sencha/quest.scss */
+  100% {
+    -webkit-transform: translate(163px, 115px);
+    opacity: 1;
+    -webkit-animation-timing-function: ease;
+  }
+}
+
+/* line 1776, ../../scss/sencha/quest.scss */
+.scene2 #imgGachaPget {
+  -webkit-animation-name: ani-imgGachaPget;
+  -webkit-animation-duration: 1.45s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+  opacity: 1;
+}
+
+/* line 1784, ../../scss/sencha/quest.scss */
+.end #imgGachaPget {
+  -webkit-transform: translate(163px, 115px);
+  opacity: 1;
+  -webkit-animation: none;
+}
+
+/* line 1790, ../../scss/sencha/quest.scss */
+#imgGachaPget {
+  -webkit-transform: translate(163px, 115px);
+  opacity: 0;
+  -webkit-animation-timing-function: ease;
+}
+
+/* line 1796, ../../scss/sencha/quest.scss */
+#imgTpRecovery {
+  -webkit-transform: translate(187px, 162px);
+  width: 111px;
+  height: 46px;
+  top: 0;
+  left: 0;
+}
+
+@-webkit-keyframes ani-imgTpRecovery {
+  /* line 1805, ../../scss/sencha/quest.scss */
+  0% {
+    -webkit-transform: translate(187px, 162px);
+    opacity: 0;
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 1811, ../../scss/sencha/quest.scss */
+  89.6552% {
+    -webkit-transform: translate(187px, 162px);
+    opacity: 0;
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 1817, ../../scss/sencha/quest.scss */
+  100% {
+    -webkit-transform: translate(187px, 114px);
+    opacity: 1;
+    -webkit-animation-timing-function: linear;
+  }
+}
+
+/* line 1824, ../../scss/sencha/quest.scss */
+.scene2 #imgTpRecovery {
+  -webkit-animation-name: ani-imgTpRecovery;
+  -webkit-animation-duration: 1.45s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+  opacity: 1;
+}
+
+/* line 1832, ../../scss/sencha/quest.scss */
+.end #imgTpRecovery {
+  -webkit-transform: translate(187px, 114px);
+  opacity: 1;
+  -webkit-animation: none;
+}
+
+/* line 1838, ../../scss/sencha/quest.scss */
+#imgTpRecovery {
+  -webkit-transform: translate(187px, 114px);
+  opacity: 0;
+  -webkit-animation-timing-function: linear;
+}
+
+/* line 1844, ../../scss/sencha/quest.scss */
+#imgLvupLogo {
+  -webkit-transform: translate(126px, 77px);
+  width: 178px;
+  height: 118px;
+  top: 0;
+  left: 0;
+}
+
+@-webkit-keyframes ani-imgLvupLogo {
+  /* line 1853, ../../scss/sencha/quest.scss */
+  0% {
+    -webkit-transform: translate(126px, 117px) scale(1, 0.41);
+    -webkit-animation-timing-function: linear;
+    opacity: 0;
+  }
+
+  /* line 1859, ../../scss/sencha/quest.scss */
+  9.5238% {
+    -webkit-transform: translate(126px, -3px) scale(1, 1);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 1865, ../../scss/sencha/quest.scss */
+  19.0476% {
+    -webkit-transform: translate(126px, 77px) scale(1, 1);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 1871, ../../scss/sencha/quest.scss */
+  85.7143% {
+    -webkit-transform: translate(126px, 77px) scale(1, 1);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 1877, ../../scss/sencha/quest.scss */
+  100% {
+    -webkit-transform: translate(126px, 27px) scale(1, 1);
+    -webkit-animation-timing-function: linear;
+    opacity: 0;
+  }
+}
+
+/* line 1884, ../../scss/sencha/quest.scss */
+.scene3 #imgLvupLogo {
+  -webkit-animation-name: ani-imgLvupLogo;
+  -webkit-animation-duration: 1.05s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+}
+
+/* line 1891, ../../scss/sencha/quest.scss */
+.end #imgLvupLogo {
+  -webkit-transform: translate(126px, 77px) scale(1, 1);
+  -webkit-animation-timing-function: linear;
+  opacity: 1;
+  -webkit-animation: none;
+}
+
+/* line 1898, ../../scss/sencha/quest.scss */
+#imgLvupLogo {
+  -webkit-transform: translate(126px, 27px) scale(1, 1);
+  -webkit-animation-timing-function: linear;
+  opacity: 0;
+}
+
+/* line 1904, ../../scss/sencha/quest.scss */
+#imgLvupLogoWh {
+  -webkit-transform: translate(123px, 73px);
+  width: 185px;
+  height: 127px;
+  top: 0;
+  left: 0;
+}
+
+@-webkit-keyframes ani-imgLvupLogoWh {
+  /* line 1913, ../../scss/sencha/quest.scss */
+  0% {
+    -webkit-transform: translate(123px, 113px) scale(1, 0.41);
+    -webkit-animation-timing-function: linear;
+    opacity: 0;
+  }
+
+  /* line 1919, ../../scss/sencha/quest.scss */
+  50% {
+    -webkit-transform: translate(123px, -7px) scale(1, 1);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 1925, ../../scss/sencha/quest.scss */
+  100% {
+    -webkit-transform: translate(123px, 73px) scale(1, 1);
+    -webkit-animation-timing-function: linear;
+    opacity: 0;
+  }
+}
+
+/* line 1932, ../../scss/sencha/quest.scss */
+.scene3 #imgLvupLogoWh {
+  -webkit-animation-name: ani-imgLvupLogoWh;
+  -webkit-animation-duration: 0.2s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+}
+
+/* line 1939, ../../scss/sencha/quest.scss */
+.end #imgLvupLogoWh {
+  -webkit-transform: translate(123px, 73px) scale(1, 1);
+  opacity: 0;
+  -webkit-animation: none;
+}
+
+/* line 1945, ../../scss/sencha/quest.scss */
+#imgLvupLogoWh {
+  -webkit-transform: translate(123px, 73px) scale(1, 1);
+  -webkit-animation-timing-function: linear;
+  opacity: 0;
+}
+
+/* line 1951, ../../scss/sencha/quest.scss */
+#imgSplashes01 {
+  -webkit-transform: translate(68px, 93px);
+  width: 295px;
+  height: 96px;
+  top: 0;
+  left: 0;
+}
+
+@-webkit-keyframes ani-imgSplashes01 {
+  /* line 1960, ../../scss/sencha/quest.scss */
+  0% {
+    -webkit-transform: translate(68px, 93px) scale(1, 1);
+    opacity: 0;
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 1966, ../../scss/sencha/quest.scss */
+  50% {
+    -webkit-transform: translate(68px, 93px) scale(1, 1);
+    opacity: 0;
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 1972, ../../scss/sencha/quest.scss */
+  52.5% {
+    -webkit-transform: translate(68px, 93px) scale(1, 1);
+    opacity: 1;
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 1978, ../../scss/sencha/quest.scss */
+  100% {
+    -webkit-transform: translate(68px, 133px) scale(1.37, 1.37);
+    opacity: 0;
+    -webkit-animation-timing-function: linear;
+  }
+}
+
+/* line 1985, ../../scss/sencha/quest.scss */
+.scene3 #imgSplashes01 {
+  -webkit-animation-name: ani-imgSplashes01;
+  -webkit-animation-duration: 0.4s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+}
+
+/* line 1992, ../../scss/sencha/quest.scss */
+.end #imgSplashes01 {
+  -webkit-transform: translate(68px, 133px) scale(1.37, 1.37);
+  opacity: 0;
+  -webkit-animation: none;
+}
+
+/* line 1998, ../../scss/sencha/quest.scss */
+#imgSplashes01 {
+  -webkit-transform: translate(68px, 133px) scale(1.37, 1.37);
+  opacity: 0;
+  -webkit-animation-timing-function: linear;
+}
+
+/* line 2004, ../../scss/sencha/quest.scss */
+#imgQuestBg02 {
+  -webkit-transform: translate(-50px, 0px);
+  width: 458px;
+  height: 272px;
+  top: 0;
+  left: 0;
+}
+
+@-webkit-keyframes ani-imgQuestBg02 {
+  /* line 2013, ../../scss/sencha/quest.scss */
+  0% {
+    -webkit-transform: translate(-50px, 0px);
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 2018, ../../scss/sencha/quest.scss */
+  68.2018% {
+    -webkit-transform: translate(-50px, 0px);
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 2023, ../../scss/sencha/quest.scss */
+  81.7982% {
+    -webkit-transform: translate(-138px, 0px);
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 2028, ../../scss/sencha/quest.scss */
+  83.9911% {
+    -webkit-transform: translate(-138px, 0px);
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 2033, ../../scss/sencha/quest.scss */
+  83.9912% {
+    -webkit-transform: translate(0px, 0px);
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 2038, ../../scss/sencha/quest.scss */
+  100% {
+    -webkit-transform: translate(-50px, 0px);
+    -webkit-animation-timing-function: linear;
+  }
+}
+
+/* line 2044, ../../scss/sencha/quest.scss */
+.scene4 #imgQuestBg02 {
+  -webkit-animation-name: ani-imgQuestBg02;
+  -webkit-animation-duration: 2.28s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+}
+
+/* line 2051, ../../scss/sencha/quest.scss */
+.end #imgQuestBg02 {
+  -webkit-transform: translate(-50px, 0px);
+  -webkit-animation: none;
+}
+
+/* line 2056, ../../scss/sencha/quest.scss */
+#imgQuestBg02 {
+  -webkit-transform: translate(-50px, 0px);
+  -webkit-animation-timing-function: linear;
+}
+
+/* line 2061, ../../scss/sencha/quest.scss */
+#imgShadow06 {
+  -webkit-transform: translate(-143px, 215px);
+  width: 48px;
+  height: 16px;
+  top: 0;
+  left: 0;
+}
+
+@-webkit-keyframes ani-imgShadow06 {
+  /* line 2070, ../../scss/sencha/quest.scss */
+  0% {
+    -webkit-transform: translate(-143px, 215px) scale(1, 1);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 2076, ../../scss/sencha/quest.scss */
+  67.0241% {
+    -webkit-transform: translate(-143px, 215px) scale(1, 1);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 2082, ../../scss/sencha/quest.scss */
+  73.4584% {
+    -webkit-transform: translate(-126px, 215px) scale(0.77, 0.8);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 2088, ../../scss/sencha/quest.scss */
+  79.8928% {
+    -webkit-transform: translate(-114px, 215px) scale(1, 1);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 2094, ../../scss/sencha/quest.scss */
+  83.378% {
+    -webkit-transform: translate(-114px, 215px) scale(1, 1);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 2100, ../../scss/sencha/quest.scss */
+  99.4638% {
+    -webkit-transform: translate(134px, 215px) scale(1, 1);
+    -webkit-animation-timing-function: ease;
+    opacity: 1;
+  }
+
+  /* line 2106, ../../scss/sencha/quest.scss */
+  100% {
+    -webkit-transform: translate(134px, 215px) scale(1, 1);
+    -webkit-animation-timing-function: ease;
+    opacity: 0;
+  }
+}
+
+/* line 2113, ../../scss/sencha/quest.scss */
+.scene4 #imgShadow06 {
+  -webkit-animation-name: ani-imgShadow06;
+  -webkit-animation-duration: 1.865s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+}
+
+/* line 2120, ../../scss/sencha/quest.scss */
+.end #imgShadow06 {
+  -webkit-transform: translate(134px, 215px) scale(1, 1);
+  opacity: 0;
+  -webkit-animation: none;
+}
+
+/* line 2126, ../../scss/sencha/quest.scss */
+#imgShadow06 {
+  -webkit-transform: translate(134px, 215px) scale(1, 1);
+  -webkit-animation-timing-function: ease;
+  opacity: 0;
+}
+
+/* line 2132, ../../scss/sencha/quest.scss */
+#imgShadow05 {
+  -webkit-transform: translate(-71px, 185px);
+  width: 48px;
+  height: 16px;
+  top: 0;
+  left: 0;
+}
+
+@-webkit-keyframes ani-imgShadow05 {
+  /* line 2141, ../../scss/sencha/quest.scss */
+  0% {
+    -webkit-transform: translate(-71px, 185px) scale(1, 1);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 2147, ../../scss/sencha/quest.scss */
+  67.0241% {
+    -webkit-transform: translate(-71px, 185px) scale(1, 1);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 2153, ../../scss/sencha/quest.scss */
+  73.4584% {
+    -webkit-transform: translate(-54px, 185px) scale(0.77, 0.8);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 2159, ../../scss/sencha/quest.scss */
+  79.8928% {
+    -webkit-transform: translate(-42px, 185px) scale(1, 1);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 2165, ../../scss/sencha/quest.scss */
+  83.378% {
+    -webkit-transform: translate(-42px, 185px) scale(1, 1);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 2171, ../../scss/sencha/quest.scss */
+  99.4638% {
+    -webkit-transform: translate(207px, 185px) scale(1, 1);
+    -webkit-animation-timing-function: ease;
+    opacity: 1;
+  }
+
+  /* line 2177, ../../scss/sencha/quest.scss */
+  100% {
+    -webkit-transform: translate(207px, 185px) scale(1, 1);
+    -webkit-animation-timing-function: ease;
+    opacity: 0;
+  }
+}
+
+/* line 2184, ../../scss/sencha/quest.scss */
+.scene4 #imgShadow05 {
+  -webkit-animation-name: ani-imgShadow05;
+  -webkit-animation-duration: 1.865s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+}
+
+/* line 2191, ../../scss/sencha/quest.scss */
+.end #imgShadow05 {
+  -webkit-transform: translate(207px, 185px) scale(1, 1);
+  opacity: 0;
+  -webkit-animation: none;
+}
+
+/* line 2197, ../../scss/sencha/quest.scss */
+#imgShadow05 {
+  -webkit-transform: translate(207px, 185px) scale(1, 1);
+  -webkit-animation-timing-function: ease;
+  opacity: 0;
+}
+
+/* line 2203, ../../scss/sencha/quest.scss */
+#imgShadow04 {
+  -webkit-transform: translate(45px, 200px);
+  width: 48px;
+  height: 16px;
+  top: 0;
+  left: 0;
+}
+
+@-webkit-keyframes ani-imgShadow04 {
+  /* line 2212, ../../scss/sencha/quest.scss */
+  0% {
+    -webkit-transform: translate(45px, 200px) scale(1, 1);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 2218, ../../scss/sencha/quest.scss */
+  67.0241% {
+    -webkit-transform: translate(45px, 200px) scale(1, 1);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 2224, ../../scss/sencha/quest.scss */
+  73.4584% {
+    -webkit-transform: translate(62px, 200px) scale(0.77, 0.8);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 2230, ../../scss/sencha/quest.scss */
+  79.8928% {
+    -webkit-transform: translate(74px, 200px) scale(1, 1);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 2236, ../../scss/sencha/quest.scss */
+  83.378% {
+    -webkit-transform: translate(74px, 200px) scale(1, 1);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 2242, ../../scss/sencha/quest.scss */
+  99.4638% {
+    -webkit-transform: translate(324px, 200px) scale(1, 1);
+    -webkit-animation-timing-function: ease;
+    opacity: 1;
+  }
+
+  /* line 2248, ../../scss/sencha/quest.scss */
+  100% {
+    -webkit-transform: translate(324px, 200px) scale(1, 1);
+    -webkit-animation-timing-function: ease;
+    opacity: 0;
+  }
+}
+
+/* line 2255, ../../scss/sencha/quest.scss */
+.scene4 #imgShadow04 {
+  -webkit-animation-name: ani-imgShadow04;
+  -webkit-animation-duration: 1.865s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+}
+
+/* line 2262, ../../scss/sencha/quest.scss */
+.end #imgShadow04 {
+  -webkit-transform: translate(324px, 200px) scale(1, 1);
+  opacity: 0;
+  -webkit-animation: none;
+}
+
+/* line 2268, ../../scss/sencha/quest.scss */
+#imgShadow04 {
+  -webkit-transform: translate(324px, 200px) scale(1, 1);
+  -webkit-animation-timing-function: ease;
+  opacity: 0;
+}
+
+/* line 2274, ../../scss/sencha/quest.scss */
+#imgKenshi12 {
+  -webkit-transform: translate(-138px, 106px);
+  width: 128px;
+  height: 128px;
+  top: 0;
+  left: 0;
+}
+
+@-webkit-keyframes ani-imgKenshi12 {
+  /* line 2283, ../../scss/sencha/quest.scss */
+  0% {
+    -webkit-transform: translate(-138px, 106px);
+    -webkit-animation-timing-function: linear;
+    opacity: 0;
+  }
+
+  /* line 2289, ../../scss/sencha/quest.scss */
+  82.3056% {
+    -webkit-transform: translate(-138px, 106px);
+    -webkit-animation-timing-function: linear;
+    opacity: 0;
+  }
+
+  /* line 2295, ../../scss/sencha/quest.scss */
+  83.378% {
+    -webkit-transform: translate(-138px, 106px);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 2301, ../../scss/sencha/quest.scss */
+  99.4638% {
+    -webkit-transform: translate(135px, 106px);
+    -webkit-animation-timing-function: ease-in;
+    opacity: 1;
+  }
+
+  /* line 2307, ../../scss/sencha/quest.scss */
+  100% {
+    -webkit-transform: translate(135px, 106px);
+    -webkit-animation-timing-function: ease-in;
+    opacity: 0;
+  }
+}
+
+/* line 2314, ../../scss/sencha/quest.scss */
+.scene4 #imgKenshi12 {
+  -webkit-animation-name: ani-imgKenshi12;
+  -webkit-animation-duration: 1.865s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+}
+
+/* line 2321, ../../scss/sencha/quest.scss */
+.end #imgKenshi12 {
+  -webkit-transform: translate(135px, 106px);
+  opacity: 0;
+  -webkit-animation: none;
+}
+
+/* line 2327, ../../scss/sencha/quest.scss */
+#imgKenshi12 {
+  -webkit-transform: translate(135px, 106px);
+  -webkit-animation-timing-function: ease-in;
+  opacity: 0;
+}
+
+/* line 2333, ../../scss/sencha/quest.scss */
+#imgKenshi11 {
+  -webkit-transform: translate(-158px, 104px);
+  width: 128px;
+  height: 128px;
+  top: 0;
+  left: 0;
+}
+
+@-webkit-keyframes ani-imgKenshi11 {
+  /* line 2342, ../../scss/sencha/quest.scss */
+  0% {
+    -webkit-transform: translate(-158px, 104px);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 2348, ../../scss/sencha/quest.scss */
+  80.3859% {
+    -webkit-transform: translate(-158px, 104px);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 2354, ../../scss/sencha/quest.scss */
+  88.1029% {
+    -webkit-transform: translate(-140px, 74px);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 2360, ../../scss/sencha/quest.scss */
+  95.8199% {
+    -webkit-transform: translate(-129px, 104px);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 2366, ../../scss/sencha/quest.scss */
+  98.7138% {
+    -webkit-transform: translate(-129px, 104px);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 2372, ../../scss/sencha/quest.scss */
+  100% {
+    -webkit-transform: translate(-129px, 104px);
+    -webkit-animation-timing-function: linear;
+    opacity: 0;
+  }
+}
+
+/* line 2379, ../../scss/sencha/quest.scss */
+.scene4 #imgKenshi11 {
+  -webkit-animation-name: ani-imgKenshi11;
+  -webkit-animation-duration: 1.555s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+}
+
+/* line 2386, ../../scss/sencha/quest.scss */
+.end #imgKenshi11 {
+  -webkit-transform: translate(-129px, 104px);
+  opacity: 0;
+  -webkit-animation: none;
+}
+
+/* line 2392, ../../scss/sencha/quest.scss */
+#imgKenshi11 {
+  -webkit-transform: translate(-129px, 104px);
+  -webkit-animation-timing-function: linear;
+  opacity: 0;
+}
+
+/* line 2398, ../../scss/sencha/quest.scss */
+#imgKenshi10 {
+  -webkit-transform: translate(-66px, 76px);
+  width: 128px;
+  height: 128px;
+  top: 0;
+  left: 0;
+}
+
+@-webkit-keyframes ani-imgKenshi10 {
+  /* line 2407, ../../scss/sencha/quest.scss */
+  0% {
+    -webkit-transform: translate(-66px, 76px);
+    -webkit-animation-timing-function: linear;
+    opacity: 0;
+  }
+
+  /* line 2413, ../../scss/sencha/quest.scss */
+  82.3056% {
+    -webkit-transform: translate(-66px, 76px);
+    -webkit-animation-timing-function: linear;
+    opacity: 0;
+  }
+
+  /* line 2419, ../../scss/sencha/quest.scss */
+  83.378% {
+    -webkit-transform: translate(-66px, 76px);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 2425, ../../scss/sencha/quest.scss */
+  99.4638% {
+    -webkit-transform: translate(207px, 76px);
+    -webkit-animation-timing-function: ease-in;
+    opacity: 1;
+  }
+
+  /* line 2431, ../../scss/sencha/quest.scss */
+  100% {
+    -webkit-transform: translate(207px, 76px);
+    -webkit-animation-timing-function: ease-in;
+    opacity: 0;
+  }
+}
+
+/* line 2438, ../../scss/sencha/quest.scss */
+.scene4 #imgKenshi10 {
+  -webkit-animation-name: ani-imgKenshi10;
+  -webkit-animation-duration: 1.865s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+}
+
+/* line 2445, ../../scss/sencha/quest.scss */
+.scene4 #imgKenshi10 {
+  -webkit-transform: translate(207px, 76px);
+  -webkit-animation-timing-function: ease-in;
+  opacity: 0;
+}
+
+/* line 2451, ../../scss/sencha/quest.scss */
+#imgKenshi10 {
+  -webkit-transform: translate(207px, 76px);
+  -webkit-animation-timing-function: ease-in;
+  opacity: 0;
+}
+
+/* line 2457, ../../scss/sencha/quest.scss */
+#imgKenshi09 {
+  -webkit-transform: translate(-86px, 74px);
+  width: 128px;
+  height: 128px;
+  top: 0;
+  left: 0;
+}
+
+@-webkit-keyframes ani-imgKenshi09 {
+  /* line 2466, ../../scss/sencha/quest.scss */
+  0% {
+    -webkit-transform: translate(-86px, 74px);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 2472, ../../scss/sencha/quest.scss */
+  80.3859% {
+    -webkit-transform: translate(-86px, 74px);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 2478, ../../scss/sencha/quest.scss */
+  88.1029% {
+    -webkit-transform: translate(-68px, 44px);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 2484, ../../scss/sencha/quest.scss */
+  95.8199% {
+    -webkit-transform: translate(-57px, 74px);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 2490, ../../scss/sencha/quest.scss */
+  98.7138% {
+    -webkit-transform: translate(-57px, 74px);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 2496, ../../scss/sencha/quest.scss */
+  100% {
+    -webkit-transform: translate(-57px, 74px);
+    -webkit-animation-timing-function: linear;
+    opacity: 0;
+  }
+}
+
+/* line 2503, ../../scss/sencha/quest.scss */
+.scene4 #imgKenshi09 {
+  -webkit-animation-name: ani-imgKenshi09;
+  -webkit-animation-duration: 1.555s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+}
+
+/* line 2510, ../../scss/sencha/quest.scss */
+.end #imgKenshi09 {
+  -webkit-transform: translate(-57px, 74px);
+  opacity: 0;
+  -webkit-animation: none;
+}
+
+/* line 2516, ../../scss/sencha/quest.scss */
+#imgKenshi09 {
+  -webkit-transform: translate(-57px, 74px);
+  -webkit-animation-timing-function: linear;
+  opacity: 0;
+}
+
+/* line 2522, ../../scss/sencha/quest.scss */
+#imgKenshi08 {
+  -webkit-transform: translate(50px, 91px);
+  width: 128px;
+  height: 128px;
+  top: 0;
+  left: 0;
+}
+
+@-webkit-keyframes ani-imgKenshi08 {
+  /* line 2531, ../../scss/sencha/quest.scss */
+  0% {
+    -webkit-transform: translate(50px, 91px);
+    -webkit-animation-timing-function: linear;
+    opacity: 0;
+  }
+
+  /* line 2537, ../../scss/sencha/quest.scss */
+  82.3056% {
+    -webkit-transform: translate(50px, 91px);
+    -webkit-animation-timing-function: linear;
+    opacity: 0;
+  }
+
+  /* line 2543, ../../scss/sencha/quest.scss */
+  83.378% {
+    -webkit-transform: translate(50px, 91px);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 2549, ../../scss/sencha/quest.scss */
+  99.4638% {
+    -webkit-transform: translate(323px, 91px);
+    -webkit-animation-timing-function: ease-in;
+    opacity: 1;
+  }
+
+  /* line 2555, ../../scss/sencha/quest.scss */
+  100% {
+    -webkit-transform: translate(323px, 91px);
+    -webkit-animation-timing-function: ease-in;
+    opacity: 0;
+  }
+}
+
+/* line 2562, ../../scss/sencha/quest.scss */
+.scene4 #imgKenshi08 {
+  -webkit-animation-name: ani-imgKenshi08;
+  -webkit-animation-duration: 1.865s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+}
+
+/* line 2569, ../../scss/sencha/quest.scss */
+.end #imgKenshi08 {
+  -webkit-transform: translate(323px, 91px);
+  opacity: 0;
+  -webkit-animation: none;
+}
+
+/* line 2575, ../../scss/sencha/quest.scss */
+#imgKenshi08 {
+  -webkit-transform: translate(323px, 91px);
+  -webkit-animation-timing-function: ease-in;
+  opacity: 0;
+}
+
+/* line 2581, ../../scss/sencha/quest.scss */
+#imgKenshi07 {
+  -webkit-transform: translate(30px, 89px);
+  width: 128px;
+  height: 128px;
+  top: 0;
+  left: 0;
+}
+
+@-webkit-keyframes ani-imgKenshi07 {
+  /* line 2590, ../../scss/sencha/quest.scss */
+  0% {
+    -webkit-transform: translate(30px, 89px);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 2596, ../../scss/sencha/quest.scss */
+  80.3859% {
+    -webkit-transform: translate(30px, 89px);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 2602, ../../scss/sencha/quest.scss */
+  88.1029% {
+    -webkit-transform: translate(48px, 59px);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 2608, ../../scss/sencha/quest.scss */
+  95.8199% {
+    -webkit-transform: translate(59px, 89px);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 2614, ../../scss/sencha/quest.scss */
+  98.7138% {
+    -webkit-transform: translate(59px, 89px);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 2620, ../../scss/sencha/quest.scss */
+  100% {
+    -webkit-transform: translate(59px, 89px);
+    -webkit-animation-timing-function: linear;
+    opacity: 0;
+  }
+}
+
+/* line 2627, ../../scss/sencha/quest.scss */
+.scene4 #imgKenshi07 {
+  -webkit-animation-name: ani-imgKenshi07;
+  -webkit-animation-duration: 1.555s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+}
+
+/* line 2634, ../../scss/sencha/quest.scss */
+.end #imgKenshi07 {
+  -webkit-transform: translate(59px, 89px);
+  opacity: 0;
+  -webkit-animation: none;
+}
+
+/* line 2640, ../../scss/sencha/quest.scss */
+#imgKenshi07 {
+  -webkit-transform: translate(59px, 89px);
+  -webkit-animation-timing-function: linear;
+  opacity: 0;
+}
+
+/* line 2646, ../../scss/sencha/quest.scss */
+#imgelf02 {
+  -webkit-transform: translate(10px, 69px) rotateX(0deg) rotateY(0deg) rotateZ(10deg);
+  width: 42px;
+  height: 50px;
+  top: 0;
+  left: 0;
+  -webkit-animation-iteration-count: 1;
+}
+
+@-webkit-keyframes ani-imgelf02 {
+  /* line 2656, ../../scss/sencha/quest.scss */
+  0% {
+    -webkit-transform: translate(10px, 69px) rotateX(0deg) rotateY(0deg) rotateZ(10deg);
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 2661, ../../scss/sencha/quest.scss */
+  83.378% {
+    -webkit-transform: translate(10px, 69px) rotateX(0deg) rotateY(0deg) rotateZ(10deg);
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 2666, ../../scss/sencha/quest.scss */
+  100% {
+    -webkit-transform: translate(345px, 69px) rotateX(0deg) rotateY(0deg) rotateZ(10deg);
+    -webkit-animation-timing-function: ease-in;
+  }
+}
+
+/* line 2672, ../../scss/sencha/quest.scss */
+.scene4 #imgelf02 {
+  -webkit-animation-name: ani-imgelf02;
+  -webkit-animation-duration: 1.865s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+}
+
+/* line 2679, ../../scss/sencha/quest.scss */
+.end #imgelf02 {
+  -webkit-transform: translate(345px, 69px) rotateX(0deg) rotateY(0deg) rotateZ(10deg);
+  -webkit-animation: none;
+}
+
+/* line 2684, ../../scss/sencha/quest.scss */
+#imgelf02 {
+  -webkit-transform: translate(345px, 69px) rotateX(0deg) rotateY(0deg) rotateZ(10deg);
+  -webkit-animation-timing-function: ease-in;
+}
+
+/* line 2689, ../../scss/sencha/quest.scss */
+#imgDashEf3 {
+  -webkit-transform: translate(323px, 0px);
+  width: 546px;
+  height: 272px;
+  top: 0;
+  left: 0;
+}
+
+@-webkit-keyframes ani-imgDashEf3 {
+  /* line 2698, ../../scss/sencha/quest.scss */
+  0% {
+    -webkit-transform: translate(323px, 0px);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 2704, ../../scss/sencha/quest.scss */
+  93.8883% {
+    -webkit-transform: translate(323px, 0px);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 2710, ../../scss/sencha/quest.scss */
+  97.2737% {
+    -webkit-transform: translate(-226px, 0px);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 2716, ../../scss/sencha/quest.scss */
+  99.2187% {
+    -webkit-transform: translate(-226px, 0px);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 2722, ../../scss/sencha/quest.scss */
+  100% {
+    -webkit-transform: translate(-226px, 0px);
+    -webkit-animation-timing-function: linear;
+    opacity: 0;
+  }
+}
+
+/* line 2729, ../../scss/sencha/quest.scss */
+.scene4 #imgDashEf3 {
+  -webkit-animation-name: ani-imgDashEf3;
+  -webkit-animation-duration: 1.92s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+}
+
+/* line 2736, ../../scss/sencha/quest.scss */
+.end #imgDashEf3 {
+  -webkit-transform: translate(-226px, 0px);
+  opacity: 0;
+  -webkit-animation: none;
+}
+
+/* line 2742, ../../scss/sencha/quest.scss */
+#imgDashEf3 {
+  -webkit-transform: translate(-226px, 0px);
+  -webkit-animation-timing-function: linear;
+  opacity: 0;
+}
+
+/* line 2748, ../../scss/sencha/quest.scss */
+#imgDashEf4 {
+  -webkit-transform: translate(-116px, 0px);
+  width: 546px;
+  height: 272px;
+  top: 0;
+  left: 0;
+}
+
+@-webkit-keyframes ani-imgDashEf4 {
+  /* line 2757, ../../scss/sencha/quest.scss */
+  0% {
+    -webkit-transform: translate(-116px, 0px);
+    -webkit-animation-timing-function: linear;
+    opacity: 0;
+  }
+
+  /* line 2763, ../../scss/sencha/quest.scss */
+  94.8955% {
+    -webkit-transform: translate(-116px, 0px);
+    -webkit-animation-timing-function: linear;
+    opacity: 0;
+  }
+
+  /* line 2769, ../../scss/sencha/quest.scss */
+  95.7606% {
+    -webkit-transform: translate(-116px, 0px);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+
+  /* line 2775, ../../scss/sencha/quest.scss */
+  100% {
+    -webkit-transform: translate(-548px, 0px);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+}
+
+/* line 2782, ../../scss/sencha/quest.scss */
+.scene4 #imgDashEf4 {
+  -webkit-animation-name: ani-imgDashEf4;
+  -webkit-animation-duration: 2.005s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+}
+
+/* line 2789, ../../scss/sencha/quest.scss */
+.end #imgDashEf4 {
+  -webkit-transform: translate(-548px, 0px);
+  opacity: 1;
+  -webkit-animation: none;
+}
+
+/* line 2795, ../../scss/sencha/quest.scss */
+#imgDashEf4 {
+  -webkit-transform: translate(-548px, 0px);
+  -webkit-animation-timing-function: linear;
+  opacity: 1;
+}
+
+/* line 2801, ../../scss/sencha/quest.scss */
+#imgKemuri02 {
+  -webkit-transform: translate(51px, 171px) scale(0.52, 0.52);
+  width: 64px;
+  height: 64px;
+  top: 0;
+  left: 0;
+}
+
+@-webkit-keyframes ani-imgKemuri02 {
+  /* line 2810, ../../scss/sencha/quest.scss */
+  0% {
+    -webkit-transform: translate(51px, 171px) scale(0.52, 0.52);
+    opacity: 0;
+    -webkit-animation-timing-function: ease;
+  }
+
+  /* line 2816, ../../scss/sencha/quest.scss */
+  82.7493% {
+    -webkit-transform: translate(51px, 171px) scale(0.52, 0.52);
+    opacity: 0;
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 2822, ../../scss/sencha/quest.scss */
+  83.8275% {
+    -webkit-transform: translate(51px, 171px) scale(0.52, 0.52);
+    opacity: 1;
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 2828, ../../scss/sencha/quest.scss */
+  86.5229% {
+    -webkit-transform: translate(47px, 171px) scale(0.68916, 0.6084);
+    opacity: 0.4;
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 2834, ../../scss/sencha/quest.scss */
+  100% {
+    -webkit-transform: translate(110px, 153px) scale(1.7316, 0.7644);
+    opacity: 0;
+    -webkit-animation-timing-function: linear;
+  }
+}
+
+/* line 2841, ../../scss/sencha/quest.scss */
+.scene4 #imgKemuri02 {
+  -webkit-animation-name: ani-imgKemuri02;
+  -webkit-animation-duration: 1.855s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+}
+
+/* line 2848, ../../scss/sencha/quest.scss */
+.end #imgKemuri02 {
+  -webkit-transform: translate(110px, 153px) scale(1.7316, 0.7644);
+  opacity: 0;
+  -webkit-animation: none;
+}
+
+/* line 2854, ../../scss/sencha/quest.scss */
+#imgKemuri02 {
+  -webkit-transform: translate(110px, 153px) scale(1.7316, 0.7644);
+  opacity: 0;
+  -webkit-animation-timing-function: linear;
+}
+
+/* line 2860, ../../scss/sencha/quest.scss */
+#imgSplashes02 {
+  -webkit-transform: translate(11px, 96px);
+  width: 295px;
+  height: 96px;
+  top: 0;
+  left: 0;
+}
+
+@-webkit-keyframes ani-imgSplashes02 {
+  /* line 2869, ../../scss/sencha/quest.scss */
+  0% {
+    -webkit-transform: translate(11px, 96px);
+    opacity: 0;
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 2875, ../../scss/sencha/quest.scss */
+  47.4941% {
+    -webkit-transform: translate(11px, 96px);
+    opacity: 0;
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 2881, ../../scss/sencha/quest.scss */
+  49.3208% {
+    -webkit-transform: translate(11px, 96px);
+    opacity: 1;
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 2887, ../../scss/sencha/quest.scss */
+  100% {
+    -webkit-transform: translate(11px, 166px);
+    opacity: 0;
+    -webkit-animation-timing-function: linear;
+  }
+}
+
+/* line 2894, ../../scss/sencha/quest.scss */
+.scene4 #imgSplashes02 {
+  -webkit-animation-name: ani-imgSplashes02;
+  -webkit-animation-duration: 0.5474s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+}
+
+/* line 2901, ../../scss/sencha/quest.scss */
+.end #imgSplashes02 {
+  -webkit-transform: translate(11px, 166px);
+  opacity: 0;
+  -webkit-animation: none;
+}
+
+/* line 2907, ../../scss/sencha/quest.scss */
+#imgSplashes02 {
+  -webkit-transform: translate(11px, 166px);
+  opacity: 0;
+  -webkit-animation-timing-function: linear;
+}
+
+/* line 2913, ../../scss/sencha/quest.scss */
+#imgAreaClearLogo {
+  -webkit-transform: translate(-295px, 110px);
+  width: 288px;
+  height: 48px;
+  top: 0;
+  left: 0;
+}
+
+@-webkit-keyframes ani-imgAreaClearLogo {
+  /* line 2922, ../../scss/sencha/quest.scss */
+  0% {
+    -webkit-transform: translate(-335px, 110px);
+    -webkit-animation-timing-function: ease-in;
+  }
+
+  /* line 2927, ../../scss/sencha/quest.scss */
+  14.5191% {
+    -webkit-transform: translate(16px, 110px);
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 2932, ../../scss/sencha/quest.scss */
+  85.4809% {
+    -webkit-transform: translate(16px, 110px);
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 2937, ../../scss/sencha/quest.scss */
+  100% {
+    -webkit-transform: translate(325px, 110px);
+    -webkit-animation-timing-function: ease;
+  }
+}
+
+/* line 2943, ../../scss/sencha/quest.scss */
+.scene4 #imgAreaClearLogo {
+  -webkit-animation-name: ani-imgAreaClearLogo;
+  -webkit-animation-duration: 1.3775s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+}
+
+/* line 2950, ../../scss/sencha/quest.scss */
+.end #imgAreaClearLogo {
+  -webkit-transform: translate(325px, 110px);
+  -webkit-animation: none;
+}
+
+/* line 2955, ../../scss/sencha/quest.scss */
+#imgAreaClearLogo {
+  -webkit-transform: translate(325px, 110px);
+  -webkit-animation-timing-function: ease;
+}
+
+/* line 2960, ../../scss/sencha/quest.scss */
+#imgAreaClearLogoWh {
+  -webkit-transform: translate(16px, 110px);
+  width: 288px;
+  height: 48px;
+  top: 0;
+  left: 0;
+}
+
+@-webkit-keyframes ani-imgAreaClearLogoWh {
+  /* line 2969, ../../scss/sencha/quest.scss */
+  0% {
+    -webkit-transform: translate(16px, 110px) scale(1, 1);
+    opacity: 0;
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 2975, ../../scss/sencha/quest.scss */
+  57.7778% {
+    -webkit-transform: translate(16px, 110px) scale(1, 1);
+    opacity: 0;
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 2981, ../../scss/sencha/quest.scss */
+  60% {
+    -webkit-transform: translate(16px, 110px) scale(1, 1);
+    opacity: 1;
+    -webkit-animation-timing-function: ease-in;
+  }
+
+  /* line 2987, ../../scss/sencha/quest.scss */
+  100% {
+    -webkit-transform: translate(16px, 110px) scale(3, 3);
+    opacity: 0;
+    -webkit-animation-timing-function: ease;
+  }
+}
+
+/* line 2994, ../../scss/sencha/quest.scss */
+.scene4 #imgAreaClearLogoWh {
+  -webkit-animation-name: ani-imgAreaClearLogoWh;
+  -webkit-animation-duration: 0.45s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+}
+
+/* line 3001, ../../scss/sencha/quest.scss */
+.end #imgAreaClearLogoWh {
+  -webkit-transform: translate(16px, 110px) scale(3, 3);
+  opacity: 0;
+  -webkit-animation: none;
+}
+
+/* line 3007, ../../scss/sencha/quest.scss */
+#imgAreaClearLogoWh {
+  -webkit-transform: translate(16px, 110px) scale(3, 3);
+  opacity: 0;
+  -webkit-animation-timing-function: ease;
+}
+
+/* line 3013, ../../scss/sencha/quest.scss */
+#imgClearFlashGroup {
+  -webkit-transform: translate(-8px, 78px);
+  width: 341px;
+  height: 112px;
+  top: 0;
+  left: 0;
+}
+
+/* line 3021, ../../scss/sencha/quest.scss */
+#imgClearFlashGroup {
+  -webkit-transform: translate(-8px, 78px);
+}
+
+/* line 3025, ../../scss/sencha/quest.scss */
+#imgClearRecovery01 {
+  -webkit-transform: translate(0px, 0px);
+  width: 80px;
+  height: 80px;
+  top: 0;
+  left: 0;
+}
+
+@-webkit-keyframes ani-imgClearRecovery01 {
+  /* line 3034, ../../scss/sencha/quest.scss */
+  0% {
+    -webkit-transform: translate(0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1, 1);
+    opacity: 0;
+    -webkit-animation-timing-function: ease;
+  }
+
+  /* line 3040, ../../scss/sencha/quest.scss */
+  67.1194% {
+    -webkit-transform: translate(0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1, 1);
+    opacity: 0;
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 3046, ../../scss/sencha/quest.scss */
+  68.9461% {
+    -webkit-transform: translate(0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1, 1);
+    opacity: 1;
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 3052, ../../scss/sencha/quest.scss */
+  83.5597% {
+    -webkit-transform: translate(0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(60deg) scale(1.19, 1.19);
+    opacity: 1;
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 3058, ../../scss/sencha/quest.scss */
+  100% {
+    -webkit-transform: translate(0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(120deg) scale(1, 1);
+    opacity: 0;
+    -webkit-animation-timing-function: linear;
+  }
+}
+
+/* line 3065, ../../scss/sencha/quest.scss */
+.scene4 #imgClearRecovery01 {
+  -webkit-animation-name: ani-imgClearRecovery01;
+  -webkit-animation-duration: 0.5474s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+}
+
+/* line 3072, ../../scss/sencha/quest.scss */
+.end #imgClearRecovery01 {
+  -webkit-transform: translate(0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(120deg) scale(1, 1);
+  opacity: 0;
+  -webkit-animation: none;
+}
+
+/* line 3078, ../../scss/sencha/quest.scss */
+#imgClearRecovery01 {
+  -webkit-transform: translate(0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(120deg) scale(1, 1);
+  opacity: 0;
+  -webkit-animation-timing-function: linear;
+}
+
+/* line 3084, ../../scss/sencha/quest.scss */
+#imgClearRecovery02 {
+  -webkit-transform: translate(70px, 32px);
+  width: 80px;
+  height: 80px;
+  top: 0;
+  left: 0;
+}
+
+@-webkit-keyframes ani-imgClearRecovery02 {
+  /* line 3093, ../../scss/sencha/quest.scss */
+  0% {
+    -webkit-transform: translate(70px, 32px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1, 1);
+    opacity: 0;
+    -webkit-animation-timing-function: ease;
+  }
+
+  /* line 3099, ../../scss/sencha/quest.scss */
+  69.4587% {
+    -webkit-transform: translate(70px, 32px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1, 1);
+    opacity: 0;
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 3105, ../../scss/sencha/quest.scss */
+  71.0111% {
+    -webkit-transform: translate(70px, 32px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1, 1);
+    opacity: 1;
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 3111, ../../scss/sencha/quest.scss */
+  84.9825% {
+    -webkit-transform: translate(70px, 32px) rotateX(0deg) rotateY(0deg) rotateZ(60deg) scale(1.19, 1.19);
+    opacity: 1;
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 3117, ../../scss/sencha/quest.scss */
+  100% {
+    -webkit-transform: translate(70px, 32px) rotateX(0deg) rotateY(0deg) rotateZ(120deg) scale(1, 1);
+    opacity: 0;
+    -webkit-animation-timing-function: linear;
+  }
+}
+
+/* line 3124, ../../scss/sencha/quest.scss */
+.scene4 #imgClearRecovery02 {
+  -webkit-animation-name: ani-imgClearRecovery02;
+  -webkit-animation-duration: 0.6442s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+}
+
+/* line 3131, ../../scss/sencha/quest.scss */
+.end #imgClearRecovery02 {
+  -webkit-transform: translate(70px, 32px) rotateX(0deg) rotateY(0deg) rotateZ(120deg) scale(1, 1);
+  opacity: 0;
+  -webkit-animation: none;
+}
+
+/* line 3137, ../../scss/sencha/quest.scss */
+#imgClearRecovery02 {
+  -webkit-transform: translate(70px, 32px) rotateX(0deg) rotateY(0deg) rotateZ(120deg) scale(1, 1);
+  opacity: 0;
+  -webkit-animation-timing-function: linear;
+}
+
+/* line 3143, ../../scss/sencha/quest.scss */
+#imgClearRecovery03 {
+  -webkit-transform: translate(141px, 1px);
+  width: 80px;
+  height: 80px;
+  top: 0;
+  left: 0;
+}
+
+@-webkit-keyframes ani-imgClearRecovery03 {
+  /* line 3152, ../../scss/sencha/quest.scss */
+  0% {
+    -webkit-transform: translate(141px, 1px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1, 1);
+    opacity: 0;
+    -webkit-animation-timing-function: ease;
+  }
+
+  /* line 3158, ../../scss/sencha/quest.scss */
+  72.1453% {
+    -webkit-transform: translate(141px, 1px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1, 1);
+    opacity: 0;
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 3164, ../../scss/sencha/quest.scss */
+  73.4877% {
+    -webkit-transform: translate(141px, 1px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1, 1);
+    opacity: 1;
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 3170, ../../scss/sencha/quest.scss */
+  86.4739% {
+    -webkit-transform: translate(141px, 1px) rotateX(0deg) rotateY(0deg) rotateZ(60deg) scale(1.19, 1.19);
+    opacity: 1;
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 3176, ../../scss/sencha/quest.scss */
+  100% {
+    -webkit-transform: translate(141px, 1px) rotateX(0deg) rotateY(0deg) rotateZ(120deg) scale(1, 1);
+    opacity: 0;
+    -webkit-animation-timing-function: linear;
+  }
+}
+
+/* line 3183, ../../scss/sencha/quest.scss */
+.scene4 #imgClearRecovery03 {
+  -webkit-animation-name: ani-imgClearRecovery03;
+  -webkit-animation-duration: 0.7449s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+}
+
+/* line 3190, ../../scss/sencha/quest.scss */
+.end #imgClearRecovery03 {
+  -webkit-transform: translate(141px, 1px) rotateX(0deg) rotateY(0deg) rotateZ(120deg) scale(1, 1);
+  opacity: 0;
+  -webkit-animation: none;
+}
+
+/* line 3196, ../../scss/sencha/quest.scss */
+#imgClearRecovery03 {
+  -webkit-transform: translate(141px, 1px) rotateX(0deg) rotateY(0deg) rotateZ(120deg) scale(1, 1);
+  opacity: 0;
+  -webkit-animation-timing-function: linear;
+}
+
+/* line 3202, ../../scss/sencha/quest.scss */
+#imgClearRecovery04 {
+  -webkit-transform: translate(201px, 31px);
+  width: 80px;
+  height: 80px;
+  top: 0;
+  left: 0;
+}
+
+@-webkit-keyframes ani-imgClearRecovery04 {
+  /* line 3211, ../../scss/sencha/quest.scss */
+  0% {
+    -webkit-transform: translate(201px, 31px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1, 1);
+    opacity: 0;
+    -webkit-animation-timing-function: ease;
+  }
+
+  /* line 3217, ../../scss/sencha/quest.scss */
+  76.5557% {
+    -webkit-transform: translate(201px, 31px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1, 1);
+    opacity: 0;
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 3223, ../../scss/sencha/quest.scss */
+  76.7629% {
+    -webkit-transform: translate(201px, 31px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1, 1);
+    opacity: 1;
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 3229, ../../scss/sencha/quest.scss */
+  88.77% {
+    -webkit-transform: translate(201px, 31px) rotateX(0deg) rotateY(0deg) rotateZ(60deg) scale(1.19, 1.19);
+    opacity: 1;
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 3235, ../../scss/sencha/quest.scss */
+  100% {
+    -webkit-transform: translate(201px, 31px) rotateX(0deg) rotateY(0deg) rotateZ(120deg) scale(1, 1);
+    opacity: 0;
+    -webkit-animation-timing-function: linear;
+  }
+}
+
+/* line 3242, ../../scss/sencha/quest.scss */
+.scene4 #imgClearRecovery04 {
+  -webkit-animation-name: ani-imgClearRecovery04;
+  -webkit-animation-duration: 0.8392s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+}
+
+/* line 3249, ../../scss/sencha/quest.scss */
+.end #imgClearRecovery04 {
+  -webkit-transform: translate(201px, 31px) rotateX(0deg) rotateY(0deg) rotateZ(120deg) scale(1, 1);
+  opacity: 0;
+  -webkit-animation: none;
+}
+
+/* line 3255, ../../scss/sencha/quest.scss */
+#imgClearRecovery04 {
+  -webkit-transform: translate(201px, 31px) rotateX(0deg) rotateY(0deg) rotateZ(120deg) scale(1, 1);
+  opacity: 0;
+  -webkit-animation-timing-function: linear;
+}
+
+/* line 3261, ../../scss/sencha/quest.scss */
+#imgClearRecovery05 {
+  -webkit-transform: translate(261px, 1px);
+  width: 80px;
+  height: 80px;
+  top: 0;
+  left: 0;
+}
+
+@-webkit-keyframes ani-imgClearRecovery05 {
+  /* line 3270, ../../scss/sencha/quest.scss */
+  0% {
+    -webkit-transform: translate(261px, 1px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1, 1);
+    opacity: 0;
+    -webkit-animation-timing-function: ease;
+  }
+
+  /* line 3276, ../../scss/sencha/quest.scss */
+  79.5821% {
+    -webkit-transform: translate(261px, 1px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1, 1);
+    opacity: 0;
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 3282, ../../scss/sencha/quest.scss */
+  79.7426% {
+    -webkit-transform: translate(261px, 1px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1, 1);
+    opacity: 1;
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 3288, ../../scss/sencha/quest.scss */
+  89.8306% {
+    -webkit-transform: translate(261px, 1px) rotateX(0deg) rotateY(0deg) rotateZ(60deg) scale(1.19, 1.19);
+    opacity: 1;
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 3294, ../../scss/sencha/quest.scss */
+  100% {
+    -webkit-transform: translate(261px, 1px) rotateX(0deg) rotateY(0deg) rotateZ(120deg) scale(1, 1);
+    opacity: 0;
+    -webkit-animation-timing-function: linear;
+  }
+}
+
+/* line 3301, ../../scss/sencha/quest.scss */
+.scene4 #imgClearRecovery05 {
+  -webkit-animation-name: ani-imgClearRecovery05;
+  -webkit-animation-duration: 0.9342s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+}
+
+/* line 3308, ../../scss/sencha/quest.scss */
+.end #imgClearRecovery05 {
+  -webkit-transform: translate(261px, 1px) rotateX(0deg) rotateY(0deg) rotateZ(120deg) scale(1, 1);
+  opacity: 0;
+  -webkit-animation: none;
+}
+
+/* line 3314, ../../scss/sencha/quest.scss */
+#imgClearRecovery05 {
+  -webkit-transform: translate(261px, 1px) rotateX(0deg) rotateY(0deg) rotateZ(120deg) scale(1, 1);
+  opacity: 0;
+  -webkit-animation-timing-function: linear;
+}
+
+/* line 3320, ../../scss/sencha/quest.scss */
+#imgDesignCover02 {
+  -webkit-transform: translate(-50px, 0px);
+  width: 458px;
+  height: 272px;
+  top: 0;
+  left: 0;
+}
+
+@-webkit-keyframes ani-imgDesignCover02 {
+  /* line 3329, ../../scss/sencha/quest.scss */
+  0% {
+    -webkit-transform: translate(-50px, 0px);
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 3334, ../../scss/sencha/quest.scss */
+  68.2018% {
+    -webkit-transform: translate(-50px, 0px);
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 3339, ../../scss/sencha/quest.scss */
+  81.7982% {
+    -webkit-transform: translate(-138px, 0px);
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 3344, ../../scss/sencha/quest.scss */
+  83.9911% {
+    -webkit-transform: translate(-138px, 0px);
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 3349, ../../scss/sencha/quest.scss */
+  83.9912% {
+    -webkit-transform: translate(0px, 0px);
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 3354, ../../scss/sencha/quest.scss */
+  100% {
+    -webkit-transform: translate(-50px, 0px);
+    -webkit-animation-timing-function: linear;
+  }
+}
+
+/* line 3360, ../../scss/sencha/quest.scss */
+.scene4 #imgDesignCover02 {
+  -webkit-animation-name: ani-imgDesignCover02;
+  -webkit-animation-duration: 2.28s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+}
+
+/* line 3367, ../../scss/sencha/quest.scss */
+.end #imgDesignCover02 {
+  -webkit-transform: translate(-50px, 0px);
+  -webkit-animation: none;
+}
+
+/* line 3372, ../../scss/sencha/quest.scss */
+#imgDesignCover02 {
+  -webkit-transform: translate(-50px, 0px);
+  -webkit-animation-timing-function: linear;
+}
+
+/* line 3377, ../../scss/sencha/quest.scss */
+#shapeWhiteFlash01 {
+  -webkit-transform: translate(0px, 41px) scale(1, 1.43);
+  width: 320px;
+  height: 190px;
+  background-color: white;
+  top: 0;
+  left: 0;
+  opacity: 0.8;
+}
+
+@-webkit-keyframes ani-shapeWhiteFlash01 {
+  /* line 3388, ../../scss/sencha/quest.scss */
+  0% {
+    -webkit-transform: translate(0px, 41px) scale(1, 1.43);
+    opacity: 0;
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 3394, ../../scss/sencha/quest.scss */
+  63.0303% {
+    -webkit-transform: translate(0px, 41px) scale(1, 1.43);
+    opacity: 0;
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 3400, ../../scss/sencha/quest.scss */
+  80.5905% {
+    -webkit-transform: translate(0px, 41px) scale(1, 1.43);
+    opacity: 0.8;
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 3406, ../../scss/sencha/quest.scss */
+  100% {
+    -webkit-transform: translate(0px, 41px) scale(1, 1.43);
+    opacity: 0;
+    -webkit-animation-timing-function: linear;
+  }
+}
+
+/* line 3413, ../../scss/sencha/quest.scss */
+.scene4 #shapeWhiteFlash01 {
+  -webkit-animation-name: ani-shapeWhiteFlash01;
+  -webkit-animation-duration: 0.4125s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+}
+
+/* line 3420, ../../scss/sencha/quest.scss */
+.end #shapeWhiteFlash01 {
+  -webkit-transform: translate(0px, 41px) scale(1, 1.43);
+  opacity: 0;
+  -webkit-animation: none;
+}
+
+/* line 3426, ../../scss/sencha/quest.scss */
+#shapeWhiteFlash01 {
+  -webkit-transform: translate(0px, 41px) scale(1, 1.43);
+  opacity: 0;
+  -webkit-animation-timing-function: linear;
+}
+
+/* line 3434, ../../scss/sencha/quest.scss */
+#an-anim, #acquisition, #acquisitiongachap, #levelup, #fieldclear, #fieldclearlogo,
+#imgKenshi03, #imgKenshi04, #imgKenshi05, #imgKenshi06, #imgKenshi09, #imgKenshi10, #imgKenshi11, #imgKenshi12,
+#imgShadow02, #imgShadow03, #imgShadow05, #imgShadow06 {
+  display: none;
+}

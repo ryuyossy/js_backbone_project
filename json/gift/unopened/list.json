@@ -1,0 +1,42 @@
+{
+    "status" : 200,
+    "guild_name" : "サイババ団",
+    "guild_rank" : "A",
+    "rank_status" : "ランクステイ圏内",
+    "rank_rest_days" : "3",
+    "battle_start_rest" : "05:44",
+    "battle_end_rest" : "",
+    "unopened_num" : "10",
+    "max_unopened_num" : "200",
+    "more_flg" : true,
+    "gifts" : [
+        {
+            "gift_item_id": null,
+            "gift_item_name": "ギル",
+            "gift_item_type": 5,
+            "message": "11/14のログインボーナスです。",
+            "notice_message": null,
+            "qty": 3000,
+            "receive_date": "11/14 10:26",
+            "user_gift_id": "2_2522854826727_0.9707013764659574"
+        },
+        { "user_gift_id" : "1011",
+          "gift_item_type" : 1,
+          "gift_item_id" : 101,
+          "gift_item_name" : "ポーション",
+          "qty" : 1,
+          "receive_date" : "8/23 08:23",
+          "message" : "バトルの報酬です。",
+          "notice_message" : null
+        },
+        { "user_gift_id" : "1012",
+          "gift_item_type" : 3,
+          "gift_item_id" : 110001,
+          "gift_item_name" : "木刀",
+          "qty" : 1,
+          "receive_date" : "8/23 08:23",
+          "message" : "バトルの報酬です。",
+          "notice_message" : "所有武具数がMAXです。"
+        }
+    ]
+}

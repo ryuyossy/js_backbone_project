@@ -1,0 +1,98 @@
+<h1 class="mainHeader">戦況履歴</h1>
+
+<h2 class="subHeader">
+	<span class="subHeaderBg_l"></span><span>{{>date}}　第{{>round}}試合</span><span class="subHeaderBg_r"></span>
+</h2>
+<!-- //過去の戦況ステータス -->
+{{if !now_battle_flg}}
+<section class="resultStatus">
+	<div class="contents contentsShadow">
+		{{if judge == 1}}
+		<div class="pointResult win">
+			<dl>
+				<dt><span class="hide">勝利</span></dt>
+		{{else judge == 2}}
+		<div class="pointResult lose">
+			<dl>
+				<dt><span class="hide">敗北</span></dt>
+		{{else}}
+		<div class="pointResult draw">
+			<dl>
+				<dt><span class="hide">勝敗なし</span></dt>
+		{{/if}}
+				<dd><span>vs</span>{{>enemy_guild_name}}</dd>
+			</dl>
+			<div class="clearfix"></div>
+			<table>
+				<tr>
+					<td class="myGuildPoint">{{>~commaFormat(own_gp)}}<span>BP</span></td>
+					<td class="opponentGuildPoint">{{>~commaFormat(enemy_gp)}}<span>BP</span></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</section>
+{{/if}}
+
+<!-- //バトル中 戦況ステータス -->
+{{if now_battle_flg}}
+<section class="resultStatus">
+	<div class="contents contentsShadow">
+		<div class="pointResult onBattle">
+			<dl>
+				<dt><span class="hide">対戦中</span></dt>
+				<dd><span>vs</span>{{>enemy_guild_name}}</dd>
+			</dl>
+			<div class="clearfix"></div>
+			<table>
+				<tr>
+					<td class="myGuildPoint">{{>own_gp}}<span>BP</span></td>
+					<td class="opponentGuildPoint">{{>enemy_gp}}<span>BP</span></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</section>
+{{/if}}
+
+<div id="situation" class="jsBattleSituation">
+	<!-- // 絞り込みチェック -->
+	<div class="allCheck jsButtonOnlyOwnSituation">
+		<button class="link off">自分の戦況のみ</button>
+	</div>
+	<div id="allStuation" class="situation jsListAll">
+		{{for #data tmpl="#jsTemplateBattleAllSituation" /}}
+	</div>
+	<div class="moreLink jsListMore" style="{{if !more_flg}}display:none{{/if}}">
+		<button class="link"><span>もっと見る</span></button>
+	</div>
+</div>
+
+<hr>
+	
+<section class="linkGroup">
+	{{if now_battle_flg}}
+	<div class="arrowLink">
+		<button class="link prev" data-href="battle/">バトルに戻る</button>
+	</div>
+	{{/if}}
+	<div class="arrowLink">
+		<button class="link prev" data-href="battle/situation/list/">過去の戦況履歴に戻る</button>
+	</div>
+</section>
+
+
+{{if 0}}
+<!--<div class="banner">
+	<p>
+		<button class="link" data-link="#"><img src="{{getImgRoot/}}/ad/banner.png" alt="banner"><br>└イベントバナースペース┘</button>
+	</p>
+</div>-->
+{{/if}}
+
+<div class="helpList">
+	<ul>
+		<li><button class="link" data-href="help/detail/201/">バトルってなに？</button></li>
+	</ul>
+</div>
+

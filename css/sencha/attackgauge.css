@@ -1,0 +1,538 @@
+@charset "utf-8";
+/* line 3, ../../scss/sencha/attackgauge.scss */
+#fullScreen {
+  height: 480px;
+}
+
+/* line 6, ../../scss/sencha/attackgauge.scss */
+#an-anim img {
+  zoom: 1;
+}
+
+/* line 10, ../../scss/sencha/attackgauge.scss */
+#an-anim > ol {
+  list-style: none;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 17, ../../scss/sencha/attackgauge.scss */
+#an-anim .an-stage {
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 24, ../../scss/sencha/attackgauge.scss */
+#an-anim .an-stage div {
+  position: absolute;
+}
+
+/* line 28, ../../scss/sencha/attackgauge.scss */
+.an-stage * {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 34, ../../scss/sencha/attackgauge.scss */
+#an-anim .an-stage img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* line 40, ../../scss/sencha/attackgauge.scss */
+#an-anim .AN-Scene-Description {
+  display: none;
+}
+
+/* line 44, ../../scss/sencha/attackgauge.scss */
+#an-anim iframe {
+  border: none;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 50, ../../scss/sencha/attackgauge.scss */
+#an-anim .restart * {
+  -webkit-animation-name: none !important;
+}
+
+/* line 54, ../../scss/sencha/attackgauge.scss */
+#imgTitleBase {
+  -webkit-transform: translate(-2px, 0px);
+  width: 322px;
+  height: 66px;
+  top: 0;
+  left: 0;
+}
+
+/* line 62, ../../scss/sencha/attackgauge.scss */
+#imgTitleBase {
+  -webkit-transform: translate(-2px, 0px);
+}
+
+/* line 66, ../../scss/sencha/attackgauge.scss */
+#imgCharaFace {
+  -webkit-transform: translate(-46px, -1px);
+  width: 320px;
+  height: 64px;
+  top: 1px;
+  left: -64px;
+}
+
+/* line 74, ../../scss/sencha/attackgauge.scss */
+#imgCharaFace {
+  -webkit-transform: translate(-46px, -1px);
+}
+
+/* line 78, ../../scss/sencha/attackgauge.scss */
+#imgTitleBar {
+  -webkit-transform: translate(-17px, 0px);
+  width: 354px;
+  height: 66px;
+  top: 0;
+  left: 0;
+}
+
+/* line 86, ../../scss/sencha/attackgauge.scss */
+#imgTitleBar {
+  -webkit-transform: translate(-17px, 0px);
+}
+
+/* line 90, ../../scss/sencha/attackgauge.scss */
+#imgDeadlyTechnique {
+  -webkit-transform: translate(163px, 17px);
+  width: 153px;
+  height: 30px;
+  top: 0;
+  left: 0;
+}
+
+/* line 98, ../../scss/sencha/attackgauge.scss */
+#imgDeadlyTechnique {
+  -webkit-transform: translate(163px, 17px);
+}
+
+/* line 102, ../../scss/sencha/attackgauge.scss */
+#imgTitle {
+  -webkit-transform: translate(3px, 72px);
+  width: 314px;
+  height: 37px;
+  top: 0;
+  left: 0;
+}
+
+/* line 110, ../../scss/sencha/attackgauge.scss */
+#imgTitle {
+  -webkit-transform: translate(3px, 72px);
+}
+
+/* line 114, ../../scss/sencha/attackgauge.scss */
+#imgParamNormal {
+  -webkit-transform: translate(-1px, 111px);
+  width: 320px;
+  height: 94px;
+  top: 0;
+  left: 0;
+}
+
+/* line 122, ../../scss/sencha/attackgauge.scss */
+#imgParamNormal {
+  -webkit-transform: translate(-1px, 111px);
+}
+
+/* line 126, ../../scss/sencha/attackgauge.scss */
+#imgPushNormal {
+  -webkit-transform: translate(97px, 239px);
+  width: 124px;
+  height: 57px;
+  top: 0;
+  left: 0;
+}
+
+/* line 134, ../../scss/sencha/attackgauge.scss */
+#imgPushNormal {
+  -webkit-transform: translate(97px, 239px);
+}
+
+/* line 138, ../../scss/sencha/attackgauge.scss */
+#imgPushOrange {
+  -webkit-transform: translate(100px, 238px);
+  width: 118px;
+  height: 53px;
+  top: 0;
+  left: 0;
+  -webkit-animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes ani-imgPushOrange {
+  /* line 148, ../../scss/sencha/attackgauge.scss */
+  0% {
+    -webkit-transform: translate(100px, 238px);
+    opacity: 0;
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 154, ../../scss/sencha/attackgauge.scss */
+  50% {
+    -webkit-transform: translate(100px, 238px);
+    opacity: 1;
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 160, ../../scss/sencha/attackgauge.scss */
+  100% {
+    -webkit-transform: translate(100px, 238px);
+    opacity: 0;
+    -webkit-animation-timing-function: linear;
+  }
+}
+
+/* line 167, ../../scss/sencha/attackgauge.scss */
+.anime01 #imgPushOrange {
+  -webkit-animation-name: ani-imgPushOrange;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+}
+
+/* line 174, ../../scss/sencha/attackgauge.scss */
+#imgPushOrange {
+  -webkit-transform: translate(100px, 238px);
+  opacity: 0;
+  -webkit-animation-timing-function: linear;
+}
+
+/* line 180, ../../scss/sencha/attackgauge.scss */
+.restart #imgPushOrange {
+  -webkit-transform: translate(100px, 238px);
+  opacity: 0;
+  -webkit-animation-timing-function: linear;
+}
+
+/* line 186, ../../scss/sencha/attackgauge.scss */
+#shapeTapArea {
+  -webkit-transform: translate(103px, 241px) scale(1.03, 1.12);
+  width: 113px;
+  height: 47px;
+  background-color: #c2c2c2;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+/* line 196, ../../scss/sencha/attackgauge.scss */
+#shapeTapArea {
+  -webkit-transform: translate(103px, 241px) scale(1.03, 1.12);
+}
+
+/* line 200, ../../scss/sencha/attackgauge.scss */
+#shapeGaugeCover {
+  -webkit-transform-origin: 100%;
+  -webkit-transform: scale(1);
+  width: 286px;
+  height: 42px;
+  background-color: #301800;
+  top: 145px;
+  left: 16px;
+  background-image: -webkit-linear-gradient(90deg, #301800 0%, #422c16 18.462%, #4d3824 33.846%, #503b27 48.462%, #4b3622 68.462%, #412b16 83.846%, #301800 100%);
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+}
+
+@-webkit-keyframes ani-shapeGaugeCover {
+  /* line 214, ../../scss/sencha/attackgauge.scss */
+  0% {
+    -webkit-transform: scale(1);
+  }
+
+  /* line 218, ../../scss/sencha/attackgauge.scss */
+  50% {
+    -webkit-transform: scale(0, 1);
+  }
+
+  /* line 222, ../../scss/sencha/attackgauge.scss */
+  100% {
+    -webkit-transform: scale(1);
+  }
+}
+
+/* line 227, ../../scss/sencha/attackgauge.scss */
+.anime01 #shapeGaugeCover {
+  -webkit-animation-name: ani-shapeGaugeCover;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+}
+
+/* line 234, ../../scss/sencha/attackgauge.scss */
+#shapeGaugeCover {
+  -webkit-transform: translate(16px, 145px) scale(1.01, 1.03);
+  -webkit-animation-timing-function: linear;
+}
+
+/* line 239, ../../scss/sencha/attackgauge.scss */
+.restart #shapeGaugeCover {
+  -webkit-transform: translate(16px, 145px) scale(1.01, 1.03);
+  -webkit-animation-timing-function: linear;
+}
+
+/* line 244, ../../scss/sencha/attackgauge.scss */
+#an-scene-0 .an-stage {
+  height: 480px;
+  width: 320px;
+  background-color: #544123;
+}
+
+/* line 250, ../../scss/sencha/attackgauge.scss */
+#imgPushRed1 {
+  -webkit-transform: translate(97px, 235px);
+  width: 124px;
+  height: 57px;
+  top: 0;
+  left: 0;
+}
+
+/* line 258, ../../scss/sencha/attackgauge.scss */
+#imgPushRed1 {
+  -webkit-transform: translate(97px, 235px);
+}
+
+/* line 262, ../../scss/sencha/attackgauge.scss */
+#shapeWhite {
+  -webkit-transform: translate(0px, 0px);
+  width: 330px;
+  height: 490px;
+  background-color: white;
+  top: 0;
+  left: 0;
+  opacity: 0.8;
+}
+
+@-webkit-keyframes ani-shapeWhite {
+  /* line 273, ../../scss/sencha/attackgauge.scss */
+  0% {
+    -webkit-transform: translate(0px, 0px);
+    -webkit-animation-timing-function: linear;
+    opacity: 0.8;
+  }
+
+  /* line 279, ../../scss/sencha/attackgauge.scss */
+  11.1111% {
+    -webkit-transform: translate(0px, 0px);
+    -webkit-animation-timing-function: linear;
+    opacity: 0;
+  }
+
+  /* line 285, ../../scss/sencha/attackgauge.scss */
+  22.2222% {
+    -webkit-transform: translate(0px, 0px);
+    -webkit-animation-timing-function: linear;
+    opacity: 0.8;
+  }
+
+  /* line 291, ../../scss/sencha/attackgauge.scss */
+  33.3333% {
+    -webkit-transform: translate(0px, 0px);
+    -webkit-animation-timing-function: cubic-bezier(0.2, 0.01, 1, 0.645);
+    opacity: 0;
+  }
+
+  /* line 297, ../../scss/sencha/attackgauge.scss */
+  100% {
+    -webkit-transform: translate(0px, 0px);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+}
+
+/* line 304, ../../scss/sencha/attackgauge.scss */
+.anime02 #shapeWhite {
+  -webkit-animation-name: ani-shapeWhite;
+  -webkit-animation-duration: 0.9s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+}
+
+/* line 311, ../../scss/sencha/attackgauge.scss */
+#shapeWhite {
+  -webkit-transform: translate(0px, 0px);
+  -webkit-animation-timing-function: linear;
+  opacity: 1;
+}
+
+/* line 317, ../../scss/sencha/attackgauge.scss */
+.restart #shapeWhite {
+  -webkit-transform: translate(0px, 0px);
+  -webkit-animation-timing-function: linear;
+  opacity: 0.8;
+}
+
+/* line 323, ../../scss/sencha/attackgauge.scss */
+#imgParamMax {
+  -webkit-transform: translate(3px, 111px);
+  width: 312px;
+  height: 87px;
+  top: 0;
+  left: 0;
+}
+
+/* line 331, ../../scss/sencha/attackgauge.scss */
+#imgParamMax {
+  -webkit-transform: translate(3px, 111px);
+}
+
+/* line 335, ../../scss/sencha/attackgauge.scss */
+#imgPushRed2 {
+  -webkit-transform: translate(97px, 235px);
+  width: 124px;
+  height: 57px;
+  top: 0;
+  left: 0;
+}
+
+/* line 343, ../../scss/sencha/attackgauge.scss */
+#imgPushRed2 {
+  -webkit-transform: translate(97px, 235px);
+}
+
+/* line 347, ../../scss/sencha/attackgauge.scss */
+#imgMax {
+  -webkit-transform: translate(46px, 139px);
+  width: 187px;
+  height: 52px;
+  top: 0;
+  left: 0;
+}
+
+@-webkit-keyframes ani-imgMax {
+  /* line 356, ../../scss/sencha/attackgauge.scss */
+  0% {
+    -webkit-transform: translate(26px, 139px);
+    -webkit-animation-timing-function: linear;
+  }
+
+  /* line 361, ../../scss/sencha/attackgauge.scss */
+  10% {
+    -webkit-transform: translate(66px, 139px);
+    -webkit-animation-timing-function: cubic-bezier(0.99, 0.005, 0.995, 0.355);
+  }
+
+  /* line 366, ../../scss/sencha/attackgauge.scss */
+  100% {
+    -webkit-transform: translate(187px, 139px);
+    -webkit-animation-timing-function: linear;
+  }
+}
+
+/* line 372, ../../scss/sencha/attackgauge.scss */
+.anime03 #imgMax {
+  -webkit-animation-name: ani-imgMax;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+}
+
+/* line 379, ../../scss/sencha/attackgauge.scss */
+#imgMax {
+  -webkit-transform: translate(187px, 139px);
+  -webkit-animation-timing-function: linear;
+}
+
+/* line 384, ../../scss/sencha/attackgauge.scss */
+.restart #imgMax {
+  -webkit-transform: translate(26px, 139px);
+  -webkit-animation-timing-function: linear;
+}
+
+/* line 389, ../../scss/sencha/attackgauge.scss */
+#shapeWhite2 {
+  -webkit-transform: translate(0px, 0px);
+  width: 330px;
+  height: 490px;
+  background-color: white;
+  top: 0;
+  left: 0;
+  opacity: 0.8;
+}
+
+@-webkit-keyframes ani-shapeWhite2 {
+  /* line 400, ../../scss/sencha/attackgauge.scss */
+  0% {
+    -webkit-transform: translate(0px, 0px);
+    -webkit-animation-timing-function: linear;
+    opacity: 0.8;
+  }
+
+  /* line 406, ../../scss/sencha/attackgauge.scss */
+  10% {
+    -webkit-transform: translate(0px, 0px);
+    -webkit-animation-timing-function: linear;
+    opacity: 0;
+  }
+
+  /* line 412, ../../scss/sencha/attackgauge.scss */
+  20% {
+    -webkit-transform: translate(0px, 0px);
+    -webkit-animation-timing-function: linear;
+    opacity: 0.8;
+  }
+
+  /* line 418, ../../scss/sencha/attackgauge.scss */
+  30% {
+    -webkit-transform: translate(0px, 0px);
+    -webkit-animation-timing-function: cubic-bezier(0.275, 0.01, 1, 0.635);
+    opacity: 0;
+  }
+
+  /* line 424, ../../scss/sencha/attackgauge.scss */
+  100% {
+    -webkit-transform: translate(0px, 0px);
+    -webkit-animation-timing-function: linear;
+    opacity: 1;
+  }
+}
+
+/* line 431, ../../scss/sencha/attackgauge.scss */
+.anime03 #shapeWhite2 {
+  -webkit-animation-name: ani-shapeWhite2;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-fill-mode: both;
+}
+
+/* line 438, ../../scss/sencha/attackgauge.scss */
+#shapeWhite2 {
+  -webkit-transform: translate(0px, 0px);
+  -webkit-animation-timing-function: linear;
+  opacity: 1;
+}
+
+/* line 444, ../../scss/sencha/attackgauge.scss */
+.restart #shapeWhite2 {
+  -webkit-transform: translate(0px, 0px);
+  -webkit-animation-timing-function: linear;
+  opacity: 0.8;
+}
+
+/*=============================
+追加css 一旦DOMから消す
+ ==============================*/
+/* line 454, ../../scss/sencha/attackgauge.scss */
+#an-anim {
+  display: none;
+}
+
+/* line 458, ../../scss/sencha/attackgauge.scss */
+#scene2 {
+  display: none;
+}
+
+/* line 462, ../../scss/sencha/attackgauge.scss */
+#scene3 {
+  display: none;
+}

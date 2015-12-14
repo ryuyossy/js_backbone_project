@@ -1,0 +1,147 @@
+<!--
+{{if changeable === false}}
+<p class="abiliSetMes"><span>バトルのマッチング〜バトル中はアビリティを変更できません</span></p>
+{{/if}}
+-->
+
+<div class="jsShortTutorial" style="{{if !first_access_flg}}display:none{{/if}}">
+	<div class="abilityShort">
+		<h1 class="mainHeader">アビリティ</h1>
+		<section class="questNvgation">
+			<div class="message arc">
+				<p>
+					<span>ジョブが持つ秘密の奥義、</br>それがアビリティだ!ガハハ!</span>
+				</p>
+			</div>
+		</section>
+		<h1 class="subHeader">
+			<span class="subHeaderBg_l"></span>
+			<span>アビリティを会得しよう!</span>
+			<span class="subHeaderBg_r"></span>
+		</h1>
+		<div class="questshortBn">
+			<img src="{{getImgRoot/}}/parts/shortTutorial_ability_get.png" alt="アビリティを会得しよう!" class="title">
+		</div>
+		<h1 class="subHeader">
+			<span class="subHeaderBg_l"></span>
+			<span>アビリティは必ず装備!</span>
+			<span class="subHeaderBg_r"></span>
+		</h1>
+		<div class="questshortBn">
+			<img src="{{getImgRoot/}}/parts/shortTutorial_ability_equip.png" alt="アビリティは必ず装備!" class="title">
+		</div>
+		<button class="btn large shgoQuest jsButtonCloseShortTutorial">さっそくアビリティへ</button>
+	</div>
+</div>
+
+
+
+<div class="jsNormalView" style="{{if first_access_flg}}display:none{{/if}}">
+	<h1 class="mainHeader">アビリティ</h1>
+	<h1 class="subHeader">
+		<span class="subHeaderBg_l"></span>
+		<span>現在のステータス</span>
+		<span class="subHeaderBg_r"></span>
+	</h1>
+	<section id="myData" class="metalPanel statusData_icon">
+		<div class="columnBox metalPanelInner">
+			<div class="iconBgArc_l gold"><img src="{{getImgRoot/}}/avatar/{{>avatar_id}}_140.png"></div>
+			<div class="contentsInner">
+				<div class="nameBox">
+					<h1>{{>job_name}}</h1>
+					{{if job_mastered === true}}
+					<span class="master"><span class="hide">Master</span></span>
+					{{/if}}
+				</div>
+				<div class="columnBox">
+					<dl>
+						<dt>前衛アビP</dt><dd>{{>ability_point_front}}/{{>ability_point_max_front}}</dd>
+						<dt>攻撃</dt><dd>{{>attack_power}}</dd>
+						<dt>特攻</dt><dd>{{>special_attack_power}}</dd>
+					</dl>
+					<dl>
+						<dt>後衛アビP</dt><dd>{{>ability_point_back}}/{{>ability_point_max_back}}</dd>
+						<dt>防御</dt><dd>{{>defense_power}}</dd>
+						<dt>特防</dt><dd>{{>special_defense_power}}</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+		<!-- <button class="btn" data-href="job/">ジョブを変更</button> -->
+	</section>
+
+	<section id="abilitySetList" class="jsTabs">
+		<div class="tabNav">
+			<ul class="jsTabButtons">
+				<li><button class="select" data-ability-set-type="1">前衛セット</button></li>
+				<li><button data-ability-set-type="2">後衛セット</button></li>
+			</ul>
+		</div>
+
+		<div class="jsTabInner">
+			<ul class="jsTabContents">
+				<li class="frontSet">{{if front !== false}}{{for #data tmpl="#jsTemplateAbility" /}}{{/if}}</li>
+				<li class="backSet">{{if !front}}{{for #data tmpl="#jsTemplateAbility" /}}{{/if}}</li>
+			</ul>
+		</div>
+	</section>
+
+	<button class="btn large jsAbilityAdd" data-href="ability/add/1/">アビリティを追加する</button>
+
+	<hr>
+
+	<div class="helpList">
+		<ul>
+			<li><button class="link" data-href="help/detail/208/">アビリティってなに？</button></li>
+			<li><button class="link" data-href="help/detail/204/">前衛・後衛ってなに？</button></li>
+			<li><button class="link" data-href="help/detail/402/">ジョブ系統ってなに？</button></li>
+		</ul>
+	</div>
+
+</div>
+
+
+
+{{escape}}
+
+<script id="jsTemplateAbility" type="text/x-jsrender">
+{{for abilities}}
+<section class="contents contentsShadow statusData jsAbility" data-ability-id="{{>id}}">
+	<div class="contentsInner">
+		<h1 class="abilityName">{{>name}}</h1>
+		<dl>
+			<dt>系統</dt><dd>{{>ancestry}}</dd>
+			{{if same_ancestry === true}}
+			<dd><span class="label32 growth_slow">同系統</span></dd>
+			{{/if}}
+			<dt>アビP</dt><dd>{{>equip_point}}</dd>
+			<dt>消費AP</dt><dd>{{if tp_cost !== null}}{{>tp_cost}}{{else}}-{{/if}}</dd>
+		</dl>
+		<p>{{>description}}</p>
+	</div>
+	<div class="innerBtnBox">
+		<button class="btn cancel jsButtonAbilityUnset">外す</button>
+		<button class="btn" data-href="ability/change/{{>id}}/{{>set_type}}/">変更する</button>
+	</div>
+</section>
+{{/for}}
+</script>
+
+<script id="jsTemplateAbilityUnsetConfirm" type="text/x-jsrender">
+	<div class="modalInner">
+		<p>{{>ability_name}}を外しますか？</p>
+		<div class="innerBtnBox">
+			<button class="btn cancel jsClosePopup">やめる</button>
+			<button class="btn jsClosePopup jsButtonAbilityUnsetFix">外す</button>
+		</div>
+	</div>
+</script>
+
+<script id="jsTemplateAbilityUnsetComplete" type="text/x-jsrender">
+	<div class="modalInner">
+		<p>アビリティを外しました。</p>
+		<button class="btn short close jsButtonAbilityReload">閉じる</button>
+	</div>
+</script>
+
+{{/escape}}

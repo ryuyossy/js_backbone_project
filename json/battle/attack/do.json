@@ -1,0 +1,52 @@
+{
+	"status":200,
+	"win_ability_flg":true,
+	"win_ability":{
+		"avatar_id":"20001",
+		"id":83,
+		"name":"アイスブラスト"
+	},
+	"master_job_flg":true,
+	"master_job":{
+		"avatar_id":"10002",
+		"name":"みならい剣士"
+	},
+	"win_jobs": [
+		{
+			"id": 110,
+			"name": "ソルジャー"
+		},
+		{
+			"id": 120,
+			"name": "ナイト"
+		},
+		{
+			"id": 130,
+			"name": "サムライ"
+		}
+	],
+	"target":{
+		"user_id":1,
+		"avatar_id":33002,
+		"name":"ヤタガイ",
+		"fainted_flg":false
+	},
+	"damage":150,
+	"combo_users":[
+		{
+			"user_id":2,
+			"avatar_id":10,
+			"name":"ノッポ"
+		},
+		{
+			"user_id":3,
+			"avatar_id":11,
+			"name":"ブー"
+		}
+	],
+	"tension_max_flg":false,
+	"attribute_effect":{
+		"type":"炎",
+		"damage":300
+	}
+}

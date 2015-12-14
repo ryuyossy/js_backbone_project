@@ -1,0 +1,86 @@
+<div id="container">
+    <section id="avatarStatus">
+        <div class="avatarStatusInner">
+            <h1 class="userName">{{>user_name}}</h1>
+            <figure class="myAvatar">
+                <img src="{{getImgRoot/}}/avatar/{{>avatar_id}}_640.png">
+            </figure>
+            <div class="statusData">
+                <dl>
+                    <dt>Lv.</dt><dd>{{>level}}</dd>
+                    <dt>ジョブ</dt><dd>{{>job_name}}</dd>
+                    <dt>所属</dt><dd class="link" data-href="guild/other/{{>guild_id}}/">{{>guild_name}}</dd>
+                    <dt>役職</dt><dd>{{>position_name}}</dd>
+                    <dt>戦闘力</dt><dd>{{>battle_power}}</dd>
+                    <dt>獲得BP</dt><dd>{{>~commaFormat(gp)}}</dd>
+                    <dt>図鑑</dt><dd>{{>current_collect_equip_num}}/{{>max_collect_equip_num}}</dd>
+                    <dt>所持武具</dt><dd>{{>own_equip_num}}/{{>max_own_equip_num}}</dd>
+                </dl>
+            </div>
+            <div class="equip">
+				<h1><span class="hide">装備</span></h1>
+				{{if main_weapon }}
+				<div class="weapon link" data-href="collection/equip/detail/{{>main_weapon.equip_id}}/">{{equipThumb equip_id=main_weapon.equip_id step=main_weapon.step size="medium" /}}</div>
+				{{/if}}
+				{{if main_protector }}
+				<div class="armor link" data-href="collection/equip/detail/{{>main_protector.equip_id}}/">{{equipThumb equip_id=main_protector.equip_id step=main_protector.step size="medium" /}}</div>
+				{{/if}}
+			</div>
+            <!-- // 種はここに入れる（あとで）
+            <div class="seed">
+
+            </div>
+            -->
+        </div>
+    </section>
+
+    <section class="comment">
+        <p>
+            {{>profile_comment}}
+        </p>
+    </section>
+
+
+    <!-- // 他人のプロフの時のみ：対ユーザーアクション用ボタン -->
+    <section id="anotherPerson">
+		<div class="outerBtnBox">
+			<button class="btn jsGreetButton" data-user-id="{{>user_id}}">あいさつする</button>
+			{{if cheered_flg}}
+			<button class="btn disable">鼓舞済み</button>
+			{{else}}
+			<button class="btn jsCheerDo" data-user-id="{{>user_id}}">鼓舞する</button>
+			{{/if}}
+		</div>
+		<div class="outerBtnBox">
+			{{if invitable_flg && !invite_max_flg}}
+			<button class="btn jsButtonGuildInviteConfirm" data-user-id="{{>user_id}}" data-user-name="{{>user_name}}">ギルドに勧誘する</button>
+            {{else invite_max_flg}}
+            <button class="btn disable jsButtonGuildInviteMax">ギルドに勧誘する</button>
+			{{else}}
+			<button class="btn disable">ギルドに勧誘する</button>
+			{{/if}}
+			<button class="btn" data-href="message/edit/{{:user_id}}/">メッセージを送る</button>
+		</div>
+	</section>
+
+
+
+    <section id="greet" class="jsGreet">
+        <h1 class="subHeader">
+            <span class="subHeaderBg_l"></span><span>あいさつ</span><span class="subHeaderBg_r"></span>
+        </h1>
+        <div class="jsGreets">
+            {{for #data tmpl="#jsTemplateGreetList" /}}
+        </div>
+    </section>
+
+    <hr>
+
+    <div class="helpList">
+        <ul>
+            <li><button class="link" data-href="help/detail/1002/">メッセージってなに？</button></li>
+            <li><button class="link" data-href="help/detail/1001/">あいさつってなに？</button></li>
+            <li><button class="link" data-href="help/detail/214/">鼓舞ってなに？</button></li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,58 @@
+{
+	"status": 200,
+	"rare_medal_num": 100,
+	"rare_medals": [
+		{
+			"description": null,
+			"exchange_limit_value": 1,
+			"id": 4,
+			"item_id": 130008,
+			"item_name": "グラディウス",
+			"item_type": 3,
+			"description": "ガーディアンを目指す物が最初に手にする剣。あの人もこの剣から始めました。",
+			"limit_end_datetime": null,
+			"need_rare_medal_num": 15,
+			"now_exchange_num": 0
+		},
+		{
+			"exchange_limit_value": 5,
+			"id": 3,
+			"item_id": 101,
+			"item_name": "成長の光石（N）",
+			"item_type": 2,
+			"description": "武具を成長させることが出来る不思議な石",
+			"limit_end_datetime": null,
+			"need_rare_medal_num": 25,
+			"now_exchange_num": 2
+		},
+		{
+			"exchange_limit_value": 1,
+			"id": 2,
+			"item_id": 601,
+			"item_name": "匠の書（100）",
+			"item_type": 1,
+			"description":"読むだけでJExが獲得出来る虎の巻。",
+			"limit_end_datetime": "2012-11-06 00:00:00",
+			"need_rare_medal_num": 5,
+			"now_exchange_num": 0
+		},
+		{
+			"exchange_limit_value": 1,
+			"id": 1,
+			"item_id": null,
+			"item_name": "30000ギル",
+			"item_type": 5,
+			"description": null,
+			"limit_end_datetime": null,
+			"need_rare_medal_num": 10000,
+			"now_exchange_num": 10000
+		}
+	],
+	"banners": [
+        {
+            "banner_text": null, 
+            "image_file_name": "banner_raremedal_limited.png", 
+            "redirect_path": null
+        }
+    ]
+}

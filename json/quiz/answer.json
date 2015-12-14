@@ -1,0 +1,36 @@
+{
+    "status": 200,
+    "result": true,
+    "quiz": {
+        "repletion": "大ダメージを与えるには仲間とのコンボが有効よ!",
+        "last_quiz_flg": false,
+        "quiz_id": 3,
+        "chapter_id": 1,
+        "gift_item_type": 5,
+        "quiz": "３の３の問題です。",
+        "instruction": "ざんねんざんねん",
+        "qty": 3000,
+        "gift_item_name": "ギル",
+        "gift_item_id": 0
+    },
+    "chapter": {
+        "gift_item_id": 101,
+        "gift_item_name": "元気のハチミツ（50）",
+        "gift_item_type": 1,
+        "qty": 3
+    },
+    "clear_flg": true,
+    "next": {
+        "chapter_id": 4,
+        "quiz_id": 1,
+        "name": "最終章"
+    },
+    "chapter_name": "クエスト編",
+    "all_clear_flg": false,
+    "reward": {
+        "gift_item_name": "元気のスタミナ",
+        "gift_item_type": 1,
+        "gift_item_id": 602,
+        "qty": 2
+    }
+}

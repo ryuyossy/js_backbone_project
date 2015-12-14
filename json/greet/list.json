@@ -1,0 +1,33 @@
+{
+    "status" : 200,
+    "guild_name" : "サイババ団",
+    "guild_rank" : "A",
+    "rank_status" : "ランクステイ圏内",
+    "rank_rest_days" : "3",
+    "battle_start_rest" : "05:44",
+    "battle_end_rest" : "",
+    "greets": [
+        {
+            "body_text": "あああ",
+			"from_avatar_id": "0001",
+            "from_user_id": 555,
+            "from_user_name": "ひろし２",
+            "greet_datetime": "11/05 10:00",
+            "greet_id": "1"
+        }, {
+            "body_text": "あああ",
+			"from_avatar_id": "0001",
+            "from_user_id": 555,
+            "from_user_name": "ひろし２",
+            "greet_datetime": "11/05 10:00",
+            "greet_id": "1"
+        }, {
+            "body_text": "あああ",
+			"from_avatar_id": "0001",
+            "from_user_id": 555,
+            "from_user_name": "ひろし２",
+            "greet_datetime": "11/05 10:00",
+            "greet_id": "1"
+        }
+    ]
+}

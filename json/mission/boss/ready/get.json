@@ -1,0 +1,35 @@
+{
+	"status": 200,
+	"version":3,
+	"user": {
+		"name": "hayakawa",
+		"user_id": 32,
+		"avatar_id": "10001",
+		"job_name": "みならい剣士",
+		"level": 4,
+		"power": 0,
+		"attack_power": 0,
+		"sp_attack_power": 0,
+		"defence_power": 0,
+		"sp_defence_power": 0
+	},
+	"boss": {
+		"name": "パッとしないヤツ（序）",
+		"before_comment": "バトル前のコメントです",
+		"comment": "なんなのきみたちは、もう。"
+	},
+	"partners": [
+		{
+			"name": "ばずー",
+			"user_id": 2,
+			"avatar_id": 20001,
+			"job_name": "みならい剣士",
+			"level": 10,
+			"power": 4000,
+			"attack_power": 1000,
+			"sp_attack_power": 1000,
+			"defence_power": 1000,
+			"sp_defence_power": 1000
+		}
+	]
+}

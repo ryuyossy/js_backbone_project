@@ -1,0 +1,30 @@
+{
+	"status": 200,
+	"value": 100,
+	"maxHpUpFlg": false,
+	"win_ability_flg":false,
+	"win_ability":{
+		"avatar_id":"20001",
+		"id":83,
+		"name":"アイスブラスト"
+	},
+	"master_job_flg":false,
+	"master_job":{
+		"avatar_id":"10002",
+		"name":"みならい剣士"
+	},
+	"win_jobs": [
+		{
+			"id": 110,
+			"name": "ソルジャー"
+		},
+		{
+			"id": 120,
+			"name": "ナイト"
+		},
+		{
+			"id": 130,
+			"name": "サムライ"
+		}
+	],
+}

@@ -1,0 +1,25 @@
+{
+	"version":4,
+	"status": 200,
+	"histories": [
+		{
+			"date": "2013/01/05",
+			"base_id": "20130105_2",
+			"round": 2,
+			"judge": 1,
+			"own_gp": 9876543210,
+			"enemy_gp": 1234567890,
+			"enemy_guild_name": "たけさん"
+		},
+		{
+			"date": "2013/01/05",
+			"base_id": "20130105_1",
+			"round": 1,
+			"judge": 3,
+			"own_gp": 9876543210,
+			"enemy_gp": 1234567890,
+			"enemy_guild_name": "たけさん"
+		}
+	],
+	"more_flg": false
+}

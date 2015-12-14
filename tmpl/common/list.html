@@ -1,0 +1,804 @@
+<script id="jsTemplateRanking" type="text/x-jsrender">
+	{{if ranking.guilds.length > 0}}
+	{{for ranking.guilds}}
+	<article class="contents contentsShadow statusData_icon link {{if own_guild_flg}}myGuild{{/if}}" data-href="{{if ~root().guild_id==guild_id}}/guild/{{else}}/guild/other/{{>guild_id}}/{{/if}}">
+
+		{{if state == "up"}}
+		<h1><span class="rankLabel rangeUp rankUp"><span class="rankNum">{{>order}}</span>位</span>{{>name}}</h1>
+		{{else state == "stay"}}
+		<h1><span class="rankLabel rangeStay rankStay"><span class="rankNum">{{>order}}</span>位</span>{{>name}}</h1>
+		{{else}}
+		<h1><span class="rankLabel rangeDown rankDown"><span class="rankNum">{{>order}}</span>位</span>{{>name}}</h1>
+		{{/if}}
+		<div class="columnBox">
+			<div class="iconBgRect_l gold"><img src="{{getImgRoot/}}/avatar/{{>master_avatar_id}}_140.png"></div>
+			<div class="contentsInner">
+				<dl>
+					<dt>獲得BP</dt><dd>{{>~commaFormat(gp)}}</dd>
+					<dt>ギルドマスター</dt><dd>{{>master_name}}</dd>
+					<dt>ギルドLv.</dt><dd>{{>level}}</dd>
+					<dt>所属人数</dt><dd>{{>member_num}}/{{>max_member_num}}</dd>
+				</dl>
+			</div>
+		</div>
+	</article>
+	{{/for}}
+	{{else}}
+		<section class="dimmed">
+			<p>ランキング中のギルドはありません。</p>
+		</section>
+	{{/if}}
+</script>
+
+<script id="jsTemplateGuildBbsTopics" type="text/x-jsrender">
+	{{if bbs_posts.length > 0}}
+	{{for bbs_posts}}
+	<article class="contents contentsShadow topic jsTopic jsList" data-list-id="{{>message_id}}" data-topic-user-id="{{>user_id}}">
+		<div class="contentsInner">
+			<div class="topicRoot">
+				<div class="contributor">
+					<div class="iconBgArc_s gold" data-href="profile/{{if ~root().user.user_id != user_id}}other/{{>user_id}}/{{/if}}"><img src="{{getImgRoot/}}/avatar/{{>avatar_id}}_140.png"></div>
+					<h2>{{>user_name}}</h2>
+					<time>{{>post_datetime}}</time>
+				</div>
+				{{if ~root().user.user_id == user_id}}
+				<p class="myTopic">
+				{{else}}
+				<p>
+				{{/if}}
+					<span class="jsTopicBody">{{>body_text}}</span>
+					<span class="topicMenu">
+						{{if ~root().user.user_id == user_id}}<button class="link delete jsButtonGuildBbsTopicRemoveConfirm"><span class="hide">削除</span></button>{{/if}}<button class="link like{{if ~root().user.user_id == user_id}} disable{{/if}}{{if self_liked_flg}} over{{/if}}{{if ~root().user.user_id != user_id}} jsTopicLike{{/if}}"><span class="hide">いいね</span><span class="jsTopicLikeNum">{{>like_num}}</span></button><button class="link resToggle jsTopicCommentsToggle"><span class="hide">コメント</span><span class="jsTopicCommentNum">{{>reply_num}}</span></button>
+					</span>
+				</p>
+			</div>
+			<div class="resArea jsTopicComments">
+				<div class="jsTopicCommentsInner"></div>
+				<div class="jsTopicCommentsLoader jsLoaderA jsLoaderDark"></div>
+				{{if ~root('PAGEID')!=='GuildOther' && ~root('PAGEID')!=='GuildBbsOther'}}
+				<div class="postComment jsPostTopicCommentForm">
+					<label><input class="jsPostTopicCommentText" type="text" placeholder="コメントする…"></label><button class="submit btn jsPostTopicCommentSubmit">投稿する</button>
+				</div>
+				{{/if}}
+			</div>
+		</div>
+	</article>
+	{{/for}}
+	{{else}}
+		<section class="dimmed jsGuildBbsNoTopics">
+			<p>投稿はありません。</p>
+		</section>
+	{{/if}}
+</script>
+
+<script id="jsTemplateGuildBbsComments" type="text/x-jsrender">
+	{{if comments}}
+		{{for comments}}
+		<div class="res {{if ~root().topic_user_id == user_id}}master{{/if}} jsTopicComment" data-comment-id="{{>comment_id}}">
+			<div class="contributor">
+				<div class="iconBgArc_s gold" data-href="profile/other/{{>user_id}}/"><img src="{{getImgRoot/}}/avatar/{{>avatar_id}}_140.png"></div>
+				<h2 data-href="profile/{{>user_id}}/">{{>user_name}}</h2>
+				<time>{{>comment_datetime}}</time>
+			</div>
+			{{if ~root().user.user_id == user_id}}
+			<p class="myComment">
+			{{else}}
+			<p>
+			{{/if}}
+				<span class="jsTopicCommentBody">{{>body_text}}</span>
+				{{if ~root().user.user_id == user_id}}
+				<span class="topicMenu">
+					<button class="link delete jsButtonGuildBbsCommentRemoveConfirm"><span class="hide">削除</span></button>
+				</span>
+				{{/if}}
+			</p>
+		</div>
+		{{/for}}
+	{{/if}}
+</script>
+
+<script id="jsTemplateGuildJoinRequestedList" type="text/x-jsrender">
+	{{if users.length > 0}}
+	{{for users}}
+	<section class="contents contentsShadow statusData_icon link jsList" data-list-id="{{>user_id}}" data-user-name="{{>user_name}}">
+		<div class="columnBox innerHeader" data-href="/profile/other/{{>user_id}}/">
+			<div class="iconBgRect_l gold"><img src="{{getImgRoot/}}/avatar/{{>avatar_id}}_140.png"></div>
+			<div class="contentsInner">
+				<h1>{{>user_name}}</h1>
+				<dl>
+					<dt>Lv.</dt><dd>{{>level}}</dd>
+					<dt>ジョブ</dt><dd>{{>job_name}}</dd>
+					<dt>総攻撃</dt><dd>{{>attack + sp_attack}}</dd>
+					<dt>総防御</dt><dd>{{>defense + sp_defense}}</dd>
+				</dl>
+				<p>{{>profile_comment}}</p>
+			</div>
+		</div>
+		<button class="btn large jsButtonGuildJoinAccept">承認する</button>
+	</section>
+	{{/for}}
+	{{else}}
+		<section class="dimmed">
+			<p>ユーザーはいません。</p>
+		</section>
+	{{/if}}
+</script>
+
+<script id="jsTemplateGuildCandidateList" type="text/x-jsrender">
+	{{if users.length > 0}}
+	{{for users}}
+	<section class="contents contentsShadow statusData_icon link jsList" data-list-id="{{>user_id}}" data-user-name="{{>user_name}}">
+		<div class="columnBox innerHeader" data-href="/profile/other/{{>user_id}}/">
+			<div class="iconBgRect_l gold">
+				<img src="{{getImgRoot/}}/avatar/{{>avatar_id}}_140.png">
+			</div>
+			<div class="contentsInner">
+				<h1>{{>user_name}}</h1>
+				<dl>
+					<dt>Lv.</dt><dd>{{>level}}</dd>
+					<dt>ジョブ</dt><dd>{{>job_name}}</dd>
+					<dt>総攻撃</dt><dd>{{> attack + sp_attack}}</dd>
+					<dt>総防御</dt><dd>{{> defense + sp_defense}}</dd>
+				</dl>
+				<p>
+					{{>profile_comment}}
+				</p>
+			</div>
+		</div>
+		{{if ~root().master_priv_flg}}
+		<button class="btn large {{if ~root().invite_max_flg}}jsButtonGuildInviteMax{{else}}jsButtonGuildInviteConfirm{{/if}}" data-item_id="{{>user_id}}">勧誘する</button>
+		{{/if}}
+	</section>
+	{{/for}}
+	{{else}}
+		<section class="dimmed">
+			<p>ユーザーはいません。</p>
+		</section>
+	{{/if}}
+
+</script>
+
+<script id="jsTemplateGuildMenboList" type="text/x-jsrender">
+	{{if guilds.length > 0}}
+	{{for guilds}}
+	<section class="contents contentsShadow statusData_icon link{{if ~root().users}}{{/if}} jsList" data-list-id="{{>guild_id}}" data-href="{{if ~root().guild_id==guild_id}}/guild/{{else}}/guild/other/{{>guild_id}}/{{/if}}">
+		<div class="columnBox innerHeader">
+			<div class="emblemIcon_l"><span class="guildRank {{>guild_rank}}">{{>guild_rank}}</span></div>
+			<div class="contentsInner">
+				<h1>{{>guild_name}}</h1>
+				<dl>
+					<dt>ギルドLv.</dt><dd>{{>guild_level}}</dd>
+					<dt>所属</dt><dd>{{>current_member_num}}</dd>
+					<dt>Lv.</dt><dd>{{>scout_level_name}}</dd>
+					<dt>やる気</dt><dd>{{>scout_motivation_name}}</dd>
+					<dt>経験</dt><dd>{{>scout_experience_name}}</dd>
+				</dl>
+			</div>
+		</div>
+	</section>
+	{{/for}}
+	{{else}}
+		<section class="dimmed">
+			<p>ギルドはありません。</p>
+		</section>
+	{{/if}}
+</script>
+
+<script id="jsTemplateGreet" type="text/x-jsrender">
+	{{if greets.length > 0}}
+	{{for greets}}
+	<article class="contents contentsShadow topic jsList" data-list-id="{{>greet_id}}">
+		<div class="contentsInner">
+			<div class="greetingBody">
+				<div class="contributor">
+					<div class="iconBgArc_s gold" data-href="profile/other/{{>from_user_id}}/"><img src="{{getImgRoot/}}/avatar/{{>from_avatar_id}}_140.png"></div>
+					<h2>{{>from_user_name}}</h2>
+					<time>{{>greet_datetime}}</time>
+				</div>
+				<p>
+					{{>body_text}}
+					<span class="greetMenu"><span class="link reply jsGreetButton" data-user-id="{{>from_user_id}}">あいさつを返す</span></span>
+				</p>
+			</div>
+		</div>
+	</article>
+	{{/for}}
+	{{else}}
+		<section class="dimmed">
+			<p>あいさつはありません。</p>
+		</section>
+	{{/if}}
+</script>
+
+<script id="jsTemplateGreetList" type="text/x-jsrender">
+	{{if greets.length > 0}}
+	{{for greets}}
+	<article class="contents contentsShadow topic jsList" data-list-id="{{>greet_id}}">
+		<div class="contentsInner">
+			<div class="greetingBody">
+				<div class="contributor">
+					<div class="iconBgArc_s gold" data-href="profile/other/{{>from_user_id}}/"><img src="{{getImgRoot/}}/avatar/{{>from_avatar_id}}_140.png"></div>
+					<h2>{{>from_user_name}}</h2>
+					<time>{{>greet_datetime}}</time>
+				</div>
+				<p>
+					{{>body_text}}
+					{{if ~root('user').user_id !== from_user_id}}
+					<span class="greetMenu"><span class="link reply jsGreetButton" data-user-id="{{>from_user_id}}">あいさつする</span></span>
+					{{/if}}
+				</p>
+			</div>
+		</div>
+	</article>
+	{{/for}}
+	{{else}}
+		<section class="dimmed">
+			<p>あいさつはありません。</p>
+		</section>
+	{{/if}}
+</script>
+
+<script id="jsTemplateEquipThumbs" type="text/x-jsrender">
+{{if equip_list.length > 0}}
+{{for equip_list}}
+	<li data-href="collection/equip/detail/{{>equip_id}}/" data-list-id="{{>equip_id}}" class="jsList {{if max_level_flg}}complate{{/if}} {{if !get_flg}}unidentified{{else}}link{{/if}}" {{if get_flg}} data-href="collection/equip/detail/{{>equip_id}}/"{{/if}}><img src="{{getImgRoot/}}/equip/{{>equip_id}}_128.png"></li>
+{{/for}}
+{{else}}
+	<section class="dimmed">
+		<p>武具がありません。</p>
+	</section>
+{{/if}}
+</script>
+
+<script id="jsTemplateEquip" type="text/x-jsrender">
+	{{if equips.length > 0}}
+	{{for equips}}
+	<section class="contents contentsShadow statusData_icon {{if ~root('PAGEID')=='EquipList'}}link {{/if}} jsList" data-list-id="{{>user_equip_no}}"{{if ~root('PAGEID')=='EquipList'}} data-href="equip/detail/{{>user_equip_no}}/"{{/if}}>
+		<h1>
+			{{>equip_name}} ({{:~getRarityText(rarity)}})
+			{{growTypeTag grow_type=grow_type /}}
+		</h1>
+		<div class="columnBox equipListStatus">
+			{{equipThumb equip_id=equip_id step=step size="medium" /}}
+				{{if protected_flg}}
+					<span class="label36_r4 protect">保護</span>
+				{{else equip_status === 1}}
+					<span class="label36_r4 main">メイン</span>
+				{{else equip_status === 2}}
+					<span class="label36_r4 sub">サブ</span>
+				{{/if}}
+			<div class="contentsInner">
+				<dl>
+					<dt>Lv.</dt>
+					<dd>{{>equip_level}}/{{>max_level}}</dd>
+					<dt>成長</dt>
+					<dd class="gergeBox">
+						<div class="gergeBgFrame">
+							<div class="gergeBg">
+								<span class="gerge equipGrowth{{if equip_exp===100}} max{{/if}}" style="width:{{>equip_exp}}%;"></span>
+							</div>
+						</div>
+					</dd>
+					<dd>{{>equip_exp}}%</dd>
+					<dt>必要{{if equip_type === 1}}武器{{else}}防具{{/if}}P</dt>
+					<dd>{{>equip_cost}}</dd>
+				</dl>
+				<div class="columnBox">
+					<dl>
+						<dt>{{if equip_type === 1}}攻撃{{else}}防御{{/if}}</dt>
+						<dd>{{>power}}</dd>
+						<dt>属性</dt>
+						<dd>{{if attribute_name}}{{>attribute_name}}{{else}}−{{/if}}</dd>
+					</dl>
+					<dl>
+						<dt>特{{if equip_type === 1}}攻{{else}}防{{/if}}</dt>
+						<dd>{{>special_power}}</dd>
+						<dt>属性Lv</dt>
+						<dd>{{if attribute_level}}{{>attribute_level}}{{else}}−{{/if}}</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+		{{if ~root('PAGEID') !== 'EquipList' && ~root('PAGEID') !== 'Tutorial'}}
+			{{if !protected_flg && equip_status === 0}}
+			<label class="checkBox jsButtonSelect"><input type="checkbox" name="equip" data-equip-id="{{>user_equip_no}}"><span>選択する</span></label>
+			{{else}}
+			<span class="label48">{{if protected_flg}}保護{{else}}装備{{/if}}中の武具です</span>
+			<label class="checkBox"><input type="checkbox" name="equip" disabled="disabled" data-static-disabled="true"><span>選択不可</span></label>
+			{{/if}}
+		{{/if}}
+	</section>
+	{{/for}}
+	{{else}}
+		{{if ~root('PAGEID')==="ComposeBaseSelect"}}
+			<section class="dimmed">
+				<p>素材にできる武具はありません。</p>
+			</section>
+			<div class="listMenu">
+				<ul>
+					<li><div class="link" data-href="gacha/">ガチャで武具ゲット！</div></li>
+					<li><div class="link" data-href="mission/stage/">クエストでAP回復！</div></li>
+				</ul>
+			</div>
+		{{else}}
+			<section class="dimmed">
+				<p>武具はありません。</p>
+			</section>
+		{{/if}}
+	{{/if}}
+</script>
+
+<script id="jsTemplateEquip2" type="text/x-jsrender">
+	{{if equips.length > 0}}
+	{{for equips}}
+	<section class="contents contentsShadow statusData_icon jsList" data-list-id="{{>user_equip_no}}" data-equip-type="{{>equip_type}}" data-user-equip-no="{{>user_equip_no}}">
+		<h1>
+			{{>equip_name}} ({{:~getRarityText(rarity)}})
+			<span class="label32 growth_{{:~getGrowClass(grow_type)}}">{{:~getGrowText(grow_type)}}</span>
+		</h1>
+		<div class="columnBox equipListStatus">
+			{{equipThumb equip_id=equip_id step=step size="medium" /}}
+
+			{{if protected_flg}}
+			<span class="label36_r4 protect">保護</span>
+			{{else equip_status === 1}}
+			<span class="label36_r4 main">メイン</span>
+			{{else equip_status === 2}}
+			<span class="label36_r4 sub">サブ</span>
+			{{/if}}
+
+			<div class="contentsInner">
+				<dl>
+					<dt>Lv.</dt><dd>{{>equip_level}}/{{>max_level}}</dd>
+					<dt>成長</dt><dd><div class="gergeBgFrame"><div class="gergeBg"><span class="gerge equipGrowth{{if equip_exp===100}} max{{/if}}" style="width:{{>equip_exp}}%;"></span></div></div></dd><dd>{{>equip_exp}}%</dd>
+					<dt>必要{{if equip_type === 1}}武器{{else}}防具{{/if}}P</dt>
+					<dd>{{>equip_cost}}</dd>
+				</dl>
+				<div class="columnBox">
+					<dl>
+						<dt>{{if equip_type === 1}}攻撃{{else}}防御{{/if}}</dt>
+						<dd>{{>power}}</dd>
+						<dt>属性</dt>
+						<dd>{{if attribute_name}}{{>attribute_name}}{{else}}−{{/if}}</dd>
+					</dl>
+					<dl>
+						<dt>特{{if equip_type === 1}}攻{{else}}防{{/if}}</dt>
+						<dd>{{>special_power}}</dd>
+						<dt>属性Lv</dt>
+						<dd>{{if attribute_level}}{{>attribute_level}}{{else}}−{{/if}}</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+		{{if
+		equip_level===max_level && ~root('PAGEID')==="Compose" ||
+		step===4 && ~root('PAGEID')==="ComposeEvolution" || (
+			protected_flg &&
+			~root('PAGEID')!=="Compose" &&
+			~root('PAGEID')!=="ComposeEvolution" &&
+			~root('PAGEID')!=="DeckEquipAddList" &&
+			~root('PAGEID')!=="DeckEquipChangeList"
+		) || (
+			equip_status!==0 && (
+				~root('PAGEID')==="DeckEquipAddList" ||
+				~root('PAGEID')==="DeckEquipChangeList" ||
+				~root('PAGEID')==="ComposeBaseSelect" ||
+				~root('PAGEID')==="ComposeBaseEvolutionSelect"
+			)
+		)}}
+		<span class="label48">
+			{{if equip_level===max_level && ~root('PAGEID')==="Compose"}}レベルMAXです
+			{{else step===4 && ~root('PAGEID')==="ComposeEvolution"}}限界突破回数MAXです
+			{{else equip_status!==0}}装備中の武具です
+			{{/if}}
+		</span>
+		<button class="btn disable">選択不可</button>
+		{{else}}
+		<button class="btn jsButtonSelectEquip {{>equip_level}} {{>max_level}}">選択する</button>
+		{{/if}}
+	</section>
+	{{/for}}
+	{{else}}
+		<section class="dimmed">
+			<p>
+				{{if ~root('PAGEID')==="ComposeEvolution"}}限界突破できる{{else ~root('PAGEID')==="ComposeBaseEvolutionSelect"}}素材にできる{{else ~root('PAGEID')==="Compose"}}強化できる{{/if}}武具はありません。
+			</p>
+		</section>
+		<div class="listMenu">
+			<ul>
+				<li><div class="link" data-href="gacha/">ガチャで武具ゲット！</div></li>
+				<li><div class="link" data-href="mission/stage/">クエストでAP回復！</div></li>
+			</ul>
+		</div>
+	{{/if}}
+</script>
+
+<script id="jsTemplateComposeBaseMaterials" type="text/x-jsrender">
+	<div class="jsUpgradeMaterials">
+		{{for upgrade_materials tmpl="#jsTemplateComposeBaseMaterial" /}}
+	</div>
+	<div class="jsAttributeMaterials">
+		{{for attribute_materials tmpl="#jsTemplateComposeBaseMaterial" /}}
+	</div>
+
+	{{if upgrade_materials.length + attribute_materials.length <= 0}}
+	<section class="dimmed">
+		<p>合成可能な素材がありません</p>
+	</section>
+	{{/if}}
+</script>
+
+<script id="jsTemplateComposeBaseMaterial" type="text/x-jsrender">
+	<section class="contents contentsShadow statusData_icon material jsList" data-list-id="{{>id}}">
+		<h1>【強化素材】{{>name}}</h1>
+		<div class="columnBox innerHeader">
+			<img src="{{getImgRoot/}}/material/{{>id}}.png">
+			<div class="contentsInner">
+				<dl>
+					<dt>所持数</dt><dd>{{>compose.use_num}}</dd>
+				</dl>
+				<p>
+					{{>description}}
+				</p>
+			</div>
+		</div>
+		<div class="numControl">
+			<div class="numControlSwitch jsCounter" data-max="{{>compose.use_num}}" data-storage="material_num">
+				<button class="link down_off jsCounterDecrement"><span class="hide">−</span></button>
+				<input class="jsCounterNum total_compose_num_{{>id}}" type="text" maxlength="2" value="1" style="width:50px">
+				<button class="link up_off jsCounterIncrement"><span class="hide">＋</span></button>
+			</div>
+			<button class="btn jsButtonMaterialSubmit">合成する</button>
+		</div>
+	</section>
+</script>
+
+<!-- //みんなの戦況（デフォルト表示） -->
+<script id="jsTemplateBattleAllSituation" type="text/x-jsrender">
+	{{for battle_situations tmpl="#jsTemplateBattleSituationInner" /}}
+</script>
+<!-- //自分の戦況 -->
+<script id="jsTemplateBattleOwnSituation" type="text/x-jsrender">
+	{{if battle_situations_me}}
+		{{for battle_situations_me tmpl="#jsTemplateBattleSituationInner" /}}
+	{{else}}
+		{{for battle_situations tmpl="#jsTemplateBattleSituationInner" /}}
+	{{/if}}
+</script>
+
+<script id="jsTemplateBattleSituationInner" type="text/x-jsrender">
+	<article class="{{if enemy_flg}}opponent{{else}}fellow{{/if}} contents contentsShadow jsList" data-list-id="{{>situation_id}}">
+		<div class="contentsInner">
+			<div class="contributor">
+				<div class="iconBgArc_s {{if enemy_flg}}red{{else}}blue{{/if}}" data-href="profile/other/{{>user_id}}/"><img src="{{getImgRoot/}}/avatar/{{>avatar_id}}_140.png"></div>
+				<h2>{{>user_name}}</h2>
+				<time>{{:~getDateByISOString(happen_datetime)}}</time>
+			</div>
+			<dl>
+				{{:sentence}}
+			</dl>
+		</div>
+	</article>
+</script>
+
+<script id="jsTemplateBattleHistoryList" type="text/x-jsrender">
+	{{if histories.length > 0}}
+	{{for histories}}
+	<article class="contents contentsShadow jsList" data-list-id="{{>base_id}}">
+		<h1><span>{{>date}}</span>第{{>round}}試合</h1>
+		{{if judge == 1}}
+		<div class="pointResult win">
+			<dl>
+				<dt><span class="hide">勝利</span></dt>
+		{{else judge == 2}}
+		<div class="pointResult lose">
+			<dl>
+				<dt><span class="hide">敗北</span></dt>
+		{{else}}
+		<div class="pointResult draw">
+			<dl>
+				<dt><span class="hide">勝敗なし</span></dt>
+		{{/if}}
+				<dd><span>vs</span>{{>enemy_guild_name}}</dd>
+			</dl>
+			<div class="clearfix"></div>
+			<table>
+				<tr>
+					<td class="myGuildPoint">{{>~commaFormat(own_gp)}}<span>BP</span></td>
+					<td class="opponentGuildPoint">{{>~commaFormat(enemy_gp)}}<span>BP</span></td>
+				</tr>
+			</table>
+		</div>
+		{{if judge == 1 || judge == 2}}
+		<button class="link" data-href="battle/situation/detail/{{>~replaceSlash(date,'')}}/{{>round}}/">戦況履歴</button>
+		{{else}}
+		<button class="link disable">戦況履歴はありません</button>
+		{{/if}}
+
+	</article>
+	{{/for}}
+	{{else}}
+		<section class="dimmed">
+		<p>戦況履歴はありません。</p>
+		</section>
+	{{/if}}
+</script>
+
+<script id="jsTemplateAbilityList" type="text/x-jsrender">
+	{{if abilities && abilities.length > 0}}
+	{{for abilities}}
+	<section class="contents contentsShadow statusData jsList" data-list-id="{{>id}}" data-ability-name="{{>name}}">
+		<div class="contentsInner">
+			<h1>{{>name}}</h1>
+			<dl>
+				<dt>系統</dt><dd>{{>ancestry}}</dd>
+				{{if same_ancestry === true}}
+				<dd><span class="label32 growth_slow">同系統</span></dd>
+				{{/if}}
+				<dt>アビP</dt><dd>{{if lack_cost === true}}<span class="pointEmpty">{{>equip_point}}</span>{{else}}{{>equip_point}}{{/if}}</dd>
+				<dt>消費AP</dt><dd>{{if tp_cost !== null}}{{>tp_cost}}{{else}}-{{/if}}</dd>
+			</dl>
+			<p>{{>description}}</p>
+		</div>
+		{{if lack_cost === true}}
+		<span class="label48 shortage">アビPが足りません</span>
+		<button class="btn large disable">選択不可</button>
+		{{else}}
+		<button class="btn large jsButtonAbilitySelect">選択する</button>
+		{{/if}}
+	</section>
+	{{/for}}
+	{{else}}
+	<section class="dimmed">
+		<p>アビリティはありません。</p>
+	</section>
+	{{/if}}
+</script>
+
+<script id="jsTemplateNotice" type="text/x-jsrender">
+	{{if system_infos.length > 0}}
+	{{for system_infos}}
+	<div class="contents contentsShadow link jsNoticeList jsList" data-href="notice/detail/{{>info_id}}/" data-list-id="{{>info_id}}">
+		<dl>
+			<dt><span class="label36_r4
+				{{if info_kind === 1}}maintenance
+				{{else info_kind === 2}}important
+				{{else info_kind === 3}}campaign
+				{{else info_kind === 4}}event
+				{{else info_kind === 5}}info{{/if}}">
+			{{>info_kind_name}}</span>{{>info_datetime}}</dt>
+			<dd>{{>title}}</dd>
+		</dl>
+	</div>
+	{{/for}}
+	{{if ~root('PAGEID')!=='NoticeList'}}
+		<div class="arrowLink">
+			<button class="link next" data-href="notice/">ぜんぶ見る</button>
+		</div>
+	{{/if}}
+	{{else}}
+		<section class="dimmed">
+		<p>お知らせはありません。</p>
+		</section>
+	{{/if}}
+</script>
+
+<script id="jsTemplateNewArrival" type="text/x-jsrender">
+{{if new_users.length > 0}}
+{{for new_users}}
+	<article class="contents contentsShadow statusData_icon link jsList" data-href="profile/other/{{>user_id}}/" data-list-id="{{>user_id}}"/>
+		<div class="columnBox innerHeader">
+		<div class="iconBgRect_l gold"><img src="{{getImgRoot/}}/avatar/{{>avatar_id}}_140.png"></div>
+			<div class="contentsInner">
+				<h1>{{>user_name}}</h1>
+				<dl>
+					<dt>所属</dt><dd>{{>guild_name}}</dd>
+					<dt>Lv.</dt><dd>{{>level}}</dd>
+					<dt>ジョブ</dt><dd>{{>job_name}}</dd>
+					<dt>総攻撃</dt><dd>{{>attack}}</dd>
+					<dt>総防御</dt><dd>{{>defense}}</dd>
+				</dl>
+			</div>
+		</div>
+	</article>
+{{/for}}
+{{else}}
+	<section class="dimmed">
+	<p>新着ユーザーはいません。</p>
+	</section>
+{{/if}}
+</script>
+
+<script id="jsTemplateGuildInvitedList" type="text/x-jsrender">
+	{{if guilds.length > 0}}
+		{{for guilds}}
+		<section class="contents contentsShadow statusData_icon link" data-list-id="{{>guild_id}}">
+			<div class="columnBox innerHeader" data-href="guild/other/{{>guild_id}}/">
+					<div class="iconBgRect_l gold">
+							<img src="{{getImgRoot/}}/avatar/{{>master_avatar_id}}_140.png">
+					</div>
+					<div class="contentsInner">
+							<h1>{{>guild_name}}</h1>
+							<dl>
+									<dt>ギルドLv：</dt><dd>{{>guild_level}}</dd>
+									<dt>所属：</dt><dd>{{>current_member_num}}/{{>max_member_num}}</dd>
+									<dt>Lv：</dt><dd>{{>scout_level_name}}</dd>
+									<dt>やる気：</dt><dd>{{>scout_motivation_name}}</dd>
+									<dt>経験：</dt><dd>{{>scout_experience_name}}</dd>
+							</dl>
+							<p>{{:description}}</p>
+					</div>
+			</div>
+			<!--div class="invitedBtn">
+				<button class="btn large jsGuildJoin" data-item_id="{{>guild_id}}">加入する</button>
+			</div-->
+		</section>
+		{{/for}}
+	{{else}}
+		<section class="dimmed">
+		<p>ギルドはありません。</p>
+		</section>
+	{{/if}}
+</script>
+
+<script id="jsTemplateGiftUnopenedList" type="text/x-jsrender">
+	{{if gifts.length > 0}}
+		{{if !is_more}}
+		<button class="btn large allCatch jsButtonJumpToBulkOpen">{{if gifts.length > 10}}10{{else}}{{>gifts.length}}{{/if}}件まとめて受け取る</button>
+		{{/if}}
+		{{for gifts}}
+		<section class="contents contentsShadow statusData_icon jsList" data-list-id="{{>user_gift_id}}">
+			<div class="columnBox innerHeader">
+				{{giftThumb type=gift_item_type id=gift_item_id /}}
+				<div class="contentsInner">
+					<h1>{{>gift_item_name}}</h1>
+					<dl>
+						<dt>数量</dt><dd>{{>qty}}</dd>
+						<dt>日付</dt><dd>{{>receive_date}}</dd>
+					</dl>
+					<p>
+						{{>message}}
+					</p>
+				</div>
+			</div>
+			{{if notice_message == null}}
+			<div class="giftBtnM">
+				<button class="btn jsButtonJumpToOpen" data-gift-id="{{>user_gift_id}}">受け取る</button>
+			</div>
+			{{else}}
+			<div class="labelM">
+				<span class="label48">{{>notice_message}}</span>
+			</div>
+			{{/if}}
+		</section>
+		{{/for}}
+	{{else}}
+		<section class="dimmed">
+			<p>未開封のギフトはありません。</p>
+		</section>
+	{{/if}}
+</script>
+
+<script id="jsTemplateGiftOpenedList" type="text/x-jsrender">
+	{{if gifts.length > 0}}
+		{{for gifts}}
+		<section class="contents contentsShadow statusData_icon giftHistory jsList" data-list-id="{{>user_gift_id}}">
+			<div class="columnBox innerHeader">
+				{{giftThumb type=gift_item_type id=gift_item_id /}}
+				<div class="contentsInner">
+					<h1>{{>gift_item_name}}</h1>
+					<dl>
+						<dt>数量</dt><dd>{{>qty}}</dd>
+						<dt>日付</dt><dd>{{>receive_date}}</dd>
+					</dl>
+					<p>
+						{{>message}}
+					</p>
+				</div>
+			</div>
+		</section>
+		{{/for}}
+	{{else}}
+		<section class="dimmed">
+			<p>開封済のギフトはありません。</p>
+		</section>
+	{{/if}}
+</script>
+
+<script id="jsTemplateMessage" type="text/x-jsrender">
+	{{if messages.length > 0}}
+	{{for messages}}
+	<article class="contents contentsShadow link jsList" data-href="message/detail/{{>message_id}}/" data-list-id="{{>message_id}}">
+		<div class="contentsInner">
+			<div class="iconBgArc_s gold">
+				<img src="{{getImgRoot/}}/avatar/{{>from_avatar_id}}_140.png">
+			</div>
+			<div class="sender">
+				{{if new_flg}}
+				<!-- //新着の場合はラベルを表示 -->
+				<span class="label36_r4">NEW</span>
+				{{/if}}
+				<span class="time">{{>message_datetime}}</span>
+				<span class="senderName">From.<span>{{>from_user_name}}</span>さん</span>
+			</div>
+		</div>
+	</article>
+	{{/for}}
+	{{else}}
+		<section class="dimmed">
+			<p>メッセージはありません。</p>
+		</section>
+	{{/if}}
+</script>
+
+<script id="jsTemplateRareNewsList" type="text/x-jsrender">
+	{{for rare_gacha_news}}
+		<section class="contents contentsShadow statusData_icon link" data-href="collection/equip/detail/{{>equip_id}}/">
+			<div class="columnBox innerHeader">
+				<div><img src="{{getImgRoot/}}/equip/{{>equip_id}}_128.png"></div>
+				<div class="contentsInner">
+					<h1>{{>equip_name}}</h1>
+					<dl>
+						<dt>日時</dt><dd>{{>got_datetime}}</dd>
+					</dl>
+					<p>{{>user_name}}がゲット！</p>
+				</div>
+			</div>
+		</section>
+	{{/for}}
+</script>
+
+<script id="jsTemplateBanners" type="text/x-jsrender">
+	{{for banners}}
+	<p>
+		<button {{if redirect_path}}class="link" data-href="{{>redirect_path}}"{{/if}}><img src="{{getImgRoot/}}/ad/{{>image_file_name}}">{{if banner_text}}<br>└{{>banner_text}}┘{{/if}}</button>
+	</p>
+	{{/for}}
+</script>
+
+<script id="jsTemplateAlchemyItems" type="text/x-jsrender">
+	<article class="contents contentsShadow statusData_icon">
+		<div class="columnBox innerHeader">
+			{{if type===1}}
+				<img src="{{getImgRoot/}}/item/{{>id}}.png">
+			{{else type===2}}
+				<img src="{{getImgRoot/}}/material/{{>id}}.png">
+			{{else type===3}}
+				{{if id}}
+					<img src="{{getImgRoot/}}/equip/{{>id}}_128.png">
+				{{else ~kama_type==="normal"}}
+					<img src="{{getImgRoot/}}/equip/n-r.png">
+				{{else ~kama_type==="silver"}}
+					<img src="{{getImgRoot/}}/equip/n-sr.png">
+				{{else ~kama_type==="gold"}}
+					<img src="{{getImgRoot/}}/equip/hn-ssr.png">
+				{{/if}}
+			{{else type===4}}
+				<img src="{{getImgRoot/}}/gacha/point.png">
+			{{else type===5}}
+				<img src="{{getImgRoot/}}/item/gil.png">
+			{{else type===6}}
+				<img src="{{getImgRoot/}}/ticket/{{>id}}.png">
+			{{else type===8}}
+				<img src="{{getImgRoot/}}/item/medal.png">
+			{{/if}}
+			<div class="contentsInner">
+				<h1>
+				{{if type <= 3}}
+					{{>name}}
+				{{else type===4}}
+					{{if quantity}}{{>quantity}}{{/if}}ガチャP
+				{{else type===5}}
+					{{if quantity}}{{>quantity}}{{/if}}ギル
+				{{else type===6}}
+					{{>name}}{{if quantity}} {{>quantity}}枚{{/if}}
+				{{else type===8}}
+					レアメダル{{if quantity}} {{>quantity}}枚{{/if}}
+				{{/if}}
+				</h1>
+				<p>{{>description}}</p>
+			</div>
+		</div>
+	</article>
+</script>
+

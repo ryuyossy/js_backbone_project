@@ -1,0 +1,140 @@
+{
+    "status": 200,
+    "guild_rank": "G",
+    "guild_name": "パーフェクトリバティー教団",
+    "user": {
+        "user_id": 2233,
+		"avatar_id": "00001"
+    },
+    "ranking": {
+    	"state": "out",
+		"order": 1
+    },
+    "banners":[
+        {
+            "image_file_name":"banner_battleStrengthening.png",
+            "banner_text":"バトルで勝利して、報酬を勝ち取れ",
+            "redirect_path": "event/battle/weeks/"
+        }
+    ],
+    "guild_level": "80",
+    "gp": 9876543210,
+    "win_num": "100",
+    "npc_comment": "NPCコメントだよ！NPCコメントだよ！NPCコメントだよ！NPCコメントだよ！",
+    "npc_comment_type": "1",
+    "member_num": "10",
+    "max_member_num": "15",
+    "members": [
+        {
+            "user_id": "111",
+            "avatar_id": "33002",
+            "warm_up_flg": true
+        },
+        {
+            "user_id": "2233",
+            "avatar_id": "33001",
+            "warm_up_flg": true
+        },
+        {
+            "user_id": "111",
+            "avatar_id": "33002",
+            "warm_up_flg": true
+        },
+        {
+            "user_id": "2233",
+            "avatar_id": "33001",
+            "warm_up_flg": true
+        },
+        {
+            "user_id": "111",
+            "avatar_id": "33002",
+            "warm_up_flg": true
+        },
+        {
+            "user_id": "2233",
+            "avatar_id": "33001",
+            "warm_up_flg": true
+        },
+        {
+            "user_id": "112",
+            "avatar_id": "11001",
+            "warm_up_flg": false
+        }
+    ],
+    "tension": "70",
+    "add_tension": 2,
+    "guild_infos": [
+        {
+            "info_text": "ギルドへのお誘いがXX件あります",
+            "info_type": "1"
+        },
+        {
+            "info_text": "ギルドへの加入希望者がいます",
+            "info_type": "2"
+        }
+    ],
+    "battle_enemy": {
+        "guild_name": "対戦ギルド名",
+        "guild_id": "112",
+        "gp": 1234567890,
+        "battle_win_num": "200",
+        "master_user_id": "51",
+        "master_user_name": "イチロー",
+        "master_avatar_id": "20001",
+        "guild_level": "30",
+        "current_member_num": "20",
+        "max_member_num": "30",
+        "max_attack_combo_num": "80",
+        "max_yell_combo_num": "70"
+    },
+    "master_user_id": 22,
+    "master_user_name": "マクサル",
+    "master_avatar_id": "30002",
+    "master_comment": "ギルドマスターのコメントああああああああああいいいいいいいいいいううううううううううええええええええええおおおおおおおおおお",
+    "master_priv_flg": "1",
+    "guild_master_flg": true,
+    "guild_invite_num": 2,
+    "user_authorize_num": 1,
+    "auto_approve_flg": false,
+    "new_member_flg": true,
+    "events": [
+        {
+            "event_id": "1",
+            "event_type": "3",
+            "event_name": "タイマンバトル!!",
+            "description": "1対1のバトルだ!!"
+        },
+        {
+            "event_id": "2",
+            "event_type": "3",
+            "event_name": "天候バトル!!",
+            "description": "天候により属性が有利にはたらくバトルだ!!"
+        }
+    ],
+    "bbs_more_flg": true,
+    "bbs_posts": [
+        {
+            "message_id": "110001",
+            "post_datetime": "8/10 12:12",
+            "user_id": "111",
+            "user_name": "わかば弓士",
+            "avatar_id": "00001",
+            "body_text": "こんにちは",
+            "like_num": "5",
+            "reply_num": "3",
+            "self_liked_flg": false
+        },
+        {
+            "message_id": "110002",
+            "post_datetime": "8/10 12:12",
+            "user_id": "112",
+            "user_name": "シーフ",
+            "avatar_id": "11002",
+            "body_text": "こんにちは",
+            "like_num": "5",
+            "reply_num": "3",
+            "self_liked_flg": true
+        }
+    ],
+	"first_access_flg":true
+}

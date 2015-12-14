@@ -1,0 +1,17 @@
+{
+	"status": 200,
+	"rare_medal_num": 80,
+	"qty": 5,
+	"rare_medal": {
+		"description": null,
+		"exchange_limit_value": 1,
+		"id": 4,
+		"item_id": 130008,
+		"item_name": "グラディウス",
+		"item_type": 3,
+		"description": "ガーディアンを目指す物が最初に手にする剣。あの人もこの剣から始めました。",
+		"limit_end_datetime": null,
+		"need_rare_medal_num": 15,
+		"now_exchange_num": 0
+	}
+}

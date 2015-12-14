@@ -1,0 +1,90 @@
+<div id="fullScreen">
+	<canvas id="canvas" width="320" height="320"></canvas>
+	<div class="pause"><button class="pushEnter">TAP SCREEN</button></div>
+</div>
+
+<div id="jsGachaResult">
+	<h1 class="mainHeader">ガチャ結果</h1>
+	<section id="gachaResult" class="multi">
+		{{for equips}}
+		<section class="contents contentsShadow statusData_icon">
+			<h1>{{>equip_name}} ({{:~getRarityText(rarity)}}) {{growTypeTag grow_type=grow_type /}}</h1>
+			<div class="columnBox equipListStatus">
+				{{equipThumb equip_id=equip_id step=step size="small" /}}
+				{{if new_flg}}<span class="label36_r4 equip_new">NEW</span>{{/if}}
+				<div class="contentsInner">
+					<dl>
+						<dt>Lv.</dt><dd>{{>equip_level}}/{{>max_level}}</dd>
+						<dt>必要{{if equip_type===1}}武器{{else}}防具{{/if}}P</dt><dd>{{>equip_cost}}</dd>
+					</dl>
+					<div class="columnBox">
+						<dl>
+							<dt>{{if equip_type===1}}攻撃{{else}}防御{{/if}}</dt><dd>{{>power}}</dd>
+							<dt>属性</dt>
+							<dd>{{if attribute_name}}{{>attribute_name}}{{else}}−{{/if}}</dd>
+						</dl>
+						<dl>
+							<dt>特{{if equip_type===1}}攻{{else}}防{{/if}}</dt><dd>{{>special_power}}</dd>
+							<dt>属性Lv</dt>
+							<dd>{{if attribute_level}}{{>attribute_level}}{{else}}−{{/if}}</dd>
+						</dl>
+					</div>
+					<dl>
+						<dt>売却価格</dt><dd>{{>sell_price}}</dd>
+					</dl>
+				</div>
+			</div>
+		</section>
+		{{/for}}
+
+		<p class="paramStatus">
+			{{if ~someSentGift(equips)}}
+			<span class="notice">所持武具がいっぱいのため<br>一部の武具がギフトへ送られました。</span>
+			{{/if}}
+			<span class="headline">所持武具数</span>{{if ~someSentGift(equips)}}{{>own_equip_num - (equips.length - ~someSentGift(equips))}}{{else}}{{>(own_equip_num - equips.length)}}{{/if}}<span class="sepalator">→</span>{{>own_equip_num}}
+		{{if own_gacha_p !== null}}
+			<br><span class="headline">所持ガチャP</span>{{>own_gacha_p_before}}<span class="sepalator">→</span>{{>own_gacha_p}}
+		{{/if}}
+		</p>
+
+		<div class="btnBox">
+			<button class="btn large" data-href="gacha/normal/">もう一度ノーマルガチャを引く</button>
+			<button class="btn large jsButtonGachaSell">一括売却する</button>
+		</div>
+	</section>
+
+	{{if rare_gacha_news.length > 0}}
+	<section id="rareReport">
+		<h1 class="subHeader2">
+			<span class="subHeaderBg_l"></span>
+			<span>レア速報</span>
+			<span class="subHeaderBg_r"></span>
+		</h1>
+		<div id="jsRareNewsList">
+			{{rareGachaNewsList rare_gacha_news=rare_gacha_news /}}
+		</div>
+	</section>
+	{{/if}}
+
+	<hr>
+
+	<div class="banner">
+		{{for #data tmpl="#jsTemplateBanners" /}}
+	</div>
+
+	<div class="listMenu">
+		<ul>
+			<li><div class="link" data-href="deck/list/1/">装備へ</div></li>
+			<li><div class="link" data-href="equip/list/">武具一覧へ</div></li>
+		</ul>
+	</div>
+
+	<div class="helpList">
+		<ul>
+			<li><button class="link" data-href="help/detail/901/">ガチャってなに？</button></li>
+		</ul>
+	</div>
+
+</div>
+
+

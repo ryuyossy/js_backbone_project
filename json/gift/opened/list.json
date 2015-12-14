@@ -1,0 +1,30 @@
+{
+    "status" : 200,
+    "guild_name" : "サイババ団",
+    "guild_rank" : "A",
+    "rank_status" : "ランクステイ圏内",
+    "rank_rest_days" : "3",
+    "battle_start_rest" : "05:44",
+    "battle_end_rest" : "",
+  "unopened_num" : "10",
+  "max_unopened_num" : "200",
+  "more_flg" : true,
+  "gifts" : [
+    { "user_gift_id" : "1011",
+      "gift_item_type" : 1,
+      "gift_item_id" : 101,
+      "gift_item_name" : "ポーション",
+      "qty" : 1,
+      "receive_date" : "8/23 08:23",
+      "message" : "バトルの報酬です。"
+    },
+    { "user_gift_id" : "1012",
+      "gift_item_type" : 3,
+      "gift_item_id" : 110001,
+      "gift_item_name" : "木刀",
+      "qty" : 1,
+      "receive_date" : "8/23 08:23",
+      "message" : "バトルの報酬です。"
+    }
+  ]
+}

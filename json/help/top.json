@@ -1,0 +1,49 @@
+{
+	"status": 200,
+	"version":1,
+	"npc_comment": "困った時はヘルプ！",
+	"helps": [
+		{
+			"title": "ボクらのデバンダとは？",
+			"details": [
+				{
+					"title": "世界観",
+					"help_id": 101,
+					"parent_help_id": 100,
+					"page_no": 1
+				},
+				{
+					"title": "おさらい",
+					"help_id": 102,
+					"parent_help_id": 100,
+					"page_no": 2
+				},
+				{
+					"title": "おさらい2",
+					"help_id": 103,
+					"parent_help_id": 100,
+					"page_no": 3
+				}
+			],
+			"help_id": 100
+		},
+		{
+			"title": "ギルドとは？",
+			"details": [
+				{
+					"title": "ギルド1",
+					"help_id": 201,
+					"parent_help_id": 200,
+					"page_no": 1
+				},
+				{
+					"title": "ギルド2",
+					"help_id": 202,
+					"parent_help_id": 200,
+					"page_no": 2
+				}
+			],
+			"help_id": 200
+		}
+	]
+}

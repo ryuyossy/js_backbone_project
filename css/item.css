@@ -1,0 +1,104 @@
+@charset "utf-8";
+/*
+@mixin box_shadow_contents_l($offsetSize,$z_index:-1){
+	content:'';
+	position:absolute;
+	left:$offsetSize;
+	top:75%;
+	bottom:17px;
+	width:50%;
+	min-height:5px;
+	max-width:150px;
+	background:#544123;
+	-webkit-box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	-webkit-transform:rotate(-5deg);
+	transform:rotate(-5deg);
+	z-index:$z_index;
+}
+@mixin box_shadow_contents_r($offsetSize,$z-index:-1){
+	content:'';
+	position:absolute;
+	right:$offsetSize;
+	top:75%;
+	bottom:17px;
+	width:50%;
+	min-height:5px;
+	max-width:150px;
+	background:#544123;
+	-webkit-box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	box-shadow:0 15px 3px rgba(0,0,0,0.5);
+	-webkit-transform:rotate(5deg);
+	transform:rotate(5deg);
+	z-index:$z_index;
+}
+*/
+/*
+@mixin backgroundResize($position:0 -60px){
+	@media screen and (min-width:319px){
+		width:320px;
+		@include background-size(320px,auto);
+	}
+	@media screen and (min-width:359px){
+		width:360px;
+		@include background-size(360px,auto);
+	}
+	@media screen and (min-width:361px){
+		width:480px;
+		@include background-size(480px,auto);
+		background-position:$position;
+	}
+}
+*/
+/*
+@mixin display-box{
+	display:flexbox;
+	-webkit-display:flexbox;
+}
+@mixin box-align($position){
+	flex-align:$position;
+	-webkit-flex-align:$position;
+}
+@mixin box-flex($ratio){
+	flex:$ratio;
+	-webkit-flex:$ratio;
+}
+@mixin box-pack($position){
+	flex-pack:$position;
+	-webkitflex-pack:$position;
+}
+*/
+/* page parts */
+/* item list */
+/* line 7, ../scss/item.scss */
+#itemList {
+  margin: 16px 0 0 0;
+}
+/* line 10, ../scss/item.scss */
+#itemList .contents {
+  width: 95%;
+  margin: 0 auto 8px auto;
+}
+/* line 14, ../scss/item.scss */
+#itemList .contents:last-of-type {
+  margin-bottom: 32px;
+}
+/* line 19, ../scss/item.scss */
+#itemList .label48 {
+  margin: 8px 8px 0 8px;
+  font-size: 90%;
+}
+/* line 24, ../scss/item.scss */
+#itemList + .arrowLink {
+  margin-bottom: 32px;
+}
+/* line 28, ../scss/item.scss */
+#itemList .statusData_icon .columnBox + .btn {
+  margin: 8px auto 0 auto;
+}
+
+/* item used */
+/* line 40, ../scss/item.scss */
+#itemUsed .complateMessage td:nth-of-type(2) {
+  padding: 0 8px;
+}

@@ -1,0 +1,319 @@
+@charset "utf-8";
+@import "base";
+@import "ruleset";
+
+//equipList
+#equipList,
+#equipSellList{
+	.tabNav,
+	.tabNav2{
+		margin:$inner_margin auto $content_margin auto;
+		~ .btn.large{
+			margin:$content_margin auto;
+		}
+	}
+	.contents{
+		width:95%;
+		margin:0 auto $inner_margin auto;
+		&.narrow{
+			margin-bottom:$content_margin;
+			padding:$inner_margin 0;
+		}
+	}
+}
+#equipSellList{
+	.contents{
+		&.narrow{
+			margin-top:$inner_margin;
+			~ .allCheck{
+				margin:$content_margin auto $inner_margin auto;
+			}
+		}
+		.label48{
+			width:60%;
+			margin:$inner_margin/2 auto 0 auto;
+		}
+	}
+	#equipSelectList{
+		~ .paramStatus{
+			margin:$content_margin auto 0 auto;
+			.headline{
+				margin:0;
+			}
+		}
+	}
+}
+#equipDetail{
+	.itemDetail{
+		margin-top:$content_margin;
+	}
+	.label36_r4{
+		&.equip_main,
+		&.equip_sub,
+		&.equip_protect{
+			margin-bottom:$inner_margin;
+		}
+	}
+	.contents{
+		margin-top:$inner_margin;
+	}
+	.equipBtnLists{
+		.btn.close{
+			width:80%;
+		}
+	}
+}
+#equipSellConfirm{
+	.noticeMessage{
+		.label48{
+			width:95%;
+			margin:8px auto;
+		}
+	}
+	.equipConfirmList{
+		margin-top:16px;
+		.component:after{
+			top:-8px;
+			right:8px;
+		}
+		td{
+			padding-bottom:$content_margin;
+			p{
+				text-align:center;
+			}
+		}
+		tr:last-of-type{
+			td{
+				padding-bottom:0;
+			}
+		}
+	}
+	.expendConf{
+		width:95%;
+		margin:$content_margin auto $inner_margin auto;
+	}
+	.paramStatus{
+		table{
+			width:100%;
+			text-align:center;
+		}
+		.headline{
+			padding-right:$inner_margin;
+		}
+	}
+	.outerBtnBox{
+		.btn{
+			height:44px;
+		}
+	}
+	~ .arrowLink{
+		margin-bottom:$content_margin;
+	}
+}
+#equipSellComplate{
+	.complateMessage{
+		article{
+			margin:$inner_margin auto;
+		}
+		p{
+			color:#fff;
+			&.paramStatus{
+				width:95%;
+				margin:0 auto;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//equip list
+/*
+.equipTabMenu2 {
+	margin: $content_margin 0 $content_margin_last 0;
+}
+
+.contents {
+	margin: $content_margin auto $content_margin auto;	
+}
+
+.moreLink {
+	margin-top: 0px;
+}
+
+.fbox {
+	position: relative;
+	width: 95%;
+	margin: 0 auto $content_margin_last auto;
+	padding: 8px 0;
+	z-index: auto;
+}
+
+.equipBox {
+	width: 95%;
+	min-height: 130px !important;
+	margin: 0 auto 8px auto;
+	padding: 8px 0 8px 0;
+}
+
+.equipMoreLink {
+	margin-top: $content_margin;
+}
+
+//equip complete
+.equipListMenu {
+	margin-bottom: $content_margin_last;
+	margin-top: $inner_margin;
+}
+
+//equip sell-list
+.caution {
+	article {
+		margin-top: 32px;
+	}
+}
+
+.cntDefaultS {
+	width:95%;
+	margin:0 auto 16px auto;
+	padding:8px 0;
+}
+
+.checkBox {
+	position: relative;
+	display: block;
+	width: 138px;
+	height: 35px;
+	margin: 8px 0 0 0;
+}
+
+.btnMargin {
+	margin: 30px 0 $content_margin_last 0;
+}
+
+.pSelectBox {
+	position: relative;
+	width: 95%;
+	margin: $content_margin auto $content_margin_last auto;
+	padding: 8px 0;
+	z-index: auto;
+}
+
+.checkBefore {
+	margin-bottom: $content_margin;
+}
+
+.checkAfter {
+	@extend .checkBefore;
+}
+
+.equipLabel48 {
+	@include border-radius(14px);
+	display: block;
+	margin: 8px auto 0 0;
+	width: 160px;
+	height: 24px;
+	font-size: 90%;
+	line-height: 24px;
+	text-align: center;
+	color: white;
+	background-color: #DC0000;
+	position: relative;
+	left: -11px;
+}
+
+.selectCount {
+	margin: $content_margin auto $content_margin auto;
+	text-align: center;
+	span {
+		color: white;
+		&.countColor {
+			color: #FF0000;
+		}
+	}
+}
+
+// equip detail
+.equipDetailM {
+	margin-top: $content_margin;
+	p {
+		margin-bottom: $content_margin;
+	}
+}
+
+.equipBtnLists {
+	margin: $content_margin_last 0 0 0;
+	#wide {
+		width: 80%;
+	}
+}
+
+.equipArrowLinkes {
+	margin-bottom: $content_margin_last;
+	& :nth-child(1) {
+		margin-bottom: $inner_margin;
+	}
+}
+
+//equip sell-confirm
+.equipConfirmAlert {
+	margin: $content_margin auto 0 auto;
+	width: 288px;
+}
+
+.complateMessages {
+	article{
+		padding:31px 0 0 0;
+		table{
+			border-collapse:collapse;
+			margin:$inner_margin/2 auto 0 auto;
+			font-size:85%;
+			color:#ffffff;
+		}
+		th{
+			padding-right:$inner_margin;
+			font-weight:normal;
+			color:#ff0000;
+		}
+		td{
+			.sepalator{
+				padding:0 $inner_margin;
+			}
+		}
+	}
+}
+
+#confirmMessages {
+	border: none;
+	margin-top: 0;
+	th {
+		color: white;
+	}
+	td {
+		color: white;
+	}
+	.countNumber {
+		color: #D90000;
+	}
+}
+
+#confirmArrowLink {
+	margin-bottom: $content_margin_last;
+}
+
+.composeSell {
+	width: 95%;
+	margin: 25px auto 0 auto;
+}
+*/

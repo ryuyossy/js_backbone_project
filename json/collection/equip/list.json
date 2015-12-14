@@ -1,0 +1,157 @@
+{
+	"status": 200,
+	"version":2,
+    "guild_name" : "サイババ団",
+    "guild_rank" : "A",
+    "rank_status" : "ランクステイ圏内",
+    "rank_rest_days" : "3",
+    "battle_start_rest" : "05:44",
+    "battle_end_rest" : "",
+	"equip_types": [
+		{
+			"text": "すべての武具",
+			"value": ""
+		},
+		{
+			"text": "武器",
+			"value": "1"
+		},
+		{
+			"text": "防具",
+			"value": "2"
+		}
+	],
+	"attribute_types": [
+		{
+			"text": "すべての属性",
+			"value": ""
+		},
+		{
+			"text": "火",
+			"value": "FIRE"
+		},
+		{
+			"text": "氷",
+			"value": "ICE"
+		},
+		{
+			"text": "雷",
+			"value": "THUNDER"
+		},
+		{
+			"text": "地",
+			"value": "EARTH"
+		},
+		{
+			"text": "光",
+			"value": "LIGHT"
+		},
+		{
+			"text": "闇",
+			"value": "DARK"
+		}
+	],
+	"rarity_types": [
+		{
+			"text": "すべてのレア度",
+			"value": ""
+		},
+		{
+			"text": "ノーマル",
+			"value": "N"
+		},
+		{
+			"text": "ハイノーマル",
+			"value": "HN"
+		},
+		{
+			"text": "レア",
+			"value": "R"
+		},
+		{
+			"text": "Sレア",
+			"value": "SR"
+		},
+		{
+			"text": "SSレア",
+			"value": "SSR"
+		},
+		{
+			"text": "レジェンド",
+			"value": "LEGEND"
+		}
+	],
+	"sort_types": [
+		{
+			"text": "攻防が高い順",
+			"value": "POWER_DESC"
+		},
+		{
+			"text": "攻防が低い順",
+			"value": "POWER_ASC"
+		},
+		{
+			"text": "最近入手した順",
+			"value": "GET_DATETIME_DESC"
+		},
+		{
+			"text": "昔に入手した順",
+			"value": "GET_DATETIME_ASC"
+		},
+		{
+			"text": "コストが高い順",
+			"value": "COST_DESC"
+		},
+		{
+			"text": "コストが低い順",
+			"value": "COST_ASC"
+		},
+		{
+			"text": "Lvが高い順",
+			"value": "LEVEL_DESC"
+		},
+		{
+			"text": "Lvが低い順",
+			"value": "LEVEL_ASC"
+		},
+		{
+			"text": "レア度が高い順",
+			"value": "RARITY_DESC"
+		},
+		{
+			"text": "レア度が低い順",
+			"value": "RARITY_ASC"
+		}
+	],
+	"equip_list": [
+		{
+			"max_level_flg": false,
+			"equip_id": 15003,
+			"get_flg": false,
+			"equip_type": 2
+		},
+		{
+			"max_level_flg": false,
+			"equip_id": 21001,
+			"get_flg": false,
+			"equip_type": 1
+		},
+		{
+			"max_level_flg": false,
+			"equip_id": 15003,
+			"get_flg": false,
+			"equip_type": 2
+		},
+		{
+			"max_level_flg": false,
+			"equip_id": 21001,
+			"get_flg": false,
+			"equip_type": 1
+		}
+	],
+	"now_weapons_num": 5,
+	"now_protectors_num": 3,
+	"max_weapons_num": 15,
+	"max_protectors_num": 5,
+	"collect_more_flg": true
+}

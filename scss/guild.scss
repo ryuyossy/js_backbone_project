@@ -1,0 +1,920 @@
+@charset "utf-8";
+@import "base";
+@import "ruleset";
+
+// guild top
+#guildTop{
+	@include backgroundSize("/background/bg_guild.jpg",0,0,no-repeat);
+	position:relative;
+	display:block;
+	height:240px;
+
+	&:after{
+		@include main_bg_bottom;
+	}
+
+	.emblemIcon_s{
+		position:absolute;
+		left:8px;
+		top:2px;
+		z-index:11;
+	}
+	.edit{
+		position:relative;
+		@include backgroundSize("/parts/#{$icon_parts}.png",0,0,no-repeat);
+		@include visible_object(auto,7px,20px,20px,auto);
+		right:14px;
+		z-index:11;
+	}
+	.guildStatus{
+		position:absolute;
+		left:8px;
+		top:48px;
+		font-size:80%;
+		color:#fff;
+		@include text_glow(#000);
+		z-index:1;
+
+		span{
+			display:inline-block;
+			margin:0 $inner_margin/2 0 $inner_margin;
+			font-weight:bold;
+			color:#ff0000;
+
+			&:first-of-type{
+				margin-left:0;
+			}
+		}
+	}
+	.masterComment{
+		position:relative;
+		top:130px;
+		width:304px;
+		margin:0 auto;
+		@include display-box;
+		z-index:1;
+	}
+	.commentBox{
+		position:relative;
+		@include box-flex(1);
+		.edit{
+			right:6px;
+			top:auto;
+			bottom:8px;
+		}
+	}
+	.masterName{
+		position:relative;
+		left:8px;
+		width:175px;
+		padding-left:62px;
+		font-size:85%;
+		font-weight:bold;
+		color:#fff;
+		line-height:20px;
+		@include text_glow(#000);
+		overflow:hidden;
+		white-space:nowrap;
+		text-overflow:ellipsis;
+
+		span{
+			display:inline-block;
+
+			&:before{
+				@include backgroundSize("/parts/#{$guildBattle_parts}.png",-315px,-310px,no-repeat);
+				@include visible_object(0,0,58px,18px,auto);
+			}
+		}
+	}
+	.commentBody{
+		position:relative;
+		@include box-sizing(border-box);
+		@include borderImage(url("#{$img_path}/parts/bg_bubble_w_l.png"),29 35 32 51,stretch,10px 10px 12px 14px,inherit);
+		height:62px;
+		margin-top:2px;
+		font-size:90%;
+		overflow: hidden;
+		line-height:1.8;
+		&.link.on{
+
+		}
+		span{
+			display:block;
+			margin:-3px 20px 0 0;
+		}
+	}
+
+	.opponent{
+		@include backgroundSize("/parts/text_opponent.png",0,0,no-repeat);
+		position:absolute;
+		left:70px;
+		top:77px;
+		display:block;
+		width:189px;
+		height:39px;
+	}
+	.battleTime{
+		@include backgroundSize("/parts/text_onbattle.png",0,0,no-repeat);
+		position:absolute;
+		left:58px;
+		top:63px;
+		display:block;
+		width:211px;
+		height:66px;
+	}
+	~ .btn.large{
+		width:50%;
+		margin:16px auto 0 auto;
+	}
+}
+#guildAction{
+	.memberList{
+		position:relative;
+		width:304px;
+		margin:-20px auto 0 auto;
+		@include display-box;
+		//user icon
+		.iconBox{
+			position:relative;
+			margin:0 8px 0 0;
+			.iconBgArc_s{
+				margin-bottom:0;
+			}
+			&:last-of-type{
+				margin-right:0;
+			}
+		}
+		//training icon
+		.over,
+		.yet{
+			@include backgroundSize("/parts/#{$guildBattle_parts}.png",-315px,-332px,no-repeat);
+			position:absolute;
+			right:-2px;
+			bottom:-4px;
+			display:block;
+			width:16px;
+			height:23px;
+		}
+		.yet{
+			@include backgroundSize("/parts/#{$guildBattle_parts}.png",-333px,-332px,no-repeat);
+		}
+		//list link
+		.more{
+			position:absolute;
+			right:0;
+			.link{
+				@include backgroundSize("/parts/#{$guildBattle_parts}.png",-310px,-265px,no-repeat);
+				position:relative;
+				display:block;
+				width:64px;
+				height:40px;
+				font-size:85%;
+				color:inherit;
+				line-height:43px;
+				text-align:left;
+
+				&.on:before{
+					@include visible_object(0,0,64px,41px,10);
+					background-color:rgba(0,0,0,0.3);
+				}
+
+				&:after{
+					@include backgroundSize("/parts/#{$icon_parts}.png",-97px,-78px,no-repeat);
+					@include visible_object(auto,50%,9px,13px,auto);
+					right:8px;
+					margin-top:-6px;
+				}
+				span{
+					display:inline-block;
+					margin-left:12px;
+				}
+			}
+		}
+	}
+	.btn_l.onBattle{
+		display:block;
+		width:80%;
+		margin:16px auto 8px auto;
+		span:before{
+			@include backgroundSize("/parts/#{$guildBattle_parts}.png",-298px,-1px,no-repeat);
+			@include visible_object(86px,-1px,64px,22px,auto);
+		}
+	}
+	.message{
+		top:0;
+		+ .contents{
+			margin:8px auto 0 auto;
+		}
+		+ .listMenu{
+			margin-top:8px;
+		}
+		+ .btnBox{
+			margin-top:16px;
+		}
+	}
+	.gergeBox{
+		width:304px;
+		margin:8px auto;
+	}
+	.contents{
+		width:95%;
+		margin:16px auto 0 auto;
+	}
+	h1{
+		padding-left:65px;
+		span:before{
+			@include visible_object(8px,11px,56px,13px,auto);
+			@include backgroundSize("/parts/#{$guildBattle_parts}.png",-314px,-245px,no-repeat);
+		}
+	}
+	dt{
+		clear:none;
+		&:nth-of-type(3),
+		&:nth-of-type(4){
+			clear:both;
+		}
+		&:nth-of-type(2){
+			margin-left:48px;
+		}
+		&:nth-of-type(4){
+			//margin-left:26px;
+		}
+	}
+	.btnBox{
+		margin:16px 0 32px 0;
+	}
+	.outerBtnBox{
+		width:95%;
+		margin:4px auto;
+	}
+	.autoPermissionControl{
+		width:95%;
+		margin:-24px auto 8px auto;
+	}
+
+	.btn.join{
+		margin:16px auto 16px auto;
+	}
+	.dimmed{
+		margin-bottom:32px;
+	}
+	~ .subHeader{
+		margin:16px 0 8px 0;
+	}
+	~ .banner {
+		margin: 8px 0 16px 0;
+	}
+	~ .arrowLink {
+		margin-bottom: 16px;
+	}
+}
+.banner.bnMarg {
+	margin: 16px 0;
+}
+.bbsOthM {
+	margin-top: 8px;
+}
+#guildBbs{
+	margin-bottom:0;
+	.postForm_icon {
+		margin: 8px auto;
+	}
+	.moreLink {
+		margin: 8px auto;
+	}
+	.arrowLink.alertNoMem {
+		margin-bottom: 16px;
+	}
+	~ .banner{
+		margin-top:16px;
+	}
+}
+/* member list */
+#guildMemberList{
+	.statusLine{
+		text-align:center;
+	}
+	.message{
+		margin-bottom:$content_margin;
+	}
+	.gergeBox{
+		width:304px;
+		margin:0 auto;
+	}
+	.memberList{
+		margin:$inner_margin 0 0 0;
+		.contents{
+			width:95%;
+			margin:0 auto $inner_margin auto;
+			h1{
+				.order{
+					position:relative;
+					display:inline-block;
+					margin-right:$inner_margin;
+					padding-left:32px;
+					color:$color_H;
+					&:before{
+						@include backgroundSize("/parts/#{$icon_parts}.png",-78px,-3px,no-repeat);
+						@include visible_object(0,2px,24px,14px,auto);
+					}
+				}
+			}
+			dt{
+				&.label36_r4{
+					margin:0 8px 4px 0;
+					padding:0 4px 0 4px;
+					background-color:#8C0000;
+					font-size:100%;
+					color:#fff;
+				}
+				&:nth-of-type(5){
+					clear:none;
+					margin-left:$inner_margin;
+				}
+			}
+			// ace and new member
+			&.title{
+				.contentsInner{
+					min-height:88px;
+				}
+			}
+		}
+		.label36_r4.member_new,
+		.label36_r4.member_ace{
+			display:block;
+			position:absolute;
+			left:8px;
+			top:70px;
+			width:64px;
+			color:#fff;
+			font-size:85%;
+			text-align:center;
+		}
+		.columnBox{
+			~ .btn{
+				width:50%;
+				margin-top:$inner_margin/2;
+				position:relative;
+				z-index:2;
+				&.training{
+					width:140px;
+					margin-top:$inner_margin/2;
+				}
+			}
+		}
+		.innerBtnBox{
+			width:95%;
+			margin:$inner_margin/2 auto 0 auto;
+			.btn{
+				position:relative;
+				z-index:2;
+			}
+		}
+		.btn.training{
+			position:relative;
+			height:40px;
+			line-height:15px;
+			span{
+				display:inline-block;
+				margin-left:24px;
+			}
+			&.yet{
+				span:before{
+					@include backgroundSize("/parts/#{$guildBattle_parts}.png", -379px,-331px,no-repeat);
+					@include visible_object(6px,-10px,22px,29px,auto);
+				}
+			}
+			&.over{
+				span:before{
+					@include backgroundSize("/parts/#{$guildBattle_parts}.png",-354px,-331px,no-repeat);
+					@include visible_object(6px,-10px,22px,29px,auto);
+				}
+			}
+		}
+	}
+	.expulsionNotice{
+		width:272px;
+		margin:16px auto 0 auto;
+		padding:4px 16px;
+		background-color:#ff0000;
+		@include border-radius(10px);
+		font-size:85%;
+		color:#fff;
+		text-align:center;
+	}
+	~ .helpList{
+		margin-top:16px;
+	}
+}
+.guildRankStatus{
+	~ p{
+		color:#B9A46B;
+		font-size:85%;
+		text-align:center;
+	}
+}
+#ranking{
+	margin-bottom:0;
+
+	.label48{
+		width:80%;
+		margin:16px auto;
+
+		&.rankUp{
+			margin-top:10px;
+			background-color:#2285b2;
+		}
+		&.rankStay{
+			background-color:#6fa000;
+		}
+		&.rankDown{
+			background-color:#b20d03;
+		}
+	}
+	.contents{
+		dt.label36_r4{
+			margin:0 8px 4px 0;
+			padding:0 4px 0 4px;
+			background-color:#8C0000;
+			font-size:100%;
+			color:#fff;
+		}
+		dd:first-of-type{
+			font-weight:bold;
+			font-size:110%;
+			vertical-align:middle;
+		}
+	}
+	~ .banner{
+		margin-bottom:32px;
+	}
+}
+
+
+//guild name & master comment edit
+#masterAuthority{
+	&.postForm_text{
+		width:95%;
+		margin:8px auto 16px auto;
+	}
+	&.postForm_message{
+		width:95%;
+		margin:8px auto 16px auto;
+	}
+	~ .btn.large{
+		width:90%;
+		margin-bottom:16px;
+	}
+	~ .arrowLink {
+		margin-bottom:16px;
+	}
+}
+
+
+// invited
+#invitedList{
+	margin-top:8px;
+	.contents{
+		width:95%;
+		margin:0 auto 8px auto;
+		h1{
+			margin-bottom:8px;
+		}
+	}
+	dt{
+		margin:0;
+		&:nth-of-type(2n){
+			clear:none;
+			margin-left:8px;
+		}
+	}
+	.btn.large{
+		width:60%;
+		margin:8px auto 0 auto;
+	}
+	~ .helpList{
+		margin-top:16px;
+	}
+}
+
+
+// guild join request
+#guildJoinRequest{
+	margin-top:8px;
+	.contents{
+		width:95%;
+		margin:0 auto 8px auto;
+
+		p{
+			margin-top:4px;
+		}
+		.btn.large{
+			margin-top:8px;
+		}
+	}
+	dt{
+		&:nth-of-type(2n){
+			clear:none;
+			margin-left:8px;
+		}
+	}
+	.moreLink{
+		margin-top:8px;
+	}
+	~ .helpList{
+		margin-top:16px;
+	}
+}
+
+
+// position all
+#guildPositionList{
+	margin-top:8px;
+	.contents{
+		width:95%;
+		margin:0 auto 8px auto;
+
+		.btn{
+			margin-top:8px;
+		}
+		.columnBox.link{
+			padding-right:20px;
+		}
+		h2{
+			margin-bottom:8px;
+			font-weight: bold;
+			color:#544123;
+		}
+		.innerBtnBox{
+			margin: 0px auto;
+		}
+	}
+	&.appoint{
+		.subHeader{
+			margin:16px 0 8px 0;
+		}
+		.contentsShadow{
+			h1{
+				margin-bottom:8px;
+				font-weight: bold;
+				color:#544123;
+			}
+			dt{
+				&:nth-of-type(2n){
+					clear:none;
+					margin-left:8px;
+				}
+			}
+		}
+	}
+	~ .helpList{
+		margin-top:16px;
+	}
+}
+
+
+// guild Plaza
+#guildPlaza{
+	.message.navico_arc {
+		top: 0;
+	}
+	> .message{
+		margin: 8px auto;
+	}
+	&.candidate{
+		.contents.shadow{
+			margin-bottom:16px;
+		}
+	}
+	.contents.shadow{
+		margin-top:8px;
+		padding:8px 0;
+	}
+	.recommendUserList{
+		margin-top:8px;
+		~ .subHeader{
+			margin:16px 0 8px 0;
+		}
+	}
+	.contents{
+		width:95%;
+		margin:0 auto 8px auto;
+		&.myGuild{
+			background-color:$color_F;
+		}
+		p{
+			margin-top:4px;
+		}
+		.btn.large{
+			margin-top:8px;
+		}
+	}
+	dt{
+		&:nth-of-type(2n){
+			clear:none;
+			margin-left:8px;
+		}
+	}
+	.helpList{
+		margin-top:16px;
+	}
+	.arrowLink.spaceBack {
+		margin-bottom: 2px;
+	}
+	.jsGuildEditButton{
+		width: 80%;
+	}
+	> .jsGuildJoin{
+		margin: 0px auto 16px;
+	}
+}
+.modalInner.guilF {
+	width: 95%;
+}
+// rearguardRequest
+#rearguardRequest{
+	.message.taicho_arc {
+		top: 0;
+		margin-top:8px;
+	}
+	#requestList{
+		margin-top:8px;
+	}
+	.contents{
+		width:95%;
+		margin:0 auto 8px auto;
+		&.statusData_icon{
+			padding-bottom:8px;
+		}
+	}
+	.setUpToggle{
+		margin:8px 8px 0 8px;
+	}
+	~ .helpList{
+		margin-top:16px;
+	}
+}
+
+
+// recruitmentList
+#recruitmentGuild{
+	> .btn.large{
+		margin:$content_margin auto;
+	}
+	.contents{
+		width:95%;
+		margin:0 auto 8px auto;
+		&.condition{
+			margin:16px auto 16px auto;
+			padding:8px 0;
+		}
+	}
+	#recruitmentGuildList, #myGuild{
+		dl{
+			margin-right:10px;
+		}
+		dt{
+			&:nth-of-type(2n){
+				clear:none;
+				margin-left:8px;
+			}
+		}
+		.moreLink {
+			margin: 8px auto;
+		}
+	}
+	#myGuild{
+		margin: 8px auto 16px auto;
+		background-color: $color_F;
+	}
+	.jsGuildEditButton{
+		width: 80%;
+		margin: 8px auto 0px;
+	}
+	~ .helpList{
+		margin-top:16px;
+	}
+	~ .arrowLink.spaceBack {
+		margin-bottom: 2px;
+	}
+}
+
+
+//guildLeave
+#guildLeave{
+	&.complateMessage{
+		article{
+			padding:24px 0;
+			margin: 8px auto;
+		}
+		p{
+			font-size:100%;
+		}
+		dt,dd{
+			display:inline-block;
+			font-size:85%;
+		}
+		dt{
+			margin-left:8px;
+			color:#ff0000;
+		}
+		dd{
+			margin-left:4px;
+			color:#fff;
+		}
+	}
+	~ .listMenu{
+		li:last-child{
+			margin-top:16px;
+		}
+	}
+}
+
+// guild menbo edit
+.selectList {
+	margin: $content_margin auto $content_margin auto;
+}
+.arrowLink.guliBack {
+	margin: 16px auto;
+}
+// pop up back button
+.modalInner{
+	&.nameChangeComplate{
+		.btn.cancel{
+			display:block;
+			margin:0 auto;
+		}
+	}
+}
+
+/* guild ranking */
+/* guild rank status */
+.rankStatus {
+	@include display-box;
+	@include box-align(center);
+	width: $content_width;
+	margin: 0 auto;
+	padding: 5px 0 4px 0;
+
+	.label32 {
+		padding: 0 $inner_margin;
+		background-color: #6fa000;
+		line-height: 18px;
+
+		&.rankUp {
+			margin-top: 10px;
+			background-color: #2285b2;
+		}
+		&.rankStay {
+			background-color: #6fa000;
+		}
+		&.rankDown {
+			background-color: #b20d03;
+		}
+		&.out {
+			background-color: #999;
+		}
+	}
+	dd {
+		@include box-flex(1);
+		margin: 0;
+		padding: 1px 0 0 5px;
+		font-size: 95%;
+
+		span {
+			color: #ff0000;
+		}
+
+	}
+}
+.rankStatus_l {
+	@extend .rankStatus;
+	display: block;
+	width: 100%;
+	margin: $content_margin auto $inner_margin auto;
+	padding: 0;
+
+	.label48 {
+		line-height: 24px;
+
+		&.rankUp {
+			margin-top: 10px;
+			background-color: #2285b2;
+		}
+		&.rankStay {
+			background-color: #6fa000;
+		}
+		&.rankDown {
+			background-color: #b20d03;
+		}
+		&.out {
+			background-color: #999;
+		}
+	}
+	dd {
+		padding: 0;
+		font-size:85%;
+		color: #fff;
+		text-align: center;
+	}
+}
+#ranking {
+	margin-bottom: $content_margin_last;
+	// guild rank F & G
+	.exceptRank{
+		.complateMessage article{
+			margin-top:$inner_margin;
+			padding:$content_margin 0;
+		}
+		~ .rankStatus_l{
+			.label48{
+				margin-bottom:$inner_margin/2 !important;
+			}
+		}
+	}
+	.paramStatus{
+		font-size:80%;
+	}
+	.lackPoint{
+		margin-top:8px;
+		color:#fff;
+		text-align:center;
+
+		span{
+			display:inline-block;
+			margin:0 4px;
+			color:#ff0000;
+		}
+	}
+	//rankList
+	.contents {
+		width: 95%;
+		margin: 0 auto $inner_margin auto;
+
+		h1 {
+			position: relative;
+			top: 2px;
+			padding: 0 0 4px 70px;
+
+			.rankLabel {
+				position: absolute;
+				left: -12px;
+				top: -3px;
+				@include backgroundSize("/parts/#{$guildBattle_parts}.png", -184px, -113px, no-repeat);
+				width: 61px;
+				height: 22px;
+				color: #fff;
+				font-size: 75%;
+				color:#1F3F00;
+				line-height: 21px;
+				text-align:right;
+				text-shadow:-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff,1px 1px 0 #fff;
+				z-index: auto;
+
+				&.rangeUp {
+					@include backgroundSize("/parts/#{$guildBattle_parts}.png", -184px, -89px, no-repeat);
+					color:#00303F;
+
+					&:before {
+						@include backgroundSize("/parts/#{$guildBattle_parts}.png", -239px, -165px, no-repeat);
+						@include visible_object(4px, 6px, 16px, 10px, 1);
+					}
+				}
+				&.rangeDown {
+					@include backgroundSize("/parts/#{$guildBattle_parts}.png", -185px, -137px, no-repeat);
+					color:#400000;
+				}
+				&.rankUp:after {
+					@include visible_object(62px, 4px, 13px, 13px, auto);
+					@include backgroundSize("/parts/#{$guildBattle_parts}.png", -186px, -162px, no-repeat);
+				}
+				&.rankStay:after {
+					@include visible_object(62px, 4px, 13px, 13px, auto);
+					@include backgroundSize("/parts/#{$guildBattle_parts}.png", -223px, -162px, no-repeat);
+				}
+				&.rankDown:after {
+					@include visible_object(62px, 4px, 13px, 13px, auto);
+					@include backgroundSize("/parts/#{$guildBattle_parts}.png", -205px, -162px, no-repeat);
+				}
+				.rankTxt{
+					display:inline-block;
+					margin-right:12px;
+				}
+				.rankNum {
+					display: inline-block;
+					margin: 0 2px 0 0;
+					font-size: 150%;
+					text-align: right;
+					vertical-align:baseline;
+				}
+			}
+		}
+		&.link.statusData_icon h1:after {
+			right: 0;
+			top: 50px;
+		}
+		&.myGuild {
+			background-color: #CCCC66;
+		}
+	}
+}

@@ -1,0 +1,37 @@
+<div id="container">
+	
+	<h1 class="mainHeader">ヘルプ</h1>
+	
+	<div id="help">
+		<div class="message navico_arc">
+			<p>
+				<span>{{>npc_comment}}</span>
+			</p>
+		</div>
+		{{for helps}}
+		<div class="accordion jsAccordion">
+			<section class="contents shadow">
+				<h1 class="jsAccordionButton">{{>title}}</h1>
+				<div class="accordionInner jsAccordionInner" style="display: none;">
+					<ul class="help">
+						{{for details}}
+						<li><button class="link" data-href="help/detail/{{>help_id}}/">{{>title}}</button></li>
+						{{/for}}
+					</ul>
+				</div>
+			</section>
+		</div>
+		{{/for}}
+	</div>
+	
+	<hr>
+	
+	<div class="arrowLink">
+		<button class="link next" data-href="faq/">よくあるご質問</button>
+	</div>
+	
+	<div class="caution">
+		<a href="http://help.amebame.com/ameba-rules/765/">ご利用規約</a>
+	</div>
+	
+</div>

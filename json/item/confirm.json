@@ -1,0 +1,8 @@
+{
+	"status":200,
+	"result_code": "CONFIRM",
+	"notice_message": "任務値が残っていますが使用しますか？",
+	"own_num": 5,
+	"item_id" : 3,
+	"item_name" : "アイテム3"
+}

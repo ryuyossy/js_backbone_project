@@ -1,0 +1,55 @@
+{
+    "status" : 200,
+	"notice_message": "レア以上が選択されています",
+	"result_gil":2225,
+	"result_own_num":5,
+	"sell_gil_total":250,
+	"sell_num":2,
+    "equips": [
+        {
+            "equip_id": 210001,
+			"step": 1,
+            "user_equip_no": 13541838790747,
+            "equip_name": "鍋のふた",
+            "rarity_name": "ノーマル",
+			"rarity": 1,
+			"sell_price": 180
+        },
+        {
+            "equip_id": 110001,
+			"step": 1,
+            "user_equip_no": 13541838790851,
+            "equip_name": "ひのきのぼう（松）",
+            "rarity_name": "レア",
+			"rarity": 3,
+			"sell_price": 70
+        },
+        {
+            "equip_id": 210001,
+			"step": 1,
+            "user_equip_no": 13541838790748,
+            "equip_name": "鍋のふた",
+            "rarity_name": "ハイノーマル",
+			"rarity": 2,
+			"sell_price": 180
+        },
+        {
+            "equip_id": 110001,
+			"step": 1,
+            "user_equip_no": 13541838790852,
+            "equip_name": "ひのきのぼう（松）",
+            "rarity_name": "Sレア",
+			"rarity": 4,
+			"sell_price": 70
+        },
+        {
+            "equip_id": 210001,
+			"step": 1,
+            "user_equip_no": 13541838790749,
+            "equip_name": "鍋のふた",
+            "rarity_name": "SSレア",
+			"rarity": 5,
+			"sell_price": 180
+        }
+    ]
+}

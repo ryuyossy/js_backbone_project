@@ -1,0 +1,31 @@
+<header id="fullScreen" class="topLargeHeader">
+	<h1>ぼくらのブレイブガーディアン</h1>
+	<nav><a href="/sb" class="btn_l battle toMypage"><span class="hide">マイページへ</span></a></nav>
+</header>
+
+
+<div class="banner">
+	{{for #data tmpl="#jsTemplateBanners" /}}
+	<p>
+        	<button class="link" data-href="startdash/"><img src="{{getImgRoot/}}/ad/banner_startdash2.png"><br>└バトルに参加してガチャチケットGET！┘</button>
+        </p>
+</div>
+
+
+<section id="adminNotice">
+	<h2 class="subHeader">
+		<span class="subHeaderBg_l"></span><span>運営からのお知らせ</span><span class="subHeaderBg_r"></span>
+	</h2>
+
+	{{for #data tmpl="#jsTemplateNotice" /}}	
+	
+	<hr>
+	
+	<ul class="listMenu">
+		<li><div class="link next" data-href="faq/">よくあるご質問</div></li>
+		<li><div class="link next" data-href="help/">ゲームの遊び方</div></li>
+	</ul>
+
+</section>
+
+<div class="rotationBannerAds"></div>

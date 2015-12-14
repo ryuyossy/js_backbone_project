@@ -1,0 +1,44 @@
+<h1 class="mainHeader">メッセージ</h1>
+<div id="messageDetail">
+	<article class="contents contentsShadow" data-href="profile/other/{{>from_user_id}}/">
+		<div class="contentsInner link">
+			<div class="iconBgArc_s gold">
+				<img src="{{getImgRoot/}}/avatar/{{>from_avatar_id}}_140.png">
+			</div>
+			<div class="sender">
+				{{if new_flg}}
+				<!-- //新着の場合はラベルを表示 -->
+				<span class="label36_r4">NEW</span>
+				{{/if}}
+				<span class="time">{{>message_datetime}}</span>
+				<span class="senderName">From.<span>{{>from_user_name}}</span>さん</span>
+			</div>
+		</div>
+		<div class="contentsBody">
+			<p>
+				{{>body_text}}
+			</p>
+		</div>
+		<button class="btn large" data-href="message/edit/{{>from_user_id}}/">メッセージを返す</button>
+	</article>
+</div>
+
+<hr>
+
+<div class="linkGroup">
+	<div class="arrowLink">
+		<button class="link prev" data-href="message/list/">メッセージ一覧に戻る</button>
+	</div>
+	<div class="arrowLink">
+		<button class="link prev" data-href="profile/">プロフに戻る</button>
+	</div>
+</div>
+
+<div class="helpList">
+	<ul>
+		<li><button class="link" data-href="help/">メッセージについて</button></li>
+		<li><button class="link" data-href="help/">あいさつについて</button></li>
+	</ul>
+</div>
+			
+

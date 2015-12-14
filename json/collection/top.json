@@ -1,0 +1,20 @@
+{
+	"status":200,
+	"version":2,
+    "guild_name" : "サイババ団",
+    "guild_rank" : "A",
+    "rank_status" : "ランクステイ圏内",
+    "rank_rest_days" : "3",
+    "battle_start_rest" : "05:44",
+    "battle_end_rest" : "",
+	"total_equip_num": 146,
+	"user_equip_collect_num": 7,
+	"equip_level_max": 20,
+	"total_series_num": 4,
+	"user_series_collect_num": 1,
+	"total_complete_num": 2,
+	"total_monster_num": 10,
+	"user_monster_collect_num": 2,
+	"total_event_monster_num": 0,
+	"user_event_monster_num": 0
+}

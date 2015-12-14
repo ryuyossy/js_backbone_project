@@ -1,0 +1,113 @@
+	<h1 class="mainHeader">メンバーを呼ぶ</h1>
+
+	<div class="message taicho_arc">
+		<p>
+			<span>一緒に戦うメンバーを選ぶんだ！</span>
+		</p>
+	</div>
+
+	<section id="helpMember" class="partner">
+		{{if selected}}
+		<div class="change">
+			<!-- //変更の場合 -->
+			<h1 class="subHeader">
+				<span class="subHeaderBg_l"></span>
+				<span>変更するメンバー</span>
+				<span class="subHeaderBg_r"></span>
+			</h1>
+			{{for selected}}
+				<section class="contents contentsShadow statusData_icon">
+					<h1>{{>name}}</h1>
+					<div class="columnBox">
+						<div class="iconBgRect_l gold"><img src="{{getImgRoot/}}/avatar/{{>avatar_id}}_140.png"></div>
+						<div class="contentsInner">
+							<dl>
+								<dt>Lv.</dt><dd>{{>level}}</dd><dt>ジョブ</dt><dd>{{>job_name}}</dd>
+								<dt>戦闘力</dt><dd>{{>power}}</dd>
+							</dl>
+							<div class="columnBox">
+								<dl>
+									<dt>攻撃</dt><dd>{{>attack_power}}</dd><dt>防御</dt><dd>{{>defence_power}}</dd>
+								</dl>
+								<dl>
+									<dt>特攻</dt><dd>{{>sp_attack_power}}</dd><dt>特防</dt><dd>{{>sp_defence_power}}</dd>
+								</dl>
+							</div>
+						</div>
+					</div>
+				</section>
+			{{/for}}
+		</div>
+		{{/if}}
+
+		<!-- //メンバーリスト -->
+		<h1 class="subHeader">
+			<span class="subHeaderBg_l"></span>
+			<span>メンバーを選択</span>
+			<span class="subHeaderBg_r"></span>
+		</h1>
+
+		<!-- //メンバーが居る場合 -->
+		{{if partners.length > 0}}
+		<div class="helpMemberList">
+			{{for partners}}
+			<section class="contents contentsShadow statusData_icon">
+				<h1>{{>name}}</h1>
+				<div class="columnBox">
+					<div class="iconBgRect_l gold"><img src="{{getImgRoot/}}/avatar/{{>avatar_id}}_140.png"></div>
+					<div class="contentsInner">
+						<dl>
+							<dt>Lv.</dt><dd>{{>level}}</dd><dt>ジョブ</dt><dd>{{>job_name}}</dd>
+							<dt>戦闘力</dt><dd>{{>power}}</dd>
+						</dl>
+						<div class="columnBox">
+							<dl>
+								<dt>攻撃</dt><dd>{{>attack_power}}</dd>
+								<dt>防御</dt><dd>{{>defence_power}}</dd>
+							</dl>
+							<dl>
+								<dt>特攻</dt><dd>{{>sp_attack_power}}</dd>
+								<dt>特防</dt><dd>{{>sp_defence_power}}</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+				{{if partner_flg}}
+					<button class="btn disable">選択済み</button>
+				{{else}}
+					<button class="btn jsSubmit" data-user_id="{{>user_id}}">協力を頼む</button>
+				{{/if}}
+			</section>
+			{{/for}}
+		{{else}}
+			<section class="dimmed">
+				<p>選択できるメンバーがいません。</p>
+			</section>
+			<div class="arrowLink">
+				<button class="link next" data-href="guild/space/">ギルド広場でメンバーを探す</button>
+			</div>
+		</div>
+		{{/if}}
+	</section>
+
+	<hr>
+
+	{{if backto == 'boss'}}
+	<div class="arrowLink">
+		<button class="link prev" data-href="mission/boss/ready/{{>stage_id}}/{{>field_id}}/">戦闘準備に戻る</button>
+	</div>
+	{{/if}}
+
+	{{if backto == 'guild'}}
+	<div class="arrowLink">
+		<button class="link prev" data-href="guild/partner/">クエスト同行に戻る</button>
+	</div>
+	{{/if}}
+
+	<div class="helpList">
+		<ul>
+			<li><button class="link" data-href="help/detail/802/">ヤツらってなに？</button></li>
+			<li><button class="link" data-href="help/detail/312/">クエスト同行ってなに？</button></li>
+			<li><button class="link" data-href="help/detail/801/">クエストってなに？</button></li>
+		</ul>
+	</div>
